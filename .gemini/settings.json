@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "laravel-boost": {
+      "command": "php",
+      "args": ["artisan", "boost:mcp"],
+      "cwd": "C:\\laragon\\www\\repair-shop",
+      "timeout": 30000,
+      "trust": false
+    }
+  }
+}
