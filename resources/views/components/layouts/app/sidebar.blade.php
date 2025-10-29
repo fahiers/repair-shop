@@ -14,6 +14,12 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="wrench" href="{{ route('ordenes-trabajo.index') }}" :current="request()->routeIs('ordenes-trabajo.*')" wire:navigate>{{ __('Orden de Servicio') }}</flux:navlist.item>
+                    <flux:navlist.item icon="users" href="#" :current="request()->is('clientes*')" wire:navigate>{{ __('Clientes') }}</flux:navlist.item>
+                    <flux:navlist.item icon="device-tablet" href="#" :current="request()->is('dispositivos*')" wire:navigate>{{ __('Dispositivos') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cpu-chip" href="#" :current="request()->is('modelos*')" wire:navigate>{{ __('Modelos de Dispositivos') }}</flux:navlist.item>
+                    <flux:navlist.item icon="archive-box" href="#" :current="request()->is('inventario*')" wire:navigate>{{ __('Inventario') }}</flux:navlist.item>
+                    <flux:navlist.item icon="document-text" href="#" :current="request()->is('facturacion*')" wire:navigate>{{ __('Facturación') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
