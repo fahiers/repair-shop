@@ -35,6 +35,3 @@ Route::middleware(['auth'])->group(function () {
         ->name('two-factor.show');
 });
 
-Route::prefix('ordenes-trabajo')->group(function () {
-    require __DIR__.'/ordenes-trabajo.php';
-});

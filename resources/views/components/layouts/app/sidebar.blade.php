@@ -15,7 +15,7 @@
         <flux:sidebar.nav>
             <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:sidebar.item>
             <flux:sidebar.item icon="wrench" :href="route('ordenes-trabajo.index')" :current="request()->routeIs('ordenes-trabajo.*')" wire:navigate>{{ __('Orden de Servicio') }}</flux:sidebar.item>
-            <flux:sidebar.item icon="users" href="#" :current="request()->is('clientes*')" wire:navigate>{{ __('Clientes') }}</flux:sidebar.item>
+            <flux:sidebar.item icon="users" :href="route('clientes.index')" :current="request()->routeIs('clientes.*')" wire:navigate>{{ __('Clientes') }}</flux:sidebar.item>
             <flux:sidebar.item icon="device-tablet" href="#" :current="request()->is('dispositivos*')" wire:navigate>{{ __('Dispositivos') }}</flux:sidebar.item>
             <flux:sidebar.item icon="cpu-chip" href="#" :current="request()->is('modelos*')" wire:navigate>{{ __('Modelos de Dispositivos') }}</flux:sidebar.item>
             <flux:sidebar.item icon="archive-box" href="#" :current="request()->is('inventario*')" wire:navigate>{{ __('Inventario') }}</flux:sidebar.item>
