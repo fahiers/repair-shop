@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('partials.head')
     </head>
@@ -14,6 +14,9 @@
             <flux:navbar class="-mb-px max-lg:hidden">
                 <flux:navbar.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
+                </flux:navbar.item>
+                <flux:navbar.item icon="wrench-screwdriver" :href="route('ordenes-trabajo.index')" :current="request()->routeIs('ordenes-trabajo.*')" wire:navigate>
+                    {{ __('Órdenes de Trabajo') }}
                 </flux:navbar.item>
             </flux:navbar>
 
@@ -100,6 +103,14 @@
                 <flux:navlist.group :heading="__('Platform')">
                     <flux:navlist.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
+                    </flux:navlist.item>
+                </flux:navlist.group>
+                <flux:navlist.group :heading="__('Órdenes de Trabajo')">
+                    <flux:navlist.item icon="wrench-screwdriver" :href="route('ordenes-trabajo.index')" :current="request()->routeIs('ordenes-trabajo.index')" wire:navigate>
+                    {{ __('Ver Órdenes') }}
+                    </flux:navlist.item>
+                    <flux:navlist.item icon="plus" :href="route('ordenes-trabajo.crear')" :current="request()->routeIs('ordenes-trabajo.crear')" wire:navigate>
+                    {{ __('Crear Orden') }}
                     </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>

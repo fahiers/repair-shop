@@ -8,6 +8,7 @@ Route::get('/', function () {
     if (auth()->check()) {
         return redirect()->route('dashboard');
     }
+
     return redirect()->route('login');
 })->name('home');
 
@@ -32,4 +33,8 @@ Route::middleware(['auth'])->group(function () {
             ),
         )
         ->name('two-factor.show');
+});
+
+Route::prefix('ordenes-trabajo')->group(function () {
+    require __DIR__.'/ordenes-trabajo.php';
 });

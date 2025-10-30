@@ -6,22 +6,22 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Pieza extends Model
+class Servicio extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'nombre',
         'descripcion',
-        'stock',
-        'precio_compra',
-        'precio_venta',
-        'proveedor',
+        'precio_base',
+        'categoria',
+        'estado',
     ];
 
     public function ordenes()
     {
-        return $this->belongsToMany(OrdenTrabajo::class, 'orden_detalle_piezas')
-            ->withPivot('cantidad', 'precio_unitario', 'subtotal');
+        return $this->belongsToMany(OrdenTrabajo::class, 'orden_servicio', 'servicio_id', 'orden_id')
+            ->withPivot('descripcion', 'precio_unitario', 'cantidad', 'subtotal')
+            ->withTimestamps();
     }
 }

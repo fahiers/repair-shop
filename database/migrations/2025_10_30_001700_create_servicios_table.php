@@ -11,16 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('piezas', function (Blueprint $table) {
+        Schema::create('servicios', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 191)->index();
+            $table->string('nombre', 100);
             $table->text('descripcion')->nullable();
-            $table->integer('stock')->default(0)->index();
-            $table->decimal('precio_compra', 10, 2);
-            $table->decimal('precio_venta', 10, 2);
-            $table->string('proveedor', 191)->nullable();
+            $table->decimal('precio_base', 10, 2);
+            $table->string('categoria', 50)->nullable();
+            $table->enum('estado', ['activo', 'inactivo'])->default('activo');
             $table->timestamps();
             $table->softDeletes();
+
+            $table->index('nombre');
+            $table->index('categoria');
+            $table->index('estado');
         });
     }
 
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('piezas');
+        Schema::dropIfExists('servicios');
     }
 };

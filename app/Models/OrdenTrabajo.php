@@ -39,9 +39,16 @@ class OrdenTrabajo extends Model
         return $this->belongsTo(User::class, 'tecnico_id');
     }
 
-    public function piezas()
+    public function servicios()
     {
-        return $this->belongsToMany(Pieza::class, 'orden_detalle_piezas')
+        return $this->belongsToMany(Servicio::class, 'orden_servicio', 'orden_id', 'servicio_id')
+            ->withPivot('descripcion', 'precio_unitario', 'cantidad', 'subtotal')
+            ->withTimestamps();
+    }
+
+    public function productos()
+    {
+        return $this->belongsToMany(Producto::class, 'orden_producto', 'orden_id', 'producto_id')
             ->withPivot('cantidad', 'precio_unitario', 'subtotal')
             ->withTimestamps();
     }
