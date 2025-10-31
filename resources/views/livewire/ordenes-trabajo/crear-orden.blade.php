@@ -1,8 +1,9 @@
 <div class="max-w-screen-2xl mx-auto p-4 md:p-6 lg:p-8">
     <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
-        <div class="flex items-center gap-3">
+        <div class="flex flex-col gap-2">
             <a href="{{ route('ordenes-trabajo.index') }}" class="inline-flex items-center gap-2 px-2 py-1 text-sm text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100">
-                ← Volver
+                <flux:icon.arrow-left class="size-4" />
+                Volver
             </a>
             <div>
                 <h1 class="text-xl md:text-2xl font-semibold">Nueva orden de reparación</h1>
@@ -84,8 +85,9 @@
             </div>
 
             <div class="p-4 md:p-6 space-y-4 dark:text-zinc-100">
-                <!-- Tipo de servicio -->
-                <div class="flex flex-wrap items-center gap-3 md:gap-4">
+                <!-- Asunto / descripción corta con tipo de servicio en la misma fila del label -->
+                <div class="flex items-center justify-between gap-3 md:gap-4">
+                    <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Falla o requerimiento</label>
                     <div class="flex items-center gap-4 text-sm">
                         <label class="inline-flex items-center gap-2">
                             <input type="radio" name="tipo" value="reparacion" wire:model.live="tipoServicio" class="h-4 w-4 text-emerald-600 border-zinc-300 dark:border-zinc-600">
@@ -102,7 +104,6 @@
                     </div>
                 </div>
 
-                <!-- Asunto / descripción corta -->
                 <input
                     type="text"
                     wire:model.blur="asunto"
