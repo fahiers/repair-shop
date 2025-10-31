@@ -5,98 +5,236 @@ namespace App\Livewire\OrdenesTrabajo;
 use App\Models\Cliente;
 use App\Models\Producto;
 use App\Models\Servicio;
-use Livewire\Attributes\Computed;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class CrearOrden extends Component
 {
     // Cliente y búsqueda
-    public $clienteSeleccionado = null;
+    public $clienteSeleccionado = null; // array{id:int,nombre:string,telefono:?string,email:?string} | null
 
-    public $busquedaCliente = '';
+    // Nueva UX de selección (según documentación)
+    public string $clientSearchTerm = '';
 
-    public $mostrarModalCliente = false;
+    public array $clientsFound = [];
+
+    public ?int $selectedClientId = null;
+
+    public bool $loadingClients = false;
+
+    public bool $showClientSearchResults = false;
+
+    private string $lastSelectedClientName = '';
+
+    public bool $ignoringBlur = false;
+
+    public string $rut = '';
 
     // Tipo de servicio
     #[Validate('required|in:reparacion,mantenimiento,garantia')]
-    public $tipoServicio = 'reparacion';
+    public string $tipoServicio = 'reparacion';
 
     // Asunto/Descripción
     #[Validate('required|min:3|max:255')]
-    public $asunto = '';
+    public string $asunto = '';
 
     // Items (servicios/productos)
-    public $items = [];
+    public array $items = [];
 
-    public $mostrarModalAgregarItem = false;
+    public bool $mostrarModalAgregarItem = false;
 
-    public $tipoItemAgregar = 'servicio'; // servicio o producto
+    public string $tipoItemAgregar = 'servicio';
 
-    // Busqueda de items
-    public $busquedaItem = '';
+    public string $busquedaItem = '';
+
+    public array $itemsDisponibles = [];
 
     // IVA
-    public $aplicarIva = true;
+    public bool $aplicarIva = true;
 
-    public $porcentajeIva = 19;
+    public int $porcentajeIva = 19;
+
+    // Totales calculados
+    public float $subtotalItems = 0;
+
+    public float $totalDescuentos = 0;
+
+    public float $subtotalConDescuento = 0;
+
+    public float $montoIva = 0;
+
+    public float $total = 0;
+
+    // Tabs (sin Alpine)
+    public string $activeTab = 'equipo';
 
     public function mount(): void
     {
-        // Inicializar con datos vacíos
+        $this->recalcularTotales();
     }
 
-    #[Computed]
-    public function clientesBuscados()
+    #[On('ignoreBlur')]
+    public function setIgnoreBlur(): void
     {
-        if (strlen($this->busquedaCliente) < 2) {
-            return [];
+        $this->ignoringBlur = true;
+    }
+
+    #[On('processBlur')]
+    public function setProcessBlur(): void
+    {
+        $this->ignoringBlur = false;
+    }
+
+    #[On('clientSearchBlurred')]
+    public function handleClientSearchBlur(): void
+    {
+        if ($this->ignoringBlur) {
+            return;
         }
 
-        return Cliente::query()
-            ->where('nombre', 'like', '%'.$this->busquedaCliente.'%')
-            ->orWhere('telefono', 'like', '%'.$this->busquedaCliente.'%')
-            ->orWhere('email', 'like', '%'.$this->busquedaCliente.'%')
-            ->orWhere('rut', 'like', '%'.$this->busquedaCliente.'%')
-            ->limit(5)
-            ->get();
+        if ($this->showClientSearchResults && $this->selectedClientId === null) {
+            $this->clientSearchTerm = $this->lastSelectedClientName;
+        } elseif ($this->showClientSearchResults && $this->selectedClientId !== null) {
+            $client = Cliente::find($this->selectedClientId);
+            if ($client && $this->clientSearchTerm !== $client->nombre) {
+                $this->clientSearchTerm = $client->nombre;
+            }
+        }
+
+        $this->showClientSearchResults = false;
     }
 
-    public function seleccionarCliente($clienteId): void
+    public function updatedClientSearchTerm($value): void
     {
-        $this->clienteSeleccionado = Cliente::find($clienteId);
-        $this->busquedaCliente = '';
+        $trimmedValue = trim((string) $value);
+
+        if ($trimmedValue === '') {
+            $this->clientsFound = [];
+            $this->loadingClients = false;
+            $this->showClientSearchResults = false;
+            $this->selectedClientId = null;
+            $this->rut = '';
+            $this->lastSelectedClientName = '';
+
+            return;
+        }
+
+        if (strlen($trimmedValue) < 2) {
+            $this->clientsFound = [];
+            $this->loadingClients = false;
+            $this->showClientSearchResults = true;
+
+            return;
+        }
+
+        $this->loadingClients = true;
+        $this->showClientSearchResults = true;
+
+        $query = Cliente::query()->where(function ($q) use ($trimmedValue) {
+            $q->where('nombre', 'like', '%' . $trimmedValue . '%')
+                ->orWhere('rut', 'like', '%' . $trimmedValue . '%')
+                ->orWhere('telefono', 'like', '%' . $trimmedValue . '%')
+                ->orWhere('email', 'like', '%' . $trimmedValue . '%');
+        });
+
+        $this->clientsFound = $query->take(10)->get()->toArray();
+        $this->loadingClients = false;
+    }
+
+    public function selectClient(int $clientId): void
+    {
+        $client = Cliente::find($clientId);
+
+        if ($client) {
+            $this->selectedClientId = $client->id;
+            $this->clientSearchTerm = $client->nombre;
+            $this->rut = (string) ($client->rut ?? '');
+            $this->lastSelectedClientName = $client->nombre;
+
+            // Mantener compatibilidad con la UI existente
+            $this->clienteSeleccionado = [
+                'id' => $client->id,
+                'nombre' => $client->nombre,
+                'telefono' => $client->telefono,
+                'email' => $client->email,
+            ];
+        }
+
+        $this->clientsFound = [];
+        $this->loadingClients = false;
+        $this->showClientSearchResults = false;
+    }
+
+    public function clearClientSearchResults(): void
+    {
+        if ($this->selectedClientId) {
+            $client = Cliente::find($this->selectedClientId);
+            if ($client) {
+                $this->clientSearchTerm = $client->nombre;
+                $this->lastSelectedClientName = $client->nombre;
+            } else {
+                $this->clientSearchTerm = '';
+                $this->selectedClientId = null;
+                $this->rut = '';
+                $this->lastSelectedClientName = '';
+                $this->clienteSeleccionado = null;
+            }
+        } else {
+            $this->clientSearchTerm = '';
+            $this->rut = '';
+            $this->lastSelectedClientName = '';
+            $this->clienteSeleccionado = null;
+        }
+
+        $this->clientsFound = [];
+        $this->loadingClients = false;
+        $this->showClientSearchResults = false;
     }
 
     public function limpiarCliente(): void
     {
         $this->clienteSeleccionado = null;
-        $this->busquedaCliente = '';
+        $this->clientSearchTerm = '';
+        $this->selectedClientId = null;
+        $this->clientsFound = [];
+        $this->rut = '';
+        $this->lastSelectedClientName = '';
+        $this->showClientSearchResults = false;
     }
 
-    #[Computed]
-    public function itemsDisponibles()
+    public function updatedBusquedaItem($valor): void
     {
-        if (strlen($this->busquedaItem) < 2) {
-            return [];
+        if (strlen($valor) < 2) {
+            $this->itemsDisponibles = [];
+
+            return;
         }
 
         if ($this->tipoItemAgregar === 'servicio') {
-            return Servicio::query()
+            $this->itemsDisponibles = Servicio::query()
                 ->where('estado', 'activo')
-                ->where('nombre', 'like', '%'.$this->busquedaItem.'%')
+                ->where('nombre', 'like', '%' . $valor . '%')
                 ->limit(10)
-                ->get();
+                ->get()
+                ->toArray();
+        } else {
+            $this->itemsDisponibles = Producto::query()
+                ->where('estado', 'activo')
+                ->where(function ($query) use ($valor) {
+                    $query->where('nombre', 'like', '%' . $valor . '%')
+                        ->orWhere('marca', 'like', '%' . $valor . '%');
+                })
+                ->limit(10)
+                ->get()
+                ->toArray();
         }
+    }
 
-        return Producto::query()
-            ->where('estado', 'activo')
-            ->where(function ($query) {
-                $query->where('nombre', 'like', '%'.$this->busquedaItem.'%')
-                    ->orWhere('marca', 'like', '%'.$this->busquedaItem.'%');
-            })
-            ->limit(10)
-            ->get();
+    public function updatedTipoItemAgregar(): void
+    {
+        $this->busquedaItem = '';
+        $this->itemsDisponibles = [];
     }
 
     public function agregarItem($itemId): void
@@ -150,7 +288,9 @@ class CrearOrden extends Component
         }
 
         $this->busquedaItem = '';
+        $this->itemsDisponibles = [];
         $this->mostrarModalAgregarItem = false;
+        $this->recalcularTotales();
     }
 
     public function actualizarCantidad($index, $cantidad): void
@@ -160,6 +300,7 @@ class CrearOrden extends Component
         }
 
         $this->items[$index]['cantidad'] = max(1, (int) $cantidad);
+        $this->recalcularTotales();
     }
 
     public function actualizarPrecio($index, $precio): void
@@ -169,6 +310,7 @@ class CrearOrden extends Component
         }
 
         $this->items[$index]['precio'] = max(0, (float) $precio);
+        $this->recalcularTotales();
     }
 
     public function actualizarDescuento($index, $descuento): void
@@ -178,54 +320,50 @@ class CrearOrden extends Component
         }
 
         $this->items[$index]['descuento'] = min(100, max(0, (float) $descuento));
+        $this->recalcularTotales();
     }
 
     public function eliminarItem($index): void
     {
         if (isset($this->items[$index])) {
             unset($this->items[$index]);
-            $this->items = array_values($this->items); // Reindexar
+            $this->items = array_values($this->items);
+            $this->recalcularTotales();
         }
     }
 
-    #[Computed]
-    public function subtotalItems(): float
+    public function recalcularTotales(): void
     {
-        return collect($this->items)->sum(function ($item) {
+        // Calcular subtotal de items
+        $this->subtotalItems = collect($this->items)->sum(function ($item) {
             return $item['cantidad'] * $item['precio'];
         });
-    }
 
-    #[Computed]
-    public function totalDescuentos(): float
-    {
-        return collect($this->items)->sum(function ($item) {
+        // Calcular descuentos
+        $this->totalDescuentos = collect($this->items)->sum(function ($item) {
             $subtotal = $item['cantidad'] * $item['precio'];
 
             return $subtotal * ($item['descuento'] / 100);
         });
+
+        // Calcular subtotal con descuento
+        $this->subtotalConDescuento = $this->subtotalItems - $this->totalDescuentos;
+
+        // Calcular IVA
+        $this->montoIva = $this->aplicarIva ? $this->subtotalConDescuento * ($this->porcentajeIva / 100) : 0;
+
+        // Calcular total
+        $this->total = $this->subtotalConDescuento + $this->montoIva;
     }
 
-    #[Computed]
-    public function subtotalConDescuento(): float
+    public function updatedAplicarIva(): void
     {
-        return $this->subtotalItems - $this->totalDescuentos;
+        $this->recalcularTotales();
     }
 
-    #[Computed]
-    public function montoIva(): float
+    public function updatedPorcentajeIva(): void
     {
-        if (! $this->aplicarIva) {
-            return 0;
-        }
-
-        return $this->subtotalConDescuento * ($this->porcentajeIva / 100);
-    }
-
-    #[Computed]
-    public function total(): float
-    {
-        return $this->subtotalConDescuento + $this->montoIva;
+        $this->recalcularTotales();
     }
 
     public function calcularSubtotalItem($item): float
@@ -240,11 +378,21 @@ class CrearOrden extends Component
     {
         $this->tipoItemAgregar = $tipo;
         $this->busquedaItem = '';
+        $this->itemsDisponibles = [];
         $this->mostrarModalAgregarItem = true;
+    }
+
+    public function setActiveTab(string $tab): void
+    {
+        if (in_array($tab, ['equipo', 'fotos', 'notas'], true)) {
+            $this->activeTab = $tab;
+        }
     }
 
     public function render()
     {
-        return view('livewire.ordenes-trabajo.crear-orden');
+        return view('livewire.ordenes-trabajo.crear-orden', [
+            'itemsDisponibles' => $this->itemsDisponibles,
+        ]);
     }
 }
