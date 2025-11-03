@@ -17,11 +17,10 @@ test('puede seleccionar un cliente en la orden de trabajo', function () {
 
     Livewire::actingAs($user)
         ->test(CrearOrden::class)
-        ->set('busquedaCliente', 'Test Cliente')
-        ->waitForLivewireToFinish()
-        ->call('seleccionarCliente', $cliente->id)
-        ->assertSet('clienteSeleccionado', $cliente)
-        ->assertSet('busquedaCliente', '');
+        ->set('clientSearchTerm', 'Test Cliente')
+        ->call('selectClient', $cliente->id)
+        ->assertSet('selectedClientId', $cliente->id)
+        ->assertSet('clientSearchTerm', 'Test Cliente');
 });
 
 test('muestra clientes en los resultados de búsqueda', function () {
@@ -34,7 +33,8 @@ test('muestra clientes en los resultados de búsqueda', function () {
 
     Livewire::actingAs($user)
         ->test(CrearOrden::class)
-        ->set('busquedaCliente', 'Juan')
-        ->waitForLivewireToFinish()
-        ->assertSee('Juan Pérez');
+        ->set('clientSearchTerm', 'Ju')
+        ->set('clientSearchTerm', 'Juan')
+        ->assertSet('showClientSearchResults', true)
+        ->assertSet('clientsFound.0.nombre', 'Juan Pérez');
 });

@@ -113,6 +113,9 @@
                 @error('asunto')
                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                 @enderror
+                @if(strlen($asunto) > 0 && strlen($asunto) < 3)
+                    <p class="text-xs text-red-600 mt-1">Ingrese al menos 3 caracteres.</p>
+                @endif
 
                 <!-- Tabla conceptos -->
                 <div class="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-700">
@@ -224,10 +227,32 @@
             <div class="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm">
                 <!-- Botones de acciones en el header -->
                 <div class="p-4 md:p-6 border-b border-zinc-100 dark:border-zinc-700">
-                    <div class="flex items-center gap-2 md:gap-3 flex-wrap w-full justify-end">
+                    <div class="flex items-center gap-2 md:gap-3 flex-wrap w-full justify-between">
+                        <!-- Checklist de progreso -->
+                        <div class="flex items-center gap-3 text-xs">
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded border {{ $selectedClientId ? 'border-emerald-300 text-emerald-700 bg-emerald-50' : 'border-zinc-200 text-zinc-600' }}">
+                                <flux:icon.check class="size-3" /> Cliente
+                            </span>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded border {{ $dispositivoSeleccionado ? 'border-emerald-300 text-emerald-700 bg-emerald-50' : 'border-zinc-200 text-zinc-600' }}">
+                                <flux:icon.check class="size-3" /> Dispositivo
+                            </span>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded border {{ strlen($asunto) >= 3 ? 'border-emerald-300 text-emerald-700 bg-emerald-50' : 'border-zinc-200 text-zinc-600' }}">
+                                <flux:icon.check class="size-3" /> Descripción
+                            </span>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded border {{ count($items) > 0 ? 'border-emerald-300 text-emerald-700 bg-emerald-50' : 'border-zinc-200 text-zinc-600' }}">
+                                <flux:icon.check class="size-3" /> Items
+                            </span>
+                        </div>
                         <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
                         <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
                         <button disabled class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Ingresar pago</button>
+                        <button type="button"
+                                wire:click="guardarOrden"
+                                @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
+                                title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
+                                class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
+                            Guardar orden
+                        </button>
                     </div>
                 </div>
                 
@@ -253,8 +278,98 @@
                 </div>
 
                 <!-- Contenido de la pestaña Equipo -->
-                <div x-show="activeTab === 'equipo'" class="p-4 md:p-6">
-                    <p class="text-zinc-500 dark:text-zinc-400">Seleccione primero un cliente para configurar el equipo...</p>
+                <div x-show="activeTab === 'equipo'" class="p-4 md:p-6" @keydown.window.ctrl.s.prevent="$wire.guardarOrden()" @keydown.window.escape="$wire.set('mostrarModalCrearDispositivo', false)">
+                    <!-- Estado: dispositivo seleccionado -->
+                    @if($dispositivoSeleccionado)
+                        <div class="rounded-lg border border-emerald-200 dark:border-emerald-900 bg-emerald-50/50 dark:bg-emerald-950 p-4 mb-4">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <p class="text-sm text-zinc-500">Dispositivo seleccionado</p>
+                                    <p class="font-semibold">
+                                        @if($dispositivoSeleccionado['modelo'])
+                                            {{ $dispositivoSeleccionado['modelo']['marca'] }} {{ $dispositivoSeleccionado['modelo']['modelo'] }}
+                                            @if($dispositivoSeleccionado['modelo']['anio'])
+                                                ({{ $dispositivoSeleccionado['modelo']['anio'] }})
+                                            @endif
+                                        @else
+                                            Sin modelo
+                                        @endif
+                                    </p>
+                                    <div class="text-sm text-zinc-600 dark:text-zinc-300 space-x-3">
+                                        @if($dispositivoSeleccionado['imei'])
+                                            <span>IMEI: {{ $dispositivoSeleccionado['imei'] }}</span>
+                                        @endif
+                                        @if($dispositivoSeleccionado['color'])
+                                            <span>Color: {{ $dispositivoSeleccionado['color'] }}</span>
+                                        @endif
+                                        @if($dispositivoSeleccionado['cliente'])
+                                            <span class="inline-flex items-center gap-1"><flux:icon.user class="size-4" /> {{ $dispositivoSeleccionado['cliente']['nombre'] }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="button" wire:click="limpiarDispositivo" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cambiar dispositivo</button>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
+                    <!-- Estado: con cliente seleccionado -->
+                    @if($selectedClientId)
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-semibold">Dispositivos de {{ $clienteSeleccionado['nombre'] ?? 'cliente seleccionado' }}</h3>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" wire:click="abrirModalCrearDispositivo('rapido')" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Agregar nuevo dispositivo</button>
+                                </div>
+                            </div>
+
+                            
+
+                            @if(count($dispositivosCliente) > 0)
+                                <div class="space-y-2">
+                                    @foreach($dispositivosCliente as $dc)
+                                        <div class="flex items-center justify-between border border-zinc-200 dark:border-zinc-700 rounded-md px-3 py-2">
+                                            <div>
+                                                <p class="font-medium">
+                                                    @if($dc['modelo'])
+                                                        {{ $dc['modelo']['marca'] }} {{ $dc['modelo']['modelo'] }}
+                                                        @if($dc['modelo']['anio']) ({{ $dc['modelo']['anio'] }}) @endif
+                                                    @else
+                                                        Sin modelo
+                                                    @endif
+                                                </p>
+                                                <p class="text-xs text-zinc-600 dark:text-zinc-300">
+                                                    @if($dc['imei']) IMEI {{ $dc['imei'] }} @endif
+                                                    @if($dc['color']) <span class="ml-2">Color {{ $dc['color'] }}</span> @endif
+                                                </p>
+                                            </div>
+                                            <div class="flex items-center gap-2">
+                                                @if($suggestedDeviceId && $suggestedDeviceId === $dc['id'] && !$dispositivoSeleccionado)
+                                                    <span class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-700">Sugerido</span>
+                                                @endif
+                                                <button type="button" wire:click="selectDevice({{ $dc['id'] }})" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Seleccionar</button>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @else
+                                <p class="text-sm text-zinc-500">Este cliente no tiene dispositivos registrados.</p>
+                            @endif
+                        </div>
+                    @else
+                        <!-- Estado: sin cliente seleccionado -->
+                        <div class="space-y-4">
+                            <p class="text-zinc-500 dark:text-zinc-400">
+                                Seleccione primero un cliente o busque un dispositivo existente.
+                            </p>
+                            
+
+                            <div>
+                                <button type="button" wire:click="abrirModalCrearDispositivo('rapido')" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Crear dispositivo nuevo</button>
+                            </div>
+                        </div>
+                    @endif
                 </div>
 
                 <!-- Contenido de la pestaña Fotos -->
@@ -274,7 +389,7 @@
     @if($mostrarModalAgregarItem)
         <div class="fixed inset-0 z-50 flex items-center justify-center">
             <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
-            <div class="relative w-full max-w-[600px] mx-4 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl">
+            <div class="relative w-full max-w-lg sm:max-w-xl mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
                 <div class="space-y-6">
                     <div>
                         <h2 class="text-lg font-semibold">Agregar {{ $tipoItemAgregar === 'servicio' ? 'servicio' : 'producto' }}</h2>
@@ -337,6 +452,134 @@
 
                     <div class="flex justify-end">
                         <button type="button" wire:click="$set('mostrarModalAgregarItem', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
+    <!-- Modal de creación rápida de dispositivo -->
+    @if($mostrarModalCrearDispositivo)
+        <div class="fixed inset-0 z-50 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+            <div class="relative w-full max-w-lg sm:max-w-xl mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
+                <div class="space-y-4">
+                    <div>
+                        <h2 class="text-lg font-semibold">Crear dispositivo</h2>
+                        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                            @if($selectedClientId)
+                                Este dispositivo se asociará automáticamente al cliente {{ $clienteSeleccionado['nombre'] ?? '' }}.
+                            @else
+                                Puede crear el dispositivo sin cliente asociado.
+                            @endif
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Modelo (marca, modelo o año) <span class="text-red-500">*</span></label>
+                            <button type="button" wire:click="abrirModalCrearModelo" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Nuevo modelo</button>
+                        </div>
+                        <input type="text"
+                               wire:model.live.debounce.300ms="modeloSearchTerm"
+                               placeholder="Ej: Samsung A52 2021"
+                               class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+
+                        @error('modeloSeleccionadoId')
+                            <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
+                        @enderror
+
+                        @if(strlen($modeloSearchTerm) >= 2 && count($modelosFound) > 0)
+                            <ul class="mt-2 max-h-48 overflow-y-auto border border-zinc-200 dark:border-zinc-700 rounded-md">
+                                @foreach($modelosFound as $m)
+                                    <li>
+                                        <button type="button" class="w-full text-left px-3 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-700"
+                                                wire:click="selectModelo({{ $m['id'] }})">
+                                            {{ $m['marca'] }} {{ $m['modelo'] }} @if($m['anio']) ({{ $m['anio'] }}) @endif
+                                        </button>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+
+                        @if($modeloSeleccionadoId)
+                            <p class="mt-2 text-xs text-emerald-600">Modelo seleccionado.</p>
+                        @endif
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">IMEI (opcional)</label>
+                            <input type="text" wire:model.live="imeiDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                            @error('imeiDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Color (opcional)</label>
+                            <input type="text" wire:model.live="colorDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                            @error('colorDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+        </div>
+    </div>
+
+    <!-- Modal: Crear nuevo modelo -->
+    <div x-data="{ open: @entangle('mostrarModalCrearModelo') }" x-cloak x-show="open" class="fixed inset-0 z-50 flex items-center justify-center">
+        <div x-show="open" @click="open = false" class="absolute inset-0 bg-black/50" x-transition.opacity aria-hidden="true"></div>
+        <div x-show="open"
+             @keydown.window.escape="open = false"
+             x-transition:enter="ease-out duration-200"
+             x-transition:enter-start="opacity-0 translate-y-2 scale-95"
+             x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+             x-transition:leave="ease-in duration-150"
+             x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+             x-transition:leave-end="opacity-0 translate-y-2 scale-95"
+             class="relative w-full max-w-md sm:max-w-lg mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
+            <div class="space-y-4">
+                <div>
+                    <h2 class="text-lg font-semibold">Nuevo modelo de dispositivo</h2>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Cree un modelo y se seleccionará automáticamente.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Marca <span class="text-red-500">*</span></label>
+                        <input type="text" wire:model.live="modeloNuevoMarca" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                        @error('modeloNuevoMarca') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Modelo <span class="text-red-500">*</span></label>
+                        <input type="text" wire:model.live="modeloNuevoModelo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                        @error('modeloNuevoModelo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Año</label>
+                        <input type="number" wire:model.live="modeloNuevoAnio" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                        @error('modeloNuevoAnio') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Descripción</label>
+                        <input type="text" wire:model.live="modeloNuevoDescripcion" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                        @error('modeloNuevoDescripcion') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-end gap-2">
+                    <button type="button" @click="open = false" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
+                    <button type="button" wire:click="crearModeloRapido" class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700">Crear y seleccionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Observaciones (opcional)</label>
+                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm"></textarea>
+                        @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+
+                    <div class="flex items-center justify-end gap-2">
+                        <button type="button" wire:click="$set('mostrarModalCrearDispositivo', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
+                        <button type="button" wire:click="crearDispositivoRapido" @disabled(!$modeloSeleccionadoId) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Crear y seleccionar</button>
                     </div>
                 </div>
             </div>

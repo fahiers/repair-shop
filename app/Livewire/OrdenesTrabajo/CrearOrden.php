@@ -3,11 +3,14 @@
 namespace App\Livewire\OrdenesTrabajo;
 
 use App\Models\Cliente;
+use App\Models\Dispositivo;
+use App\Models\ModeloDispositivo;
 use App\Models\Producto;
 use App\Models\Servicio;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use App\Services\OrderNumberGenerator;
 
 class CrearOrden extends Component
 {
@@ -73,6 +76,38 @@ class CrearOrden extends Component
     {
         $this->recalcularTotales();
     }
+
+    // Dispositivo y búsqueda
+    public ?int $selectedDeviceId = null;
+
+    // Búsqueda de dispositivos removida (UI simplificada)
+
+    public bool $mostrarModalCrearDispositivo = false;
+
+    public string $modoCreacionDispositivo = 'rapido'; // rapido | completo
+
+    // Creación rápida de dispositivo
+    public ?int $modeloSeleccionadoId = null;
+
+    public string $modeloSearchTerm = '';
+
+    public array $modelosFound = [];
+
+    public ?string $imeiDispositivo = null;
+
+    public ?string $colorDispositivo = null;
+
+    public ?string $observacionesDispositivo = null;
+
+    // Sugerencias
+    public ?int $suggestedDeviceId = null;
+
+    // Crear nuevo modelo (desde modal de dispositivo)
+    public bool $mostrarModalCrearModelo = false;
+    public string $modeloNuevoMarca = '';
+    public string $modeloNuevoModelo = '';
+    public ?int $modeloNuevoAnio = null;
+    public ?string $modeloNuevoDescripcion = null;
 
     #[On('ignoreBlur')]
     public function setIgnoreBlur(): void
@@ -159,6 +194,12 @@ class CrearOrden extends Component
                 'telefono' => $client->telefono,
                 'email' => $client->email,
             ];
+
+            // Sugerir dispositivo reciente o seleccionar automáticamente si tiene uno
+            $this->suggestedDeviceId = $this->calcularDispositivoSugerido($client->id);
+            if ($this->suggestedDeviceId && Dispositivo::where('cliente_id', $client->id)->count() === 1) {
+                $this->selectDevice($this->suggestedDeviceId);
+            }
         }
 
         $this->clientsFound = [];
@@ -389,10 +430,301 @@ class CrearOrden extends Component
         }
     }
 
+    // === Dispositivos: búsqueda y selección ===
+    // UI de búsqueda de dispositivos fue eliminada
+
+    public function selectDevice(int $deviceId): void
+    {
+        $device = Dispositivo::with(['modelo', 'cliente'])->find($deviceId);
+        if (! $device) {
+            return;
+        }
+
+        $this->selectedDeviceId = $device->id;
+        // Mantener solo la selección
+    }
+
+    
+
+    public function limpiarDispositivo(): void
+    {
+        $this->selectedDeviceId = null;
+        // limpiar solo selección actual
+    }
+
+    public function getDispositivosDelCliente(): array
+    {
+        if (! $this->selectedClientId) {
+            return [];
+        }
+
+        return Dispositivo::query()
+            ->where('cliente_id', $this->selectedClientId)
+            ->with(['modelo'])
+            ->latest('id')
+            ->take(20)
+            ->get()
+            ->map(function ($d) {
+                return [
+                    'id' => $d->id,
+                    'imei' => $d->imei,
+                    'color' => $d->color,
+                    'modelo' => $d->modelo ? [
+                        'id' => $d->modelo->id,
+                        'marca' => $d->modelo->marca,
+                        'modelo' => $d->modelo->modelo,
+                        'anio' => $d->modelo->anio,
+                    ] : null,
+                ];
+            })->toArray();
+    }
+
+    
+
+    protected function calcularDispositivoSugerido(int $clientId): ?int
+    {
+        // Primero por última orden asociada, sino por más reciente creado
+        $ultimoPorOrden = Dispositivo::where('cliente_id', $clientId)
+            ->whereHas('ordenes')
+            ->withMax('ordenes as last_order_created_at', 'created_at')
+            ->orderByDesc('last_order_created_at')
+            ->first();
+
+        if ($ultimoPorOrden) {
+            return $ultimoPorOrden->id;
+        }
+
+        $ultimo = Dispositivo::where('cliente_id', $clientId)->latest('id')->first();
+
+        return $ultimo?->id;
+    }
+
+    public function getDispositivoSeleccionado(): ?array
+    {
+        if (! $this->selectedDeviceId) {
+            return null;
+        }
+
+        $d = Dispositivo::with(['modelo', 'cliente'])->find($this->selectedDeviceId);
+        if (! $d) {
+            return null;
+        }
+
+        return [
+            'id' => $d->id,
+            'imei' => $d->imei,
+            'color' => $d->color,
+            'cliente' => $d->cliente ? [
+                'id' => $d->cliente->id,
+                'nombre' => $d->cliente->nombre,
+            ] : null,
+            'modelo' => $d->modelo ? [
+                'id' => $d->modelo->id,
+                'marca' => $d->modelo->marca,
+                'modelo' => $d->modelo->modelo,
+                'anio' => $d->modelo->anio,
+            ] : null,
+        ];
+    }
+
+    // === Creación de dispositivos ===
+    public function abrirModalCrearDispositivo(string $modo = 'rapido'): void
+    {
+        $this->modoCreacionDispositivo = in_array($modo, ['rapido', 'completo'], true) ? $modo : 'rapido';
+        $this->modeloSeleccionadoId = null;
+        $this->modeloSearchTerm = '';
+        $this->modelosFound = [];
+        $this->imeiDispositivo = null;
+        $this->colorDispositivo = null;
+        $this->observacionesDispositivo = null;
+        $this->mostrarModalCrearDispositivo = true;
+    }
+
+    public function abrirModalCrearModelo(): void
+    {
+        $this->modeloNuevoMarca = '';
+        $this->modeloNuevoModelo = '';
+        $this->modeloNuevoAnio = null;
+        $this->modeloNuevoDescripcion = null;
+        $this->mostrarModalCrearModelo = true;
+    }
+
+    public function crearModeloRapido(): void
+    {
+        $this->validate([
+            'modeloNuevoMarca' => 'required|string|max:100',
+            'modeloNuevoModelo' => 'required|string|max:150',
+            'modeloNuevoAnio' => 'nullable|integer|min:1990|max:' . ((int) date('Y') + 2),
+            'modeloNuevoDescripcion' => 'nullable|string|max:500',
+        ]);
+
+        $marca = trim((string) $this->modeloNuevoMarca);
+        $modeloStr = trim((string) $this->modeloNuevoModelo);
+        $anio = $this->modeloNuevoAnio;
+
+        // Buscar duplicados por marca+modelo(+año) sin importar mayúsculas/minúsculas
+        $exists = ModeloDispositivo::query()
+            ->whereRaw('LOWER(marca) = ?', [mb_strtolower($marca)])
+            ->whereRaw('LOWER(modelo) = ?', [mb_strtolower($modeloStr)])
+            ->when($anio !== null, function ($q) use ($anio) {
+                $q->where('anio', (int) $anio);
+            }, function ($q) {
+                $q->whereNull('anio');
+            })
+            ->first();
+
+        if ($exists) {
+            // Sugerir/usar existente: seleccionarlo automáticamente
+            $this->modeloSeleccionadoId = $exists->id;
+            $this->modeloSearchTerm = trim($exists->marca . ' ' . $exists->modelo . ' ' . ($exists->anio ?: ''));
+            $this->modelosFound = [];
+            $this->mostrarModalCrearModelo = false;
+
+            return; // No crear duplicado
+        }
+
+        $modelo = ModeloDispositivo::create([
+            'marca' => $marca,
+            'modelo' => $modeloStr,
+            'anio' => $anio,
+            'descripcion' => $this->modeloNuevoDescripcion,
+        ]);
+
+        $this->modeloSeleccionadoId = $modelo->id;
+        $this->modeloSearchTerm = trim($modelo->marca . ' ' . $modelo->modelo . ' ' . ($modelo->anio ?: ''));
+        $this->modelosFound = [];
+        $this->mostrarModalCrearModelo = false;
+    }
+
+    public function updatedModeloSearchTerm($value): void
+    {
+        $term = trim((string) $value);
+        if ($term === '' || strlen($term) < 2) {
+            $this->modelosFound = [];
+
+            return;
+        }
+
+        $this->modelosFound = ModeloDispositivo::query()
+            ->where(function ($q) use ($term) {
+                $q->where('marca', 'like', '%' . $term . '%')
+                  ->orWhere('modelo', 'like', '%' . $term . '%')
+                  ->orWhere('anio', 'like', '%' . $term . '%');
+            })
+            ->orderByRaw("CASE WHEN marca LIKE ? THEN 0 ELSE 1 END", [$term . '%'])
+            ->orderBy('marca')
+            ->orderBy('modelo')
+            ->take(10)
+            ->get()
+            ->map(function ($m) {
+                return [
+                    'id' => $m->id,
+                    'marca' => $m->marca,
+                    'modelo' => $m->modelo,
+                    'anio' => $m->anio,
+                ];
+            })->toArray();
+    }
+
+    public function selectModelo(int $modeloId): void
+    {
+        $modelo = ModeloDispositivo::find($modeloId);
+        if (! $modelo) {
+            return;
+        }
+
+        $this->modeloSeleccionadoId = $modelo->id;
+        $this->modeloSearchTerm = trim($modelo->marca . ' ' . $modelo->modelo . ' ' . ($modelo->anio ?: ''));
+        $this->modelosFound = [];
+    }
+
+    public function crearDispositivoRapido(): void
+    {
+        $this->validate([
+            'modeloSeleccionadoId' => 'required|exists:modelos_dispositivos,id',
+            'imeiDispositivo' => 'nullable|string|max:191',
+            'colorDispositivo' => 'nullable|string|max:100',
+            'observacionesDispositivo' => 'nullable|string|max:500',
+        ]);
+
+        $dispositivo = Dispositivo::create([
+            'cliente_id' => $this->selectedClientId,
+            'modelo_id' => $this->modeloSeleccionadoId,
+            'imei' => $this->imeiDispositivo,
+            'color' => $this->colorDispositivo,
+            'observaciones' => $this->observacionesDispositivo,
+        ]);
+
+        $this->selectedDeviceId = $dispositivo->id;
+        // No hay campo de búsqueda que mostrar
+        $this->mostrarModalCrearDispositivo = false;
+    }
+
+    public function crearDispositivoCompleto(): void
+    {
+        // Placeholder para modo completo si se requiere más adelante
+        $this->crearDispositivoRapido();
+    }
+
+    // === Guardado de orden ===
+    public function guardarOrden()
+    {
+        $this->validate([
+            'selectedDeviceId' => 'required|exists:dispositivos,id',
+            'asunto' => 'required|min:3|max:255',
+            'tipoServicio' => 'required|in:reparacion,mantenimiento,garantia',
+        ]);
+
+        // Generar número de orden único (service)
+        $numero = OrderNumberGenerator::generate();
+
+        $dispositivo = Dispositivo::find($this->selectedDeviceId);
+
+        $orden = \App\Models\OrdenTrabajo::create([
+            'numero_orden' => $numero,
+            'dispositivo_id' => $dispositivo->id,
+            'fecha_ingreso' => now()->toDateString(),
+            'problema_reportado' => $this->asunto,
+            'costo_estimado' => $this->total,
+            'estado' => 'pendiente',
+        ]);
+
+        // Guardar items en pivots
+        foreach ($this->items as $item) {
+            $cantidad = (int) ($item['cantidad'] ?? 1);
+            $precio = (float) ($item['precio'] ?? 0);
+            $descuento = (float) ($item['descuento'] ?? 0);
+            $subtotal = max(0, $cantidad * $precio * (1 - ($descuento / 100)));
+
+            if (($item['tipo'] ?? '') === 'servicio') {
+                $orden->servicios()->attach($item['id'], [
+                    'descripcion' => $item['nombre'] ?? null,
+                    'precio_unitario' => $precio,
+                    'cantidad' => $cantidad,
+                    'subtotal' => $subtotal,
+                ]);
+            } elseif (($item['tipo'] ?? '') === 'producto') {
+                $orden->productos()->attach($item['id'], [
+                    'precio_unitario' => $precio,
+                    'cantidad' => $cantidad,
+                    'subtotal' => $subtotal,
+                ]);
+            }
+        }
+
+        // Redirigir a índice o detalle (por ahora índice)
+        return redirect()->route('ordenes-trabajo.index');
+    }
+
+    // Método legacy eliminado: numeración delegada al service
+
     public function render()
     {
         return view('livewire.ordenes-trabajo.crear-orden', [
             'itemsDisponibles' => $this->itemsDisponibles,
+            // Support data for equipo tab
+            'dispositivosCliente' => $this->getDispositivosDelCliente(),
+            'dispositivoSeleccionado' => $this->getDispositivoSeleccionado(),
         ]);
     }
 }
