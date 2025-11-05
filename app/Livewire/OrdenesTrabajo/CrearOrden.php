@@ -38,6 +38,13 @@ class CrearOrden extends Component
     #[Validate('required|in:reparacion,mantenimiento,garantia')]
     public string $tipoServicio = 'reparacion';
 
+    // Fechas y estado de la orden
+    public string $fechaIngreso = '';
+
+    public ?string $fechaEntregaEstimada = null;
+
+    public string $estado = 'pendiente';
+
     // Asunto/Descripción
     #[Validate('required|min:3|max:255')]
     public string $asunto = '';
@@ -74,6 +81,7 @@ class CrearOrden extends Component
 
     public function mount(): void
     {
+        $this->fechaIngreso = now()->toDateString();
         $this->recalcularTotales();
     }
 
@@ -101,6 +109,10 @@ class CrearOrden extends Component
 
     // Sugerencias
     public ?int $suggestedDeviceId = null;
+
+    // Edición de dispositivo
+    public bool $mostrarModalEditarDispositivo = false;
+    public bool $mostrarToastEquipoActualizado = false;
 
     // Crear nuevo modelo (desde modal de dispositivo)
     public bool $mostrarModalCrearModelo = false;
@@ -452,6 +464,55 @@ class CrearOrden extends Component
         // limpiar solo selección actual
     }
 
+    public function abrirModalEditarDispositivo(): void
+    {
+        if (! $this->selectedDeviceId) {
+            return;
+        }
+
+        $device = Dispositivo::with('modelo')->find($this->selectedDeviceId);
+        if (! $device) {
+            return;
+        }
+
+        $this->modeloSeleccionadoId = $device->modelo_id;
+        $this->modeloSearchTerm = $device->modelo ? trim($device->modelo->marca . ' ' . $device->modelo->modelo . ' ' . ($device->modelo->anio ?: '')) : '';
+        $this->modelosFound = [];
+        $this->imeiDispositivo = $device->imei;
+        $this->colorDispositivo = $device->color;
+        $this->observacionesDispositivo = $device->observaciones;
+        $this->mostrarModalEditarDispositivo = true;
+    }
+
+    public function guardarEdicionDispositivo(): void
+    {
+        if (! $this->selectedDeviceId) {
+            return;
+        }
+
+        $this->validate([
+            'modeloSeleccionadoId' => 'required|exists:modelos_dispositivos,id',
+            'imeiDispositivo' => 'nullable|string|max:191',
+            'colorDispositivo' => 'nullable|string|max:100',
+            'observacionesDispositivo' => 'nullable|string|max:500',
+        ]);
+
+        $device = Dispositivo::find($this->selectedDeviceId);
+        if (! $device) {
+            return;
+        }
+
+        $device->update([
+            'modelo_id' => $this->modeloSeleccionadoId,
+            'imei' => $this->imeiDispositivo,
+            'color' => $this->colorDispositivo,
+            'observaciones' => $this->observacionesDispositivo,
+        ]);
+
+        $this->mostrarModalEditarDispositivo = false;
+        $this->mostrarToastEquipoActualizado = true;
+    }
+
     public function getDispositivosDelCliente(): array
     {
         if (! $this->selectedClientId) {
@@ -669,10 +730,19 @@ class CrearOrden extends Component
     // === Guardado de orden ===
     public function guardarOrden()
     {
+        if ($this->fechaEntregaEstimada === '') {
+            $this->fechaEntregaEstimada = null;
+        }
+
+        $estadoKeys = implode(',', array_keys($this->estadosDisponibles()));
+
         $this->validate([
             'selectedDeviceId' => 'required|exists:dispositivos,id',
             'asunto' => 'required|min:3|max:255',
             'tipoServicio' => 'required|in:reparacion,mantenimiento,garantia',
+            'fechaIngreso' => 'required|date',
+            'fechaEntregaEstimada' => 'nullable|date|after_or_equal:fechaIngreso',
+            'estado' => 'required|in:' . $estadoKeys,
         ]);
 
         // Generar número de orden único (service)
@@ -683,10 +753,12 @@ class CrearOrden extends Component
         $orden = \App\Models\OrdenTrabajo::create([
             'numero_orden' => $numero,
             'dispositivo_id' => $dispositivo->id,
-            'fecha_ingreso' => now()->toDateString(),
+            'tecnico_id' => auth()->id(),
+            'fecha_ingreso' => $this->fechaIngreso,
+            'fecha_entrega_estimada' => $this->fechaEntregaEstimada,
             'problema_reportado' => $this->asunto,
             'costo_estimado' => $this->total,
-            'estado' => 'pendiente',
+            'estado' => $this->estado,
         ]);
 
         // Guardar items en pivots
@@ -725,6 +797,20 @@ class CrearOrden extends Component
             // Support data for equipo tab
             'dispositivosCliente' => $this->getDispositivosDelCliente(),
             'dispositivoSeleccionado' => $this->getDispositivoSeleccionado(),
+            'estadosDisponibles' => $this->estadosDisponibles(),
         ]);
+    }
+
+    protected function estadosDisponibles(): array
+    {
+        return [
+            'pendiente' => 'Pendiente',
+            'diagnostico' => 'Diagnóstico',
+            'en_reparacion' => 'En reparación',
+            'espera_repuesto' => 'En espera de repuesto',
+            'listo' => 'Listo',
+            'entregado' => 'Entregado',
+            'cancelado' => 'Cancelado',
+        ];
     }
 }

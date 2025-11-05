@@ -1,17 +1,79 @@
-<div class="max-w-screen-2xl mx-auto p-4 md:p-6 lg:p-8">
-    <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
-        <div class="flex flex-col gap-2">
-            <a href="{{ route('ordenes-trabajo.index') }}" class="inline-flex items-center gap-2 px-2 py-1 text-sm text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100">
-                <flux:icon.arrow-left class="size-4" />
-                Volver
-            </a>
-            <div>
-                <h1 class="text-xl md:text-2xl font-semibold">Nueva orden de reparación</h1>
-                <p class="text-sm text-zinc-500">Complete los datos para crear la orden</p>
+<div class="max-w-screen-2xl mx-auto px-4 py-3 md:px-6 md:py-4 lg:px-8 lg:py-6">
+    <div class="flex flex-col gap-3 mb-5">
+        <div class="w-full rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm p-3 md:p-4">
+            <div class="flex flex-wrap items-center gap-2 md:gap-3">
+                <a href="{{ route('ordenes-trabajo.index') }}" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700" title="Volver a las órdenes">
+                    <flux:icon.arrow-left class="size-4" />
+                    <span class="sr-only">Volver</span>
+                </a>
+
+                <div class="flex items-center gap-2 min-w-[180px]">
+                    <div class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                        <flux:icon.wrench-screwdriver class="size-4" />
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-wide text-zinc-500">Orden</p>
+                        <p class="text-sm md:text-base font-semibold text-zinc-900 dark:text-zinc-100">Nueva orden</p>
+                    </div>
+                </div>
+
+                <div class="flex items-end gap-2 flex-wrap text-sm">
+                    <div class="flex flex-col min-w-[150px]">
+                        <span class="text-xs uppercase tracking-wide text-zinc-500">Ingreso</span>
+                        <input
+                            type="date"
+                            wire:model.live="fechaIngreso"
+                            class="mt-1 h-9 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        >
+                    </div>
+                    <div class="flex flex-col min-w-[150px]">
+                        <span class="text-xs uppercase tracking-wide text-zinc-500">Entrega estimada</span>
+                        <input
+                            type="date"
+                            wire:model.live="fechaEntregaEstimada"
+                            class="mt-1 h-9 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        >
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 min-w-[180px]">
+                    <div class="flex h-9 w-9 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200 font-medium">
+                        {{ strtoupper(mb_substr(auth()->user()?->name ?? 'U', 0, 1)) }}
+                    </div>
+                    <div class="text-sm leading-tight">
+                        <span class="block text-xs uppercase tracking-wide text-zinc-500">Responsable</span>
+                        <span class="block font-medium text-zinc-900 dark:text-zinc-100">{{ auth()->user()?->name ?? 'Usuario' }}</span>
+                    </div>
+                </div>
+
+                <div class="flex items-end gap-2 ms-auto">
+                    <div class="flex flex-col min-w-[150px]">
+                        <span class="text-xs uppercase tracking-wide text-zinc-500">Estado</span>
+                        <select
+                            wire:model.live="estado"
+                            class="mt-1 h-9 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        >
+                            @foreach($estadosDisponibles as $valor => $label)
+                                <option value="{{ $valor }}">{{ $label }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <flux:dropdown position="bottom-end">
+                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700" title="Opciones">
+                            <flux:icon.ellipsis-vertical class="size-4" />
+                            <span class="sr-only">Opciones</span>
+                        </button>
+
+                        <flux:menu>
+                            <div class="px-3 py-2 text-sm text-zinc-500">Sin opciones disponibles por ahora</div>
+                        </flux:menu>
+                    </flux:dropdown>
+
+                    <button disabled class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Ingresar pago</button>
+                </div>
             </div>
         </div>
-
-        
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-6 items-start">
@@ -80,7 +142,40 @@
                             </div>
                             <button type="button" wire:click="limpiarCliente" class="px-2 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cambiar cliente</button>
                         </div>
+
                     @endif
+
+                    <!-- Accesorios y estado del equipo (dentro de la pestaña Equipo) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 hidden">
+                        <!-- Accesorios -->
+                        <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
+                            <h4 class="font-semibold mb-3">Accesorios</h4>
+                            <div class="space-y-2 text-sm">
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Bolso</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Cargador</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Funda</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Lámina protectora</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Estado del equipo -->
+                        <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
+                            <h4 class="font-semibold mb-3">Estado del equipo</h4>
+                            <textarea rows="6" class="w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -243,16 +338,8 @@
                                 <flux:icon.check class="size-3" /> Items
                             </span>
                         </div>
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Ingresar pago</button>
-                        <button type="button"
-                                wire:click="guardarOrden"
-                                @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
-                                title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
-                                class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
-                            Guardar orden
-                        </button>
+                        
+                        
                     </div>
                 </div>
                 
@@ -281,41 +368,41 @@
                 <div x-show="activeTab === 'equipo'" class="p-4 md:p-6" @keydown.window.ctrl.s.prevent="$wire.guardarOrden()" @keydown.window.escape="$wire.set('mostrarModalCrearDispositivo', false)">
                     <!-- Estado: dispositivo seleccionado -->
                     @if($dispositivoSeleccionado)
-                        <div class="rounded-lg border border-emerald-200 dark:border-emerald-900 bg-emerald-50/50 dark:bg-emerald-950 p-4 mb-4">
-                            <div class="flex items-start justify-between gap-4">
-                                <div>
-                                    <p class="text-sm text-zinc-500">Dispositivo seleccionado</p>
-                                    <p class="font-semibold">
-                                        @if($dispositivoSeleccionado['modelo'])
-                                            {{ $dispositivoSeleccionado['modelo']['marca'] }} {{ $dispositivoSeleccionado['modelo']['modelo'] }}
-                                            @if($dispositivoSeleccionado['modelo']['anio'])
-                                                ({{ $dispositivoSeleccionado['modelo']['anio'] }})
+                        <div class="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4 mb-4">
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex items-start gap-3 min-w-0">
+                                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-200">
+                                        <flux:icon.device-phone-mobile class="size-5" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <p class="font-semibold truncate">
+                                            @if($dispositivoSeleccionado['modelo'])
+                                                {{ $dispositivoSeleccionado['modelo']['marca'] }} {{ $dispositivoSeleccionado['modelo']['modelo'] }}
+                                                @if($dispositivoSeleccionado['modelo']['anio']) ({{ $dispositivoSeleccionado['modelo']['anio'] }}) @endif
+                                            @else
+                                                Sin modelo
                                             @endif
-                                        @else
-                                            Sin modelo
-                                        @endif
-                                    </p>
-                                    <div class="text-sm text-zinc-600 dark:text-zinc-300 space-x-3">
-                                        @if($dispositivoSeleccionado['imei'])
-                                            <span>IMEI: {{ $dispositivoSeleccionado['imei'] }}</span>
-                                        @endif
-                                        @if($dispositivoSeleccionado['color'])
-                                            <span>Color: {{ $dispositivoSeleccionado['color'] }}</span>
-                                        @endif
-                                        @if($dispositivoSeleccionado['cliente'])
-                                            <span class="inline-flex items-center gap-1"><flux:icon.user class="size-4" /> {{ $dispositivoSeleccionado['cliente']['nombre'] }}</span>
-                                        @endif
+                                        </p>
+                                        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+                                            @if($dispositivoSeleccionado['imei']) N° Serie/IMEI: {{ $dispositivoSeleccionado['imei'] }} @endif
+                                            @if($dispositivoSeleccionado['color'])
+                                                <span class="mx-1">•</span> Color: {{ $dispositivoSeleccionado['color'] }}
+                                            @endif
+                                        </p>
                                     </div>
                                 </div>
-                                <div>
-                                    <button type="button" wire:click="limpiarDispositivo" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cambiar dispositivo</button>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" wire:click="abrirModalEditarDispositivo" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Editar dispositivo</button>
+                                    <button type="button" wire:click="limpiarDispositivo" class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800" title="Quitar">
+                                        <flux:icon.minus class="size-4" />
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     @endif
 
-                    <!-- Estado: con cliente seleccionado -->
-                    @if($selectedClientId)
+                    <!-- Estado: con cliente seleccionado y SIN dispositivo seleccionado -->
+                    @if($selectedClientId && !$dispositivoSeleccionado)
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <h3 class="font-semibold">Dispositivos de {{ $clienteSeleccionado['nombre'] ?? 'cliente seleccionado' }}</h3>
@@ -370,6 +457,38 @@
                             </div>
                         </div>
                     @endif
+
+                    <!-- Accesorios y estado del equipo (tab Equipo) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <!-- Accesorios -->
+                        <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
+                            <h4 class="font-semibold mb-3">Accesorios</h4>
+                            <div class="space-y-2 text-sm">
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Bolso</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Cargador</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Funda</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
+                                    <span>Lámina protectora</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Estado del equipo -->
+                        <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
+                            <h4 class="font-semibold mb-3">Estado del equipo</h4>
+                            <textarea rows="6" class="w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Contenido de la pestaña Fotos -->
@@ -381,6 +500,21 @@
                 <div x-show="activeTab === 'notas'" class="p-4 md:p-6">
                     <p class="text-zinc-500 dark:text-zinc-400">Contenido de notas aquí...</p>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Mini panel: acciones inferiores del panel izquierdo -->
+        <div class="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm">
+            <div class="p-4 md:p-6 flex items-center justify-start gap-2 md:gap-3">
+                <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
+                <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
+                <button type="button"
+                        wire:click="guardarOrden"
+                        @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
+                        title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
+                        class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
+                    Guardar orden
+                </button>
             </div>
         </div>
     </div>
@@ -517,8 +651,94 @@
                             <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Color (opcional)</label>
                             <input type="text" wire:model.live="colorDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
                             @error('colorDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Observaciones (opcional)</label>
+                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm"></textarea>
+                        @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+
+                    <div class="flex items-center justify-end gap-2">
+                        <button type="button" wire:click="$set('mostrarModalCrearDispositivo', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
+                        <button type="button" wire:click="crearDispositivoRapido" @disabled(!$modeloSeleccionadoId) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Crear y seleccionar</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    @endif
+
+    <!-- Modal de edición de dispositivo -->
+    @if($mostrarModalEditarDispositivo)
+        <div class="fixed inset-0 z-50 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+            <div class="relative w-full max-w-lg sm:max-w-xl mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
+                <div class="space-y-4">
+                    <div>
+                        <h2 class="text-lg font-semibold">Editar dispositivo</h2>
+                        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Actualice los datos del equipo.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Modelo (marca, modelo o año) <span class="text-red-500">*</span></label>
+                            <button type="button" wire:click="abrirModalCrearModelo" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Nuevo modelo</button>
+                        </div>
+                        <input type="text"
+                               wire:model.live.debounce.300ms="modeloSearchTerm"
+                               placeholder="Ej: Samsung A52 2021"
+                               class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+
+                        @error('modeloSeleccionadoId')
+                            <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
+                        @enderror
+
+                        @if(strlen($modeloSearchTerm) >= 2 && count($modelosFound) > 0)
+                            <ul class="mt-2 max-h-48 overflow-y-auto border border-zinc-200 dark:border-zinc-700 rounded-md">
+                                @foreach($modelosFound as $m)
+                                    <li>
+                                        <button type="button" class="w-full text-left px-3 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-700"
+                                                wire:click="selectModelo({{ $m['id'] }})">
+                                            {{ $m['marca'] }} {{ $m['modelo'] }} @if($m['anio']) ({{ $m['anio'] }}) @endif
+                                        </button>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+
+                        @if($modeloSeleccionadoId)
+                            <p class="mt-2 text-xs text-emerald-600">Modelo seleccionado.</p>
+                        @endif
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">IMEI (opcional)</label>
+                            <input type="text" wire:model.live="imeiDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                            @error('imeiDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Color (opcional)</label>
+                            <input type="text" wire:model.live="colorDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                            @error('colorDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Observaciones (opcional)</label>
+                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm"></textarea>
+                        @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+
+                    <div class="flex items-center justify-end gap-2">
+                        <button type="button" wire:click="$set('mostrarModalEditarDispositivo', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
+                        <button type="button" wire:click="guardarEdicionDispositivo" @disabled(!$modeloSeleccionadoId) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
     <!-- Modal: Crear nuevo modelo -->
     <div x-data="{ open: @entangle('mostrarModalCrearModelo') }" x-cloak x-show="open" class="fixed inset-0 z-50 flex items-center justify-center">
@@ -571,18 +791,12 @@
             </div>
         </div>
     </div>
-                    <div>
-                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Observaciones (opcional)</label>
-                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm"></textarea>
-                        @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
-                    </div>
-
-                    <div class="flex items-center justify-end gap-2">
-                        <button type="button" wire:click="$set('mostrarModalCrearDispositivo', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
-                        <button type="button" wire:click="crearDispositivoRapido" @disabled(!$modeloSeleccionadoId) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Crear y seleccionar</button>
-                    </div>
-                </div>
-            </div>
+    <!-- Toast de éxito al actualizar equipo -->
+    <div x-data="{ open: @entangle('mostrarToastEquipoActualizado') }" x-show="open" x-transition.opacity class="fixed bottom-4 right-4 z-50">
+        <div x-init="$watch('open', value => { if(value){ setTimeout(() => open = false, 2500) } })" class="flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white shadow-lg">
+            <flux:icon.check class="size-4" />
+            <span class="text-sm font-medium">Equipo actualizado correctamente</span>
         </div>
-    @endif
+    </div>
+
 </div>
