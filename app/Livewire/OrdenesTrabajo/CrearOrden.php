@@ -2,15 +2,17 @@
 
 namespace App\Livewire\OrdenesTrabajo;
 
+use App\Models\AccesorioConfig;
 use App\Models\Cliente;
 use App\Models\Dispositivo;
 use App\Models\ModeloDispositivo;
 use App\Models\Producto;
 use App\Models\Servicio;
+use App\Services\OrderNumberGenerator;
+use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
-use App\Services\OrderNumberGenerator;
 
 class CrearOrden extends Component
 {
@@ -79,10 +81,20 @@ class CrearOrden extends Component
     // Tabs (sin Alpine)
     public string $activeTab = 'equipo';
 
+    // Accesorios configurables y seleccionados
+    public array $accesoriosDisponibles = [];
+
+    // Estructura: ['bolso' => true, 'cargador' => false, ...]
+    public array $accesoriosSeleccionados = [];
+
     public function mount(): void
     {
         $this->fechaIngreso = now()->toDateString();
         $this->recalcularTotales();
+
+        // Cargar accesorios disponibles (activos) e inicializar selecciones
+        $this->cargarAccesoriosDisponibles();
+        $this->inicializarAccesoriosSeleccionados();
     }
 
     // Dispositivo y búsqueda
@@ -112,13 +124,20 @@ class CrearOrden extends Component
 
     // Edición de dispositivo
     public bool $mostrarModalEditarDispositivo = false;
+
+    public bool $mostrarToastDispositivoActualizado = false;
+
     public bool $mostrarToastEquipoActualizado = false;
 
     // Crear nuevo modelo (desde modal de dispositivo)
     public bool $mostrarModalCrearModelo = false;
+
     public string $modeloNuevoMarca = '';
+
     public string $modeloNuevoModelo = '';
+
     public ?int $modeloNuevoAnio = null;
+
     public ?string $modeloNuevoDescripcion = null;
 
     #[On('ignoreBlur')]
@@ -179,10 +198,10 @@ class CrearOrden extends Component
         $this->showClientSearchResults = true;
 
         $query = Cliente::query()->where(function ($q) use ($trimmedValue) {
-            $q->where('nombre', 'like', '%' . $trimmedValue . '%')
-                ->orWhere('rut', 'like', '%' . $trimmedValue . '%')
-                ->orWhere('telefono', 'like', '%' . $trimmedValue . '%')
-                ->orWhere('email', 'like', '%' . $trimmedValue . '%');
+            $q->where('nombre', 'like', '%'.$trimmedValue.'%')
+                ->orWhere('rut', 'like', '%'.$trimmedValue.'%')
+                ->orWhere('telefono', 'like', '%'.$trimmedValue.'%')
+                ->orWhere('email', 'like', '%'.$trimmedValue.'%');
         });
 
         $this->clientsFound = $query->take(10)->get()->toArray();
@@ -267,7 +286,7 @@ class CrearOrden extends Component
         if ($this->tipoItemAgregar === 'servicio') {
             $this->itemsDisponibles = Servicio::query()
                 ->where('estado', 'activo')
-                ->where('nombre', 'like', '%' . $valor . '%')
+                ->where('nombre', 'like', '%'.$valor.'%')
                 ->limit(10)
                 ->get()
                 ->toArray();
@@ -275,8 +294,8 @@ class CrearOrden extends Component
             $this->itemsDisponibles = Producto::query()
                 ->where('estado', 'activo')
                 ->where(function ($query) use ($valor) {
-                    $query->where('nombre', 'like', '%' . $valor . '%')
-                        ->orWhere('marca', 'like', '%' . $valor . '%');
+                    $query->where('nombre', 'like', '%'.$valor.'%')
+                        ->orWhere('marca', 'like', '%'.$valor.'%');
                 })
                 ->limit(10)
                 ->get()
@@ -419,6 +438,19 @@ class CrearOrden extends Component
         $this->recalcularTotales();
     }
 
+    public function updatedObservacionesDispositivo(): void
+    {
+        // Guardar automáticamente el estado del dispositivo cuando se actualiza
+        if ($this->selectedDeviceId) {
+            $device = Dispositivo::find($this->selectedDeviceId);
+            if ($device) {
+                $device->update([
+                    'estado_dispositivo' => $this->observacionesDispositivo,
+                ]);
+            }
+        }
+    }
+
     public function calcularSubtotalItem($item): float
     {
         $subtotal = $item['cantidad'] * $item['precio'];
@@ -442,6 +474,44 @@ class CrearOrden extends Component
         }
     }
 
+    protected function cargarAccesoriosDisponibles(): void
+    {
+        $this->accesoriosDisponibles = AccesorioConfig::query()
+            ->where('activo', true)
+            ->orderBy('nombre')
+            ->get()
+            ->map(function ($acc) {
+                return [
+                    'id' => $acc->id,
+                    'nombre' => $acc->nombre,
+                    'clave' => $this->claveAccesorio($acc->nombre),
+                ];
+            })
+            ->toArray();
+    }
+
+    protected function inicializarAccesoriosSeleccionados(?array $desde = null): void
+    {
+        $map = [];
+        foreach ($this->accesoriosDisponibles as $acc) {
+            $clave = $acc['clave'];
+            $map[$clave] = (bool) ($desde[$clave] ?? false);
+        }
+        if ($desde) {
+            foreach ($desde as $k => $v) {
+                if (! array_key_exists($k, $map)) {
+                    $map[$k] = (bool) $v;
+                }
+            }
+        }
+        $this->accesoriosSeleccionados = $map;
+    }
+
+    protected function claveAccesorio(string $nombre): string
+    {
+        return Str::slug($nombre, '_');
+    }
+
     // === Dispositivos: búsqueda y selección ===
     // UI de búsqueda de dispositivos fue eliminada
 
@@ -453,15 +523,18 @@ class CrearOrden extends Component
         }
 
         $this->selectedDeviceId = $device->id;
-        // Mantener solo la selección
-    }
+        // Cargar el estado del dispositivo en el textarea
+        $this->observacionesDispositivo = $device->estado_dispositivo;
 
-    
+        // Cargar accesorios seleccionados del dispositivo
+        $this->cargarAccesoriosDisponibles();
+        $this->inicializarAccesoriosSeleccionados((array) ($device->accesorios ?? []));
+    }
 
     public function limpiarDispositivo(): void
     {
         $this->selectedDeviceId = null;
-        // limpiar solo selección actual
+        $this->observacionesDispositivo = null;
     }
 
     public function abrirModalEditarDispositivo(): void
@@ -476,11 +549,11 @@ class CrearOrden extends Component
         }
 
         $this->modeloSeleccionadoId = $device->modelo_id;
-        $this->modeloSearchTerm = $device->modelo ? trim($device->modelo->marca . ' ' . $device->modelo->modelo . ' ' . ($device->modelo->anio ?: '')) : '';
+        $this->modeloSearchTerm = $device->modelo ? trim($device->modelo->marca.' '.$device->modelo->modelo.' '.($device->modelo->anio ?: '')) : '';
         $this->modelosFound = [];
         $this->imeiDispositivo = $device->imei;
         $this->colorDispositivo = $device->color;
-        $this->observacionesDispositivo = $device->observaciones;
+        $this->observacionesDispositivo = $device->estado_dispositivo;
         $this->mostrarModalEditarDispositivo = true;
     }
 
@@ -506,11 +579,13 @@ class CrearOrden extends Component
             'modelo_id' => $this->modeloSeleccionadoId,
             'imei' => $this->imeiDispositivo,
             'color' => $this->colorDispositivo,
-            'observaciones' => $this->observacionesDispositivo,
+            'estado_dispositivo' => $this->observacionesDispositivo,
+            'accesorios' => $this->accesoriosSeleccionados,
         ]);
 
         $this->mostrarModalEditarDispositivo = false;
         $this->mostrarToastEquipoActualizado = true;
+        $this->mostrarToastDispositivoActualizado = true;
     }
 
     public function getDispositivosDelCliente(): array
@@ -539,8 +614,6 @@ class CrearOrden extends Component
                 ];
             })->toArray();
     }
-
-    
 
     protected function calcularDispositivoSugerido(int $clientId): ?int
     {
@@ -615,7 +688,7 @@ class CrearOrden extends Component
         $this->validate([
             'modeloNuevoMarca' => 'required|string|max:100',
             'modeloNuevoModelo' => 'required|string|max:150',
-            'modeloNuevoAnio' => 'nullable|integer|min:1990|max:' . ((int) date('Y') + 2),
+            'modeloNuevoAnio' => 'nullable|integer|min:1990|max:'.((int) date('Y') + 2),
             'modeloNuevoDescripcion' => 'nullable|string|max:500',
         ]);
 
@@ -637,7 +710,7 @@ class CrearOrden extends Component
         if ($exists) {
             // Sugerir/usar existente: seleccionarlo automáticamente
             $this->modeloSeleccionadoId = $exists->id;
-            $this->modeloSearchTerm = trim($exists->marca . ' ' . $exists->modelo . ' ' . ($exists->anio ?: ''));
+            $this->modeloSearchTerm = trim($exists->marca.' '.$exists->modelo.' '.($exists->anio ?: ''));
             $this->modelosFound = [];
             $this->mostrarModalCrearModelo = false;
 
@@ -652,7 +725,7 @@ class CrearOrden extends Component
         ]);
 
         $this->modeloSeleccionadoId = $modelo->id;
-        $this->modeloSearchTerm = trim($modelo->marca . ' ' . $modelo->modelo . ' ' . ($modelo->anio ?: ''));
+        $this->modeloSearchTerm = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
         $this->modelosFound = [];
         $this->mostrarModalCrearModelo = false;
     }
@@ -668,11 +741,11 @@ class CrearOrden extends Component
 
         $this->modelosFound = ModeloDispositivo::query()
             ->where(function ($q) use ($term) {
-                $q->where('marca', 'like', '%' . $term . '%')
-                  ->orWhere('modelo', 'like', '%' . $term . '%')
-                  ->orWhere('anio', 'like', '%' . $term . '%');
+                $q->where('marca', 'like', '%'.$term.'%')
+                    ->orWhere('modelo', 'like', '%'.$term.'%')
+                    ->orWhere('anio', 'like', '%'.$term.'%');
             })
-            ->orderByRaw("CASE WHEN marca LIKE ? THEN 0 ELSE 1 END", [$term . '%'])
+            ->orderByRaw('CASE WHEN marca LIKE ? THEN 0 ELSE 1 END', [$term.'%'])
             ->orderBy('marca')
             ->orderBy('modelo')
             ->take(10)
@@ -695,7 +768,7 @@ class CrearOrden extends Component
         }
 
         $this->modeloSeleccionadoId = $modelo->id;
-        $this->modeloSearchTerm = trim($modelo->marca . ' ' . $modelo->modelo . ' ' . ($modelo->anio ?: ''));
+        $this->modeloSearchTerm = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
         $this->modelosFound = [];
     }
 
@@ -713,7 +786,8 @@ class CrearOrden extends Component
             'modelo_id' => $this->modeloSeleccionadoId,
             'imei' => $this->imeiDispositivo,
             'color' => $this->colorDispositivo,
-            'observaciones' => $this->observacionesDispositivo,
+            'estado_dispositivo' => $this->observacionesDispositivo,
+            'accesorios' => $this->accesoriosSeleccionados,
         ]);
 
         $this->selectedDeviceId = $dispositivo->id;
@@ -742,7 +816,7 @@ class CrearOrden extends Component
             'tipoServicio' => 'required|in:reparacion,mantenimiento,garantia',
             'fechaIngreso' => 'required|date',
             'fechaEntregaEstimada' => 'nullable|date|after_or_equal:fechaIngreso',
-            'estado' => 'required|in:' . $estadoKeys,
+            'estado' => 'required|in:'.$estadoKeys,
         ]);
 
         // Generar número de orden único (service)
@@ -812,5 +886,36 @@ class CrearOrden extends Component
             'entregado' => 'Entregado',
             'cancelado' => 'Cancelado',
         ];
+    }
+
+    // Guardado en caliente de accesorios cuando hay dispositivo seleccionado
+    public function updatedAccesoriosSeleccionados(): void
+    {
+        if ($this->selectedDeviceId) {
+            $device = Dispositivo::find($this->selectedDeviceId);
+            if ($device) {
+                $device->update([
+                    'accesorios' => $this->accesoriosSeleccionados,
+                ]);
+            }
+        }
+    }
+
+    public function toggleAccesorio(string $clave): void
+    {
+        if (! $this->selectedDeviceId) {
+            return;
+        }
+
+        // Toggle del estado del accesorio
+        $this->accesoriosSeleccionados[$clave] = ! ($this->accesoriosSeleccionados[$clave] ?? false);
+
+        // Guardar en caliente si hay dispositivo seleccionado
+        $device = Dispositivo::find($this->selectedDeviceId);
+        if ($device) {
+            $device->update([
+                'accesorios' => $this->accesoriosSeleccionados,
+            ]);
+        }
     }
 }

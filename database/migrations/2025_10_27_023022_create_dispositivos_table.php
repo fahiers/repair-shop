@@ -17,7 +17,9 @@ return new class extends Migration
             $table->foreignId('modelo_id')->constrained('modelos_dispositivos');
             $table->string('imei', 50)->nullable()->index();
             $table->string('color', 50)->nullable();
-            $table->text('observaciones')->nullable();
+            // Accesorios del equipo seleccionados (JSON de claves booleanas)
+            $table->json('accesorios')->nullable();
+            $table->text('estado_dispositivo')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

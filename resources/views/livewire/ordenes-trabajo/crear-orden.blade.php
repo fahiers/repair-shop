@@ -145,37 +145,6 @@
 
                     @endif
 
-                    <!-- Accesorios y estado del equipo (dentro de la pestaña Equipo) -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 hidden">
-                        <!-- Accesorios -->
-                        <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
-                            <h4 class="font-semibold mb-3">Accesorios</h4>
-                            <div class="space-y-2 text-sm">
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Bolso</span>
-                                </label>
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Cargador</span>
-                                </label>
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Funda</span>
-                                </label>
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Lámina protectora</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Estado del equipo -->
-                        <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
-                            <h4 class="font-semibold mb-3">Estado del equipo</h4>
-                            <textarea rows="6" class="w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -315,11 +284,26 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Mini panel: acciones inferiores del panel izquierdo -->
+            <div class="border-t border-zinc-100 dark:border-zinc-700 p-4 md:p-6">
+                <div class="flex items-center justify-start gap-2 md:gap-3">
+                    <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
+                    <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
+                    <button type="button"
+                            wire:click="guardarOrden"
+                            @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
+                            title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
+                            class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
+                        Guardar orden
+                    </button>
+                </div>
+            </div>
         </div>
         
         <!-- Panel derecho: acciones y pestañas -->
-        <div class="lg:sticky lg:top-6 lg:self-start" x-data="{ activeTab: 'equipo' }">
-            <div class="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm">
+        <div class="lg:sticky lg:top-6 lg:self-start lg:max-h-[calc(100vh-3rem)]" x-data="{ activeTab: 'equipo' }">
+            <div class="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm lg:flex lg:flex-col lg:max-h-[calc(100vh-3rem)]">
                 <!-- Botones de acciones en el header -->
                 <div class="p-4 md:p-6 border-b border-zinc-100 dark:border-zinc-700">
                     <div class="flex items-center gap-2 md:gap-3 flex-wrap w-full justify-between">
@@ -332,7 +316,7 @@
                                 <flux:icon.check class="size-3" /> Dispositivo
                             </span>
                             <span class="inline-flex items-center gap-1 px-2 py-1 rounded border {{ strlen($asunto) >= 3 ? 'border-emerald-300 text-emerald-700 bg-emerald-50' : 'border-zinc-200 text-zinc-600' }}">
-                                <flux:icon.check class="size-3" /> Descripción
+                                <flux:icon.check class="size-3" /> Problema reportado
                             </span>
                             <span class="inline-flex items-center gap-1 px-2 py-1 rounded border {{ count($items) > 0 ? 'border-emerald-300 text-emerald-700 bg-emerald-50' : 'border-zinc-200 text-zinc-600' }}">
                                 <flux:icon.check class="size-3" /> Items
@@ -365,7 +349,7 @@
                 </div>
 
                 <!-- Contenido de la pestaña Equipo -->
-                <div x-show="activeTab === 'equipo'" class="p-4 md:p-6" @keydown.window.ctrl.s.prevent="$wire.guardarOrden()" @keydown.window.escape="$wire.set('mostrarModalCrearDispositivo', false)">
+                <div x-show="activeTab === 'equipo'" class="p-4 md:p-6 lg:overflow-y-auto lg:flex-1 lg:min-h-0" @keydown.window.ctrl.s.prevent="$wire.guardarOrden()" @keydown.window.escape="$wire.set('mostrarModalCrearDispositivo', false)">
                     <!-- Estado: dispositivo seleccionado -->
                     @if($dispositivoSeleccionado)
                         <div class="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4 mb-4">
@@ -460,61 +444,50 @@
 
                     <!-- Accesorios y estado del equipo (tab Equipo) -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                        <!-- Accesorios -->
+                        <!-- Accesorios (dinámico) -->
                         <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
                             <h4 class="font-semibold mb-3">Accesorios</h4>
                             <div class="space-y-2 text-sm">
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Bolso</span>
-                                </label>
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Cargador</span>
-                                </label>
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Funda</span>
-                                </label>
-                                <label class="flex items-center gap-2">
-                                    <input type="checkbox" class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600">
-                                    <span>Lámina protectora</span>
-                                </label>
+                                @forelse($accesoriosDisponibles as $acc)
+                                    <label class="flex items-center gap-2">
+                                        <input
+                                            type="checkbox"
+                                            wire:click="toggleAccesorio('{{ $acc['clave'] }}')"
+                                            @checked(isset($accesoriosSeleccionados[$acc['clave']]) && $accesoriosSeleccionados[$acc['clave']])
+                                            @disabled(!$dispositivoSeleccionado)
+                                            class="h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 text-emerald-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        >
+                                        <span>{{ $acc['nombre'] }}</span>
+                                    </label>
+                                @empty
+                                    <p class="text-zinc-500 dark:text-zinc-400">Sin accesorios configurados.</p>
+                                @endforelse
                             </div>
                         </div>
 
                         <!-- Estado del equipo -->
                         <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
                             <h4 class="font-semibold mb-3">Estado del equipo</h4>
-                            <textarea rows="6" class="w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
+                            <textarea 
+                                rows="6" 
+                                wire:model.live.debounce.500ms="observacionesDispositivo"
+                                @disabled(!$dispositivoSeleccionado)
+                                class="w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed" 
+                                placeholder="{{ $dispositivoSeleccionado ? 'Detalles visibles: rayas, golpes, pantalla, conectores, etc.' : 'Seleccione un dispositivo primero' }}"
+                            ></textarea>
                         </div>
                     </div>
                 </div>
 
                 <!-- Contenido de la pestaña Fotos -->
-                <div x-show="activeTab === 'fotos'" class="p-4 md:p-6">
+                <div x-show="activeTab === 'fotos'" class="p-4 md:p-6 lg:overflow-y-auto lg:flex-1 lg:min-h-0">
                     <p class="text-zinc-500 dark:text-zinc-400">Contenido de fotos aquí...</p>
                 </div>
 
                 <!-- Contenido de la pestaña Notas -->
-                <div x-show="activeTab === 'notas'" class="p-4 md:p-6">
+                <div x-show="activeTab === 'notas'" class="p-4 md:p-6 lg:overflow-y-auto lg:flex-1 lg:min-h-0">
                     <p class="text-zinc-500 dark:text-zinc-400">Contenido de notas aquí...</p>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Mini panel: acciones inferiores del panel izquierdo -->
-        <div class="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm">
-            <div class="p-4 md:p-6 flex items-center justify-start gap-2 md:gap-3">
-                <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
-                <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
-                <button type="button"
-                        wire:click="guardarOrden"
-                        @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
-                        title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
-                        class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
-                    Guardar orden
-                </button>
             </div>
         </div>
     </div>
@@ -655,8 +628,8 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Observaciones (opcional)</label>
-                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm"></textarea>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Estado del dispositivo (opcional)</label>
+                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
                         @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                     </div>
 
@@ -726,8 +699,8 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Observaciones (opcional)</label>
-                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm"></textarea>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Estado del dispositivo (opcional)</label>
+                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
                         @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                     </div>
 
@@ -800,3 +773,4 @@
     </div>
 
 </div>
+

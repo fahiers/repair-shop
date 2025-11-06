@@ -22,6 +22,7 @@
             <flux:sidebar.item icon="document-text" href="#" :current="request()->is('facturacion*')" wire:navigate>{{ __('Facturación') }}</flux:sidebar.item>
             <flux:sidebar.item icon="wrench-screwdriver" :href="route('servicios.index')" :current="request()->routeIs('servicios.*')" wire:navigate>{{ __('Servicios') }}</flux:sidebar.item>
             <flux:sidebar.item icon="shopping-bag" :href="route('productos.index')" :current="request()->routeIs('productos.*')" wire:navigate>{{ __('Productos') }}</flux:sidebar.item>
+            <flux:sidebar.item icon="cog-6-tooth" :href="route('company.edit')" :current="request()->routeIs('company.*')" wire:navigate>{{ __('Configurar mi empresa') }}</flux:sidebar.item>
         </flux:sidebar.nav>
 
         <flux:sidebar.spacer />

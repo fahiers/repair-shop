@@ -15,7 +15,12 @@ class Dispositivo extends Model
         'modelo_id',
         'imei',
         'color',
-        'observaciones',
+        'accesorios',
+        'estado_dispositivo',
+    ];
+
+    protected $casts = [
+        'accesorios' => 'array',
     ];
 
     public function cliente()
