@@ -83,7 +83,13 @@
             <div class="p-4 md:p-6 border-b border-zinc-100 dark:border-zinc-700">
                 <div class="space-y-3">
                     <div class="relative">
-                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Buscar cliente</label>
+                        <div class="flex items-center justify-between gap-2 mb-1">
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Buscar cliente</label>
+                            <button type="button" wire:click="abrirModalCrearCliente" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700 flex items-center gap-1">
+                                <flux:icon.plus class="size-3" />
+                                Nuevo cliente
+                            </button>
+                        </div>
                         <input
                             type="text"
                             wire:model.live.debounce.300ms="clientSearchTerm"
@@ -94,6 +100,9 @@
                             autocomplete="off"
                             class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                         >
+                        @error('selectedClientId')
+                            <p class="mt-1 text-xs text-red-600 dark:text-red-400">{{ $message }}</p>
+                        @enderror
 
                         @if($showClientSearchResults)
                             @if($loadingClients)
@@ -252,9 +261,14 @@
                     </table>
                 </div>
 
-                <button type="button" wire:click="abrirModalAgregarItem('servicio')" class="inline-flex items-center gap-2 px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">
-                    Agregar servicio o producto
-                </button>
+                <div class="space-y-2">
+                    <button type="button" wire:click="abrirModalAgregarItem('servicio')" class="inline-flex items-center gap-2 px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">
+                        Agregar servicio o producto
+                    </button>
+                    @error('items')
+                        <p class="text-xs text-red-600 dark:text-red-400">{{ $message }}</p>
+                    @enderror
+                </div>
 
                 <!-- Totales -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-2">
@@ -283,20 +297,70 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Anticipo y Saldo -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                    <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
+                        <label class="block text-xs text-zinc-500 dark:text-zinc-400 mb-2">Anticipo</label>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-zinc-600 dark:text-zinc-400">$</span>
+                            <input
+                                type="number"
+                                wire:model.live.debounce.300ms="anticipo"
+                                min="0"
+                                step="0.01"
+                                max="999999.99"
+                                class="flex-1 px-3 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                                placeholder="0.00"
+                            >
+                        </div>
+                        @error('anticipo')
+                            <p class="text-xs text-red-600 dark:text-red-400 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="rounded-lg border border-amber-200 dark:border-amber-900 p-4 bg-amber-50 dark:bg-amber-950">
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Saldo pendiente</p>
+                        <p class="text-lg font-semibold text-amber-600 dark:text-amber-500">
+                            $ {{ number_format($this->calcularSaldo(), 0, ',', '.') }}
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Mini panel: acciones inferiores del panel izquierdo -->
             <div class="border-t border-zinc-100 dark:border-zinc-700 p-4 md:p-6">
-                <div class="flex items-center justify-start gap-2 md:gap-3">
-                    <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
-                    <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
-                    <button type="button"
-                            wire:click="guardarOrden"
-                            @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
-                            title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
-                            class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
-                        Guardar orden
-                    </button>
+                <div class="space-y-3">
+                    <!-- Mensajes de error generales -->
+                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items']))
+                        <div class="rounded-md bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-3">
+                            <div class="flex items-start gap-2">
+                                <flux:icon.exclamation-triangle class="size-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
+                                <div class="flex-1 space-y-1">
+                                    @error('selectedClientId')
+                                        <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
+                                    @enderror
+                                    @error('selectedDeviceId')
+                                        <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
+                                    @enderror
+                                    @error('items')
+                                        <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
+                    <div class="flex items-center justify-start gap-2 md:gap-3">
+                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
+                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
+                        <button type="button"
+                                wire:click="guardarOrden"
+                                @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
+                                title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
+                                class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
+                            Guardar orden
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -334,11 +398,6 @@
                                 :class="activeTab === 'equipo' ? 'font-semibold text-zinc-900 dark:text-zinc-100' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'"
                                 class="px-3 py-1.5 text-sm transition-colors">
                             Equipo
-                        </button>
-                        <button @click="activeTab = 'fotos'"
-                                :class="activeTab === 'fotos' ? 'font-semibold text-zinc-900 dark:text-zinc-100' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'"
-                                class="px-3 py-1.5 text-sm transition-colors">
-                            Fotos
                         </button>
                         <button @click="activeTab = 'notas'"
                                 :class="activeTab === 'notas' ? 'font-semibold text-zinc-900 dark:text-zinc-100' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'"
@@ -384,6 +443,12 @@
                             </div>
                         </div>
                     @endif
+
+                    @error('selectedDeviceId')
+                        <div class="mt-2 rounded-md bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-3">
+                            <p class="text-xs text-red-600 dark:text-red-400">{{ $message }}</p>
+                        </div>
+                    @enderror
 
                     <!-- Estado: con cliente seleccionado y SIN dispositivo seleccionado -->
                     @if($selectedClientId && !$dispositivoSeleccionado)
@@ -479,11 +544,6 @@
                     </div>
                 </div>
 
-                <!-- Contenido de la pestaña Fotos -->
-                <div x-show="activeTab === 'fotos'" class="p-4 md:p-6 lg:overflow-y-auto lg:flex-1 lg:min-h-0">
-                    <p class="text-zinc-500 dark:text-zinc-400">Contenido de fotos aquí...</p>
-                </div>
-
                 <!-- Contenido de la pestaña Notas -->
                 <div x-show="activeTab === 'notas'" class="p-4 md:p-6 lg:overflow-y-auto lg:flex-1 lg:min-h-0">
                     <p class="text-zinc-500 dark:text-zinc-400">Contenido de notas aquí...</p>
@@ -565,19 +625,28 @@
         </div>
     @endif
 
-    <!-- Modal de creación rápida de dispositivo -->
-    @if($mostrarModalCrearDispositivo)
+    <!-- Modal unificado de creación/edición de dispositivo -->
+    @if($mostrarModalCrearDispositivo || $mostrarModalEditarDispositivo)
+        @php
+            $esModoEdicion = $mostrarModalEditarDispositivo;
+            $nombreVariableModal = $esModoEdicion ? 'mostrarModalEditarDispositivo' : 'mostrarModalCrearDispositivo';
+            $metodoGuardar = $esModoEdicion ? 'guardarEdicionDispositivo' : 'crearDispositivoRapido';
+        @endphp
         <div class="fixed inset-0 z-50 flex items-center justify-center">
             <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
             <div class="relative w-full max-w-lg sm:max-w-xl mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
                 <div class="space-y-4">
                     <div>
-                        <h2 class="text-lg font-semibold">Crear dispositivo</h2>
+                        <h2 class="text-lg font-semibold">{{ $esModoEdicion ? 'Editar dispositivo' : 'Crear dispositivo' }}</h2>
                         <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                            @if($selectedClientId)
-                                Este dispositivo se asociará automáticamente al cliente {{ $clienteSeleccionado['nombre'] ?? '' }}.
+                            @if($esModoEdicion)
+                                Actualice los datos del equipo.
                             @else
-                                Puede crear el dispositivo sin cliente asociado.
+                                @if($selectedClientId)
+                                    Este dispositivo se asociará automáticamente al cliente {{ $clienteSeleccionado['nombre'] ?? '' }}.
+                                @else
+                                    Puede crear el dispositivo sin cliente asociado.
+                                @endif
                             @endif
                         </p>
                     </div>
@@ -634,79 +703,10 @@
                     </div>
 
                     <div class="flex items-center justify-end gap-2">
-                        <button type="button" wire:click="$set('mostrarModalCrearDispositivo', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
-                        <button type="button" wire:click="crearDispositivoRapido" @disabled(!$modeloSeleccionadoId) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Crear y seleccionar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
-
-    <!-- Modal de edición de dispositivo -->
-    @if($mostrarModalEditarDispositivo)
-        <div class="fixed inset-0 z-50 flex items-center justify-center">
-            <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
-            <div class="relative w-full max-w-lg sm:max-w-xl mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
-                <div class="space-y-4">
-                    <div>
-                        <h2 class="text-lg font-semibold">Editar dispositivo</h2>
-                        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Actualice los datos del equipo.</p>
-                    </div>
-
-                    <div>
-                        <div class="flex items-center justify-between">
-                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Modelo (marca, modelo o año) <span class="text-red-500">*</span></label>
-                            <button type="button" wire:click="abrirModalCrearModelo" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Nuevo modelo</button>
-                        </div>
-                        <input type="text"
-                               wire:model.live.debounce.300ms="modeloSearchTerm"
-                               placeholder="Ej: Samsung A52 2021"
-                               class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-
-                        @error('modeloSeleccionadoId')
-                            <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                        @enderror
-
-                        @if(strlen($modeloSearchTerm) >= 2 && count($modelosFound) > 0)
-                            <ul class="mt-2 max-h-48 overflow-y-auto border border-zinc-200 dark:border-zinc-700 rounded-md">
-                                @foreach($modelosFound as $m)
-                                    <li>
-                                        <button type="button" class="w-full text-left px-3 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-700"
-                                                wire:click="selectModelo({{ $m['id'] }})">
-                                            {{ $m['marca'] }} {{ $m['modelo'] }} @if($m['anio']) ({{ $m['anio'] }}) @endif
-                                        </button>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        @endif
-
-                        @if($modeloSeleccionadoId)
-                            <p class="mt-2 text-xs text-emerald-600">Modelo seleccionado.</p>
-                        @endif
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">IMEI (opcional)</label>
-                            <input type="text" wire:model.live="imeiDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
-                            @error('imeiDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Color (opcional)</label>
-                            <input type="text" wire:model.live="colorDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
-                            @error('colorDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Estado del dispositivo (opcional)</label>
-                        <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
-                        @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
-                    </div>
-
-                    <div class="flex items-center justify-end gap-2">
-                        <button type="button" wire:click="$set('mostrarModalEditarDispositivo', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
-                        <button type="button" wire:click="guardarEdicionDispositivo" @disabled(!$modeloSeleccionadoId) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Guardar</button>
+                        <button type="button" wire:click="$set('{{ $nombreVariableModal }}', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
+                        <button type="button" wire:click="{{ $metodoGuardar }}" @disabled(!$modeloSeleccionadoId) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
+                            {{ $esModoEdicion ? 'Guardar' : 'Crear y seleccionar' }}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -764,6 +764,59 @@
             </div>
         </div>
     </div>
+    <!-- Modal: Crear nuevo cliente -->
+    @if($mostrarModalCrearCliente)
+        <div class="fixed inset-0 z-50 flex items-center justify-center" @keydown.window.escape="$wire.set('mostrarModalCrearCliente', false)">
+            <div class="absolute inset-0 bg-black/50" aria-hidden="true" wire:click="$set('mostrarModalCrearCliente', false)"></div>
+            <div class="relative w-full max-w-md sm:max-w-lg mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
+                <div class="space-y-4">
+                    <div>
+                        <h2 class="text-lg font-semibold">Nuevo cliente</h2>
+                        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Cree un cliente rápidamente. Solo el nombre es obligatorio.</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Nombre <span class="text-red-500">*</span></label>
+                        <input type="text" wire:model.live="clienteNuevoNombre" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Ej: Juan Pérez">
+                        @error('clienteNuevoNombre') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Teléfono</label>
+                            <input type="text" wire:model.live="clienteNuevoTelefono" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Ej: +56 9 1234 5678">
+                            @error('clienteNuevoTelefono') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">RUT</label>
+                            <input type="text" wire:model.live="clienteNuevoRut" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Ej: 12.345.678-9">
+                            @error('clienteNuevoRut') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Email</label>
+                        <input type="email" wire:model.live="clienteNuevoEmail" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Ej: juan@ejemplo.com">
+                        @error('clienteNuevoEmail') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Dirección</label>
+                        <input type="text" wire:model.live="clienteNuevoDireccion" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Ej: Av. Principal 123">
+                        @error('clienteNuevoDireccion') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+
+                    <div class="flex items-center justify-end gap-2">
+                        <button type="button" wire:click="$set('mostrarModalCrearCliente', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>
+                        <button type="button" wire:click="crearClienteRapido" @disabled(empty(trim($clienteNuevoNombre))) class="px-3 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
+                            Crear y seleccionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
     <!-- Toast de éxito al actualizar equipo -->
     <div x-data="{ open: @entangle('mostrarToastEquipoActualizado') }" x-show="open" x-transition.opacity class="fixed bottom-4 right-4 z-50">
         <div x-init="$watch('open', value => { if(value){ setTimeout(() => open = false, 2500) } })" class="flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white shadow-lg">

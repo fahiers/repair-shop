@@ -2,13 +2,16 @@
 
 namespace App\Livewire\OrdenesTrabajo;
 
+use App\Enums\EstadoOrden;
 use App\Models\AccesorioConfig;
 use App\Models\Cliente;
 use App\Models\Dispositivo;
 use App\Models\ModeloDispositivo;
+use App\Models\OrdenTrabajo;
 use App\Models\Producto;
 use App\Models\Servicio;
 use App\Services\OrderNumberGenerator;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
@@ -50,6 +53,9 @@ class CrearOrden extends Component
     // Asunto/Descripción
     #[Validate('required|min:3|max:255')]
     public string $asunto = '';
+
+    // Anticipo y saldo
+    public float $anticipo = 0;
 
     // Items (servicios/productos)
     public array $items = [];
@@ -140,6 +146,19 @@ class CrearOrden extends Component
 
     public ?string $modeloNuevoDescripcion = null;
 
+    // Crear cliente inline
+    public bool $mostrarModalCrearCliente = false;
+
+    public string $clienteNuevoNombre = '';
+
+    public string $clienteNuevoTelefono = '';
+
+    public string $clienteNuevoEmail = '';
+
+    public string $clienteNuevoDireccion = '';
+
+    public string $clienteNuevoRut = '';
+
     #[On('ignoreBlur')]
     public function setIgnoreBlur(): void
     {
@@ -213,6 +232,12 @@ class CrearOrden extends Component
         $client = Cliente::find($clientId);
 
         if ($client) {
+            // Resetear dispositivo si cambia el cliente
+            $clienteAnteriorId = $this->selectedClientId;
+            if ($clienteAnteriorId !== null && $clienteAnteriorId !== $client->id) {
+                $this->limpiarDispositivo();
+            }
+
             $this->selectedClientId = $client->id;
             $this->clientSearchTerm = $client->nombre;
             $this->rut = (string) ($client->rut ?? '');
@@ -266,6 +291,9 @@ class CrearOrden extends Component
 
     public function limpiarCliente(): void
     {
+        // Resetear dispositivo al limpiar cliente
+        $this->limpiarDispositivo();
+
         $this->clienteSeleccionado = null;
         $this->clientSearchTerm = '';
         $this->selectedClientId = null;
@@ -424,8 +452,18 @@ class CrearOrden extends Component
         // Calcular IVA
         $this->montoIva = $this->aplicarIva ? $this->subtotalConDescuento * ($this->porcentajeIva / 100) : 0;
 
-        // Calcular total
+        // Calcular total (costo estimado)
         $this->total = $this->subtotalConDescuento + $this->montoIva;
+    }
+
+    /**
+     * Calcula el saldo pendiente basado en el total y el anticipo.
+     */
+    public function calcularSaldo(): float
+    {
+        $anticipo = $this->anticipo ?? 0;
+
+        return max(0, round($this->total - $anticipo, 2));
     }
 
     public function updatedAplicarIva(): void
@@ -435,6 +473,19 @@ class CrearOrden extends Component
 
     public function updatedPorcentajeIva(): void
     {
+        $this->recalcularTotales();
+    }
+
+    public function updatedAnticipo($value): void
+    {
+        // Convertir NULL o valores vacíos a 0
+        if ($value === null || $value === '') {
+            $this->anticipo = 0;
+        } else {
+            $this->anticipo = max(0, (float) $value);
+        }
+
+        // Recalcular totales para actualizar el saldo visual
         $this->recalcularTotales();
     }
 
@@ -808,7 +859,19 @@ class CrearOrden extends Component
             $this->fechaEntregaEstimada = null;
         }
 
-        $estadoKeys = implode(',', array_keys($this->estadosDisponibles()));
+        // Recalcular totales antes de guardar para asegurar que estén actualizados
+        $this->recalcularTotales();
+
+        // Validaciones personalizadas con mensajes descriptivos
+        $this->validarClienteYDispositivo();
+        $this->validarItems();
+
+        // Si hay errores de validación personalizados, detener la ejecución
+        if ($this->getErrorBag()->hasAny(['selectedClientId', 'selectedDeviceId', 'items'])) {
+            return;
+        }
+
+        $estadoKeys = implode(',', array_keys(OrdenTrabajo::estadosDisponibles()));
 
         $this->validate([
             'selectedDeviceId' => 'required|exists:dispositivos,id',
@@ -817,6 +880,7 @@ class CrearOrden extends Component
             'fechaIngreso' => 'required|date',
             'fechaEntregaEstimada' => 'nullable|date|after_or_equal:fechaIngreso',
             'estado' => 'required|in:'.$estadoKeys,
+            'anticipo' => 'nullable|numeric|min:0|max:999999.99',
         ]);
 
         // Generar número de orden único (service)
@@ -824,39 +888,50 @@ class CrearOrden extends Component
 
         $dispositivo = Dispositivo::find($this->selectedDeviceId);
 
-        $orden = \App\Models\OrdenTrabajo::create([
-            'numero_orden' => $numero,
-            'dispositivo_id' => $dispositivo->id,
-            'tecnico_id' => auth()->id(),
-            'fecha_ingreso' => $this->fechaIngreso,
-            'fecha_entrega_estimada' => $this->fechaEntregaEstimada,
-            'problema_reportado' => $this->asunto,
-            'costo_estimado' => $this->total,
-            'estado' => $this->estado,
-        ]);
+        // Calcular saldo: costo estimado menos anticipo
+        $saldo = $this->calcularSaldo();
 
-        // Guardar items en pivots
-        foreach ($this->items as $item) {
-            $cantidad = (int) ($item['cantidad'] ?? 1);
-            $precio = (float) ($item['precio'] ?? 0);
-            $descuento = (float) ($item['descuento'] ?? 0);
-            $subtotal = max(0, $cantidad * $precio * (1 - ($descuento / 100)));
+        // Encapsular la creación de la orden y los registros pivot en una transacción
+        $orden = DB::transaction(function () use ($numero, $dispositivo, $saldo) {
+            // Crear la orden
+            $orden = OrdenTrabajo::create([
+                'numero_orden' => $numero,
+                'dispositivo_id' => $dispositivo->id,
+                'tecnico_id' => auth()->id(),
+                'fecha_ingreso' => $this->fechaIngreso,
+                'fecha_entrega_estimada' => $this->fechaEntregaEstimada,
+                'problema_reportado' => $this->asunto,
+                'costo_estimado' => round($this->total, 2),
+                'anticipo' => round($this->anticipo, 2),
+                'saldo' => $saldo,
+                'estado' => EstadoOrden::from($this->estado),
+            ]);
 
-            if (($item['tipo'] ?? '') === 'servicio') {
-                $orden->servicios()->attach($item['id'], [
-                    'descripcion' => $item['nombre'] ?? null,
-                    'precio_unitario' => $precio,
-                    'cantidad' => $cantidad,
-                    'subtotal' => $subtotal,
-                ]);
-            } elseif (($item['tipo'] ?? '') === 'producto') {
-                $orden->productos()->attach($item['id'], [
-                    'precio_unitario' => $precio,
-                    'cantidad' => $cantidad,
-                    'subtotal' => $subtotal,
-                ]);
+            // Guardar items en pivots
+            foreach ($this->items as $item) {
+                $cantidad = (int) ($item['cantidad'] ?? 1);
+                $precio = (float) ($item['precio'] ?? 0);
+                $descuento = (float) ($item['descuento'] ?? 0);
+                $subtotal = max(0, $cantidad * $precio * (1 - ($descuento / 100)));
+
+                if (($item['tipo'] ?? '') === 'servicio') {
+                    $orden->servicios()->attach($item['id'], [
+                        'descripcion' => $item['nombre'] ?? null,
+                        'precio_unitario' => $precio,
+                        'cantidad' => $cantidad,
+                        'subtotal' => $subtotal,
+                    ]);
+                } elseif (($item['tipo'] ?? '') === 'producto') {
+                    $orden->productos()->attach($item['id'], [
+                        'precio_unitario' => $precio,
+                        'cantidad' => $cantidad,
+                        'subtotal' => $subtotal,
+                    ]);
+                }
             }
-        }
+
+            return $orden;
+        });
 
         // Redirigir a índice o detalle (por ahora índice)
         return redirect()->route('ordenes-trabajo.index');
@@ -871,21 +946,8 @@ class CrearOrden extends Component
             // Support data for equipo tab
             'dispositivosCliente' => $this->getDispositivosDelCliente(),
             'dispositivoSeleccionado' => $this->getDispositivoSeleccionado(),
-            'estadosDisponibles' => $this->estadosDisponibles(),
+            'estadosDisponibles' => OrdenTrabajo::estadosDisponibles(),
         ]);
-    }
-
-    protected function estadosDisponibles(): array
-    {
-        return [
-            'pendiente' => 'Pendiente',
-            'diagnostico' => 'Diagnóstico',
-            'en_reparacion' => 'En reparación',
-            'espera_repuesto' => 'En espera de repuesto',
-            'listo' => 'Listo',
-            'entregado' => 'Entregado',
-            'cancelado' => 'Cancelado',
-        ];
     }
 
     // Guardado en caliente de accesorios cuando hay dispositivo seleccionado
@@ -917,5 +979,110 @@ class CrearOrden extends Component
                 'accesorios' => $this->accesoriosSeleccionados,
             ]);
         }
+    }
+
+    /**
+     * Valida que el cliente exista (si está seleccionado) y que el dispositivo pertenezca al mismo cliente.
+     * Nota: Se permite guardar órdenes con dispositivo sin cliente seleccionado.
+     */
+    protected function validarClienteYDispositivo(): void
+    {
+        // Validar que el cliente exista SOLO si hay un cliente seleccionado
+        if ($this->selectedClientId !== null) {
+            $cliente = Cliente::find($this->selectedClientId);
+            if (! $cliente) {
+                $this->addError('selectedClientId', 'El cliente seleccionado no existe en el sistema.');
+
+                return;
+            }
+
+            // Si hay cliente seleccionado, debe haber un dispositivo seleccionado
+            if ($this->selectedDeviceId === null) {
+                $this->addError('selectedDeviceId', 'Debe seleccionar un dispositivo para el cliente seleccionado antes de guardar la orden.');
+
+                return;
+            }
+        }
+
+        // Validar que el dispositivo exista
+        if ($this->selectedDeviceId !== null) {
+            $dispositivo = Dispositivo::find($this->selectedDeviceId);
+            if (! $dispositivo) {
+                $this->addError('selectedDeviceId', 'El dispositivo seleccionado no existe en el sistema.');
+
+                return;
+            }
+
+            // Solo validar pertenencia si AMBOS cliente y dispositivo están seleccionados
+            // Si hay dispositivo sin cliente seleccionado, se permite (caso válido)
+            if ($this->selectedClientId !== null && $dispositivo->cliente_id !== $this->selectedClientId) {
+                $this->addError('selectedDeviceId', 'El dispositivo seleccionado no pertenece al cliente seleccionado. Por favor, seleccione un dispositivo del cliente correcto.');
+
+                return;
+            }
+        }
+    }
+
+    /**
+     * Valida que haya al menos un ítem en la orden.
+     */
+    protected function validarItems(): void
+    {
+        if (empty($this->items) || count($this->items) === 0) {
+            $this->addError('items', 'Debe agregar al menos un servicio o producto a la orden antes de guardarla.');
+        }
+    }
+
+    // === Creación de clientes inline ===
+    public function abrirModalCrearCliente(): void
+    {
+        $this->clienteNuevoNombre = '';
+        $this->clienteNuevoTelefono = '';
+        $this->clienteNuevoEmail = '';
+        $this->clienteNuevoDireccion = '';
+        $this->clienteNuevoRut = '';
+        $this->mostrarModalCrearCliente = true;
+    }
+
+    public function crearClienteRapido(): void
+    {
+        $email = trim($this->clienteNuevoEmail);
+        $rut = trim($this->clienteNuevoRut);
+
+        $rules = [
+            'clienteNuevoNombre' => 'required|string|max:255',
+            'clienteNuevoTelefono' => 'nullable|string|max:255',
+            'clienteNuevoDireccion' => 'nullable|string|max:255',
+        ];
+
+        // Solo validar email si no está vacío
+        if ($email !== '') {
+            $rules['clienteNuevoEmail'] = 'email|max:255|unique:clientes,email';
+        }
+
+        // Solo validar RUT si no está vacío
+        if ($rut !== '') {
+            $rules['clienteNuevoRut'] = 'string|max:255|unique:clientes,rut';
+        }
+
+        $this->validate($rules, [
+            'clienteNuevoNombre.required' => 'El nombre es obligatorio.',
+            'clienteNuevoEmail.email' => 'El email debe ser válido.',
+            'clienteNuevoEmail.unique' => 'Este email ya está registrado.',
+            'clienteNuevoRut.unique' => 'Este RUT ya está registrado.',
+        ]);
+
+        $cliente = Cliente::create([
+            'nombre' => trim($this->clienteNuevoNombre),
+            'telefono' => trim($this->clienteNuevoTelefono) ?: null,
+            'email' => $email ?: null,
+            'direccion' => trim($this->clienteNuevoDireccion) ?: null,
+            'rut' => $rut ?: null,
+        ]);
+
+        $this->mostrarModalCrearCliente = false;
+
+        // Seleccionar automáticamente el cliente creado
+        $this->selectClient($cliente->id);
     }
 }

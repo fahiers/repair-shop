@@ -38,7 +38,8 @@ class Index extends Component
                                  $qc->where('nombre', 'like', $term);
                              })
                              ->orWhereHas('modelo', function ($qm) use ($term) {
-                                 $qm->where('nombre', 'like', $term);
+                                 $qm->where('marca', 'like', $term)
+                                    ->orWhere('modelo', 'like', $term);
                              });
                       });
                 });

@@ -83,6 +83,54 @@ it('guarda una orden con dispositivo y items', function () {
     expect($orden->servicios()->count())->toBe(1);
 });
 
+it('guarda una orden con anticipo y saldo', function () {
+    $user = User::factory()->create();
+    $cliente = Cliente::factory()->create();
+    $modelo = ModeloDispositivo::create([
+        'marca' => 'Samsung',
+        'modelo' => 'Galaxy S21',
+        'anio' => 2021,
+    ]);
+    $dispositivo = Dispositivo::create([
+        'cliente_id' => $cliente->id,
+        'modelo_id' => $modelo->id,
+        'imei' => '999888777666555',
+        'color' => 'Azul',
+    ]);
+    $servicio = Servicio::factory()->create([
+        'nombre' => 'Reparación de batería',
+        'precio_base' => 75000,
+        'estado' => 'activo',
+    ]);
+
+    Livewire::actingAs($user)
+        ->test(CrearOrden::class)
+        ->set('selectedDeviceId', $dispositivo->id)
+        ->set('asunto', 'Batería no carga')
+        ->set('tipoServicio', 'reparacion')
+        ->set('fechaIngreso', now()->toDateString())
+        ->set('fechaEntregaEstimada', now()->addDays(3)->toDateString())
+        ->set('anticipo', 25000)
+        ->set('items', [
+            [
+                'id' => $servicio->id,
+                'tipo' => 'servicio',
+                'nombre' => $servicio->nombre,
+                'cantidad' => 1,
+                'precio' => 75000.0,
+                'descuento' => 0,
+            ],
+        ])
+        ->call('guardarOrden');
+
+    $orden = OrdenTrabajo::first();
+    expect($orden)->not->toBeNull();
+    expect((float) $orden->anticipo)->toBe(25000.0);
+    // El total incluye IVA (19%): 75000 * 1.19 = 89250, entonces saldo = 89250 - 25000 = 64250
+    expect((float) $orden->saldo)->toBe(64250.0);
+    expect($orden->fecha_entrega_estimada->toDateString())->toBe(now()->addDays(3)->toDateString());
+});
+
 it('genera números de orden secuenciales por día', function () {
     // Dispositivo dummy para cumplir FK
     $cliente = Cliente::factory()->create();
