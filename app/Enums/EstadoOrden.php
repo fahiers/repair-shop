@@ -54,3 +54,4 @@ enum EstadoOrden: string
         return in_array($this, [self::Entregado, self::Cancelado], true);
     }
 }
+
