@@ -137,7 +137,7 @@
         <div>
             <label for="fecha_ingreso" class="block text-sm font-medium text-gray-900">Fecha de ingreso</label>
             <input
-                type="datetime-local"
+                type="date"
                 id="fecha_ingreso"
                 wire:model="fecha_ingreso"
                 class="mt-2 block w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-gray-900 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"

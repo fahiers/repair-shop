@@ -300,22 +300,25 @@
 
                 <!-- Anticipo y Saldo -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-                    <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
+                    <div class="rounded-lg border {{ $errors->has('anticipo') ? 'border-red-300 dark:border-red-700' : 'border-zinc-200 dark:border-zinc-700' }} p-4 bg-white dark:bg-zinc-900">
                         <label class="block text-xs text-zinc-500 dark:text-zinc-400 mb-2">Anticipo</label>
                         <div class="flex items-center gap-2">
                             <span class="text-sm text-zinc-600 dark:text-zinc-400">$</span>
                             <input
                                 type="number"
-                                wire:model.live.debounce.300ms="anticipo"
+                                wire:model.blur="anticipo"
                                 min="0"
                                 step="0.01"
                                 max="999999.99"
-                                class="flex-1 px-3 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                                class="flex-1 px-3 py-2 text-sm rounded-md border {{ $errors->has('anticipo') ? 'border-red-300 dark:border-red-600' : 'border-zinc-300 dark:border-zinc-600' }} bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 {{ $errors->has('anticipo') ? 'focus:ring-red-500' : 'focus:ring-emerald-500' }}"
                                 placeholder="0.00"
                             >
                         </div>
                         @error('anticipo')
-                            <p class="text-xs text-red-600 dark:text-red-400 mt-1">{{ $message }}</p>
+                            <p class="text-xs text-red-600 dark:text-red-400 mt-1 flex items-center gap-1">
+                                <flux:icon.exclamation-triangle class="size-3" />
+                                {{ $message }}
+                            </p>
                         @enderror
                     </div>
                     <div class="rounded-lg border border-amber-200 dark:border-amber-900 p-4 bg-amber-50 dark:bg-amber-950">
@@ -331,7 +334,7 @@
             <div class="border-t border-zinc-100 dark:border-zinc-700 p-4 md:p-6">
                 <div class="space-y-3">
                     <!-- Mensajes de error generales -->
-                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items']))
+                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'anticipo']))
                         <div class="rounded-md bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-3">
                             <div class="flex items-start gap-2">
                                 <flux:icon.exclamation-triangle class="size-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
@@ -343,6 +346,9 @@
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
                                     @error('items')
+                                        <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
+                                    @enderror
+                                    @error('anticipo')
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
                                 </div>
@@ -653,34 +659,20 @@
 
                     <div>
                         <div class="flex items-center justify-between">
-                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Modelo (marca, modelo o año) <span class="text-red-500">*</span></label>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Modelo <span class="text-red-500">*</span></label>
                             <button type="button" wire:click="abrirModalCrearModelo" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Nuevo modelo</button>
                         </div>
-                        <input type="text"
-                               wire:model.live.debounce.300ms="modeloSearchTerm"
-                               placeholder="Ej: Samsung A52 2021"
-                               class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        <select wire:model.live="modeloSeleccionadoId"
+                                class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            <option value="">Seleccione un modelo</option>
+                            @foreach($this->modelosDisponibles as $modelo)
+                                <option value="{{ $modelo['id'] }}">{{ $modelo['label'] }}</option>
+                            @endforeach
+                        </select>
 
                         @error('modeloSeleccionadoId')
                             <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
                         @enderror
-
-                        @if(strlen($modeloSearchTerm) >= 2 && count($modelosFound) > 0)
-                            <ul class="mt-2 max-h-48 overflow-y-auto border border-zinc-200 dark:border-zinc-700 rounded-md">
-                                @foreach($modelosFound as $m)
-                                    <li>
-                                        <button type="button" class="w-full text-left px-3 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-700"
-                                                wire:click="selectModelo({{ $m['id'] }})">
-                                            {{ $m['marca'] }} {{ $m['modelo'] }} @if($m['anio']) ({{ $m['anio'] }}) @endif
-                                        </button>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        @endif
-
-                        @if($modeloSeleccionadoId)
-                            <p class="mt-2 text-xs text-emerald-600">Modelo seleccionado.</p>
-                        @endif
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -747,7 +739,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Año</label>
-                        <input type="number" wire:model.live="modeloNuevoAnio" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
+                        <input type="number" wire:model.blur="modeloNuevoAnio" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm">
                         @error('modeloNuevoAnio') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                     </div>
                     <div>

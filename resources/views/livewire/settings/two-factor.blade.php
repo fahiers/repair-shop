@@ -72,7 +72,7 @@ new class extends Component {
             $this->qrCodeSvg = $user?->twoFactorQrCodeSvg();
             $this->manualSetupKey = decrypt($user->two_factor_secret);
         } catch (Exception) {
-            $this->addError('setupData', 'Failed to fetch setup data.');
+            $this->addError('setupData', 'Error al obtener los datos de configuración.');
 
             $this->reset('qrCodeSvg', 'manualSetupKey');
         }
@@ -155,24 +155,24 @@ new class extends Component {
     {
         if ($this->twoFactorEnabled) {
             return [
-                'title' => __('Two-Factor Authentication Enabled'),
-                'description' => __('Two-factor authentication is now enabled. Scan the QR code or enter the setup key in your authenticator app.'),
-                'buttonText' => __('Close'),
+                'title' => __('Autenticación de Dos Factores Habilitada'),
+                'description' => __('La autenticación de dos factores ahora está habilitada. Escanea el código QR o ingresa la clave de configuración en tu aplicación autenticadora.'),
+                'buttonText' => __('Cerrar'),
             ];
         }
 
         if ($this->showVerificationStep) {
             return [
-                'title' => __('Verify Authentication Code'),
-                'description' => __('Enter the 6-digit code from your authenticator app.'),
-                'buttonText' => __('Continue'),
+                'title' => __('Verificar Código de Autenticación'),
+                'description' => __('Ingresa el código de 6 dígitos de tu aplicación autenticadora.'),
+                'buttonText' => __('Continuar'),
             ];
         }
 
         return [
-            'title' => __('Enable Two-Factor Authentication'),
-            'description' => __('To finish enabling two-factor authentication, scan the QR code or enter the setup key in your authenticator app.'),
-            'buttonText' => __('Continue'),
+            'title' => __('Habilitar Autenticación de Dos Factores'),
+            'description' => __('Para terminar de habilitar la autenticación de dos factores, escanea el código QR o ingresa la clave de configuración en tu aplicación autenticadora.'),
+            'buttonText' => __('Continuar'),
         ];
     }
 } ?>
@@ -181,18 +181,18 @@ new class extends Component {
     @include('partials.settings-heading')
 
     <x-settings.layout
-        :heading="__('Two Factor Authentication')"
-        :subheading="__('Manage your two-factor authentication settings')"
+        :heading="__('Autenticación de Dos Factores')"
+        :subheading="__('Administra la configuración de autenticación de dos factores')"
     >
         <div class="flex flex-col w-full mx-auto space-y-6 text-sm" wire:cloak>
             @if ($twoFactorEnabled)
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <flux:badge color="green">{{ __('Enabled') }}</flux:badge>
+                        <flux:badge color="green">{{ __('Habilitado') }}</flux:badge>
                     </div>
 
                     <flux:text>
-                        {{ __('With two-factor authentication enabled, you will be prompted for a secure, random pin during login, which you can retrieve from the TOTP-supported application on your phone.') }}
+                        {{ __('Con la autenticación de dos factores habilitada, se te solicitará un código PIN seguro y aleatorio durante el inicio de sesión, que puedes obtener de la aplicación compatible con TOTP en tu teléfono.') }}
                     </flux:text>
 
                     <livewire:settings.two-factor.recovery-codes :$requiresConfirmation/>
@@ -204,18 +204,18 @@ new class extends Component {
                             icon:variant="outline"
                             wire:click="disable"
                         >
-                            {{ __('Disable 2FA') }}
+                            {{ __('Deshabilitar 2FA') }}
                         </flux:button>
                     </div>
                 </div>
             @else
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <flux:badge color="red">{{ __('Disabled') }}</flux:badge>
+                        <flux:badge color="red">{{ __('Deshabilitado') }}</flux:badge>
                     </div>
 
                     <flux:text variant="subtle">
-                        {{ __('When you enable two-factor authentication, you will be prompted for a secure pin during login. This pin can be retrieved from a TOTP-supported application on your phone.') }}
+                        {{ __('Cuando habilites la autenticación de dos factores, se te solicitará un código PIN seguro durante el inicio de sesión. Este código PIN se puede obtener de una aplicación compatible con TOTP en tu teléfono.') }}
                     </flux:text>
 
                     <flux:button
@@ -224,7 +224,7 @@ new class extends Component {
                         icon:variant="outline"
                         wire:click="enable"
                     >
-                        {{ __('Enable 2FA') }}
+                        {{ __('Habilitar 2FA') }}
                     </flux:button>
                 </div>
             @endif
@@ -285,7 +285,7 @@ new class extends Component {
                             class="flex-1"
                             wire:click="resetVerification"
                         >
-                            {{ __('Back') }}
+                            {{ __('Atrás') }}
                         </flux:button>
 
                         <flux:button
@@ -294,7 +294,7 @@ new class extends Component {
                             wire:click="confirmTwoFactor"
                             x-bind:disabled="$wire.code.length < 6"
                         >
-                            {{ __('Confirm') }}
+                            {{ __('Confirmar') }}
                         </flux:button>
                     </div>
                 </div>
@@ -334,7 +334,7 @@ new class extends Component {
                     <div class="relative flex items-center justify-center w-full">
                         <div class="absolute inset-0 w-full h-px top-1/2 bg-stone-200 dark:bg-stone-600"></div>
                         <span class="relative px-2 text-sm bg-white dark:bg-stone-800 text-stone-600 dark:text-stone-400">
-                            {{ __('or, enter the code manually') }}
+                            {{ __('o, ingresa el código manualmente') }}
                         </span>
                     </div>
 

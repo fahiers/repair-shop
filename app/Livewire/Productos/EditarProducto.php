@@ -54,7 +54,7 @@ class EditarProducto extends Component
         $this->stock_minimo = $producto->stock_minimo;
         $this->proveedor_id = $producto->proveedor_id;
         $this->estado = $producto->estado ?? 'activo';
-        $this->fecha_ingreso = optional($producto->fecha_ingreso)->format('Y-m-d\\TH:i');
+        $this->fecha_ingreso = optional($producto->fecha_ingreso)->format('Y-m-d');
     }
 
     public function update()

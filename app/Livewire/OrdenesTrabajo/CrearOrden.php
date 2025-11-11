@@ -251,6 +251,14 @@ class CrearOrden extends Component
                 'email' => $client->email,
             ];
 
+            // Si hay un dispositivo seleccionado sin cliente, asociarlo al cliente recién seleccionado
+            if ($this->selectedDeviceId) {
+                $dispositivo = Dispositivo::find($this->selectedDeviceId);
+                if ($dispositivo && ! $dispositivo->cliente_id) {
+                    $dispositivo->update(['cliente_id' => $client->id]);
+                }
+            }
+
             // Sugerir dispositivo reciente o seleccionar automáticamente si tiene uno
             $this->suggestedDeviceId = $this->calcularDispositivoSugerido($client->id);
             if ($this->suggestedDeviceId && Dispositivo::where('cliente_id', $client->id)->count() === 1) {
@@ -454,6 +462,9 @@ class CrearOrden extends Component
 
         // Calcular total (costo estimado)
         $this->total = $this->subtotalConDescuento + $this->montoIva;
+
+        // Validar anticipo después de recalcular totales (por si el total cambió)
+        $this->validarAnticipo();
     }
 
     /**
@@ -487,6 +498,18 @@ class CrearOrden extends Component
 
         // Recalcular totales para actualizar el saldo visual
         $this->recalcularTotales();
+
+        // Validar que el anticipo no sea mayor al total
+        $this->validarAnticipo();
+    }
+
+    protected function validarAnticipo(): void
+    {
+        $this->resetErrorBag('anticipo');
+
+        if ($this->anticipo > $this->total) {
+            $this->addError('anticipo', 'El anticipo no puede ser mayor al total de la orden ($'.number_format($this->total, 0, ',', '.').').');
+        }
     }
 
     public function updatedObservacionesDispositivo(): void
@@ -823,6 +846,24 @@ class CrearOrden extends Component
         $this->modelosFound = [];
     }
 
+    public function getModelosDisponiblesProperty(): array
+    {
+        return ModeloDispositivo::query()
+            ->orderBy('marca')
+            ->orderBy('modelo')
+            ->orderBy('anio')
+            ->get()
+            ->map(function ($m) {
+                return [
+                    'id' => $m->id,
+                    'marca' => $m->marca,
+                    'modelo' => $m->modelo,
+                    'anio' => $m->anio,
+                    'label' => trim($m->marca.' '.$m->modelo.($m->anio ? ' ('.$m->anio.')' : '')),
+                ];
+            })->toArray();
+    }
+
     public function crearDispositivoRapido(): void
     {
         $this->validate([
@@ -865,9 +906,10 @@ class CrearOrden extends Component
         // Validaciones personalizadas con mensajes descriptivos
         $this->validarClienteYDispositivo();
         $this->validarItems();
+        $this->validarAnticipo();
 
         // Si hay errores de validación personalizados, detener la ejecución
-        if ($this->getErrorBag()->hasAny(['selectedClientId', 'selectedDeviceId', 'items'])) {
+        if ($this->getErrorBag()->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'anticipo'])) {
             return;
         }
 

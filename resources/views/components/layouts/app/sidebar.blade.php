@@ -17,7 +17,7 @@
             <flux:sidebar.item icon="wrench" :href="route('ordenes-trabajo.index')" :current="request()->routeIs('ordenes-trabajo.*')" wire:navigate>{{ __('Orden de Servicio') }}</flux:sidebar.item>
             <flux:sidebar.item icon="users" :href="route('clientes.index')" :current="request()->routeIs('clientes.*')" wire:navigate>{{ __('Clientes') }}</flux:sidebar.item>
             <flux:sidebar.item icon="device-tablet" href="#" :current="request()->is('dispositivos*')" wire:navigate>{{ __('Dispositivos') }}</flux:sidebar.item>
-            <flux:sidebar.item icon="cpu-chip" href="#" :current="request()->is('modelos*')" wire:navigate>{{ __('Modelos de Dispositivos') }}</flux:sidebar.item>
+            <flux:sidebar.item icon="cpu-chip" :href="route('modelos.index')" :current="request()->routeIs('modelos.*')" wire:navigate>{{ __('Modelos de Dispositivos') }}</flux:sidebar.item>
             <flux:sidebar.item icon="archive-box" href="#" :current="request()->is('inventario*')" wire:navigate>{{ __('Inventario') }}</flux:sidebar.item>
             <flux:sidebar.item icon="document-text" href="#" :current="request()->is('facturacion*')" wire:navigate>{{ __('Facturación') }}</flux:sidebar.item>
             <flux:sidebar.item icon="wrench-screwdriver" :href="route('servicios.index')" :current="request()->routeIs('servicios.*')" wire:navigate>{{ __('Servicios') }}</flux:sidebar.item>
@@ -26,16 +26,6 @@
         </flux:sidebar.nav>
 
         <flux:sidebar.spacer />
-
-        <flux:sidebar.nav>
-            <flux:sidebar.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                {{ __('Repository') }}
-            </flux:sidebar.item>
-
-            <flux:sidebar.item icon="book-open-text" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
-                {{ __('Documentation') }}
-            </flux:sidebar.item>
-        </flux:sidebar.nav>
 
         <!-- Desktop User Menu -->
         <flux:dropdown position="top" align="start" class="max-lg:hidden">
@@ -64,7 +54,7 @@
                 <flux:menu.separator />
 
                 <flux:menu.radio.group>
-                    <flux:menu.item :href="route('profile.edit')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
+                    <flux:menu.item :href="route('profile.edit')" icon="cog" wire:navigate>{{ __('Configuración') }}</flux:menu.item>
                 </flux:menu.radio.group>
 
                 <flux:menu.separator />
@@ -72,7 +62,7 @@
                 <form method="POST" action="{{ route('logout') }}" class="w-full">
                     @csrf
                     <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full" data-test="logout-button">
-                        {{ __('Log Out') }}
+                        {{ __('Cerrar Sesión') }}
                     </flux:menu.item>
                 </form>
             </flux:menu>
@@ -114,7 +104,7 @@
                     <flux:menu.separator />
 
                     <flux:menu.radio.group>
-                        <flux:menu.item :href="route('profile.edit')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
+                        <flux:menu.item :href="route('profile.edit')" icon="cog" wire:navigate>{{ __('Configuración') }}</flux:menu.item>
                     </flux:menu.radio.group>
 
                     <flux:menu.separator />
@@ -122,7 +112,7 @@
                     <form method="POST" action="{{ route('logout') }}" class="w-full">
                         @csrf
                         <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full" data-test="logout-button">
-                            {{ __('Log Out') }}
+                            {{ __('Cerrar Sesión') }}
                         </flux:menu.item>
                     </form>
                 </flux:menu>
