@@ -7,6 +7,9 @@ use App\Models\OrdenTrabajo;
 use App\Observers\FacturaPagoObserver;
 use App\Observers\OrdenTrabajoObserver;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,5 +28,11 @@ class AppServiceProvider extends ServiceProvider
     {
         OrdenTrabajo::observe(OrdenTrabajoObserver::class);
         FacturaPago::observe(FacturaPagoObserver::class);
+
+
+        //URL::forceScheme('https');
     }
+
+
+   
 }
