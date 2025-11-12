@@ -17,4 +17,14 @@ class OrdenComentario extends Model
         'comentario',
         'tipo',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function orden()
+    {
+        return $this->belongsTo(OrdenTrabajo::class, 'orden_id');
+    }
 }

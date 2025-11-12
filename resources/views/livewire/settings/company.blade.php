@@ -40,20 +40,6 @@ new class extends Component {
                 </x-action-message>
             </div>
         </form>
-        
-        <div class="mt-10 grid gap-6">
-            <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-5">
-                <div class="flex items-start justify-between gap-4">
-                    <div>
-                        <h3 class="text-base font-semibold text-zinc-900 dark:text-zinc-100">{{ __('Configurar accesorios') }}</h3>
-                        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{{ __('Administra los accesorios disponibles para tus órdenes.') }}</p>
-                    </div>
-                    <flux:button :href="route('accesorios.index')" icon="wrench" variant="primary" wire:navigate>
-                        {{ __('Abrir') }}
-                    </flux:button>
-                </div>
-            </div>
-        </div>
     </x-settings.layout>
     
 </section>

@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             ProductosSeeder::class,
             ServiciosSeeder::class,
             ModeloDispositivoSeeder::class,
+            AccesorioConfigSeeder::class,
         ]);
     }
 }

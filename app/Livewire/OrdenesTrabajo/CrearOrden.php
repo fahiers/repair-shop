@@ -7,6 +7,7 @@ use App\Models\AccesorioConfig;
 use App\Models\Cliente;
 use App\Models\Dispositivo;
 use App\Models\ModeloDispositivo;
+use App\Models\OrdenComentario;
 use App\Models\OrdenTrabajo;
 use App\Models\Producto;
 use App\Models\Servicio;
@@ -34,6 +35,8 @@ class CrearOrden extends Component
     public bool $showClientSearchResults = false;
 
     private string $lastSelectedClientName = '';
+
+    private string $lastSelectedModeloName = '';
 
     public bool $ignoringBlur = false;
 
@@ -87,6 +90,13 @@ class CrearOrden extends Component
     // Tabs (sin Alpine)
     public string $activeTab = 'equipo';
 
+    // Comentarios temporales (se guardarán cuando se cree la orden)
+    public array $comentariosTemporales = [];
+
+    public string $nuevoComentario = '';
+
+    public string $tipoNuevoComentario = 'nota_interna';
+
     // Accesorios configurables y seleccionados
     public array $accesoriosDisponibles = [];
 
@@ -118,6 +128,8 @@ class CrearOrden extends Component
     public string $modeloSearchTerm = '';
 
     public array $modelosFound = [];
+
+    public bool $showModeloSearchResults = false;
 
     public ?string $imeiDispositivo = null;
 
@@ -190,8 +202,60 @@ class CrearOrden extends Component
         $this->showClientSearchResults = false;
     }
 
+    public function mostrarClientesAlFocus(): void
+    {
+        // Si hay un cliente seleccionado, no mostrar resultados al hacer focus
+        if ($this->selectedClientId) {
+            $this->showClientSearchResults = false;
+
+            return;
+        }
+
+        // Si hay texto, mostrar resultados si es válido
+        $trimmedValue = trim($this->clientSearchTerm);
+        if (strlen($trimmedValue) >= 2) {
+            $this->showClientSearchResults = true;
+        }
+    }
+
+    #[On('modeloSearchBlurred')]
+    public function handleModeloSearchBlur(): void
+    {
+        if ($this->ignoringBlur) {
+            return;
+        }
+
+        if ($this->showModeloSearchResults && $this->modeloSeleccionadoId === null) {
+            $this->modeloSearchTerm = $this->lastSelectedModeloName;
+        } elseif ($this->showModeloSearchResults && $this->modeloSeleccionadoId !== null) {
+            $modelo = ModeloDispositivo::find($this->modeloSeleccionadoId);
+            if ($modelo) {
+                $modeloName = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
+                if ($this->modeloSearchTerm !== $modeloName) {
+                    $this->modeloSearchTerm = $modeloName;
+                }
+            }
+        }
+
+        $this->showModeloSearchResults = false;
+    }
+
     public function updatedClientSearchTerm($value): void
     {
+        // Si hay un cliente seleccionado, no permitir cambios manuales
+        if ($this->selectedClientId) {
+            // Restaurar el valor del cliente seleccionado
+            $client = Cliente::find($this->selectedClientId);
+            if ($client && $this->clientSearchTerm !== $client->nombre) {
+                $this->clientSearchTerm = $client->nombre;
+            }
+            $this->showClientSearchResults = false;
+            $this->clientsFound = [];
+            $this->loadingClients = false;
+
+            return;
+        }
+
         $trimmedValue = trim((string) $value);
 
         if ($trimmedValue === '') {
@@ -623,8 +687,11 @@ class CrearOrden extends Component
         }
 
         $this->modeloSeleccionadoId = $device->modelo_id;
-        $this->modeloSearchTerm = $device->modelo ? trim($device->modelo->marca.' '.$device->modelo->modelo.' '.($device->modelo->anio ?: '')) : '';
+        $modeloName = $device->modelo ? trim($device->modelo->marca.' '.$device->modelo->modelo.' '.($device->modelo->anio ?: '')) : '';
+        $this->modeloSearchTerm = $modeloName;
+        $this->lastSelectedModeloName = $modeloName;
         $this->modelosFound = [];
+        $this->showModeloSearchResults = false;
         $this->imeiDispositivo = $device->imei;
         $this->colorDispositivo = $device->color;
         $this->observacionesDispositivo = $device->estado_dispositivo;
@@ -741,7 +808,9 @@ class CrearOrden extends Component
         $this->modoCreacionDispositivo = in_array($modo, ['rapido', 'completo'], true) ? $modo : 'rapido';
         $this->modeloSeleccionadoId = null;
         $this->modeloSearchTerm = '';
+        $this->lastSelectedModeloName = '';
         $this->modelosFound = [];
+        $this->showModeloSearchResults = false;
         $this->imeiDispositivo = null;
         $this->colorDispositivo = null;
         $this->observacionesDispositivo = null;
@@ -799,19 +868,41 @@ class CrearOrden extends Component
         ]);
 
         $this->modeloSeleccionadoId = $modelo->id;
-        $this->modeloSearchTerm = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
+        $modeloName = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
+        $this->modeloSearchTerm = $modeloName;
+        $this->lastSelectedModeloName = $modeloName;
         $this->modelosFound = [];
+        $this->showModeloSearchResults = false;
         $this->mostrarModalCrearModelo = false;
     }
 
     public function updatedModeloSearchTerm($value): void
     {
-        $term = trim((string) $value);
-        if ($term === '' || strlen($term) < 2) {
-            $this->modelosFound = [];
+        // Si hay un modelo seleccionado, no permitir cambios manuales
+        if ($this->modeloSeleccionadoId) {
+            // Restaurar el valor del modelo seleccionado
+            $modelo = ModeloDispositivo::find($this->modeloSeleccionadoId);
+            if ($modelo) {
+                $modeloName = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
+                if ($this->modeloSearchTerm !== $modeloName) {
+                    $this->modeloSearchTerm = $modeloName;
+                }
+            }
+            $this->showModeloSearchResults = false;
 
             return;
         }
+
+        $term = trim((string) $value);
+
+        if ($term === '' || strlen($term) < 2) {
+            // Si está vacío o tiene menos de 2 caracteres, cargar los primeros 10
+            $this->cargarModelosIniciales();
+
+            return;
+        }
+
+        $this->showModeloSearchResults = true;
 
         $this->modelosFound = ModeloDispositivo::query()
             ->where(function ($q) use ($term) {
@@ -822,6 +913,27 @@ class CrearOrden extends Component
             ->orderByRaw('CASE WHEN marca LIKE ? THEN 0 ELSE 1 END', [$term.'%'])
             ->orderBy('marca')
             ->orderBy('modelo')
+            ->take(20)
+            ->get()
+            ->map(function ($m) {
+                return [
+                    'id' => $m->id,
+                    'marca' => $m->marca,
+                    'modelo' => $m->modelo,
+                    'anio' => $m->anio,
+                    'label' => trim($m->marca.' '.$m->modelo.($m->anio ? ' ('.$m->anio.')' : '')),
+                ];
+            })->toArray();
+    }
+
+    public function cargarModelosIniciales(): void
+    {
+        $this->showModeloSearchResults = true;
+
+        $this->modelosFound = ModeloDispositivo::query()
+            ->orderBy('marca')
+            ->orderBy('modelo')
+            ->orderBy('anio')
             ->take(10)
             ->get()
             ->map(function ($m) {
@@ -830,8 +942,30 @@ class CrearOrden extends Component
                     'marca' => $m->marca,
                     'modelo' => $m->modelo,
                     'anio' => $m->anio,
+                    'label' => trim($m->marca.' '.$m->modelo.($m->anio ? ' ('.$m->anio.')' : '')),
                 ];
             })->toArray();
+    }
+
+    public function mostrarModelosAlFocus(): void
+    {
+        // Si hay un modelo seleccionado, no mostrar resultados al hacer focus
+        if ($this->modeloSeleccionadoId) {
+            $this->showModeloSearchResults = false;
+
+            return;
+        }
+
+        if (empty(trim($this->modeloSearchTerm)) || strlen(trim($this->modeloSearchTerm)) < 2) {
+            $this->cargarModelosIniciales();
+        } else {
+            $this->showModeloSearchResults = true;
+        }
+    }
+
+    public function clearModeloSearchResults(): void
+    {
+        $this->showModeloSearchResults = false;
     }
 
     public function selectModelo(int $modeloId): void
@@ -842,8 +976,20 @@ class CrearOrden extends Component
         }
 
         $this->modeloSeleccionadoId = $modelo->id;
-        $this->modeloSearchTerm = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
+        $modeloName = trim($modelo->marca.' '.$modelo->modelo.' '.($modelo->anio ?: ''));
+        $this->modeloSearchTerm = $modeloName;
+        $this->lastSelectedModeloName = $modeloName;
         $this->modelosFound = [];
+        $this->showModeloSearchResults = false;
+    }
+
+    public function limpiarModelo(): void
+    {
+        $this->modeloSeleccionadoId = null;
+        $this->modeloSearchTerm = '';
+        $this->lastSelectedModeloName = '';
+        $this->modelosFound = [];
+        $this->showModeloSearchResults = false;
     }
 
     public function getModelosDisponiblesProperty(): array
@@ -972,11 +1118,47 @@ class CrearOrden extends Component
                 }
             }
 
+            // Crear comentarios temporales si existen
+            foreach ($this->comentariosTemporales as $comentarioTemp) {
+                OrdenComentario::create([
+                    'orden_id' => $orden->id,
+                    'user_id' => auth()->id(),
+                    'comentario' => $comentarioTemp['comentario'],
+                    'tipo' => $comentarioTemp['tipo'],
+                ]);
+            }
+
             return $orden;
         });
 
         // Redirigir a índice o detalle (por ahora índice)
         return redirect()->route('ordenes-trabajo.index');
+    }
+
+    public function getPuedeEnviarComentarioProperty(): bool
+    {
+        return strlen(trim($this->nuevoComentario ?? '')) >= 3;
+    }
+
+    public function agregarComentario(): void
+    {
+        $this->validate([
+            'nuevoComentario' => 'required|min:3|max:1000',
+            'tipoNuevoComentario' => 'required|in:nota_interna,comentario_cliente',
+        ]);
+
+        // Agregar comentario temporal (se guardará cuando se cree la orden)
+        $this->comentariosTemporales[] = [
+            'comentario' => trim($this->nuevoComentario),
+            'tipo' => $this->tipoNuevoComentario,
+            'user' => [
+                'id' => auth()->id(),
+                'name' => auth()->user()->name,
+            ],
+            'created_at' => now()->format('d/m/Y H:i'),
+        ];
+
+        $this->nuevoComentario = '';
     }
 
     // Método legacy eliminado: numeración delegada al service

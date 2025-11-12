@@ -75,7 +75,7 @@ class OrdenTrabajo extends Model
 
     public function factura()
     {
-        return $this->hasOne(Factura::class);
+        return $this->hasOne(Factura::class, 'orden_id');
     }
 
     /**

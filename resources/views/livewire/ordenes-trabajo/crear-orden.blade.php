@@ -85,26 +85,33 @@
                     <div class="relative">
                         <div class="flex items-center justify-between gap-2 mb-1">
                             <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Buscar cliente</label>
-                            <button type="button" wire:click="abrirModalCrearCliente" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700 flex items-center gap-1">
-                                <flux:icon.plus class="size-3" />
-                                Nuevo cliente
-                            </button>
+                            <div class="flex items-center gap-2">
+                                @if($selectedClientId)
+                                    <button type="button" wire:click="limpiarCliente" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cambiar cliente</button>
+                                @endif
+                                <button type="button" wire:click="abrirModalCrearCliente" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700 flex items-center gap-1">
+                                    <flux:icon.plus class="size-3" />
+                                    Nuevo cliente
+                                </button>
+                            </div>
                         </div>
                         <input
                             type="text"
                             wire:model.live.debounce.300ms="clientSearchTerm"
                             wire:keydown.escape="clearClientSearchResults"
                             wire:blur="$dispatch('clientSearchBlurred')"
-                            wire:focus="$dispatch('ignoreBlur')"
+                            wire:focus="mostrarClientesAlFocus"
+                            wire:mousedown="$dispatch('ignoreBlur')"
                             placeholder="Buscar por nombre, teléfono, email o RUT..."
                             autocomplete="off"
-                            class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                            @if($selectedClientId) readonly @endif
+                            class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 @if($selectedClientId) bg-zinc-50 dark:bg-zinc-800 cursor-not-allowed @endif"
                         >
                         @error('selectedClientId')
                             <p class="mt-1 text-xs text-red-600 dark:text-red-400">{{ $message }}</p>
                         @enderror
 
-                        @if($showClientSearchResults)
+                        @if($showClientSearchResults && !$selectedClientId)
                             @if($loadingClients)
                                 <div class="absolute z-20 w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md mt-1 px-3 py-2 text-sm text-zinc-500">
                                     Buscando...
@@ -149,7 +156,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" wire:click="limpiarCliente" class="px-2 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cambiar cliente</button>
                         </div>
 
                     @endif
@@ -424,13 +430,13 @@
                                         <flux:icon.device-phone-mobile class="size-5" />
                                     </div>
                                     <div class="min-w-0">
-                                        <p class="font-semibold truncate">
-                                            @if($dispositivoSeleccionado['modelo'])
-                                                {{ $dispositivoSeleccionado['modelo']['marca'] }} {{ $dispositivoSeleccionado['modelo']['modelo'] }}
-                                                @if($dispositivoSeleccionado['modelo']['anio']) ({{ $dispositivoSeleccionado['modelo']['anio'] }}) @endif
-                                            @else
-                                                Sin modelo
-                                            @endif
+                                        @php
+                                            $nombreCompletoDispositivo = $dispositivoSeleccionado['modelo'] 
+                                                ? trim($dispositivoSeleccionado['modelo']['marca'] . ' ' . $dispositivoSeleccionado['modelo']['modelo'] . ($dispositivoSeleccionado['modelo']['anio'] ? ' (' . $dispositivoSeleccionado['modelo']['anio'] . ')' : ''))
+                                                : 'Sin modelo';
+                                        @endphp
+                                        <p class="font-semibold truncate" title="{{ $nombreCompletoDispositivo }}">
+                                            {{ $nombreCompletoDispositivo }}
                                         </p>
                                         <p class="text-sm text-zinc-600 dark:text-zinc-300">
                                             @if($dispositivoSeleccionado['imei']) N° Serie/IMEI: {{ $dispositivoSeleccionado['imei'] }} @endif
@@ -551,8 +557,62 @@
                 </div>
 
                 <!-- Contenido de la pestaña Notas -->
-                <div x-show="activeTab === 'notas'" class="p-4 md:p-6 lg:overflow-y-auto lg:flex-1 lg:min-h-0">
-                    <p class="text-zinc-500 dark:text-zinc-400">Contenido de notas aquí...</p>
+                <div x-show="activeTab === 'notas'" 
+                     class="flex flex-col lg:flex-1 lg:min-h-0 lg:overflow-hidden">
+                    <!-- Formulario para agregar comentario (fijo arriba) -->
+                    <div class="p-4 md:p-6 border-b border-zinc-100 dark:border-zinc-700 flex-shrink-0">
+                        <div class="space-y-3">
+                            <!-- Campo de entrada con botón de envío -->
+                            <div class="flex items-start gap-2">
+                                <input
+                                    type="text"
+                                    wire:model.live="nuevoComentario"
+                                    wire:keydown.enter.prevent="$wire.agregarComentario()"
+                                    placeholder="Escribe una nota"
+                                    class="flex-1 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2.5 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                                />
+                                <button 
+                                    type="button" 
+                                    wire:click="agregarComentario" 
+                                    wire:disabled="!$this->puedeEnviarComentario"
+                                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shrink-0"
+                                >
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            @error('nuevoComentario')
+                                <p class="text-xs text-red-600 dark:text-red-400">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <!-- Lista de comentarios con scroll propio -->
+                    <div class="flex-1 overflow-y-auto p-4 md:p-6 min-h-0">
+                        @if(count($comentariosTemporales) > 0)
+                            <div class="space-y-4">
+                                @foreach($comentariosTemporales as $comentario)
+                                    <div class="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-zinc-200 dark:border-zinc-700">
+                                        <div class="flex items-start justify-between gap-3 mb-2">
+                                            <div class="flex items-center gap-3 flex-1 min-w-0">
+                                                <span class="text-sm text-zinc-500 dark:text-zinc-400 truncate">{{ $comentario['user']['name'] }}</span>
+                                                <span class="text-xs text-zinc-400 dark:text-zinc-500 shrink-0">{{ $comentario['created_at'] }}</span>
+                                            </div>
+                                            <button type="button" class="p-1 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 shrink-0">
+                                                <flux:icon.ellipsis-vertical class="size-4" />
+                                            </button>
+                                        </div>
+                                        <p class="text-sm text-zinc-900 dark:text-zinc-100 whitespace-pre-wrap">{{ $comentario['comentario'] }}</p>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @else
+                            <div class="text-center py-12">
+                                <p class="text-sm text-zinc-500 dark:text-zinc-400">No hay notas aún.</p>
+                            </div>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
@@ -660,19 +720,62 @@
                     <div>
                         <div class="flex items-center justify-between">
                             <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Modelo <span class="text-red-500">*</span></label>
-                            <button type="button" wire:click="abrirModalCrearModelo" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Nuevo modelo</button>
+                            <div class="flex items-center gap-2">
+                                @if($modeloSeleccionadoId)
+                                    <button type="button" wire:click="limpiarModelo" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cambiar modelo</button>
+                                @endif
+                                <button type="button" wire:click="abrirModalCrearModelo" class="text-xs px-2 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Nuevo modelo</button>
+                            </div>
                         </div>
-                        <select wire:model.live="modeloSeleccionadoId"
-                                class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                            <option value="">Seleccione un modelo</option>
-                            @foreach($this->modelosDisponibles as $modelo)
-                                <option value="{{ $modelo['id'] }}">{{ $modelo['label'] }}</option>
-                            @endforeach
-                        </select>
+                        <div class="relative mt-1">
+                            <input
+                                type="text"
+                                wire:model.live.debounce.300ms="modeloSearchTerm"
+                                wire:keydown.escape="clearModeloSearchResults"
+                                wire:blur="$dispatch('modeloSearchBlurred')"
+                                wire:focus="mostrarModelosAlFocus"
+                                wire:mousedown="$dispatch('ignoreBlur')"
+                                placeholder="Buscar por marca, modelo o año..."
+                                autocomplete="off"
+                                @if($modeloSeleccionadoId) readonly @endif
+                                class="w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 @if($modeloSeleccionadoId) bg-zinc-50 dark:bg-zinc-800 cursor-not-allowed @endif"
+                            >
+                            @error('modeloSeleccionadoId')
+                                <p class="mt-1 text-xs text-red-600 dark:text-red-400">{{ $message }}</p>
+                            @enderror
 
-                        @error('modeloSeleccionadoId')
-                            <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                        @enderror
+                            @if($showModeloSearchResults && !$modeloSeleccionadoId)
+                                @if(count($modelosFound) > 0)
+                                    <ul class="absolute z-20 w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md mt-1 max-h-60 overflow-y-auto shadow-lg">
+                                        @foreach($modelosFound as $modelo)
+                                            <li
+                                                wire:mousedown="$dispatch('ignoreBlur')"
+                                                wire:click="selectModelo({{ $modelo['id'] }})"
+                                                wire:mouseup="$dispatch('processBlur')"
+                                                class="px-3 py-2 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-700 cursor-pointer border-b border-zinc-100 dark:border-zinc-700 last:border-b-0"
+                                            >
+                                                <div class="flex items-center justify-between">
+                                                    <div>
+                                                        <span class="font-medium">{{ $modelo['marca'] }} {{ $modelo['modelo'] }}</span>
+                                                        @if($modelo['anio'])
+                                                            <span class="text-zinc-400 text-xs ml-2">({{ $modelo['anio'] }})</span>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @else
+                                    <div class="absolute z-20 w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md mt-1 px-3 py-2 text-sm text-zinc-500">
+                                        @if(strlen(trim($modeloSearchTerm)) >= 2)
+                                            No se encontraron modelos con ese criterio de búsqueda.
+                                        @else
+                                            No hay modelos disponibles.
+                                        @endif
+                                    </div>
+                                @endif
+                            @endif
+                        </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
