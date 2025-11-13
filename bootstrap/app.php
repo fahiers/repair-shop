@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\OrdenTrabajo;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Support\Facades\Route;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -10,6 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
         then: function () {
+            // Configurar route model binding para 'orden' -> OrdenTrabajo
+            Route::bind('orden', function ($value) {
+                return OrdenTrabajo::findOrFail($value);
+            });
+
             Route::prefix('ordenes-trabajo')
                 ->middleware(['auth', 'web'])
                 ->group(base_path('routes/ordenes-trabajo.php'));

@@ -69,13 +69,21 @@
                                 </span>
                             </td>
                             <td class="px-6 py-4 text-right text-sm">
-                                <a href="{{ route('ordenes-trabajo.editar', ['id' => $orden->id]) }}" wire:navigate class="inline-flex items-center gap-1 text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                        <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712z" />
-                                        <path d="M19.513 8.199l-3.712-3.712-12 12A4.5 4.5 0 003 19.5V21h1.5a4.5 4.5 0 003.014-1.2l11.999-12z" />
-                                    </svg>
-                                    <span class="sr-only">Editar</span>
-                                </a>
+                                <div class="flex items-center justify-end gap-2">
+                                    <a href="{{ route('ordenes-trabajo.pdf', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-1 text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100" title="Ver PDF">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                            <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25zM9 3.75a.75.75 0 00-.75.75v4.5c0 .414.336.75.75.75h3.75a.75.75 0 00.75-.75V4.5a.75.75 0 00-.75-.75H9z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="sr-only">Ver PDF</span>
+                                    </a>
+                                    <a href="{{ route('ordenes-trabajo.editar', ['id' => $orden->id]) }}" wire:navigate class="inline-flex items-center gap-1 text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100" title="Editar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712z" />
+                                            <path d="M19.513 8.199l-3.712-3.712-12 12A4.5 4.5 0 003 19.5V21h1.5a4.5 4.5 0 003.014-1.2l11.999-12z" />
+                                        </svg>
+                                        <span class="sr-only">Editar</span>
+                                    </a>
+                                </div>
                             </td>
                         </tr>
                     @empty

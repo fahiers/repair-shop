@@ -367,7 +367,7 @@
                     @endif
 
                     <div class="flex items-center justify-start gap-2 md:gap-3">
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
+                        <a href="{{ route('ordenes-trabajo.pdf', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Imprimir orden</a>
                         <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
                         <button type="button"
                                 wire:click="actualizarOrden"
