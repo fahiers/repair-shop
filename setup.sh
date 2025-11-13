@@ -23,4 +23,4 @@ php artisan route:cache
 php artisan view:cache
 
 # Ejecuta las migraciones pendientes (NO borra datos, solo aplica cambios)
-php artisan migrate --force
+#php artisan migrate --force
