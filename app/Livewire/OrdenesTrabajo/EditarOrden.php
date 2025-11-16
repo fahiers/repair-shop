@@ -123,6 +123,12 @@ class EditarOrden extends Component
 
     public ?string $observacionesDispositivo = null;
 
+    public string $tipoBloqueoDispositivo = 'ninguno'; // 'ninguno', 'patron', 'contraseña'
+
+    public ?string $contraseñaDispositivo = null;
+
+    public string $patronDispositivo = '';
+
     public ?int $suggestedDeviceId = null;
 
     public bool $mostrarModalEditarDispositivo = false;
@@ -838,6 +844,24 @@ class EditarOrden extends Component
         $this->imeiDispositivo = $device->imei;
         $this->colorDispositivo = $device->color;
         $this->observacionesDispositivo = $device->estado_dispositivo;
+
+        // Cargar tipo de bloqueo y valores
+        if ($device->pattern_encrypted) {
+            $this->tipoBloqueoDispositivo = 'patron';
+            try {
+                $this->patronDispositivo = \Illuminate\Support\Facades\Crypt::decryptString($device->pattern_encrypted);
+            } catch (\Exception $e) {
+                $this->patronDispositivo = '';
+            }
+        } elseif ($device->contraseña) {
+            $this->tipoBloqueoDispositivo = 'contraseña';
+            $this->contraseñaDispositivo = $device->contraseña;
+        } else {
+            $this->tipoBloqueoDispositivo = 'ninguno';
+            $this->patronDispositivo = '';
+            $this->contraseñaDispositivo = null;
+        }
+
         $this->mostrarModalEditarDispositivo = true;
     }
 
@@ -852,20 +876,51 @@ class EditarOrden extends Component
             'imeiDispositivo' => 'nullable|string|max:191',
             'colorDispositivo' => 'nullable|string|max:100',
             'observacionesDispositivo' => 'nullable|string|max:500',
+            'tipoBloqueoDispositivo' => 'required|in:ninguno,patron,contraseña',
+            'contraseñaDispositivo' => 'nullable|string|max:255',
+            'patronDispositivo' => 'nullable|string',
         ]);
+
+        // Validar patrón si se selecciona
+        if ($this->tipoBloqueoDispositivo === 'patron' && $this->patronDispositivo !== '' && count(explode('-', $this->patronDispositivo)) < 3) {
+            $this->addError('patronDispositivo', 'El patrón debe tener al menos 3 puntos.');
+
+            return;
+        }
 
         $device = Dispositivo::find($this->selectedDeviceId);
         if (! $device) {
             return;
         }
 
-        $device->update([
+        $updateData = [
             'modelo_id' => $this->modeloSeleccionadoId,
             'imei' => $this->imeiDispositivo,
             'color' => $this->colorDispositivo,
             'estado_dispositivo' => $this->observacionesDispositivo,
             'accesorios' => $this->accesoriosSeleccionados,
-        ]);
+        ];
+
+        // Manejar tipo de bloqueo
+        if ($this->tipoBloqueoDispositivo === 'patron') {
+            if ($this->patronDispositivo === '') {
+                $updateData['pattern_encrypted'] = null;
+            } else {
+                $updateData['pattern_encrypted'] = \Illuminate\Support\Facades\Crypt::encryptString($this->patronDispositivo);
+            }
+            $updateData['contraseña'] = null;
+        } elseif ($this->tipoBloqueoDispositivo === 'contraseña') {
+            $updateData['contraseña'] = $this->contraseñaDispositivo;
+            $updateData['pattern_encrypted'] = null;
+        } else {
+            $updateData['contraseña'] = null;
+            $updateData['pattern_encrypted'] = null;
+        }
+
+        $device->update($updateData);
+
+        // Disparar evento para refrescar el componente de patrón
+        $this->dispatch('patronActualizado');
 
         $this->mostrarModalEditarDispositivo = false;
         $this->mostrarToastEquipoActualizado = true;
@@ -955,6 +1010,9 @@ class EditarOrden extends Component
         $this->imeiDispositivo = null;
         $this->colorDispositivo = null;
         $this->observacionesDispositivo = null;
+        $this->tipoBloqueoDispositivo = 'ninguno';
+        $this->contraseñaDispositivo = null;
+        $this->patronDispositivo = '';
         $this->mostrarModalCrearDispositivo = true;
     }
 
@@ -1152,19 +1210,43 @@ class EditarOrden extends Component
             'imeiDispositivo' => 'nullable|string|max:191',
             'colorDispositivo' => 'nullable|string|max:100',
             'observacionesDispositivo' => 'nullable|string|max:500',
+            'tipoBloqueoDispositivo' => 'required|in:ninguno,patron,contraseña',
+            'contraseñaDispositivo' => 'nullable|string|max:255',
+            'patronDispositivo' => 'nullable|string',
         ]);
 
-        $dispositivo = Dispositivo::create([
+        // Validar patrón si se selecciona
+        if ($this->tipoBloqueoDispositivo === 'patron' && $this->patronDispositivo !== '' && count(explode('-', $this->patronDispositivo)) < 3) {
+            $this->addError('patronDispositivo', 'El patrón debe tener al menos 3 puntos.');
+
+            return;
+        }
+
+        $createData = [
             'cliente_id' => $this->selectedClientId,
             'modelo_id' => $this->modeloSeleccionadoId,
             'imei' => $this->imeiDispositivo,
             'color' => $this->colorDispositivo,
             'estado_dispositivo' => $this->observacionesDispositivo,
             'accesorios' => $this->accesoriosSeleccionados,
-        ]);
+        ];
+
+        // Manejar tipo de bloqueo
+        if ($this->tipoBloqueoDispositivo === 'patron' && $this->patronDispositivo !== '') {
+            $createData['pattern_encrypted'] = \Illuminate\Support\Facades\Crypt::encryptString($this->patronDispositivo);
+        } elseif ($this->tipoBloqueoDispositivo === 'contraseña') {
+            $createData['contraseña'] = $this->contraseñaDispositivo;
+        }
+
+        $dispositivo = Dispositivo::create($createData);
 
         $this->selectedDeviceId = $dispositivo->id;
         $this->mostrarModalCrearDispositivo = false;
+
+        // Disparar evento para refrescar el componente de patrón si se creó con patrón
+        if ($this->tipoBloqueoDispositivo === 'patron' && $this->patronDispositivo !== '') {
+            $this->dispatch('patronActualizado');
+        }
     }
 
     public function crearDispositivoCompleto(): void
@@ -1393,6 +1475,29 @@ class EditarOrden extends Component
                     'name' => $user->name,
                 ];
             })->toArray();
+    }
+
+    public function cambiarPatron(): void
+    {
+        if (! $this->selectedDeviceId) {
+            return;
+        }
+
+        // Limpiar el patrón del dispositivo
+        $device = Dispositivo::find($this->selectedDeviceId);
+        if ($device) {
+            $device->update(['pattern_encrypted' => null]);
+            // Disparar evento para refrescar el componente de patrón
+            $this->dispatch('patronActualizado');
+        }
+
+        // Preparar para abrir modal con tipo de bloqueo en "patron"
+        $this->tipoBloqueoDispositivo = 'patron';
+        $this->patronDispositivo = '';
+        $this->contraseñaDispositivo = null;
+
+        // Abrir modal de editar dispositivo
+        $this->abrirModalEditarDispositivo();
     }
 
     public function render()

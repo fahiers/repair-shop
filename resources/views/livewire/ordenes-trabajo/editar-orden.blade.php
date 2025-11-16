@@ -553,6 +553,21 @@
                             ></textarea>
                         </div>
                     </div>
+
+                    <!-- Patrón de desbloqueo -->
+                    @if($dispositivoSeleccionado && $selectedDeviceId)
+                        <div class="mt-4 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4"
+                             x-data
+                             @cambiar-patron.window="$wire.cambiarPatron()"
+                        >
+                            @php
+                                $dispositivo = \App\Models\Dispositivo::find($selectedDeviceId);
+                            @endphp
+                            @if($dispositivo)
+                                <livewire:dispositivos.pattern-form :dispositivo="$dispositivo" :key="'pattern-'.$selectedDeviceId" />
+                            @endif
+                        </div>
+                    @endif
                 </div>
 
                 <!-- Contenido de la pestaña Comentarios -->
@@ -802,6 +817,131 @@
                         <textarea wire:model.live="observacionesDispositivo" rows="3" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm" placeholder="Detalles visibles: rayas, golpes, pantalla, conectores, etc."></textarea>
                         @error('observacionesDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                     </div>
+
+                    <!-- Tipo de bloqueo -->
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Tipo de bloqueo</label>
+                        <div class="flex items-center gap-4">
+                            <label class="inline-flex items-center gap-2">
+                                <input type="radio" name="tipoBloqueo" value="ninguno" wire:model.live="tipoBloqueoDispositivo" class="h-4 w-4 text-emerald-600 border-zinc-300 dark:border-zinc-600">
+                                <span class="text-sm">Ninguno</span>
+                            </label>
+                            <label class="inline-flex items-center gap-2">
+                                <input type="radio" name="tipoBloqueo" value="patron" wire:model.live="tipoBloqueoDispositivo" class="h-4 w-4 text-emerald-600 border-zinc-300 dark:border-zinc-600">
+                                <span class="text-sm">Patrón</span>
+                            </label>
+                            <label class="inline-flex items-center gap-2">
+                                <input type="radio" name="tipoBloqueo" value="contraseña" wire:model.live="tipoBloqueoDispositivo" class="h-4 w-4 text-emerald-600 border-zinc-300 dark:border-zinc-600">
+                                <span class="text-sm">Contraseña</span>
+                            </label>
+                        </div>
+                        @error('tipoBloqueoDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                    </div>
+
+                    <!-- Campo de contraseña -->
+                    @if($tipoBloqueoDispositivo === 'contraseña')
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Contraseña</label>
+                            <input type="text" wire:model.live="contraseñaDispositivo" class="mt-1 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm" placeholder="Ingrese la contraseña">
+                            @error('contraseñaDispositivo') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
+                        </div>
+                    @endif
+
+                    <!-- Componente de patrón -->
+                    @if($tipoBloqueoDispositivo === 'patron')
+                        <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4">
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Dibuja el patrón</h4>
+                                    <p class="text-xs text-zinc-500 dark:text-zinc-400">Dibuja el patrón tal como está configurado en el dispositivo.</p>
+                                </div>
+
+                                <div
+                                    x-data="patternLock({
+                                        onFinish(pattern) {
+                                            @this.set('patronDispositivo', pattern)
+                                        }
+                                    })"
+                                    class="space-y-3"
+                                >
+                                    <div
+                                        class="relative mx-auto h-48 w-48 select-none"
+                                        @mousedown="start($event)"
+                                        @mousemove="move($event)"
+                                        @mouseup="end()"
+                                        @touchstart.prevent="start($event)"
+                                        @touchmove.prevent="move($event)"
+                                        @touchend="end()"
+                                    >
+                                        <svg class="absolute inset-0 h-full w-full pointer-events-none">
+                                            <path
+                                                x-ref="path"
+                                                stroke="currentColor"
+                                                stroke-width="3"
+                                                fill="none"
+                                                class="text-emerald-600 dark:text-emerald-500"
+                                            ></path>
+                                        </svg>
+
+                                        <div class="grid grid-cols-3 gap-4 h-full w-full items-center justify-items-center">
+                                            @for ($i = 1; $i <= 9; $i++)
+                                                <div
+                                                    class="h-10 w-10 rounded-full border-2 border-zinc-400 dark:border-zinc-600 bg-white dark:bg-zinc-800 flex items-center justify-center transition"
+                                                    :class="dotsActive.includes({{ $i }}) ? 'bg-emerald-600 border-emerald-800 dark:bg-emerald-500 dark:border-emerald-700 text-white' : ''"
+                                                    data-id="{{ $i }}"
+                                                >
+                                                    <span class="text-xs font-medium">{{ $i }}</span>
+                                                </div>
+                                            @endfor
+                                        </div>
+                                    </div>
+
+                                    <div class="text-xs text-zinc-500 dark:text-zinc-400 text-center">
+                                        Patrón capturado: <span class="font-mono text-zinc-700 dark:text-zinc-300">{{ $patronDispositivo ?: 'Ninguno' }}</span>
+                                    </div>
+
+                                    @error('patronDispositivo')
+                                        <div class="text-xs text-red-600 dark:text-red-400 text-center">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+
+                                    @if($patronDispositivo)
+                                        <div class="pt-2 border-t border-zinc-200 dark:border-zinc-700">
+                                            <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-2 text-center">Patrón guardado:</p>
+                                            <div
+                                                x-data="patternViewer(@js($patronDispositivo))"
+                                                x-init="draw()"
+                                                class="relative mx-auto h-32 w-32 select-none"
+                                            >
+                                                <svg class="absolute inset-0 h-full w-full pointer-events-none">
+                                                    <path
+                                                        x-ref="path"
+                                                        stroke="currentColor"
+                                                        stroke-width="3"
+                                                        fill="none"
+                                                        class="text-emerald-600 dark:text-emerald-500"
+                                                    ></path>
+                                                </svg>
+
+                                                <div class="grid grid-cols-3 gap-3 h-full w-full items-center justify-items-center">
+                                                    @for ($i = 1; $i <= 9; $i++)
+                                                        <div
+                                                            class="h-6 w-6 rounded-full border-2 border-zinc-400 dark:border-zinc-600 bg-white dark:bg-zinc-800 flex items-center justify-center transition"
+                                                            data-id="{{ $i }}"
+                                                            :class="isActive({{ $i }}) ? 'bg-emerald-600 border-emerald-800 dark:bg-emerald-500 dark:border-emerald-700 text-white' : ''"
+                                                        >
+                                                            <span class="text-[9px] font-medium">{{ $i }}</span>
+                                                        </div>
+                                                    @endfor
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    @endif
 
                     <div class="flex items-center justify-end gap-2">
                         <button type="button" wire:click="$set('{{ $nombreVariableModal }}', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cancelar</button>

@@ -15,6 +15,9 @@ class Dispositivo extends Model
         'modelo_id',
         'imei',
         'color',
+        'patron',
+        'pattern_encrypted',
+        'contraseña',
         'accesorios',
         'estado_dispositivo',
     ];
