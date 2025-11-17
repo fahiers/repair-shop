@@ -5,279 +5,353 @@
     <title>Orden de Trabajo - OT {{ $orden->numero_orden }}</title>
     <style>
         @page {
-            margin: 2mm 5mm 2mm 5mm;
-            @bottom-right {
-                content: "Página " counter(page) " de " counter(pages);
-                font-size: 10px;
-            }
+            margin: 15mm 15mm 15mm 15mm;
         }
         
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-size: 10px;
-            line-height: 1.2;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #000;
         }
         
-        .header-row {
-            display: table;
-            width: 100%;
-            margin-bottom: 5px;
-        }
-        
-        .header-left, .header-center, .header-right {
-            display: table-cell;
-            vertical-align: top;
-            width: 33.33%;
-        }
-        
-        .header-center {
-            text-align: center;
-        }
-        
-        .header-right {
-            text-align: right;
+        .header {
+            margin-bottom: 15px;
         }
         
         .header-title {
-            font-size: 14px;
+            font-size: 18px;
             font-weight: bold;
-            text-decoration: underline;
-            margin: 5px 0;
-            position: relative;
-            left: -50px;
+            margin-bottom: 5px;
         }
         
-        .trabajo-info {
-            margin: 8px 0;
+        .header-info {
+            font-size: 12px;
+            margin-bottom: 10px;
         }
         
         .separator-line {
-            border-bottom: 2px solid #000;
-            margin: 20px 0 8px 0;
+            border-bottom: 1px solid #000;
+            margin: 15px 0;
         }
         
-        .cliente-section {
+        .info-section {
             display: table;
             width: 100%;
-            margin: 8px 0;
+            margin-bottom: 20px;
         }
         
-        .cliente-left, .cliente-right {
+        .info-left, .info-right {
             display: table-cell;
             vertical-align: top;
             width: 50%;
+            padding-right: 20px;
         }
         
-        .cliente-right {
+        .info-right {
+            padding-right: 0;
+            padding-left: 20px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        .info-value {
+            margin-bottom: 8px;
+        }
+        
+        .device-info {
             text-align: right;
+        }
+        
+        .device-brand {
+            font-size: 14px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 5px;
+        }
+        
+        .device-model {
+            font-size: 12px;
         }
         
         .items-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
         }
         
         .items-table th, .items-table td {
             border: 1px solid #000;
-            padding: 3px 2px;
+            padding: 8px;
             text-align: left;
-            vertical-align: top;
-        }
-        
-        .col-descripcion {
-            padding-left: 3px;
-            padding-right: 2px;
         }
         
         .items-table th {
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
             font-weight: bold;
-        }
-        
-        .col-item {
-            width: 5%;
             text-align: center;
         }
         
-        .col-cantidad {
-            width: 7%;
-            text-align: center;
+        .items-table td {
+            vertical-align: top;
         }
         
-        .col-tipo {
-            width: 10%;
-            text-align: center;
-        }
-        
-        .col-descripcion {
+        .col-producto {
             width: 50%;
         }
         
-        .col-precio-unit {
-            width: 12%;
+        .col-precio {
+            width: 20%;
             text-align: right;
+        }
+        
+        .col-cantidad {
+            width: 15%;
+            text-align: center;
         }
         
         .col-total {
-            width: 16%;
+            width: 15%;
             text-align: right;
         }
         
-        .numero-ot-destacado {
-            background-color: #ffff00;
-            padding: 3px 6px;
-            border-radius: 3px;
-            font-weight: bold;
+        .totals-section {
+            display: table;
+            width: 100%;
+            margin-top: 20px;
         }
         
-        .logo-container {
-            float: left;
-            margin-right: 15px;
+        .totals-left {
+            display: table-cell;
+            width: 60%;
+        }
+        
+        .totals-right {
+            display: table-cell;
+            width: 40%;
+            text-align: right;
+            padding-left: 20px;
+        }
+        
+        .total-row {
+            margin-bottom: 5px;
+            font-size: 11px;
+        }
+        
+        .total-label {
+            display: inline-block;
+            width: 120px;
             text-align: left;
         }
         
-        .logo-text {
-            font-size: 16px;
+        .total-value {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+        
+        .total-final {
             font-weight: bold;
+            font-size: 13px;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            margin-top: 5px;
+        }
+        
+        .signatures-section {
+            display: table;
+            width: 100%;
+            margin-top: 40px;
+        }
+        
+        .signature-left, .signature-right {
+            display: table-cell;
+            width: 50%;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        .signature-line {
+            border-top: 1px solid #000;
+            margin-top: 5px;
+            padding-top: 5px;
+        }
+        
+        .signature-label {
+            font-size: 10px;
             margin-bottom: 5px;
         }
         
-        .preparado-text {
-            font-size: 9px;
-            margin-top: 2px;
-        }
-        
-        .trabajo-info {
-            margin-top: 5px;
-            clear: left;
+        .signature-name {
+            font-size: 11px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Encabezado superior con logo -->
-    <div class="header-row">
-        <div class="header-left">
-            <div class="logo-container">
-                <div class="logo-text">Taller Tecnico</div>
-                <div class="preparado-text">Preparado por: {{ $orden->tecnico ? $orden->tecnico->name : 'N/A' }}</div>
-                <div class="trabajo-info">
-                    <strong>Trabajo N°: <span class="numero-ot-destacado">{{ $orden->numero_orden }}</span></strong>
-                </div>
-            </div>
-        </div>
-        <div class="header-center">
-        </div>
-        <div class="header-right">
-            Página 1 de 1
-        </div>
+    @php
+        // Calcular subtotal sumando todos los items
+        $subtotal = $orden->servicios()->sum('orden_servicio.subtotal') + 
+                    $orden->productos()->sum('orden_producto.subtotal');
+        
+        // Calcular IVA (19% por defecto, o calcularlo desde el costo_estimado si está disponible)
+        $porcentajeIva = 19;
+        $montoIva = $subtotal * ($porcentajeIva / 100);
+        
+        // El total puede ser costo_estimado o costo_final, o calcularlo desde subtotal + IVA
+        $total = $orden->costo_final ?? $orden->costo_estimado ?? ($subtotal + $montoIva);
+        
+        // Si el total ya incluye IVA, recalcular el IVA desde el total
+        if ($orden->costo_estimado || $orden->costo_final) {
+            // Si tenemos un total guardado, el IVA sería la diferencia
+            // Pero para mantener consistencia, usamos el cálculo estándar
+            $montoIva = $subtotal * ($porcentajeIva / 100);
+            $totalCalculado = $subtotal + $montoIva;
+            // Si el total guardado difiere mucho, usar el guardado
+            if (abs($total - $totalCalculado) > 1) {
+                $montoIva = $total - $subtotal;
+            }
+        }
+        
+        // Formatear valores
+        $subtotalFormatted = number_format($subtotal, 0, ',', '.');
+        $ivaFormatted = number_format($montoIva, 0, ',', '.');
+        $totalFormatted = number_format($total, 0, ',', '.');
+        
+        $cliente = $orden->dispositivo->cliente;
+        $dispositivo = $orden->dispositivo;
+        $modelo = $dispositivo->modelo;
+    @endphp
+
+    <!-- Encabezado -->
+    <div class="header">
+        <div class="header-title">ORDEN DE TRABAJO</div>
+        <div class="header-info">#{{ $orden->numero_orden }} • {{ $orden->fecha_ingreso->format('d M Y') }}</div>
     </div>
     
-    <!-- Segunda fila del encabezado -->
-    <div class="header-row">
-        <div class="header-left">
-        </div>
-        <div class="header-center">
-            <div class="header-title">Orden de Trabajo</div>
-        </div>
-        <div class="header-right">
-            {{ now()->format('d-m-Y H:i:s') }}
-        </div>
-    </div>
+    <!-- Línea separadora -->
+    <div class="separator-line"></div>
     
-    <!-- Tercera fila del encabezado -->
-    <div class="header-row">
-        <div class="header-left">
+    <!-- Información del cliente y dispositivo -->
+    <div class="info-section">
+        <div class="info-left">
+            <div class="info-value">{{ $cliente ? $cliente->nombre : 'No especificado' }}</div>
+            <div class="info-value">{{ $cliente && $cliente->rut ? $cliente->rut : '-' }}</div>
+            <div class="info-value">{{ $cliente && $cliente->telefono ? $cliente->telefono : '-' }}</div>
+            <div class="info-value">{{ $cliente && $cliente->email ? $cliente->email : '-' }}</div>
         </div>
-        <div class="header-center"></div>
-        <div class="header-right">
-            FECHA DE ENTREGA: {{ $orden->fecha_entrega_estimada ? $orden->fecha_entrega_estimada->format('d-m-y') : 'No definida' }}
+        <div class="info-right device-info">
+            @if($modelo)
+                <div class="device-brand">{{ strtoupper($modelo->marca) }}</div>
+                <div class="device-model">{{ $modelo->modelo }}@if($modelo->anio) {{ $modelo->anio }}@endif</div>
+            @else
+                <div class="device-model">Dispositivo sin modelo</div>
+            @endif
         </div>
     </div>
     
     <!-- Línea separadora -->
     <div class="separator-line"></div>
     
-    <!-- Información del cliente -->
-    <div class="cliente-section">
-        <div class="cliente-left">
-            <strong>Cliente:</strong> {{ $orden->dispositivo->cliente ? $orden->dispositivo->cliente->nombre : 'No especificado' }}
-        </div>
-        <div class="cliente-right">
-            <strong>Fecha OT:</strong> {{ $orden->fecha_ingreso->format('d-m-Y') }}
-        </div>
-    </div>
-    
-    <!-- Tabla de items -->
+    <!-- Tabla de productos/servicios -->
     <table class="items-table">
         <thead>
             <tr>
-                <th class="col-item">Item</th>
-                <th class="col-cantidad">Cant.</th>
-                <th class="col-tipo">Tipo</th>
-                <th class="col-descripcion">Descripción Item</th>
-                <th class="col-precio-unit">Precio Unit.</th>
+                <th class="col-producto">Producto o servicio</th>
+                <th class="col-precio">Precio</th>
+                <th class="col-cantidad">Cant</th>
                 <th class="col-total">Total</th>
             </tr>
         </thead>
         <tbody>
             @php
-                $itemIndex = 0;
                 $allItems = collect();
                 
                 // Agregar servicios
                 foreach ($orden->servicios as $servicio) {
                     $allItems->push([
-                        'tipo' => 'servicio',
                         'nombre' => $servicio->nombre,
-                        'cantidad' => $servicio->pivot->cantidad,
                         'precio_unitario' => $servicio->pivot->precio_unitario,
+                        'cantidad' => $servicio->pivot->cantidad,
                         'subtotal' => $servicio->pivot->subtotal,
-                        'descripcion' => $servicio->pivot->descripcion ?? null,
                     ]);
                 }
                 
                 // Agregar productos
                 foreach ($orden->productos as $producto) {
                     $allItems->push([
-                        'tipo' => 'producto',
                         'nombre' => $producto->nombre,
-                        'cantidad' => $producto->pivot->cantidad,
                         'precio_unitario' => $producto->pivot->precio_unitario,
+                        'cantidad' => $producto->pivot->cantidad,
                         'subtotal' => $producto->pivot->subtotal,
-                        'descripcion' => null,
                     ]);
                 }
             @endphp
             
             @forelse($allItems as $item)
             <tr>
-                <td class="col-item">{{ ++$itemIndex }}</td>
+                <td class="col-producto">{{ $item['nombre'] }}</td>
+                <td class="col-precio">${{ number_format($item['precio_unitario'], 0, ',', '.') }}</td>
                 <td class="col-cantidad">{{ number_format($item['cantidad'], 0, ',', '.') }}</td>
-                <td class="col-tipo">{{ ucfirst($item['tipo']) }}</td>
-                <td class="col-descripcion">
-                    {{ $item['nombre'] }}
-                </td>
-                <td class="col-precio-unit">
-                    ${{ number_format($item['precio_unitario'], 0, ',', '.') }}
-                </td>
-                <td class="col-total">
-                    ${{ number_format($item['subtotal'], 0, ',', '.') }}
-                </td>
+                <td class="col-total">${{ number_format($item['subtotal'], 0, ',', '.') }}</td>
             </tr>
             @empty
             <tr>
-                <td class="col-item">1</td>
-                <td class="col-cantidad"></td>
-                <td class="col-tipo"></td>
-                <td class="col-descripcion">Sin items registrados</td>
-                <td class="col-precio-unit"></td>
-                <td class="col-total"></td>
+                <td colspan="4" style="text-align: center;">Sin items registrados</td>
             </tr>
             @endforelse
         </tbody>
     </table>
+    
+    <!-- Línea separadora -->
+    <div class="separator-line"></div>
+    
+    <!-- Totales -->
+    <div class="totals-section">
+        <div class="totals-left"></div>
+        <div class="totals-right">
+            <div class="total-row">
+                <span class="total-label">Subtotal</span>
+                <span class="total-value">${{ $subtotalFormatted }}</span>
+            </div>
+            <div class="total-row">
+                <span class="total-label">IVA</span>
+                <span class="total-value">${{ $ivaFormatted }}</span>
+            </div>
+            <div class="total-row total-final">
+                <span class="total-label">Total</span>
+                <span class="total-value">${{ $totalFormatted }}</span>
+            </div>
+            <div class="total-row" style="margin-top: 10px;">
+                <span class="total-label">Pagado:</span>
+                <span class="total-value">${{ number_format($orden->calcularTotalPagado(), 0, ',', '.') }}</span>
+            </div>
+            <div class="total-row">
+                <span class="total-label">Saldo pendiente:</span>
+                <span class="total-value">${{ number_format($orden->saldo ?? 0, 0, ',', '.') }}</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Firmas -->
+    <div class="signatures-section">
+        <div class="signature-left">
+            <div class="signature-label">Firma del técnico</div>
+            <div class="signature-line"></div>
+        </div>
+        <div class="signature-right">
+            <div class="signature-label">Firma del cliente</div>
+            <div class="signature-line"></div>
+        </div>
+    </div>
+    
+    <!-- Línea final -->
+    <div class="separator-line" style="margin-top: 20px;"></div>
 </body>
 </html>

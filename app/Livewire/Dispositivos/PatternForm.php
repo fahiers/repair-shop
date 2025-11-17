@@ -14,13 +14,19 @@ class PatternForm extends Component
     /** Patrón en texto plano: "1-2-5-8-9" */
     public string $pattern = '';
 
+    /** Contraseña del dispositivo */
+    public ?string $password = null;
+
+    /** Clave de actualización para forzar re-render del componente Alpine */
+    public int $refreshKey = 0;
+
     public function mount(Dispositivo $dispositivo): void
     {
         $this->dispositivo = $dispositivo;
-        $this->cargarPatron();
+        $this->cargarBloqueo();
     }
 
-    protected function cargarPatron(): void
+    protected function cargarBloqueo(): void
     {
         // Refrescar el dispositivo desde la base de datos
         $this->dispositivo->refresh();
@@ -32,15 +38,22 @@ class PatternForm extends Component
                 // Si por alguna razón falla la desencriptación
                 $this->pattern = '';
             }
+            $this->password = null;
+        } elseif ($this->dispositivo->contraseña) {
+            $this->password = $this->dispositivo->contraseña;
+            $this->pattern = '';
         } else {
             $this->pattern = '';
+            $this->password = null;
         }
     }
 
     #[On('patronActualizado')]
     public function refrescarPatron(): void
     {
-        $this->cargarPatron();
+        $this->cargarBloqueo();
+        // Incrementar refreshKey para forzar la recreación del componente Alpine
+        $this->refreshKey++;
     }
 
     public function save(): void

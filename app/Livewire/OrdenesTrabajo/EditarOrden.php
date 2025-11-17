@@ -1483,18 +1483,32 @@ class EditarOrden extends Component
             return;
         }
 
-        // Limpiar el patrón del dispositivo
         $device = Dispositivo::find($this->selectedDeviceId);
-        if ($device) {
-            $device->update(['pattern_encrypted' => null]);
-            // Disparar evento para refrescar el componente de patrón
-            $this->dispatch('patronActualizado');
+        if (! $device) {
+            return;
         }
 
-        // Preparar para abrir modal con tipo de bloqueo en "patron"
-        $this->tipoBloqueoDispositivo = 'patron';
-        $this->patronDispositivo = '';
-        $this->contraseñaDispositivo = null;
+        // Determinar el tipo de bloqueo actual
+        if ($device->pattern_encrypted) {
+            $this->tipoBloqueoDispositivo = 'patron';
+            try {
+                $this->patronDispositivo = \Illuminate\Support\Facades\Crypt::decryptString($device->pattern_encrypted);
+            } catch (\Exception $e) {
+                $this->patronDispositivo = '';
+            }
+            $this->contraseñaDispositivo = null;
+        } elseif ($device->contraseña) {
+            $this->tipoBloqueoDispositivo = 'contraseña';
+            $this->contraseñaDispositivo = $device->contraseña;
+            $this->patronDispositivo = '';
+        } else {
+            $this->tipoBloqueoDispositivo = 'patron';
+            $this->patronDispositivo = '';
+            $this->contraseñaDispositivo = null;
+        }
+
+        // Disparar evento para refrescar el componente
+        $this->dispatch('patronActualizado');
 
         // Abrir modal de editar dispositivo
         $this->abrirModalEditarDispositivo();

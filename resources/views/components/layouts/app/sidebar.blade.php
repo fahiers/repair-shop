@@ -18,8 +18,6 @@
             <flux:sidebar.item icon="users" :href="route('clientes.index')" :current="request()->routeIs('clientes.*')" wire:navigate>{{ __('Clientes') }}</flux:sidebar.item>
             <flux:sidebar.item icon="device-tablet" href="#" :current="request()->is('dispositivos*')" wire:navigate>{{ __('Dispositivos') }}</flux:sidebar.item>
             <flux:sidebar.item icon="cpu-chip" :href="route('modelos.index')" :current="request()->routeIs('modelos.*')" wire:navigate>{{ __('Modelos de Dispositivos') }}</flux:sidebar.item>
-            <flux:sidebar.item icon="archive-box" href="#" :current="request()->is('inventario*')" wire:navigate>{{ __('Inventario') }}</flux:sidebar.item>
-            <flux:sidebar.item icon="document-text" href="#" :current="request()->is('facturacion*')" wire:navigate>{{ __('Facturación') }}</flux:sidebar.item>
             <flux:sidebar.item icon="wrench-screwdriver" :href="route('servicios.index')" :current="request()->routeIs('servicios.*')" wire:navigate>{{ __('Servicios') }}</flux:sidebar.item>
             <flux:sidebar.item icon="shopping-bag" :href="route('productos.index')" :current="request()->routeIs('productos.*')" wire:navigate>{{ __('Productos') }}</flux:sidebar.item>
             <flux:sidebar.item icon="cog-6-tooth" :href="route('company.edit')" :current="request()->routeIs('company.*')" wire:navigate>{{ __('Configurar mi empresa') }}</flux:sidebar.item>

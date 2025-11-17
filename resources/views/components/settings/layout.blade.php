@@ -3,9 +3,6 @@
         <flux:navlist>
             <flux:navlist.item :href="route('profile.edit')" wire:navigate>{{ __('Perfil') }}</flux:navlist.item>
             <flux:navlist.item :href="route('user-password.edit')" wire:navigate>{{ __('Contraseña') }}</flux:navlist.item>
-            @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
-                <flux:navlist.item :href="route('two-factor.show')" wire:navigate>{{ __('Autenticación de Dos Factores') }}</flux:navlist.item>
-            @endif
             <flux:navlist.item :href="route('appearance.edit')" wire:navigate>{{ __('Apariencia') }}</flux:navlist.item>
             <flux:navlist.item :href="route('company.edit')" wire:navigate>{{ __('Configurar mi empresa') }}</flux:navlist.item>
             <flux:navlist.item :href="route('accesorios.index')" wire:navigate>{{ __('Accesorios') }}</flux:navlist.item>

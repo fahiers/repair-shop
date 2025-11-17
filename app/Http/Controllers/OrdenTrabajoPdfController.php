@@ -21,10 +21,10 @@ class OrdenTrabajoPdfController extends Controller
             'comentarios.user',
         ]);
 
-        // Tamaño personalizado: 21cm x 14cm (convertido a puntos: 21cm = 595.28pt, 14cm = 396.85pt)
+        // Tamaño A4: 210mm x 297mm
         $pdf = Pdf::loadView('pdf.orden-trabajo', [
             'orden' => $orden,
-        ])->setPaper([0, 0, 595.28, 396.85], 'portrait');
+        ])->setPaper('a4', 'portrait');
 
         return $pdf->stream("orden-trabajo-{$orden->numero_orden}.pdf");
     }
@@ -43,10 +43,10 @@ class OrdenTrabajoPdfController extends Controller
             'comentarios.user',
         ]);
 
-        // Tamaño personalizado: 21cm x 14cm (convertido a puntos: 21cm = 595.28pt, 14cm = 396.85pt)
+        // Tamaño A4: 210mm x 297mm
         $pdf = Pdf::loadView('pdf.orden-trabajo', [
             'orden' => $orden,
-        ])->setPaper([0, 0, 595.28, 396.85], 'portrait');
+        ])->setPaper('a4', 'portrait');
 
         return $pdf->download("orden-trabajo-{$orden->numero_orden}.pdf");
     }
