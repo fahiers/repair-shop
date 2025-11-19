@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('orden_id')->constrained('ordenes_trabajo');
             $table->foreignId('user_id')->constrained('users');
             $table->text('comentario');
-            $table->enum('tipo', ['nota_interna', 'comentario_cliente'])->default('nota_interna')->index();
+            $table->enum('tipo', ['nota_interna', 'comentario_cliente', 'informe_tecnico'])->default('nota_interna')->index();
             $table->timestamps();
         });
     }
