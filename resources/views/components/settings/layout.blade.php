@@ -1,3 +1,9 @@
+@props([
+    'heading',
+    'subheading',
+    'maxWidth' => 'max-w-lg',
+])
+
 <div class="flex items-start max-md:flex-col">
     <div class="me-10 w-full pb-4 md:w-[220px]">
         <flux:navlist>
@@ -5,6 +11,7 @@
             <flux:navlist.item :href="route('user-password.edit')" wire:navigate>{{ __('Contraseña') }}</flux:navlist.item>
             <flux:navlist.item :href="route('appearance.edit')" wire:navigate>{{ __('Apariencia') }}</flux:navlist.item>
             <flux:navlist.item :href="route('company.edit')" wire:navigate>{{ __('Configurar mi empresa') }}</flux:navlist.item>
+            <flux:navlist.item :href="route('condiciones-garantia.edit')" wire:navigate>{{ __('Condiciones y garantía') }}</flux:navlist.item>
             <flux:navlist.item :href="route('accesorios.index')" wire:navigate>{{ __('Accesorios') }}</flux:navlist.item>
         </flux:navlist>
     </div>
@@ -15,7 +22,7 @@
         <flux:heading>{{ $heading ?? '' }}</flux:heading>
         <flux:subheading>{{ $subheading ?? '' }}</flux:subheading>
 
-        <div class="mt-5 w-full max-w-lg">
+        <div class="mt-5 w-full {{ $maxWidth }}">
             {{ $slot }}
         </div>
     </div>

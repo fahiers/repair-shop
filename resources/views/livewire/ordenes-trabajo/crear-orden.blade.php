@@ -365,6 +365,7 @@
                     <div class="flex items-center justify-start gap-2 md:gap-3">
                         <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
                         <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
+                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Informe técnico</button>
                         <button type="button"
                                 wire:click="guardarOrden"
                                 @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
@@ -415,6 +416,11 @@
                                 :class="activeTab === 'notas' ? 'font-semibold text-zinc-900 dark:text-zinc-100' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'"
                                 class="px-3 py-1.5 text-sm transition-colors">
                             Notas
+                        </button>
+                        <button @click="activeTab = 'informe-tecnico'"
+                                :class="activeTab === 'informe-tecnico' ? 'font-semibold text-zinc-900 dark:text-zinc-100' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'"
+                                class="px-3 py-1.5 text-sm transition-colors">
+                            Informe Técnico
                         </button>
                     </div>
                 </div>
@@ -627,6 +633,29 @@
                                 <p class="text-sm text-zinc-500 dark:text-zinc-400">No hay notas aún.</p>
                             </div>
                         @endif
+                    </div>
+                </div>
+
+                <!-- Contenido de la pestaña Informe Técnico -->
+                <div x-show="activeTab === 'informe-tecnico'" 
+                     class="flex flex-col lg:flex-1 lg:min-h-0 lg:overflow-hidden">
+                    <div class="p-4 md:p-6 flex-1 overflow-y-auto min-h-0">
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                                    Informe Técnico
+                                </label>
+                                <textarea
+                                    wire:model.live.debounce.500ms="informeTecnico"
+                                    rows="15"
+                                    placeholder="Escribe aquí el informe técnico detallado sobre la reparación realizada..."
+                                    class="w-full rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-3 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                                ></textarea>
+                                <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                                    El informe técnico se guardará cuando crees la orden de trabajo.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

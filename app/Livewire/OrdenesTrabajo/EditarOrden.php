@@ -170,6 +170,11 @@ class EditarOrden extends Component
 
     public string $tipoNuevoComentario = 'nota_interna';
 
+    // Informe técnico
+    public string $informeTecnico = '';
+
+    public bool $informeTecnicoCargado = false;
+
     public function mount(int $id): void
     {
         $this->ordenId = $id;
@@ -330,7 +335,7 @@ class EditarOrden extends Component
     {
         $this->validate([
             'nuevoComentario' => 'required|min:3|max:1000',
-            'tipoNuevoComentario' => 'required|in:nota_interna,comentario_cliente',
+            'tipoNuevoComentario' => 'required|in:nota_interna,comentario_cliente,informe_tecnico',
         ]);
 
         OrdenComentario::create([
@@ -343,6 +348,54 @@ class EditarOrden extends Component
         $this->nuevoComentario = '';
         $this->comentariosCargados = false;
         $this->cargarComentarios();
+    }
+
+    public function cargarInformeTecnico(): void
+    {
+        if ($this->informeTecnicoCargado) {
+            return;
+        }
+
+        $informe = $this->orden->comentarios()
+            ->where('tipo', 'informe_tecnico')
+            ->latest()
+            ->first();
+
+        if ($informe) {
+            $this->informeTecnico = $informe->comentario;
+        }
+
+        $this->informeTecnicoCargado = true;
+    }
+
+    public function guardarInformeTecnico(): void
+    {
+        $this->validate([
+            'informeTecnico' => 'nullable|string|max:5000',
+        ]);
+
+        // Buscar si ya existe un informe técnico
+        $informeExistente = $this->orden->comentarios()
+            ->where('tipo', 'informe_tecnico')
+            ->first();
+
+        if ($informeExistente) {
+            // Actualizar el informe existente
+            $informeExistente->update([
+                'comentario' => trim($this->informeTecnico),
+                'user_id' => auth()->id(),
+            ]);
+        } else {
+            // Crear nuevo informe técnico
+            OrdenComentario::create([
+                'orden_id' => $this->orden->id,
+                'user_id' => auth()->id(),
+                'comentario' => trim($this->informeTecnico),
+                'tipo' => 'informe_tecnico',
+            ]);
+        }
+
+        session()->flash('informe_guardado', 'Informe técnico guardado correctamente.');
     }
 
     // Reutilizar métodos de CrearOrden para gestión de items, clientes, dispositivos, etc.
@@ -756,12 +809,17 @@ class EditarOrden extends Component
 
     public function setActiveTab(string $tab): void
     {
-        if (in_array($tab, ['equipo', 'servicios', 'comentarios'], true)) {
+        if (in_array($tab, ['equipo', 'comentarios', 'informe-tecnico'], true)) {
             $this->activeTab = $tab;
 
             // Cargar comentarios solo cuando se accede a la pestaña (carga diferida)
             if ($tab === 'comentarios' && ! $this->comentariosCargados) {
                 $this->cargarComentarios();
+            }
+
+            // Cargar informe técnico solo cuando se accede a la pestaña (carga diferida)
+            if ($tab === 'informe-tecnico' && ! $this->informeTecnicoCargado) {
+                $this->cargarInformeTecnico();
             }
         }
     }
@@ -1456,6 +1514,27 @@ class EditarOrden extends Component
 
             // Recalcular saldo usando el método del modelo
             $this->orden->recalcularSaldo();
+
+            // Guardar informe técnico si existe
+            if (! empty(trim($this->informeTecnico))) {
+                $informeExistente = $this->orden->comentarios()
+                    ->where('tipo', 'informe_tecnico')
+                    ->first();
+
+                if ($informeExistente) {
+                    $informeExistente->update([
+                        'comentario' => trim($this->informeTecnico),
+                        'user_id' => auth()->id(),
+                    ]);
+                } else {
+                    OrdenComentario::create([
+                        'orden_id' => $this->orden->id,
+                        'user_id' => auth()->id(),
+                        'comentario' => trim($this->informeTecnico),
+                        'tipo' => 'informe_tecnico',
+                    ]);
+                }
+            }
 
             return $this->orden;
         });

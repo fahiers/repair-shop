@@ -69,7 +69,7 @@
                         </button>
 
                         <flux:menu>
-                            <div class="px-3 py-2 text-sm text-zinc-500">Sin opciones disponibles por ahora</div>
+                            <flux:menu.item href="{{ route('ordenes-trabajo.recibo', ['orden' => $orden->id]) }}" target="_blank" icon="document-text">Recibo de ingreso</flux:menu.item>
                         </flux:menu>
                     </flux:dropdown>
 
@@ -368,7 +368,9 @@
 
                     <div class="flex items-center justify-start gap-2 md:gap-3">
                         <a href="{{ route('ordenes-trabajo.pdf', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Imprimir orden</a>
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
+                        <a href="{{ route('ordenes-trabajo.sticker', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Imprimir etiqueta</a>
+                        <a href="{{ route('ordenes-trabajo.informe-tecnico', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Informe técnico</a>
+                        <a href="{{ route('ordenes-trabajo.condiciones-garantia', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Condiciones y garantía</a>
                         <button type="button"
                                 wire:click="actualizarOrden"
                                 @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
@@ -417,6 +419,11 @@
                                 :class="activeTab === 'comentarios' ? 'font-semibold text-zinc-900 dark:text-zinc-100' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'"
                                 class="px-3 py-1.5 text-sm transition-colors">
                             Comentarios
+                        </button>
+                        <button @click="$wire.setActiveTab('informe-tecnico')"
+                                :class="activeTab === 'informe-tecnico' ? 'font-semibold text-zinc-900 dark:text-zinc-100' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'"
+                                class="px-3 py-1.5 text-sm transition-colors">
+                            Informe Técnico
                         </button>
                     </div>
                 </div>
@@ -634,6 +641,46 @@
                                 </button>
                             </div>
                         @endif
+                    </div>
+                </div>
+
+                <!-- Contenido de la pestaña Informe Técnico -->
+                <div x-show="activeTab === 'informe-tecnico'" 
+                     x-init="$watch('activeTab', value => { if(value === 'informe-tecnico') { $wire.cargarInformeTecnico() } })"
+                     class="flex flex-col lg:flex-1 lg:min-h-0 lg:overflow-hidden">
+                    <div class="p-4 md:p-6 flex-1 overflow-y-auto min-h-0">
+                        @if(session('informe_guardado'))
+                            <div class="mb-4 p-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800">
+                                <p class="text-sm text-emerald-700 dark:text-emerald-300">{{ session('informe_guardado') }}</p>
+                            </div>
+                        @endif
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                                    Informe Técnico
+                                </label>
+                                <textarea
+                                    wire:model.live.debounce.500ms="informeTecnico"
+                                    rows="15"
+                                    placeholder="Escribe aquí el informe técnico detallado sobre la reparación realizada..."
+                                    class="w-full rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-3 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                                ></textarea>
+                                <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                                    El informe técnico se guarda automáticamente al escribir. También puedes guardarlo manualmente con el botón de abajo.
+                                </p>
+                            </div>
+                            
+                            <div class="flex justify-end">
+                                <button
+                                    type="button"
+                                    wire:click="guardarInformeTecnico"
+                                    class="px-4 py-2 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+                                >
+                                    Guardar Informe
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -97,6 +97,9 @@ class CrearOrden extends Component
 
     public string $tipoNuevoComentario = 'nota_interna';
 
+    // Informe técnico
+    public string $informeTecnico = '';
+
     // Accesorios configurables y seleccionados
     public array $accesoriosDisponibles = [];
 
@@ -613,7 +616,7 @@ class CrearOrden extends Component
 
     public function setActiveTab(string $tab): void
     {
-        if (in_array($tab, ['equipo', 'fotos', 'notas'], true)) {
+        if (in_array($tab, ['equipo', 'notas', 'informe-tecnico'], true)) {
             $this->activeTab = $tab;
         }
     }
@@ -1209,6 +1212,16 @@ class CrearOrden extends Component
                 ]);
             }
 
+            // Crear informe técnico si existe
+            if (! empty(trim($this->informeTecnico))) {
+                OrdenComentario::create([
+                    'orden_id' => $orden->id,
+                    'user_id' => auth()->id(),
+                    'comentario' => trim($this->informeTecnico),
+                    'tipo' => 'informe_tecnico',
+                ]);
+            }
+
             return $orden;
         });
 
@@ -1225,7 +1238,7 @@ class CrearOrden extends Component
     {
         $this->validate([
             'nuevoComentario' => 'required|min:3|max:1000',
-            'tipoNuevoComentario' => 'required|in:nota_interna,comentario_cliente',
+            'tipoNuevoComentario' => 'required|in:nota_interna,comentario_cliente,informe_tecnico',
         ]);
 
         // Agregar comentario temporal (se guardará cuando se cree la orden)

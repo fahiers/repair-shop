@@ -23,6 +23,10 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/password', 'settings.password')->name('user-password.edit');
     Volt::route('settings/appearance', 'settings.appearance')->name('appearance.edit');
     Volt::route('settings/company', 'settings.company')->name('company.edit');
+    Route::get('settings/condiciones-garantia/preview', [App\Http\Controllers\CondicionesGarantiaPdfController::class, 'preview'])
+        ->name('condiciones-garantia.preview');
+
+    Volt::route('settings/condiciones-garantia', 'settings.condiciones-garantia')->name('condiciones-garantia.edit');
     Volt::route('settings/accesorios', 'settings.accesorios')->name('accesorios.index');
 
     Volt::route('settings/two-factor', 'settings.two-factor')
@@ -36,4 +40,3 @@ Route::middleware(['auth'])->group(function () {
         )
         ->name('two-factor.show');
 });
-

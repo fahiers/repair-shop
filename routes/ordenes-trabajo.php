@@ -22,6 +22,38 @@ Route::get('/{orden}/pdf/download', [OrdenTrabajoPdfController::class, 'download
     ->name('ordenes-trabajo.pdf.download')
     ->middleware(['auth', 'web']);
 
+Route::get('/{orden}/informe-tecnico', [OrdenTrabajoPdfController::class, 'previewInformeTecnico'])
+    ->name('ordenes-trabajo.informe-tecnico')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/informe-tecnico/download', [OrdenTrabajoPdfController::class, 'downloadInformeTecnico'])
+    ->name('ordenes-trabajo.informe-tecnico.download')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/sticker', [OrdenTrabajoPdfController::class, 'previewSticker'])
+    ->name('ordenes-trabajo.sticker')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/sticker/download', [OrdenTrabajoPdfController::class, 'downloadSticker'])
+    ->name('ordenes-trabajo.sticker.download')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/condiciones-garantia', [App\Http\Controllers\CondicionesGarantiaPdfController::class, 'previewFromOrden'])
+    ->name('ordenes-trabajo.condiciones-garantia')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/condiciones-garantia/download', [App\Http\Controllers\CondicionesGarantiaPdfController::class, 'downloadFromOrden'])
+    ->name('ordenes-trabajo.condiciones-garantia.download')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/recibo', [OrdenTrabajoPdfController::class, 'previewRecibo'])
+    ->name('ordenes-trabajo.recibo')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/recibo/download', [OrdenTrabajoPdfController::class, 'downloadRecibo'])
+    ->name('ordenes-trabajo.recibo.download')
+    ->middleware(['auth', 'web']);
+
 Route::get('/{id}/editar', EditarOrden::class)
     ->name('ordenes-trabajo.editar')
     ->middleware(['auth', 'web']);
