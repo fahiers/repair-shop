@@ -506,11 +506,14 @@ class EditarOrden extends Component
         $this->loadingClients = true;
         $this->showClientSearchResults = true;
 
-        $query = Cliente::query()->where(function ($q) use ($trimmedValue) {
-            $q->where('nombre', 'like', '%'.$trimmedValue.'%')
-                ->orWhere('rut', 'like', '%'.$trimmedValue.'%')
-                ->orWhere('telefono', 'like', '%'.$trimmedValue.'%')
-                ->orWhere('email', 'like', '%'.$trimmedValue.'%');
+        // Determinar operador según el motor de BD
+        $operador = DB::connection()->getDriverName() === 'pgsql' ? 'ilike' : 'like';
+
+        $query = Cliente::query()->where(function ($q) use ($trimmedValue, $operador) {
+            $q->where('nombre', $operador, '%'.$trimmedValue.'%')
+                ->orWhere('rut', $operador, '%'.$trimmedValue.'%')
+                ->orWhere('telefono', $operador, '%'.$trimmedValue.'%')
+                ->orWhere('email', $operador, '%'.$trimmedValue.'%');
         });
 
         $this->clientsFound = $query->take(10)->get()->toArray();
@@ -601,19 +604,22 @@ class EditarOrden extends Component
             return;
         }
 
+        // Determinar operador según el motor de BD
+        $operador = DB::connection()->getDriverName() === 'pgsql' ? 'ilike' : 'like';
+
         if ($this->tipoItemAgregar === 'servicio') {
             $this->itemsDisponibles = Servicio::query()
                 ->where('estado', 'activo')
-                ->where('nombre', 'like', '%'.$valor.'%')
+                ->where('nombre', $operador, '%'.$valor.'%')
                 ->limit(10)
                 ->get()
                 ->toArray();
         } else {
             $this->itemsDisponibles = Producto::query()
                 ->where('estado', 'activo')
-                ->where(function ($query) use ($valor) {
-                    $query->where('nombre', 'like', '%'.$valor.'%')
-                        ->orWhere('marca', 'like', '%'.$valor.'%');
+                ->where(function ($query) use ($valor, $operador) {
+                    $query->where('nombre', $operador, '%'.$valor.'%')
+                        ->orWhere('marca', $operador, '%'.$valor.'%');
                 })
                 ->limit(10)
                 ->get()
@@ -1156,13 +1162,16 @@ class EditarOrden extends Component
 
         $this->showModeloSearchResults = true;
 
+        // Determinar operador según el motor de BD
+        $operador = DB::connection()->getDriverName() === 'pgsql' ? 'ilike' : 'like';
+
         $this->modelosFound = ModeloDispositivo::query()
-            ->where(function ($q) use ($term) {
-                $q->where('marca', 'like', '%'.$term.'%')
-                    ->orWhere('modelo', 'like', '%'.$term.'%')
-                    ->orWhere('anio', 'like', '%'.$term.'%');
+            ->where(function ($q) use ($term, $operador) {
+                $q->where('marca', $operador, '%'.$term.'%')
+                    ->orWhere('modelo', $operador, '%'.$term.'%')
+                    ->orWhere('anio', $operador, '%'.$term.'%');
             })
-            ->orderByRaw('CASE WHEN marca LIKE ? THEN 0 ELSE 1 END', [$term.'%'])
+            ->orderByRaw('CASE WHEN marca '.strtoupper($operador).' ? THEN 0 ELSE 1 END', [$term.'%'])
             ->orderBy('marca')
             ->orderBy('modelo')
             ->take(20)
