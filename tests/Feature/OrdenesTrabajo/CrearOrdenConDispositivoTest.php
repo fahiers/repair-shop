@@ -131,7 +131,7 @@ it('guarda una orden con anticipo y saldo', function () {
     expect($orden->fecha_entrega_estimada->toDateString())->toBe(now()->addDays(3)->toDateString());
 });
 
-it('genera números de orden secuenciales por día', function () {
+it('genera números de orden secuenciales por año', function () {
     // Dispositivo dummy para cumplir FK
     $cliente = Cliente::factory()->create();
     $modelo = ModeloDispositivo::create(['marca' => 'X', 'modelo' => 'Y', 'anio' => 2024]);
@@ -149,5 +149,12 @@ it('genera números de orden secuenciales por día', function () {
     $n2 = OrderNumberGenerator::generate();
 
     expect($n1)->not->toBe($n2);
-    expect(substr($n1, 0, 11))->toBe(substr($n2, 0, 11));
+    // Verificar que ambos terminen con el mismo año
+    $year = now()->format('Y');
+    expect($n1)->toEndWith('-'.$year);
+    expect($n2)->toEndWith('-'.$year);
+    // Verificar que el segundo número sea secuencial al primero
+    $parts1 = explode('-', $n1);
+    $parts2 = explode('-', $n2);
+    expect((int) $parts2[1])->toBe((int) $parts1[1] + 1);
 });

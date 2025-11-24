@@ -20,7 +20,8 @@ return new class extends Migration
             $table->date('fecha_entrega_estimada')->nullable();
             $table->date('fecha_entrega_real')->nullable();
             $table->text('problema_reportado');
-            $table->enum('estado', ['pendiente', 'diagnostico', 'en_reparacion', 'espera_repuesto', 'listo', 'entregado', 'cancelado'])->default('pendiente')->index();
+            $table->enum('tipo_servicio', ['reparacion', 'mantenimiento', 'garantia'])->default('reparacion');
+            $table->enum('estado', ['pendiente', 'diagnostico', 'en_reparacion', 'listo', 'entregado', 'cancelado'])->default('pendiente')->index();
             $table->decimal('costo_estimado', 10, 2)->nullable();
             $table->decimal('costo_final', 10, 2)->nullable();
             $table->decimal('anticipo', 10, 2)->default(0);

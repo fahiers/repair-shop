@@ -62,7 +62,6 @@ class OrdenTrabajoSeeder extends Seeder
             EstadoOrden::Pendiente,
             EstadoOrden::Diagnostico,
             EstadoOrden::EnReparacion,
-            EstadoOrden::EsperaRepuesto,
             EstadoOrden::Listo,
             EstadoOrden::Entregado,
             EstadoOrden::Cancelado,

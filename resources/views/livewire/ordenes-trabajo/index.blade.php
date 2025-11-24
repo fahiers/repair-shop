@@ -31,7 +31,6 @@
                     <option value="pendiente">Pendiente</option>
                     <option value="diagnostico">Diagnóstico</option>
                     <option value="en_reparacion">En reparación</option>
-                    <option value="espera_repuesto">Espera repuesto</option>
                     <option value="listo">Listo</option>
                     <option value="entregado">Entregado</option>
                     <option value="cancelado">Cancelado</option>
@@ -64,8 +63,8 @@
                                 ${{ number_format(($orden->costo_final ?? $orden->costo_estimado ?? 0), 0, ',', '.') }}
                             </td>
                             <td class="px-6 py-4 text-right text-sm">
-                                <span class="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium {{ ($orden->estado?->value ?? 'pendiente') === 'cancelado' ? 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300' : 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' }}">
-                                    {{ ucfirst(str_replace('_', ' ', $orden->estado?->value ?? 'pendiente')) }}
+                                <span class="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium {{ ($orden->estado ?? \App\Enums\EstadoOrden::Pendiente)->clasesColor() }}">
+                                    {{ ($orden->estado ?? \App\Enums\EstadoOrden::Pendiente)->etiqueta() }}
                                 </span>
                             </td>
                             <td class="px-6 py-4 text-right text-sm">

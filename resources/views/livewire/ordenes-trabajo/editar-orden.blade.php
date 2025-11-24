@@ -26,13 +26,16 @@
                             class="mt-1 h-9 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                         >
                     </div>
-                    <div class="flex flex-col min-w-[150px]">
+                    <div class="flex flex-col min-w-[150px] relative">
                         <span class="text-xs uppercase tracking-wide text-zinc-500">Entrega estimada</span>
                         <input
                             type="date"
                             wire:model.live="fechaEntregaEstimada"
-                            class="mt-1 h-9 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                            class="mt-1 h-9 w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-3 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 @error('fechaEntregaEstimada') border-red-500 focus:ring-red-500 @enderror"
                         >
+                        @error('fechaEntregaEstimada')
+                            <p class="text-[10px] text-red-600 dark:text-red-400 absolute -bottom-4 left-0 w-full truncate" title="{{ $message }}">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
 
@@ -253,7 +256,7 @@
                                     </td>
                                     <td class="p-3 text-right">
                                         <div class="flex justify-end gap-2">
-                                            <button type="button" wire:click="eliminarItem({{ $index }})" wire:loading.attr="disabled" class="px-2 py-1 text-xs rounded-md border border-zinc-200 dark:border-zinc-700 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20">Eliminar</button>
+                                            <button type="button" wire:click="eliminarItem({{ $index }})" wire:confirm="¿Está seguro de que desea eliminar este {{ $item['tipo'] === 'servicio' ? 'servicio' : 'producto' }}?" wire:loading.attr="disabled" class="px-2 py-1 text-xs rounded-md border border-zinc-200 dark:border-zinc-700 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20">Eliminar</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -341,7 +344,7 @@
             <div class="border-t border-zinc-100 dark:border-zinc-700 p-4 md:p-6">
                 <div class="space-y-3">
                     <!-- Mensajes de error generales -->
-                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'anticipo', 'orden']))
+                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'anticipo', 'orden', 'fechaEntregaEstimada']))
                         <div class="rounded-md bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-3">
                             <div class="flex items-start gap-2">
                                 <flux:icon.exclamation-triangle class="size-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
@@ -359,6 +362,9 @@
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
                                     @error('orden')
+                                        <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
+                                    @enderror
+                                    @error('fechaEntregaEstimada')
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
                                 </div>
@@ -689,73 +695,217 @@
 
     <!-- Modal para agregar items -->
     @if($mostrarModalAgregarItem)
-        <div class="fixed inset-0 z-50 flex items-center justify-center">
-            <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
-            <div class="relative w-full max-w-lg sm:max-w-xl mx-4 sm:mx-0 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-6 shadow-xl max-h-[85vh] overflow-y-auto">
-                <div class="space-y-6">
-                    <div>
-                        <h2 class="text-lg font-semibold">Agregar {{ $tipoItemAgregar === 'servicio' ? 'servicio' : 'producto' }}</h2>
-                        <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Busque y seleccione el {{ $tipoItemAgregar }} que desea agregar a la orden.</p>
-                    </div>
+        <div class="fixed inset-0 z-50 flex items-center justify-center p-4 font-sans" style="z-index: 100;">
+            <!-- Backdrop -->
+            <div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity" wire:click="$set('mostrarModalAgregarItem', false)"></div>
 
+            <!-- Modal Principal -->
+            <div class="bg-white dark:bg-zinc-900 rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden relative flex flex-col max-h-[90vh] transition-all transform scale-100">
+                
+                <!-- Header -->
+                <div class="p-6 pb-2">
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100">Agregar {{ $tipoItemAgregar === 'servicio' ? 'servicio' : 'producto' }}</h2>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-1">
+                        Busque y seleccione el {{ $tipoItemAgregar === 'servicio' ? 'servicio' : 'producto' }} que desea agregar a la orden.
+                    </p>
+                </div>
+
+                <!-- Tabs & Actions -->
+                <div class="px-6 py-2 flex flex-col gap-4">
+                    <!-- Toggle Tabs -->
                     <div class="flex gap-2">
-                        <button type="button" wire:click="$set('tipoItemAgregar', 'servicio')" class="px-3 py-1.5 text-sm rounded-md border {{ $tipoItemAgregar === 'servicio' ? 'bg-emerald-600 text-white border-emerald-600' : 'border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700' }}">Servicios</button>
-                        <button type="button" wire:click="$set('tipoItemAgregar', 'producto')" class="px-3 py-1.5 text-sm rounded-md border {{ $tipoItemAgregar === 'producto' ? 'bg-emerald-600 text-white border-emerald-600' : 'border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700' }}">Productos</button>
+                        <button
+                            wire:click="$set('tipoItemAgregar', 'servicio')"
+                            class="px-4 py-2 rounded-lg text-sm font-medium transition-all {{ $tipoItemAgregar === 'servicio' ? 'bg-teal-600 text-white shadow-md' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700' }}"
+                        >
+                            Servicios
+                        </button>
+                        <button
+                            wire:click="$set('tipoItemAgregar', 'producto')"
+                            class="px-4 py-2 rounded-lg text-sm font-medium transition-all {{ $tipoItemAgregar === 'producto' ? 'bg-teal-600 text-white shadow-md' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700' }}"
+                        >
+                            Productos
+                        </button>
                     </div>
 
-                    <input
-                        type="text"
-                        wire:model.live.debounce.300ms="busquedaItem"
-                        placeholder="Buscar {{ $tipoItemAgregar }}..."
-                        class="w-full rounded-md border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                    >
+                    <!-- Search Row + Add Button -->
+                    <div class="flex gap-2 items-center">
+                        <div class="relative flex-1">
+                            <flux:icon.magnifying-glass class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 size-5" />
+                            <input 
+                                type="text"
+                                wire:model.live.debounce.300ms="busquedaItem"
+                                placeholder="Buscar {{ $tipoItemAgregar === 'servicio' ? 'servicio' : 'producto' }}..."
+                                class="w-full pl-10 pr-4 py-2.5 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-all text-zinc-700 dark:text-zinc-200 placeholder-zinc-400 bg-white dark:bg-zinc-800"
+                                autofocus
+                            />
+                        </div>
+                        
+                        <!-- Botón Nuevo -->
+                        <button 
+                            wire:click="abrirMiniModalCrearItem"
+                            class="flex items-center gap-2 px-4 py-2.5 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800 rounded-lg hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors whitespace-nowrap font-medium text-sm group"
+                            title="Crear nuevo {{ $tipoItemAgregar === 'servicio' ? 'servicio' : 'producto' }}"
+                        >
+                            <flux:icon.plus class="size-5 group-hover:scale-110 transition-transform" />
+                            <span class="hidden sm:inline">Nuevo</span>
+                        </button>
+                    </div>
+                </div>
 
-                    <div class="max-h-96 overflow-y-auto border border-zinc-200 dark:border-zinc-700 rounded-lg">
-                        @if(strlen($busquedaItem) >= 2)
-                            @forelse($itemsDisponibles as $item)
-                                <button
-                                    type="button"
-                                    wire:click="agregarItem({{ $item['id'] }})"
-                                    class="w-full px-4 py-3 text-left hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-colors border-b border-zinc-200 dark:border-zinc-700 last:border-b-0"
-                                    wire:loading.attr="disabled"
-                                    wire:target="agregarItem({{ $item['id'] }})"
-                                >
-                                    <div class="flex items-center justify-between">
+                <!-- Content Area -->
+                <div class="p-6 flex-1 min-h-[200px] flex flex-col border-t border-zinc-100 dark:border-zinc-800 mt-2 bg-zinc-50/50 dark:bg-zinc-900/50 overflow-y-auto">
+                    
+                    @if(strlen($busquedaItem) > 0)
+                        @if(count($itemsDisponibles) > 0)
+                             <div class="grid grid-cols-1 gap-2 w-full">
+                                @foreach($itemsDisponibles as $item)
+                                    <button
+                                        type="button"
+                                        wire:click="agregarItem({{ $item['id'] }})"
+                                        class="bg-white dark:bg-zinc-800 p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md hover:border-teal-300 dark:hover:border-teal-700 transition-all text-left flex justify-between items-center group"
+                                    >
                                         <div>
-                                            <p class="font-medium">{{ $item['nombre'] }}</p>
+                                            <p class="font-semibold text-zinc-800 dark:text-zinc-100 group-hover:text-teal-700 dark:group-hover:text-teal-400">{{ $item['nombre'] }}</p>
                                             @if($tipoItemAgregar === 'producto')
-                                                <p class="text-sm text-zinc-500">
-                                                    {{ $item['marca'] }} • Stock: {{ $item['stock'] }}
+                                                <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                                                    {{ $item['marca'] ?? 'Sin marca' }} • Stock: {{ $item['stock'] ?? 0 }}
                                                 </p>
-                                            @endif
-                                            @if($item['descripcion'])
-                                                <p class="text-sm text-zinc-500 mt-1">{{ Str::limit($item['descripcion'], 60) }}</p>
                                             @endif
                                         </div>
                                         <div class="text-right">
-                                            <p class="font-semibold">
+                                            <p class="font-bold text-teal-600 dark:text-teal-400">
                                                 ${{ number_format($tipoItemAgregar === 'servicio' ? $item['precio_base'] : $item['precio_venta'], 0, ',', '.') }}
                                             </p>
                                         </div>
-                                    </div>
-                                </button>
-                            @empty
-                                <div class="p-6 text-center text-zinc-500">
-                                    No se encontraron {{ $tipoItemAgregar === 'servicio' ? 'servicios' : 'productos' }}
-                                </div>
-                            @endforelse
+                                    </button>
+                                @endforeach
+                             </div>
                         @else
-                            <div class="p-6 text-center text-zinc-500">
-                                Escriba al menos 2 caracteres para buscar
+                            <div class="flex-1 flex items-center justify-center">
+                                <div class="text-center p-8 border-2 border-dashed border-zinc-200 dark:border-zinc-700 rounded-xl w-full bg-white dark:bg-zinc-800">
+                                    <p class="text-zinc-500 dark:text-zinc-400 font-medium">
+                                        No se encontraron resultados para "{{ $busquedaItem }}"
+                                    </p>
+                                    <button 
+                                        wire:click="abrirMiniModalCrearItem"
+                                        class="mt-3 text-teal-600 dark:text-teal-400 text-sm hover:underline font-medium"
+                                    >
+                                        ¿Desea crearlo ahora?
+                                    </button>
+                                </div>
                             </div>
                         @endif
-                    </div>
+                    @else
+                        <div class="flex-1 flex items-center justify-center">
+                            <div class="text-center p-8 border-2 border-dashed border-zinc-200 dark:border-zinc-700 rounded-xl w-full bg-white dark:bg-zinc-800">
+                                <p class="text-zinc-500 dark:text-zinc-400 font-medium">
+                                    Escriba al menos 2 caracteres para buscar
+                                </p>
+                            </div>
+                        </div>
+                    @endif
+                    
+                </div>
 
-                    <div class="flex justify-end">
-                        <button type="button" wire:click="$set('mostrarModalAgregarItem', false)" class="px-3 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-700">Cerrar</button>
-                    </div>
+                <!-- Footer -->
+                <div class="p-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end bg-white dark:bg-zinc-900">
+                    <button 
+                        wire:click="$set('mostrarModalAgregarItem', false)"
+                        class="px-6 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 font-medium transition-colors"
+                    >
+                        Cerrar
+                    </button>
                 </div>
             </div>
+
+            <!-- MINIMODAL (Overlay secundario) -->
+            @if($mostrarMiniModalCrearItem)
+                <div class="absolute inset-0 z-[60] flex items-center justify-center p-4">
+                     <!-- Backdrop oscuro específico para el minimodal -->
+                    <div 
+                        class="absolute inset-0 bg-black/40 backdrop-blur-[1px]" 
+                        wire:click="$set('mostrarMiniModalCrearItem', false)"
+                    ></div>
+
+                    <!-- Contenido del Minimodal -->
+                    <div class="bg-white dark:bg-zinc-900 w-full max-w-sm rounded-xl shadow-2xl relative z-10 overflow-hidden transform scale-100 border border-zinc-100 dark:border-zinc-700 animate-in zoom-in-95 duration-200">
+                        
+                        <!-- Mini Header -->
+                        <div class="bg-zinc-50 dark:bg-zinc-800 px-5 py-4 border-b border-zinc-100 dark:border-zinc-700 flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                @if($tipoItemAgregar === 'servicio')
+                                    <flux:icon.square-3-stack-3d class="text-teal-600 dark:text-teal-400 size-5"/>
+                                @else
+                                    <flux:icon.cube class="text-teal-600 dark:text-teal-400 size-5"/>
+                                @endif
+                                <h3 class="font-bold text-zinc-800 dark:text-zinc-100">Nuevo {{ $tipoItemAgregar === 'servicio' ? 'Servicio' : 'Producto' }}</h3>
+                            </div>
+                            <button wire:click="$set('mostrarMiniModalCrearItem', false)" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 bg-white dark:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-700 p-1 rounded-full transition-colors border border-transparent hover:border-zinc-200 dark:hover:border-zinc-600">
+                                <flux:icon.x-mark class="size-4" />
+                            </button>
+                        </div>
+
+                        <!-- Mini Form -->
+                        <div class="p-5 space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                    Nombre del {{ $tipoItemAgregar === 'servicio' ? 'Servicio' : 'Producto' }}
+                                </label>
+                                <input 
+                                    wire:model="newItemName"
+                                    type="text" 
+                                    class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                    placeholder="Ej: {{ $tipoItemAgregar === 'servicio' ? 'Mantenimiento General' : 'Aceite de Motor' }}"
+                                    autofocus
+                                />
+                                @error('newItemName') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="flex-1">
+                                    <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                        Precio
+                                    </label>
+                                    <div class="relative">
+                                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400 text-sm">$</span>
+                                        <input 
+                                            wire:model="newItemPrice"
+                                            type="number" 
+                                            class="w-full pl-7 pr-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                            placeholder="0.00"
+                                        />
+                                    </div>
+                                    @error('newItemPrice') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                </div>
+                                <div class="flex-1">
+                                    <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                        Código / SKU
+                                    </label>
+                                    <input 
+                                        wire:model="newItemCode"
+                                        type="text" 
+                                        class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-not-allowed"
+                                        placeholder="OPCIONAL"
+                                        disabled
+                                        title="Campo no disponible en la base de datos actual"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <button 
+                                    wire:click="guardarNuevoItem"
+                                    class="w-full bg-teal-600 text-white py-2.5 rounded-lg hover:bg-teal-700 font-medium text-sm flex items-center justify-center gap-2 shadow-lg shadow-teal-600/20 transition-all active:scale-[0.98]"
+                                >
+                                    <flux:icon.arrow-down-tray class="size-4" />
+                                    Guardar {{ $tipoItemAgregar === 'servicio' ? 'Servicio' : 'Producto' }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     @endif
 

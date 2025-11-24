@@ -21,6 +21,7 @@ class OrdenTrabajo extends Model
         'fecha_entrega_estimada',
         'fecha_entrega_real',
         'problema_reportado',
+        'tipo_servicio',
         'diagnostico',
         'estado',
         'costo_estimado',
@@ -152,10 +153,11 @@ class OrdenTrabajo extends Model
 
     /**
      * Verifica si la orden puede ser editada.
+     * Todas las órdenes pueden ser editadas, incluyendo las canceladas.
      */
     public function isEditable(): bool
     {
-        return ! $this->isCerrada();
+        return true;
     }
 
     /**
