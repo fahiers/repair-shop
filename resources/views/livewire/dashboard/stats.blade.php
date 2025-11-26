@@ -96,7 +96,7 @@
             <div class="text-center">
                 <flux:subheading>Ventas (Mes Actual)</flux:subheading>
                 <div class="mt-2 text-4xl font-bold text-gray-900 dark:text-white">
-                    ${{ number_format($ventasTotales, 0, ',', '.') }}
+                    {{ Number::currency($ventasTotales, precision: 0) }}
                 </div>
             </div>
 

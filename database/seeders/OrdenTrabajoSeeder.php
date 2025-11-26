@@ -110,8 +110,8 @@ class OrdenTrabajoSeeder extends Seeder
                 $servicios,
                 $productos
             ) {
-                // Calcular costos estimados basados en servicios/productos
-                $costoEstimado = 0;
+                // Calcular subtotal basado en servicios/productos
+                $subtotal = 0;
                 $itemsServicios = [];
                 $itemsProductos = [];
 
@@ -123,15 +123,15 @@ class OrdenTrabajoSeeder extends Seeder
                     foreach ($serviciosSeleccionados as $servicio) {
                         $cantidad = fake()->numberBetween(1, 2);
                         $precioUnitario = (float) $servicio->precio_base;
-                        $subtotal = $cantidad * $precioUnitario;
-                        $costoEstimado += $subtotal;
+                        $subtotalItem = $cantidad * $precioUnitario;
+                        $subtotal += $subtotalItem;
 
                         $itemsServicios[] = [
                             'servicio_id' => $servicio->id,
                             'descripcion' => $servicio->descripcion ?? $servicio->nombre,
                             'precio_unitario' => $precioUnitario,
                             'cantidad' => $cantidad,
-                            'subtotal' => $subtotal,
+                            'subtotal' => $subtotalItem,
                         ];
                     }
                 }
@@ -144,35 +144,33 @@ class OrdenTrabajoSeeder extends Seeder
                     foreach ($productosSeleccionados as $producto) {
                         $cantidad = fake()->numberBetween(1, 3);
                         $precioUnitario = (float) $producto->precio_venta;
-                        $subtotal = $cantidad * $precioUnitario;
-                        $costoEstimado += $subtotal;
+                        $subtotalItem = $cantidad * $precioUnitario;
+                        $subtotal += $subtotalItem;
 
                         $itemsProductos[] = [
                             'producto_id' => $producto->id,
                             'precio_unitario' => $precioUnitario,
                             'cantidad' => $cantidad,
-                            'subtotal' => $subtotal,
+                            'subtotal' => $subtotalItem,
                         ];
                     }
                 }
 
-                // Si no hay items, asignar un costo mínimo
-                if ($costoEstimado === 0) {
-                    $costoEstimado = fake()->randomFloat(2, 5000, 50000);
+                // Si no hay items, asignar un subtotal mínimo
+                if ($subtotal === 0) {
+                    $subtotal = fake()->randomFloat(2, 5000, 50000);
                 }
+
+                // Calcular IVA (19%)
+                $montoIva = round($subtotal * 0.19, 2);
+                $costoTotal = round($subtotal + $montoIva, 2);
 
                 // Calcular anticipo y saldo
                 $anticipo = fake()->boolean(50)
-                    ? fake()->randomFloat(2, 0, $costoEstimado * 0.5)
+                    ? fake()->randomFloat(2, 0, $costoTotal * 0.5)
                     : 0;
-                $saldo = max(0, $costoEstimado - $anticipo);
-
-                // Si está entregado o listo, puede tener costo final diferente
-                $costoFinal = null;
-                if (in_array($estado, [EstadoOrden::Listo, EstadoOrden::Entregado], true)) {
-                    $costoFinal = fake()->randomFloat(2, $costoEstimado * 0.9, $costoEstimado * 1.2);
-                    $saldo = max(0, $costoFinal - $anticipo);
-                }
+                $totalPagado = $anticipo;
+                $saldo = max(0, $costoTotal - $totalPagado);
 
                 // Crear la orden
                 $orden = OrdenTrabajo::create([
@@ -184,11 +182,23 @@ class OrdenTrabajoSeeder extends Seeder
                     'fecha_entrega_real' => $fechaEntregaReal,
                     'problema_reportado' => $problemaReportado,
                     'estado' => $estado,
-                    'costo_estimado' => round($costoEstimado, 2),
-                    'costo_final' => $costoFinal ? round($costoFinal, 2) : null,
+                    'subtotal' => round($subtotal, 2),
+                    'monto_iva' => $montoIva,
+                    'costo_total' => $costoTotal,
                     'anticipo' => round($anticipo, 2),
+                    'total_pagado' => round($totalPagado, 2),
                     'saldo' => round($saldo, 2),
                 ]);
+
+                // Registrar anticipo como pago si existe
+                if ($anticipo > 0) {
+                    $orden->pagos()->create([
+                        'fecha_pago' => $fechaIngreso,
+                        'monto' => round($anticipo, 2),
+                        'metodo_pago' => fake()->randomElement(['efectivo', 'tarjeta', 'transferencia']),
+                        'notas' => 'Anticipo inicial',
+                    ]);
+                }
 
                 // Asociar servicios
                 foreach ($itemsServicios as $item) {

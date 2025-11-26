@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 100);
             $table->text('descripcion')->nullable();
-            $table->decimal('precio_base', 10, 2);
+            $table->decimal('precio_base', 10, 0);
             $table->string('categoria', 50)->nullable();
             $table->enum('estado', ['activo', 'inactivo'])->default('activo');
             $table->timestamps();

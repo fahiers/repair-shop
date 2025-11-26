@@ -144,7 +144,7 @@ it('genera números de orden secuenciales por año', function () {
         'fecha_ingreso' => now()->toDateString(),
         'problema_reportado' => 'Test',
         'estado' => 'pendiente',
-        'costo_estimado' => 0,
+        'costo_total' => 0,
     ]);
     $n2 = OrderNumberGenerator::generate();
 

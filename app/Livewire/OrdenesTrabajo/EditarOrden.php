@@ -8,6 +8,7 @@ use App\Models\Cliente;
 use App\Models\Dispositivo;
 use App\Models\ModeloDispositivo;
 use App\Models\OrdenComentario;
+use App\Models\OrdenPago;
 use App\Models\OrdenTrabajo;
 use App\Models\Producto;
 use App\Models\Servicio;
@@ -184,6 +185,19 @@ class EditarOrden extends Component
 
     public bool $informeTecnicoCargado = false;
 
+    // Modal de pago
+    public bool $mostrarModalPago = false;
+
+    public string $pagoMonto = '';
+
+    public string $pagoMetodo = 'efectivo';
+
+    public string $pagoReferencia = '';
+
+    public string $pagoNotas = '';
+
+    public bool $procesandoPago = false;
+
     public function mount(int $id): void
     {
         $this->ordenId = $id;
@@ -241,11 +255,18 @@ class EditarOrden extends Component
                 $this->clientSearchTerm = $cliente->nombre;
                 $this->rut = (string) ($cliente->rut ?? '');
                 $this->lastSelectedClientName = $cliente->nombre;
+
+                // Calcular totales para mostrar indicadores de historial
+                $totalDispositivos = $cliente->dispositivos()->count();
+                $totalOrdenes = OrdenTrabajo::whereHas('dispositivo', fn ($q) => $q->where('cliente_id', $cliente->id))->count();
+
                 $this->clienteSeleccionado = [
                     'id' => $cliente->id,
                     'nombre' => $cliente->nombre,
                     'telefono' => $cliente->telefono,
                     'email' => $cliente->email,
+                    'total_dispositivos' => $totalDispositivos,
+                    'total_ordenes' => $totalOrdenes,
                 ];
             }
         }
@@ -547,11 +568,17 @@ class EditarOrden extends Component
             $this->rut = (string) ($client->rut ?? '');
             $this->lastSelectedClientName = $client->nombre;
 
+            // Calcular totales para mostrar indicadores de historial
+            $totalDispositivos = $client->dispositivos()->count();
+            $totalOrdenes = OrdenTrabajo::whereHas('dispositivo', fn ($q) => $q->where('cliente_id', $client->id))->count();
+
             $this->clienteSeleccionado = [
                 'id' => $client->id,
                 'nombre' => $client->nombre,
                 'telefono' => $client->telefono,
                 'email' => $client->email,
+                'total_dispositivos' => $totalDispositivos,
+                'total_ordenes' => $totalOrdenes,
             ];
 
             if ($this->selectedDeviceId) {
@@ -771,36 +798,35 @@ class EditarOrden extends Component
 
     public function recalcularTotales(): void
     {
-        $this->subtotalItems = collect($this->items)->sum(function ($item) {
+        $this->subtotalItems = (int) round(collect($this->items)->sum(function ($item) {
             $cantidad = (int) ($item['cantidad'] ?? 1);
-            $precio = (float) ($item['precio'] ?? 0);
+            $precio = (int) ($item['precio'] ?? 0);
 
             return $cantidad * $precio;
-        });
+        }));
 
-        $this->totalDescuentos = collect($this->items)->sum(function ($item) {
+        $this->totalDescuentos = (int) round(collect($this->items)->sum(function ($item) {
             $cantidad = (int) ($item['cantidad'] ?? 1);
-            $precio = (float) ($item['precio'] ?? 0);
+            $precio = (int) ($item['precio'] ?? 0);
             $subtotal = $cantidad * $precio;
             $descuentoPorcentaje = (float) ($item['descuento'] ?? 0);
 
             return $subtotal * ($descuentoPorcentaje / 100);
-        });
+        }));
 
         $this->subtotalConDescuento = $this->subtotalItems - $this->totalDescuentos;
 
-        $this->montoIva = $this->aplicarIva ? $this->subtotalConDescuento * ($this->porcentajeIva / 100) : 0;
+        $this->montoIva = $this->aplicarIva ? (int) round($this->subtotalConDescuento * ($this->porcentajeIva / 100)) : 0;
 
         $this->total = $this->subtotalConDescuento + $this->montoIva;
-
-        $this->validarAnticipo();
     }
 
-    public function calcularSaldo(): float
+    public function calcularSaldo(): int
     {
-        $anticipo = $this->anticipo ?? 0;
+        $anticipo = (int) ($this->anticipo ?? 0);
+        $pagos = (int) ($this->orden->total_pagado ?? 0);
 
-        return max(0, round($this->total - $anticipo, 2));
+        return max(0, $this->total - $anticipo - $pagos);
     }
 
     public function updatedAplicarIva(): void
@@ -818,20 +844,18 @@ class EditarOrden extends Component
         if ($value === null || $value === '') {
             $this->anticipo = 0;
         } else {
-            $this->anticipo = max(0, (float) $value);
+            $this->anticipo = max(0, (int) $value);
         }
 
         $this->recalcularTotales();
-        $this->validarAnticipo();
     }
 
     protected function validarAnticipo(): void
     {
         $this->resetErrorBag('anticipo');
 
-        if ($this->anticipo > $this->total) {
-            $this->addError('anticipo', 'El anticipo no puede ser mayor al total de la orden ($'.number_format($this->total, 0, ',', '.').').');
-        }
+        // El anticipo puede ser cualquier monto positivo, incluso mayor al total
+        // Esto permite crear órdenes con anticipo antes de agregar items
     }
 
     public function updatedObservacionesDispositivo(): void
@@ -846,13 +870,13 @@ class EditarOrden extends Component
         }
     }
 
-    public function calcularSubtotalItem($item): float
+    public function calcularSubtotalItem($item): int
     {
         $cantidad = (int) ($item['cantidad'] ?? 1);
-        $precio = (float) ($item['precio'] ?? 0);
+        $precio = (int) ($item['precio'] ?? 0);
         $subtotal = $cantidad * $precio;
         $descuentoPorcentaje = (float) ($item['descuento'] ?? 0);
-        $descuento = $subtotal * ($descuentoPorcentaje / 100);
+        $descuento = (int) round($subtotal * ($descuentoPorcentaje / 100));
 
         return $subtotal - $descuento;
     }
@@ -1547,9 +1571,8 @@ class EditarOrden extends Component
         $this->recalcularTotales();
 
         $this->validarClienteYDispositivo();
-        $this->validarAnticipo();
 
-        if ($this->getErrorBag()->hasAny(['selectedClientId', 'selectedDeviceId', 'anticipo', 'orden'])) {
+        if ($this->getErrorBag()->hasAny(['selectedClientId', 'selectedDeviceId', 'orden'])) {
             return;
         }
 
@@ -1578,10 +1601,9 @@ class EditarOrden extends Component
         ]);
 
         $dispositivo = Dispositivo::find($this->selectedDeviceId);
-        $saldo = $this->calcularSaldo();
 
-        $orden = DB::transaction(function () use ($dispositivo, $saldo) {
-            // Actualizar campos de la orden
+        $orden = DB::transaction(function () use ($dispositivo) {
+            // Actualizar campos de la orden con los nuevos campos financieros
             $this->orden->update([
                 'dispositivo_id' => $dispositivo->id,
                 'tecnico_id' => $this->tecnicoId,
@@ -1589,9 +1611,10 @@ class EditarOrden extends Component
                 'fecha_entrega_estimada' => $this->fechaEntregaEstimada,
                 'problema_reportado' => $this->asunto,
                 'tipo_servicio' => $this->tipoServicio,
-                'costo_estimado' => round($this->total, 2),
-                'anticipo' => round($this->anticipo, 2),
-                'saldo' => $saldo,
+                'subtotal' => (int) $this->subtotalConDescuento,
+                'monto_iva' => (int) $this->montoIva,
+                'costo_total' => (int) $this->total,
+                'anticipo' => (int) $this->anticipo,
                 'estado' => EstadoOrden::from($this->estado),
             ]);
 
@@ -1601,9 +1624,9 @@ class EditarOrden extends Component
 
             foreach ($this->items as $item) {
                 $cantidad = (int) ($item['cantidad'] ?? 1);
-                $precio = (float) ($item['precio'] ?? 0);
+                $precio = (int) ($item['precio'] ?? 0);
                 $descuento = (float) ($item['descuento'] ?? 0);
-                $subtotal = max(0, $cantidad * $precio * (1 - ($descuento / 100)));
+                $subtotal = (int) round(max(0, $cantidad * $precio * (1 - ($descuento / 100))));
 
                 if (($item['tipo'] ?? '') === 'servicio') {
                     $serviciosSync[$item['id']] = [
@@ -1620,6 +1643,9 @@ class EditarOrden extends Component
                     ];
                 }
             }
+
+            // Ajustar stock de productos antes de sincronizar
+            $this->ajustarStockProductos($productosSync);
 
             // Sincronizar servicios y productos
             $this->orden->servicios()->sync($serviciosSync);
@@ -1706,6 +1732,85 @@ class EditarOrden extends Component
         $this->abrirModalEditarDispositivo();
     }
 
+    public function abrirModalPago(): void
+    {
+        $this->pagoMonto = '';
+        $this->pagoMetodo = 'efectivo';
+        $this->pagoReferencia = '';
+        $this->pagoNotas = '';
+        $this->procesandoPago = false;
+        $this->mostrarModalPago = true;
+    }
+
+    public function cerrarModalPago(): void
+    {
+        $this->mostrarModalPago = false;
+        $this->resetErrorBag(['pagoMonto', 'pagoMetodo', 'pagoReferencia', 'pagoNotas']);
+    }
+
+    public function registrarPago(): void
+    {
+        $this->validate([
+            'pagoMonto' => 'required|numeric|min:1',
+            'pagoMetodo' => 'required|in:efectivo,tarjeta,transferencia,otros',
+            'pagoReferencia' => 'nullable|string|max:255',
+            'pagoNotas' => 'nullable|string|max:1000',
+        ], [
+            'pagoMonto.required' => 'El monto es obligatorio.',
+            'pagoMonto.numeric' => 'El monto debe ser un número válido.',
+            'pagoMonto.min' => 'El monto debe ser mayor a 0.',
+            'pagoMetodo.required' => 'Seleccione un método de pago.',
+            'pagoMetodo.in' => 'Método de pago no válido.',
+        ]);
+
+        // Validar que el monto no exceda el saldo pendiente
+        if ((float) $this->pagoMonto > $this->saldoPendiente) {
+            $this->addError('pagoMonto', 'El monto no puede ser mayor al saldo pendiente ($'.number_format($this->saldoPendiente, 0, ',', '.').').');
+
+            return;
+        }
+
+        $this->procesandoPago = true;
+
+        try {
+            OrdenPago::create([
+                'orden_id' => $this->orden->id,
+                'fecha_pago' => now()->toDateString(),
+                'monto' => (int) round((float) $this->pagoMonto),
+                'metodo_pago' => $this->pagoMetodo,
+                'referencia' => trim($this->pagoReferencia) ?: null,
+                'notas' => trim($this->pagoNotas) ?: null,
+            ]);
+
+            // Recalcular saldo de la orden
+            $this->orden->recalcularSaldo();
+            $this->orden->refresh();
+
+            $this->cerrarModalPago();
+
+            // Mostrar mensaje de éxito
+            session()->flash('pago_registrado', 'Pago registrado exitosamente.');
+        } finally {
+            $this->procesandoPago = false;
+        }
+    }
+
+    /**
+     * Obtiene el total de pagos realizados para esta orden.
+     */
+    public function getTotalPagadoProperty(): int
+    {
+        return (int) ($this->orden->total_pagado ?? 0);
+    }
+
+    /**
+     * Obtiene el saldo pendiente de la orden.
+     */
+    public function getSaldoPendienteProperty(): int
+    {
+        return $this->calcularSaldo();
+    }
+
     public function render()
     {
         return view('livewire.ordenes-trabajo.editar-orden', [
@@ -1715,5 +1820,64 @@ class EditarOrden extends Component
             'estadosDisponibles' => OrdenTrabajo::estadosDisponibles(),
             'tecnicoSeleccionado' => $this->tecnicoId ? User::find($this->tecnicoId) : null,
         ]);
+    }
+
+    /**
+     * Ajusta el stock de productos comparando el estado actual con el nuevo.
+     * - Devuelve stock de productos eliminados
+     * - Descuenta stock de productos nuevos
+     * - Ajusta stock si cambió la cantidad
+     */
+    protected function ajustarStockProductos(array $productosNuevos): void
+    {
+        // Obtener productos actuales de la orden con sus cantidades
+        $productosActuales = $this->orden->productos()
+            ->get()
+            ->keyBy('id')
+            ->map(fn ($p) => (int) $p->pivot->cantidad)
+            ->toArray();
+
+        // IDs de productos actuales y nuevos
+        $idsActuales = array_keys($productosActuales);
+        $idsNuevos = array_keys($productosNuevos);
+
+        // Productos eliminados: devolver stock
+        $idsEliminados = array_diff($idsActuales, $idsNuevos);
+        foreach ($idsEliminados as $productoId) {
+            $producto = Producto::find($productoId);
+            if ($producto) {
+                $cantidadDevolver = $productosActuales[$productoId];
+                $producto->update(['stock' => $producto->stock + $cantidadDevolver]);
+            }
+        }
+
+        // Productos nuevos: descontar stock
+        $idsAgregados = array_diff($idsNuevos, $idsActuales);
+        foreach ($idsAgregados as $productoId) {
+            $producto = Producto::find($productoId);
+            if ($producto && $producto->stock > 0) {
+                $cantidadDescontar = (int) $productosNuevos[$productoId]['cantidad'];
+                $nuevoStock = max(0, $producto->stock - $cantidadDescontar);
+                $producto->update(['stock' => $nuevoStock]);
+            }
+        }
+
+        // Productos que siguen: ajustar diferencia de cantidad
+        $idsMantienen = array_intersect($idsActuales, $idsNuevos);
+        foreach ($idsMantienen as $productoId) {
+            $cantidadAnterior = $productosActuales[$productoId];
+            $cantidadNueva = (int) $productosNuevos[$productoId]['cantidad'];
+            $diferencia = $cantidadNueva - $cantidadAnterior;
+
+            if ($diferencia !== 0) {
+                $producto = Producto::find($productoId);
+                if ($producto) {
+                    // Si diferencia > 0, se aumentó cantidad, descontar más stock
+                    // Si diferencia < 0, se redujo cantidad, devolver stock
+                    $nuevoStock = max(0, $producto->stock - $diferencia);
+                    $producto->update(['stock' => $nuevoStock]);
+                }
+            }
+        }
     }
 }

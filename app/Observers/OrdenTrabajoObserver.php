@@ -20,37 +20,19 @@ class OrdenTrabajoObserver
      */
     public function updated(OrdenTrabajo $ordenTrabajo): void
     {
-        // Recalcular saldo si cambió alguno de estos campos
-        $camposRelevantes = ['anticipo', 'costo_estimado', 'costo_final'];
-        $cambioRelevante = false;
-
-        foreach ($camposRelevantes as $campo) {
-            if ($ordenTrabajo->wasChanged($campo)) {
-                $cambioRelevante = true;
-                break;
-            }
+        // Recalcular saldo si cambió el costo_total
+        if ($ordenTrabajo->wasChanged('costo_total')) {
+            $ordenTrabajo->recalcularSaldo();
         }
 
-        // Si cambió el estado a "entregado" o "listo" y no hay costo_final, establecerlo
+        // Si se marca como entregada, establecer fecha de entrega real
         if ($ordenTrabajo->wasChanged('estado')) {
             $estadoNuevo = $ordenTrabajo->estado;
 
-            // Si se está cerrando la orden (entregado/listo) y no hay costo_final, usar costo_estimado
-            if ($estadoNuevo instanceof EstadoOrden && in_array($estadoNuevo, [EstadoOrden::Entregado, EstadoOrden::Listo], true) && ! $ordenTrabajo->costo_final && $ordenTrabajo->costo_estimado) {
-                $ordenTrabajo->costo_final = $ordenTrabajo->costo_estimado;
-                $ordenTrabajo->saveQuietly(); // Guardar sin disparar eventos para evitar bucle
-                $cambioRelevante = true;
-            }
-
-            // Si se marca como entregada, establecer fecha de entrega real
             if ($estadoNuevo instanceof EstadoOrden && $estadoNuevo === EstadoOrden::Entregado && ! $ordenTrabajo->fecha_entrega_real) {
                 $ordenTrabajo->fecha_entrega_real = now();
-                $ordenTrabajo->saveQuietly(); // Guardar sin disparar eventos
+                $ordenTrabajo->saveQuietly();
             }
-        }
-
-        if ($cambioRelevante) {
-            $ordenTrabajo->recalcularSaldo();
         }
     }
 
@@ -78,4 +60,3 @@ class OrdenTrabajoObserver
         //
     }
 }
-

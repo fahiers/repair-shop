@@ -189,6 +189,19 @@ class CrearOrden extends Component
 
     public string $newItemCode = '';
 
+    public string $newItemDescription = '';
+
+    public string $newItemCategoria = '';
+
+    // Campos específicos para Producto
+    public string $newItemPrecioCompra = '';
+
+    public string $newItemCategoriaProducto = '';
+
+    public string $newItemStock = '0';
+
+    public string $newItemStockMinimo = '0';
+
     #[On('ignoreBlur')]
     public function setIgnoreBlur(): void
     {
@@ -328,12 +341,18 @@ class CrearOrden extends Component
             $this->rut = (string) ($client->rut ?? '');
             $this->lastSelectedClientName = $client->nombre;
 
-            // Mantener compatibilidad con la UI existente
+            // Calcular totales para mostrar indicadores de historial
+            $totalDispositivos = $client->dispositivos()->count();
+            $totalOrdenes = OrdenTrabajo::whereHas('dispositivo', fn ($q) => $q->where('cliente_id', $client->id))->count();
+
+            // Mantener compatibilidad con la UI existente y agregar métricas
             $this->clienteSeleccionado = [
                 'id' => $client->id,
                 'nombre' => $client->nombre,
                 'telefono' => $client->telefono,
                 'email' => $client->email,
+                'total_dispositivos' => $totalDispositivos,
+                'total_ordenes' => $totalOrdenes,
             ];
 
             // Si hay un dispositivo seleccionado sin cliente, asociarlo al cliente recién seleccionado
@@ -344,11 +363,8 @@ class CrearOrden extends Component
                 }
             }
 
-            // Sugerir dispositivo reciente o seleccionar automáticamente si tiene uno
+            // Sugerir dispositivo reciente (sin selección automática)
             $this->suggestedDeviceId = $this->calcularDispositivoSugerido($client->id);
-            if ($this->suggestedDeviceId && Dispositivo::where('cliente_id', $client->id)->count() === 1) {
-                $this->selectDevice($this->suggestedDeviceId);
-            }
         }
 
         $this->clientsFound = [];
@@ -562,44 +578,41 @@ class CrearOrden extends Component
     public function recalcularTotales(): void
     {
         // Calcular subtotal de items
-        $this->subtotalItems = collect($this->items)->sum(function ($item) {
+        $this->subtotalItems = (int) round(collect($this->items)->sum(function ($item) {
             $cantidad = (int) ($item['cantidad'] ?? 1);
-            $precio = (float) ($item['precio'] ?? 0);
+            $precio = (int) ($item['precio'] ?? 0);
 
             return $cantidad * $precio;
-        });
+        }));
 
         // Calcular descuentos
-        $this->totalDescuentos = collect($this->items)->sum(function ($item) {
+        $this->totalDescuentos = (int) round(collect($this->items)->sum(function ($item) {
             $cantidad = (int) ($item['cantidad'] ?? 1);
-            $precio = (float) ($item['precio'] ?? 0);
+            $precio = (int) ($item['precio'] ?? 0);
             $subtotal = $cantidad * $precio;
             $descuentoPorcentaje = (float) ($item['descuento'] ?? 0);
 
             return $subtotal * ($descuentoPorcentaje / 100);
-        });
+        }));
 
         // Calcular subtotal con descuento
         $this->subtotalConDescuento = $this->subtotalItems - $this->totalDescuentos;
 
         // Calcular IVA
-        $this->montoIva = $this->aplicarIva ? $this->subtotalConDescuento * ($this->porcentajeIva / 100) : 0;
+        $this->montoIva = $this->aplicarIva ? (int) round($this->subtotalConDescuento * ($this->porcentajeIva / 100)) : 0;
 
         // Calcular total (costo estimado)
         $this->total = $this->subtotalConDescuento + $this->montoIva;
-
-        // Validar anticipo después de recalcular totales (por si el total cambió)
-        $this->validarAnticipo();
     }
 
     /**
      * Calcula el saldo pendiente basado en el total y el anticipo.
      */
-    public function calcularSaldo(): float
+    public function calcularSaldo(): int
     {
-        $anticipo = $this->anticipo ?? 0;
+        $anticipo = (int) ($this->anticipo ?? 0);
 
-        return max(0, round($this->total - $anticipo, 2));
+        return max(0, $this->total - $anticipo);
     }
 
     public function updatedAplicarIva(): void
@@ -618,23 +631,19 @@ class CrearOrden extends Component
         if ($value === null || $value === '') {
             $this->anticipo = 0;
         } else {
-            $this->anticipo = max(0, (float) $value);
+            $this->anticipo = max(0, (int) $value);
         }
 
         // Recalcular totales para actualizar el saldo visual
         $this->recalcularTotales();
-
-        // Validar que el anticipo no sea mayor al total
-        $this->validarAnticipo();
     }
 
     protected function validarAnticipo(): void
     {
         $this->resetErrorBag('anticipo');
 
-        if ($this->anticipo > $this->total) {
-            $this->addError('anticipo', 'El anticipo no puede ser mayor al total de la orden ($'.number_format($this->total, 0, ',', '.').').');
-        }
+        // El anticipo puede ser cualquier monto positivo, incluso mayor al total
+        // Esto permite crear órdenes con anticipo antes de agregar items
     }
 
     public function updatedObservacionesDispositivo(): void
@@ -650,19 +659,19 @@ class CrearOrden extends Component
         }
     }
 
-    public function calcularSubtotalItem($item): float
+    public function calcularSubtotalItem($item): int
     {
         $cantidad = isset($item['cantidad']) && $item['cantidad'] !== ''
             ? (int) $item['cantidad']
             : 1;
         $precio = isset($item['precio']) && $item['precio'] !== ''
-            ? (float) $item['precio']
-            : 0.0;
+            ? (int) $item['precio']
+            : 0;
         $subtotal = $cantidad * $precio;
         $descuentoPorcentaje = isset($item['descuento']) && $item['descuento'] !== ''
             ? (float) $item['descuento']
             : 0.0;
-        $descuento = $subtotal * ($descuentoPorcentaje / 100);
+        $descuento = (int) round($subtotal * ($descuentoPorcentaje / 100));
 
         return $subtotal - $descuento;
     }
@@ -1199,10 +1208,9 @@ class CrearOrden extends Component
 
         // Validaciones personalizadas con mensajes descriptivos
         $this->validarClienteYDispositivo();
-        $this->validarAnticipo();
 
         // Si hay errores de validación personalizados, detener la ejecución
-        if ($this->getErrorBag()->hasAny(['selectedClientId', 'selectedDeviceId', 'anticipo'])) {
+        if ($this->getErrorBag()->hasAny(['selectedClientId', 'selectedDeviceId'])) {
             return;
         }
 
@@ -1233,12 +1241,12 @@ class CrearOrden extends Component
 
         $dispositivo = Dispositivo::find($this->selectedDeviceId);
 
-        // Calcular saldo: costo estimado menos anticipo
+        // Calcular saldo: costo total menos anticipo
         $saldo = $this->calcularSaldo();
 
         // Encapsular la creación de la orden y los registros pivot en una transacción
         $orden = DB::transaction(function () use ($numero, $dispositivo, $saldo) {
-            // Crear la orden
+            // Crear la orden con los nuevos campos financieros
             $orden = OrdenTrabajo::create([
                 'numero_orden' => $numero,
                 'dispositivo_id' => $dispositivo->id,
@@ -1247,18 +1255,31 @@ class CrearOrden extends Component
                 'fecha_entrega_estimada' => $this->fechaEntregaEstimada,
                 'problema_reportado' => $this->asunto,
                 'tipo_servicio' => $this->tipoServicio,
-                'costo_estimado' => round($this->total, 2),
-                'anticipo' => round($this->anticipo, 2),
+                'subtotal' => (int) $this->subtotalConDescuento,
+                'monto_iva' => (int) $this->montoIva,
+                'costo_total' => (int) $this->total,
+                'anticipo' => (int) $this->anticipo,
+                'total_pagado' => (int) $this->anticipo,
                 'saldo' => $saldo,
                 'estado' => EstadoOrden::from($this->estado),
             ]);
 
+            // Registrar anticipo como primer pago si existe
+            if ($this->anticipo > 0) {
+                $orden->pagos()->create([
+                    'fecha_pago' => $this->fechaIngreso,
+                    'monto' => (int) $this->anticipo,
+                    'metodo_pago' => 'efectivo',
+                    'notas' => 'Anticipo inicial',
+                ]);
+            }
+
             // Guardar items en pivots
             foreach ($this->items as $item) {
                 $cantidad = (int) ($item['cantidad'] ?? 1);
-                $precio = (float) ($item['precio'] ?? 0);
+                $precio = (int) ($item['precio'] ?? 0);
                 $descuento = (float) ($item['descuento'] ?? 0);
-                $subtotal = max(0, $cantidad * $precio * (1 - ($descuento / 100)));
+                $subtotal = (int) round(max(0, $cantidad * $precio * (1 - ($descuento / 100))));
 
                 if (($item['tipo'] ?? '') === 'servicio') {
                     $orden->servicios()->attach($item['id'], [
@@ -1273,6 +1294,13 @@ class CrearOrden extends Component
                         'cantidad' => $cantidad,
                         'subtotal' => $subtotal,
                     ]);
+
+                    // Descontar stock del producto (si tiene stock disponible)
+                    $producto = Producto::find($item['id']);
+                    if ($producto && $producto->stock > 0) {
+                        $nuevoStock = max(0, $producto->stock - $cantidad);
+                        $producto->update(['stock' => $nuevoStock]);
+                    }
                 }
             }
 
@@ -1510,38 +1538,73 @@ class CrearOrden extends Component
         $this->newItemName = '';
         $this->newItemPrice = '';
         $this->newItemCode = '';
+        $this->newItemDescription = '';
+        $this->newItemCategoria = '';
+        $this->newItemPrecioCompra = '';
+        $this->newItemCategoriaProducto = '';
+        $this->newItemStock = '0';
+        $this->newItemStockMinimo = '0';
         $this->mostrarMiniModalCrearItem = true;
     }
 
     public function guardarNuevoItem(): void
     {
-        $this->validate([
-            'newItemName' => 'required|min:2|max:100',
-            'newItemPrice' => 'required|numeric|min:0',
-        ], [
-            'newItemName.required' => 'El nombre es obligatorio.',
-            'newItemName.min' => 'El nombre debe tener al menos 2 caracteres.',
-            'newItemName.max' => 'El nombre no puede tener más de 100 caracteres.',
-            'newItemPrice.required' => 'El precio es obligatorio.',
-            'newItemPrice.numeric' => 'El precio debe ser un número válido.',
-            'newItemPrice.min' => 'El precio debe ser mayor o igual a 0.',
-        ]);
-
         if ($this->tipoItemAgregar === 'servicio') {
+            $this->validate([
+                'newItemName' => 'required|min:2|max:100',
+                'newItemPrice' => 'required|numeric|min:0',
+                'newItemDescription' => 'nullable|string|max:500',
+                'newItemCategoria' => 'nullable|string|max:50',
+            ], [
+                'newItemName.required' => 'El nombre es obligatorio.',
+                'newItemName.min' => 'El nombre debe tener al menos 2 caracteres.',
+                'newItemName.max' => 'El nombre no puede tener más de 100 caracteres.',
+                'newItemPrice.required' => 'El precio es obligatorio.',
+                'newItemPrice.numeric' => 'El precio debe ser un número válido.',
+                'newItemPrice.min' => 'El precio debe ser mayor o igual a 0.',
+                'newItemDescription.max' => 'La descripción no puede tener más de 500 caracteres.',
+                'newItemCategoria.max' => 'La categoría no puede tener más de 50 caracteres.',
+            ]);
+
             $servicio = Servicio::create([
                 'nombre' => trim($this->newItemName),
                 'precio_base' => $this->newItemPrice,
                 'estado' => 'activo',
-                'descripcion' => 'Creado desde orden de trabajo',
+                'descripcion' => trim($this->newItemDescription) ?: null,
+                'categoria' => trim($this->newItemCategoria) ?: null,
             ]);
             $this->agregarItem($servicio->id);
         } else {
+            $this->validate([
+                'newItemName' => 'required|min:2|max:100',
+                'newItemPrice' => 'required|numeric|min:0',
+                'newItemPrecioCompra' => 'nullable|numeric|min:0',
+                'newItemCategoriaProducto' => 'nullable|string|max:50',
+                'newItemStock' => 'nullable|integer|min:0',
+                'newItemStockMinimo' => 'nullable|integer|min:0',
+            ], [
+                'newItemName.required' => 'El nombre es obligatorio.',
+                'newItemName.min' => 'El nombre debe tener al menos 2 caracteres.',
+                'newItemName.max' => 'El nombre no puede tener más de 100 caracteres.',
+                'newItemPrice.required' => 'El precio de venta es obligatorio.',
+                'newItemPrice.numeric' => 'El precio de venta debe ser un número válido.',
+                'newItemPrice.min' => 'El precio de venta debe ser mayor o igual a 0.',
+                'newItemPrecioCompra.numeric' => 'El precio de compra debe ser un número válido.',
+                'newItemPrecioCompra.min' => 'El precio de compra debe ser mayor o igual a 0.',
+                'newItemCategoriaProducto.max' => 'La categoría no puede tener más de 50 caracteres.',
+                'newItemStock.integer' => 'El stock debe ser un número entero.',
+                'newItemStock.min' => 'El stock debe ser mayor o igual a 0.',
+                'newItemStockMinimo.integer' => 'El stock mínimo debe ser un número entero.',
+                'newItemStockMinimo.min' => 'El stock mínimo debe ser mayor o igual a 0.',
+            ]);
+
             $producto = Producto::create([
                 'nombre' => trim($this->newItemName),
                 'precio_venta' => $this->newItemPrice,
-                'precio_compra' => 0, // Por defecto
-                'stock' => 0,
-                'stock_minimo' => 0,
+                'precio_compra' => $this->newItemPrecioCompra ? (float) $this->newItemPrecioCompra : 0,
+                'categoria' => trim($this->newItemCategoriaProducto) ?: null,
+                'stock' => $this->newItemStock ? (int) $this->newItemStock : 0,
+                'stock_minimo' => $this->newItemStockMinimo ? (int) $this->newItemStockMinimo : 0,
                 'estado' => 'activo',
                 'descripcion' => 'Creado desde orden de trabajo',
             ]);

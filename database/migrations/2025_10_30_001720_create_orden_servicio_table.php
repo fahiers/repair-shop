@@ -16,9 +16,9 @@ return new class extends Migration
             $table->foreignId('orden_id')->constrained('ordenes_trabajo')->onDelete('cascade');
             $table->foreignId('servicio_id')->constrained('servicios')->onDelete('cascade');
             $table->text('descripcion')->nullable();
-            $table->decimal('precio_unitario', 10, 2);
+            $table->decimal('precio_unitario', 10, 0);
             $table->integer('cantidad')->default(1);
-            $table->decimal('subtotal', 10, 2);
+            $table->decimal('subtotal', 10, 0);
             $table->timestamps();
 
             $table->index('orden_id');

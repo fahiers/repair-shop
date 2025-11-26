@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('factura_pagos', function (Blueprint $table) {
+        Schema::create('orden_pagos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('factura_id')->constrained('facturas');
+            $table->foreignId('orden_id')->constrained('ordenes_trabajo')->onDelete('cascade');
             $table->date('fecha_pago')->index();
-            $table->decimal('monto', 10, 2);
+            $table->decimal('monto', 10, 0);
             $table->enum('metodo_pago', ['efectivo', 'tarjeta', 'transferencia', 'otros']);
             $table->string('referencia', 100)->nullable();
             $table->text('notas')->nullable();
             $table->timestamps();
+
+            $table->index('orden_id');
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('factura_pagos');
+        Schema::dropIfExists('orden_pagos');
     }
 };

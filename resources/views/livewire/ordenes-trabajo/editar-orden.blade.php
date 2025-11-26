@@ -76,7 +76,10 @@
                         </flux:menu>
                     </flux:dropdown>
 
-                    <button disabled class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Ingresar pago</button>
+                    <button type="button" wire:click="abrirModalPago" class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 flex items-center gap-2">
+                        <flux:icon.currency-dollar class="size-4" />
+                        Ingresar pago
+                    </button>
                 </div>
             </div>
         </div>
@@ -154,10 +157,25 @@
                                 </div>
                                 <div>
                                     <p class="font-medium">{{ $clienteSeleccionado['nombre'] }}</p>
-                                    <div class="flex items-center gap-3 text-sm text-zinc-500">
+                                    <div class="flex items-center gap-3 text-sm text-zinc-500 mb-1">
                                         <span>{{ $clienteSeleccionado['telefono'] }}</span>
                                         @if($clienteSeleccionado['email'])
                                             <span>{{ $clienteSeleccionado['email'] }}</span>
+                                        @endif
+                                    </div>
+                                    
+                                    {{-- Indicadores de historial del cliente --}}
+                                    <div class="flex items-center gap-2">
+                                        <span class="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset {{ ($clienteSeleccionado['total_dispositivos'] ?? 0) > 1 ? 'bg-blue-50 text-blue-700 ring-blue-700/10 dark:bg-blue-900/30 dark:text-blue-400' : 'bg-zinc-50 text-zinc-600 ring-zinc-500/10 dark:bg-zinc-800 dark:text-zinc-400' }}">
+                                            <flux:icon.device-phone-mobile class="size-3" />
+                                            {{ $clienteSeleccionado['total_dispositivos'] ?? 0 }} Dispositivo{{ ($clienteSeleccionado['total_dispositivos'] ?? 0) !== 1 ? 's' : '' }}
+                                        </span>
+                                        
+                                        @if(($clienteSeleccionado['total_ordenes'] ?? 0) > 0)
+                                            <span class="inline-flex items-center gap-1 rounded-md bg-purple-50 px-2 py-0.5 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 dark:bg-purple-900/30 dark:text-purple-400">
+                                                <flux:icon.clipboard-document-list class="size-3" />
+                                                {{ $clienteSeleccionado['total_ordenes'] }} Orden{{ ($clienteSeleccionado['total_ordenes'] ?? 0) !== 1 ? 'es' : '' }} previa{{ ($clienteSeleccionado['total_ordenes'] ?? 0) !== 1 ? 's' : '' }}
+                                            </span>
                                         @endif
                                     </div>
                                 </div>
@@ -252,7 +270,7 @@
                                         >
                                     </td>
                                     <td class="p-3 text-right font-medium">
-                                        ${{ number_format($this->calcularSubtotalItem($item), 0, ',', '.') }}
+                                        {{ Number::currency($this->calcularSubtotalItem($item), precision: 0) }}
                                     </td>
                                     <td class="p-3 text-right">
                                         <div class="flex justify-end gap-2">
@@ -285,32 +303,32 @@
                     <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Descuento</p>
                         <p class="text-lg font-semibold text-red-600 dark:text-red-500">
-                            $ -{{ number_format($totalDescuentos, 0, ',', '.') }}
+                            -{{ Number::currency($totalDescuentos, precision: 0) }}
                         </p>
                     </div>
                     <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Subtotal</p>
                         <p class="text-lg font-semibold">
-                            $ {{ number_format($subtotalConDescuento, 0, ',', '.') }}
+                            {{ Number::currency($subtotalConDescuento, precision: 0) }}
                         </p>
                     </div>
                     <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">IVA ({{ $porcentajeIva }}%)</p>
                         <p class="text-lg font-semibold">
-                            $ {{ number_format($montoIva, 0, ',', '.') }}
+                            {{ Number::currency($montoIva, precision: 0) }}
                         </p>
                     </div>
                     <div class="rounded-lg border border-emerald-200 dark:border-emerald-900 p-4 bg-emerald-50 dark:bg-emerald-950">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Total</p>
                         <p class="text-lg font-semibold text-emerald-600">
-                            $ {{ number_format($total, 0, ',', '.') }}
+                            {{ Number::currency($total, precision: 0) }}
                         </p>
                     </div>
                 </div>
 
-                <!-- Anticipo y Saldo -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-                    <div class="rounded-lg border {{ $errors->has('anticipo') ? 'border-red-300 dark:border-red-700' : 'border-zinc-200 dark:border-zinc-700' }} p-4 bg-white dark:bg-zinc-900">
+                <!-- Anticipo, Total Pagado y Saldo -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3">
+                    <div class="rounded-lg border {{ $errors->has('anticipo') ? 'border-red-300 dark:border-red-700' : 'border-zinc-200 dark:border-zinc-700' }} p-4 bg-white dark:bg-zinc-900 h-full flex flex-col">
                         <label class="block text-xs text-zinc-500 dark:text-zinc-400 mb-2">Anticipo</label>
                         <div class="flex items-center gap-2">
                             <span class="text-sm text-zinc-600 dark:text-zinc-400">$</span>
@@ -331,10 +349,16 @@
                             </p>
                         @enderror
                     </div>
-                    <div class="rounded-lg border border-amber-200 dark:border-amber-900 p-4 bg-amber-50 dark:bg-amber-950">
+                    <div class="rounded-lg border border-blue-200 dark:border-blue-900 p-4 bg-blue-50 dark:bg-blue-950 h-full flex flex-col">
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Total pagado</p>
+                        <p class="text-lg font-semibold text-blue-600 dark:text-blue-500">
+                            {{ Number::currency($this->totalPagado, precision: 0) }}
+                        </p>
+                    </div>
+                    <div class="rounded-lg border border-amber-200 dark:border-amber-900 p-4 bg-amber-50 dark:bg-amber-950 h-full flex flex-col">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Saldo pendiente</p>
                         <p class="text-lg font-semibold text-amber-600 dark:text-amber-500">
-                            $ {{ number_format($this->calcularSaldo(), 0, ',', '.') }}
+                            {{ Number::currency($this->calcularSaldo(), precision: 0) }}
                         </p>
                     </div>
                 </div>
@@ -344,7 +368,7 @@
             <div class="border-t border-zinc-100 dark:border-zinc-700 p-4 md:p-6">
                 <div class="space-y-3">
                     <!-- Mensajes de error generales -->
-                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'anticipo', 'orden', 'fechaEntregaEstimada']))
+                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'orden', 'fechaEntregaEstimada']))
                         <div class="rounded-md bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-3">
                             <div class="flex items-start gap-2">
                                 <flux:icon.exclamation-triangle class="size-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
@@ -358,9 +382,6 @@
                                     @error('items')
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
-                                    @error('anticipo')
-                                        <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
-                                    @enderror
                                     @error('orden')
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
@@ -372,17 +393,28 @@
                         </div>
                     @endif
 
-                    <div class="flex items-center justify-start gap-2 md:gap-3">
-                        <a href="{{ route('ordenes-trabajo.pdf', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Imprimir orden</a>
-                        <a href="{{ route('ordenes-trabajo.sticker', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Imprimir etiqueta</a>
-                        <a href="{{ route('ordenes-trabajo.informe-tecnico', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Informe técnico</a>
-                        <a href="{{ route('ordenes-trabajo.condiciones-garantia', ['orden' => $orden->id]) }}" target="_blank" class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700">Condiciones y garantía</a>
+                    <div class="flex items-center justify-start gap-2">
+                        <a href="{{ route('ordenes-trabajo.pdf', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
+                            <flux:icon.printer class="size-4" />
+                            Orden
+                        </a>
+                        <a href="{{ route('ordenes-trabajo.sticker', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
+                            <flux:icon.tag class="size-4" />
+                            Etiqueta
+                        </a>
+                        <a href="{{ route('ordenes-trabajo.informe-tecnico', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
+                            <flux:icon.document-text class="size-4" />
+                            Informe
+                        </a>
+                        <a href="{{ route('ordenes-trabajo.condiciones-garantia', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-sm rounded-md border-2 border-zinc-400 dark:border-zinc-500 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
+                            <flux:icon.shield-check class="size-4" />
+                        </a>
                         <button type="button"
                                 wire:click="actualizarOrden"
                                 @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
                                 title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Actualizar orden') }}"
                                 class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
-                            Actualizar orden
+                            Actualizar
                         </button>
                     </div>
                 </div>
@@ -775,7 +807,7 @@
                                         </div>
                                         <div class="text-right">
                                             <p class="font-bold text-teal-600 dark:text-teal-400">
-                                                ${{ number_format($tipoItemAgregar === 'servicio' ? $item['precio_base'] : $item['precio_venta'], 0, ',', '.') }}
+                                                {{ Number::currency($tipoItemAgregar === 'servicio' ? $item['precio_base'] : $item['precio_venta'], precision: 0) }}
                                             </p>
                                         </div>
                                     </button>
@@ -1263,5 +1295,193 @@
             <span class="text-sm font-medium">Equipo actualizado correctamente</span>
         </div>
     </div>
+
+    <!-- Modal de Pago -->
+    @if($mostrarModalPago)
+        <div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+            <!-- Backdrop con efecto blur -->
+            <div 
+                class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm transition-opacity"
+                wire:click="cerrarModalPago"
+            ></div>
+
+            <!-- Contenedor del Modal -->
+            <div class="relative w-full max-w-lg bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl overflow-hidden transform transition-all">
+                
+                <!-- Header -->
+                <div class="bg-zinc-50 dark:bg-zinc-800 px-6 py-4 border-b border-zinc-100 dark:border-zinc-700 flex justify-between items-center">
+                    <div>
+                        <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-100">Registrar Pago</h3>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-400">Orden de trabajo: <span class="font-mono font-medium text-indigo-600 dark:text-indigo-400">{{ $orden->numero_orden }}</span></p>
+                    </div>
+                    <button 
+                        type="button"
+                        wire:click="cerrarModalPago"
+                        class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 p-2 rounded-full transition-colors"
+                    >
+                        <flux:icon.x-mark class="size-5" />
+                    </button>
+                </div>
+
+                <!-- Body del Formulario -->
+                <form wire:submit="registrarPago" class="p-6 space-y-6">
+                    
+                    <!-- Campo: Monto (Destacado) -->
+                    <div>
+                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-2">
+                            Monto a Pagar
+                        </label>
+                        <div class="relative group">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <span class="text-zinc-400 dark:text-zinc-500 text-2xl font-light">$</span>
+                            </div>
+                            <input
+                                type="number"
+                                wire:model="pagoMonto"
+                                placeholder="0"
+                                class="w-full pl-10 pr-4 py-4 text-3xl font-bold text-zinc-900 dark:text-zinc-100 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl focus:bg-white dark:focus:bg-zinc-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-zinc-300 dark:placeholder:text-zinc-600 @error('pagoMonto') border-red-500 focus:ring-red-500 @enderror"
+                                required
+                                min="1"
+                                step="1"
+                            >
+                        </div>
+                        @error('pagoMonto')
+                            <p class="text-xs text-red-600 dark:text-red-400 mt-1">{{ $message }}</p>
+                        @enderror
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
+                            Saldo pendiente: <span class="font-semibold text-amber-600 dark:text-amber-400">{{ Number::currency($this->saldoPendiente, precision: 0) }}</span>
+                        </p>
+                    </div>
+
+                    <!-- Campo: Método de Pago (Selector Visual) -->
+                    <div>
+                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-2">
+                            Método de Pago
+                        </label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            @php
+                                $metodosPago = [
+                                    ['id' => 'efectivo', 'label' => 'Efectivo', 'icon' => 'banknotes'],
+                                    ['id' => 'tarjeta', 'label' => 'Tarjeta', 'icon' => 'credit-card'],
+                                    ['id' => 'transferencia', 'label' => 'Transfer.', 'icon' => 'arrows-right-left'],
+                                    ['id' => 'otros', 'label' => 'Otros', 'icon' => 'ellipsis-horizontal'],
+                                ];
+                            @endphp
+                            @foreach($metodosPago as $metodo)
+                                <button
+                                    type="button"
+                                    wire:click="$set('pagoMetodo', '{{ $metodo['id'] }}')"
+                                    class="flex flex-col items-center justify-center p-3 rounded-xl border transition-all duration-200 {{ $pagoMetodo === $metodo['id'] 
+                                        ? 'bg-indigo-50 dark:bg-indigo-900/30 border-indigo-500 text-indigo-700 dark:text-indigo-300 shadow-sm ring-1 ring-indigo-500' 
+                                        : 'bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-700' }}"
+                                >
+                                    @switch($metodo['icon'])
+                                        @case('banknotes')
+                                            <flux:icon.banknotes class="size-6 mb-2 {{ $pagoMetodo === $metodo['id'] ? 'text-indigo-600 dark:text-indigo-400' : 'text-zinc-400 dark:text-zinc-500' }}" />
+                                            @break
+                                        @case('credit-card')
+                                            <flux:icon.credit-card class="size-6 mb-2 {{ $pagoMetodo === $metodo['id'] ? 'text-indigo-600 dark:text-indigo-400' : 'text-zinc-400 dark:text-zinc-500' }}" />
+                                            @break
+                                        @case('arrows-right-left')
+                                            <flux:icon.arrows-right-left class="size-6 mb-2 {{ $pagoMetodo === $metodo['id'] ? 'text-indigo-600 dark:text-indigo-400' : 'text-zinc-400 dark:text-zinc-500' }}" />
+                                            @break
+                                        @case('ellipsis-horizontal')
+                                            <flux:icon.ellipsis-horizontal class="size-6 mb-2 {{ $pagoMetodo === $metodo['id'] ? 'text-indigo-600 dark:text-indigo-400' : 'text-zinc-400 dark:text-zinc-500' }}" />
+                                            @break
+                                    @endswitch
+                                    <span class="text-xs font-medium">{{ $metodo['label'] }}</span>
+                                </button>
+                            @endforeach
+                        </div>
+                        @error('pagoMetodo')
+                            <p class="text-xs text-red-600 dark:text-red-400 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Campo: Referencia / Nº Documento -->
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">
+                            Referencia / Nº Documento
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <flux:icon.hashtag class="size-4 text-zinc-400 dark:text-zinc-500" />
+                            </div>
+                            <input
+                                type="text"
+                                wire:model="pagoReferencia"
+                                placeholder="Ej: Factura 1023 o Nº de Transferencia"
+                                class="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-zinc-700 dark:text-zinc-200 text-sm placeholder:text-zinc-400 dark:placeholder:text-zinc-500"
+                            >
+                        </div>
+                        @error('pagoReferencia')
+                            <p class="text-xs text-red-600 dark:text-red-400 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Campo: Notas -->
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">
+                            Notas Adicionales
+                        </label>
+                        <div class="relative">
+                            <div class="absolute top-3 left-3 pointer-events-none">
+                                <flux:icon.document-text class="size-4 text-zinc-400 dark:text-zinc-500" />
+                            </div>
+                            <textarea
+                                rows="3"
+                                wire:model="pagoNotas"
+                                placeholder="Detalles opcionales sobre el pago..."
+                                class="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-zinc-700 dark:text-zinc-200 text-sm resize-none placeholder:text-zinc-400 dark:placeholder:text-zinc-500"
+                            ></textarea>
+                        </div>
+                        @error('pagoNotas')
+                            <p class="text-xs text-red-600 dark:text-red-400 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Footer / Acciones -->
+                    <div class="pt-2 flex gap-3">
+                        <button
+                            type="button"
+                            wire:click="cerrarModalPago"
+                            class="flex-1 px-4 py-3 border border-zinc-300 dark:border-zinc-600 text-zinc-700 dark:text-zinc-300 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 font-medium transition-colors"
+                        >
+                            Cancelar
+                        </button>
+                        <button
+                            type="submit"
+                            @disabled($procesandoPago)
+                            class="flex-[2] px-4 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-200 dark:shadow-indigo-900/30 font-medium transition-all flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                        >
+                            @if($procesandoPago)
+                                <span class="animate-pulse">Procesando...</span>
+                            @else
+                                <flux:icon.check-circle class="size-5" />
+                                Confirmar Pago
+                            @endif
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    @endif
+
+    <!-- Toast de éxito al registrar pago -->
+    @if(session('pago_registrado'))
+        <div 
+            x-data="{ show: true }" 
+            x-show="show" 
+            x-init="setTimeout(() => show = false, 3000)"
+            x-transition.opacity 
+            class="fixed bottom-4 right-4 z-50"
+        >
+            <div class="flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white shadow-lg">
+                <flux:icon.check class="size-4" />
+                <span class="text-sm font-medium">{{ session('pago_registrado') }}</span>
+            </div>
+        </div>
+    @endif
 
 </div>

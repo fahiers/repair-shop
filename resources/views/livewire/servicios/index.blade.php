@@ -47,7 +47,7 @@
                             <div class="max-w-xs truncate">{{ $servicio->descripcion }}</div>
                         </td>
                         <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">
-                            ${{ number_format($servicio->precio_base ?? 0, 0, ',', '.') }}
+                            {{ Number::currency($servicio->precio_base ?? 0, precision: 0) }}
                         </td>
                         <td class="px-6 py-4 text-right text-sm">
                             <span class="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium {{ ($servicio->estado ?? 'activo') === 'inactivo' ? 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300' : 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' }}">

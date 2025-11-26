@@ -28,8 +28,8 @@ class Producto extends Model
     {
         return [
             'fecha_ingreso' => 'datetime',
-            'precio_compra' => 'decimal:2',
-            'precio_venta' => 'decimal:2',
+            'precio_compra' => 'integer',
+            'precio_venta' => 'integer',
         ];
     }
 

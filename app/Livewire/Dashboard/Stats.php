@@ -35,7 +35,7 @@ class Stats extends Component
 
         $ventasTotales = OrdenTrabajo::where('estado', EstadoOrden::Entregado)
             ->whereBetween('fecha_entrega_real', [$startOfMonth, $endOfMonth])
-            ->sum('costo_final');
+            ->sum('costo_total');
 
         // Próximos Vencimientos (Esta semana)
         $proximosVencimientos = OrdenTrabajo::query()

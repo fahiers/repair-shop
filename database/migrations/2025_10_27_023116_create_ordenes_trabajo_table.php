@@ -22,10 +22,12 @@ return new class extends Migration
             $table->text('problema_reportado');
             $table->enum('tipo_servicio', ['reparacion', 'mantenimiento', 'garantia'])->default('reparacion');
             $table->enum('estado', ['pendiente', 'diagnostico', 'en_reparacion', 'listo', 'entregado', 'cancelado'])->default('pendiente')->index();
-            $table->decimal('costo_estimado', 10, 2)->nullable();
-            $table->decimal('costo_final', 10, 2)->nullable();
-            $table->decimal('anticipo', 10, 2)->default(0);
-            $table->decimal('saldo', 10, 2)->default(0);
+            $table->decimal('subtotal', 10, 0)->nullable();
+            $table->decimal('monto_iva', 10, 0)->nullable();
+            $table->decimal('costo_total', 10, 0)->nullable();
+            $table->decimal('anticipo', 10, 0)->default(0);
+            $table->decimal('total_pagado', 10, 0)->default(0);
+            $table->decimal('saldo', 10, 0)->default(0);
             $table->timestamps();
             $table->softDeletes();
 

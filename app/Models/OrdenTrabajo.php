@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\EstadoOrden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class OrdenTrabajo extends Model
@@ -24,9 +25,11 @@ class OrdenTrabajo extends Model
         'tipo_servicio',
         'diagnostico',
         'estado',
-        'costo_estimado',
-        'costo_final',
+        'subtotal',
+        'monto_iva',
+        'costo_total',
         'anticipo',
+        'total_pagado',
         'saldo',
         'observaciones',
     ];
@@ -38,10 +41,12 @@ class OrdenTrabajo extends Model
             'fecha_entrega_estimada' => 'date',
             'fecha_entrega_real' => 'date',
             'estado' => EstadoOrden::class,
-            'costo_estimado' => 'decimal:2',
-            'costo_final' => 'decimal:2',
-            'anticipo' => 'decimal:2',
-            'saldo' => 'decimal:2',
+            'subtotal' => 'integer',
+            'monto_iva' => 'integer',
+            'costo_total' => 'integer',
+            'anticipo' => 'integer',
+            'total_pagado' => 'integer',
+            'saldo' => 'integer',
         ];
     }
 
@@ -74,63 +79,41 @@ class OrdenTrabajo extends Model
         return $this->hasMany(OrdenComentario::class, 'orden_id');
     }
 
-    public function factura()
+    public function pagos(): HasMany
     {
-        return $this->hasOne(Factura::class, 'orden_id');
+        return $this->hasMany(OrdenPago::class, 'orden_id');
     }
 
     /**
-     * Calcula el costo estimado basado en los items (servicios y productos) de la orden.
-     * Considera descuentos y IVA si están aplicados en los pivots.
+     * Calcula el subtotal basado en los items (servicios y productos) de la orden.
      */
-    public function calcularCostoEstimado(): float
+    public function calcularSubtotalItems(): int
     {
         $subtotalServicios = $this->servicios()->sum('orden_servicio.subtotal');
         $subtotalProductos = $this->productos()->sum('orden_producto.subtotal');
 
-        $subtotal = $subtotalServicios + $subtotalProductos;
-
-        // Si los pivots no incluyen IVA, se calcula aquí
-        // Por ahora retornamos el subtotal, el IVA se maneja en el componente Livewire
-        return round((float) $subtotal, 2);
+        return (int) round($subtotalServicios + $subtotalProductos);
     }
 
     /**
-     * Calcula el total pagado considerando anticipo y pagos de factura.
+     * Calcula el total pagado sumando todos los pagos registrados.
      */
-    public function calcularTotalPagado(): float
+    public function calcularTotalPagado(): int
     {
-        $totalPagado = (float) $this->anticipo;
-
-        if ($this->factura) {
-            $pagosFactura = $this->factura->pagos()->sum('monto');
-            $totalPagado += (float) $pagosFactura;
-        }
-
-        return round($totalPagado, 2);
+        return (int) round($this->pagos()->sum('monto'));
     }
 
     /**
-     * Recalcula y actualiza el saldo de la orden.
-     * El saldo se calcula como: costo (estimado o final) - total pagado.
+     * Recalcula y actualiza el total_pagado y saldo de la orden.
+     * El saldo se calcula como: costo_total - total_pagado.
      */
     public function recalcularSaldo(): void
     {
-        // Usar costo_final si está establecido, sino usar costo_estimado
-        $costo = $this->costo_final ?? $this->costo_estimado ?? 0;
-        $totalPagado = $this->calcularTotalPagado();
+        $this->total_pagado = $this->calcularTotalPagado();
+        $costo = (int) ($this->costo_total ?? 0);
 
-        $this->saldo = max(0, round((float) $costo - $totalPagado, 2));
+        $this->saldo = max(0, $costo - $this->total_pagado);
         $this->saveQuietly();
-    }
-
-    /**
-     * Establece el costo final y recalcula el saldo.
-     */
-    public function establecerCostoFinal(float $costoFinal): void
-    {
-        $this->costo_final = round($costoFinal, 2);
-        $this->recalcularSaldo();
     }
 
     /**

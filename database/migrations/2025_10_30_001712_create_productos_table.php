@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('descripcion')->nullable();
             $table->string('categoria', 50)->nullable();
             $table->string('marca', 50)->nullable();
-            $table->decimal('precio_compra', 10, 2);
-            $table->decimal('precio_venta', 10, 2);
+            $table->decimal('precio_compra', 10, 0);
+            $table->decimal('precio_venta', 10, 0);
             $table->integer('stock')->default(0);
             $table->integer('stock_minimo')->default(0);
             $table->unsignedBigInteger('proveedor_id')->nullable();

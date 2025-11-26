@@ -60,7 +60,7 @@
                             <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">{{ data_get($orden, 'dispositivo.modelo.nombre') ?? '-' }}</td>
                             <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">{{ optional($orden->fecha_ingreso ? \Carbon\Carbon::parse($orden->fecha_ingreso) : null)?->format('Y-m-d') ?? '-' }}</td>
                             <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">
-                                ${{ number_format(($orden->costo_final ?? $orden->costo_estimado ?? 0), 0, ',', '.') }}
+                                {{ Number::currency($orden->costo_total ?? 0, precision: 0) }}
                             </td>
                             <td class="px-6 py-4 text-right text-sm">
                                 <span class="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium {{ ($orden->estado ?? \App\Enums\EstadoOrden::Pendiente)->clasesColor() }}">

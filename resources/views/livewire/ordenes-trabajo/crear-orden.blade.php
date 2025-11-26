@@ -151,10 +151,25 @@
                                 </div>
                                 <div>
                                     <p class="font-medium">{{ $clienteSeleccionado['nombre'] }}</p>
-                                    <div class="flex items-center gap-3 text-sm text-zinc-500">
+                                    <div class="flex items-center gap-3 text-sm text-zinc-500 mb-1">
                                         <span>{{ $clienteSeleccionado['telefono'] }}</span>
                                         @if($clienteSeleccionado['email'])
                                             <span>{{ $clienteSeleccionado['email'] }}</span>
+                                        @endif
+                                    </div>
+                                    
+                                    {{-- Indicadores de historial del cliente --}}
+                                    <div class="flex items-center gap-2">
+                                        <span class="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset {{ ($clienteSeleccionado['total_dispositivos'] ?? 0) > 1 ? 'bg-blue-50 text-blue-700 ring-blue-700/10 dark:bg-blue-900/30 dark:text-blue-400' : 'bg-zinc-50 text-zinc-600 ring-zinc-500/10 dark:bg-zinc-800 dark:text-zinc-400' }}">
+                                            <flux:icon.device-phone-mobile class="size-3" />
+                                            {{ $clienteSeleccionado['total_dispositivos'] ?? 0 }} Dispositivo{{ ($clienteSeleccionado['total_dispositivos'] ?? 0) !== 1 ? 's' : '' }}
+                                        </span>
+                                        
+                                        @if(($clienteSeleccionado['total_ordenes'] ?? 0) > 0)
+                                            <span class="inline-flex items-center gap-1 rounded-md bg-purple-50 px-2 py-0.5 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 dark:bg-purple-900/30 dark:text-purple-400">
+                                                <flux:icon.clipboard-document-list class="size-3" />
+                                                {{ $clienteSeleccionado['total_ordenes'] }} Orden{{ ($clienteSeleccionado['total_ordenes'] ?? 0) !== 1 ? 'es' : '' }} previa{{ ($clienteSeleccionado['total_ordenes'] ?? 0) !== 1 ? 's' : '' }}
+                                            </span>
                                         @endif
                                     </div>
                                 </div>
@@ -251,7 +266,7 @@
                                         >
                                     </td>
                                     <td class="p-3 text-right font-medium">
-                                        ${{ number_format($this->calcularSubtotalItem($item), 0, ',', '.') }}
+                                        {{ Number::currency($this->calcularSubtotalItem($item), precision: 0) }}
                                     </td>
                                     <td class="p-3 text-right">
                                         <div class="flex justify-end gap-2">
@@ -284,25 +299,25 @@
                     <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Descuento</p>
                         <p class="text-lg font-semibold text-red-600 dark:text-red-500">
-                            $ -{{ number_format($totalDescuentos, 0, ',', '.') }}
+                            -{{ Number::currency($totalDescuentos, precision: 0) }}
                         </p>
                     </div>
                     <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Subtotal</p>
                         <p class="text-lg font-semibold">
-                            $ {{ number_format($subtotalConDescuento, 0, ',', '.') }}
+                            {{ Number::currency($subtotalConDescuento, precision: 0) }}
                         </p>
                     </div>
                     <div class="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">IVA ({{ $porcentajeIva }}%)</p>
                         <p class="text-lg font-semibold">
-                            $ {{ number_format($montoIva, 0, ',', '.') }}
+                            {{ Number::currency($montoIva, precision: 0) }}
                         </p>
                     </div>
                     <div class="rounded-lg border border-emerald-200 dark:border-emerald-900 p-4 bg-emerald-50 dark:bg-emerald-950">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Total</p>
                         <p class="text-lg font-semibold text-emerald-600">
-                            $ {{ number_format($total, 0, ',', '.') }}
+                            {{ Number::currency($total, precision: 0) }}
                         </p>
                     </div>
                 </div>
@@ -333,7 +348,7 @@
                     <div class="rounded-lg border border-amber-200 dark:border-amber-900 p-4 bg-amber-50 dark:bg-amber-950">
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-1">Saldo pendiente</p>
                         <p class="text-lg font-semibold text-amber-600 dark:text-amber-500">
-                            $ {{ number_format($this->calcularSaldo(), 0, ',', '.') }}
+                            {{ Number::currency($this->calcularSaldo(), precision: 0) }}
                         </p>
                     </div>
                 </div>
@@ -343,7 +358,7 @@
             <div class="border-t border-zinc-100 dark:border-zinc-700 p-4 md:p-6">
                 <div class="space-y-3">
                     <!-- Mensajes de error generales -->
-                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'anticipo', 'fechaEntregaEstimada']))
+                    @if($errors->hasAny(['selectedClientId', 'selectedDeviceId', 'items', 'fechaEntregaEstimada']))
                         <div class="rounded-md bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-3">
                             <div class="flex items-start gap-2">
                                 <flux:icon.exclamation-triangle class="size-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
@@ -357,9 +372,6 @@
                                     @error('items')
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
-                                    @error('anticipo')
-                                        <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
-                                    @enderror
                                     @error('fechaEntregaEstimada')
                                         <p class="text-sm text-red-800 dark:text-red-300">{{ $message }}</p>
                                     @enderror
@@ -368,16 +380,28 @@
                         </div>
                     @endif
 
-                    <div class="flex items-center justify-start gap-2 md:gap-3">
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir orden</button>
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Imprimir etiqueta</button>
-                        <button disabled class="px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50">Informe técnico</button>
+                    <div class="flex items-center justify-start gap-2">
+                        <button disabled class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
+                            <flux:icon.printer class="size-4" />
+                            Orden
+                        </button>
+                        <button disabled class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
+                            <flux:icon.tag class="size-4" />
+                            Etiqueta
+                        </button>
+                        <button disabled class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
+                            <flux:icon.document-text class="size-4" />
+                            Informe
+                        </button>
+                        <button disabled class="inline-flex items-center justify-center px-3 py-1.5 text-sm rounded-md border-2 border-zinc-400 dark:border-zinc-500 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
+                            <flux:icon.shield-check class="size-4" />
+                        </button>
                         <button type="button"
                                 wire:click="guardarOrden"
                                 @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
                                 title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
                                 class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
-                            Guardar orden
+                            Actualizar
                         </button>
                     </div>
                 </div>
@@ -750,7 +774,7 @@
                                         </div>
                                         <div class="text-right">
                                             <p class="font-bold text-teal-600 dark:text-teal-400">
-                                                ${{ number_format($tipoItemAgregar === 'servicio' ? $item['precio_base'] : $item['precio_venta'], 0, ',', '.') }}
+                                                {{ Number::currency($tipoItemAgregar === 'servicio' ? $item['precio_base'] : $item['precio_venta'], precision: 0) }}
                                             </p>
                                         </div>
                                     </button>
@@ -826,6 +850,9 @@
                             <div>
                                 <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
                                     Nombre del {{ $tipoItemAgregar === 'servicio' ? 'Servicio' : 'Producto' }}
+                                    @if($tipoItemAgregar === 'servicio' || $tipoItemAgregar === 'producto')
+                                        <span class="text-red-500">*</span>
+                                    @endif
                                 </label>
                                 <input 
                                     wire:model="newItemName"
@@ -837,36 +864,131 @@
                                 @error('newItemName') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
                             </div>
 
-                            <div class="flex gap-4">
-                                <div class="flex-1">
+                            @if($tipoItemAgregar === 'servicio')
+                                <!-- Campos específicos para Servicio -->
+                                <div>
                                     <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
-                                        Precio
+                                        Descripción
                                     </label>
-                                    <div class="relative">
-                                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400 text-sm">$</span>
-                                        <input 
-                                            wire:model="newItemPrice"
-                                            type="number" 
-                                            class="w-full pl-7 pr-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
-                                            placeholder="0.00"
-                                        />
-                                    </div>
-                                    @error('newItemPrice') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                    <textarea 
+                                        wire:model="newItemDescription"
+                                        rows="3"
+                                        class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 resize-none"
+                                        placeholder="Descripción del servicio (opcional)"
+                                    ></textarea>
+                                    @error('newItemDescription') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
                                 </div>
-                                <div class="flex-1">
+
+                                <div class="flex gap-4">
+                                    <div class="flex-1">
+                                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                            Precio
+                                            <span class="text-red-500">*</span>
+                                        </label>
+                                        <div class="relative">
+                                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400 text-sm">$</span>
+                                            <input 
+                                                wire:model="newItemPrice"
+                                                type="number" 
+                                                class="w-full pl-7 pr-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                                placeholder="0.00"
+                                            />
+                                        </div>
+                                        @error('newItemPrice') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                    </div>
+                                    <div class="flex-1">
+                                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                            Categoría
+                                        </label>
+                                        <input 
+                                            wire:model="newItemCategoria"
+                                            type="text" 
+                                            class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                            placeholder="Ej: Reparación, Mantenimiento"
+                                        />
+                                        @error('newItemCategoria') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                    </div>
+                                </div>
+                            @else
+                                <!-- Campos para Producto -->
+                                <div class="flex gap-4">
+                                    <div class="flex-1">
+                                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                            Precio de Venta
+                                            <span class="text-red-500">*</span>
+                                        </label>
+                                        <div class="relative">
+                                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400 text-sm">$</span>
+                                            <input 
+                                                wire:model="newItemPrice"
+                                                type="number" 
+                                                step="0.01"
+                                                class="w-full pl-7 pr-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                                placeholder="0.00"
+                                            />
+                                        </div>
+                                        @error('newItemPrice') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                    </div>
+                                    <div class="flex-1">
+                                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                            Precio de Compra
+                                        </label>
+                                        <div class="relative">
+                                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400 text-sm">$</span>
+                                            <input 
+                                                wire:model="newItemPrecioCompra"
+                                                type="number" 
+                                                step="0.01"
+                                                class="w-full pl-7 pr-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                                placeholder="0.00"
+                                            />
+                                        </div>
+                                        @error('newItemPrecioCompra') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <div class="flex-1">
+                                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                            Stock
+                                        </label>
+                                        <input 
+                                            wire:model="newItemStock"
+                                            type="number" 
+                                            min="0"
+                                            class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                            placeholder="0"
+                                        />
+                                        @error('newItemStock') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                    </div>
+                                    <div class="flex-1">
+                                        <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
+                                            Stock Mínimo
+                                        </label>
+                                        <input 
+                                            wire:model="newItemStockMinimo"
+                                            type="number" 
+                                            min="0"
+                                            class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                            placeholder="0"
+                                        />
+                                        @error('newItemStockMinimo') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
+                                    </div>
+                                </div>
+
+                                <div>
                                     <label class="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1.5">
-                                        Código / SKU
+                                        Categoría
                                     </label>
                                     <input 
-                                        wire:model="newItemCode"
+                                        wire:model="newItemCategoriaProducto"
                                         type="text" 
-                                        class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-not-allowed"
-                                        placeholder="OPCIONAL"
-                                        disabled
-                                        title="Campo no disponible en la base de datos actual"
+                                        class="w-full px-3 py-2 border border-zinc-300 dark:border-zinc-600 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none text-sm bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                                        placeholder="Ej: Pantallas, Baterías"
                                     />
+                                    @error('newItemCategoriaProducto') <p class="text-xs text-red-500 mt-1">{{ $message }}</p> @enderror
                                 </div>
-                            </div>
+                            @endif
 
                             <div class="pt-2">
                                 <button 

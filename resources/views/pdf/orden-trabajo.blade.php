@@ -196,33 +196,24 @@
 </head>
 <body>
     @php
-        // Calcular subtotal sumando todos los items
-        $subtotal = $orden->servicios()->sum('orden_servicio.subtotal') + 
-                    $orden->productos()->sum('orden_producto.subtotal');
+        // Usar los valores guardados en la orden
+        $subtotal = $orden->subtotal ?? 0;
+        $montoIva = $orden->monto_iva ?? 0;
+        $total = $orden->costo_total ?? 0;
         
-        // Calcular IVA (19% por defecto, o calcularlo desde el costo_estimado si está disponible)
-        $porcentajeIva = 19;
-        $montoIva = $subtotal * ($porcentajeIva / 100);
-        
-        // El total puede ser costo_estimado o costo_final, o calcularlo desde subtotal + IVA
-        $total = $orden->costo_final ?? $orden->costo_estimado ?? ($subtotal + $montoIva);
-        
-        // Si el total ya incluye IVA, recalcular el IVA desde el total
-        if ($orden->costo_estimado || $orden->costo_final) {
-            // Si tenemos un total guardado, el IVA sería la diferencia
-            // Pero para mantener consistencia, usamos el cálculo estándar
+        // Si no hay valores guardados, calcular desde los items
+        if ($subtotal == 0) {
+            $subtotal = $orden->servicios()->sum('orden_servicio.subtotal') + 
+                        $orden->productos()->sum('orden_producto.subtotal');
+            $porcentajeIva = 19;
             $montoIva = $subtotal * ($porcentajeIva / 100);
-            $totalCalculado = $subtotal + $montoIva;
-            // Si el total guardado difiere mucho, usar el guardado
-            if (abs($total - $totalCalculado) > 1) {
-                $montoIva = $total - $subtotal;
-            }
+            $total = $subtotal + $montoIva;
         }
         
-        // Formatear valores
-        $subtotalFormatted = number_format($subtotal, 0, ',', '.');
-        $ivaFormatted = number_format($montoIva, 0, ',', '.');
-        $totalFormatted = number_format($total, 0, ',', '.');
+        // Formatear valores usando Number helper
+        $subtotalFormatted = \Illuminate\Support\Number::currency($subtotal, precision: 0);
+        $ivaFormatted = \Illuminate\Support\Number::currency($montoIva, precision: 0);
+        $totalFormatted = \Illuminate\Support\Number::currency($total, precision: 0);
         
         $cliente = $orden->dispositivo->cliente;
         $dispositivo = $orden->dispositivo;
@@ -297,9 +288,9 @@
             @forelse($allItems as $item)
             <tr>
                 <td class="col-producto">{{ $item['nombre'] }}</td>
-                <td class="col-precio">${{ number_format($item['precio_unitario'], 0, ',', '.') }}</td>
-                <td class="col-cantidad">{{ number_format($item['cantidad'], 0, ',', '.') }}</td>
-                <td class="col-total">${{ number_format($item['subtotal'], 0, ',', '.') }}</td>
+                <td class="col-precio">{{ Number::currency($item['precio_unitario'], precision: 0) }}</td>
+                <td class="col-cantidad">{{ Number::format($item['cantidad']) }}</td>
+                <td class="col-total">{{ Number::currency($item['subtotal'], precision: 0) }}</td>
             </tr>
             @empty
             <tr>
@@ -318,23 +309,23 @@
         <div class="totals-right">
             <div class="total-row">
                 <span class="total-label">Subtotal</span>
-                <span class="total-value">${{ $subtotalFormatted }}</span>
+                <span class="total-value">{{ $subtotalFormatted }}</span>
             </div>
             <div class="total-row">
                 <span class="total-label">IVA</span>
-                <span class="total-value">${{ $ivaFormatted }}</span>
+                <span class="total-value">{{ $ivaFormatted }}</span>
             </div>
             <div class="total-row total-final">
                 <span class="total-label">Total</span>
-                <span class="total-value">${{ $totalFormatted }}</span>
+                <span class="total-value">{{ $totalFormatted }}</span>
             </div>
             <div class="total-row" style="margin-top: 10px;">
                 <span class="total-label">Pagado:</span>
-                <span class="total-value">${{ number_format($orden->calcularTotalPagado(), 0, ',', '.') }}</span>
+                <span class="total-value">{{ Number::currency($orden->calcularTotalPagado(), precision: 0) }}</span>
             </div>
             <div class="total-row">
                 <span class="total-label">Saldo pendiente:</span>
-                <span class="total-value">${{ number_format($orden->saldo ?? 0, 0, ',', '.') }}</span>
+                <span class="total-value">{{ Number::currency($orden->saldo ?? 0, precision: 0) }}</span>
             </div>
         </div>
     </div>

@@ -83,8 +83,11 @@ test('muestra vista previa del PDF correctamente', function () {
         'fecha_entrega_estimada' => now()->addDays(7),
         'problema_reportado' => 'Pantalla rota',
         'estado' => EstadoOrden::EnReparacion,
-        'costo_estimado' => 50000,
+        'subtotal' => 42017,
+        'monto_iva' => 7983,
+        'costo_total' => 50000,
         'anticipo' => 10000,
+        'total_pagado' => 10000,
         'saldo' => 40000,
     ]);
 
@@ -114,7 +117,9 @@ test('descarga el PDF correctamente', function () {
         'fecha_ingreso' => now(),
         'problema_reportado' => 'No enciende',
         'estado' => EstadoOrden::Pendiente,
-        'costo_estimado' => 30000,
+        'subtotal' => 25210,
+        'monto_iva' => 4790,
+        'costo_total' => 30000,
     ]);
 
     $response = $this->actingAs($user)
@@ -164,9 +169,11 @@ test('el PDF incluye información completa de la orden', function () {
         'fecha_entrega_estimada' => now()->addDays(5),
         'problema_reportado' => 'Pantalla agrietada',
         'estado' => EstadoOrden::EnReparacion,
-        'costo_estimado' => 65000,
-        'costo_final' => 65000,
+        'subtotal' => 54622,
+        'monto_iva' => 10378,
+        'costo_total' => 65000,
         'anticipo' => 20000,
+        'total_pagado' => 20000,
         'saldo' => 45000,
     ]);
 

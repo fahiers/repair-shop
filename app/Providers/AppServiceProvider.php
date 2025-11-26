@@ -2,14 +2,12 @@
 
 namespace App\Providers;
 
-use App\Models\FacturaPago;
+use App\Models\OrdenPago;
 use App\Models\OrdenTrabajo;
-use App\Observers\FacturaPagoObserver;
+use App\Observers\OrdenPagoObserver;
 use App\Observers\OrdenTrabajoObserver;
+use Illuminate\Support\Number;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,12 +25,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         OrdenTrabajo::observe(OrdenTrabajoObserver::class);
-        FacturaPago::observe(FacturaPagoObserver::class);
+        OrdenPago::observe(OrdenPagoObserver::class);
 
-
-        //URL::forceScheme('https');
+        // Configurar moneda chilena (CLP) y locale español de Chile
+        Number::useCurrency('CLP');
+        Number::useLocale('es_CL');
     }
-
-
-   
 }

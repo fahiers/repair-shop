@@ -259,9 +259,8 @@
                 <div class="grid-col col-valor">
                     <span class="section-title">Valor total:</span>
                     <br><br>
-                    $
-                    @if($orden->costo_estimado > 0)
-                        {{ number_format($orden->costo_estimado, 0, ',', '.') }}
+                    @if($orden->costo_total > 0)
+                        {{ Number::currency($orden->costo_total, precision: 0) }}
                     @endif
                 </div>
             </div>

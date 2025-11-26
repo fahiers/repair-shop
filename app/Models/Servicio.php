@@ -18,6 +18,13 @@ class Servicio extends Model
         'estado',
     ];
 
+    protected function casts(): array
+    {
+        return [
+            'precio_base' => 'integer',
+        ];
+    }
+
     public function ordenes()
     {
         return $this->belongsToMany(OrdenTrabajo::class, 'orden_servicio', 'servicio_id', 'orden_id')
