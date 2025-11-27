@@ -19,6 +19,10 @@ new class extends Component
 
     public string $rut = '';
 
+    public string $facebook_username = '';
+
+    public string $instagram_username = '';
+
     public $logo = null;
 
     public ?string $logoPreview = null;
@@ -33,6 +37,8 @@ new class extends Component
             $this->telefono = $empresa->telefono ?? '';
             $this->direccion = $empresa->direccion ?? '';
             $this->rut = $empresa->rut ?? '';
+            $this->facebook_username = $empresa->facebook_username ?? '';
+            $this->instagram_username = $empresa->instagram_username ?? '';
             $this->logoPreview = $empresa->logo_url;
         }
     }
@@ -75,6 +81,8 @@ new class extends Component
             'telefono' => ['nullable', 'string', 'max:50'],
             'direccion' => ['nullable', 'string'],
             'rut' => ['nullable', 'string', 'max:20'],
+            'facebook_username' => ['nullable', 'string', 'max:255'],
+            'instagram_username' => ['nullable', 'string', 'max:255'],
             'logo' => ['nullable', 'image', 'mimes:png,jpg,jpeg,svg,webp', 'max:2048'],
         ]);
 
@@ -85,6 +93,8 @@ new class extends Component
         $empresa->telefono = $this->telefono ?: null;
         $empresa->direccion = $this->direccion ?: null;
         $empresa->rut = $this->rut ?: null;
+        $empresa->facebook_username = $this->facebook_username ?: null;
+        $empresa->instagram_username = $this->instagram_username ?: null;
 
         if ($this->logo) {
             // Eliminar logo anterior si existe
@@ -122,6 +132,10 @@ new class extends Component
             <flux:textarea wire:model="direccion" :label="__('Dirección')" rows="3" />
             
             <flux:input wire:model="rut" :label="__('RUT / Identificación Fiscal')" type="text" />
+
+            <flux:input wire:model="facebook_username" :label="__('Usuario de Facebook')" type="text" />
+            
+            <flux:input wire:model="instagram_username" :label="__('Usuario de Instagram')" type="text" />
 
             <div>
                 <flux:field>

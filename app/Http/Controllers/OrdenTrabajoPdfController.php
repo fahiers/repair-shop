@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Empresa;
 use App\Models\OrdenTrabajo;
+use App\Models\TerminosReciboIngreso;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class OrdenTrabajoPdfController extends Controller
@@ -21,9 +23,12 @@ class OrdenTrabajoPdfController extends Controller
             'comentarios.user',
         ]);
 
+        $empresa = Empresa::first();
+
         // Tamaño A4: 210mm x 297mm
         $pdf = Pdf::loadView('pdf.orden-trabajo', [
             'orden' => $orden,
+            'empresa' => $empresa,
         ])->setPaper('a4', 'portrait');
 
         return $pdf->stream("orden-trabajo-{$orden->numero_orden}.pdf");
@@ -43,9 +48,12 @@ class OrdenTrabajoPdfController extends Controller
             'comentarios.user',
         ]);
 
+        $empresa = Empresa::first();
+
         // Tamaño A4: 210mm x 297mm
         $pdf = Pdf::loadView('pdf.orden-trabajo', [
             'orden' => $orden,
+            'empresa' => $empresa,
         ])->setPaper('a4', 'portrait');
 
         return $pdf->download("orden-trabajo-{$orden->numero_orden}.pdf");
@@ -157,9 +165,21 @@ class OrdenTrabajoPdfController extends Controller
             'dispositivo.modelo',
         ]);
 
+        $empresa = Empresa::first();
+
+        $terminosConfig = TerminosReciboIngreso::query()->first();
+        $terminos = $terminosConfig && $terminosConfig->terminos
+            ? $terminosConfig->terminos
+            : [
+                'Los equipos descritos se entregaran solamente al portador de este recibo.',
+                'Despues de 30 dias de aceptado el presupuesto, en caso de no retiro, se cargaran $200 diarios por concepto de bodegaje.',
+            ];
+
         // Tamaño Carta o A4, ajustado para que quepa todo. Usaremos Letter por ahora.
         $pdf = Pdf::loadView('pdf.recibo-ingreso', [
             'orden' => $orden,
+            'empresa' => $empresa,
+            'terminos' => $terminos,
         ])->setPaper('letter', 'portrait');
 
         return $pdf->stream("recibo-ingreso-{$orden->numero_orden}.pdf");
@@ -175,8 +195,20 @@ class OrdenTrabajoPdfController extends Controller
             'dispositivo.modelo',
         ]);
 
+        $empresa = Empresa::first();
+
+        $terminosConfig = TerminosReciboIngreso::query()->first();
+        $terminos = $terminosConfig && $terminosConfig->terminos
+            ? $terminosConfig->terminos
+            : [
+                'Los equipos descritos se entregaran solamente al portador de este recibo.',
+                'Despues de 30 dias de aceptado el presupuesto, en caso de no retiro, se cargaran $200 diarios por concepto de bodegaje.',
+            ];
+
         $pdf = Pdf::loadView('pdf.recibo-ingreso', [
             'orden' => $orden,
+            'empresa' => $empresa,
+            'terminos' => $terminos,
         ])->setPaper('letter', 'portrait');
 
         return $pdf->download("recibo-ingreso-{$orden->numero_orden}.pdf");

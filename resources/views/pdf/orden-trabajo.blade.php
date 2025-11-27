@@ -19,12 +19,40 @@
         
         .header {
             margin-bottom: 15px;
+            display: table;
+            width: 100%;
+        }
+        
+        .header-left, .header-right {
+            display: table-cell;
+            vertical-align: top;
+        }
+        
+        .header-left {
+            width: 50%;
+        }
+        
+        .header-right {
+            width: 50%;
+            text-align: right;
         }
         
         .header-title {
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 5px;
+        }
+        
+        .header-empresa {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .header-empresa-info {
+            font-size: 12px;
+            margin-top: 3px;
+            line-height: 1.4;
         }
         
         .header-info {
@@ -222,8 +250,26 @@
 
     <!-- Encabezado -->
     <div class="header">
-        <div class="header-title">ORDEN DE TRABAJO</div>
-        <div class="header-info">#{{ $orden->numero_orden }} • {{ $orden->fecha_ingreso->format('d M Y') }}</div>
+        @if($empresa && $empresa->nombre)
+            <div class="header-left">
+                <div class="header-empresa">{{ $empresa->nombre }}</div>
+                <div class="header-empresa-info">
+                    @if($empresa->direccion)
+                        {{ $empresa->direccion }}<br>
+                    @endif
+                    @if($empresa->telefono)
+                        Tel: {{ $empresa->telefono }}
+                    @endif
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-title">PRESUPUESTO</div>
+                <div class="header-info">#{{ $orden->numero_orden }} • {{ $orden->fecha_ingreso->format('d M Y') }}</div>
+            </div>
+        @else
+            <div class="header-title">PRESUPUESTO</div>
+            <div class="header-info">#{{ $orden->numero_orden }} • {{ $orden->fecha_ingreso->format('d M Y') }}</div>
+        @endif
     </div>
     
     <!-- Línea separadora -->
@@ -240,7 +286,7 @@
         <div class="info-right device-info">
             @if($modelo)
                 <div class="device-brand">{{ strtoupper($modelo->marca) }}</div>
-                <div class="device-model">{{ $modelo->modelo }}@if($modelo->anio) {{ $modelo->anio }}@endif</div>
+                <div class="device-model">{{ $modelo->modelo }}</div>
             @else
                 <div class="device-model">Dispositivo sin modelo</div>
             @endif
@@ -319,14 +365,6 @@
                 <span class="total-label">Total</span>
                 <span class="total-value">{{ $totalFormatted }}</span>
             </div>
-            <div class="total-row" style="margin-top: 10px;">
-                <span class="total-label">Pagado:</span>
-                <span class="total-value">{{ Number::currency($orden->calcularTotalPagado(), precision: 0) }}</span>
-            </div>
-            <div class="total-row">
-                <span class="total-label">Saldo pendiente:</span>
-                <span class="total-value">{{ Number::currency($orden->saldo ?? 0, precision: 0) }}</span>
-            </div>
         </div>
     </div>
     
@@ -342,7 +380,5 @@
         </div>
     </div>
     
-    <!-- Línea final -->
-    <div class="separator-line" style="margin-top: 20px;"></div>
 </body>
 </html>

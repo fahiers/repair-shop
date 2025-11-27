@@ -20,6 +20,18 @@
         .container {
             width: 100%;
             max-width: 100%;
+            min-height: calc(100vh - 20mm);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container-content {
+            flex: 1;
+        }
+        
+        .signatures-section {
+            margin-top: auto;
+            padding-top: 20px;
         }
 
         /* Header styles */
@@ -166,13 +178,28 @@
         
         .header-left {
             display: table-cell;
-            width: 60%;
+            width: 50%;
+            vertical-align: top;
         }
         
         .header-right {
             display: table-cell;
-            width: 40%;
+            width: 50%;
             text-align: right;
+            vertical-align: top;
+        }
+        
+        .header-empresa {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .header-empresa-info {
+            font-size: 12px;
+            margin-top: 3px;
+            line-height: 1.4;
         }
 
         .client-box {
@@ -187,18 +214,54 @@
         $cliente = $orden->dispositivo->cliente;
         $dispositivo = $orden->dispositivo;
         $modelo = $dispositivo->modelo;
+        
+        // Iconos en base64
+        $facebookIcon = base64_encode(file_get_contents(public_path('images/facebook.png')));
+        $instagramIcon = base64_encode(file_get_contents(public_path('images/instagram.png')));
     @endphp
 
     <div class="container">
+        <div class="container-content">
         <!-- Encabezado con Datos -->
         <div class="header-section">
-            <div class="header-left">
-                <div class="title">RECIBO DE INGRESO</div>
-                <div><strong>N° Orden: {{ $orden->numero_orden }}</strong></div>
-            </div>
-            <div class="header-right">
-                <div>Fecha: {{ $orden->fecha_ingreso->format('d/m/Y') }}</div>
-            </div>
+            @if($empresa && $empresa->nombre)
+                <div class="header-left">
+                    <div class="header-empresa">{{ $empresa->nombre }}</div>
+                    <div class="header-empresa-info">
+                        @if($empresa->direccion)
+                            {{ $empresa->direccion }}<br>
+                        @endif
+                        @if($empresa->telefono)
+                            Tel: {{ $empresa->telefono }}
+                        @endif
+                        @if($empresa->facebook_username || $empresa->instagram_username)
+                            <div style="margin-top: 5px;">
+                                @if($empresa->facebook_username)
+                                    <span style="display: inline-block; margin-right: 10px;">
+                                        <img src="data:image/png;base64,{{ $facebookIcon }}" alt="Facebook" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 3px;">
+                                        {{ $empresa->facebook_username }}
+                                    </span>
+                                @endif
+                                @if($empresa->instagram_username)
+                                    <span style="display: inline-block;">
+                                        <img src="data:image/png;base64,{{ $instagramIcon }}" alt="Instagram" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 3px;">
+                                        {{ $empresa->instagram_username }}
+                                    </span>
+                                @endif
+                            </div>
+                        @endif
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="title">RECIBO DE INGRESO</div>
+                    <div><strong>N° Orden: {{ $orden->numero_orden }}</strong></div>
+                </div>
+            @else
+                <div class="header-left">
+                    <div class="title">RECIBO DE INGRESO</div>
+                    <div><strong>N° Orden: {{ $orden->numero_orden }}</strong></div>
+                </div>
+            @endif
         </div>
 
         <!-- Datos Cliente y Equipo -->
@@ -266,40 +329,41 @@
             </div>
         </div>
 
-        <!-- Sección Inferior: Legal y Firmas -->
-        <div style="display: table; width: 100%;">
-            <!-- Texto Legal (Lado Izquierdo/Centro) -->
-            <div style="display: table-cell; width: 60%; vertical-align: top; padding-right: 20px;">
-                <div class="legal-text">
-                    <strong>Al firmar, el cliente acepta las siguientes condiciones para su servicio:</strong>
-                    <ul class="legal-list">
-                        <li><strong>1*</strong> Los equipos descritos se entregaran solamente al portador de este recibo.</li>
-                        <li><strong>2*</strong> Despues de 30 dias de aceptado el presupuesto, en caso de no retiro, se cargaran $200 diarios por concepto de bodegaje.</li>
-                    </ul>
-                    <p>
-                        En caso de NO RETIRO DEL EQUIPO despues de 60 dias, nuestra empresa se guarda el derecho de disponer del equipo como forma de pago del servicio, sin lugar a reclamos posteriores. (Articulo 2525, 2526 Codigo Civil)
-                        
-                    </p>
-                </div>
-            </div>
+        <div class="footer-copy">
+            Copia Cliente
+        </div>
 
-            <!-- Firmas (Lado Derecho/Centro) -->
-            <div style="display: table-cell; width: 40%; vertical-align: bottom;">
-                <div style="margin-bottom: 40px; text-align: center;">
+        <!-- Sección Legal -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <div class="legal-text" style="width: 100%;">
+                <strong>Al firmar, el cliente acepta las siguientes condiciones para su servicio:</strong>
+                <ul class="legal-list">
+                    @foreach($terminos ?? [] as $index => $termino)
+                        <li><strong>{{ $index + 1 }}*</strong> {{ $termino }}</li>
+                    @endforeach
+                </ul>
+                <p>
+                    En caso de NO RETIRO DEL EQUIPO despues de 60 dias, nuestra empresa se guarda el derecho de disponer del equipo como forma de pago del servicio, sin lugar a reclamos posteriores. (Articulo 2525, 2526 Codigo Civil)
+
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <!-- Sección Firmas -->
+        <div class="signatures-section" style="width: 100%;">
+            <div style="display: table; width: 100%;">
+                <div style="display: table-cell; width: 50%; text-align: center; padding-right: 20px;">
                     <div class="sig-line"></div>
                     <div>Firma Cliente</div>
                 </div>
-
-                <div style="text-align: center;">
+                <div style="display: table-cell; width: 50%; text-align: center;">
                     <div class="sig-line"></div>
                     <div>Equipo entregado</div>
                 </div>
             </div>
         </div>
 
-        <div class="footer-copy">
-            Copia Tienda
-        </div>
     </div>
     
     <!-- Optional: Separator for two copies on one sheet if needed, but user asked for "the pdf of the image" -->

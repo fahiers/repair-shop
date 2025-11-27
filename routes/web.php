@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
         ->name('condiciones-garantia.preview');
 
     Volt::route('settings/condiciones-garantia', 'settings.condiciones-garantia')->name('condiciones-garantia.edit');
+    Volt::route('settings/terminos-recibo-ingreso', 'settings.terminos-recibo-ingreso')->name('terminos-recibo-ingreso.edit');
     Volt::route('settings/accesorios', 'settings.accesorios')->name('accesorios.index');
 
     Volt::route('settings/two-factor', 'settings.two-factor')

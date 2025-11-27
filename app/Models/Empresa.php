@@ -14,6 +14,8 @@ class Empresa extends Model
         'direccion',
         'rut',
         'logo_path',
+        'facebook_username',
+        'instagram_username',
     ];
 
     public function getLogoUrlAttribute(): ?string

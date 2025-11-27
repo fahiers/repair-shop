@@ -19,6 +19,8 @@ return new class extends Migration
             $table->text('direccion')->nullable();
             $table->string('rut', 20)->nullable();
             $table->string('logo_path', 255)->nullable();
+            $table->string('facebook_username', 255)->nullable();
+            $table->string('instagram_username', 255)->nullable();
             $table->timestamps();
         });
     }

@@ -12,6 +12,7 @@
             <flux:navlist.item :href="route('appearance.edit')" wire:navigate>{{ __('Apariencia') }}</flux:navlist.item>
             <flux:navlist.item :href="route('company.edit')" wire:navigate>{{ __('Configurar mi empresa') }}</flux:navlist.item>
             <flux:navlist.item :href="route('condiciones-garantia.edit')" wire:navigate>{{ __('Condiciones y garantía') }}</flux:navlist.item>
+            <flux:navlist.item :href="route('terminos-recibo-ingreso.edit')" wire:navigate>{{ __('Términos Recibo Ingreso') }}</flux:navlist.item>
             <flux:navlist.item :href="route('accesorios.index')" wire:navigate>{{ __('Accesorios') }}</flux:navlist.item>
         </flux:navlist>
     </div>
