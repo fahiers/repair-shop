@@ -19,6 +19,8 @@ class EditarCliente extends Component
 
     public ?string $rut = '';
 
+    public ?string $notas = '';
+
     public function mount(Cliente $cliente)
     {
         $this->cliente = $cliente;
@@ -27,6 +29,7 @@ class EditarCliente extends Component
         $this->email = $cliente->email ?? '';
         $this->direccion = $cliente->direccion ?? '';
         $this->rut = $cliente->rut ?? '';
+        $this->notas = $cliente->notas ?? '';
     }
 
     public function update()
@@ -37,6 +40,7 @@ class EditarCliente extends Component
             'email' => 'required|email|max:255|unique:clientes,email,'.$this->cliente->id,
             'direccion' => 'required|string|max:255',
             'rut' => 'required|string|max:255|unique:clientes,rut,'.$this->cliente->id,
+            'notas' => 'nullable|string|max:255',
         ]);
 
         $this->cliente->update([
@@ -45,6 +49,7 @@ class EditarCliente extends Component
             'email' => $this->email,
             'direccion' => $this->direccion,
             'rut' => $this->rut,
+            'notas' => $this->notas,
         ]);
 
         return $this->redirectRoute('clientes.index');

@@ -16,6 +16,7 @@ class Cliente extends Model
         'email',
         'direccion',
         'rut',
+        'notas',
     ];
 
     public function dispositivos()

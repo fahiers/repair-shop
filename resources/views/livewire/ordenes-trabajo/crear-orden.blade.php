@@ -381,15 +381,15 @@
                     @endif
 
                     <div class="flex items-center justify-start gap-2">
-                        <button disabled class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
+                        <button disabled title="Guardar orden para imprimir" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
                             <flux:icon.printer class="size-4" />
                             Orden
                         </button>
-                        <button disabled class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
+                        <button disabled title="Guardar orden para imprimir" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
                             <flux:icon.tag class="size-4" />
                             Etiqueta
                         </button>
-                        <button disabled class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
+                        <button disabled title="Guardar orden para imprimir" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
                             <flux:icon.document-text class="size-4" />
                             Informe
                         </button>
@@ -401,7 +401,7 @@
                                 @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)
                                 title="{{ !$dispositivoSeleccionado ? 'Seleccione un dispositivo' : (strlen($asunto) < 3 ? 'Ingrese una descripción (mín. 3 caracteres)' : 'Guardar orden') }}"
                                 class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">
-                            Actualizar
+                            Guardar
                         </button>
                     </div>
                 </div>
@@ -468,7 +468,7 @@
                                     <div class="min-w-0">
                                         @php
                                             $nombreCompletoDispositivo = $dispositivoSeleccionado['modelo'] 
-                                                ? trim($dispositivoSeleccionado['modelo']['marca'] . ' ' . $dispositivoSeleccionado['modelo']['modelo'] . ($dispositivoSeleccionado['modelo']['anio'] ? ' (' . $dispositivoSeleccionado['modelo']['anio'] . ')' : ''))
+                                                ? trim($dispositivoSeleccionado['modelo']['marca'] . ' ' . $dispositivoSeleccionado['modelo']['modelo'])
                                                 : 'Sin modelo';
                                         @endphp
                                         <p class="font-semibold truncate" title="{{ $nombreCompletoDispositivo }}">
@@ -518,7 +518,6 @@
                                                 <p class="font-medium">
                                                     @if($dc['modelo'])
                                                         {{ $dc['modelo']['marca'] }} {{ $dc['modelo']['modelo'] }}
-                                                        @if($dc['modelo']['anio']) ({{ $dc['modelo']['anio'] }}) @endif
                                                     @else
                                                         Sin modelo
                                                     @endif
@@ -1357,6 +1356,23 @@
         <div x-init="$watch('open', value => { if(value){ setTimeout(() => open = false, 2500) } })" class="flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white shadow-lg">
             <flux:icon.check class="size-4" />
             <span class="text-sm font-medium">Equipo actualizado correctamente</span>
+        </div>
+    </div>
+
+    <!-- Toast de éxito al crear orden -->
+    <div 
+        x-data="{ 
+            open: @entangle('mostrarToastOrdenCreada'),
+            redirectUrl: null
+        }" 
+        x-show="open" 
+        x-transition.opacity 
+        class="fixed bottom-4 right-4 z-50"
+        @orden-creada.window="redirectUrl = $event.detail.url; setTimeout(() => { if(redirectUrl) window.location.href = redirectUrl; }, 1500)"
+    >
+        <div x-init="$watch('open', value => { if(value){ setTimeout(() => open = false, 2500) } })" class="flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white shadow-lg">
+            <flux:icon.check class="size-4" />
+            <span class="text-sm font-medium">Orden creada exitosamente</span>
         </div>
     </div>
 

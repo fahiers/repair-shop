@@ -138,6 +138,8 @@ class EditarOrden extends Component
 
     public bool $mostrarToastEquipoActualizado = false;
 
+    public bool $mostrarToastOrdenActualizada = false;
+
     public bool $mostrarModalCrearModelo = false;
 
     public string $modeloNuevoMarca = '';
@@ -1678,8 +1680,11 @@ class EditarOrden extends Component
             return $this->orden;
         });
 
-        // Redirigir a índice
-        $this->redirect(route('ordenes-trabajo.index'));
+        // Refrescar la orden para obtener los datos actualizados
+        $this->orden->refresh();
+
+        // Activar toast de éxito
+        $this->mostrarToastOrdenActualizada = true;
     }
 
     public function getTecnicosDisponiblesProperty(): array
@@ -1734,6 +1739,14 @@ class EditarOrden extends Component
 
     public function abrirModalPago(): void
     {
+        // Refrescar la orden para obtener el estado actualizado
+        $this->orden->refresh();
+
+        // Validar que la orden esté en un estado que permita pagos
+        if (! in_array($this->orden->estado, [EstadoOrden::Listo, EstadoOrden::Entregado], true)) {
+            return;
+        }
+
         $this->pagoMonto = '';
         $this->pagoMetodo = 'efectivo';
         $this->pagoReferencia = '';
@@ -1750,6 +1763,23 @@ class EditarOrden extends Component
 
     public function registrarPago(): void
     {
+        // Refrescar la orden para obtener el estado actualizado
+        $this->orden->refresh();
+
+        // Validar que la orden no esté cancelada
+        if ($this->orden->estado === EstadoOrden::Cancelado) {
+            $this->addError('orden', 'No se pueden registrar pagos en órdenes canceladas.');
+
+            return;
+        }
+
+        // Validar que solo se permitan pagos en estados Listo o Entregado
+        if (! in_array($this->orden->estado, [EstadoOrden::Listo, EstadoOrden::Entregado], true)) {
+            $this->addError('orden', 'Solo se pueden registrar pagos cuando la orden está lista o entregada.');
+
+            return;
+        }
+
         $this->validate([
             'pagoMonto' => 'required|numeric|min:1',
             'pagoMetodo' => 'required|in:efectivo,tarjeta,transferencia,otros',
@@ -1763,9 +1793,12 @@ class EditarOrden extends Component
             'pagoMetodo.in' => 'Método de pago no válido.',
         ]);
 
+        // Obtener el saldo pendiente real de la orden
+        $saldoPendiente = (int) ($this->orden->saldo ?? 0);
+
         // Validar que el monto no exceda el saldo pendiente
-        if ((float) $this->pagoMonto > $this->saldoPendiente) {
-            $this->addError('pagoMonto', 'El monto no puede ser mayor al saldo pendiente ($'.number_format($this->saldoPendiente, 0, ',', '.').').');
+        if ((float) $this->pagoMonto > $saldoPendiente) {
+            $this->addError('pagoMonto', 'El monto no puede ser mayor al saldo pendiente ($'.number_format($saldoPendiente, 0, ',', '.').').');
 
             return;
         }

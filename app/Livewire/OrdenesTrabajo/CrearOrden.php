@@ -156,6 +156,8 @@ class CrearOrden extends Component
 
     public bool $mostrarToastEquipoActualizado = false;
 
+    public bool $mostrarToastOrdenCreada = false;
+
     // Crear nuevo modelo (desde modal de dispositivo)
     public bool $mostrarModalCrearModelo = false;
 
@@ -1327,8 +1329,11 @@ class CrearOrden extends Component
             return $orden;
         });
 
-        // Redirigir a índice o detalle (por ahora índice)
-        return redirect()->route('ordenes-trabajo.index');
+        // Activar toast de éxito
+        $this->mostrarToastOrdenCreada = true;
+
+        // Disparar evento para redirigir después de mostrar el toast
+        $this->dispatch('orden-creada', url: route('ordenes-trabajo.editar', $orden->id));
     }
 
     public function getPuedeEnviarComentarioProperty(): bool

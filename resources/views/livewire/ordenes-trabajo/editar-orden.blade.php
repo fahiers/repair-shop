@@ -76,7 +76,15 @@
                         </flux:menu>
                     </flux:dropdown>
 
-                    <button type="button" wire:click="abrirModalPago" class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 flex items-center gap-2">
+                    @php
+                        $puedePagar = in_array($orden->estado, [\App\Enums\EstadoOrden::Listo, \App\Enums\EstadoOrden::Entregado], true);
+                    @endphp
+                    <button 
+                        type="button" 
+                        wire:click="abrirModalPago" 
+                        @disabled(!$puedePagar)
+                        title="{{ $puedePagar ? 'Registrar pago' : 'Orden tiene que estar en estado listo o entregado para pago' }}"
+                        class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-zinc-400 disabled:hover:bg-zinc-400 flex items-center gap-2">
                         <flux:icon.currency-dollar class="size-4" />
                         Ingresar pago
                     </button>
@@ -479,7 +487,7 @@
                                     <div class="min-w-0">
                                         @php
                                             $nombreCompletoDispositivo = $dispositivoSeleccionado['modelo'] 
-                                                ? trim($dispositivoSeleccionado['modelo']['marca'] . ' ' . $dispositivoSeleccionado['modelo']['modelo'] . ($dispositivoSeleccionado['modelo']['anio'] ? ' (' . $dispositivoSeleccionado['modelo']['anio'] . ')' : ''))
+                                                ? trim($dispositivoSeleccionado['modelo']['marca'] . ' ' . $dispositivoSeleccionado['modelo']['modelo'])
                                                 : 'Sin modelo';
                                         @endphp
                                         <p class="font-semibold truncate" title="{{ $nombreCompletoDispositivo }}">
@@ -527,7 +535,6 @@
                                                 <p class="font-medium">
                                                     @if($dc['modelo'])
                                                         {{ $dc['modelo']['marca'] }} {{ $dc['modelo']['modelo'] }}
-                                                        @if($dc['modelo']['anio']) ({{ $dc['modelo']['anio'] }}) @endif
                                                     @else
                                                         Sin modelo
                                                     @endif
@@ -1293,6 +1300,14 @@
         <div x-init="$watch('open', value => { if(value){ setTimeout(() => open = false, 2500) } })" class="flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white shadow-lg">
             <flux:icon.check class="size-4" />
             <span class="text-sm font-medium">Equipo actualizado correctamente</span>
+        </div>
+    </div>
+
+    <!-- Toast de éxito al actualizar orden -->
+    <div x-data="{ open: @entangle('mostrarToastOrdenActualizada') }" x-show="open" x-transition.opacity class="fixed bottom-4 right-4 z-50">
+        <div x-init="$watch('open', value => { if(value){ setTimeout(() => open = false, 2500) } })" class="flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white shadow-lg">
+            <flux:icon.check class="size-4" />
+            <span class="text-sm font-medium">Orden actualizada correctamente</span>
         </div>
     </div>
 

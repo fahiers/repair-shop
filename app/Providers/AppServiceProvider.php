@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Empresa;
 use App\Models\OrdenPago;
 use App\Models\OrdenTrabajo;
 use App\Observers\OrdenPagoObserver;
@@ -30,5 +31,10 @@ class AppServiceProvider extends ServiceProvider
         // Configurar moneda chilena (CLP) y locale español de Chile
         Number::useCurrency('CLP');
         Number::useLocale('es_CL');
+
+        // Compartir datos de la empresa con todas las vistas
+        view()->composer('*', function ($view) {
+            $view->with('empresa', Empresa::first());
+        });
     }
 }

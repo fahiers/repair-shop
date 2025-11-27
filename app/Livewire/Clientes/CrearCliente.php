@@ -2,16 +2,22 @@
 
 namespace App\Livewire\Clientes;
 
-use Livewire\Component;
 use App\Models\Cliente;
+use Livewire\Component;
 
 class CrearCliente extends Component
 {
     public string $nombre = '';
+
     public string $telefono = '';
+
     public string $email = '';
+
     public string $direccion = '';
+
     public string $rut = '';
+
+    public ?string $notas = '';
 
     public function save()
     {
@@ -21,6 +27,7 @@ class CrearCliente extends Component
             'email' => 'required|email|max:255|unique:clientes',
             'direccion' => 'required|string|max:255',
             'rut' => 'required|string|max:255|unique:clientes',
+            'notas' => 'nullable|string|max:255',
         ]);
 
         Cliente::create([
@@ -29,6 +36,7 @@ class CrearCliente extends Component
             'email' => $this->email,
             'direccion' => $this->direccion,
             'rut' => $this->rut,
+            'notas' => $this->notas,
         ]);
 
         return $this->redirectRoute('clientes.index');

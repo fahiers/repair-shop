@@ -1,5 +1,11 @@
 <div class="max-w-3xl mx-auto px-4">
-    <h1 class="text-2xl md:text-3xl font-semibold text-gray-900">Editar modelo de dispositivo</h1>
+    <div class="flex items-center gap-3 mb-6">
+        <a href="{{ route('modelos.index') }}" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700" title="Volver a modelos de dispositivos">
+            <flux:icon.arrow-left class="size-4" />
+            <span class="sr-only">Volver</span>
+        </a>
+        <h1 class="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-gray-100">Editar modelo de dispositivo</h1>
+    </div>
     <form wire:submit.prevent="update" class="mt-6 space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
