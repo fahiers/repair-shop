@@ -832,6 +832,45 @@ class EditarOrden extends Component
         return max(0, $this->total - $pagos);
     }
 
+    /**
+     * Sincroniza el anticipo con el registro de pago correspondiente.
+     * - Si el anticipo cambió, actualiza o crea el pago de "Anticipo inicial"
+     * - Si el anticipo es 0, elimina el pago de anticipo si existe
+     */
+    protected function sincronizarAnticipoConPago(): void
+    {
+        $anticipoActual = (int) $this->anticipo;
+
+        // Buscar el pago de anticipo existente
+        $pagoAnticipo = $this->orden->pagos()
+            ->where('notas', 'Anticipo inicial')
+            ->first();
+
+        if ($anticipoActual > 0) {
+            if ($pagoAnticipo) {
+                // Actualizar el pago existente si el monto cambió
+                if ((int) $pagoAnticipo->monto !== $anticipoActual) {
+                    $pagoAnticipo->update([
+                        'monto' => $anticipoActual,
+                    ]);
+                }
+            } else {
+                // Crear nuevo pago de anticipo
+                $this->orden->pagos()->create([
+                    'fecha_pago' => $this->orden->fecha_ingreso->toDateString(),
+                    'monto' => $anticipoActual,
+                    'metodo_pago' => 'efectivo',
+                    'notas' => 'Anticipo inicial',
+                ]);
+            }
+        } else {
+            // Si el anticipo es 0, eliminar el pago de anticipo si existe
+            if ($pagoAnticipo) {
+                $pagoAnticipo->delete();
+            }
+        }
+    }
+
     public function updatedAplicarIva(): void
     {
         $this->recalcularTotales();
@@ -1678,6 +1717,9 @@ class EditarOrden extends Component
             // Sincronizar servicios y productos
             $this->orden->servicios()->sync($serviciosSync);
             $this->orden->productos()->sync($productosSync);
+
+            // Sincronizar anticipo con el pago correspondiente
+            $this->sincronizarAnticipoConPago();
 
             // Recalcular saldo usando el método del modelo
             $this->orden->recalcularSaldo();
