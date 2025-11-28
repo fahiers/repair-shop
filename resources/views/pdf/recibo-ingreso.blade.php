@@ -224,7 +224,7 @@
         <div class="container-content">
         <!-- Encabezado con Datos -->
         <div class="header-section">
-            @if($empresa && $empresa->nombre)
+            @if($empresa && $empresa->nombre && trim($empresa->nombre) !== '')
                 <div class="header-left">
                     <div class="header-empresa">{{ $empresa->nombre }}</div>
                     <div class="header-empresa-info">

@@ -250,7 +250,7 @@
 
     <!-- Encabezado -->
     <div class="header">
-        @if($empresa && $empresa->nombre)
+        @if($empresa && $empresa->nombre && trim($empresa->nombre) !== '')
             <div class="header-left">
                 <div class="header-empresa">{{ $empresa->nombre }}</div>
                 <div class="header-empresa-info">

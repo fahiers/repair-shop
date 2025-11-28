@@ -94,9 +94,8 @@ new class extends Component {
                         type="button"
                         variant="ghost"
                         wire:click="addTermino"
-                        class="w-full"
+                        class="w-full py-4 border-2 border-dashed border-zinc-300 dark:border-zinc-600 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors"
                     >
-                        <flux:icon name="plus" class="me-2" />
                         {{ __('Agregar término') }}
                     </flux:button>
 

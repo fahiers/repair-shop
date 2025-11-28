@@ -1514,7 +1514,7 @@ class CrearOrden extends Component
 
         // Solo validar RUT si no está vacío
         if ($rut !== '') {
-            $rules['clienteNuevoRut'] = 'string|max:255|unique:clientes,rut';
+            $rules['clienteNuevoRut'] = ['string', 'max:255', 'unique:clientes,rut', 'cl_rut'];
         }
 
         $this->validate($rules, [
@@ -1522,6 +1522,7 @@ class CrearOrden extends Component
             'clienteNuevoEmail.email' => 'El email debe ser válido.',
             'clienteNuevoEmail.unique' => 'Este email ya está registrado.',
             'clienteNuevoRut.unique' => 'Este RUT ya está registrado.',
+            'clienteNuevoRut.cl_rut' => 'El campo RUT no es un RUT chileno válido.',
         ]);
 
         $cliente = Cliente::create([
@@ -1529,13 +1530,37 @@ class CrearOrden extends Component
             'telefono' => trim($this->clienteNuevoTelefono) ?: null,
             'email' => $email ?: null,
             'direccion' => trim($this->clienteNuevoDireccion) ?: null,
-            'rut' => $rut ?: null,
+            'rut' => $rut ? $this->normalizarRut($rut) : null,
         ]);
 
         $this->mostrarModalCrearCliente = false;
 
         // Seleccionar automáticamente el cliente creado
         $this->selectClient($cliente->id);
+    }
+
+    /**
+     * Normaliza el RUT al formato estándar sin puntos: 12345678-9
+     */
+    private function normalizarRut(?string $rut): ?string
+    {
+        if (empty($rut)) {
+            return null;
+        }
+
+        // Limpiar y obtener solo números y K
+        $rut = preg_replace('/[^0-9kK]/', '', strtoupper($rut));
+
+        if (strlen($rut) < 2) {
+            return $rut;
+        }
+
+        // Separar cuerpo y dígito verificador
+        $cuerpo = substr($rut, 0, -1);
+        $dv = substr($rut, -1);
+
+        // Retornar formato estándar: 12345678-9
+        return $cuerpo . '-' . $dv;
     }
 
     public function abrirMiniModalCrearItem(): void

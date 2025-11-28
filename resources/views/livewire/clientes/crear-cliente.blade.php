@@ -40,7 +40,7 @@
 
                             <flux:field>
                                 <flux:label>{{ __('RUT') }}</flux:label>
-                                <flux:input wire:model.defer="rut" />
+                                <flux:input wire:model.blur="rut" placeholder="12345678-9" />
                                 <flux:error name="rut" />
                             </flux:field>
                         </div>

@@ -76,7 +76,7 @@ new class extends Component
     public function save(): void
     {
         $this->validate([
-            'nombre' => ['required', 'string', 'max:255'],
+            'nombre' => ['nullable', 'string', 'max:255'],
             'email' => ['nullable', 'email', 'max:255'],
             'telefono' => ['nullable', 'string', 'max:50'],
             'direccion' => ['nullable', 'string'],
@@ -88,7 +88,7 @@ new class extends Component
 
         $empresa = Empresa::firstOrNew();
 
-        $empresa->nombre = $this->nombre;
+        $empresa->nombre = trim($this->nombre) !== '' ? $this->nombre : null;
         $empresa->email = $this->email ?: null;
         $empresa->telefono = $this->telefono ?: null;
         $empresa->direccion = $this->direccion ?: null;
@@ -123,7 +123,7 @@ new class extends Component
 
     <x-settings.layout :heading="__('Configurar mi empresa')" :subheading="__('Actualiza la información básica de tu empresa')">
         <form wire:submit="save" class="my-6 w-full space-y-6">
-            <flux:input wire:model="nombre" :label="__('Nombre de la empresa')" type="text" required autofocus />
+            <flux:input wire:model="nombre" :label="__('Nombre de la empresa')" type="text" autofocus />
             
             <flux:input wire:model="email" :label="__('Correo de la empresa')" type="email" />
             
