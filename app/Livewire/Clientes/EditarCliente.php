@@ -3,6 +3,7 @@
 namespace App\Livewire\Clientes;
 
 use App\Models\Cliente;
+use Illuminate\Validation\Rule;
 use Livewire\Component;
 
 class EditarCliente extends Component
@@ -37,9 +38,9 @@ class EditarCliente extends Component
         return [
             'nombre' => 'required|string|max:255',
             'telefono' => 'nullable|string|max:255',
-            'email' => 'nullable|email|max:255|unique:clientes,email,'.$this->cliente->id,
+            'email' => ['nullable', 'email', 'max:255', Rule::unique('clientes', 'email')->ignore($this->cliente->id)],
             'direccion' => 'nullable|string|max:255',
-            'rut' => ['nullable', 'string', 'max:255', 'unique:clientes,rut,'.$this->cliente->id, 'cl_rut'],
+            'rut' => ['nullable', 'string', 'max:255', Rule::unique('clientes', 'rut')->ignore($this->cliente->id), 'cl_rut'],
             'notas' => 'nullable|string|max:255',
         ];
     }
@@ -47,20 +48,56 @@ class EditarCliente extends Component
     public function updated($propertyName)
     {
         if ($propertyName === 'rut' && !empty($this->rut)) {
-            $this->validateOnly($propertyName);
+            // Normalizar el RUT antes de validar para que la comparación sea correcta
+            $rutNormalizado = $this->normalizarRut($this->rut);
+            $rutOriginal = $this->rut;
+            
+            // Si el RUT normalizado es igual al RUT del cliente actual, no validar unicidad
+            $rutClienteActual = $this->cliente->rut ? $this->normalizarRut($this->cliente->rut) : null;
+            
+            if ($rutNormalizado === $rutClienteActual) {
+                // Limpiar errores de validación si el RUT es el mismo
+                $this->resetErrorBag('rut');
+            } else {
+                $this->rut = $rutNormalizado;
+                
+                try {
+                    $this->validateOnly($propertyName);
+                } finally {
+                    // Restaurar el formato original para mostrar en el formulario
+                    $this->rut = $rutOriginal;
+                }
+            }
         }
     }
 
     public function update()
     {
-        $this->validate();
+        // Normalizar el RUT antes de validar para que la comparación sea correcta
+        $rutNormalizado = null;
+        if (!empty($this->rut)) {
+            $rutNormalizado = $this->normalizarRut($this->rut);
+            $this->rut = $rutNormalizado;
+        }
+        
+        // Si el RUT normalizado es igual al RUT del cliente actual, 
+        // crear reglas de validación sin la regla unique para el RUT
+        $rutClienteActual = $this->cliente->rut ? $this->normalizarRut($this->cliente->rut) : null;
+        $rules = $this->rules();
+        
+        if ($rutNormalizado === $rutClienteActual) {
+            // Remover la regla unique del RUT si es el mismo
+            $rules['rut'] = ['nullable', 'string', 'max:255', 'cl_rut'];
+        }
+        
+        $this->validate($rules);
 
         $this->cliente->update([
             'nombre' => $this->nombre,
             'telefono' => $this->telefono,
             'email' => $this->email,
             'direccion' => $this->direccion,
-            'rut' => $this->rut ? $this->normalizarRut($this->rut) : null,
+            'rut' => $rutNormalizado,
             'notas' => $this->notas,
         ]);
 
