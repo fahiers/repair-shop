@@ -32,7 +32,7 @@ new class extends Component
         $empresa = Empresa::first();
 
         if ($empresa) {
-            $this->nombre = $empresa->nombre;
+            $this->nombre = $empresa->nombre ?? '';
             $this->email = $empresa->email ?? '';
             $this->telefono = $empresa->telefono ?? '';
             $this->direccion = $empresa->direccion ?? '';
@@ -86,7 +86,11 @@ new class extends Component
             'logo' => ['nullable', 'image', 'mimes:png,jpg,jpeg,svg,webp', 'max:2048'],
         ]);
 
-        $empresa = Empresa::firstOrNew();
+        $empresa = Empresa::first();
+
+        if (! $empresa) {
+            $empresa = new Empresa();
+        }
 
         $empresa->nombre = trim($this->nombre) !== '' ? $this->nombre : null;
         $empresa->email = $this->email ?: null;
@@ -108,9 +112,15 @@ new class extends Component
 
         $empresa->save();
 
-        // Resetear preview si se guardó exitosamente
+        // Refrescar el modelo para obtener los valores actualizados
+        $empresa->refresh();
+
+        // Actualizar preview después de guardar
         if ($this->logo) {
             $this->logo = null;
+            $this->logoPreview = $empresa->logo_url;
+        } elseif ($empresa->logo_path) {
+            // Si no se subió un nuevo logo pero existe uno, mantener el preview
             $this->logoPreview = $empresa->logo_url;
         }
 

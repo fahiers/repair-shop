@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Empresa;
 use App\Models\OrdenTrabajo;
 use App\Models\TerminosReciboIngreso;
+use App\Services\ThermalPdfService;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class OrdenTrabajoPdfController extends Controller
@@ -212,5 +213,43 @@ class OrdenTrabajoPdfController extends Controller
         ])->setPaper('letter', 'portrait');
 
         return $pdf->download("recibo-ingreso-{$orden->numero_orden}.pdf");
+    }
+
+    /**
+     * Muestra una vista previa del sticker térmico en el navegador.
+     */
+    public function previewStickerTermico(OrdenTrabajo $orden, ThermalPdfService $thermalPdf): \Illuminate\Http\Response
+    {
+        $orden->load([
+            'dispositivo.cliente',
+            'dispositivo.modelo',
+        ]);
+
+        $pdfBinary = $thermalPdf->renderViewSticker88mm('pdf.sticker-termico', [
+            'orden' => $orden,
+        ]);
+
+        return response($pdfBinary)
+            ->header('Content-Type', 'application/pdf')
+            ->header('Content-Disposition', 'inline; filename="sticker-termico-'.$orden->numero_orden.'.pdf"');
+    }
+
+    /**
+     * Descarga el sticker térmico directamente.
+     */
+    public function downloadStickerTermico(OrdenTrabajo $orden, ThermalPdfService $thermalPdf): \Illuminate\Http\Response
+    {
+        $orden->load([
+            'dispositivo.cliente',
+            'dispositivo.modelo',
+        ]);
+
+        $pdfBinary = $thermalPdf->renderViewSticker88mm('pdf.sticker-termico', [
+            'orden' => $orden,
+        ]);
+
+        return response($pdfBinary)
+            ->header('Content-Type', 'application/pdf')
+            ->header('Content-Disposition', 'attachment; filename="sticker-termico-'.$orden->numero_orden.'.pdf"');
     }
 }

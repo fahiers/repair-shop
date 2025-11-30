@@ -38,6 +38,14 @@ Route::get('/{orden}/sticker/download', [OrdenTrabajoPdfController::class, 'down
     ->name('ordenes-trabajo.sticker.download')
     ->middleware(['auth', 'web']);
 
+Route::get('/{orden}/sticker-termico', [OrdenTrabajoPdfController::class, 'previewStickerTermico'])
+    ->name('ordenes-trabajo.sticker-termico')
+    ->middleware(['auth', 'web']);
+
+Route::get('/{orden}/sticker-termico/download', [OrdenTrabajoPdfController::class, 'downloadStickerTermico'])
+    ->name('ordenes-trabajo.sticker-termico.download')
+    ->middleware(['auth', 'web']);
+
 Route::get('/{orden}/condiciones-garantia', [App\Http\Controllers\CondicionesGarantiaPdfController::class, 'previewFromOrden'])
     ->name('ordenes-trabajo.condiciones-garantia')
     ->middleware(['auth', 'web']);
