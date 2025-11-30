@@ -476,14 +476,16 @@ class CrearOrden extends Component
                 return;
             }
 
-            $precioOriginal = (float) $servicio->precio_base;
+            // El precio_base en la BD ya es bruto (con IVA incluido)
+            $precioBruto = (float) $servicio->precio_base;
+
             $this->items[] = [
                 'id' => $servicio->id,
                 'tipo' => 'servicio',
                 'nombre' => $servicio->nombre,
                 'cantidad' => 1,
-                'precio' => $precioOriginal,
-                'precio_original' => $precioOriginal,
+                'precio' => $precioBruto, // Precio bruto (con IVA incluido)
+                'precio_original' => $precioBruto,
                 'descuento' => 0,
             ];
         } else {
@@ -501,14 +503,16 @@ class CrearOrden extends Component
                 return;
             }
 
-            $precioOriginal = (float) $producto->precio_venta;
+            // El precio_venta en la BD ya es bruto (con IVA incluido)
+            $precioBruto = (float) $producto->precio_venta;
+
             $this->items[] = [
                 'id' => $producto->id,
                 'tipo' => 'producto',
                 'nombre' => $producto->nombre,
                 'cantidad' => 1,
-                'precio' => $precioOriginal,
-                'precio_original' => $precioOriginal,
+                'precio' => $precioBruto, // Precio bruto (con IVA incluido)
+                'precio_original' => $precioBruto,
                 'descuento' => 0,
             ];
         }
@@ -577,34 +581,77 @@ class CrearOrden extends Component
         }
     }
 
+    /**
+     * Calcula el precio neto desde un precio bruto (con IVA incluido).
+     * Fórmula: neto = bruto / (1 + porcentajeIva/100)
+     */
+    protected function calcularPrecioNetoDesdeBruto(float $precioBruto): float
+    {
+        if (! $this->aplicarIva || $this->porcentajeIva <= 0) {
+            return $precioBruto;
+        }
+
+        $factorIva = 1 + ($this->porcentajeIva / 100);
+
+        return round($precioBruto / $factorIva, 2);
+    }
+
+    /**
+     * Calcula el precio bruto desde un precio neto (sin IVA).
+     * Fórmula: bruto = neto * (1 + porcentajeIva/100)
+     */
+    protected function calcularPrecioBrutoDesdeNeto(float $precioNeto): float
+    {
+        if (! $this->aplicarIva || $this->porcentajeIva <= 0) {
+            return $precioNeto;
+        }
+
+        $factorIva = 1 + ($this->porcentajeIva / 100);
+
+        return round($precioNeto * $factorIva, 2);
+    }
+
     public function recalcularTotales(): void
     {
-        // Calcular subtotal de items
-        $this->subtotalItems = (int) round(collect($this->items)->sum(function ($item) {
-            $cantidad = (int) ($item['cantidad'] ?? 1);
-            $precio = (int) ($item['precio'] ?? 0);
+        // El precio en $item['precio'] es ahora BRUTO (con IVA incluido)
+        $totalBruto = 0;
+        $subtotalNeto = 0;
+        $totalDescuentosBruto = 0;
 
-            return $cantidad * $precio;
-        }));
-
-        // Calcular descuentos
-        $this->totalDescuentos = (int) round(collect($this->items)->sum(function ($item) {
+        foreach ($this->items as $item) {
             $cantidad = (int) ($item['cantidad'] ?? 1);
-            $precio = (int) ($item['precio'] ?? 0);
-            $subtotal = $cantidad * $precio;
+            $precioBruto = (float) ($item['precio'] ?? 0);
             $descuentoPorcentaje = (float) ($item['descuento'] ?? 0);
 
-            return $subtotal * ($descuentoPorcentaje / 100);
-        }));
+            // Calcular precio neto desde el precio bruto
+            $precioNeto = $this->calcularPrecioNetoDesdeBruto($precioBruto);
 
-        // Calcular subtotal con descuento
-        $this->subtotalConDescuento = $this->subtotalItems - $this->totalDescuentos;
+            // Subtotal bruto por ítem (antes de descuento)
+            $subtotalBrutoItem = $cantidad * $precioBruto;
 
-        // Calcular IVA
-        $this->montoIva = $this->aplicarIva ? (int) round($this->subtotalConDescuento * ($this->porcentajeIva / 100)) : 0;
+            // Descuento aplicado al subtotal bruto
+            $descuentoBrutoItem = $subtotalBrutoItem * ($descuentoPorcentaje / 100);
 
-        // Calcular total (costo estimado)
-        $this->total = $this->subtotalConDescuento + $this->montoIva;
+            // Total bruto del ítem (después de descuento)
+            $totalBrutoItem = $subtotalBrutoItem - $descuentoBrutoItem;
+
+            // Subtotal neto del ítem (después de descuento)
+            $subtotalNetoItem = ($cantidad * $precioNeto) * (1 - ($descuentoPorcentaje / 100));
+
+            // Acumular totales
+            $totalBruto += $totalBrutoItem;
+            $subtotalNeto += $subtotalNetoItem;
+            $totalDescuentosBruto += $descuentoBrutoItem;
+        }
+
+        // Redondear valores
+        $this->subtotalItems = (int) round($totalBruto + $totalDescuentosBruto);
+        $this->totalDescuentos = (int) round($totalDescuentosBruto);
+        $this->subtotalConDescuento = (int) round($subtotalNeto);
+        $this->total = (int) round($totalBruto);
+
+        // IVA = diferencia entre total bruto y subtotal neto
+        $this->montoIva = $this->aplicarIva ? (int) round($totalBruto - $subtotalNeto) : 0;
     }
 
     /**
@@ -661,21 +708,29 @@ class CrearOrden extends Component
         }
     }
 
+    /**
+     * Calcula el total bruto por ítem (con descuento aplicado).
+     * El precio es BRUTO (con IVA incluido).
+     */
     public function calcularSubtotalItem($item): int
     {
         $cantidad = isset($item['cantidad']) && $item['cantidad'] !== ''
             ? (int) $item['cantidad']
             : 1;
-        $precio = isset($item['precio']) && $item['precio'] !== ''
-            ? (int) $item['precio']
-            : 0;
-        $subtotal = $cantidad * $precio;
+        $precioBruto = isset($item['precio']) && $item['precio'] !== ''
+            ? (float) $item['precio']
+            : 0.0;
         $descuentoPorcentaje = isset($item['descuento']) && $item['descuento'] !== ''
             ? (float) $item['descuento']
             : 0.0;
-        $descuento = (int) round($subtotal * ($descuentoPorcentaje / 100));
 
-        return $subtotal - $descuento;
+        // Subtotal bruto antes de descuento
+        $subtotalBruto = $cantidad * $precioBruto;
+
+        // Aplicar descuento al subtotal bruto
+        $totalBrutoConDescuento = $subtotalBruto * (1 - ($descuentoPorcentaje / 100));
+
+        return (int) round($totalBrutoConDescuento);
     }
 
     public function abrirModalAgregarItem($tipo = 'servicio'): void
@@ -1234,8 +1289,21 @@ class CrearOrden extends Component
             'fechaEntregaEstimada' => 'nullable|date|after_or_equal:fechaIngreso',
             'estado' => 'required|in:'.$estadoKeys,
             'anticipo' => 'nullable|numeric|min:0|max:999999.99',
+            'porcentajeIva' => 'required|integer|between:0,100',
+            'items' => 'nullable|array',
+            'items.*.cantidad' => 'required|integer|min:1',
+            'items.*.precio' => 'required|numeric|min:0',
+            'items.*.descuento' => 'required|numeric|between:0,100',
         ], [
             'fechaEntregaEstimada.after_or_equal' => 'La fecha de entrega estimada debe ser igual o posterior a la fecha de ingreso.',
+            'porcentajeIva.required' => 'El porcentaje de IVA es obligatorio.',
+            'porcentajeIva.between' => 'El porcentaje de IVA debe estar entre 0 y 100.',
+            'items.*.cantidad.required' => 'La cantidad es obligatoria para cada item.',
+            'items.*.cantidad.min' => 'La cantidad debe ser al menos 1.',
+            'items.*.precio.required' => 'El precio es obligatorio para cada item.',
+            'items.*.precio.min' => 'El precio no puede ser negativo.',
+            'items.*.descuento.required' => 'El descuento es obligatorio para cada item.',
+            'items.*.descuento.between' => 'El descuento debe estar entre 0 y 100.',
         ]);
 
         // Generar número de orden único (service)
@@ -1279,22 +1347,27 @@ class CrearOrden extends Component
             // Guardar items en pivots
             foreach ($this->items as $item) {
                 $cantidad = (int) ($item['cantidad'] ?? 1);
-                $precio = (int) ($item['precio'] ?? 0);
+                $precioBruto = (float) ($item['precio'] ?? 0);
                 $descuento = (float) ($item['descuento'] ?? 0);
-                $subtotal = (int) round(max(0, $cantidad * $precio * (1 - ($descuento / 100))));
+
+                // Calcular precio neto desde el precio bruto
+                $precioNeto = $this->calcularPrecioNetoDesdeBruto($precioBruto);
+
+                // Subtotal neto (después de descuento) - esto es lo que se guarda
+                $subtotalNeto = (int) round(max(0, ($cantidad * $precioNeto) * (1 - ($descuento / 100))));
 
                 if (($item['tipo'] ?? '') === 'servicio') {
                     $orden->servicios()->attach($item['id'], [
                         'descripcion' => $item['nombre'] ?? null,
-                        'precio_unitario' => $precio,
+                        'precio_unitario' => (int) round($precioBruto), // Guardar precio bruto
                         'cantidad' => $cantidad,
-                        'subtotal' => $subtotal,
+                        'subtotal' => $subtotalNeto, // Guardar subtotal neto
                     ]);
                 } elseif (($item['tipo'] ?? '') === 'producto') {
                     $orden->productos()->attach($item['id'], [
-                        'precio_unitario' => $precio,
+                        'precio_unitario' => (int) round($precioBruto), // Guardar precio bruto
                         'cantidad' => $cantidad,
-                        'subtotal' => $subtotal,
+                        'subtotal' => $subtotalNeto, // Guardar subtotal neto
                     ]);
 
                     // Descontar stock del producto (si tiene stock disponible)
@@ -1560,7 +1633,7 @@ class CrearOrden extends Component
         $dv = substr($rut, -1);
 
         // Retornar formato estándar: 12345678-9
-        return $cuerpo . '-' . $dv;
+        return $cuerpo.'-'.$dv;
     }
 
     public function abrirMiniModalCrearItem(): void
