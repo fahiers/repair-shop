@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\Empresa;
-use Illuminate\Support\Facades\Storage;
 use Livewire\Volt\Component;
 use Livewire\WithFileUploads;
 
@@ -59,8 +58,9 @@ new class extends Component
         $empresa = Empresa::first();
 
         if ($empresa && $empresa->logo_path) {
-            if (Storage::disk('public')->exists($empresa->logo_path)) {
-                Storage::disk('public')->delete($empresa->logo_path);
+            $logoPath = public_path('images/'.$empresa->logo_path);
+            if (file_exists($logoPath)) {
+                unlink($logoPath);
             }
 
             $empresa->logo_path = null;
@@ -102,12 +102,25 @@ new class extends Component
 
         if ($this->logo) {
             // Eliminar logo anterior si existe
-            if ($empresa->logo_path && Storage::disk('public')->exists($empresa->logo_path)) {
-                Storage::disk('public')->delete($empresa->logo_path);
+            if ($empresa->logo_path && file_exists(public_path('images/'.$empresa->logo_path))) {
+                unlink(public_path('images/'.$empresa->logo_path));
             }
 
-            // Guardar nuevo logo
-            $empresa->logo_path = $this->logo->store('logos', 'public');
+            // Guardar nuevo logo en public/images
+            $filename = 'logo-'.time().'.'.$this->logo->getClientOriginalExtension();
+
+            // Obtener el contenido del archivo y guardarlo directamente en public/images
+            $fileContent = $this->logo->get();
+
+            // Asegurar que el directorio existe
+            if (! is_dir(public_path('images'))) {
+                mkdir(public_path('images'), 0755, true);
+            }
+
+            // Guardar el archivo directamente en public/images
+            file_put_contents(public_path('images/'.$filename), $fileContent);
+
+            $empresa->logo_path = $filename;
         }
 
         $empresa->save();

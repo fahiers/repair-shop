@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
 class Empresa extends Model
 {
@@ -24,6 +23,6 @@ class Empresa extends Model
             return null;
         }
 
-        return asset('storage/'.$this->logo_path);
+        return asset('images/'.$this->logo_path);
     }
 }
