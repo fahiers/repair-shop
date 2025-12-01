@@ -1,0 +1,114 @@
+{
+  "marca": "TOSHIBA",
+  "id_interno": "44",
+  "slug": "toshiba",
+  "total_esperado": 0,
+  "total_encontrado": 35,
+  "modelos": [
+    {
+      "modelo": "Excite Go"
+    },
+    {
+      "modelo": "Excite 7c AT7-B8"
+    },
+    {
+      "modelo": "Excite Pro"
+    },
+    {
+      "modelo": "Excite Write"
+    },
+    {
+      "modelo": "Excite Pure"
+    },
+    {
+      "modelo": "Excite 10 SE"
+    },
+    {
+      "modelo": "Excite 13 AT335"
+    },
+    {
+      "modelo": "Excite 10 AT305"
+    },
+    {
+      "modelo": "Excite 7.7 AT275"
+    },
+    {
+      "modelo": "Excite AT200"
+    },
+    {
+      "modelo": "Thrive 7"
+    },
+    {
+      "modelo": "Windows Phone IS12T"
+    },
+    {
+      "modelo": "Thrive"
+    },
+    {
+      "modelo": "K01"
+    },
+    {
+      "modelo": "TG02"
+    },
+    {
+      "modelo": "TG01"
+    },
+    {
+      "modelo": "G810"
+    },
+    {
+      "modelo": "G910 / G920"
+    },
+    {
+      "modelo": "G450"
+    },
+    {
+      "modelo": "G710"
+    },
+    {
+      "modelo": "G900"
+    },
+    {
+      "modelo": "G500"
+    },
+    {
+      "modelo": "TS605"
+    },
+    {
+      "modelo": "TX80"
+    },
+    {
+      "modelo": "TS32"
+    },
+    {
+      "modelo": "TS705"
+    },
+    {
+      "modelo": "TS608"
+    },
+    {
+      "modelo": "TX62"
+    },
+    {
+      "modelo": "904T"
+    },
+    {
+      "modelo": "903T"
+    },
+    {
+      "modelo": "705T"
+    },
+    {
+      "modelo": "TS921"
+    },
+    {
+      "modelo": "TS808"
+    },
+    {
+      "modelo": "TS803"
+    },
+    {
+      "modelo": "TS10"
+    }
+  ]
+}

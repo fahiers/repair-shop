@@ -1,0 +1,84 @@
+{
+  "marca": "MITSUBISHI",
+  "id_interno": "8",
+  "slug": "mitsubishi",
+  "total_esperado": 0,
+  "total_encontrado": 25,
+  "modelos": [
+    {
+      "modelo": "M430i/M900"
+    },
+    {
+      "modelo": "M800"
+    },
+    {
+      "modelo": "M420i/M760"
+    },
+    {
+      "modelo": "M528"
+    },
+    {
+      "modelo": "M520"
+    },
+    {
+      "modelo": "M350"
+    },
+    {
+      "modelo": "M750"
+    },
+    {
+      "modelo": "M342i"
+    },
+    {
+      "modelo": "M341i/M720"
+    },
+    {
+      "modelo": "M330"
+    },
+    {
+      "modelo": "m21i"
+    },
+    {
+      "modelo": "M320"
+    },
+    {
+      "modelo": "Trium Eclipse"
+    },
+    {
+      "modelo": "Trium Sirius"
+    },
+    {
+      "modelo": "Trium Neptune"
+    },
+    {
+      "modelo": "Trium Mars"
+    },
+    {
+      "modelo": "Trium Geo-@"
+    },
+    {
+      "modelo": "Trium Mondo"
+    },
+    {
+      "modelo": "Trium xs"
+    },
+    {
+      "modelo": "Trium fx"
+    },
+    {
+      "modelo": "Trium Cosmo"
+    },
+    {
+      "modelo": "Trium Aria"
+    },
+    {
+      "modelo": "Trium Geo"
+    },
+    {
+      "modelo": "Trium Astral"
+    },
+    {
+      "modelo": "Trium Galaxy"
+    }
+  ]
+}

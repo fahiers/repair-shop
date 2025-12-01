@@ -1,0 +1,481 @@
+{
+  "marca": "ALLVIEW",
+  "id_interno": "88",
+  "slug": "allview",
+  "total_esperado": 0,
+  "total_encontrado": 157,
+  "modelos": [
+    {
+      "modelo": "Soul X7 Pro"
+    },
+    {
+      "modelo": "Soul X7 Style"
+    },
+    {
+      "modelo": "Viva 803G"
+    },
+    {
+      "modelo": "V4 Viper Pro"
+    },
+    {
+      "modelo": "Viva C703"
+    },
+    {
+      "modelo": "Viva Home"
+    },
+    {
+      "modelo": "Viva 1003G"
+    },
+    {
+      "modelo": "Viva 1003G Lite"
+    },
+    {
+      "modelo": "V4 Viper"
+    },
+    {
+      "modelo": "Soul X6 Mini"
+    },
+    {
+      "modelo": "Soul X6 Xtreme"
+    },
+    {
+      "modelo": "P10 Pro"
+    },
+    {
+      "modelo": "P10 Max"
+    },
+    {
+      "modelo": "P10 Mini"
+    },
+    {
+      "modelo": "P10 Life"
+    },
+    {
+      "modelo": "A10 Lite 2019"
+    },
+    {
+      "modelo": "Allwatch Hybrid T"
+    },
+    {
+      "modelo": "Allwatch Hybrid S"
+    },
+    {
+      "modelo": "A10 Plus"
+    },
+    {
+      "modelo": "Soul X5 Style"
+    },
+    {
+      "modelo": "Allwatch V"
+    },
+    {
+      "modelo": "Soul X5 Mini"
+    },
+    {
+      "modelo": "P10 Style"
+    },
+    {
+      "modelo": "X5 Soul"
+    },
+    {
+      "modelo": "Soul X5 Pro"
+    },
+    {
+      "modelo": "P8 Pro"
+    },
+    {
+      "modelo": "X4 Soul Infinity Plus"
+    },
+    {
+      "modelo": "X4 Soul Infinity L"
+    },
+    {
+      "modelo": "X4 Soul Infinity N"
+    },
+    {
+      "modelo": "X4 Soul Infinity S"
+    },
+    {
+      "modelo": "X4 Soul Infinity Z"
+    },
+    {
+      "modelo": "X4 Soul Vision"
+    },
+    {
+      "modelo": "V3 Viper"
+    },
+    {
+      "modelo": "X4 Soul Mini S"
+    },
+    {
+      "modelo": "X4 Xtreme"
+    },
+    {
+      "modelo": "P9 Energy Lite",
+      "ano": "2017"
+    },
+    {
+      "modelo": "X4 Soul Lite"
+    },
+    {
+      "modelo": "X4 Soul Mini"
+    },
+    {
+      "modelo": "X4 Soul Style"
+    },
+    {
+      "modelo": "P6 Energy Mini"
+    },
+    {
+      "modelo": "X4 Soul"
+    },
+    {
+      "modelo": "Allwatch"
+    },
+    {
+      "modelo": "V2 Viper Xe"
+    },
+    {
+      "modelo": "V2 Viper S"
+    },
+    {
+      "modelo": "P9 Energy mini"
+    },
+    {
+      "modelo": "P9 Energy Lite"
+    },
+    {
+      "modelo": "P9 Energy"
+    },
+    {
+      "modelo": "P7 Pro"
+    },
+    {
+      "modelo": "X3 Soul Style"
+    },
+    {
+      "modelo": "X3 Soul Plus"
+    },
+    {
+      "modelo": "X3 Soul Lite"
+    },
+    {
+      "modelo": "P6 Energy Lite"
+    },
+    {
+      "modelo": "AX501Q"
+    },
+    {
+      "modelo": "Viva H1001 LTE"
+    },
+    {
+      "modelo": "V2 Viper i4G"
+    },
+    {
+      "modelo": "V2 Viper e"
+    },
+    {
+      "modelo": "P6 Lite"
+    },
+    {
+      "modelo": "X3 Soul Pro"
+    },
+    {
+      "modelo": "X3 Soul mini"
+    },
+    {
+      "modelo": "P8 Energy Pro"
+    },
+    {
+      "modelo": "P6 eMagic"
+    },
+    {
+      "modelo": "P5 eMagic"
+    },
+    {
+      "modelo": "P4 eMagic"
+    },
+    {
+      "modelo": "X3 Soul"
+    },
+    {
+      "modelo": "X2 Soul Style + Platinum"
+    },
+    {
+      "modelo": "X2 Soul Style"
+    },
+    {
+      "modelo": "X2 Soul Lite"
+    },
+    {
+      "modelo": "V2 Viper X+"
+    },
+    {
+      "modelo": "V2 Viper X"
+    },
+    {
+      "modelo": "V2 Viper"
+    },
+    {
+      "modelo": "V2 Viper i"
+    },
+    {
+      "modelo": "P8 Energy mini"
+    },
+    {
+      "modelo": "P5 Pro"
+    },
+    {
+      "modelo": "AX4 Nano Plus"
+    },
+    {
+      "modelo": "Viva C701"
+    },
+    {
+      "modelo": "P6 Pro"
+    },
+    {
+      "modelo": "P8 Energy"
+    },
+    {
+      "modelo": "P5 Energy"
+    },
+    {
+      "modelo": "E4"
+    },
+    {
+      "modelo": "E4 Lite"
+    },
+    {
+      "modelo": "E3 Living"
+    },
+    {
+      "modelo": "A5 Easy"
+    },
+    {
+      "modelo": "E2 Jump"
+    },
+    {
+      "modelo": "E3 Sign"
+    },
+    {
+      "modelo": "P4 Life"
+    },
+    {
+      "modelo": "P5 Life"
+    },
+    {
+      "modelo": "P6 Energy"
+    },
+    {
+      "modelo": "Viper E"
+    },
+    {
+      "modelo": "Viper L"
+    },
+    {
+      "modelo": "V1 Viper i4G"
+    },
+    {
+      "modelo": "V1 Viper S4G"
+    },
+    {
+      "modelo": "X2 Soul Pro"
+    },
+    {
+      "modelo": "W1i"
+    },
+    {
+      "modelo": "W1s"
+    },
+    {
+      "modelo": "X2 Xtreme"
+    },
+    {
+      "modelo": "P6 Life"
+    },
+    {
+      "modelo": "C5 Smiley"
+    },
+    {
+      "modelo": "C6 Quad 4G"
+    },
+    {
+      "modelo": "E2 Living"
+    },
+    {
+      "modelo": "Twin X2"
+    },
+    {
+      "modelo": "P7 Seon"
+    },
+    {
+      "modelo": "X1 Xtreme Mini"
+    },
+    {
+      "modelo": "X2 Soul Mini"
+    },
+    {
+      "modelo": "Impera M"
+    },
+    {
+      "modelo": "Impera S"
+    },
+    {
+      "modelo": "Impera i"
+    },
+    {
+      "modelo": "A6 Quad"
+    },
+    {
+      "modelo": "X2 Soul"
+    },
+    {
+      "modelo": "P7 Xtreme"
+    },
+    {
+      "modelo": "X1 Xtreme"
+    },
+    {
+      "modelo": "V1 Viper S"
+    },
+    {
+      "modelo": "Wi10N PRO"
+    },
+    {
+      "modelo": "Wi8G"
+    },
+    {
+      "modelo": "Wi7"
+    },
+    {
+      "modelo": "Viva i10G"
+    },
+    {
+      "modelo": "Viva H10 HD"
+    },
+    {
+      "modelo": "Viva H10 LTE"
+    },
+    {
+      "modelo": "Viva H8 LTE"
+    },
+    {
+      "modelo": "Viva H7S"
+    },
+    {
+      "modelo": "Viva H7 LTE"
+    },
+    {
+      "modelo": "Viva D8"
+    },
+    {
+      "modelo": "AX4 Nano"
+    },
+    {
+      "modelo": "AX3 Party"
+    },
+    {
+      "modelo": "Viva i8"
+    },
+    {
+      "modelo": "Viva Q7 Life"
+    },
+    {
+      "modelo": "3 Speed Quad HD"
+    },
+    {
+      "modelo": "City Life"
+    },
+    {
+      "modelo": "2 Speed Quad"
+    },
+    {
+      "modelo": "City+"
+    },
+    {
+      "modelo": "Viva H8"
+    },
+    {
+      "modelo": "Viva Q8"
+    },
+    {
+      "modelo": "Start M7"
+    },
+    {
+      "modelo": "P6 Quad Plus"
+    },
+    {
+      "modelo": "A5 Quad"
+    },
+    {
+      "modelo": "P5 Symbol"
+    },
+    {
+      "modelo": "X1 Soul Mini"
+    },
+    {
+      "modelo": "X1 Soul"
+    },
+    {
+      "modelo": "A4 Duo"
+    },
+    {
+      "modelo": "A5 Duo"
+    },
+    {
+      "modelo": "H2 Qubo"
+    },
+    {
+      "modelo": "Viper i V1"
+    },
+    {
+      "modelo": "Viper V1"
+    },
+    {
+      "modelo": "P5 Qmax"
+    },
+    {
+      "modelo": "P6 Quad"
+    },
+    {
+      "modelo": "Simply S5"
+    },
+    {
+      "modelo": "A4ALL"
+    },
+    {
+      "modelo": "P5 Quad"
+    },
+    {
+      "modelo": "P6 Stony"
+    },
+    {
+      "modelo": "P4 Duo"
+    },
+    {
+      "modelo": "P5 Mini"
+    },
+    {
+      "modelo": "P5 AllDro"
+    },
+    {
+      "modelo": "P4 AllDro"
+    },
+    {
+      "modelo": "P3 AllDro"
+    },
+    {
+      "modelo": "P2 AllDro"
+    },
+    {
+      "modelo": "P1 AllDro"
+    },
+    {
+      "modelo": "L4 Class"
+    },
+    {
+      "modelo": "M6 Stark"
+    }
+  ]
+}

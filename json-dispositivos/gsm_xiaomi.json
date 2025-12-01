@@ -1,0 +1,1467 @@
+{
+  "marca": "XIAOMI",
+  "id_interno": "80",
+  "slug": "xiaomi",
+  "total_esperado": 0,
+  "total_encontrado": 486,
+  "modelos": [
+    {
+      "modelo": "Poco F8 Ultra"
+    },
+    {
+      "modelo": "Poco F8 Pro"
+    },
+    {
+      "modelo": "Poco Pad X1"
+    },
+    {
+      "modelo": "Poco Pad M1"
+    },
+    {
+      "modelo": "Black Shark GS3 Ultra"
+    },
+    {
+      "modelo": "Redmi K90"
+    },
+    {
+      "modelo": "Redmi K90 Pro Max"
+    },
+    {
+      "modelo": "Redmi Watch 6"
+    },
+    {
+      "modelo": "17 Pro Max"
+    },
+    {
+      "modelo": "17 Pro"
+    },
+    {
+      "modelo": "17"
+    },
+    {
+      "modelo": "Black Shark Pad 7 Pro"
+    },
+    {
+      "modelo": "Black Shark Pad 7"
+    },
+    {
+      "modelo": "Pad 8 Pro"
+    },
+    {
+      "modelo": "Pad 8"
+    },
+    {
+      "modelo": "15T Pro"
+    },
+    {
+      "modelo": "15T"
+    },
+    {
+      "modelo": "Redmi Pad 2 Pro"
+    },
+    {
+      "modelo": "Pad Mini"
+    },
+    {
+      "modelo": "Redmi 15C"
+    },
+    {
+      "modelo": "Poco C85 4G"
+    },
+    {
+      "modelo": "Redmi Note 15 Pro+"
+    },
+    {
+      "modelo": "Redmi Note 15 Pro"
+    },
+    {
+      "modelo": "Redmi Note 15"
+    },
+    {
+      "modelo": "Poco M7 4G"
+    },
+    {
+      "modelo": "Poco M7 Plus"
+    },
+    {
+      "modelo": "Redmi 15 4G"
+    },
+    {
+      "modelo": "Redmi 15"
+    },
+    {
+      "modelo": "Redmi 15C 4G"
+    },
+    {
+      "modelo": "Redmi K80 Ultra"
+    },
+    {
+      "modelo": "Mix Flip 2"
+    },
+    {
+      "modelo": "Watch S4 41mm"
+    },
+    {
+      "modelo": "Pad 7S Pro 12.5"
+    },
+    {
+      "modelo": "Redmi K Pad"
+    },
+    {
+      "modelo": "Poco F7"
+    },
+    {
+      "modelo": "Redmi Pad 2"
+    },
+    {
+      "modelo": "15S Pro"
+    },
+    {
+      "modelo": "Civi 5 Pro"
+    },
+    {
+      "modelo": "Pad 7 Ultra"
+    },
+    {
+      "modelo": "Redmi Turbo 4 Pro"
+    },
+    {
+      "modelo": "Redmi Watch Move"
+    },
+    {
+      "modelo": "Poco C71"
+    },
+    {
+      "modelo": "Poco F7 Ultra"
+    },
+    {
+      "modelo": "Poco F7 Pro"
+    },
+    {
+      "modelo": "Redmi 13x"
+    },
+    {
+      "modelo": "Redmi A5 4G"
+    },
+    {
+      "modelo": "Redmi Note 14S"
+    },
+    {
+      "modelo": "15 Ultra"
+    },
+    {
+      "modelo": "15"
+    },
+    {
+      "modelo": "Black Shark Pad 6"
+    },
+    {
+      "modelo": "Poco M7"
+    },
+    {
+      "modelo": "Redmi Note 14 Pro+ 5G"
+    },
+    {
+      "modelo": "Redmi Note 14 Pro 5G"
+    },
+    {
+      "modelo": "Redmi Note 14 Pro 4G"
+    },
+    {
+      "modelo": "Redmi Note 14 5G"
+    },
+    {
+      "modelo": "Redmi Note 14 4G"
+    },
+    {
+      "modelo": "Poco X7 Pro"
+    },
+    {
+      "modelo": "Poco X7"
+    },
+    {
+      "modelo": "Redmi 14C 5G"
+    },
+    {
+      "modelo": "Redmi 14C (China)"
+    },
+    {
+      "modelo": "Redmi Turbo 4"
+    },
+    {
+      "modelo": "Poco M7 Pro 5G"
+    },
+    {
+      "modelo": "Poco C75 5G"
+    },
+    {
+      "modelo": "Redmi Note 14 5G (India)"
+    },
+    {
+      "modelo": "Redmi Note 14 Pro 5G (India)"
+    },
+    {
+      "modelo": "Redmi Note 14 Pro+ 5G (India)"
+    },
+    {
+      "modelo": "Redmi K80 Pro"
+    },
+    {
+      "modelo": "Redmi K80"
+    },
+    {
+      "modelo": "Pad 7 Pro"
+    },
+    {
+      "modelo": "Pad 7"
+    },
+    {
+      "modelo": "Redmi Watch 5"
+    },
+    {
+      "modelo": "Watch S4"
+    },
+    {
+      "modelo": "15 Pro"
+    },
+    {
+      "modelo": "Poco C75"
+    },
+    {
+      "modelo": "Redmi A4"
+    },
+    {
+      "modelo": "Redmi A3 Pro"
+    },
+    {
+      "modelo": "14T Pro"
+    },
+    {
+      "modelo": "14T"
+    },
+    {
+      "modelo": "Redmi Note 14 5G (China)"
+    },
+    {
+      "modelo": "Redmi 14R"
+    },
+    {
+      "modelo": "Redmi 14C"
+    },
+    {
+      "modelo": "Redmi Watch 5 Lite"
+    },
+    {
+      "modelo": "Redmi Watch 5 Active"
+    },
+    {
+      "modelo": "Poco Pad 5G"
+    },
+    {
+      "modelo": "Poco M6 Plus"
+    },
+    {
+      "modelo": "Redmi Pad SE 8.7"
+    },
+    {
+      "modelo": "Mix Flip"
+    },
+    {
+      "modelo": "Redmi K70 Ultra"
+    },
+    {
+      "modelo": "Mix Fold 4"
+    },
+    {
+      "modelo": "Watch S4 Sport"
+    },
+    {
+      "modelo": "Redmi 13 5G"
+    },
+    {
+      "modelo": "Poco M6 4G"
+    },
+    {
+      "modelo": "14 Civi"
+    },
+    {
+      "modelo": "Redmi 13"
+    },
+    {
+      "modelo": "Redmi Pad Pro 5G"
+    },
+    {
+      "modelo": "Redmi A3x"
+    },
+    {
+      "modelo": "Poco F6 Pro"
+    },
+    {
+      "modelo": "Poco F6"
+    },
+    {
+      "modelo": "Poco Pad"
+    },
+    {
+      "modelo": "Redmi Note 13R"
+    },
+    {
+      "modelo": "Redmi Pad Pro"
+    },
+    {
+      "modelo": "Redmi Turbo 3"
+    },
+    {
+      "modelo": "Poco C61"
+    },
+    {
+      "modelo": "Civi 4 Pro"
+    },
+    {
+      "modelo": "Poco X6 Neo"
+    },
+    {
+      "modelo": "14"
+    },
+    {
+      "modelo": "14 Ultra"
+    },
+    {
+      "modelo": "Pad 6S Pro 12.4"
+    },
+    {
+      "modelo": "Watch 2"
+    },
+    {
+      "modelo": "Watch S3"
+    },
+    {
+      "modelo": "Redmi A3"
+    },
+    {
+      "modelo": "Redmi Note 13 Pro 4G"
+    },
+    {
+      "modelo": "Redmi Note 13 4G"
+    },
+    {
+      "modelo": "Redmi Note 13 Pro+"
+    },
+    {
+      "modelo": "Redmi Note 13 Pro"
+    },
+    {
+      "modelo": "Redmi Note 13"
+    },
+    {
+      "modelo": "Poco X6 Pro"
+    },
+    {
+      "modelo": "Poco X6"
+    },
+    {
+      "modelo": "Poco M6 Pro 4G"
+    },
+    {
+      "modelo": "Poco M6"
+    },
+    {
+      "modelo": "Redmi 13R"
+    },
+    {
+      "modelo": "Redmi 13C 5G"
+    },
+    {
+      "modelo": "Redmi K70 Pro"
+    },
+    {
+      "modelo": "Redmi K70"
+    },
+    {
+      "modelo": "Redmi K70E"
+    },
+    {
+      "modelo": "Redmi Watch 4"
+    },
+    {
+      "modelo": "Redmi Note 13R Pro"
+    },
+    {
+      "modelo": "Redmi 13C"
+    },
+    {
+      "modelo": "Poco C65"
+    },
+    {
+      "modelo": "14 Pro"
+    },
+    {
+      "modelo": "13T Pro"
+    },
+    {
+      "modelo": "13T"
+    },
+    {
+      "modelo": "Watch 2 Pro"
+    },
+    {
+      "modelo": "Redmi Note 13 (China)"
+    },
+    {
+      "modelo": "Redmi Pad SE"
+    },
+    {
+      "modelo": "Redmi K60 Ultra"
+    },
+    {
+      "modelo": "Mix Fold 3"
+    },
+    {
+      "modelo": "Pad 6 Max 14"
+    },
+    {
+      "modelo": "Poco M6 Pro"
+    },
+    {
+      "modelo": "Redmi Watch 3 Active"
+    },
+    {
+      "modelo": "Redmi 12 5G"
+    },
+    {
+      "modelo": "Redmi Note 12R"
+    },
+    {
+      "modelo": "Redmi Note 12R Pro"
+    },
+    {
+      "modelo": "Redmi 12"
+    },
+    {
+      "modelo": "Redmi Note 12T Pro"
+    },
+    {
+      "modelo": "Civi 3"
+    },
+    {
+      "modelo": "Poco F5 Pro"
+    },
+    {
+      "modelo": "Poco F5"
+    },
+    {
+      "modelo": "13 Ultra"
+    },
+    {
+      "modelo": "Pad 6 Pro"
+    },
+    {
+      "modelo": "Pad 6"
+    },
+    {
+      "modelo": "Poco C51"
+    },
+    {
+      "modelo": "Redmi Note 12S"
+    },
+    {
+      "modelo": "Redmi Note 12 Pro 4G"
+    },
+    {
+      "modelo": "Redmi Note 12 Turbo"
+    },
+    {
+      "modelo": "Redmi A2+"
+    },
+    {
+      "modelo": "Redmi A2"
+    },
+    {
+      "modelo": "Redmi Note 12 4G"
+    },
+    {
+      "modelo": "13 Pro"
+    },
+    {
+      "modelo": "13"
+    },
+    {
+      "modelo": "13 Lite"
+    },
+    {
+      "modelo": "Poco C55"
+    },
+    {
+      "modelo": "Poco X5 Pro"
+    },
+    {
+      "modelo": "Poco X5"
+    },
+    {
+      "modelo": "Redmi Note 12"
+    },
+    {
+      "modelo": "Poco C50"
+    },
+    {
+      "modelo": "Redmi Note 12 Pro Speed"
+    },
+    {
+      "modelo": "Redmi K60 Pro"
+    },
+    {
+      "modelo": "Redmi K60E"
+    },
+    {
+      "modelo": "Redmi K60"
+    },
+    {
+      "modelo": "Redmi Watch 3"
+    },
+    {
+      "modelo": "Watch S2"
+    },
+    {
+      "modelo": "Redmi 12C"
+    },
+    {
+      "modelo": "Redmi Note 12 Discovery"
+    },
+    {
+      "modelo": "Redmi Note 12 Pro+"
+    },
+    {
+      "modelo": "Redmi Note 12 Pro"
+    },
+    {
+      "modelo": "Redmi Note 12 (China)"
+    },
+    {
+      "modelo": "12T Pro"
+    },
+    {
+      "modelo": "12T"
+    },
+    {
+      "modelo": "Redmi Pad"
+    },
+    {
+      "modelo": "Redmi Note 11R"
+    },
+    {
+      "modelo": "Redmi A1+"
+    },
+    {
+      "modelo": "Civi 2"
+    },
+    {
+      "modelo": "Redmi 11 Prime"
+    },
+    {
+      "modelo": "Redmi 11 Prime 5G"
+    },
+    {
+      "modelo": "Redmi A1"
+    },
+    {
+      "modelo": "Poco M5s"
+    },
+    {
+      "modelo": "Poco M5"
+    },
+    {
+      "modelo": "Poco M5 (India)"
+    },
+    {
+      "modelo": "Redmi Note 11 SE (India)"
+    },
+    {
+      "modelo": "Poco M4 5G"
+    },
+    {
+      "modelo": "Watch S1 Pro"
+    },
+    {
+      "modelo": "Redmi K50 Ultra"
+    },
+    {
+      "modelo": "Mix Fold 2"
+    },
+    {
+      "modelo": "Pad 5 Pro 12.4"
+    },
+    {
+      "modelo": "Redmi K50i"
+    },
+    {
+      "modelo": "12 Lite"
+    },
+    {
+      "modelo": "12S Ultra"
+    },
+    {
+      "modelo": "12S Pro"
+    },
+    {
+      "modelo": "12S"
+    },
+    {
+      "modelo": "12 Pro (Dimensity)"
+    },
+    {
+      "modelo": "Poco F4"
+    },
+    {
+      "modelo": "Poco X4 GT"
+    },
+    {
+      "modelo": "Poco C40"
+    },
+    {
+      "modelo": "Redmi Note 11T Pro+"
+    },
+    {
+      "modelo": "Redmi Note 11T Pro"
+    },
+    {
+      "modelo": "Redmi Note 11SE"
+    },
+    {
+      "modelo": "Redmi 10 Prime 2022"
+    },
+    {
+      "modelo": "Poco M4 5G (India)"
+    },
+    {
+      "modelo": "Poco F4 GT"
+    },
+    {
+      "modelo": "Poco Watch"
+    },
+    {
+      "modelo": "Civi 1S"
+    },
+    {
+      "modelo": "Redmi 10 Power"
+    },
+    {
+      "modelo": "Black Shark 5 Pro"
+    },
+    {
+      "modelo": "Black Shark 5"
+    },
+    {
+      "modelo": "Black Shark 5 RS"
+    },
+    {
+      "modelo": "Redmi 10A"
+    },
+    {
+      "modelo": "Redmi Note 11S 5G"
+    },
+    {
+      "modelo": "Redmi 10 5G"
+    },
+    {
+      "modelo": "Redmi Note 11 Pro+ 5G"
+    },
+    {
+      "modelo": "Redmi K50 Pro"
+    },
+    {
+      "modelo": "Redmi K50"
+    },
+    {
+      "modelo": "Redmi K40S"
+    },
+    {
+      "modelo": "12 Pro"
+    },
+    {
+      "modelo": "12"
+    },
+    {
+      "modelo": "12X"
+    },
+    {
+      "modelo": "Watch S1 Active"
+    },
+    {
+      "modelo": "Redmi 10 (India)"
+    },
+    {
+      "modelo": "Redmi 10C"
+    },
+    {
+      "modelo": "Redmi Note 11 Pro+ 5G (India)"
+    },
+    {
+      "modelo": "Redmi Note 11E Pro"
+    },
+    {
+      "modelo": "Redmi Note 11E"
+    },
+    {
+      "modelo": "Poco X4 Pro 5G"
+    },
+    {
+      "modelo": "Poco M4 Pro"
+    },
+    {
+      "modelo": "Redmi K50 Gaming"
+    },
+    {
+      "modelo": "Redmi 10 2022"
+    },
+    {
+      "modelo": "Redmi Note 11 Pro 5G"
+    },
+    {
+      "modelo": "Redmi Note 11 Pro"
+    },
+    {
+      "modelo": "Redmi Note 11S"
+    },
+    {
+      "modelo": "Redmi Note 11"
+    },
+    {
+      "modelo": "11i HyperCharge 5G"
+    },
+    {
+      "modelo": "11i"
+    },
+    {
+      "modelo": "Watch S1"
+    },
+    {
+      "modelo": "Redmi Note 11T 5G"
+    },
+    {
+      "modelo": "Redmi Note 11 4G"
+    },
+    {
+      "modelo": "Poco M4 Pro 5G"
+    },
+    {
+      "modelo": "Redmi Note 11 Pro (China)"
+    },
+    {
+      "modelo": "Redmi Note 11 (China)"
+    },
+    {
+      "modelo": "Redmi Watch 2 Lite"
+    },
+    {
+      "modelo": "Redmi Watch 2"
+    },
+    {
+      "modelo": "Black Shark 4S Pro"
+    },
+    {
+      "modelo": "Black Shark 4S"
+    },
+    {
+      "modelo": "Redmi Note 10 Lite"
+    },
+    {
+      "modelo": "Civi"
+    },
+    {
+      "modelo": "Watch Color 2"
+    },
+    {
+      "modelo": "Redmi 9i Sport"
+    },
+    {
+      "modelo": "Redmi 9A Sport"
+    },
+    {
+      "modelo": "Poco C31"
+    },
+    {
+      "modelo": "Redmi 9 Activ"
+    },
+    {
+      "modelo": "11T Pro"
+    },
+    {
+      "modelo": "11T"
+    },
+    {
+      "modelo": "11 Lite 5G NE"
+    },
+    {
+      "modelo": "Redmi 10 Prime"
+    },
+    {
+      "modelo": "Redmi 10"
+    },
+    {
+      "modelo": "Pad 5 Pro"
+    },
+    {
+      "modelo": "Pad 5"
+    },
+    {
+      "modelo": "Mix 4"
+    },
+    {
+      "modelo": "Poco X3 GT"
+    },
+    {
+      "modelo": "Poco F3 GT"
+    },
+    {
+      "modelo": "Redmi Note 10T 5G"
+    },
+    {
+      "modelo": "Mi Watch Revolve Active"
+    },
+    {
+      "modelo": "Redmi Note 10 Pro (China)"
+    },
+    {
+      "modelo": "Redmi Note 8 2021"
+    },
+    {
+      "modelo": "Poco M3 Pro 5G"
+    },
+    {
+      "modelo": "Redmi K40 Gaming"
+    },
+    {
+      "modelo": "Mi 11X Pro"
+    },
+    {
+      "modelo": "Mi 11X"
+    },
+    {
+      "modelo": "Poco M2 Reloaded"
+    },
+    {
+      "modelo": "Mi Mix Fold"
+    },
+    {
+      "modelo": "Mi 11 Ultra"
+    },
+    {
+      "modelo": "Mi 11 Pro"
+    },
+    {
+      "modelo": "Mi 11i"
+    },
+    {
+      "modelo": "Mi 11 Lite 5G"
+    },
+    {
+      "modelo": "Mi 11 Lite"
+    },
+    {
+      "modelo": "Black Shark 4 Pro"
+    },
+    {
+      "modelo": "Black Shark 4"
+    },
+    {
+      "modelo": "Poco X3 Pro"
+    },
+    {
+      "modelo": "Poco F3"
+    },
+    {
+      "modelo": "Mi 10S"
+    },
+    {
+      "modelo": "Redmi Note 10 Pro"
+    },
+    {
+      "modelo": "Redmi Note 10 5G"
+    },
+    {
+      "modelo": "Redmi Note 10S"
+    },
+    {
+      "modelo": "Redmi Note 10"
+    },
+    {
+      "modelo": "Redmi Note 10 Pro Max"
+    },
+    {
+      "modelo": "Redmi Note 10 Pro (India)"
+    },
+    {
+      "modelo": "Redmi K40 Pro+"
+    },
+    {
+      "modelo": "Redmi K40 Pro"
+    },
+    {
+      "modelo": "Redmi K40"
+    },
+    {
+      "modelo": "Redmi Note 9T"
+    },
+    {
+      "modelo": "Redmi 9T"
+    },
+    {
+      "modelo": "Mi 10i 5G"
+    },
+    {
+      "modelo": "Mi 11"
+    },
+    {
+      "modelo": "Redmi 9 Power"
+    },
+    {
+      "modelo": "Mi Watch Lite"
+    },
+    {
+      "modelo": "Redmi Note 9 Pro 5G"
+    },
+    {
+      "modelo": "Redmi Note 9 5G"
+    },
+    {
+      "modelo": "Redmi Note 9 4G"
+    },
+    {
+      "modelo": "Redmi Watch"
+    },
+    {
+      "modelo": "Poco M3"
+    },
+    {
+      "modelo": "Redmi K30S"
+    },
+    {
+      "modelo": "Mi Watch Color Sports"
+    },
+    {
+      "modelo": "Poco C3"
+    },
+    {
+      "modelo": "Mi 10T Pro 5G"
+    },
+    {
+      "modelo": "Mi 10T 5G"
+    },
+    {
+      "modelo": "Mi 10T Lite 5G"
+    },
+    {
+      "modelo": "Mi Watch"
+    },
+    {
+      "modelo": "Mi Watch Revolve"
+    },
+    {
+      "modelo": "Redmi 9AT"
+    },
+    {
+      "modelo": "Redmi 9i"
+    },
+    {
+      "modelo": "Poco M2"
+    },
+    {
+      "modelo": "Poco X3"
+    },
+    {
+      "modelo": "Poco X3 NFC"
+    },
+    {
+      "modelo": "Redmi 9 (India)"
+    },
+    {
+      "modelo": "Mi 10 Ultra"
+    },
+    {
+      "modelo": "Redmi K30 Ultra"
+    },
+    {
+      "modelo": "Redmi 9 Prime"
+    },
+    {
+      "modelo": "Black Shark 3S"
+    },
+    {
+      "modelo": "Poco M2 Pro"
+    },
+    {
+      "modelo": "Redmi 9A"
+    },
+    {
+      "modelo": "Redmi 9C NFC"
+    },
+    {
+      "modelo": "Redmi 9C"
+    },
+    {
+      "modelo": "Redmi 9"
+    },
+    {
+      "modelo": "Redmi 10X Pro 5G"
+    },
+    {
+      "modelo": "Redmi 10X 5G"
+    },
+    {
+      "modelo": "Redmi 10X 4G"
+    },
+    {
+      "modelo": "Redmi K30i 5G"
+    },
+    {
+      "modelo": "Poco F2 Pro"
+    },
+    {
+      "modelo": "Redmi K30 5G Racing"
+    },
+    {
+      "modelo": "Redmi Note 9 Pro"
+    },
+    {
+      "modelo": "Redmi Note 9"
+    },
+    {
+      "modelo": "Mi Note 10 Lite"
+    },
+    {
+      "modelo": "Mi 10 Youth 5G"
+    },
+    {
+      "modelo": "Mi 10 Lite 5G"
+    },
+    {
+      "modelo": "Redmi K30 Pro Zoom"
+    },
+    {
+      "modelo": "Redmi K30 Pro"
+    },
+    {
+      "modelo": "Redmi Note 9S"
+    },
+    {
+      "modelo": "Redmi Note 9 Pro Max"
+    },
+    {
+      "modelo": "Redmi Note 9 Pro (India)"
+    },
+    {
+      "modelo": "Black Shark 3 Pro"
+    },
+    {
+      "modelo": "Black Shark 3"
+    },
+    {
+      "modelo": "Mi 10 Pro 5G"
+    },
+    {
+      "modelo": "Mi 10 5G"
+    },
+    {
+      "modelo": "Redmi 8A Pro"
+    },
+    {
+      "modelo": "Redmi 8A Dual"
+    },
+    {
+      "modelo": "Poco X2"
+    },
+    {
+      "modelo": "Redmi K30"
+    },
+    {
+      "modelo": "Redmi K30 5G"
+    },
+    {
+      "modelo": "Redmi Note 8T"
+    },
+    {
+      "modelo": "Mi Note 10 Pro"
+    },
+    {
+      "modelo": "Mi Note 10"
+    },
+    {
+      "modelo": "Mi CC9 Pro"
+    },
+    {
+      "modelo": "Watch Color"
+    },
+    {
+      "modelo": "Mi Watch (China)"
+    },
+    {
+      "modelo": "Redmi 8"
+    },
+    {
+      "modelo": "Redmi 8A"
+    },
+    {
+      "modelo": "Mi Mix Alpha"
+    },
+    {
+      "modelo": "Mi 9 Pro 5G"
+    },
+    {
+      "modelo": "Mi 9 Pro"
+    },
+    {
+      "modelo": "Redmi K20 Pro Premium"
+    },
+    {
+      "modelo": "Mi 9 Lite"
+    },
+    {
+      "modelo": "Redmi Note 8 Pro"
+    },
+    {
+      "modelo": "Black Shark 2 Pro"
+    },
+    {
+      "modelo": "Mi A3"
+    },
+    {
+      "modelo": "Redmi 7A"
+    },
+    {
+      "modelo": "Mi CC9e"
+    },
+    {
+      "modelo": "Mi CC9"
+    },
+    {
+      "modelo": "Redmi Note 8"
+    },
+    {
+      "modelo": "Mi 9T Pro"
+    },
+    {
+      "modelo": "Mi 9T"
+    },
+    {
+      "modelo": "Redmi K20"
+    },
+    {
+      "modelo": "Redmi K20 Pro"
+    },
+    {
+      "modelo": "Redmi Note 7S"
+    },
+    {
+      "modelo": "Redmi Y3"
+    },
+    {
+      "modelo": "Black Shark 2"
+    },
+    {
+      "modelo": "Redmi 7"
+    },
+    {
+      "modelo": "Redmi Note 7 Pro"
+    },
+    {
+      "modelo": "Mi Mix 3 5G"
+    },
+    {
+      "modelo": "Mi 9 Explorer"
+    },
+    {
+      "modelo": "Mi 9 SE"
+    },
+    {
+      "modelo": "Mi 9"
+    },
+    {
+      "modelo": "Redmi Go"
+    },
+    {
+      "modelo": "Redmi Note 7"
+    },
+    {
+      "modelo": "Mi Play"
+    },
+    {
+      "modelo": "Black Shark Helo"
+    },
+    {
+      "modelo": "Mi Mix 3"
+    },
+    {
+      "modelo": "Redmi Note 6 Pro"
+    },
+    {
+      "modelo": "Mi 8 Pro"
+    },
+    {
+      "modelo": "Mi 8 Lite"
+    },
+    {
+      "modelo": "Pocophone F1"
+    },
+    {
+      "modelo": "Mi A2 (Mi 6X)"
+    },
+    {
+      "modelo": "Mi A2 Lite (Redmi 6 Pro)"
+    },
+    {
+      "modelo": "Mi Max 3"
+    },
+    {
+      "modelo": "Mi Pad 4 Plus"
+    },
+    {
+      "modelo": "Mi Pad 4"
+    },
+    {
+      "modelo": "Redmi 6"
+    },
+    {
+      "modelo": "Redmi 6A"
+    },
+    {
+      "modelo": "Mi 8 Explorer"
+    },
+    {
+      "modelo": "Mi 8"
+    },
+    {
+      "modelo": "Mi 8 SE"
+    },
+    {
+      "modelo": "Redmi S2 (Redmi Y2)"
+    },
+    {
+      "modelo": "Mi Mix 2S"
+    },
+    {
+      "modelo": "Redmi Note 5 AI Dual Camera"
+    },
+    {
+      "modelo": "Redmi Note 5 Pro"
+    },
+    {
+      "modelo": "Black Shark"
+    },
+    {
+      "modelo": "Redmi 5 Plus (Redmi Note 5)"
+    },
+    {
+      "modelo": "Redmi 5"
+    },
+    {
+      "modelo": "Redmi 5A"
+    },
+    {
+      "modelo": "Redmi Y1 (Note 5A)"
+    },
+    {
+      "modelo": "Redmi Y1 Lite"
+    },
+    {
+      "modelo": "Mi Note 3"
+    },
+    {
+      "modelo": "Mi Mix 2"
+    },
+    {
+      "modelo": "Mi A1 (Mi 5X)"
+    },
+    {
+      "modelo": "Mi Max 2"
+    },
+    {
+      "modelo": "Redmi 4 (4X)"
+    },
+    {
+      "modelo": "Mi 6"
+    },
+    {
+      "modelo": "Mi Pad 3"
+    },
+    {
+      "modelo": "Mi 5c"
+    },
+    {
+      "modelo": "Redmi Note 4X"
+    },
+    {
+      "modelo": "Redmi Note 4"
+    },
+    {
+      "modelo": "Redmi 4A"
+    },
+    {
+      "modelo": "Redmi 4 (China)"
+    },
+    {
+      "modelo": "Mi 6 Plus"
+    },
+    {
+      "modelo": "Redmi 4 Prime"
+    },
+    {
+      "modelo": "Mi Mix"
+    },
+    {
+      "modelo": "Mi Note 2"
+    },
+    {
+      "modelo": "Mi 5s Plus"
+    },
+    {
+      "modelo": "Mi 5s"
+    },
+    {
+      "modelo": "Redmi Note 4 (MediaTek)"
+    },
+    {
+      "modelo": "Redmi Pro"
+    },
+    {
+      "modelo": "Redmi 3x"
+    },
+    {
+      "modelo": "Redmi 3s Prime"
+    },
+    {
+      "modelo": "Redmi 3s"
+    },
+    {
+      "modelo": "Redmi 3 Pro"
+    },
+    {
+      "modelo": "Mi Max"
+    },
+    {
+      "modelo": "Mi 5"
+    },
+    {
+      "modelo": "Mi 4s"
+    },
+    {
+      "modelo": "Redmi Note 3"
+    },
+    {
+      "modelo": "Redmi 3"
+    },
+    {
+      "modelo": "Redmi Note Prime"
+    },
+    {
+      "modelo": "Mi Pad 2"
+    },
+    {
+      "modelo": "Redmi Note 3 (MediaTek)"
+    },
+    {
+      "modelo": "Mi 4c"
+    },
+    {
+      "modelo": "Redmi Note 2"
+    },
+    {
+      "modelo": "Redmi 2 Pro"
+    },
+    {
+      "modelo": "Redmi 2 Prime"
+    },
+    {
+      "modelo": "Mi 4i"
+    },
+    {
+      "modelo": "Mi Note Pro"
+    },
+    {
+      "modelo": "Mi Note"
+    },
+    {
+      "modelo": "Redmi 2A"
+    },
+    {
+      "modelo": "Redmi 2"
+    },
+    {
+      "modelo": "Mi 4 LTE"
+    },
+    {
+      "modelo": "Redmi Note 4G"
+    },
+    {
+      "modelo": "Mi 4"
+    },
+    {
+      "modelo": "Mi Pad 7.9"
+    },
+    {
+      "modelo": "Redmi Note"
+    },
+    {
+      "modelo": "Mi 3"
+    },
+    {
+      "modelo": "Redmi 1S"
+    },
+    {
+      "modelo": "Redmi"
+    },
+    {
+      "modelo": "Mi 2A"
+    },
+    {
+      "modelo": "Mi 2S"
+    },
+    {
+      "modelo": "Mi 2"
+    },
+    {
+      "modelo": "Mi 1S"
+    },
+    {
+      "modelo": "12 Lite NE"
+    },
+    {
+      "modelo": "Redmi 11"
+    },
+    {
+      "modelo": "Redmi 10 Prime+ 5G"
+    },
+    {
+      "modelo": "Poco X4 NFC"
+    },
+    {
+      "modelo": "Poco M3 Pro"
+    },
+    {
+      "modelo": "Redmi 20X"
+    },
+    {
+      "modelo": "Redmi 11A"
+    },
+    {
+      "modelo": "Mi 10 Lite Zoom"
+    },
+    {
+      "modelo": "Mi 9X"
+    },
+    {
+      "modelo": "Mi Max 4 Pro"
+    },
+    {
+      "modelo": "Mi Max 4"
+    },
+    {
+      "modelo": "Mi 6c"
+    },
+    {
+      "modelo": "Redmi Pro 2"
+    },
+    {
+      "modelo": "Mi Note Plus"
+    }
+  ]
+}

@@ -1,0 +1,873 @@
+{
+  "marca": "HONOR",
+  "id_interno": "121",
+  "slug": "honor",
+  "total_esperado": 0,
+  "total_encontrado": 288,
+  "modelos": [
+    {
+      "modelo": "Watch X5"
+    },
+    {
+      "modelo": "500 Pro (China)"
+    },
+    {
+      "modelo": "500"
+    },
+    {
+      "modelo": "Magic8 Pro"
+    },
+    {
+      "modelo": "Magic8"
+    },
+    {
+      "modelo": "Watch 5 Pro"
+    },
+    {
+      "modelo": "MagicPad 3 Pro"
+    },
+    {
+      "modelo": "Play10A"
+    },
+    {
+      "modelo": "X5c"
+    },
+    {
+      "modelo": "X5c Plus"
+    },
+    {
+      "modelo": "X6b"
+    },
+    {
+      "modelo": "X9d"
+    },
+    {
+      "modelo": "X7d"
+    },
+    {
+      "modelo": "400 Smart 4G"
+    },
+    {
+      "modelo": "Play10"
+    },
+    {
+      "modelo": "X7d 4G"
+    },
+    {
+      "modelo": "Magic V Flip 2"
+    },
+    {
+      "modelo": "X7c"
+    },
+    {
+      "modelo": "Play10C"
+    },
+    {
+      "modelo": "400 Smart"
+    },
+    {
+      "modelo": "Pad X7"
+    },
+    {
+      "modelo": "X70"
+    },
+    {
+      "modelo": "Pad GT2 Pro"
+    },
+    {
+      "modelo": "MagicPad 3"
+    },
+    {
+      "modelo": "Magic V5"
+    },
+    {
+      "modelo": "X6c"
+    },
+    {
+      "modelo": "400 Pro (China)"
+    },
+    {
+      "modelo": "400 (China)"
+    },
+    {
+      "modelo": "400 Pro"
+    },
+    {
+      "modelo": "400"
+    },
+    {
+      "modelo": "Pad 10"
+    },
+    {
+      "modelo": "X70i"
+    },
+    {
+      "modelo": "GT Pro"
+    },
+    {
+      "modelo": "Pad GT"
+    },
+    {
+      "modelo": "X60 GT"
+    },
+    {
+      "modelo": "Power"
+    },
+    {
+      "modelo": "400 Lite"
+    },
+    {
+      "modelo": "Play 60"
+    },
+    {
+      "modelo": "Pad X9a"
+    },
+    {
+      "modelo": "Play9A"
+    },
+    {
+      "modelo": "Watch 5 Ultra"
+    },
+    {
+      "modelo": "X8c"
+    },
+    {
+      "modelo": "Magic7 Lite"
+    },
+    {
+      "modelo": "Magic7 RSR Porsche Design"
+    },
+    {
+      "modelo": "GT"
+    },
+    {
+      "modelo": "Pad V9"
+    },
+    {
+      "modelo": "300 Ultra"
+    },
+    {
+      "modelo": "300 Pro"
+    },
+    {
+      "modelo": "300"
+    },
+    {
+      "modelo": "X9c Smart"
+    },
+    {
+      "modelo": "Play9C (China)"
+    },
+    {
+      "modelo": "Play9T"
+    },
+    {
+      "modelo": "X9c"
+    },
+    {
+      "modelo": "Magic7 Pro"
+    },
+    {
+      "modelo": "Magic7"
+    },
+    {
+      "modelo": "X5b Plus"
+    },
+    {
+      "modelo": "X5b"
+    },
+    {
+      "modelo": "X7c 4G"
+    },
+    {
+      "modelo": "X60 Pro"
+    },
+    {
+      "modelo": "X60"
+    },
+    {
+      "modelo": "Pad GT Pro"
+    },
+    {
+      "modelo": "200 Smart"
+    },
+    {
+      "modelo": "Watch 5"
+    },
+    {
+      "modelo": "Pad X8a"
+    },
+    {
+      "modelo": "X60i"
+    },
+    {
+      "modelo": "MagicPad 2 12.3"
+    },
+    {
+      "modelo": "Pad 9 Pro"
+    },
+    {
+      "modelo": "Magic Vs3"
+    },
+    {
+      "modelo": "Magic V3"
+    },
+    {
+      "modelo": "Play 60 Plus"
+    },
+    {
+      "modelo": "X7b 5G (50 MP)"
+    },
+    {
+      "modelo": "Magic V Flip"
+    },
+    {
+      "modelo": "X6b 4G"
+    },
+    {
+      "modelo": "200 Pro"
+    },
+    {
+      "modelo": "200"
+    },
+    {
+      "modelo": "200 Lite"
+    },
+    {
+      "modelo": "90 Smart"
+    },
+    {
+      "modelo": "X7b 5G"
+    },
+    {
+      "modelo": "Magic6 RSR Porsche Design"
+    },
+    {
+      "modelo": "Magic6 Ultimate"
+    },
+    {
+      "modelo": "Watch GS 4"
+    },
+    {
+      "modelo": "Choice Watch"
+    },
+    {
+      "modelo": "Magic V2 RSR Porsche Design"
+    },
+    {
+      "modelo": "Magic6 Pro"
+    },
+    {
+      "modelo": "Magic6"
+    },
+    {
+      "modelo": "X50 GT"
+    },
+    {
+      "modelo": "X50 Pro"
+    },
+    {
+      "modelo": "90 GT"
+    },
+    {
+      "modelo": "Pad 9"
+    },
+    {
+      "modelo": "X8b"
+    },
+    {
+      "modelo": "Magic6 Lite"
+    },
+    {
+      "modelo": "X7b"
+    },
+    {
+      "modelo": "100 Pro"
+    },
+    {
+      "modelo": "100"
+    },
+    {
+      "modelo": "X50i+"
+    },
+    {
+      "modelo": "X5 Plus"
+    },
+    {
+      "modelo": "X9b"
+    },
+    {
+      "modelo": "Play 8T"
+    },
+    {
+      "modelo": "Magic Vs2"
+    },
+    {
+      "modelo": "Watch 4 Pro"
+    },
+    {
+      "modelo": "Play 50 Plus"
+    },
+    {
+      "modelo": "V Purse"
+    },
+    {
+      "modelo": "X40 GT Racing"
+    },
+    {
+      "modelo": "X6a"
+    },
+    {
+      "modelo": "Magic V2"
+    },
+    {
+      "modelo": "Watch 4"
+    },
+    {
+      "modelo": "MagicPad 13"
+    },
+    {
+      "modelo": "Pad X9"
+    },
+    {
+      "modelo": "Pad X8 Pro"
+    },
+    {
+      "modelo": "X50"
+    },
+    {
+      "modelo": "Play 40"
+    },
+    {
+      "modelo": "X50i"
+    },
+    {
+      "modelo": "90 Lite"
+    },
+    {
+      "modelo": "90 Pro"
+    },
+    {
+      "modelo": "90"
+    },
+    {
+      "modelo": "Pad V8"
+    },
+    {
+      "modelo": "Play7T Pro"
+    },
+    {
+      "modelo": "Play7T"
+    },
+    {
+      "modelo": "70 Lite"
+    },
+    {
+      "modelo": "Magic5 Ultimate"
+    },
+    {
+      "modelo": "Magic5 Pro"
+    },
+    {
+      "modelo": "Magic5"
+    },
+    {
+      "modelo": "Magic5 Lite"
+    },
+    {
+      "modelo": "X8a"
+    },
+    {
+      "modelo": "X5"
+    },
+    {
+      "modelo": "X9a"
+    },
+    {
+      "modelo": "X7a"
+    },
+    {
+      "modelo": "80 Pro Flat"
+    },
+    {
+      "modelo": "80 GT"
+    },
+    {
+      "modelo": "Pad V8 Pro"
+    },
+    {
+      "modelo": "80 Pro"
+    },
+    {
+      "modelo": "80"
+    },
+    {
+      "modelo": "80 SE"
+    },
+    {
+      "modelo": "Magic Vs Ultimate"
+    },
+    {
+      "modelo": "Magic Vs"
+    },
+    {
+      "modelo": "Play 40 Plus"
+    },
+    {
+      "modelo": "X40 GT"
+    },
+    {
+      "modelo": "Play6C"
+    },
+    {
+      "modelo": "X6"
+    },
+    {
+      "modelo": "Pad X8"
+    },
+    {
+      "modelo": "Pad X8 Lite"
+    },
+    {
+      "modelo": "X40"
+    },
+    {
+      "modelo": "X8 5G"
+    },
+    {
+      "modelo": "Pad 8"
+    },
+    {
+      "modelo": "X40i"
+    },
+    {
+      "modelo": "70 Pro+"
+    },
+    {
+      "modelo": "70 Pro"
+    },
+    {
+      "modelo": "70"
+    },
+    {
+      "modelo": "Play 30"
+    },
+    {
+      "modelo": "Play6T Pro"
+    },
+    {
+      "modelo": "Play6T"
+    },
+    {
+      "modelo": "Magic4 Lite"
+    },
+    {
+      "modelo": "X7"
+    },
+    {
+      "modelo": "X9"
+    },
+    {
+      "modelo": "X9 5G"
+    },
+    {
+      "modelo": "Magic4 Ultimate"
+    },
+    {
+      "modelo": "X8"
+    },
+    {
+      "modelo": "Magic4 Pro"
+    },
+    {
+      "modelo": "Magic4"
+    },
+    {
+      "modelo": "60 SE"
+    },
+    {
+      "modelo": "Watch GS 3"
+    },
+    {
+      "modelo": "Magic V"
+    },
+    {
+      "modelo": "X30"
+    },
+    {
+      "modelo": "Play 30 Plus"
+    },
+    {
+      "modelo": "60 Pro"
+    },
+    {
+      "modelo": "60"
+    },
+    {
+      "modelo": "X30 Max"
+    },
+    {
+      "modelo": "X30i"
+    },
+    {
+      "modelo": "50 Lite"
+    },
+    {
+      "modelo": "Play5 Youth"
+    },
+    {
+      "modelo": "Tablet V7"
+    },
+    {
+      "modelo": "Tablet V7 Pro"
+    },
+    {
+      "modelo": "X20"
+    },
+    {
+      "modelo": "Magic3 Pro+"
+    },
+    {
+      "modelo": "Magic3 Pro"
+    },
+    {
+      "modelo": "Magic3"
+    },
+    {
+      "modelo": "Play 5T Pro"
+    },
+    {
+      "modelo": "X20 SE"
+    },
+    {
+      "modelo": "50 Pro"
+    },
+    {
+      "modelo": "50"
+    },
+    {
+      "modelo": "50 SE"
+    },
+    {
+      "modelo": "Play5 5G"
+    },
+    {
+      "modelo": "Tablet X7"
+    },
+    {
+      "modelo": "Play 20"
+    },
+    {
+      "modelo": "Play 5T Youth"
+    },
+    {
+      "modelo": "Tab 7"
+    },
+    {
+      "modelo": "V40 Lite"
+    },
+    {
+      "modelo": "View40"
+    },
+    {
+      "modelo": "V40 5G"
+    },
+    {
+      "modelo": "10X Lite"
+    },
+    {
+      "modelo": "30i"
+    },
+    {
+      "modelo": "Watch GS Pro"
+    },
+    {
+      "modelo": "Watch ES"
+    },
+    {
+      "modelo": "Pad 6"
+    },
+    {
+      "modelo": "Pad X6"
+    },
+    {
+      "modelo": "X10 Max 5G"
+    },
+    {
+      "modelo": "30 Youth"
+    },
+    {
+      "modelo": "8S 2020"
+    },
+    {
+      "modelo": "Play4"
+    },
+    {
+      "modelo": "Play4 Pro"
+    },
+    {
+      "modelo": "X10 5G"
+    },
+    {
+      "modelo": "V6"
+    },
+    {
+      "modelo": "9A"
+    },
+    {
+      "modelo": "9C"
+    },
+    {
+      "modelo": "9S"
+    },
+    {
+      "modelo": "9X Lite"
+    },
+    {
+      "modelo": "30 Pro+"
+    },
+    {
+      "modelo": "30 Pro"
+    },
+    {
+      "modelo": "30"
+    },
+    {
+      "modelo": "20e"
+    },
+    {
+      "modelo": "Play 4T Pro"
+    },
+    {
+      "modelo": "Play 4T"
+    },
+    {
+      "modelo": "8A 2020"
+    },
+    {
+      "modelo": "8A Prime"
+    },
+    {
+      "modelo": "30S"
+    },
+    {
+      "modelo": "Play 9A"
+    },
+    {
+      "modelo": "View30 Pro"
+    },
+    {
+      "modelo": "View30"
+    },
+    {
+      "modelo": "V30 Pro"
+    },
+    {
+      "modelo": "V30"
+    },
+    {
+      "modelo": "MagicWatch 2"
+    },
+    {
+      "modelo": "9X"
+    },
+    {
+      "modelo": "20 lite (China)"
+    },
+    {
+      "modelo": "Play 3e"
+    },
+    {
+      "modelo": "Play 3"
+    },
+    {
+      "modelo": "20S"
+    },
+    {
+      "modelo": "9X Pro"
+    },
+    {
+      "modelo": "9X (China)"
+    },
+    {
+      "modelo": "8S"
+    },
+    {
+      "modelo": "Pad 5 10.1"
+    },
+    {
+      "modelo": "Pad 5 8"
+    },
+    {
+      "modelo": "20 Pro"
+    },
+    {
+      "modelo": "20"
+    },
+    {
+      "modelo": "20 lite"
+    },
+    {
+      "modelo": "20i"
+    },
+    {
+      "modelo": "8A Pro"
+    },
+    {
+      "modelo": "Tab 5"
+    },
+    {
+      "modelo": "View 20"
+    },
+    {
+      "modelo": "Magic 2 3D"
+    },
+    {
+      "modelo": "Magic 2"
+    },
+    {
+      "modelo": "Play 8A"
+    },
+    {
+      "modelo": "10 Lite"
+    },
+    {
+      "modelo": "8C"
+    },
+    {
+      "modelo": "8X"
+    },
+    {
+      "modelo": "8X Max"
+    },
+    {
+      "modelo": "Note 10"
+    },
+    {
+      "modelo": "9N (9i)"
+    },
+    {
+      "modelo": "Play"
+    },
+    {
+      "modelo": "7S"
+    },
+    {
+      "modelo": "10"
+    },
+    {
+      "modelo": "7A"
+    },
+    {
+      "modelo": "7C"
+    },
+    {
+      "modelo": "9 Lite"
+    },
+    {
+      "modelo": "View 10"
+    },
+    {
+      "modelo": "7X"
+    },
+    {
+      "modelo": "6C Pro"
+    },
+    {
+      "modelo": "9"
+    },
+    {
+      "modelo": "6A (Pro)"
+    },
+    {
+      "modelo": "8 Pro"
+    },
+    {
+      "modelo": "Magic"
+    },
+    {
+      "modelo": "V8"
+    },
+    {
+      "modelo": "Pad 2"
+    },
+    {
+      "modelo": "6X"
+    },
+    {
+      "modelo": "Holly 3"
+    },
+    {
+      "modelo": "Note 8"
+    },
+    {
+      "modelo": "8"
+    },
+    {
+      "modelo": "5A"
+    },
+    {
+      "modelo": "5c"
+    },
+    {
+      "modelo": "Holly 2 Plus"
+    },
+    {
+      "modelo": "5X"
+    },
+    {
+      "modelo": "7i"
+    },
+    {
+      "modelo": "7"
+    },
+    {
+      "modelo": "Bee"
+    },
+    {
+      "modelo": "4C"
+    },
+    {
+      "modelo": "6 Plus"
+    },
+    {
+      "modelo": "4X"
+    },
+    {
+      "modelo": "Holly"
+    },
+    {
+      "modelo": "4 Play"
+    },
+    {
+      "modelo": "3C Play"
+    },
+    {
+      "modelo": "6"
+    },
+    {
+      "modelo": "3X Pro"
+    },
+    {
+      "modelo": "3C 4G"
+    },
+    {
+      "modelo": "3X G750"
+    },
+    {
+      "modelo": "3C"
+    },
+    {
+      "modelo": "3"
+    },
+    {
+      "modelo": "2"
+    },
+    {
+      "modelo": "U8860"
+    },
+    {
+      "modelo": "View"
+    }
+  ]
+}

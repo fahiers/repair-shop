@@ -1,0 +1,1270 @@
+{
+  "marca": "ALCATEL",
+  "id_interno": "5",
+  "slug": "alcatel",
+  "total_esperado": 0,
+  "total_encontrado": 413,
+  "modelos": [
+    {
+      "modelo": "V3 Ultra"
+    },
+    {
+      "modelo": "V3 Pro"
+    },
+    {
+      "modelo": "V3 Classic"
+    },
+    {
+      "modelo": "3",
+      "ano": "2025"
+    },
+    {
+      "modelo": "1B",
+      "ano": "2022"
+    },
+    {
+      "modelo": "1L Pro",
+      "ano": "2021"
+    },
+    {
+      "modelo": "1",
+      "ano": "2021"
+    },
+    {
+      "modelo": "3L",
+      "ano": "2021"
+    },
+    {
+      "modelo": "1S",
+      "ano": "2021"
+    },
+    {
+      "modelo": "1L",
+      "ano": "2021"
+    },
+    {
+      "modelo": "1V",
+      "ano": "2021"
+    },
+    {
+      "modelo": "1SE",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Go Flip 4"
+    },
+    {
+      "modelo": "Go Flip 3"
+    },
+    {
+      "modelo": "Go Flip V"
+    },
+    {
+      "modelo": "3T10 2020"
+    },
+    {
+      "modelo": "3X",
+      "ano": "2020"
+    },
+    {
+      "modelo": "3L",
+      "ano": "2020"
+    },
+    {
+      "modelo": "1S",
+      "ano": "2020"
+    },
+    {
+      "modelo": "1V",
+      "ano": "2020"
+    },
+    {
+      "modelo": "1B",
+      "ano": "2020"
+    },
+    {
+      "modelo": "3v",
+      "ano": "2019"
+    },
+    {
+      "modelo": "3x",
+      "ano": "2019"
+    },
+    {
+      "modelo": "1v",
+      "ano": "2019"
+    },
+    {
+      "modelo": "3T 8"
+    },
+    {
+      "modelo": "Smart Tab 7"
+    },
+    {
+      "modelo": "3T 10"
+    },
+    {
+      "modelo": "3L"
+    },
+    {
+      "modelo": "3",
+      "ano": "2019"
+    },
+    {
+      "modelo": "1s"
+    },
+    {
+      "modelo": "1x",
+      "ano": "2019"
+    },
+    {
+      "modelo": "1c",
+      "ano": "2019"
+    },
+    {
+      "modelo": "1"
+    },
+    {
+      "modelo": "Tetra"
+    },
+    {
+      "modelo": "7"
+    },
+    {
+      "modelo": "5v"
+    },
+    {
+      "modelo": "5"
+    },
+    {
+      "modelo": "3v"
+    },
+    {
+      "modelo": "3x",
+      "ano": "2018"
+    },
+    {
+      "modelo": "3"
+    },
+    {
+      "modelo": "1x"
+    },
+    {
+      "modelo": "3c"
+    },
+    {
+      "modelo": "3088"
+    },
+    {
+      "modelo": "1T 10"
+    },
+    {
+      "modelo": "1T 7"
+    },
+    {
+      "modelo": "Idol 5s"
+    },
+    {
+      "modelo": "Idol 5"
+    },
+    {
+      "modelo": "A7 XL"
+    },
+    {
+      "modelo": "A7"
+    },
+    {
+      "modelo": "U5 HD"
+    },
+    {
+      "modelo": "Pulsemix"
+    },
+    {
+      "modelo": "Idol 5s (USA)"
+    },
+    {
+      "modelo": "Flash",
+      "ano": "2017"
+    },
+    {
+      "modelo": "U5"
+    },
+    {
+      "modelo": "A5 LED"
+    },
+    {
+      "modelo": "A3"
+    },
+    {
+      "modelo": "A3 XL"
+    },
+    {
+      "modelo": "Shine Lite"
+    },
+    {
+      "modelo": "Pixi 4 Plus Power"
+    },
+    {
+      "modelo": "Fierce 4"
+    },
+    {
+      "modelo": "X1"
+    },
+    {
+      "modelo": "Pixi 4 (5)"
+    },
+    {
+      "modelo": "Flash Plus 2"
+    },
+    {
+      "modelo": "Pop 7 LTE"
+    },
+    {
+      "modelo": "Pop 4S"
+    },
+    {
+      "modelo": "Pop 4+"
+    },
+    {
+      "modelo": "Pop 4"
+    },
+    {
+      "modelo": "Idol 4s Windows"
+    },
+    {
+      "modelo": "Idol 4s"
+    },
+    {
+      "modelo": "Idol 4"
+    },
+    {
+      "modelo": "Fierce XL (Windows)"
+    },
+    {
+      "modelo": "CareTime"
+    },
+    {
+      "modelo": "Pixi 4 (7)"
+    },
+    {
+      "modelo": "Pixi 4 (6) 3G"
+    },
+    {
+      "modelo": "Pixi 4 (6)"
+    },
+    {
+      "modelo": "Pixi 4 (4)"
+    },
+    {
+      "modelo": "Pixi 4 (3.5)"
+    },
+    {
+      "modelo": "Pixi 3 (8) LTE"
+    },
+    {
+      "modelo": "Pop 3 (5.5)"
+    },
+    {
+      "modelo": "Pop 3 (5)"
+    },
+    {
+      "modelo": "Fierce XL"
+    },
+    {
+      "modelo": "Watch"
+    },
+    {
+      "modelo": "GO Watch"
+    },
+    {
+      "modelo": "Flash 2"
+    },
+    {
+      "modelo": "10.16G"
+    },
+    {
+      "modelo": "2007"
+    },
+    {
+      "modelo": "Idol 3C"
+    },
+    {
+      "modelo": "Pixi 3 (10)"
+    },
+    {
+      "modelo": "Pixi First"
+    },
+    {
+      "modelo": "Pop Up"
+    },
+    {
+      "modelo": "Pop Star LTE"
+    },
+    {
+      "modelo": "Pop Star"
+    },
+    {
+      "modelo": "Go Play"
+    },
+    {
+      "modelo": "Flash Plus"
+    },
+    {
+      "modelo": "Pop Astro"
+    },
+    {
+      "modelo": "Flash"
+    },
+    {
+      "modelo": "Idol 3 (5.5)"
+    },
+    {
+      "modelo": "Idol 3 (4.7)"
+    },
+    {
+      "modelo": "Orange Klif"
+    },
+    {
+      "modelo": "Pixi 3 (5.5) LTE"
+    },
+    {
+      "modelo": "Pixi 3 (5.5)"
+    },
+    {
+      "modelo": "Pixi 3 (8) 3G"
+    },
+    {
+      "modelo": "Pixi 3 (7) LTE"
+    },
+    {
+      "modelo": "Pixi 3 (7) 3G"
+    },
+    {
+      "modelo": "Pixi 3 (7)"
+    },
+    {
+      "modelo": "Pop 10"
+    },
+    {
+      "modelo": "Pixi 3 (5)"
+    },
+    {
+      "modelo": "Pixi 3 (4.5)"
+    },
+    {
+      "modelo": "Pixi 3 (4)"
+    },
+    {
+      "modelo": "Pixi 3 (3.5) Firefox"
+    },
+    {
+      "modelo": "Pixi 3 (3.5)"
+    },
+    {
+      "modelo": "Pop D3"
+    },
+    {
+      "modelo": "Pop D1"
+    },
+    {
+      "modelo": "Pop Icon"
+    },
+    {
+      "modelo": "Fire C 2G"
+    },
+    {
+      "modelo": "Pop 2 (5) Premium"
+    },
+    {
+      "modelo": "Pop 2 (5)"
+    },
+    {
+      "modelo": "Pop 2 (4)"
+    },
+    {
+      "modelo": "Pop 2 (4.5) Dual SIM"
+    },
+    {
+      "modelo": "Pop 2 (4.5)"
+    },
+    {
+      "modelo": "Fierce 2"
+    },
+    {
+      "modelo": "Evolve 2"
+    },
+    {
+      "modelo": "Pop 8S"
+    },
+    {
+      "modelo": "Hero 8"
+    },
+    {
+      "modelo": "Hero 2"
+    },
+    {
+      "modelo": "Pixi 2"
+    },
+    {
+      "modelo": "Pop D5"
+    },
+    {
+      "modelo": "Pop C2"
+    },
+    {
+      "modelo": "Pixi 8"
+    },
+    {
+      "modelo": "2012"
+    },
+    {
+      "modelo": "2010"
+    },
+    {
+      "modelo": "2052"
+    },
+    {
+      "modelo": "2040"
+    },
+    {
+      "modelo": "2005"
+    },
+    {
+      "modelo": "Pop 7S"
+    },
+    {
+      "modelo": "Pixi 7"
+    },
+    {
+      "modelo": "Pop S9"
+    },
+    {
+      "modelo": "Pop S7"
+    },
+    {
+      "modelo": "Pop S3"
+    },
+    {
+      "modelo": "Fire 7"
+    },
+    {
+      "modelo": "Fire S"
+    },
+    {
+      "modelo": "Fire E"
+    },
+    {
+      "modelo": "Fire C"
+    },
+    {
+      "modelo": "Idol 2 S"
+    },
+    {
+      "modelo": "Idol 2"
+    },
+    {
+      "modelo": "Idol 2 Mini S"
+    },
+    {
+      "modelo": "Idol 2 Mini"
+    },
+    {
+      "modelo": "Pop Fit"
+    },
+    {
+      "modelo": "2001"
+    },
+    {
+      "modelo": "2000"
+    },
+    {
+      "modelo": "Idol X+"
+    },
+    {
+      "modelo": "Pop C9"
+    },
+    {
+      "modelo": "Pop 8"
+    },
+    {
+      "modelo": "Pop 7"
+    },
+    {
+      "modelo": "Fierce"
+    },
+    {
+      "modelo": "Evolve"
+    },
+    {
+      "modelo": "Pop C7"
+    },
+    {
+      "modelo": "Pop C5"
+    },
+    {
+      "modelo": "Pop C3"
+    },
+    {
+      "modelo": "Pop C1"
+    },
+    {
+      "modelo": "One Touch Evo 8HD"
+    },
+    {
+      "modelo": "Idol Alpha"
+    },
+    {
+      "modelo": "Hero"
+    },
+    {
+      "modelo": "Idol S"
+    },
+    {
+      "modelo": "Idol Mini"
+    },
+    {
+      "modelo": "One Touch T10"
+    },
+    {
+      "modelo": "One Touch Snap LTE"
+    },
+    {
+      "modelo": "One Touch Pixi"
+    },
+    {
+      "modelo": "One Touch Snap"
+    },
+    {
+      "modelo": "Idol X"
+    },
+    {
+      "modelo": "One Touch Fire"
+    },
+    {
+      "modelo": "One Touch Star"
+    },
+    {
+      "modelo": "One Touch Scribe Easy"
+    },
+    {
+      "modelo": "One Touch Evo 7"
+    },
+    {
+      "modelo": "One Touch Evo 7 HD"
+    },
+    {
+      "modelo": "One Touch Tab 8 HD"
+    },
+    {
+      "modelo": "One Touch Tab 7"
+    },
+    {
+      "modelo": "One Touch Tab 7 HD"
+    },
+    {
+      "modelo": "One Touch Idol Ultra"
+    },
+    {
+      "modelo": "One Touch Idol"
+    },
+    {
+      "modelo": "One Touch T'Pop"
+    },
+    {
+      "modelo": "One Touch S'Pop"
+    },
+    {
+      "modelo": "One Touch M'Pop"
+    },
+    {
+      "modelo": "One Touch X'Pop"
+    },
+    {
+      "modelo": "One Touch Scribe HD-LTE"
+    },
+    {
+      "modelo": "One Touch Scribe X"
+    },
+    {
+      "modelo": "One Touch Scribe HD"
+    },
+    {
+      "modelo": "View"
+    },
+    {
+      "modelo": "OT-983"
+    },
+    {
+      "modelo": "OT-997D"
+    },
+    {
+      "modelo": "OT-997"
+    },
+    {
+      "modelo": "OT-992D"
+    },
+    {
+      "modelo": "OT-978"
+    },
+    {
+      "modelo": "OT-988 Shockwave"
+    },
+    {
+      "modelo": "OT-993"
+    },
+    {
+      "modelo": "OT-903"
+    },
+    {
+      "modelo": "OT-838"
+    },
+    {
+      "modelo": "OT-668"
+    },
+    {
+      "modelo": "OT-605"
+    },
+    {
+      "modelo": "OT-986"
+    },
+    {
+      "modelo": "OT-991"
+    },
+    {
+      "modelo": "OT-916"
+    },
+    {
+      "modelo": "OT-720"
+    },
+    {
+      "modelo": "OT-902"
+    },
+    {
+      "modelo": "OT-819 Soul"
+    },
+    {
+      "modelo": "OT-870"
+    },
+    {
+      "modelo": "OT-595"
+    },
+    {
+      "modelo": "OT-358"
+    },
+    {
+      "modelo": "OT-310"
+    },
+    {
+      "modelo": "OT-318D"
+    },
+    {
+      "modelo": "OT-317D"
+    },
+    {
+      "modelo": "OT-308"
+    },
+    {
+      "modelo": "OT-282"
+    },
+    {
+      "modelo": "OT-292"
+    },
+    {
+      "modelo": "OT-228"
+    },
+    {
+      "modelo": "OT-985"
+    },
+    {
+      "modelo": "OT-915"
+    },
+    {
+      "modelo": "OT-810D"
+    },
+    {
+      "modelo": "OT-906"
+    },
+    {
+      "modelo": "OT-810"
+    },
+    {
+      "modelo": "OT-995"
+    },
+    {
+      "modelo": "OT-990"
+    },
+    {
+      "modelo": "OT-910"
+    },
+    {
+      "modelo": "OT-908F"
+    },
+    {
+      "modelo": "OT-908"
+    },
+    {
+      "modelo": "OT-905"
+    },
+    {
+      "modelo": "OT-900"
+    },
+    {
+      "modelo": "OT-891 Soul"
+    },
+    {
+      "modelo": "OT-918"
+    },
+    {
+      "modelo": "OT-918D"
+    },
+    {
+      "modelo": "OT-890D"
+    },
+    {
+      "modelo": "OT-890"
+    },
+    {
+      "modelo": "OT-888"
+    },
+    {
+      "modelo": "OT-818"
+    },
+    {
+      "modelo": "OT-813F"
+    },
+    {
+      "modelo": "OT-813D"
+    },
+    {
+      "modelo": "OT-807"
+    },
+    {
+      "modelo": "OT-803"
+    },
+    {
+      "modelo": "OT-799 Play"
+    },
+    {
+      "modelo": "OT-690"
+    },
+    {
+      "modelo": "OT-665"
+    },
+    {
+      "modelo": "OT-602"
+    },
+    {
+      "modelo": "OT-585"
+    },
+    {
+      "modelo": "OT-506"
+    },
+    {
+      "modelo": "OT-385"
+    },
+    {
+      "modelo": "OT-361"
+    },
+    {
+      "modelo": "OT-355"
+    },
+    {
+      "modelo": "OT-330"
+    },
+    {
+      "modelo": "OT-306"
+    },
+    {
+      "modelo": "OT-223"
+    },
+    {
+      "modelo": "OT-217"
+    },
+    {
+      "modelo": "OT-213"
+    },
+    {
+      "modelo": "OT-209"
+    },
+    {
+      "modelo": "OT-117"
+    },
+    {
+      "modelo": "OT-113"
+    },
+    {
+      "modelo": "OT-112"
+    },
+    {
+      "modelo": "OT-109"
+    },
+    {
+      "modelo": "OT-105"
+    },
+    {
+      "modelo": "OT-706"
+    },
+    {
+      "modelo": "Net"
+    },
+    {
+      "modelo": "OT-808"
+    },
+    {
+      "modelo": "OT-606 One Touch CHAT"
+    },
+    {
+      "modelo": "OT-255"
+    },
+    {
+      "modelo": "OT-252"
+    },
+    {
+      "modelo": "OT-710"
+    },
+    {
+      "modelo": "OT-108"
+    },
+    {
+      "modelo": "OT-216"
+    },
+    {
+      "modelo": "OT-206"
+    },
+    {
+      "modelo": "OT-909 One Touch MAX"
+    },
+    {
+      "modelo": "Miss Sixty"
+    },
+    {
+      "modelo": "OT-880 One Touch XTRA"
+    },
+    {
+      "modelo": "OT-208"
+    },
+    {
+      "modelo": "OT-301"
+    },
+    {
+      "modelo": "OT-300"
+    },
+    {
+      "modelo": "OT-980"
+    },
+    {
+      "modelo": "OT-806"
+    },
+    {
+      "modelo": "OT-802 Wave"
+    },
+    {
+      "modelo": "OT-305"
+    },
+    {
+      "modelo": "OT-380"
+    },
+    {
+      "modelo": "OT-505"
+    },
+    {
+      "modelo": "OT-508A"
+    },
+    {
+      "modelo": "OT-565"
+    },
+    {
+      "modelo": "OT-106"
+    },
+    {
+      "modelo": "OT-800 One Touch CHROME"
+    },
+    {
+      "modelo": "OT-800 One Touch Tribe"
+    },
+    {
+      "modelo": "OT-708 One Touch MINI"
+    },
+    {
+      "modelo": "OT-660"
+    },
+    {
+      "modelo": "OT-383"
+    },
+    {
+      "modelo": "OT-203"
+    },
+    {
+      "modelo": "OT-103"
+    },
+    {
+      "modelo": "OT-600"
+    },
+    {
+      "modelo": "Crystal"
+    },
+    {
+      "modelo": "Miss Sixty 2009"
+    },
+    {
+      "modelo": "ELLE GlamPhone"
+    },
+    {
+      "modelo": "OT-363"
+    },
+    {
+      "modelo": "Roadsign"
+    },
+    {
+      "modelo": "OT-303"
+    },
+    {
+      "modelo": "OT-222"
+    },
+    {
+      "modelo": "OT-280"
+    },
+    {
+      "modelo": "OT-202"
+    },
+    {
+      "modelo": "OT-S121"
+    },
+    {
+      "modelo": "OT-111"
+    },
+    {
+      "modelo": "OT-102"
+    },
+    {
+      "modelo": "Mandarina Duck Moon"
+    },
+    {
+      "modelo": "Mandarina Duck"
+    },
+    {
+      "modelo": "OT-I650 SPORT"
+    },
+    {
+      "modelo": "OT-I650 PRO"
+    },
+    {
+      "modelo": "OT-V770"
+    },
+    {
+      "modelo": "OT-V670"
+    },
+    {
+      "modelo": "OT-V607A"
+    },
+    {
+      "modelo": "OT-V570"
+    },
+    {
+      "modelo": "OT-V270"
+    },
+    {
+      "modelo": "OT-V212"
+    },
+    {
+      "modelo": "OT-S626A"
+    },
+    {
+      "modelo": "OT-S521A"
+    },
+    {
+      "modelo": "OT-S920"
+    },
+    {
+      "modelo": "OT-S621"
+    },
+    {
+      "modelo": "OT-S520"
+    },
+    {
+      "modelo": "OT-S320"
+    },
+    {
+      "modelo": "OT-S319"
+    },
+    {
+      "modelo": "OT-S218"
+    },
+    {
+      "modelo": "OT-S215A"
+    },
+    {
+      "modelo": "OT-S211"
+    },
+    {
+      "modelo": "OT-S210"
+    },
+    {
+      "modelo": "OT-S120"
+    },
+    {
+      "modelo": "OT-S107"
+    },
+    {
+      "modelo": "ELLE No 3"
+    },
+    {
+      "modelo": "OT-C825"
+    },
+    {
+      "modelo": "OT-C717"
+    },
+    {
+      "modelo": "OT-C707"
+    },
+    {
+      "modelo": "OT-C701"
+    },
+    {
+      "modelo": "OT-C700A"
+    },
+    {
+      "modelo": "OT-C507"
+    },
+    {
+      "modelo": "OT-E227"
+    },
+    {
+      "modelo": "OT-E225"
+    },
+    {
+      "modelo": "OT-E221"
+    },
+    {
+      "modelo": "OT-E207"
+    },
+    {
+      "modelo": "OT-E205"
+    },
+    {
+      "modelo": "OT-E201"
+    },
+    {
+      "modelo": "OT-E101"
+    },
+    {
+      "modelo": "Lollipops"
+    },
+    {
+      "modelo": "OT-E220"
+    },
+    {
+      "modelo": "OT-E805"
+    },
+    {
+      "modelo": "OT-E230"
+    },
+    {
+      "modelo": "OT-C635"
+    },
+    {
+      "modelo": "OT-C630"
+    },
+    {
+      "modelo": "OT-E801"
+    },
+    {
+      "modelo": "OT-E100"
+    },
+    {
+      "modelo": "OT-C550"
+    },
+    {
+      "modelo": "OT-E265"
+    },
+    {
+      "modelo": "OT-E105"
+    },
+    {
+      "modelo": "OT-E260"
+    },
+    {
+      "modelo": "OT-C750"
+    },
+    {
+      "modelo": "OT-S853"
+    },
+    {
+      "modelo": "OT-S850"
+    },
+    {
+      "modelo": "OT-C560"
+    },
+    {
+      "modelo": "OT-C555"
+    },
+    {
+      "modelo": "OT-C552"
+    },
+    {
+      "modelo": "OT-C551"
+    },
+    {
+      "modelo": "OT-C656"
+    },
+    {
+      "modelo": "OT-C652"
+    },
+    {
+      "modelo": "OT-C651"
+    },
+    {
+      "modelo": "OT-E259"
+    },
+    {
+      "modelo": "OT-E256"
+    },
+    {
+      "modelo": "OT-E257"
+    },
+    {
+      "modelo": "OT-E160"
+    },
+    {
+      "modelo": "OT-E252"
+    },
+    {
+      "modelo": "OT-E159"
+    },
+    {
+      "modelo": "OT-E158"
+    },
+    {
+      "modelo": "OT-E157"
+    },
+    {
+      "modelo": "OT 757"
+    },
+    {
+      "modelo": "OT 355"
+    },
+    {
+      "modelo": "OT 156"
+    },
+    {
+      "modelo": "OT 155"
+    },
+    {
+      "modelo": "OT 153"
+    },
+    {
+      "modelo": "OT 756"
+    },
+    {
+      "modelo": "OT 557"
+    },
+    {
+      "modelo": "OT 565"
+    },
+    {
+      "modelo": "OT 556"
+    },
+    {
+      "modelo": "OT 835"
+    },
+    {
+      "modelo": "OT 735i"
+    },
+    {
+      "modelo": "OT 735"
+    },
+    {
+      "modelo": "OT 535"
+    },
+    {
+      "modelo": "OT 531"
+    },
+    {
+      "modelo": "OT 332"
+    },
+    {
+      "modelo": "OT 331"
+    },
+    {
+      "modelo": "OT 526"
+    },
+    {
+      "modelo": "OT 320"
+    },
+    {
+      "modelo": "OT 525"
+    },
+    {
+      "modelo": "OT 715"
+    },
+    {
+      "modelo": "OT 512"
+    },
+    {
+      "modelo": "OT 311"
+    },
+    {
+      "modelo": "OT 511"
+    },
+    {
+      "modelo": "OT 700"
+    },
+    {
+      "modelo": "OT 500"
+    },
+    {
+      "modelo": "OT 300"
+    },
+    {
+      "modelo": "OT View db @"
+    },
+    {
+      "modelo": "OT Pocket"
+    },
+    {
+      "modelo": "OT View db"
+    },
+    {
+      "modelo": "OT Max db"
+    },
+    {
+      "modelo": "OT Gum db"
+    },
+    {
+      "modelo": "OT Easy db"
+    },
+    {
+      "modelo": "OT Club db"
+    },
+    {
+      "modelo": "OT COM"
+    },
+    {
+      "modelo": "OT Pro"
+    },
+    {
+      "modelo": "OT Easy HF"
+    },
+    {
+      "modelo": "OT Easy"
+    },
+    {
+      "modelo": "OT Club"
+    },
+    {
+      "modelo": "OT Club +"
+    },
+    {
+      "modelo": "OT Max"
+    },
+    {
+      "modelo": "OT View"
+    },
+    {
+      "modelo": "HC 1000"
+    },
+    {
+      "modelo": "HC 800"
+    }
+  ]
+}

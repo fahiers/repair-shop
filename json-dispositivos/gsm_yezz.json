@@ -1,0 +1,349 @@
+{
+  "marca": "YEZZ",
+  "id_interno": "78",
+  "slug": "yezz",
+  "total_esperado": 0,
+  "total_encontrado": 113,
+  "modelos": [
+    {
+      "modelo": "Art 3S"
+    },
+    {
+      "modelo": "Max 3 Ultra"
+    },
+    {
+      "modelo": "Max 3 Plus"
+    },
+    {
+      "modelo": "Max 3"
+    },
+    {
+      "modelo": "Liv 3S LTE"
+    },
+    {
+      "modelo": "Art 3 Pro"
+    },
+    {
+      "modelo": "C32"
+    },
+    {
+      "modelo": "Art 3 Lite"
+    },
+    {
+      "modelo": "EPIC 3"
+    },
+    {
+      "modelo": "Max 2 Ultra"
+    },
+    {
+      "modelo": "Max 2"
+    },
+    {
+      "modelo": "Liv 3 LTE"
+    },
+    {
+      "modelo": "GO 3"
+    },
+    {
+      "modelo": "Art 2 Pro"
+    },
+    {
+      "modelo": "Max 2 Plus"
+    },
+    {
+      "modelo": "Liv 1s"
+    },
+    {
+      "modelo": "Art 1 Pro"
+    },
+    {
+      "modelo": "Liv 2 LTE"
+    },
+    {
+      "modelo": "Art 1"
+    },
+    {
+      "modelo": "GO 1"
+    },
+    {
+      "modelo": "Max 1 Plus"
+    },
+    {
+      "modelo": "LIV1"
+    },
+    {
+      "modelo": "Max 1"
+    },
+    {
+      "modelo": "Andy 4E7"
+    },
+    {
+      "modelo": "Andy 5E5"
+    },
+    {
+      "modelo": "Epic T"
+    },
+    {
+      "modelo": "Andy 4E4"
+    },
+    {
+      "modelo": "4.5EL LTE"
+    },
+    {
+      "modelo": "5M"
+    },
+    {
+      "modelo": "C21"
+    },
+    {
+      "modelo": "Andy 5EI3",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Andy 5E3"
+    },
+    {
+      "modelo": "Andy 4.7T"
+    },
+    {
+      "modelo": "Andy 5M LTE"
+    },
+    {
+      "modelo": "CC40"
+    },
+    {
+      "modelo": "Andy 5.5M LTE VR"
+    },
+    {
+      "modelo": "Monte Carlo 55 LTE VR"
+    },
+    {
+      "modelo": "Monte Carlo 55 LTE"
+    },
+    {
+      "modelo": "Classic C23A"
+    },
+    {
+      "modelo": "Andy 4E3I"
+    },
+    {
+      "modelo": "Andy 5E2I"
+    },
+    {
+      "modelo": "Andy 4EI2"
+    },
+    {
+      "modelo": "Andy 3.5EI2"
+    },
+    {
+      "modelo": "Andy 6EL LTE"
+    },
+    {
+      "modelo": "Andy 5E LTE"
+    },
+    {
+      "modelo": "Andy C5E LTE"
+    },
+    {
+      "modelo": "Andy 5EI3"
+    },
+    {
+      "modelo": "Andy 4EL2 LTE"
+    },
+    {
+      "modelo": "Classic Z51"
+    },
+    {
+      "modelo": "Andy 5EL LTE"
+    },
+    {
+      "modelo": "Andy 4.5EL LTE"
+    },
+    {
+      "modelo": "Andy 3.5EI3"
+    },
+    {
+      "modelo": "Classic C60"
+    },
+    {
+      "modelo": "Andy 4E LTE"
+    },
+    {
+      "modelo": "Andy 4E2I"
+    },
+    {
+      "modelo": "Andy 3.5E2I"
+    },
+    {
+      "modelo": "Z50"
+    },
+    {
+      "modelo": "ZC20"
+    },
+    {
+      "modelo": "Billy 5S LTE"
+    },
+    {
+      "modelo": "Andy C5ML"
+    },
+    {
+      "modelo": "Andy C5QL"
+    },
+    {
+      "modelo": "Classic C50"
+    },
+    {
+      "modelo": "Classic C22"
+    },
+    {
+      "modelo": "Classic C21A"
+    },
+    {
+      "modelo": "Monaco 47"
+    },
+    {
+      "modelo": "Billy 4"
+    },
+    {
+      "modelo": "Andy 5T"
+    },
+    {
+      "modelo": "Andy C5VP"
+    },
+    {
+      "modelo": "Andy C5V"
+    },
+    {
+      "modelo": "Andy 5.5EI"
+    },
+    {
+      "modelo": "Andy 4.5M"
+    },
+    {
+      "modelo": "Billy 4.7"
+    },
+    {
+      "modelo": "Andy 4EI"
+    },
+    {
+      "modelo": "Andy 3.5EH"
+    },
+    {
+      "modelo": "Andy 5EI"
+    },
+    {
+      "modelo": "Andy 3.5EI"
+    },
+    {
+      "modelo": "Andy 6Q"
+    },
+    {
+      "modelo": "Classic C21"
+    },
+    {
+      "modelo": "Andy A5QP"
+    },
+    {
+      "modelo": "Andy AZ4.5"
+    },
+    {
+      "modelo": "Epic T7FD"
+    },
+    {
+      "modelo": "Andy A3.5EP"
+    },
+    {
+      "modelo": "Epic T7ED"
+    },
+    {
+      "modelo": "Andy A6M 1GB"
+    },
+    {
+      "modelo": "Andy A6M"
+    },
+    {
+      "modelo": "Andy A4M"
+    },
+    {
+      "modelo": "Andy A4E"
+    },
+    {
+      "modelo": "Andy A5 1GB"
+    },
+    {
+      "modelo": "Andy A4.5 1GB"
+    },
+    {
+      "modelo": "Andy A4.5"
+    },
+    {
+      "modelo": "Andy A4"
+    },
+    {
+      "modelo": "Andy A3.5"
+    },
+    {
+      "modelo": "Classic CC10"
+    },
+    {
+      "modelo": "Andy A5"
+    },
+    {
+      "modelo": "Epic T7"
+    },
+    {
+      "modelo": "Classic C30"
+    },
+    {
+      "modelo": "Bonito YZ500"
+    },
+    {
+      "modelo": "Exclusive Z10"
+    },
+    {
+      "modelo": "Andy 3G 3.5 YZ1110"
+    },
+    {
+      "modelo": "Andy 3G 4.0 YZ1120"
+    },
+    {
+      "modelo": "Ritmo 3 TV YZ433"
+    },
+    {
+      "modelo": "Ritmo 2 YZ420"
+    },
+    {
+      "modelo": "Andy 3G 2.8 YZ11"
+    },
+    {
+      "modelo": "Classic C20"
+    },
+    {
+      "modelo": "Chico 2 YZ201"
+    },
+    {
+      "modelo": "Andy YZ1100"
+    },
+    {
+      "modelo": "Fashion F10"
+    },
+    {
+      "modelo": "Bono 3G YZ700"
+    },
+    {
+      "modelo": "Moda YZ600"
+    },
+    {
+      "modelo": "Ritmo YZ400"
+    },
+    {
+      "modelo": "Zenior YZ888"
+    },
+    {
+      "modelo": "Clasico YZ300"
+    },
+    {
+      "modelo": "Chico YZ200"
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "marca": "SONY ERICSSON",
+  "id_interno": "19",
+  "slug": "sony_ericsson",
+  "total_esperado": 0,
+  "total_encontrado": 188,
+  "modelos": [
+    {
+      "modelo": "Xperia Arc S"
+    },
+    {
+      "modelo": "Xperia neo V"
+    },
+    {
+      "modelo": "Live with Walkman"
+    },
+    {
+      "modelo": "Xperia ray"
+    },
+    {
+      "modelo": "Xperia active"
+    },
+    {
+      "modelo": "txt"
+    },
+    {
+      "modelo": "Mix Walkman"
+    },
+    {
+      "modelo": "txt pro"
+    },
+    {
+      "modelo": "Xperia mini"
+    },
+    {
+      "modelo": "Xperia mini pro"
+    },
+    {
+      "modelo": "WT18i"
+    },
+    {
+      "modelo": "W8"
+    },
+    {
+      "modelo": "Xperia PLAY"
+    },
+    {
+      "modelo": "Xperia pro"
+    },
+    {
+      "modelo": "Xperia Neo"
+    },
+    {
+      "modelo": "Xperia Arc"
+    },
+    {
+      "modelo": "Xperia PLAY CDMA"
+    },
+    {
+      "modelo": "A8i"
+    },
+    {
+      "modelo": "Xperia X8"
+    },
+    {
+      "modelo": "Cedar"
+    },
+    {
+      "modelo": "Yendo"
+    },
+    {
+      "modelo": "BRAVIA S004"
+    },
+    {
+      "modelo": "S003"
+    },
+    {
+      "modelo": "Zylo"
+    },
+    {
+      "modelo": "Spiro"
+    },
+    {
+      "modelo": "Xperia X10 mini pro"
+    },
+    {
+      "modelo": "Xperia X10 mini"
+    },
+    {
+      "modelo": "Vivaz pro"
+    },
+    {
+      "modelo": "Aspen"
+    },
+    {
+      "modelo": "Vivaz"
+    },
+    {
+      "modelo": "Hazel"
+    },
+    {
+      "modelo": "Elm"
+    },
+    {
+      "modelo": "Xperia Pureness"
+    },
+    {
+      "modelo": "Xperia X10"
+    },
+    {
+      "modelo": "Xperia X2"
+    },
+    {
+      "modelo": "Jalou D&G edition"
+    },
+    {
+      "modelo": "Jalou"
+    },
+    {
+      "modelo": "T715"
+    },
+    {
+      "modelo": "C901 GreenHeart"
+    },
+    {
+      "modelo": "J105 Naite"
+    },
+    {
+      "modelo": "Satio (Idou)"
+    },
+    {
+      "modelo": "Aino"
+    },
+    {
+      "modelo": "Yari"
+    },
+    {
+      "modelo": "S312"
+    },
+    {
+      "modelo": "W205"
+    },
+    {
+      "modelo": "T707"
+    },
+    {
+      "modelo": "W995"
+    },
+    {
+      "modelo": "C903"
+    },
+    {
+      "modelo": "C901"
+    },
+    {
+      "modelo": "W395"
+    },
+    {
+      "modelo": "C510"
+    },
+    {
+      "modelo": "W508"
+    },
+    {
+      "modelo": "W715"
+    },
+    {
+      "modelo": "W705"
+    },
+    {
+      "modelo": "G705"
+    },
+    {
+      "modelo": "TM506"
+    },
+    {
+      "modelo": "T700"
+    },
+    {
+      "modelo": "W902"
+    },
+    {
+      "modelo": "W595"
+    },
+    {
+      "modelo": "W595s"
+    },
+    {
+      "modelo": "W302"
+    },
+    {
+      "modelo": "C905"
+    },
+    {
+      "modelo": "S302"
+    },
+    {
+      "modelo": "F305"
+    },
+    {
+      "modelo": "J132"
+    },
+    {
+      "modelo": "K330"
+    },
+    {
+      "modelo": "G502"
+    },
+    {
+      "modelo": "Z780"
+    },
+    {
+      "modelo": "T303"
+    },
+    {
+      "modelo": "Xperia X1"
+    },
+    {
+      "modelo": "G900"
+    },
+    {
+      "modelo": "G700"
+    },
+    {
+      "modelo": "G700 Business Edition"
+    },
+    {
+      "modelo": "W980"
+    },
+    {
+      "modelo": "C902"
+    },
+    {
+      "modelo": "C702"
+    },
+    {
+      "modelo": "Z770"
+    },
+    {
+      "modelo": "T280"
+    },
+    {
+      "modelo": "T270"
+    },
+    {
+      "modelo": "R306 Radio"
+    },
+    {
+      "modelo": "R300 Radio"
+    },
+    {
+      "modelo": "W760"
+    },
+    {
+      "modelo": "Z555"
+    },
+    {
+      "modelo": "W350"
+    },
+    {
+      "modelo": "W890"
+    },
+    {
+      "modelo": "K660"
+    },
+    {
+      "modelo": "W380"
+    },
+    {
+      "modelo": "K630"
+    },
+    {
+      "modelo": "K770"
+    },
+    {
+      "modelo": "K850"
+    },
+    {
+      "modelo": "W960"
+    },
+    {
+      "modelo": "W910"
+    },
+    {
+      "modelo": "K530"
+    },
+    {
+      "modelo": "V640"
+    },
+    {
+      "modelo": "Z320"
+    },
+    {
+      "modelo": "Z250"
+    },
+    {
+      "modelo": "P1"
+    },
+    {
+      "modelo": "T650"
+    },
+    {
+      "modelo": "S500"
+    },
+    {
+      "modelo": "T250"
+    },
+    {
+      "modelo": "Z750"
+    },
+    {
+      "modelo": "W580"
+    },
+    {
+      "modelo": "W660"
+    },
+    {
+      "modelo": "W880"
+    },
+    {
+      "modelo": "K810"
+    },
+    {
+      "modelo": "W610"
+    },
+    {
+      "modelo": "K550"
+    },
+    {
+      "modelo": "K220"
+    },
+    {
+      "modelo": "K205"
+    },
+    {
+      "modelo": "K200"
+    },
+    {
+      "modelo": "J120"
+    },
+    {
+      "modelo": "J110"
+    },
+    {
+      "modelo": "K550im"
+    },
+    {
+      "modelo": "W888"
+    },
+    {
+      "modelo": "W200"
+    },
+    {
+      "modelo": "Z310"
+    },
+    {
+      "modelo": "W830"
+    },
+    {
+      "modelo": "K320"
+    },
+    {
+      "modelo": "Z558"
+    },
+    {
+      "modelo": "Z610"
+    },
+    {
+      "modelo": "K618"
+    },
+    {
+      "modelo": "W850"
+    },
+    {
+      "modelo": "W710"
+    },
+    {
+      "modelo": "Z710"
+    },
+    {
+      "modelo": "Z550"
+    },
+    {
+      "modelo": "W700"
+    },
+    {
+      "modelo": "Z525"
+    },
+    {
+      "modelo": "K800"
+    },
+    {
+      "modelo": "K790"
+    },
+    {
+      "modelo": "V630"
+    },
+    {
+      "modelo": "W300"
+    },
+    {
+      "modelo": "Z530"
+    },
+    {
+      "modelo": "P990"
+    },
+    {
+      "modelo": "K510"
+    },
+    {
+      "modelo": "K310"
+    },
+    {
+      "modelo": "W950"
+    },
+    {
+      "modelo": "M600"
+    },
+    {
+      "modelo": "M608"
+    },
+    {
+      "modelo": "K610"
+    },
+    {
+      "modelo": "J100"
+    },
+    {
+      "modelo": "W810"
+    },
+    {
+      "modelo": "W900"
+    },
+    {
+      "modelo": "Z300"
+    },
+    {
+      "modelo": "J230"
+    },
+    {
+      "modelo": "J220"
+    },
+    {
+      "modelo": "W550"
+    },
+    {
+      "modelo": "W600"
+    },
+    {
+      "modelo": "S600"
+    },
+    {
+      "modelo": "Z520"
+    },
+    {
+      "modelo": "J210"
+    },
+    {
+      "modelo": "K608"
+    },
+    {
+      "modelo": "W800"
+    },
+    {
+      "modelo": "K750"
+    },
+    {
+      "modelo": "D750"
+    },
+    {
+      "modelo": "J300"
+    },
+    {
+      "modelo": "V600"
+    },
+    {
+      "modelo": "K600"
+    },
+    {
+      "modelo": "Z800"
+    },
+    {
+      "modelo": "K300"
+    },
+    {
+      "modelo": "J200"
+    },
+    {
+      "modelo": "T290"
+    },
+    {
+      "modelo": "V800"
+    },
+    {
+      "modelo": "P910"
+    },
+    {
+      "modelo": "S710"
+    },
+    {
+      "modelo": "K508"
+    },
+    {
+      "modelo": "K500"
+    },
+    {
+      "modelo": "F500i"
+    },
+    {
+      "modelo": "S700"
+    },
+    {
+      "modelo": "K700"
+    },
+    {
+      "modelo": "Z500"
+    },
+    {
+      "modelo": "T630"
+    },
+    {
+      "modelo": "P900"
+    },
+    {
+      "modelo": "Z600"
+    },
+    {
+      "modelo": "Z200"
+    },
+    {
+      "modelo": "T230"
+    },
+    {
+      "modelo": "Z1010"
+    },
+    {
+      "modelo": "T610"
+    },
+    {
+      "modelo": "T310"
+    },
+    {
+      "modelo": "T105"
+    },
+    {
+      "modelo": "T100"
+    },
+    {
+      "modelo": "T600"
+    },
+    {
+      "modelo": "T300"
+    },
+    {
+      "modelo": "T200"
+    },
+    {
+      "modelo": "P800"
+    },
+    {
+      "modelo": "Z700"
+    },
+    {
+      "modelo": "T68i"
+    },
+    {
+      "modelo": "Xperia Duo"
+    },
+    {
+      "modelo": "Windows Phone 7"
+    }
+  ]
+}

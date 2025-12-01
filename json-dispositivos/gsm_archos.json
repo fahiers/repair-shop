@@ -1,0 +1,138 @@
+{
+  "marca": "ARCHOS",
+  "id_interno": "90",
+  "slug": "archos",
+  "total_esperado": 0,
+  "total_encontrado": 43,
+  "modelos": [
+    {
+      "modelo": "Diamond"
+    },
+    {
+      "modelo": "Oxygen 68XL"
+    },
+    {
+      "modelo": "Oxygen 63"
+    },
+    {
+      "modelo": "Oxygen 57"
+    },
+    {
+      "modelo": "Saphir 50X"
+    },
+    {
+      "modelo": "Diamond Omega"
+    },
+    {
+      "modelo": "Diamond Alpha +"
+    },
+    {
+      "modelo": "Diamond Tab"
+    },
+    {
+      "modelo": "Diamond Alpha"
+    },
+    {
+      "modelo": "Sense 55s"
+    },
+    {
+      "modelo": "Diamond Gamma"
+    },
+    {
+      "modelo": "Sense 50x"
+    },
+    {
+      "modelo": "50 Saphir"
+    },
+    {
+      "modelo": "55 Graphite"
+    },
+    {
+      "modelo": "50 Graphite"
+    },
+    {
+      "modelo": "55b Cobalt"
+    },
+    {
+      "modelo": "50b Cobalt"
+    },
+    {
+      "modelo": "Diamond 2 Plus"
+    },
+    {
+      "modelo": "55 Cobalt Plus"
+    },
+    {
+      "modelo": "50 Cobalt"
+    },
+    {
+      "modelo": "Diamond Plus"
+    },
+    {
+      "modelo": "Diamond S"
+    },
+    {
+      "modelo": "50d Helium 4G"
+    },
+    {
+      "modelo": "50b Helium 4G"
+    },
+    {
+      "modelo": "50 Diamond"
+    },
+    {
+      "modelo": "40 Cesium"
+    },
+    {
+      "modelo": "45c Platinum"
+    },
+    {
+      "modelo": "40c Titanium"
+    },
+    {
+      "modelo": "50b Platinum"
+    },
+    {
+      "modelo": "80 Helium 4G"
+    },
+    {
+      "modelo": "64 Xenon"
+    },
+    {
+      "modelo": "50c Oxygen"
+    },
+    {
+      "modelo": "40b Titanium"
+    },
+    {
+      "modelo": "50 Helium 4G"
+    },
+    {
+      "modelo": "45 Helium 4G"
+    },
+    {
+      "modelo": "50 Oxygen"
+    },
+    {
+      "modelo": "53 Platinum"
+    },
+    {
+      "modelo": "50 Platinum"
+    },
+    {
+      "modelo": "45 Platinum"
+    },
+    {
+      "modelo": "53 Titanium"
+    },
+    {
+      "modelo": "50 Titanium"
+    },
+    {
+      "modelo": "45 Titanium"
+    },
+    {
+      "modelo": "40 Titanium"
+    }
+  ]
+}

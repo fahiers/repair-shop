@@ -1,0 +1,529 @@
+{
+  "marca": "LAVA",
+  "id_interno": "94",
+  "slug": "lava",
+  "total_esperado": 0,
+  "total_encontrado": 173,
+  "modelos": [
+    {
+      "modelo": "Agni 4"
+    },
+    {
+      "modelo": "Bold N1"
+    },
+    {
+      "modelo": "Play Ultra"
+    },
+    {
+      "modelo": "Blaze Amoled 2"
+    },
+    {
+      "modelo": "Blaze Dragon"
+    },
+    {
+      "modelo": "Storm Play"
+    },
+    {
+      "modelo": "Storm Lite"
+    },
+    {
+      "modelo": "Bold N1 Pro"
+    },
+    {
+      "modelo": "Bold N1 4G"
+    },
+    {
+      "modelo": "Shark"
+    },
+    {
+      "modelo": "Yuva Star 2"
+    },
+    {
+      "modelo": "Bold"
+    },
+    {
+      "modelo": "Shark 4G"
+    },
+    {
+      "modelo": "Prowatch V1"
+    },
+    {
+      "modelo": "Yuva 2 5G"
+    },
+    {
+      "modelo": "Blaze Duo"
+    },
+    {
+      "modelo": "Yuva 4"
+    },
+    {
+      "modelo": "Agni 3"
+    },
+    {
+      "modelo": "Blaze 3 5G"
+    },
+    {
+      "modelo": "Yuva Star"
+    },
+    {
+      "modelo": "Blaze X"
+    },
+    {
+      "modelo": "Yuva 5G"
+    },
+    {
+      "modelo": "Prowatch ZN"
+    },
+    {
+      "modelo": "Prowatch VN"
+    },
+    {
+      "modelo": "O2"
+    },
+    {
+      "modelo": "Blaze Curve"
+    },
+    {
+      "modelo": "Yuva 3"
+    },
+    {
+      "modelo": "Storm"
+    },
+    {
+      "modelo": "Yuva 3 Pro"
+    },
+    {
+      "modelo": "Blaze 2 5G"
+    },
+    {
+      "modelo": "Blaze Pro 5G"
+    },
+    {
+      "modelo": "Blaze 2 Pro"
+    },
+    {
+      "modelo": "O1"
+    },
+    {
+      "modelo": "Yuva 2"
+    },
+    {
+      "modelo": "Agni 2"
+    },
+    {
+      "modelo": "Blaze 1X"
+    },
+    {
+      "modelo": "Blaze 2"
+    },
+    {
+      "modelo": "Yuva 2 Pro"
+    },
+    {
+      "modelo": "X3"
+    },
+    {
+      "modelo": "Blaze Nxt"
+    },
+    {
+      "modelo": "Yuva Pro"
+    },
+    {
+      "modelo": "Yuva"
+    },
+    {
+      "modelo": "Blaze 5G"
+    },
+    {
+      "modelo": "Blaze Pro"
+    },
+    {
+      "modelo": "Blaze"
+    },
+    {
+      "modelo": "Z3 Pro"
+    },
+    {
+      "modelo": "Z3"
+    },
+    {
+      "modelo": "X2"
+    },
+    {
+      "modelo": "Agni 5G"
+    },
+    {
+      "modelo": "Z2s"
+    },
+    {
+      "modelo": "Z2 Max"
+    },
+    {
+      "modelo": "Z6"
+    },
+    {
+      "modelo": "Z4"
+    },
+    {
+      "modelo": "Z2"
+    },
+    {
+      "modelo": "Z1"
+    },
+    {
+      "modelo": "Z61 Pro"
+    },
+    {
+      "modelo": "Z71"
+    },
+    {
+      "modelo": "Z40"
+    },
+    {
+      "modelo": "Z92"
+    },
+    {
+      "modelo": "Z81"
+    },
+    {
+      "modelo": "Z60s"
+    },
+    {
+      "modelo": "Z61"
+    },
+    {
+      "modelo": "Z91 (2GB)"
+    },
+    {
+      "modelo": "Z91"
+    },
+    {
+      "modelo": "Z50"
+    },
+    {
+      "modelo": "Z90"
+    },
+    {
+      "modelo": "Z80"
+    },
+    {
+      "modelo": "Z60"
+    },
+    {
+      "modelo": "A97 2GB+"
+    },
+    {
+      "modelo": "A44"
+    },
+    {
+      "modelo": "A77"
+    },
+    {
+      "modelo": "Z25"
+    },
+    {
+      "modelo": "Z10"
+    },
+    {
+      "modelo": "X28 Plus"
+    },
+    {
+      "modelo": "A73"
+    },
+    {
+      "modelo": "X19"
+    },
+    {
+      "modelo": "A55"
+    },
+    {
+      "modelo": "A50"
+    },
+    {
+      "modelo": "X50 Plus"
+    },
+    {
+      "modelo": "X41 Plus"
+    },
+    {
+      "modelo": "A51"
+    },
+    {
+      "modelo": "A76+"
+    },
+    {
+      "modelo": "A97"
+    },
+    {
+      "modelo": "X28"
+    },
+    {
+      "modelo": "P7+"
+    },
+    {
+      "modelo": "A48"
+    },
+    {
+      "modelo": "X38"
+    },
+    {
+      "modelo": "A32"
+    },
+    {
+      "modelo": "A68"
+    },
+    {
+      "modelo": "X50"
+    },
+    {
+      "modelo": "X17"
+    },
+    {
+      "modelo": "X81"
+    },
+    {
+      "modelo": "X46"
+    },
+    {
+      "modelo": "A89"
+    },
+    {
+      "modelo": "A82"
+    },
+    {
+      "modelo": "A79"
+    },
+    {
+      "modelo": "A59"
+    },
+    {
+      "modelo": "A67"
+    },
+    {
+      "modelo": "V2 s"
+    },
+    {
+      "modelo": "V2 3GB"
+    },
+    {
+      "modelo": "A76"
+    },
+    {
+      "modelo": "A72"
+    },
+    {
+      "modelo": "X11"
+    },
+    {
+      "modelo": "A88"
+    },
+    {
+      "modelo": "Iris Fuel F2"
+    },
+    {
+      "modelo": "A71"
+    },
+    {
+      "modelo": "P7"
+    },
+    {
+      "modelo": "V5"
+    },
+    {
+      "modelo": "X3",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Iris Atom 3"
+    },
+    {
+      "modelo": "Iris Atom"
+    },
+    {
+      "modelo": "X10"
+    },
+    {
+      "modelo": "Iris Atom 2X"
+    },
+    {
+      "modelo": "Iris Atom X"
+    },
+    {
+      "modelo": "Fuel F1"
+    },
+    {
+      "modelo": "Iris Fuel F1 Mini"
+    },
+    {
+      "modelo": "Flair E2"
+    },
+    {
+      "modelo": "Pixel V2"
+    },
+    {
+      "modelo": "Iris Atom 2"
+    },
+    {
+      "modelo": "Flair Z1"
+    },
+    {
+      "modelo": "Pixel V1"
+    },
+    {
+      "modelo": "Flair P1i"
+    },
+    {
+      "modelo": "Iris X1 Atom S"
+    },
+    {
+      "modelo": "Icon"
+    },
+    {
+      "modelo": "Iris X1 Grand"
+    },
+    {
+      "modelo": "Iris X1 mini"
+    },
+    {
+      "modelo": "Iris Alfa"
+    },
+    {
+      "modelo": "Iris X8"
+    },
+    {
+      "modelo": "Iris 470"
+    },
+    {
+      "modelo": "Iris 465"
+    },
+    {
+      "modelo": "Iris 401"
+    },
+    {
+      "modelo": "Iris 350"
+    },
+    {
+      "modelo": "Iris 348"
+    },
+    {
+      "modelo": "Iris 325 Style"
+    },
+    {
+      "modelo": "Iris Fuel 60"
+    },
+    {
+      "modelo": "Iris Win1"
+    },
+    {
+      "modelo": "Iris 250"
+    },
+    {
+      "modelo": "Iris 400s"
+    },
+    {
+      "modelo": "Iris 352 Flair"
+    },
+    {
+      "modelo": "Iris 404 Flair"
+    },
+    {
+      "modelo": "Iris 400Q"
+    },
+    {
+      "modelo": "Iris 410"
+    },
+    {
+      "modelo": "Iris Fuel 50"
+    },
+    {
+      "modelo": "Iris 310 Style"
+    },
+    {
+      "modelo": "Iris 360 Music"
+    },
+    {
+      "modelo": "Iris 460"
+    },
+    {
+      "modelo": "Iris X5"
+    },
+    {
+      "modelo": "Iris Pro 30+"
+    },
+    {
+      "modelo": "Iris 402e"
+    },
+    {
+      "modelo": "Iris 350m"
+    },
+    {
+      "modelo": "3G 412"
+    },
+    {
+      "modelo": "Iris X1"
+    },
+    {
+      "modelo": "3G 415"
+    },
+    {
+      "modelo": "3G 354"
+    },
+    {
+      "modelo": "Iris 504q+"
+    },
+    {
+      "modelo": "Iris 356"
+    },
+    {
+      "modelo": "Iris 450 Colour"
+    },
+    {
+      "modelo": "Iris 406Q"
+    },
+    {
+      "modelo": "Iris 550Q"
+    },
+    {
+      "modelo": "Iris Pro 20"
+    },
+    {
+      "modelo": "Iris Pro 30"
+    },
+    {
+      "modelo": "Iris 401e"
+    },
+    {
+      "modelo": "Iris 349S"
+    },
+    {
+      "modelo": "Iris 349+"
+    },
+    {
+      "modelo": "Iris 404e"
+    },
+    {
+      "modelo": "Iris 503e"
+    },
+    {
+      "modelo": "Iris 506Q"
+    },
+    {
+      "modelo": "Iris 505"
+    },
+    {
+      "modelo": "Iris 504q"
+    },
+    {
+      "modelo": "3G 402+"
+    },
+    {
+      "modelo": "3G 402"
+    },
+    {
+      "modelo": "Iris 405+"
+    },
+    {
+      "modelo": "Iris 503"
+    }
+  ]
+}

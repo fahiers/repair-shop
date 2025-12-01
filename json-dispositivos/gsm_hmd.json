@@ -1,0 +1,99 @@
+{
+  "marca": "HMD",
+  "id_interno": "133",
+  "slug": "hmd",
+  "total_esperado": 0,
+  "total_encontrado": 30,
+  "modelos": [
+    {
+      "modelo": "Touch 4G"
+    },
+    {
+      "modelo": "Ivalo XE"
+    },
+    {
+      "modelo": "Vibe"
+    },
+    {
+      "modelo": "102 4G"
+    },
+    {
+      "modelo": "101 4G"
+    },
+    {
+      "modelo": "Pulse 2 Pro"
+    },
+    {
+      "modelo": "3210"
+    },
+    {
+      "modelo": "2660 Flip"
+    },
+    {
+      "modelo": "150 Music"
+    },
+    {
+      "modelo": "130 Music"
+    },
+    {
+      "modelo": "Aura 2"
+    },
+    {
+      "modelo": "Key"
+    },
+    {
+      "modelo": "Arc"
+    },
+    {
+      "modelo": "105 4G"
+    },
+    {
+      "modelo": "110 4G"
+    },
+    {
+      "modelo": "Fusion"
+    },
+    {
+      "modelo": "Barbie"
+    },
+    {
+      "modelo": "Crest Max"
+    },
+    {
+      "modelo": "Crest"
+    },
+    {
+      "modelo": "Skyline"
+    },
+    {
+      "modelo": "110"
+    },
+    {
+      "modelo": "105"
+    },
+    {
+      "modelo": "Aura"
+    },
+    {
+      "modelo": "T21"
+    },
+    {
+      "modelo": "XR21"
+    },
+    {
+      "modelo": "Vibe 4G"
+    },
+    {
+      "modelo": "Pulse Pro"
+    },
+    {
+      "modelo": "Pulse+"
+    },
+    {
+      "modelo": "Pulse"
+    },
+    {
+      "modelo": "Bold"
+    }
+  ]
+}

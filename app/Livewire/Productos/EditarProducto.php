@@ -10,15 +10,25 @@ class EditarProducto extends Component
     public int $productoId;
 
     public $nombre;
+
     public $descripcion;
+
     public $categoria;
+
     public $marca;
+
     public $precio_compra;
+
     public $precio_venta;
+
     public $stock = 0;
+
     public $stock_minimo = 0;
+
     public $proveedor_id;
+
     public $estado = 'activo';
+
     public $fecha_ingreso;
 
     protected $rules = [
@@ -33,6 +43,34 @@ class EditarProducto extends Component
         'proveedor_id' => 'nullable|integer|min:1',
         'estado' => 'required|in:activo,inactivo',
         'fecha_ingreso' => 'nullable|date',
+    ];
+
+    protected $messages = [
+        'nombre.required' => 'El campo nombre es obligatorio.',
+        'nombre.string' => 'El campo nombre debe ser texto.',
+        'nombre.max' => 'El campo nombre no puede tener más de 100 caracteres.',
+        'descripcion.string' => 'El campo descripción debe ser texto.',
+        'categoria.string' => 'El campo categoría debe ser texto.',
+        'categoria.max' => 'El campo categoría no puede tener más de 50 caracteres.',
+        'marca.string' => 'El campo marca debe ser texto.',
+        'marca.max' => 'El campo marca no puede tener más de 50 caracteres.',
+        'precio_compra.required' => 'El campo precio de compra es obligatorio.',
+        'precio_compra.numeric' => 'El campo precio de compra debe ser un número.',
+        'precio_compra.min' => 'El campo precio de compra debe ser mayor o igual a 0.',
+        'precio_venta.required' => 'El campo precio de venta es obligatorio.',
+        'precio_venta.numeric' => 'El campo precio de venta debe ser un número.',
+        'precio_venta.min' => 'El campo precio de venta debe ser mayor o igual a 0.',
+        'stock.required' => 'El campo stock es obligatorio.',
+        'stock.integer' => 'El campo stock debe ser un número entero.',
+        'stock.min' => 'El campo stock debe ser mayor o igual a 0.',
+        'stock_minimo.required' => 'El campo stock mínimo es obligatorio.',
+        'stock_minimo.integer' => 'El campo stock mínimo debe ser un número entero.',
+        'stock_minimo.min' => 'El campo stock mínimo debe ser mayor o igual a 0.',
+        'proveedor_id.integer' => 'El campo proveedor debe ser un número entero.',
+        'proveedor_id.min' => 'El campo proveedor debe ser mayor o igual a 1.',
+        'estado.required' => 'El campo estado es obligatorio.',
+        'estado.in' => 'El campo estado debe ser activo o inactivo.',
+        'fecha_ingreso.date' => 'El campo fecha de ingreso debe ser una fecha válida.',
     ];
 
     public function mount(int $id): void

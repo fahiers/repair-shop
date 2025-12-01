@@ -1,0 +1,63 @@
+{
+  "marca": "INNOSTREAM",
+  "id_interno": "29",
+  "slug": "innostream",
+  "total_esperado": 0,
+  "total_encontrado": 18,
+  "modelos": [
+    {
+      "modelo": "INNO A20"
+    },
+    {
+      "modelo": "INNO P10"
+    },
+    {
+      "modelo": "INNO A10"
+    },
+    {
+      "modelo": "INNO 75"
+    },
+    {
+      "modelo": "INNO 50"
+    },
+    {
+      "modelo": "INNO 36"
+    },
+    {
+      "modelo": "INNO 79"
+    },
+    {
+      "modelo": "INNO 78"
+    },
+    {
+      "modelo": "INNO 30"
+    },
+    {
+      "modelo": "INNO 55"
+    },
+    {
+      "modelo": "INNO 70"
+    },
+    {
+      "modelo": "INNO 99"
+    },
+    {
+      "modelo": "INNO 90"
+    },
+    {
+      "modelo": "INNO 89"
+    },
+    {
+      "modelo": "INNO 80"
+    },
+    {
+      "modelo": "INNO 120"
+    },
+    {
+      "modelo": "INNO 110"
+    },
+    {
+      "modelo": "INNO 100"
+    }
+  ]
+}

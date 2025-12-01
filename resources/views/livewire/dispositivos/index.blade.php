@@ -39,6 +39,9 @@
                     <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide text-zinc-500">Cliente</th>
                     <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide text-zinc-500">IMEI / Color</th>
                     <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide text-zinc-500">Seguridad</th>
+                    @if($activeTab === 'en_taller')
+                        <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide text-zinc-500">Estado OT</th>
+                    @endif
                     <th class="px-6 py-3 text-right text-xs font-semibold uppercase tracking-wide text-zinc-500">Acciones</th>
                 </tr>
             </thead>
@@ -73,6 +76,20 @@
                                 <flux:badge color="zinc" size="sm" icon="lock-open">Libre</flux:badge>
                             @endif
                         </td>
+                        @if($activeTab === 'en_taller')
+                            <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">
+                                @php
+                                    $ordenActiva = $device->ordenes->first();
+                                @endphp
+                                @if($ordenActiva && $ordenActiva->estado)
+                                    <span class="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium {{ $ordenActiva->estado->clasesColor() }}">
+                                        {{ $ordenActiva->estado->etiqueta() }}
+                                    </span>
+                                @else
+                                    <span class="text-zinc-400 dark:text-zinc-600">-</span>
+                                @endif
+                            </td>
+                        @endif
                         <td class="px-6 py-4 text-right text-sm">
                             <div class="flex items-center justify-end gap-2">
                                 <flux:button icon="document-text" variant="ghost" size="sm" href="{{ route('dispositivos.historial-clinico', $device) }}" title="Ver Historial Clínico" />
@@ -82,7 +99,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5" class="px-6 py-12 text-center text-zinc-500">
+                        <td colspan="{{ $activeTab === 'en_taller' ? '6' : '5' }}" class="px-6 py-12 text-center text-zinc-500">
                             <div class="flex flex-col items-center justify-center">
                                 <flux:icon name="device-phone-mobile" class="w-12 h-12 mb-3 opacity-20" />
                                 <p>No se encontraron dispositivos</p>

@@ -1,0 +1,324 @@
+{
+  "marca": "BLACKVIEW",
+  "id_interno": "116",
+  "slug": "blackview",
+  "total_esperado": 0,
+  "total_encontrado": 105,
+  "modelos": [
+    {
+      "modelo": "Xplore 2"
+    },
+    {
+      "modelo": "Zeno 1"
+    },
+    {
+      "modelo": "Shark 6"
+    },
+    {
+      "modelo": "Color 6"
+    },
+    {
+      "modelo": "Fort 1"
+    },
+    {
+      "modelo": "Xplore 1"
+    },
+    {
+      "modelo": "Active 12 Pro"
+    },
+    {
+      "modelo": "Mega 3"
+    },
+    {
+      "modelo": "BL7000"
+    },
+    {
+      "modelo": "BV7300"
+    },
+    {
+      "modelo": "Mega 2 WiFi"
+    },
+    {
+      "modelo": "Mega 8"
+    },
+    {
+      "modelo": "BV4800 Pro"
+    },
+    {
+      "modelo": "Wave 8C"
+    },
+    {
+      "modelo": "Wave 8"
+    },
+    {
+      "modelo": "BV8200"
+    },
+    {
+      "modelo": "Mega 2"
+    },
+    {
+      "modelo": "Tab 60 Pro"
+    },
+    {
+      "modelo": "Tab 60 WiFi"
+    },
+    {
+      "modelo": "Active 10 Pro"
+    },
+    {
+      "modelo": "Shark 9"
+    },
+    {
+      "modelo": "Tab9WiFi"
+    },
+    {
+      "modelo": "Tab90WiFi"
+    },
+    {
+      "modelo": "Hero 10"
+    },
+    {
+      "modelo": "Tab 16 Pro"
+    },
+    {
+      "modelo": "BV8100"
+    },
+    {
+      "modelo": "BL9000 Pro"
+    },
+    {
+      "modelo": "Color 8"
+    },
+    {
+      "modelo": "Mega 1"
+    },
+    {
+      "modelo": "BL9000"
+    },
+    {
+      "modelo": "BL8000"
+    },
+    {
+      "modelo": "Shark 8"
+    },
+    {
+      "modelo": "Tab 18"
+    },
+    {
+      "modelo": "A96"
+    },
+    {
+      "modelo": "BV6200 Pro"
+    },
+    {
+      "modelo": "Tab 80"
+    },
+    {
+      "modelo": "Tab 60"
+    },
+    {
+      "modelo": "Tab 70 WiFi"
+    },
+    {
+      "modelo": "Tab 50 WiFi"
+    },
+    {
+      "modelo": "A200 Pro"
+    },
+    {
+      "modelo": "N6000"
+    },
+    {
+      "modelo": "Wave 6C"
+    },
+    {
+      "modelo": "Active 8 Pro"
+    },
+    {
+      "modelo": "Tab 12 Pro"
+    },
+    {
+      "modelo": "BV5300 Pro"
+    },
+    {
+      "modelo": "Tab 8 WiFi"
+    },
+    {
+      "modelo": "BV8900"
+    },
+    {
+      "modelo": "Tab 11 WiFi"
+    },
+    {
+      "modelo": "BV9300"
+    },
+    {
+      "modelo": "A53 Pro"
+    },
+    {
+      "modelo": "A52 Pro"
+    },
+    {
+      "modelo": "A53"
+    },
+    {
+      "modelo": "Tab 16"
+    },
+    {
+      "modelo": "Tab 11 SE"
+    },
+    {
+      "modelo": "Tab 5"
+    },
+    {
+      "modelo": "BV9200"
+    },
+    {
+      "modelo": "BV5200 Pro"
+    },
+    {
+      "modelo": "A85"
+    },
+    {
+      "modelo": "A52"
+    },
+    {
+      "modelo": "BV7200"
+    },
+    {
+      "modelo": "Tab 15"
+    },
+    {
+      "modelo": "BV5200"
+    },
+    {
+      "modelo": "BV7100"
+    },
+    {
+      "modelo": "Tab 13"
+    },
+    {
+      "modelo": "Tab 7"
+    },
+    {
+      "modelo": "Tab 12"
+    },
+    {
+      "modelo": "BL8800 Pro"
+    },
+    {
+      "modelo": "BL8800"
+    },
+    {
+      "modelo": "A55 Pro"
+    },
+    {
+      "modelo": "A50"
+    },
+    {
+      "modelo": "A95"
+    },
+    {
+      "modelo": "BV6600 Pro"
+    },
+    {
+      "modelo": "BV6600E"
+    },
+    {
+      "modelo": "BV4900s"
+    },
+    {
+      "modelo": "Tab 11"
+    },
+    {
+      "modelo": "Tab 6"
+    },
+    {
+      "modelo": "A90"
+    },
+    {
+      "modelo": "Tab 9"
+    },
+    {
+      "modelo": "BV6600"
+    },
+    {
+      "modelo": "A100"
+    },
+    {
+      "modelo": "Tab 10"
+    },
+    {
+      "modelo": "BL5000"
+    },
+    {
+      "modelo": "A70"
+    },
+    {
+      "modelo": "A80s"
+    },
+    {
+      "modelo": "Tab 8E"
+    },
+    {
+      "modelo": "BV8800"
+    },
+    {
+      "modelo": "A70 Pro"
+    },
+    {
+      "modelo": "Tab 10 Pro"
+    },
+    {
+      "modelo": "A55"
+    },
+    {
+      "modelo": "BV9900E"
+    },
+    {
+      "modelo": "BV4900 Pro"
+    },
+    {
+      "modelo": "BL6000 Pro"
+    },
+    {
+      "modelo": "BV5100"
+    },
+    {
+      "modelo": "Tab 8"
+    },
+    {
+      "modelo": "BV6300 Pro"
+    },
+    {
+      "modelo": "A80 Plus"
+    },
+    {
+      "modelo": "BV4900"
+    },
+    {
+      "modelo": "BV9800 Pro"
+    },
+    {
+      "modelo": "BV5900"
+    },
+    {
+      "modelo": "S6"
+    },
+    {
+      "modelo": "S8"
+    },
+    {
+      "modelo": "P6000"
+    },
+    {
+      "modelo": "A10"
+    },
+    {
+      "modelo": "A7 Pro"
+    },
+    {
+      "modelo": "A7"
+    }
+  ]
+}

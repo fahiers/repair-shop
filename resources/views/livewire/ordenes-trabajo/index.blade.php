@@ -17,7 +17,7 @@
                 </span>
                 <input
                     type="text"
-                    placeholder="Buscar orden..."
+                    placeholder="Buscar por número de orden, cliente, dispositivo o IMEI..."
                     wire:model.live.debounce.500ms="search"
                     class="w-full rounded-md border border-zinc-300 bg-white pl-10 pr-3 py-2 text-zinc-900 placeholder-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-0 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
                 />
@@ -57,7 +57,13 @@
                         <tr class="hover:bg-zinc-50 dark:hover:bg-zinc-800/40">
                             <td class="px-6 py-4 text-sm text-zinc-900 dark:text-zinc-100">{{ $orden->numero_orden ?? '-' }}</td>
                             <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">{{ data_get($orden, 'dispositivo.cliente.nombre') ?? '-' }}</td>
-                            <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">{{ data_get($orden, 'dispositivo.modelo.nombre') ?? '-' }}</td>
+                            <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">
+                                @php
+                                    $modelo = data_get($orden, 'dispositivo.modelo');
+                                    $dispositivoTexto = $modelo ? trim(($modelo->marca ?? '') . ' ' . ($modelo->modelo ?? '')) : null;
+                                @endphp
+                                {{ $dispositivoTexto ?? '-' }}
+                            </td>
                             <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">{{ optional($orden->fecha_ingreso ? \Carbon\Carbon::parse($orden->fecha_ingreso) : null)?->format('Y-m-d') ?? '-' }}</td>
                             <td class="px-6 py-4 text-sm text-zinc-700 dark:text-zinc-300">
                                 {{ Number::currency($orden->costo_total ?? 0, precision: 0) }}

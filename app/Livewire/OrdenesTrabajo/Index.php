@@ -11,6 +11,7 @@ class Index extends Component
     use WithPagination;
 
     public string $search = '';
+
     public string $estado = '';
 
     public function updatingSearch(): void
@@ -25,23 +26,25 @@ class Index extends Component
 
     public function render()
     {
+        $searchTerm = trim($this->search);
+        $searchTerm = preg_replace('/\s+/', ' ', $searchTerm);
+
         $ordenes = OrdenTrabajo::query()
             ->with(['dispositivo.cliente', 'dispositivo.modelo', 'tecnico'])
-            ->when($this->search !== '', function ($query) {
-                $term = '%' . $this->search . '%';
+            ->when($searchTerm !== '', function ($query) use ($searchTerm) {
+                $term = '%'.$searchTerm.'%';
                 $query->where(function ($q) use ($term) {
                     $q->where('numero_orden', 'like', $term)
-                      ->orWhere('estado', 'like', $term)
-                      ->orWhereHas('dispositivo', function ($qd) use ($term) {
-                          $qd->where('imei', 'like', $term)
-                             ->orWhereHas('cliente', function ($qc) use ($term) {
-                                 $qc->where('nombre', 'like', $term);
-                             })
-                             ->orWhereHas('modelo', function ($qm) use ($term) {
-                                 $qm->where('marca', 'like', $term)
-                                    ->orWhere('modelo', 'like', $term);
-                             });
-                      });
+                        ->orWhereHas('dispositivo', function ($qd) use ($term) {
+                            $qd->where('imei', 'like', $term)
+                                ->orWhereHas('cliente', function ($qc) use ($term) {
+                                    $qc->where('nombre', 'like', $term);
+                                })
+                                ->orWhereHas('modelo', function ($qm) use ($term) {
+                                    $qm->where('marca', 'like', $term)
+                                        ->orWhere('modelo', 'like', $term);
+                                });
+                        });
                 });
             })
             ->when($this->estado !== '', function ($query) {

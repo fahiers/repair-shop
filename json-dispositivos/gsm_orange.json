@@ -1,0 +1,66 @@
+{
+  "marca": "ORANGE",
+  "id_interno": "71",
+  "slug": "orange",
+  "total_esperado": 0,
+  "total_encontrado": 19,
+  "modelos": [
+    {
+      "modelo": "Neva jet 5G"
+    },
+    {
+      "modelo": "Rono"
+    },
+    {
+      "modelo": "Gova"
+    },
+    {
+      "modelo": "Reyo"
+    },
+    {
+      "modelo": "Hiro"
+    },
+    {
+      "modelo": "San Diego"
+    },
+    {
+      "modelo": "Tahiti"
+    },
+    {
+      "modelo": "Monte Carlo"
+    },
+    {
+      "modelo": "San Francisco II"
+    },
+    {
+      "modelo": "Sydney"
+    },
+    {
+      "modelo": "Miami"
+    },
+    {
+      "modelo": "Malibu"
+    },
+    {
+      "modelo": "Dallas"
+    },
+    {
+      "modelo": "San Francisco"
+    },
+    {
+      "modelo": "Stockholm"
+    },
+    {
+      "modelo": "Atlanta"
+    },
+    {
+      "modelo": "Rio II"
+    },
+    {
+      "modelo": "Barcelona"
+    },
+    {
+      "modelo": "Rio"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "marca": "DELL",
+  "id_interno": "61",
+  "slug": "dell",
+  "total_esperado": 0,
+  "total_encontrado": 20,
+  "modelos": [
+    {
+      "modelo": "Venue 10 7000"
+    },
+    {
+      "modelo": "Venue 8 7000"
+    },
+    {
+      "modelo": "Venue 8"
+    },
+    {
+      "modelo": "Venue 7 8 GB"
+    },
+    {
+      "modelo": "Venue 7"
+    },
+    {
+      "modelo": "XPS 10"
+    },
+    {
+      "modelo": "Streak 10 Pro"
+    },
+    {
+      "modelo": "Streak Pro D43"
+    },
+    {
+      "modelo": "Streak 7"
+    },
+    {
+      "modelo": "Streak 7 Wi-Fi"
+    },
+    {
+      "modelo": "Venue"
+    },
+    {
+      "modelo": "XCD35"
+    },
+    {
+      "modelo": "XCD28"
+    },
+    {
+      "modelo": "Smoke"
+    },
+    {
+      "modelo": "Flash"
+    },
+    {
+      "modelo": "Venue Pro"
+    },
+    {
+      "modelo": "Streak"
+    },
+    {
+      "modelo": "Aero"
+    },
+    {
+      "modelo": "Mini 3i"
+    },
+    {
+      "modelo": "Mini 3iX"
+    }
+  ]
+}

@@ -1,0 +1,4393 @@
+{
+  "marca": "SAMSUNG",
+  "id_interno": "9",
+  "slug": "samsung",
+  "total_esperado": 0,
+  "total_encontrado": 1444,
+  "modelos": [
+    {
+      "modelo": "Galaxy M17"
+    },
+    {
+      "modelo": "Galaxy F07"
+    },
+    {
+      "modelo": "Galaxy M07"
+    },
+    {
+      "modelo": "Galaxy A17 4G"
+    },
+    {
+      "modelo": "Galaxy Tab A11+"
+    },
+    {
+      "modelo": "Galaxy Tab A11"
+    },
+    {
+      "modelo": "Galaxy F17"
+    },
+    {
+      "modelo": "Galaxy S25 FE"
+    },
+    {
+      "modelo": "Galaxy Tab S11 Ultra"
+    },
+    {
+      "modelo": "Galaxy Tab S11"
+    },
+    {
+      "modelo": "Galaxy Tab S10 Lite"
+    },
+    {
+      "modelo": "Galaxy A07 4G"
+    },
+    {
+      "modelo": "Galaxy A17"
+    },
+    {
+      "modelo": "Galaxy F36"
+    },
+    {
+      "modelo": "Galaxy Z Fold7"
+    },
+    {
+      "modelo": "Galaxy Z Flip7"
+    },
+    {
+      "modelo": "Galaxy Z Flip7 FE"
+    },
+    {
+      "modelo": "Galaxy Watch8 Classic"
+    },
+    {
+      "modelo": "Galaxy Watch8"
+    },
+    {
+      "modelo": "Galaxy M36"
+    },
+    {
+      "modelo": "Galaxy S25 Edge"
+    },
+    {
+      "modelo": "Galaxy F56"
+    },
+    {
+      "modelo": "Galaxy M56"
+    },
+    {
+      "modelo": "Galaxy XCover7 Pro"
+    },
+    {
+      "modelo": "Galaxy Tab Active5 Pro"
+    },
+    {
+      "modelo": "Galaxy Tab S10 FE+"
+    },
+    {
+      "modelo": "Galaxy Tab S10 FE"
+    },
+    {
+      "modelo": "Galaxy F16"
+    },
+    {
+      "modelo": "Galaxy A56"
+    },
+    {
+      "modelo": "Galaxy A36"
+    },
+    {
+      "modelo": "Galaxy A26"
+    },
+    {
+      "modelo": "Galaxy M16"
+    },
+    {
+      "modelo": "Galaxy M06"
+    },
+    {
+      "modelo": "Galaxy A06 5G"
+    },
+    {
+      "modelo": "Galaxy F06 5G"
+    },
+    {
+      "modelo": "Galaxy S25 Ultra"
+    },
+    {
+      "modelo": "Galaxy S25+"
+    },
+    {
+      "modelo": "Galaxy S25"
+    },
+    {
+      "modelo": "Galaxy Z Fold Special"
+    },
+    {
+      "modelo": "Galaxy A16"
+    },
+    {
+      "modelo": "Galaxy A16 5G"
+    },
+    {
+      "modelo": "Galaxy S24 FE"
+    },
+    {
+      "modelo": "Galaxy Tab S10 Ultra"
+    },
+    {
+      "modelo": "Galaxy Tab S10+"
+    },
+    {
+      "modelo": "Galaxy M55s"
+    },
+    {
+      "modelo": "Galaxy F05"
+    },
+    {
+      "modelo": "Galaxy M05"
+    },
+    {
+      "modelo": "Galaxy A06"
+    },
+    {
+      "modelo": "Galaxy F14 4G"
+    },
+    {
+      "modelo": "Galaxy Z Fold6"
+    },
+    {
+      "modelo": "Galaxy Z Flip6"
+    },
+    {
+      "modelo": "Galaxy Watch Ultra"
+    },
+    {
+      "modelo": "Galaxy Watch7"
+    },
+    {
+      "modelo": "Galaxy Watch FE"
+    },
+    {
+      "modelo": "Galaxy M35"
+    },
+    {
+      "modelo": "Galaxy F55"
+    },
+    {
+      "modelo": "Galaxy C55"
+    },
+    {
+      "modelo": "Galaxy M55"
+    },
+    {
+      "modelo": "Galaxy Tab S6 Lite",
+      "ano": "2024"
+    },
+    {
+      "modelo": "Galaxy A55"
+    },
+    {
+      "modelo": "Galaxy A35"
+    },
+    {
+      "modelo": "Galaxy M15"
+    },
+    {
+      "modelo": "Galaxy M14 4G"
+    },
+    {
+      "modelo": "Galaxy F15"
+    },
+    {
+      "modelo": "Galaxy S24 Ultra"
+    },
+    {
+      "modelo": "Galaxy S24+"
+    },
+    {
+      "modelo": "Galaxy S24"
+    },
+    {
+      "modelo": "Galaxy XCover7"
+    },
+    {
+      "modelo": "Galaxy Tab Active5"
+    },
+    {
+      "modelo": "Galaxy A25"
+    },
+    {
+      "modelo": "Galaxy A15 5G"
+    },
+    {
+      "modelo": "Galaxy A15"
+    },
+    {
+      "modelo": "Galaxy Tab A9+"
+    },
+    {
+      "modelo": "Galaxy Tab A9"
+    },
+    {
+      "modelo": "Galaxy S23 FE"
+    },
+    {
+      "modelo": "Galaxy Tab S9 FE+"
+    },
+    {
+      "modelo": "Galaxy Tab S9 FE"
+    },
+    {
+      "modelo": "Galaxy A05s"
+    },
+    {
+      "modelo": "Galaxy A05"
+    },
+    {
+      "modelo": "Galaxy F34"
+    },
+    {
+      "modelo": "Galaxy Z Fold5"
+    },
+    {
+      "modelo": "Galaxy Z Flip5"
+    },
+    {
+      "modelo": "Galaxy Tab S9 Ultra"
+    },
+    {
+      "modelo": "Galaxy Tab S9+"
+    },
+    {
+      "modelo": "Galaxy Tab S9"
+    },
+    {
+      "modelo": "Galaxy Watch6 Classic"
+    },
+    {
+      "modelo": "Galaxy Watch6"
+    },
+    {
+      "modelo": "Galaxy M34 5G"
+    },
+    {
+      "modelo": "Galaxy F54"
+    },
+    {
+      "modelo": "Galaxy A24 4G"
+    },
+    {
+      "modelo": "Galaxy F14"
+    },
+    {
+      "modelo": "Galaxy M54"
+    },
+    {
+      "modelo": "Galaxy A54"
+    },
+    {
+      "modelo": "Galaxy A34"
+    },
+    {
+      "modelo": "Galaxy M14"
+    },
+    {
+      "modelo": "Galaxy S23 Ultra"
+    },
+    {
+      "modelo": "Galaxy S23+"
+    },
+    {
+      "modelo": "Galaxy S23"
+    },
+    {
+      "modelo": "Galaxy A14"
+    },
+    {
+      "modelo": "Galaxy A14 5G"
+    },
+    {
+      "modelo": "Galaxy F04"
+    },
+    {
+      "modelo": "Galaxy M04"
+    },
+    {
+      "modelo": "Galaxy Tab A7 10.4",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Galaxy A04e"
+    },
+    {
+      "modelo": "Galaxy Tab Active4 Pro"
+    },
+    {
+      "modelo": "Galaxy A04s"
+    },
+    {
+      "modelo": "Galaxy A04"
+    },
+    {
+      "modelo": "Galaxy Z Fold4"
+    },
+    {
+      "modelo": "Galaxy Z Flip4"
+    },
+    {
+      "modelo": "Galaxy Watch5 Pro"
+    },
+    {
+      "modelo": "Galaxy Watch5"
+    },
+    {
+      "modelo": "Galaxy A23 5G"
+    },
+    {
+      "modelo": "Galaxy M13 5G"
+    },
+    {
+      "modelo": "Galaxy M13 (India)"
+    },
+    {
+      "modelo": "Galaxy A13 (SM-A137)"
+    },
+    {
+      "modelo": "Galaxy XCover6 Pro"
+    },
+    {
+      "modelo": "Galaxy F13"
+    },
+    {
+      "modelo": "Galaxy M13"
+    },
+    {
+      "modelo": "Galaxy Tab S6 Lite",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Galaxy M53"
+    },
+    {
+      "modelo": "Galaxy S20 FE 2022"
+    },
+    {
+      "modelo": "Galaxy A73 5G"
+    },
+    {
+      "modelo": "Galaxy A53 5G"
+    },
+    {
+      "modelo": "Galaxy A33 5G"
+    },
+    {
+      "modelo": "Galaxy F23"
+    },
+    {
+      "modelo": "Galaxy M33"
+    },
+    {
+      "modelo": "Galaxy M23"
+    },
+    {
+      "modelo": "Galaxy A23"
+    },
+    {
+      "modelo": "Galaxy A13"
+    },
+    {
+      "modelo": "Galaxy S22 Ultra 5G"
+    },
+    {
+      "modelo": "Galaxy S22+ 5G"
+    },
+    {
+      "modelo": "Galaxy S22 5G"
+    },
+    {
+      "modelo": "Galaxy Tab S8 Ultra"
+    },
+    {
+      "modelo": "Galaxy Tab S8+"
+    },
+    {
+      "modelo": "Galaxy Tab S8"
+    },
+    {
+      "modelo": "Galaxy S21 FE 5G"
+    },
+    {
+      "modelo": "Galaxy Tab A8 10.5",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Galaxy A13 5G"
+    },
+    {
+      "modelo": "Galaxy A03"
+    },
+    {
+      "modelo": "Galaxy A03 Core"
+    },
+    {
+      "modelo": "Galaxy F42 5G"
+    },
+    {
+      "modelo": "Galaxy M52 5G"
+    },
+    {
+      "modelo": "Galaxy M22"
+    },
+    {
+      "modelo": "Galaxy M32 5G"
+    },
+    {
+      "modelo": "Galaxy A03s"
+    },
+    {
+      "modelo": "Galaxy A52s 5G"
+    },
+    {
+      "modelo": "Galaxy Z Fold3 5G"
+    },
+    {
+      "modelo": "Galaxy Z Flip3 5G"
+    },
+    {
+      "modelo": "Galaxy Watch4 Classic"
+    },
+    {
+      "modelo": "Galaxy Watch4"
+    },
+    {
+      "modelo": "Galaxy A12 (India)"
+    },
+    {
+      "modelo": "Galaxy A12 Nacho"
+    },
+    {
+      "modelo": "Galaxy M21 2021"
+    },
+    {
+      "modelo": "Galaxy F22"
+    },
+    {
+      "modelo": "Galaxy M32"
+    },
+    {
+      "modelo": "Galaxy A22 5G"
+    },
+    {
+      "modelo": "Galaxy A22"
+    },
+    {
+      "modelo": "Galaxy Tab A7 Lite"
+    },
+    {
+      "modelo": "Galaxy Tab S7 FE"
+    },
+    {
+      "modelo": "Galaxy F52 5G"
+    },
+    {
+      "modelo": "Galaxy M42 5G"
+    },
+    {
+      "modelo": "Galaxy M12"
+    },
+    {
+      "modelo": "Galaxy Quantum 2"
+    },
+    {
+      "modelo": "Galaxy F12"
+    },
+    {
+      "modelo": "Galaxy F02s"
+    },
+    {
+      "modelo": "Galaxy A72"
+    },
+    {
+      "modelo": "Galaxy A52 5G"
+    },
+    {
+      "modelo": "Galaxy A52"
+    },
+    {
+      "modelo": "Galaxy XCover 5"
+    },
+    {
+      "modelo": "Galaxy A32"
+    },
+    {
+      "modelo": "Galaxy M62"
+    },
+    {
+      "modelo": "Galaxy F62"
+    },
+    {
+      "modelo": "Galaxy M12 (India)"
+    },
+    {
+      "modelo": "Galaxy S21 Ultra 5G"
+    },
+    {
+      "modelo": "Galaxy S21+ 5G"
+    },
+    {
+      "modelo": "Galaxy S21 5G"
+    },
+    {
+      "modelo": "Galaxy A32 5G"
+    },
+    {
+      "modelo": "Galaxy M02s"
+    },
+    {
+      "modelo": "Galaxy A12"
+    },
+    {
+      "modelo": "Galaxy M02"
+    },
+    {
+      "modelo": "Galaxy A02"
+    },
+    {
+      "modelo": "Galaxy A02s"
+    },
+    {
+      "modelo": "Galaxy M21s"
+    },
+    {
+      "modelo": "Galaxy M31 Prime"
+    },
+    {
+      "modelo": "Galaxy F41"
+    },
+    {
+      "modelo": "Galaxy Tab Active3"
+    },
+    {
+      "modelo": "Galaxy S20 FE 5G"
+    },
+    {
+      "modelo": "Galaxy S20 FE"
+    },
+    {
+      "modelo": "Galaxy A42 5G"
+    },
+    {
+      "modelo": "Galaxy Tab A7 10.4",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Galaxy M51"
+    },
+    {
+      "modelo": "Galaxy A51 5G UW"
+    },
+    {
+      "modelo": "Galaxy Z Fold2 5G"
+    },
+    {
+      "modelo": "Galaxy Note20 Ultra 5G"
+    },
+    {
+      "modelo": "Galaxy Note20 Ultra"
+    },
+    {
+      "modelo": "Galaxy Note20 5G"
+    },
+    {
+      "modelo": "Galaxy Note20"
+    },
+    {
+      "modelo": "Galaxy Watch3"
+    },
+    {
+      "modelo": "Galaxy Tab S7+"
+    },
+    {
+      "modelo": "Galaxy Tab S7"
+    },
+    {
+      "modelo": "Galaxy Z Flip 5G"
+    },
+    {
+      "modelo": "Galaxy M31s"
+    },
+    {
+      "modelo": "Galaxy M01s"
+    },
+    {
+      "modelo": "Galaxy M01 Core"
+    },
+    {
+      "modelo": "Galaxy A01 Core"
+    },
+    {
+      "modelo": "Galaxy A71 5G UW"
+    },
+    {
+      "modelo": "Galaxy M01"
+    },
+    {
+      "modelo": "Galaxy A21s"
+    },
+    {
+      "modelo": "Galaxy J2 Core",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Galaxy A Quantum"
+    },
+    {
+      "modelo": "Galaxy A71 5G"
+    },
+    {
+      "modelo": "Galaxy A51 5G"
+    },
+    {
+      "modelo": "Galaxy A21"
+    },
+    {
+      "modelo": "Galaxy Tab A 8.4",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Galaxy Tab S6 Lite",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Galaxy M11"
+    },
+    {
+      "modelo": "Galaxy A31"
+    },
+    {
+      "modelo": "Galaxy A41"
+    },
+    {
+      "modelo": "Galaxy M21"
+    },
+    {
+      "modelo": "Galaxy A11"
+    },
+    {
+      "modelo": "Galaxy M31"
+    },
+    {
+      "modelo": "Galaxy S20 Ultra 5G"
+    },
+    {
+      "modelo": "Galaxy S20 Ultra"
+    },
+    {
+      "modelo": "Galaxy S20+ 5G"
+    },
+    {
+      "modelo": "Galaxy S20+"
+    },
+    {
+      "modelo": "Galaxy S20 5G UW"
+    },
+    {
+      "modelo": "Galaxy S20 5G"
+    },
+    {
+      "modelo": "Galaxy S20"
+    },
+    {
+      "modelo": "Galaxy Z Flip"
+    },
+    {
+      "modelo": "Galaxy Tab S6 5G"
+    },
+    {
+      "modelo": "Galaxy XCover Pro"
+    },
+    {
+      "modelo": "Galaxy Note10 Lite"
+    },
+    {
+      "modelo": "Galaxy S10 Lite"
+    },
+    {
+      "modelo": "Galaxy A01"
+    },
+    {
+      "modelo": "Galaxy A71"
+    },
+    {
+      "modelo": "Galaxy A51"
+    },
+    {
+      "modelo": "Galaxy XCover FieldPro"
+    },
+    {
+      "modelo": "Galaxy A70s"
+    },
+    {
+      "modelo": "Galaxy A20s"
+    },
+    {
+      "modelo": "Galaxy M30s"
+    },
+    {
+      "modelo": "Galaxy M10s"
+    },
+    {
+      "modelo": "Galaxy Fold 5G"
+    },
+    {
+      "modelo": "Galaxy Fold"
+    },
+    {
+      "modelo": "Galaxy Tab Active Pro"
+    },
+    {
+      "modelo": "Galaxy A90 5G"
+    },
+    {
+      "modelo": "Galaxy A30s"
+    },
+    {
+      "modelo": "Galaxy A50s"
+    },
+    {
+      "modelo": "Galaxy Note10+ 5G"
+    },
+    {
+      "modelo": "Galaxy Note10+"
+    },
+    {
+      "modelo": "Galaxy Note10 5G"
+    },
+    {
+      "modelo": "Galaxy Note10"
+    },
+    {
+      "modelo": "Galaxy Watch Active2"
+    },
+    {
+      "modelo": "Galaxy Watch Active2 Aluminum"
+    },
+    {
+      "modelo": "Galaxy A10s"
+    },
+    {
+      "modelo": "Galaxy A10e"
+    },
+    {
+      "modelo": "Galaxy Tab S6"
+    },
+    {
+      "modelo": "Galaxy Tab A 8.0",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Galaxy XCover 4s"
+    },
+    {
+      "modelo": "Galaxy A2 Core"
+    },
+    {
+      "modelo": "Galaxy Watch Active"
+    },
+    {
+      "modelo": "Galaxy View2"
+    },
+    {
+      "modelo": "Galaxy S10 5G"
+    },
+    {
+      "modelo": "Galaxy S10+"
+    },
+    {
+      "modelo": "Galaxy S10"
+    },
+    {
+      "modelo": "Galaxy S10e"
+    },
+    {
+      "modelo": "Galaxy M40"
+    },
+    {
+      "modelo": "Galaxy M30"
+    },
+    {
+      "modelo": "Galaxy M20"
+    },
+    {
+      "modelo": "Galaxy M10"
+    },
+    {
+      "modelo": "Galaxy A80"
+    },
+    {
+      "modelo": "Galaxy A70"
+    },
+    {
+      "modelo": "Galaxy A60"
+    },
+    {
+      "modelo": "Galaxy A50"
+    },
+    {
+      "modelo": "Galaxy A40"
+    },
+    {
+      "modelo": "Galaxy A30"
+    },
+    {
+      "modelo": "Galaxy A20e"
+    },
+    {
+      "modelo": "Galaxy A20"
+    },
+    {
+      "modelo": "Galaxy A10"
+    },
+    {
+      "modelo": "Galaxy Tab S5e"
+    },
+    {
+      "modelo": "Galaxy Tab A 10.1",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Galaxy Tab A 8.0 & S Pen",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Galaxy Tab Advanced2"
+    },
+    {
+      "modelo": "Galaxy Tab A 8.0",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy Tab S4 10.5"
+    },
+    {
+      "modelo": "Galaxy Tab A 10.5"
+    },
+    {
+      "modelo": "Galaxy A8s"
+    },
+    {
+      "modelo": "Galaxy A6s"
+    },
+    {
+      "modelo": "Galaxy A9",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy A7",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy Note9"
+    },
+    {
+      "modelo": "Galaxy Watch"
+    },
+    {
+      "modelo": "Galaxy J6+"
+    },
+    {
+      "modelo": "Galaxy J4 Core"
+    },
+    {
+      "modelo": "Galaxy J4+"
+    },
+    {
+      "modelo": "Galaxy J2 Core"
+    },
+    {
+      "modelo": "Galaxy On6"
+    },
+    {
+      "modelo": "Galaxy J7",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy J3",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy A8 Star (A9 Star)"
+    },
+    {
+      "modelo": "Galaxy S Light Luxury"
+    },
+    {
+      "modelo": "Galaxy J8"
+    },
+    {
+      "modelo": "Galaxy J6"
+    },
+    {
+      "modelo": "Galaxy J4"
+    },
+    {
+      "modelo": "Galaxy A6+",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy A6",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy J7 Duo"
+    },
+    {
+      "modelo": "Galaxy J7 Prime 2"
+    },
+    {
+      "modelo": "Galaxy S9+"
+    },
+    {
+      "modelo": "Galaxy S9"
+    },
+    {
+      "modelo": "Galaxy J2 Pro",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy A8+",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy A8",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Galaxy J2",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy Tab Active2"
+    },
+    {
+      "modelo": "Galaxy Tab A 8.0",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy C7",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Gear Sport"
+    },
+    {
+      "modelo": "Galaxy Note8"
+    },
+    {
+      "modelo": "Galaxy S8 Active"
+    },
+    {
+      "modelo": "Galaxy J7 V"
+    },
+    {
+      "modelo": "Galaxy Note FE"
+    },
+    {
+      "modelo": "Galaxy J7 Max"
+    },
+    {
+      "modelo": "Galaxy J7",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy J7 Pro"
+    },
+    {
+      "modelo": "Galaxy J5",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy J3",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy Folder2"
+    },
+    {
+      "modelo": "Z4"
+    },
+    {
+      "modelo": "Galaxy S8"
+    },
+    {
+      "modelo": "Galaxy S8+"
+    },
+    {
+      "modelo": "Gear S3 classic LTE"
+    },
+    {
+      "modelo": "Galaxy C5 Pro"
+    },
+    {
+      "modelo": "Galaxy XCover 4"
+    },
+    {
+      "modelo": "Galaxy Tab S3 9.7"
+    },
+    {
+      "modelo": "Galaxy J1 mini prime"
+    },
+    {
+      "modelo": "Galaxy J3 Emerge"
+    },
+    {
+      "modelo": "Galaxy C7 Pro"
+    },
+    {
+      "modelo": "Galaxy A7",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy A5",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy A3",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy Grand Prime Plus"
+    },
+    {
+      "modelo": "Galaxy J2 Prime"
+    },
+    {
+      "modelo": "Galaxy C9 Pro"
+    },
+    {
+      "modelo": "Galaxy A8",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy On8"
+    },
+    {
+      "modelo": "Galaxy On7",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Gear S3 classic"
+    },
+    {
+      "modelo": "Gear S3 frontier"
+    },
+    {
+      "modelo": "Gear S3 frontier LTE"
+    },
+    {
+      "modelo": "Galaxy J5 Prime"
+    },
+    {
+      "modelo": "Galaxy J7 Prime"
+    },
+    {
+      "modelo": "Z2"
+    },
+    {
+      "modelo": "Galaxy Note7 (USA)"
+    },
+    {
+      "modelo": "Galaxy Note7"
+    },
+    {
+      "modelo": "Galaxy On7 Pro"
+    },
+    {
+      "modelo": "Galaxy On5 Pro"
+    },
+    {
+      "modelo": "Galaxy Tab J"
+    },
+    {
+      "modelo": "Galaxy J Max"
+    },
+    {
+      "modelo": "Galaxy J2 Pro",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy J2",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Z3 Corporate"
+    },
+    {
+      "modelo": "Galaxy Xcover 3 G389F"
+    },
+    {
+      "modelo": "Galaxy S7 active"
+    },
+    {
+      "modelo": "Galaxy J3 Pro"
+    },
+    {
+      "modelo": "Galaxy C7"
+    },
+    {
+      "modelo": "Galaxy C5"
+    },
+    {
+      "modelo": "Galaxy A9 Pro",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy J7",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy J5",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy Tab A 10.1",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy Tab A 7.0",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy S7"
+    },
+    {
+      "modelo": "Galaxy S7 edge"
+    },
+    {
+      "modelo": "Galaxy S7 edge (USA)"
+    },
+    {
+      "modelo": "Galaxy S7 (USA)"
+    },
+    {
+      "modelo": "Galaxy J1 Nxt"
+    },
+    {
+      "modelo": "Gear S2 classic 3G"
+    },
+    {
+      "modelo": "Galaxy Tab E 8.0"
+    },
+    {
+      "modelo": "Galaxy J1",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy A9",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy A7",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy A5",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy A3",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy Express Prime"
+    },
+    {
+      "modelo": "Galaxy J3",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy View"
+    },
+    {
+      "modelo": "Galaxy On7"
+    },
+    {
+      "modelo": "Galaxy On5"
+    },
+    {
+      "modelo": "Z3"
+    },
+    {
+      "modelo": "Galaxy J1 Ace"
+    },
+    {
+      "modelo": "Gear S2 classic"
+    },
+    {
+      "modelo": "Gear S2"
+    },
+    {
+      "modelo": "Gear S2 3G"
+    },
+    {
+      "modelo": "Galaxy Note5 (USA)"
+    },
+    {
+      "modelo": "Galaxy Note5"
+    },
+    {
+      "modelo": "Galaxy Note5 Duos"
+    },
+    {
+      "modelo": "Galaxy S6 edge+ (USA)"
+    },
+    {
+      "modelo": "Galaxy S6 edge+"
+    },
+    {
+      "modelo": "Galaxy S6 edge+ Duos"
+    },
+    {
+      "modelo": "Galaxy S5 Neo"
+    },
+    {
+      "modelo": "Galaxy S4 mini I9195I"
+    },
+    {
+      "modelo": "Galaxy Folder"
+    },
+    {
+      "modelo": "Galaxy Tab S2 9.7"
+    },
+    {
+      "modelo": "Galaxy Tab S2 8.0"
+    },
+    {
+      "modelo": "Galaxy A8 Duos"
+    },
+    {
+      "modelo": "Galaxy A8"
+    },
+    {
+      "modelo": "Galaxy V Plus"
+    },
+    {
+      "modelo": "Galaxy J7 Nxt"
+    },
+    {
+      "modelo": "Galaxy J7"
+    },
+    {
+      "modelo": "Galaxy J5"
+    },
+    {
+      "modelo": "Galaxy Tab 4 10.1",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Galaxy Tab E 9.6"
+    },
+    {
+      "modelo": "Guru Plus"
+    },
+    {
+      "modelo": "Metro 360"
+    },
+    {
+      "modelo": "Xcover 550"
+    },
+    {
+      "modelo": "Galaxy S6 active"
+    },
+    {
+      "modelo": "Galaxy Tab 3 V"
+    },
+    {
+      "modelo": "Galaxy Tab A 9.7 & S Pen"
+    },
+    {
+      "modelo": "Galaxy Tab A 9.7"
+    },
+    {
+      "modelo": "Galaxy Tab A 8.0 & S Pen",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Galaxy Tab A 8.0",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Galaxy XCover 3"
+    },
+    {
+      "modelo": "Galaxy S6 edge (USA)"
+    },
+    {
+      "modelo": "Galaxy S6 (USA)"
+    },
+    {
+      "modelo": "Galaxy S6 edge"
+    },
+    {
+      "modelo": "Galaxy S6 Duos"
+    },
+    {
+      "modelo": "Galaxy S6"
+    },
+    {
+      "modelo": "Galaxy J1 4G"
+    },
+    {
+      "modelo": "Galaxy J2"
+    },
+    {
+      "modelo": "Galaxy J1"
+    },
+    {
+      "modelo": "Galaxy Tab 3 Lite 7.0 VE"
+    },
+    {
+      "modelo": "Z1"
+    },
+    {
+      "modelo": "Galaxy A7 Duos"
+    },
+    {
+      "modelo": "Galaxy A7"
+    },
+    {
+      "modelo": "Galaxy Grand Max"
+    },
+    {
+      "modelo": "Galaxy E7"
+    },
+    {
+      "modelo": "Galaxy E5"
+    },
+    {
+      "modelo": "Galaxy Core Prime"
+    },
+    {
+      "modelo": "Galaxy A5 Duos"
+    },
+    {
+      "modelo": "Galaxy A5"
+    },
+    {
+      "modelo": "Galaxy A3 Duos"
+    },
+    {
+      "modelo": "Galaxy A3"
+    },
+    {
+      "modelo": "Galaxy S5 Plus"
+    },
+    {
+      "modelo": "Galaxy Pocket 2"
+    },
+    {
+      "modelo": "Galaxy V"
+    },
+    {
+      "modelo": "Galaxy Grand Prime Duos TV"
+    },
+    {
+      "modelo": "Galaxy Grand Prime"
+    },
+    {
+      "modelo": "Galaxy Ace Style LTE G357"
+    },
+    {
+      "modelo": "Galaxy Note Edge"
+    },
+    {
+      "modelo": "Galaxy Note 4 Duos"
+    },
+    {
+      "modelo": "Galaxy Note 4 (USA)"
+    },
+    {
+      "modelo": "Galaxy Note 4"
+    },
+    {
+      "modelo": "Galaxy Tab Active LTE"
+    },
+    {
+      "modelo": "Galaxy Tab Active"
+    },
+    {
+      "modelo": "Galaxy Mega 2"
+    },
+    {
+      "modelo": "Gear S"
+    },
+    {
+      "modelo": "Gear 2 Neo"
+    },
+    {
+      "modelo": "Gear Live"
+    },
+    {
+      "modelo": "Gear 2"
+    },
+    {
+      "modelo": "Galaxy Gear"
+    },
+    {
+      "modelo": "Galaxy S5 LTE-A G901F"
+    },
+    {
+      "modelo": "Galaxy Alpha (S801)"
+    },
+    {
+      "modelo": "Galaxy Alpha"
+    },
+    {
+      "modelo": "Galaxy S5 mini Duos"
+    },
+    {
+      "modelo": "Galaxy Avant"
+    },
+    {
+      "modelo": "Galaxy S Duos 3"
+    },
+    {
+      "modelo": "Guru Music 2"
+    },
+    {
+      "modelo": "Metro 312"
+    },
+    {
+      "modelo": "Galaxy Tab 4 8.0",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Galaxy Ace NXT"
+    },
+    {
+      "modelo": "Galaxy Star 2 Plus"
+    },
+    {
+      "modelo": "Galaxy S5 mini"
+    },
+    {
+      "modelo": "Galaxy Ace 4 LTE G313"
+    },
+    {
+      "modelo": "Galaxy Ace 4"
+    },
+    {
+      "modelo": "Galaxy Young 2"
+    },
+    {
+      "modelo": "Galaxy Star 2"
+    },
+    {
+      "modelo": "Galaxy Core II"
+    },
+    {
+      "modelo": "Galaxy S5 Sport"
+    },
+    {
+      "modelo": "Galaxy S5 LTE-A G906S"
+    },
+    {
+      "modelo": "Galaxy Tab S 8.4 LTE"
+    },
+    {
+      "modelo": "Galaxy Tab S 8.4"
+    },
+    {
+      "modelo": "Galaxy Tab S 10.5 LTE"
+    },
+    {
+      "modelo": "Galaxy Tab S 10.5"
+    },
+    {
+      "modelo": "Galaxy Core Lite LTE"
+    },
+    {
+      "modelo": "I9301I Galaxy S3 Neo"
+    },
+    {
+      "modelo": "Galaxy W"
+    },
+    {
+      "modelo": "Z"
+    },
+    {
+      "modelo": "Galaxy S5 Active"
+    },
+    {
+      "modelo": "Galaxy K zoom"
+    },
+    {
+      "modelo": "Galaxy Beam2"
+    },
+    {
+      "modelo": "I9300I Galaxy S3 Neo"
+    },
+    {
+      "modelo": "Galaxy Ace Style"
+    },
+    {
+      "modelo": "ATIV SE"
+    },
+    {
+      "modelo": "Galaxy Tab 4 7.0"
+    },
+    {
+      "modelo": "Galaxy Tab 4 7.0 3G"
+    },
+    {
+      "modelo": "Galaxy Tab 4 7.0 LTE"
+    },
+    {
+      "modelo": "Galaxy Tab 4 8.0"
+    },
+    {
+      "modelo": "Galaxy Tab 4 8.0 3G"
+    },
+    {
+      "modelo": "Galaxy Tab 4 8.0 LTE"
+    },
+    {
+      "modelo": "Galaxy Tab 4 10.1"
+    },
+    {
+      "modelo": "Galaxy Tab 4 10.1 3G"
+    },
+    {
+      "modelo": "Galaxy Tab 4 10.1 LTE"
+    },
+    {
+      "modelo": "G3812B Galaxy S3 Slim"
+    },
+    {
+      "modelo": "I8200 Galaxy S III mini VE"
+    },
+    {
+      "modelo": "Galaxy S5 Duos"
+    },
+    {
+      "modelo": "Galaxy S5 (octa-core)"
+    },
+    {
+      "modelo": "Galaxy S5 (USA)"
+    },
+    {
+      "modelo": "Galaxy S5"
+    },
+    {
+      "modelo": "Galaxy Core LTE G386W"
+    },
+    {
+      "modelo": "Galaxy Core LTE"
+    },
+    {
+      "modelo": "S5611"
+    },
+    {
+      "modelo": "E1272"
+    },
+    {
+      "modelo": "Galaxy Star Trios S5283"
+    },
+    {
+      "modelo": "Galaxy Note 3 Neo Duos"
+    },
+    {
+      "modelo": "Galaxy Note 3 Neo"
+    },
+    {
+      "modelo": "Galaxy Tab 3 Lite 7.0 3G"
+    },
+    {
+      "modelo": "Galaxy Tab 3 Lite 7.0"
+    },
+    {
+      "modelo": "Galaxy Grand Neo"
+    },
+    {
+      "modelo": "Galaxy Note Pro 12.2 LTE"
+    },
+    {
+      "modelo": "Galaxy Note Pro 12.2 3G"
+    },
+    {
+      "modelo": "Galaxy Note Pro 12.2"
+    },
+    {
+      "modelo": "Galaxy Tab Pro 12.2 LTE"
+    },
+    {
+      "modelo": "Galaxy Tab Pro 12.2 3G"
+    },
+    {
+      "modelo": "Galaxy Tab Pro 12.2"
+    },
+    {
+      "modelo": "Galaxy Tab Pro 10.1 LTE"
+    },
+    {
+      "modelo": "Galaxy Tab Pro 10.1"
+    },
+    {
+      "modelo": "Galaxy Tab Pro 8.4 3G/LTE"
+    },
+    {
+      "modelo": "Galaxy Tab Pro 8.4"
+    },
+    {
+      "modelo": "Galaxy Camera 2 GC200"
+    },
+    {
+      "modelo": "Galaxy Core Advance"
+    },
+    {
+      "modelo": "Galaxy S4 Active LTE-A"
+    },
+    {
+      "modelo": "Galaxy J"
+    },
+    {
+      "modelo": "Galaxy Win Pro G3812"
+    },
+    {
+      "modelo": "Galaxy S Duos 2 S7582"
+    },
+    {
+      "modelo": "Galaxy Grand 2"
+    },
+    {
+      "modelo": "I9230 Galaxy Golden"
+    },
+    {
+      "modelo": "C3590"
+    },
+    {
+      "modelo": "Galaxy Express 2"
+    },
+    {
+      "modelo": "I9506 Galaxy S4"
+    },
+    {
+      "modelo": "Galaxy Light"
+    },
+    {
+      "modelo": "Galaxy Round G910S"
+    },
+    {
+      "modelo": "Galaxy Fresh S7390"
+    },
+    {
+      "modelo": "Galaxy Core Plus"
+    },
+    {
+      "modelo": "Galaxy Fame Lite Duos S6792L"
+    },
+    {
+      "modelo": "Galaxy Fame Lite S6790"
+    },
+    {
+      "modelo": "Galaxy Star Pro S7260"
+    },
+    {
+      "modelo": "Galaxy Note 10.1",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Galaxy Note 3"
+    },
+    {
+      "modelo": "Ch@t 333"
+    },
+    {
+      "modelo": "Galaxy Prevail 2"
+    },
+    {
+      "modelo": "Gravity Q T289"
+    },
+    {
+      "modelo": "ATIV S Neo"
+    },
+    {
+      "modelo": "Galaxy S4 zoom"
+    },
+    {
+      "modelo": "Galaxy S II TV"
+    },
+    {
+      "modelo": "Galaxy Ace 3"
+    },
+    {
+      "modelo": "I9190 Galaxy S4 mini"
+    },
+    {
+      "modelo": "I9295 Galaxy S4 Active"
+    },
+    {
+      "modelo": "Galaxy Tab 3 8.0"
+    },
+    {
+      "modelo": "Galaxy Tab 3 10.1 P5220"
+    },
+    {
+      "modelo": "Galaxy Tab 3 10.1 P5200"
+    },
+    {
+      "modelo": "Galaxy Tab 3 10.1 P5210"
+    },
+    {
+      "modelo": "Galaxy Exhibit T599"
+    },
+    {
+      "modelo": "Galaxy Core I8260"
+    },
+    {
+      "modelo": "Galaxy Tab 3 7.0 WiFi"
+    },
+    {
+      "modelo": "Galaxy Tab 3 7.0"
+    },
+    {
+      "modelo": "Galaxy Mega 6.3 I9200"
+    },
+    {
+      "modelo": "Galaxy Mega 5.8 I9150"
+    },
+    {
+      "modelo": "Galaxy Trend II Duos S7572"
+    },
+    {
+      "modelo": "Galaxy Win I8550"
+    },
+    {
+      "modelo": "Galaxy Pocket Neo S5310"
+    },
+    {
+      "modelo": "Galaxy Star S5280"
+    },
+    {
+      "modelo": "I9505 Galaxy S4"
+    },
+    {
+      "modelo": "I9500 Galaxy S4"
+    },
+    {
+      "modelo": "I9502 Galaxy S4"
+    },
+    {
+      "modelo": "Galaxy S4 CDMA"
+    },
+    {
+      "modelo": "Galaxy Note 8.0"
+    },
+    {
+      "modelo": "Galaxy Note 8.0 Wi-Fi"
+    },
+    {
+      "modelo": "Galaxy Y Plus S5303"
+    },
+    {
+      "modelo": "Rex 90 S5292"
+    },
+    {
+      "modelo": "Rex 80 S5222R"
+    },
+    {
+      "modelo": "Rex 70 S3802"
+    },
+    {
+      "modelo": "Rex 60 C3312R"
+    },
+    {
+      "modelo": "Metro E2202"
+    },
+    {
+      "modelo": "E1282T"
+    },
+    {
+      "modelo": "E1207T"
+    },
+    {
+      "modelo": "Galaxy Young S6310"
+    },
+    {
+      "modelo": "Galaxy Fame S6810"
+    },
+    {
+      "modelo": "Galaxy Express I8730"
+    },
+    {
+      "modelo": "S7710 Galaxy Xcover 2"
+    },
+    {
+      "modelo": "Ativ Odyssey I930"
+    },
+    {
+      "modelo": "I9105 Galaxy S II Plus"
+    },
+    {
+      "modelo": "Galaxy Grand I9082"
+    },
+    {
+      "modelo": "Galaxy Grand I9080"
+    },
+    {
+      "modelo": "Star Deluxe Duos S5292"
+    },
+    {
+      "modelo": "Galaxy Note LTE 10.1 N8020"
+    },
+    {
+      "modelo": "A997 Rugby III"
+    },
+    {
+      "modelo": "Galaxy Axiom R830"
+    },
+    {
+      "modelo": "Galaxy Stratosphere II I415"
+    },
+    {
+      "modelo": "Galaxy Discover S730M"
+    },
+    {
+      "modelo": "Galaxy Pop SHV-E220"
+    },
+    {
+      "modelo": "Galaxy Premier I9260"
+    },
+    {
+      "modelo": "Google Nexus 10 P8110"
+    },
+    {
+      "modelo": "Ativ Tab P8510"
+    },
+    {
+      "modelo": "Comment 2 R390C"
+    },
+    {
+      "modelo": "I8190 Galaxy S III mini"
+    },
+    {
+      "modelo": "Galaxy Music Duos S6012"
+    },
+    {
+      "modelo": "Galaxy Music S6010"
+    },
+    {
+      "modelo": "Galaxy Rugby Pro I547"
+    },
+    {
+      "modelo": "Galaxy Express I437"
+    },
+    {
+      "modelo": "Ch@t 357"
+    },
+    {
+      "modelo": "I9305 Galaxy S III"
+    },
+    {
+      "modelo": "Galaxy Victory 4G LTE L300"
+    },
+    {
+      "modelo": "Champ Neo Duos C3262"
+    },
+    {
+      "modelo": "Galaxy S Relay 4G T699"
+    },
+    {
+      "modelo": "Galaxy Pocket Duos S5302"
+    },
+    {
+      "modelo": "Galaxy Note II N7100"
+    },
+    {
+      "modelo": "Galaxy Note II CDMA"
+    },
+    {
+      "modelo": "Ativ S I8750"
+    },
+    {
+      "modelo": "Galaxy Camera GC100"
+    },
+    {
+      "modelo": "Galaxy Rush M830"
+    },
+    {
+      "modelo": "Galaxy Stellar 4G I200"
+    },
+    {
+      "modelo": "Galaxy Reverb M950"
+    },
+    {
+      "modelo": "Galaxy Tab 2 7.0 I705"
+    },
+    {
+      "modelo": "Galaxy Note 10.1 N8000"
+    },
+    {
+      "modelo": "Galaxy Note 10.1 N8010"
+    },
+    {
+      "modelo": "Array M390"
+    },
+    {
+      "modelo": "Galaxy S Lightray 4G R940"
+    },
+    {
+      "modelo": "Galaxy S Duos S7562"
+    },
+    {
+      "modelo": "Manhattan E3300"
+    },
+    {
+      "modelo": "E2262"
+    },
+    {
+      "modelo": "E1260B"
+    },
+    {
+      "modelo": "E1200 Pusha"
+    },
+    {
+      "modelo": "E2252"
+    },
+    {
+      "modelo": "Galaxy Chat B5330"
+    },
+    {
+      "modelo": "U485 Intensity III"
+    },
+    {
+      "modelo": "Galaxy I8250"
+    },
+    {
+      "modelo": "Galaxy Ace Advance S6800"
+    },
+    {
+      "modelo": "Galaxy Ace Duos S6802"
+    },
+    {
+      "modelo": "Galaxy Appeal I827"
+    },
+    {
+      "modelo": "Galaxy Tab 8.9 4G P7320T"
+    },
+    {
+      "modelo": "C3780"
+    },
+    {
+      "modelo": "C3782 Evan"
+    },
+    {
+      "modelo": "Galaxy Proclaim S720C"
+    },
+    {
+      "modelo": "I9500 Fraser"
+    },
+    {
+      "modelo": "Omnia M S7530"
+    },
+    {
+      "modelo": "Focus 2 I667"
+    },
+    {
+      "modelo": "Galaxy S III T999"
+    },
+    {
+      "modelo": "Galaxy S III I747"
+    },
+    {
+      "modelo": "Galaxy S III CDMA"
+    },
+    {
+      "modelo": "I9300 Galaxy S III"
+    },
+    {
+      "modelo": "E2350B"
+    },
+    {
+      "modelo": "U380 Brightside"
+    },
+    {
+      "modelo": "Galaxy Player 70 Plus"
+    },
+    {
+      "modelo": "Galaxy Pocket plus S5301"
+    },
+    {
+      "modelo": "Galaxy Pocket S5300"
+    },
+    {
+      "modelo": "I8530 Galaxy Beam"
+    },
+    {
+      "modelo": "Galaxy Tab 2 10.1 CDMA"
+    },
+    {
+      "modelo": "Galaxy Tab 2 10.1 P5110"
+    },
+    {
+      "modelo": "Galaxy Tab 2 10.1 P5100"
+    },
+    {
+      "modelo": "Rugby Smart I847"
+    },
+    {
+      "modelo": "W999"
+    },
+    {
+      "modelo": "Galaxy Ace II X S7560M"
+    },
+    {
+      "modelo": "Galaxy Ace 2 I8160"
+    },
+    {
+      "modelo": "Galaxy mini 2 S6500"
+    },
+    {
+      "modelo": "Galaxy Ace Duos I589"
+    },
+    {
+      "modelo": "Galaxy Pop Plus S5570i"
+    },
+    {
+      "modelo": "Galaxy Tab 2 7.0 P3110"
+    },
+    {
+      "modelo": "Galaxy Tab 2 7.0 P3100"
+    },
+    {
+      "modelo": "I9070 Galaxy S Advance"
+    },
+    {
+      "modelo": "C3312 Duos"
+    },
+    {
+      "modelo": "Star 3 s5220"
+    },
+    {
+      "modelo": "Star 3 Duos S5222"
+    },
+    {
+      "modelo": "Galaxy Nexus I9250M"
+    },
+    {
+      "modelo": "Galaxy Attain 4G"
+    },
+    {
+      "modelo": "Galaxy S Blaze 4G T769"
+    },
+    {
+      "modelo": "Galaxy Tab 7.7 LTE I815"
+    },
+    {
+      "modelo": "Galaxy Nexus LTE L700"
+    },
+    {
+      "modelo": "Exhilarate i577"
+    },
+    {
+      "modelo": "Galaxy S II Skyrocket HD I757"
+    },
+    {
+      "modelo": "Galaxy Note T879"
+    },
+    {
+      "modelo": "Galaxy Note I717"
+    },
+    {
+      "modelo": "Galaxy M Style M340S"
+    },
+    {
+      "modelo": "Galaxy Ace Plus S7500"
+    },
+    {
+      "modelo": "I929 Galaxy S II Duos"
+    },
+    {
+      "modelo": "Galaxy Y Duos S6102"
+    },
+    {
+      "modelo": "Galaxy Y Pro Duos B5512"
+    },
+    {
+      "modelo": "E2600"
+    },
+    {
+      "modelo": "M370"
+    },
+    {
+      "modelo": "R680 Repp"
+    },
+    {
+      "modelo": "I110 Illusion"
+    },
+    {
+      "modelo": "E1050"
+    },
+    {
+      "modelo": "E1232B"
+    },
+    {
+      "modelo": "E1230"
+    },
+    {
+      "modelo": "Focus S I937"
+    },
+    {
+      "modelo": "Focus Flash I677"
+    },
+    {
+      "modelo": "Galaxy S II Skyrocket i727"
+    },
+    {
+      "modelo": "C3330 Champ 2"
+    },
+    {
+      "modelo": "Exhibit II 4G T679"
+    },
+    {
+      "modelo": "C3350"
+    },
+    {
+      "modelo": "C3520"
+    },
+    {
+      "modelo": "Galaxy Nexus i515"
+    },
+    {
+      "modelo": "Galaxy Nexus I9250"
+    },
+    {
+      "modelo": "I9100G Galaxy S II"
+    },
+    {
+      "modelo": "I405 Stratosphere"
+    },
+    {
+      "modelo": "R730 Transfix"
+    },
+    {
+      "modelo": "i927 Captivate Glide"
+    },
+    {
+      "modelo": "DoubleTime I857"
+    },
+    {
+      "modelo": "M930 Transform Ultra"
+    },
+    {
+      "modelo": "P6210 Galaxy Tab 7.0 Plus"
+    },
+    {
+      "modelo": "P6200 Galaxy Tab 7.0 Plus"
+    },
+    {
+      "modelo": "Omnia W I8350"
+    },
+    {
+      "modelo": "Galaxy S II HD LTE"
+    },
+    {
+      "modelo": "Ch@t 527"
+    },
+    {
+      "modelo": "P6810 Galaxy Tab 7.7"
+    },
+    {
+      "modelo": "P6800 Galaxy Tab 7.7"
+    },
+    {
+      "modelo": "Galaxy Note N7000"
+    },
+    {
+      "modelo": "Galaxy S II I777"
+    },
+    {
+      "modelo": "Galaxy S II X T989D"
+    },
+    {
+      "modelo": "Galaxy S II T989"
+    },
+    {
+      "modelo": "Galaxy S II Epic 4G Touch"
+    },
+    {
+      "modelo": "S8600 Wave 3"
+    },
+    {
+      "modelo": "Wave M S7250"
+    },
+    {
+      "modelo": "Wave Y S5380"
+    },
+    {
+      "modelo": "Galaxy S II LTE i727R"
+    },
+    {
+      "modelo": "Galaxy S II LTE I9210"
+    },
+    {
+      "modelo": "Galaxy Tab 8.9 LTE I957"
+    },
+    {
+      "modelo": "Galaxy W I8150"
+    },
+    {
+      "modelo": "Galaxy M Pro B7800"
+    },
+    {
+      "modelo": "Galaxy Y Pro B5510"
+    },
+    {
+      "modelo": "Galaxy Y TV S5367"
+    },
+    {
+      "modelo": "Galaxy Y S5360"
+    },
+    {
+      "modelo": "Gravity TXT T379"
+    },
+    {
+      "modelo": "Galaxy Q T589R"
+    },
+    {
+      "modelo": "S5610"
+    },
+    {
+      "modelo": "S3770"
+    },
+    {
+      "modelo": "S5690 Galaxy Xcover"
+    },
+    {
+      "modelo": "Galaxy S II 4G I9100M"
+    },
+    {
+      "modelo": "I9103 Galaxy R"
+    },
+    {
+      "modelo": "R720 Admire"
+    },
+    {
+      "modelo": "Convoy 2"
+    },
+    {
+      "modelo": "Conquer 4G"
+    },
+    {
+      "modelo": "R640 Character"
+    },
+    {
+      "modelo": "R380 Freeform III"
+    },
+    {
+      "modelo": "Trender"
+    },
+    {
+      "modelo": "Gravity SMART"
+    },
+    {
+      "modelo": "Exhibit 4G"
+    },
+    {
+      "modelo": "E1195"
+    },
+    {
+      "modelo": "C414"
+    },
+    {
+      "modelo": "E1190"
+    },
+    {
+      "modelo": "C3560"
+    },
+    {
+      "modelo": "Dart T499"
+    },
+    {
+      "modelo": "C3322"
+    },
+    {
+      "modelo": "R260 Chrono"
+    },
+    {
+      "modelo": "E2232"
+    },
+    {
+      "modelo": "E1182"
+    },
+    {
+      "modelo": "I9001 Galaxy S Plus"
+    },
+    {
+      "modelo": "DuosTV I6712"
+    },
+    {
+      "modelo": "C6712 Star II DUOS"
+    },
+    {
+      "modelo": "Ch@t 222"
+    },
+    {
+      "modelo": "Ch@t 220"
+    },
+    {
+      "modelo": "M580 Replenish"
+    },
+    {
+      "modelo": "Galaxy Prevail"
+    },
+    {
+      "modelo": "M220L Galaxy Neo"
+    },
+    {
+      "modelo": "Google Nexus S I9020A"
+    },
+    {
+      "modelo": "Google Nexus S I9023"
+    },
+    {
+      "modelo": "E2230"
+    },
+    {
+      "modelo": "P1010 Galaxy Tab Wi-Fi"
+    },
+    {
+      "modelo": "P7500 Galaxy Tab 10.1 3G"
+    },
+    {
+      "modelo": "Galaxy Tab 10.1 LTE I905"
+    },
+    {
+      "modelo": "Galaxy Tab 10.1 P7510"
+    },
+    {
+      "modelo": "Galaxy Tab 8.9 P7300"
+    },
+    {
+      "modelo": "Galaxy Tab 8.9 P7310"
+    },
+    {
+      "modelo": "Google Nexus S 4G"
+    },
+    {
+      "modelo": "M260 Factor"
+    },
+    {
+      "modelo": "S3850 Corby II"
+    },
+    {
+      "modelo": "Galaxy Pro B7510"
+    },
+    {
+      "modelo": "I9100 Galaxy S II"
+    },
+    {
+      "modelo": "E2652W Champ Duos"
+    },
+    {
+      "modelo": "E2652 Champ Duos"
+    },
+    {
+      "modelo": "Galaxy S WiFi 5.0"
+    },
+    {
+      "modelo": "P7100 Galaxy Tab 10.1v"
+    },
+    {
+      "modelo": "S5780 Wave 578"
+    },
+    {
+      "modelo": "Ch@t 350"
+    },
+    {
+      "modelo": "E3213 Hero"
+    },
+    {
+      "modelo": "E3210"
+    },
+    {
+      "modelo": "E2330"
+    },
+    {
+      "modelo": "I9003 Galaxy SL"
+    },
+    {
+      "modelo": "Galaxy Ace S5830I"
+    },
+    {
+      "modelo": "Galaxy Ace S5830"
+    },
+    {
+      "modelo": "Galaxy Fit S5670"
+    },
+    {
+      "modelo": "Galaxy Gio S5660"
+    },
+    {
+      "modelo": "Galaxy Mini S5570"
+    },
+    {
+      "modelo": "Galaxy Pop i559"
+    },
+    {
+      "modelo": "Galaxy S 4G T959"
+    },
+    {
+      "modelo": "S5260 Star II"
+    },
+    {
+      "modelo": "I997 Infuse 4G"
+    },
+    {
+      "modelo": "R910 Galaxy Indulge"
+    },
+    {
+      "modelo": "Droid Charge I510"
+    },
+    {
+      "modelo": "Google Nexus S"
+    },
+    {
+      "modelo": "M190S Galaxy S Hoppin"
+    },
+    {
+      "modelo": "Ch@t 335"
+    },
+    {
+      "modelo": "C3630"
+    },
+    {
+      "modelo": "C3530"
+    },
+    {
+      "modelo": "I9010 Galaxy S Giorgio Armani"
+    },
+    {
+      "modelo": "A817 Solstice II"
+    },
+    {
+      "modelo": "A667 Evergreen"
+    },
+    {
+      "modelo": "E2530"
+    },
+    {
+      "modelo": "I100 Gem"
+    },
+    {
+      "modelo": "R710 Suede"
+    },
+    {
+      "modelo": "U750 Zeal"
+    },
+    {
+      "modelo": "Continuum I400"
+    },
+    {
+      "modelo": "Ch@t 322 Wi-Fi"
+    },
+    {
+      "modelo": "Ch@t 322"
+    },
+    {
+      "modelo": "E1252"
+    },
+    {
+      "modelo": "Breeze B209"
+    },
+    {
+      "modelo": "Hero Plus B159"
+    },
+    {
+      "modelo": "W169 Duos"
+    },
+    {
+      "modelo": "Mpower Muzik 219"
+    },
+    {
+      "modelo": "Mpower Txt M369"
+    },
+    {
+      "modelo": "Mpower TV S239"
+    },
+    {
+      "modelo": "E1225 Dual Sim Shift"
+    },
+    {
+      "modelo": "Guru E1081T"
+    },
+    {
+      "modelo": "Focus"
+    },
+    {
+      "modelo": "I8700 Omnia 7"
+    },
+    {
+      "modelo": "S5750 Wave575"
+    },
+    {
+      "modelo": "S8530 Wave II"
+    },
+    {
+      "modelo": "M210S Wave2"
+    },
+    {
+      "modelo": "Galaxy Tab T-Mobile T849"
+    },
+    {
+      "modelo": "P1000 Galaxy Tab"
+    },
+    {
+      "modelo": "Galaxy Tab CDMA P100"
+    },
+    {
+      "modelo": "Galaxy Tab 4G LTE"
+    },
+    {
+      "modelo": "T249"
+    },
+    {
+      "modelo": "R580 Profile"
+    },
+    {
+      "modelo": "R570 Messenger III"
+    },
+    {
+      "modelo": "I909 Galaxy S"
+    },
+    {
+      "modelo": "A200K Nori F"
+    },
+    {
+      "modelo": "A220 F Nori"
+    },
+    {
+      "modelo": "M130K Galaxy K"
+    },
+    {
+      "modelo": "Mesmerize i500"
+    },
+    {
+      "modelo": "M920 Transform"
+    },
+    {
+      "modelo": "R360 Freeform II"
+    },
+    {
+      "modelo": "Galaxy 551"
+    },
+    {
+      "modelo": "R900 Craft"
+    },
+    {
+      "modelo": "Xcover 271"
+    },
+    {
+      "modelo": "C3752"
+    },
+    {
+      "modelo": "C3750"
+    },
+    {
+      "modelo": "S7230E Wave 723"
+    },
+    {
+      "modelo": "M130L Galaxy U"
+    },
+    {
+      "modelo": "E2152"
+    },
+    {
+      "modelo": "S5530"
+    },
+    {
+      "modelo": "U360 Gusto"
+    },
+    {
+      "modelo": "Fascinate"
+    },
+    {
+      "modelo": "Vibrant"
+    },
+    {
+      "modelo": "A927 Flight II"
+    },
+    {
+      "modelo": "T669 Gravity T"
+    },
+    {
+      "modelo": "T479 Gravity 3"
+    },
+    {
+      "modelo": ":) Smiley"
+    },
+    {
+      "modelo": "C5010 Squash"
+    },
+    {
+      "modelo": "i897 Captivate"
+    },
+    {
+      "modelo": "B7350 Omnia PRO 4"
+    },
+    {
+      "modelo": "B6520 Omnia PRO 5"
+    },
+    {
+      "modelo": "U320 Haven"
+    },
+    {
+      "modelo": "U460 Intensity II"
+    },
+    {
+      "modelo": "M350 Seek"
+    },
+    {
+      "modelo": "Epic 4G"
+    },
+    {
+      "modelo": "Acclaim"
+    },
+    {
+      "modelo": "Intercept"
+    },
+    {
+      "modelo": "R360 Messenger Touch"
+    },
+    {
+      "modelo": "i225 Exec"
+    },
+    {
+      "modelo": "M570 Restore"
+    },
+    {
+      "modelo": "R351 Freeform"
+    },
+    {
+      "modelo": "T369"
+    },
+    {
+      "modelo": "S5330 Wave533"
+    },
+    {
+      "modelo": "S5250 Wave525"
+    },
+    {
+      "modelo": "I5500 Galaxy 5"
+    },
+    {
+      "modelo": "I5801 Galaxy Apollo"
+    },
+    {
+      "modelo": "I5800 Galaxy 3"
+    },
+    {
+      "modelo": "B7722"
+    },
+    {
+      "modelo": "A847 Rugby II"
+    },
+    {
+      "modelo": "C3300K Champ"
+    },
+    {
+      "modelo": "W960 AMOLED 3D"
+    },
+    {
+      "modelo": "M110S Galaxy S"
+    },
+    {
+      "modelo": "Galaxy A"
+    },
+    {
+      "modelo": "I9000 Galaxy S"
+    },
+    {
+      "modelo": "S3370"
+    },
+    {
+      "modelo": "I6500U Galaxy"
+    },
+    {
+      "modelo": "E1170"
+    },
+    {
+      "modelo": "Metro TV"
+    },
+    {
+      "modelo": "Corby TV F339"
+    },
+    {
+      "modelo": "S3650W Corby"
+    },
+    {
+      "modelo": "W9705"
+    },
+    {
+      "modelo": "A687 Strive"
+    },
+    {
+      "modelo": "A697 Sunburst"
+    },
+    {
+      "modelo": "S8500 Wave"
+    },
+    {
+      "modelo": "I8520 Galaxy Beam"
+    },
+    {
+      "modelo": "B3410W Ch@t"
+    },
+    {
+      "modelo": "M3710 Corby Beat"
+    },
+    {
+      "modelo": "E2370 Xcover"
+    },
+    {
+      "modelo": "E2550 Monte Slider"
+    },
+    {
+      "modelo": "C3200 Monte Bar"
+    },
+    {
+      "modelo": "S5620 Monte"
+    },
+    {
+      "modelo": "S5550 Shark 2"
+    },
+    {
+      "modelo": "S3550 Shark 3"
+    },
+    {
+      "modelo": "E1150"
+    },
+    {
+      "modelo": "S5350 Shark"
+    },
+    {
+      "modelo": "C6112"
+    },
+    {
+      "modelo": "M2520 Beat Techno"
+    },
+    {
+      "modelo": "C3510 Genoa"
+    },
+    {
+      "modelo": "M5650 Lindy"
+    },
+    {
+      "modelo": "S7070 Diva"
+    },
+    {
+      "modelo": "C3730C"
+    },
+    {
+      "modelo": "S5150 Diva folder"
+    },
+    {
+      "modelo": "C5130"
+    },
+    {
+      "modelo": "B5722"
+    },
+    {
+      "modelo": "M3310L"
+    },
+    {
+      "modelo": "M3310"
+    },
+    {
+      "modelo": "A897 Mythic"
+    },
+    {
+      "modelo": "S5500 Eco"
+    },
+    {
+      "modelo": "T139"
+    },
+    {
+      "modelo": "A797 Flight"
+    },
+    {
+      "modelo": "B3410"
+    },
+    {
+      "modelo": "M715 T*OMNIA II"
+    },
+    {
+      "modelo": "A886 Forever"
+    },
+    {
+      "modelo": "S5560 Marvel"
+    },
+    {
+      "modelo": "S5630C"
+    },
+    {
+      "modelo": "I5700 Galaxy Spica"
+    },
+    {
+      "modelo": "E1390"
+    },
+    {
+      "modelo": "E1160"
+    },
+    {
+      "modelo": "E2130"
+    },
+    {
+      "modelo": "E1130B"
+    },
+    {
+      "modelo": "T401G"
+    },
+    {
+      "modelo": "B7620 Giorgio Armani"
+    },
+    {
+      "modelo": "T939 Behold 2"
+    },
+    {
+      "modelo": "W880 AMOLED 12M"
+    },
+    {
+      "modelo": "Vodafone 360 H1"
+    },
+    {
+      "modelo": "Vodafone 360 M1"
+    },
+    {
+      "modelo": "B5310 CorbyPRO"
+    },
+    {
+      "modelo": "B3210 CorbyTXT"
+    },
+    {
+      "modelo": "F480i"
+    },
+    {
+      "modelo": "B7330 OmniaPRO"
+    },
+    {
+      "modelo": "E1085T"
+    },
+    {
+      "modelo": "E1080T"
+    },
+    {
+      "modelo": "S5510"
+    },
+    {
+      "modelo": "S5230W Star WiFi"
+    },
+    {
+      "modelo": "S7550 Blue Earth"
+    },
+    {
+      "modelo": "S3650 Corby"
+    },
+    {
+      "modelo": "T659 Scarlet"
+    },
+    {
+      "modelo": "B3310"
+    },
+    {
+      "modelo": "C3212"
+    },
+    {
+      "modelo": "U450 DoubleTake"
+    },
+    {
+      "modelo": "i220 Code"
+    },
+    {
+      "modelo": "R860 Caliber"
+    },
+    {
+      "modelo": "R520 Trill"
+    },
+    {
+      "modelo": "M900 Moment"
+    },
+    {
+      "modelo": "i350 Intrepid"
+    },
+    {
+      "modelo": "M850 Instinct HD"
+    },
+    {
+      "modelo": "U450 Intensity"
+    },
+    {
+      "modelo": "U960 Rogue"
+    },
+    {
+      "modelo": "S3100"
+    },
+    {
+      "modelo": "A887 Solstice"
+    },
+    {
+      "modelo": "E2120"
+    },
+    {
+      "modelo": "S5233T"
+    },
+    {
+      "modelo": "I6220 Star TV"
+    },
+    {
+      "modelo": "S9110"
+    },
+    {
+      "modelo": "T469 Gravity 2"
+    },
+    {
+      "modelo": "T559 Comeback"
+    },
+    {
+      "modelo": "T746 Impact"
+    },
+    {
+      "modelo": "S5600v Blade"
+    },
+    {
+      "modelo": "S6700"
+    },
+    {
+      "modelo": "C5510"
+    },
+    {
+      "modelo": "M2510"
+    },
+    {
+      "modelo": "M2310"
+    },
+    {
+      "modelo": "W850"
+    },
+    {
+      "modelo": "S8000 Jet"
+    },
+    {
+      "modelo": "I8000 Omnia II"
+    },
+    {
+      "modelo": "B7610 OmniaPRO"
+    },
+    {
+      "modelo": "B7320 OmniaPRO"
+    },
+    {
+      "modelo": "B7300 OmniaLITE"
+    },
+    {
+      "modelo": "M8910 Pixon12"
+    },
+    {
+      "modelo": "E1107 Crest Solar"
+    },
+    {
+      "modelo": "M2710 Beat Twist"
+    },
+    {
+      "modelo": "S5050"
+    },
+    {
+      "modelo": "T349"
+    },
+    {
+      "modelo": "S5200"
+    },
+    {
+      "modelo": "i637 Jack"
+    },
+    {
+      "modelo": "S3310"
+    },
+    {
+      "modelo": "C3060R"
+    },
+    {
+      "modelo": "A167"
+    },
+    {
+      "modelo": "A177"
+    },
+    {
+      "modelo": "I7500 Galaxy"
+    },
+    {
+      "modelo": "J165"
+    },
+    {
+      "modelo": "I6210"
+    },
+    {
+      "modelo": "E1360"
+    },
+    {
+      "modelo": "E1210"
+    },
+    {
+      "modelo": "A657"
+    },
+    {
+      "modelo": "A877 Impression"
+    },
+    {
+      "modelo": "A257 Magnet"
+    },
+    {
+      "modelo": "Propel Pro"
+    },
+    {
+      "modelo": "B2100 Xplorer"
+    },
+    {
+      "modelo": "S5230 Star"
+    },
+    {
+      "modelo": "S5600 Preston"
+    },
+    {
+      "modelo": "i8910 Omnia HD"
+    },
+    {
+      "modelo": "S8300 UltraTOUCH"
+    },
+    {
+      "modelo": "M7600 Beat DJ"
+    },
+    {
+      "modelo": "M6710 Beat DISC"
+    },
+    {
+      "modelo": "S7350 Ultra s"
+    },
+    {
+      "modelo": "S7220 Ultra b"
+    },
+    {
+      "modelo": "C5220"
+    },
+    {
+      "modelo": "S3500"
+    },
+    {
+      "modelo": "S3110"
+    },
+    {
+      "modelo": "P250"
+    },
+    {
+      "modelo": "i7410"
+    },
+    {
+      "modelo": "T929 Memoir"
+    },
+    {
+      "modelo": "C3050 Stratus"
+    },
+    {
+      "modelo": "C3010"
+    },
+    {
+      "modelo": "C3110"
+    },
+    {
+      "modelo": "C6625"
+    },
+    {
+      "modelo": "E1310"
+    },
+    {
+      "modelo": "E1120"
+    },
+    {
+      "modelo": "E1100"
+    },
+    {
+      "modelo": "E1070"
+    },
+    {
+      "modelo": "E2210B"
+    },
+    {
+      "modelo": "E1125"
+    },
+    {
+      "modelo": "E2100B"
+    },
+    {
+      "modelo": "B520"
+    },
+    {
+      "modelo": "B5702"
+    },
+    {
+      "modelo": "C5212"
+    },
+    {
+      "modelo": "W259 Duos"
+    },
+    {
+      "modelo": "SCH-W699"
+    },
+    {
+      "modelo": "W299 Duos"
+    },
+    {
+      "modelo": "S9402 Ego"
+    },
+    {
+      "modelo": "S3030 Tobi"
+    },
+    {
+      "modelo": "U810 Renown"
+    },
+    {
+      "modelo": "i770 Saga"
+    },
+    {
+      "modelo": "A867 Eternity"
+    },
+    {
+      "modelo": "A777"
+    },
+    {
+      "modelo": "T919 Behold"
+    },
+    {
+      "modelo": "T459 Gravity"
+    },
+    {
+      "modelo": "E2510"
+    },
+    {
+      "modelo": "T219"
+    },
+    {
+      "modelo": "E1410"
+    },
+    {
+      "modelo": "T119"
+    },
+    {
+      "modelo": "E1117"
+    },
+    {
+      "modelo": "E1110"
+    },
+    {
+      "modelo": "C6620"
+    },
+    {
+      "modelo": "i907 Epix"
+    },
+    {
+      "modelo": "A767 Propel"
+    },
+    {
+      "modelo": "i7110"
+    },
+    {
+      "modelo": "F275"
+    },
+    {
+      "modelo": "F270 Beat"
+    },
+    {
+      "modelo": "M8800 Pixon"
+    },
+    {
+      "modelo": "S3600"
+    },
+    {
+      "modelo": "M7500 Emporio Armani"
+    },
+    {
+      "modelo": "M3200 Beat s"
+    },
+    {
+      "modelo": "T339"
+    },
+    {
+      "modelo": "T229"
+    },
+    {
+      "modelo": "A637"
+    },
+    {
+      "modelo": "C510"
+    },
+    {
+      "modelo": "A837 Rugby"
+    },
+    {
+      "modelo": "A237"
+    },
+    {
+      "modelo": "B320"
+    },
+    {
+      "modelo": "B210"
+    },
+    {
+      "modelo": "M3510 Beat b"
+    },
+    {
+      "modelo": "M200"
+    },
+    {
+      "modelo": "P270"
+    },
+    {
+      "modelo": "B2700"
+    },
+    {
+      "modelo": "F268"
+    },
+    {
+      "modelo": "T109"
+    },
+    {
+      "modelo": "E200 ECO"
+    },
+    {
+      "modelo": "D980"
+    },
+    {
+      "modelo": "B510"
+    },
+    {
+      "modelo": "E215"
+    },
+    {
+      "modelo": "B130"
+    },
+    {
+      "modelo": "i8510 INNOV8"
+    },
+    {
+      "modelo": "S7330"
+    },
+    {
+      "modelo": "i740"
+    },
+    {
+      "modelo": "M150"
+    },
+    {
+      "modelo": "J800 Luxe"
+    },
+    {
+      "modelo": "M140"
+    },
+    {
+      "modelo": "M130"
+    },
+    {
+      "modelo": "L700"
+    },
+    {
+      "modelo": "i900 Omnia"
+    },
+    {
+      "modelo": "U800 Soul b"
+    },
+    {
+      "modelo": "L870"
+    },
+    {
+      "modelo": "Impact sf"
+    },
+    {
+      "modelo": "M620"
+    },
+    {
+      "modelo": "B300"
+    },
+    {
+      "modelo": "Impact b"
+    },
+    {
+      "modelo": "Impact"
+    },
+    {
+      "modelo": "D780"
+    },
+    {
+      "modelo": "V820L"
+    },
+    {
+      "modelo": "F110"
+    },
+    {
+      "modelo": "G400 Soul"
+    },
+    {
+      "modelo": "U900 Soul"
+    },
+    {
+      "modelo": "L810v Steel"
+    },
+    {
+      "modelo": "F480"
+    },
+    {
+      "modelo": "G810"
+    },
+    {
+      "modelo": "M310"
+    },
+    {
+      "modelo": "B200"
+    },
+    {
+      "modelo": "B110"
+    },
+    {
+      "modelo": "A827 Access"
+    },
+    {
+      "modelo": "P960"
+    },
+    {
+      "modelo": "P220"
+    },
+    {
+      "modelo": "P180"
+    },
+    {
+      "modelo": "i200"
+    },
+    {
+      "modelo": "F400"
+    },
+    {
+      "modelo": "J700"
+    },
+    {
+      "modelo": "J630"
+    },
+    {
+      "modelo": "J210"
+    },
+    {
+      "modelo": "J150"
+    },
+    {
+      "modelo": "E251"
+    },
+    {
+      "modelo": "L770"
+    },
+    {
+      "modelo": "A746"
+    },
+    {
+      "modelo": "A727"
+    },
+    {
+      "modelo": "A711"
+    },
+    {
+      "modelo": "A717"
+    },
+    {
+      "modelo": "A437"
+    },
+    {
+      "modelo": "A127"
+    },
+    {
+      "modelo": "A117"
+    },
+    {
+      "modelo": "SPH-i325 Ace"
+    },
+    {
+      "modelo": "i640"
+    },
+    {
+      "modelo": "L320"
+    },
+    {
+      "modelo": "L310"
+    },
+    {
+      "modelo": "L170"
+    },
+    {
+      "modelo": "T819"
+    },
+    {
+      "modelo": "F490"
+    },
+    {
+      "modelo": "G800"
+    },
+    {
+      "modelo": "C500"
+    },
+    {
+      "modelo": "Serenata"
+    },
+    {
+      "modelo": "D880 Duos"
+    },
+    {
+      "modelo": "i780"
+    },
+    {
+      "modelo": "i560"
+    },
+    {
+      "modelo": "i550"
+    },
+    {
+      "modelo": "F330"
+    },
+    {
+      "modelo": "F250"
+    },
+    {
+      "modelo": "i450"
+    },
+    {
+      "modelo": "Armani"
+    },
+    {
+      "modelo": "J610"
+    },
+    {
+      "modelo": "J400"
+    },
+    {
+      "modelo": "P260"
+    },
+    {
+      "modelo": "J750"
+    },
+    {
+      "modelo": "A737"
+    },
+    {
+      "modelo": "A517"
+    },
+    {
+      "modelo": "T639"
+    },
+    {
+      "modelo": "T509"
+    },
+    {
+      "modelo": "T439"
+    },
+    {
+      "modelo": "T429"
+    },
+    {
+      "modelo": "T409"
+    },
+    {
+      "modelo": "T739 Katalyst"
+    },
+    {
+      "modelo": "T729 Blast"
+    },
+    {
+      "modelo": "T539 Beat"
+    },
+    {
+      "modelo": "L600"
+    },
+    {
+      "modelo": "Z630"
+    },
+    {
+      "modelo": "G600"
+    },
+    {
+      "modelo": "M610"
+    },
+    {
+      "modelo": "M600"
+    },
+    {
+      "modelo": "M110"
+    },
+    {
+      "modelo": "B500"
+    },
+    {
+      "modelo": "B100"
+    },
+    {
+      "modelo": "S730i"
+    },
+    {
+      "modelo": "S720i"
+    },
+    {
+      "modelo": "J200"
+    },
+    {
+      "modelo": "L760"
+    },
+    {
+      "modelo": "F700"
+    },
+    {
+      "modelo": "E950"
+    },
+    {
+      "modelo": "F210"
+    },
+    {
+      "modelo": "F200"
+    },
+    {
+      "modelo": "i620"
+    },
+    {
+      "modelo": "A411"
+    },
+    {
+      "modelo": "ZV60"
+    },
+    {
+      "modelo": "Z240"
+    },
+    {
+      "modelo": "Z170"
+    },
+    {
+      "modelo": "J600"
+    },
+    {
+      "modelo": "i400"
+    },
+    {
+      "modelo": "U700"
+    },
+    {
+      "modelo": "U600"
+    },
+    {
+      "modelo": "U300"
+    },
+    {
+      "modelo": "U100"
+    },
+    {
+      "modelo": "i710"
+    },
+    {
+      "modelo": "i520"
+    },
+    {
+      "modelo": "F520"
+    },
+    {
+      "modelo": "F510"
+    },
+    {
+      "modelo": "P110"
+    },
+    {
+      "modelo": "E840"
+    },
+    {
+      "modelo": "E830"
+    },
+    {
+      "modelo": "E740"
+    },
+    {
+      "modelo": "E590"
+    },
+    {
+      "modelo": "E230"
+    },
+    {
+      "modelo": "E210"
+    },
+    {
+      "modelo": "E200"
+    },
+    {
+      "modelo": "C520"
+    },
+    {
+      "modelo": "C450"
+    },
+    {
+      "modelo": "C275"
+    },
+    {
+      "modelo": "C270"
+    },
+    {
+      "modelo": "C260"
+    },
+    {
+      "modelo": "C250"
+    },
+    {
+      "modelo": "i600"
+    },
+    {
+      "modelo": "i617 BlackJack II"
+    },
+    {
+      "modelo": "i607 BlackJack"
+    },
+    {
+      "modelo": "F500"
+    },
+    {
+      "modelo": "F300"
+    },
+    {
+      "modelo": "P940"
+    },
+    {
+      "modelo": "P930"
+    },
+    {
+      "modelo": "E790"
+    },
+    {
+      "modelo": "E490"
+    },
+    {
+      "modelo": "E480"
+    },
+    {
+      "modelo": "E390"
+    },
+    {
+      "modelo": "X550"
+    },
+    {
+      "modelo": "X540"
+    },
+    {
+      "modelo": "E250"
+    },
+    {
+      "modelo": "X520"
+    },
+    {
+      "modelo": "X530"
+    },
+    {
+      "modelo": "C300"
+    },
+    {
+      "modelo": "M300"
+    },
+    {
+      "modelo": "E690"
+    },
+    {
+      "modelo": "E570"
+    },
+    {
+      "modelo": "E420"
+    },
+    {
+      "modelo": "X830"
+    },
+    {
+      "modelo": "E890"
+    },
+    {
+      "modelo": "E898"
+    },
+    {
+      "modelo": "P310"
+    },
+    {
+      "modelo": "Z720"
+    },
+    {
+      "modelo": "Z650i"
+    },
+    {
+      "modelo": "Z620"
+    },
+    {
+      "modelo": "Z370"
+    },
+    {
+      "modelo": "Z360"
+    },
+    {
+      "modelo": "P200"
+    },
+    {
+      "modelo": "S501i"
+    },
+    {
+      "modelo": "S401i"
+    },
+    {
+      "modelo": "X510"
+    },
+    {
+      "modelo": "X500"
+    },
+    {
+      "modelo": "D840"
+    },
+    {
+      "modelo": "C400"
+    },
+    {
+      "modelo": "C240"
+    },
+    {
+      "modelo": "C180"
+    },
+    {
+      "modelo": "C170"
+    },
+    {
+      "modelo": "C160"
+    },
+    {
+      "modelo": "C140"
+    },
+    {
+      "modelo": "D830"
+    },
+    {
+      "modelo": "D900i"
+    },
+    {
+      "modelo": "D900"
+    },
+    {
+      "modelo": "X820"
+    },
+    {
+      "modelo": "C130"
+    },
+    {
+      "modelo": "E500"
+    },
+    {
+      "modelo": "E380"
+    },
+    {
+      "modelo": "D870"
+    },
+    {
+      "modelo": "D780 flip"
+    },
+    {
+      "modelo": "E900"
+    },
+    {
+      "modelo": "Z400"
+    },
+    {
+      "modelo": "Z550"
+    },
+    {
+      "modelo": "i320"
+    },
+    {
+      "modelo": "i310"
+    },
+    {
+      "modelo": "ZV50"
+    },
+    {
+      "modelo": "ZV40"
+    },
+    {
+      "modelo": "Z560"
+    },
+    {
+      "modelo": "P920"
+    },
+    {
+      "modelo": "P900"
+    },
+    {
+      "modelo": "P910"
+    },
+    {
+      "modelo": "T629"
+    },
+    {
+      "modelo": "D520"
+    },
+    {
+      "modelo": "D300"
+    },
+    {
+      "modelo": "Z710"
+    },
+    {
+      "modelo": "Z600"
+    },
+    {
+      "modelo": "Z520"
+    },
+    {
+      "modelo": "Z350"
+    },
+    {
+      "modelo": "Z230"
+    },
+    {
+      "modelo": "Z330"
+    },
+    {
+      "modelo": "Z310"
+    },
+    {
+      "modelo": "Z150"
+    },
+    {
+      "modelo": "X680"
+    },
+    {
+      "modelo": "X630"
+    },
+    {
+      "modelo": "X210"
+    },
+    {
+      "modelo": "X300"
+    },
+    {
+      "modelo": "X160"
+    },
+    {
+      "modelo": "E870"
+    },
+    {
+      "modelo": "E780"
+    },
+    {
+      "modelo": "i300x"
+    },
+    {
+      "modelo": "D820"
+    },
+    {
+      "modelo": "D810"
+    },
+    {
+      "modelo": "D800"
+    },
+    {
+      "modelo": "Z540"
+    },
+    {
+      "modelo": "Z510"
+    },
+    {
+      "modelo": "P300"
+    },
+    {
+      "modelo": "E770"
+    },
+    {
+      "modelo": "E370"
+    },
+    {
+      "modelo": "E360"
+    },
+    {
+      "modelo": "ZV30"
+    },
+    {
+      "modelo": "ZV10"
+    },
+    {
+      "modelo": "S400i"
+    },
+    {
+      "modelo": "Z320i"
+    },
+    {
+      "modelo": "S500i"
+    },
+    {
+      "modelo": "E860"
+    },
+    {
+      "modelo": "Serene"
+    },
+    {
+      "modelo": "D600"
+    },
+    {
+      "modelo": "P850"
+    },
+    {
+      "modelo": "E730"
+    },
+    {
+      "modelo": "D510"
+    },
+    {
+      "modelo": "X700"
+    },
+    {
+      "modelo": "X670"
+    },
+    {
+      "modelo": "X660"
+    },
+    {
+      "modelo": "X650"
+    },
+    {
+      "modelo": "X490"
+    },
+    {
+      "modelo": "X200"
+    },
+    {
+      "modelo": "X150"
+    },
+    {
+      "modelo": "Z500"
+    },
+    {
+      "modelo": "Z300"
+    },
+    {
+      "modelo": "Z130"
+    },
+    {
+      "modelo": "Z140"
+    },
+    {
+      "modelo": "D550"
+    },
+    {
+      "modelo": "P860"
+    },
+    {
+      "modelo": "Z700"
+    },
+    {
+      "modelo": "D730"
+    },
+    {
+      "modelo": "i750"
+    },
+    {
+      "modelo": "D720"
+    },
+    {
+      "modelo": "E760"
+    },
+    {
+      "modelo": "E750"
+    },
+    {
+      "modelo": "E720"
+    },
+    {
+      "modelo": "E880"
+    },
+    {
+      "modelo": "i300"
+    },
+    {
+      "modelo": "E350"
+    },
+    {
+      "modelo": "E640"
+    },
+    {
+      "modelo": "E620"
+    },
+    {
+      "modelo": "E530"
+    },
+    {
+      "modelo": "E340"
+    },
+    {
+      "modelo": "X810"
+    },
+    {
+      "modelo": "X800"
+    },
+    {
+      "modelo": "C120"
+    },
+    {
+      "modelo": "C230"
+    },
+    {
+      "modelo": "C210"
+    },
+    {
+      "modelo": "X640"
+    },
+    {
+      "modelo": "X480"
+    },
+    {
+      "modelo": "X620"
+    },
+    {
+      "modelo": "X140"
+    },
+    {
+      "modelo": "S410i"
+    },
+    {
+      "modelo": "S342i"
+    },
+    {
+      "modelo": "SCH-B100"
+    },
+    {
+      "modelo": "D500"
+    },
+    {
+      "modelo": "P730"
+    },
+    {
+      "modelo": "P710"
+    },
+    {
+      "modelo": "D428"
+    },
+    {
+      "modelo": "D488"
+    },
+    {
+      "modelo": "E850"
+    },
+    {
+      "modelo": "E630"
+    },
+    {
+      "modelo": "E810"
+    },
+    {
+      "modelo": "E800"
+    },
+    {
+      "modelo": "Z110"
+    },
+    {
+      "modelo": "D710"
+    },
+    {
+      "modelo": "C200"
+    },
+    {
+      "modelo": "i530"
+    },
+    {
+      "modelo": "i505"
+    },
+    {
+      "modelo": "i500"
+    },
+    {
+      "modelo": "i250"
+    },
+    {
+      "modelo": "i700"
+    },
+    {
+      "modelo": "X910"
+    },
+    {
+      "modelo": "X900"
+    },
+    {
+      "modelo": "X610"
+    },
+    {
+      "modelo": "X460"
+    },
+    {
+      "modelo": "X120"
+    },
+    {
+      "modelo": "E330"
+    },
+    {
+      "modelo": "E310"
+    },
+    {
+      "modelo": "E300"
+    },
+    {
+      "modelo": "C110"
+    },
+    {
+      "modelo": "Z107"
+    },
+    {
+      "modelo": "Z105"
+    },
+    {
+      "modelo": "E610"
+    },
+    {
+      "modelo": "E600"
+    },
+    {
+      "modelo": "P510"
+    },
+    {
+      "modelo": "E410"
+    },
+    {
+      "modelo": "X450"
+    },
+    {
+      "modelo": "X430"
+    },
+    {
+      "modelo": "P705"
+    },
+    {
+      "modelo": "D410"
+    },
+    {
+      "modelo": "X600"
+    },
+    {
+      "modelo": "X100"
+    },
+    {
+      "modelo": "E715"
+    },
+    {
+      "modelo": "E700"
+    },
+    {
+      "modelo": "C100"
+    },
+    {
+      "modelo": "D700"
+    },
+    {
+      "modelo": "P500"
+    },
+    {
+      "modelo": "E105"
+    },
+    {
+      "modelo": "E100"
+    },
+    {
+      "modelo": "X410"
+    },
+    {
+      "modelo": "X400"
+    },
+    {
+      "modelo": "S200"
+    },
+    {
+      "modelo": "E400"
+    },
+    {
+      "modelo": "D100"
+    },
+    {
+      "modelo": "Watch Phone"
+    },
+    {
+      "modelo": "V200"
+    },
+    {
+      "modelo": "Z100"
+    },
+    {
+      "modelo": "P100"
+    },
+    {
+      "modelo": "P400"
+    },
+    {
+      "modelo": "T700"
+    },
+    {
+      "modelo": "S500"
+    },
+    {
+      "modelo": "T500"
+    },
+    {
+      "modelo": "S300"
+    },
+    {
+      "modelo": "T400"
+    },
+    {
+      "modelo": "T200"
+    },
+    {
+      "modelo": "V100"
+    },
+    {
+      "modelo": "S100"
+    },
+    {
+      "modelo": "Q300"
+    },
+    {
+      "modelo": "A800"
+    },
+    {
+      "modelo": "A500"
+    },
+    {
+      "modelo": "T100"
+    },
+    {
+      "modelo": "Q200"
+    },
+    {
+      "modelo": "N620"
+    },
+    {
+      "modelo": "N500"
+    },
+    {
+      "modelo": "N400"
+    },
+    {
+      "modelo": "Q105"
+    },
+    {
+      "modelo": "N300"
+    },
+    {
+      "modelo": "A400"
+    },
+    {
+      "modelo": "A300"
+    },
+    {
+      "modelo": "R220"
+    },
+    {
+      "modelo": "R210"
+    },
+    {
+      "modelo": "R200"
+    },
+    {
+      "modelo": "A200"
+    },
+    {
+      "modelo": "Q100"
+    },
+    {
+      "modelo": "N105"
+    },
+    {
+      "modelo": "N100"
+    },
+    {
+      "modelo": "M100"
+    },
+    {
+      "modelo": "A110"
+    },
+    {
+      "modelo": "A100"
+    },
+    {
+      "modelo": "SGH-2400"
+    },
+    {
+      "modelo": "SGH-2200"
+    },
+    {
+      "modelo": "SGH-2100"
+    },
+    {
+      "modelo": "SGH-810"
+    },
+    {
+      "modelo": "SGH-800"
+    },
+    {
+      "modelo": "SGH-600"
+    },
+    {
+      "modelo": "SGH-500"
+    },
+    {
+      "modelo": "SGH-250"
+    },
+    {
+      "modelo": "Galaxy A04 Core"
+    },
+    {
+      "modelo": "Galaxy S21"
+    },
+    {
+      "modelo": "Galaxy A72 5G"
+    },
+    {
+      "modelo": "Galaxy A91"
+    },
+    {
+      "modelo": "Galaxy On5",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Galaxy J5 Prime",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Galaxy S7 mini"
+    },
+    {
+      "modelo": "Galaxy S6 Plus"
+    },
+    {
+      "modelo": "Galaxy Grand 3"
+    },
+    {
+      "modelo": "Galaxy F"
+    },
+    {
+      "modelo": "Galaxy Tab 3 Plus 10.1 P8220"
+    },
+    {
+      "modelo": "Galaxy C10"
+    },
+    {
+      "modelo": "Guru Dual 26"
+    },
+    {
+      "modelo": "C5030"
+    },
+    {
+      "modelo": "M8920"
+    }
+  ]
+}

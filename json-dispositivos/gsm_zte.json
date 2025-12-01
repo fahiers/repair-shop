@@ -1,0 +1,1280 @@
+{
+  "marca": "ZTE",
+  "id_interno": "62",
+  "slug": "zte",
+  "total_esperado": 0,
+  "total_encontrado": 423,
+  "modelos": [
+    {
+      "modelo": "Blade V80 Pro"
+    },
+    {
+      "modelo": "Blade V80 Design"
+    },
+    {
+      "modelo": "nubia RedMagic 11 Pro"
+    },
+    {
+      "modelo": "nubia Z80 Ultra"
+    },
+    {
+      "modelo": "nubia RedMagic 11 Pro+"
+    },
+    {
+      "modelo": "nubia RedMagic 11 Pro (China)"
+    },
+    {
+      "modelo": "nubia Air"
+    },
+    {
+      "modelo": "Blade A36"
+    },
+    {
+      "modelo": "Blade A56"
+    },
+    {
+      "modelo": "nubia RedMagic Astra"
+    },
+    {
+      "modelo": "Blade A76 4G"
+    },
+    {
+      "modelo": "Blade A76"
+    },
+    {
+      "modelo": "nubia RedMagic 10SPro+"
+    },
+    {
+      "modelo": "nubia RedMagic 10S Pro"
+    },
+    {
+      "modelo": "nubia Z70S Ultra"
+    },
+    {
+      "modelo": "nubia Pad Pro"
+    },
+    {
+      "modelo": "nubia RedMagic 10 Air"
+    },
+    {
+      "modelo": "nubia Focus 2 Ultra"
+    },
+    {
+      "modelo": "nubia Focus 2"
+    },
+    {
+      "modelo": "nubia Neo 3 GT"
+    },
+    {
+      "modelo": "nubia Neo 3"
+    },
+    {
+      "modelo": "nubia Flip2"
+    },
+    {
+      "modelo": "Blade V70 Max"
+    },
+    {
+      "modelo": "nubia Music 2"
+    },
+    {
+      "modelo": "Blade V70 Design"
+    },
+    {
+      "modelo": "nubia Z70 Ultra"
+    },
+    {
+      "modelo": "Blade V70"
+    },
+    {
+      "modelo": "nubia RedMagic 10 Pro+"
+    },
+    {
+      "modelo": "nubia RedMagic 10 Pro"
+    },
+    {
+      "modelo": "Blade A55"
+    },
+    {
+      "modelo": "Blade A35"
+    },
+    {
+      "modelo": "Blade A75 4G"
+    },
+    {
+      "modelo": "Blade V60 Design"
+    },
+    {
+      "modelo": "Blade A75"
+    },
+    {
+      "modelo": "nubia RedMagic Nova"
+    },
+    {
+      "modelo": "nubia Z60S Pro"
+    },
+    {
+      "modelo": "nubia Z60 Ultra Leading"
+    },
+    {
+      "modelo": "nubia RedMagic 9S Pro+"
+    },
+    {
+      "modelo": "nubia RedMagic 9S Pro"
+    },
+    {
+      "modelo": "Voyage 3D"
+    },
+    {
+      "modelo": "Axon 60"
+    },
+    {
+      "modelo": "Axon 60 Lite"
+    },
+    {
+      "modelo": "Blade A34"
+    },
+    {
+      "modelo": "Blade A33s"
+    },
+    {
+      "modelo": "Axon 60 Ultra"
+    },
+    {
+      "modelo": "nubia Focus Pro"
+    },
+    {
+      "modelo": "nubia Focus"
+    },
+    {
+      "modelo": "nubia Neo 2"
+    },
+    {
+      "modelo": "nubia Music"
+    },
+    {
+      "modelo": "nubia Pad 3D II"
+    },
+    {
+      "modelo": "nubia Flip"
+    },
+    {
+      "modelo": "nubia Z60 Ultra"
+    },
+    {
+      "modelo": "nubia RedMagic 9 Pro+"
+    },
+    {
+      "modelo": "nubia RedMagic 9 Pro"
+    },
+    {
+      "modelo": "Blade V50 Design 4G"
+    },
+    {
+      "modelo": "Blade V50 Vita"
+    },
+    {
+      "modelo": "Blade V50"
+    },
+    {
+      "modelo": "Blade V50 Design"
+    },
+    {
+      "modelo": "Blade A54"
+    },
+    {
+      "modelo": "Blade A73"
+    },
+    {
+      "modelo": "Blade A73 5G"
+    },
+    {
+      "modelo": "nubia Neo"
+    },
+    {
+      "modelo": "nubia Z50S Pro"
+    },
+    {
+      "modelo": "nubia RedMagic Tablet"
+    },
+    {
+      "modelo": "nubia RedMagic 8S Pro+"
+    },
+    {
+      "modelo": "nubia RedMagic 8S Pro"
+    },
+    {
+      "modelo": "Blade A53 Pro"
+    },
+    {
+      "modelo": "Blade A53"
+    },
+    {
+      "modelo": "Blade A72s"
+    },
+    {
+      "modelo": "V70"
+    },
+    {
+      "modelo": "Axon 50 Ultra"
+    },
+    {
+      "modelo": "Axon Pad"
+    },
+    {
+      "modelo": "nubia Z50 Ultra"
+    },
+    {
+      "modelo": "nubia Pad 3D"
+    },
+    {
+      "modelo": "Blade V40"
+    },
+    {
+      "modelo": "Blade V40 Design"
+    },
+    {
+      "modelo": "nubia RedMagic 8 Pro+"
+    },
+    {
+      "modelo": "nubia RedMagic 8 Pro"
+    },
+    {
+      "modelo": "nubia Z50"
+    },
+    {
+      "modelo": "Blade V41 Vita"
+    },
+    {
+      "modelo": "Voyage 40 Pro+"
+    },
+    {
+      "modelo": "Axon 40 Ultra Space Edition"
+    },
+    {
+      "modelo": "Axon 40 SE"
+    },
+    {
+      "modelo": "Blade V40s"
+    },
+    {
+      "modelo": "Axon 30S"
+    },
+    {
+      "modelo": "nubia Z40S Pro"
+    },
+    {
+      "modelo": "nubia RedMagic 7S Pro"
+    },
+    {
+      "modelo": "nubia RedMagic 7S"
+    },
+    {
+      "modelo": "Blade V40 Pro"
+    },
+    {
+      "modelo": "Blade A72 5G"
+    },
+    {
+      "modelo": "Blade A72"
+    },
+    {
+      "modelo": "Blade A52 Lite"
+    },
+    {
+      "modelo": "Blade A52"
+    },
+    {
+      "modelo": "Axon 40 Pro"
+    },
+    {
+      "modelo": "A41 Ultra"
+    },
+    {
+      "modelo": "Axon 40 Ultra"
+    },
+    {
+      "modelo": "nubia Z40 Pro"
+    },
+    {
+      "modelo": "Blade V40 Vita"
+    },
+    {
+      "modelo": "nubia RedMagic 7 Pro"
+    },
+    {
+      "modelo": "nubia RedMagic 7"
+    },
+    {
+      "modelo": "Blade A3 Plus"
+    },
+    {
+      "modelo": "Blade A7P"
+    },
+    {
+      "modelo": "Voyage 20 Pro"
+    },
+    {
+      "modelo": "Avid 589"
+    },
+    {
+      "modelo": "Blade A71"
+    },
+    {
+      "modelo": "Blade A31 Plus"
+    },
+    {
+      "modelo": "Blade A31"
+    },
+    {
+      "modelo": "Blade A31 Lite"
+    },
+    {
+      "modelo": "Blade A51"
+    },
+    {
+      "modelo": "Blade L9"
+    },
+    {
+      "modelo": "nubia RedMagic 6s Pro"
+    },
+    {
+      "modelo": "nubia RedMagic 6s"
+    },
+    {
+      "modelo": "Axon 30 5G"
+    },
+    {
+      "modelo": "Blade V30 Vita"
+    },
+    {
+      "modelo": "Blade V30"
+    },
+    {
+      "modelo": "nubia RedMagic 6R"
+    },
+    {
+      "modelo": "nubia Z30 Pro"
+    },
+    {
+      "modelo": "Blade 11 Prime"
+    },
+    {
+      "modelo": "Axon 30 Ultra 5G"
+    },
+    {
+      "modelo": "Axon 30 Pro 5G"
+    },
+    {
+      "modelo": "S30 Pro"
+    },
+    {
+      "modelo": "S30"
+    },
+    {
+      "modelo": "S30 SE"
+    },
+    {
+      "modelo": "nubia RedMagic 6 Pro"
+    },
+    {
+      "modelo": "nubia RedMagic 6"
+    },
+    {
+      "modelo": "Watch GT"
+    },
+    {
+      "modelo": "RedMagic Watch"
+    },
+    {
+      "modelo": "Link II"
+    },
+    {
+      "modelo": "Blade X1 5G"
+    },
+    {
+      "modelo": "Blade 20 Pro 5G"
+    },
+    {
+      "modelo": "Cymbal U"
+    },
+    {
+      "modelo": "Blade V2020 5G"
+    },
+    {
+      "modelo": "Watch Live"
+    },
+    {
+      "modelo": "Blade A7s 2020"
+    },
+    {
+      "modelo": "Blade 20 5G"
+    },
+    {
+      "modelo": "Blade A3Y"
+    },
+    {
+      "modelo": "Blade A5 2020"
+    },
+    {
+      "modelo": "Axon 20 5G Extreme"
+    },
+    {
+      "modelo": "Axon 20 5G"
+    },
+    {
+      "modelo": "Axon 20 4G"
+    },
+    {
+      "modelo": "Quest 5"
+    },
+    {
+      "modelo": "Gabb Z2"
+    },
+    {
+      "modelo": "nubia Watch"
+    },
+    {
+      "modelo": "nubia RedMagic 5S"
+    },
+    {
+      "modelo": "Avid 579"
+    },
+    {
+      "modelo": "nubia RedMagic 5G Lite"
+    },
+    {
+      "modelo": "Axon 11 SE 5G"
+    },
+    {
+      "modelo": "Blade A3 Joy"
+    },
+    {
+      "modelo": "Blade A3 Prime"
+    },
+    {
+      "modelo": "nubia Play"
+    },
+    {
+      "modelo": "Axon 11 4G"
+    },
+    {
+      "modelo": "Axon 11 5G"
+    },
+    {
+      "modelo": "nubia RedMagic 5G"
+    },
+    {
+      "modelo": "Axon 10s Pro 5G"
+    },
+    {
+      "modelo": "Cymbal 2"
+    },
+    {
+      "modelo": "Blade Max View"
+    },
+    {
+      "modelo": "Blade A7 Prime"
+    },
+    {
+      "modelo": "Blade 10 Prime"
+    },
+    {
+      "modelo": "Blade Vantage 2"
+    },
+    {
+      "modelo": "Blade 20"
+    },
+    {
+      "modelo": "nubia RedMagic 3S"
+    },
+    {
+      "modelo": "nubia Z20"
+    },
+    {
+      "modelo": "Blade A5",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Blade A3",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Blade L8"
+    },
+    {
+      "modelo": "nubia RedMagic 3"
+    },
+    {
+      "modelo": "Avid 559"
+    },
+    {
+      "modelo": "nubia Alpha"
+    },
+    {
+      "modelo": "Axon 10 Pro 5G"
+    },
+    {
+      "modelo": "Axon 10 Pro"
+    },
+    {
+      "modelo": "Blade V10"
+    },
+    {
+      "modelo": "Blade V10 Vita"
+    },
+    {
+      "modelo": "nubia RedMagic Mars"
+    },
+    {
+      "modelo": "nubia X"
+    },
+    {
+      "modelo": "nubia Z18"
+    },
+    {
+      "modelo": "Axon 9 Pro"
+    },
+    {
+      "modelo": "nubia RedMagic"
+    },
+    {
+      "modelo": "Blade A7 Vita"
+    },
+    {
+      "modelo": "Blade A7"
+    },
+    {
+      "modelo": "nubia Z18 mini"
+    },
+    {
+      "modelo": "nubia V18"
+    },
+    {
+      "modelo": "nubia N3"
+    },
+    {
+      "modelo": "Blade V9 Vita"
+    },
+    {
+      "modelo": "Blade V9"
+    },
+    {
+      "modelo": "Tempo Go"
+    },
+    {
+      "modelo": "Blade A3"
+    },
+    {
+      "modelo": "Blade A6"
+    },
+    {
+      "modelo": "Maven 2"
+    },
+    {
+      "modelo": "Blade X"
+    },
+    {
+      "modelo": "Axon M"
+    },
+    {
+      "modelo": "nubia Z17s"
+    },
+    {
+      "modelo": "nubia Z17 miniS"
+    },
+    {
+      "modelo": "nubia Z17 lite"
+    },
+    {
+      "modelo": "Blade Z Max"
+    },
+    {
+      "modelo": "Blade Force"
+    },
+    {
+      "modelo": "Tempo X"
+    },
+    {
+      "modelo": "Blade A601"
+    },
+    {
+      "modelo": "Grand X View 2"
+    },
+    {
+      "modelo": "Blade V7 Plus"
+    },
+    {
+      "modelo": "Quartz"
+    },
+    {
+      "modelo": "nubia N2"
+    },
+    {
+      "modelo": "nubia M2"
+    },
+    {
+      "modelo": "nubia M2 lite"
+    },
+    {
+      "modelo": "nubia M2 Play"
+    },
+    {
+      "modelo": "nubia Z17"
+    },
+    {
+      "modelo": "Axon 7s"
+    },
+    {
+      "modelo": "Max XL"
+    },
+    {
+      "modelo": "nubia Z17 mini"
+    },
+    {
+      "modelo": "Blade A520"
+    },
+    {
+      "modelo": "nubia N1 lite"
+    },
+    {
+      "modelo": "Blade V8 Mini"
+    },
+    {
+      "modelo": "Blade V8 Lite"
+    },
+    {
+      "modelo": "Blade A2 Plus"
+    },
+    {
+      "modelo": "Hawkeye"
+    },
+    {
+      "modelo": "Blade V8 Pro"
+    },
+    {
+      "modelo": "Blade V8"
+    },
+    {
+      "modelo": "Axon 7 Max"
+    },
+    {
+      "modelo": "Grand X4"
+    },
+    {
+      "modelo": "Blade V7 Max"
+    },
+    {
+      "modelo": "nubia Z11 mini S"
+    },
+    {
+      "modelo": "Axon 7 mini"
+    },
+    {
+      "modelo": "Warp 7"
+    },
+    {
+      "modelo": "Zmax Pro"
+    },
+    {
+      "modelo": "nubia N1"
+    },
+    {
+      "modelo": "nubia Z11 Max"
+    },
+    {
+      "modelo": "Axon 7"
+    },
+    {
+      "modelo": "nubia Z11"
+    },
+    {
+      "modelo": "Blade L110 (A110)"
+    },
+    {
+      "modelo": "Grand X Max 2"
+    },
+    {
+      "modelo": "nubia Z11 mini"
+    },
+    {
+      "modelo": "Blade L5 Plus"
+    },
+    {
+      "modelo": "Blade V Plus"
+    },
+    {
+      "modelo": "Blade A610"
+    },
+    {
+      "modelo": "Blade A512"
+    },
+    {
+      "modelo": "Blade A452"
+    },
+    {
+      "modelo": "Blade V7"
+    },
+    {
+      "modelo": "Blade A910"
+    },
+    {
+      "modelo": "Blade A2"
+    },
+    {
+      "modelo": "Blade V7 Lite"
+    },
+    {
+      "modelo": "Axon Max"
+    },
+    {
+      "modelo": "nubia Prague S"
+    },
+    {
+      "modelo": "Grand X 3"
+    },
+    {
+      "modelo": "Avid Plus"
+    },
+    {
+      "modelo": "Blade X9"
+    },
+    {
+      "modelo": "Blade X5"
+    },
+    {
+      "modelo": "Blade X3"
+    },
+    {
+      "modelo": "Axon Watch"
+    },
+    {
+      "modelo": "Axon"
+    },
+    {
+      "modelo": "Blade S7"
+    },
+    {
+      "modelo": "Axon mini"
+    },
+    {
+      "modelo": "Zmax 2"
+    },
+    {
+      "modelo": "Axon Elite"
+    },
+    {
+      "modelo": "nubia My Prague"
+    },
+    {
+      "modelo": "Axon Lux"
+    },
+    {
+      "modelo": "Boost Max+"
+    },
+    {
+      "modelo": "Blade A460"
+    },
+    {
+      "modelo": "Blade D6"
+    },
+    {
+      "modelo": "Axon Pro"
+    },
+    {
+      "modelo": "Blade A410"
+    },
+    {
+      "modelo": "Obsidian"
+    },
+    {
+      "modelo": "Grand X2"
+    },
+    {
+      "modelo": "Sonata 2"
+    },
+    {
+      "modelo": "Blade Apex 3"
+    },
+    {
+      "modelo": "Maven"
+    },
+    {
+      "modelo": "Blade Q Pro"
+    },
+    {
+      "modelo": "Blade Qlux 4G"
+    },
+    {
+      "modelo": "nubia Z9"
+    },
+    {
+      "modelo": "Blade S6 Plus"
+    },
+    {
+      "modelo": "nubia Z9 Max"
+    },
+    {
+      "modelo": "nubia Z9 mini"
+    },
+    {
+      "modelo": "Open L"
+    },
+    {
+      "modelo": "Grand S3"
+    },
+    {
+      "modelo": "Blade L3 Plus"
+    },
+    {
+      "modelo": "Blade L3"
+    },
+    {
+      "modelo": "Blade G Lux"
+    },
+    {
+      "modelo": "Blade G"
+    },
+    {
+      "modelo": "V5 Lux"
+    },
+    {
+      "modelo": "Blade S6"
+    },
+    {
+      "modelo": "Imperial II"
+    },
+    {
+      "modelo": "Grand X Max+"
+    },
+    {
+      "modelo": "Star 2"
+    },
+    {
+      "modelo": "Grand X Plus Z826"
+    },
+    {
+      "modelo": "Speed"
+    },
+    {
+      "modelo": "Grand S II"
+    },
+    {
+      "modelo": "Grand S Pro"
+    },
+    {
+      "modelo": "Zinger"
+    },
+    {
+      "modelo": "Grand Xmax"
+    },
+    {
+      "modelo": "Zmax"
+    },
+    {
+      "modelo": "Blade Vec 4G"
+    },
+    {
+      "modelo": "Blade Vec 3G"
+    },
+    {
+      "modelo": "Kis 3 Max"
+    },
+    {
+      "modelo": "nubia Z5S mini NX405H"
+    },
+    {
+      "modelo": "nubia Z7"
+    },
+    {
+      "modelo": "nubia Z7 Max"
+    },
+    {
+      "modelo": "nubia Z7 mini"
+    },
+    {
+      "modelo": "Blade L2"
+    },
+    {
+      "modelo": "Kis 3"
+    },
+    {
+      "modelo": "Blade G2"
+    },
+    {
+      "modelo": "Redbull V5 V9180"
+    },
+    {
+      "modelo": "Star 1"
+    },
+    {
+      "modelo": "nubia X6"
+    },
+    {
+      "modelo": "Grand Memo II LTE"
+    },
+    {
+      "modelo": "Open C"
+    },
+    {
+      "modelo": "Open II"
+    },
+    {
+      "modelo": "Iconic Phablet"
+    },
+    {
+      "modelo": "Sonata 4G"
+    },
+    {
+      "modelo": "Grand S II S291"
+    },
+    {
+      "modelo": "nubia Z5S"
+    },
+    {
+      "modelo": "nubia Z5S mini NX403A"
+    },
+    {
+      "modelo": "Grand S Flex"
+    },
+    {
+      "modelo": "Blade Q Maxi"
+    },
+    {
+      "modelo": "Blade Q"
+    },
+    {
+      "modelo": "Blade Q Mini"
+    },
+    {
+      "modelo": "Warp 4G"
+    },
+    {
+      "modelo": "Blade V"
+    },
+    {
+      "modelo": "Blade G V880G"
+    },
+    {
+      "modelo": "Reef"
+    },
+    {
+      "modelo": "Imperial"
+    },
+    {
+      "modelo": "Vital N9810"
+    },
+    {
+      "modelo": "Grand X Pro"
+    },
+    {
+      "modelo": "Grand X2 In"
+    },
+    {
+      "modelo": "Grand X Quad V987"
+    },
+    {
+      "modelo": "Blade III Pro"
+    },
+    {
+      "modelo": "Geek V975"
+    },
+    {
+      "modelo": "Grand Memo V9815"
+    },
+    {
+      "modelo": "Open"
+    },
+    {
+      "modelo": "Blade C V807"
+    },
+    {
+      "modelo": "Director"
+    },
+    {
+      "modelo": "V81"
+    },
+    {
+      "modelo": "Grand S"
+    },
+    {
+      "modelo": "Avid 4G"
+    },
+    {
+      "modelo": "V889M"
+    },
+    {
+      "modelo": "V887"
+    },
+    {
+      "modelo": "Kis III V790"
+    },
+    {
+      "modelo": "Groove X501"
+    },
+    {
+      "modelo": "nubia Z5"
+    },
+    {
+      "modelo": "Flash"
+    },
+    {
+      "modelo": "Anthem 4G"
+    },
+    {
+      "modelo": "Warp Sequent"
+    },
+    {
+      "modelo": "Grand Era U895"
+    },
+    {
+      "modelo": "Blade III"
+    },
+    {
+      "modelo": "Grand X IN"
+    },
+    {
+      "modelo": "N880E"
+    },
+    {
+      "modelo": "Grand X LTE T82"
+    },
+    {
+      "modelo": "Grand X V970"
+    },
+    {
+      "modelo": "U880E"
+    },
+    {
+      "modelo": "Score M"
+    },
+    {
+      "modelo": "Light Tab 300"
+    },
+    {
+      "modelo": "V96"
+    },
+    {
+      "modelo": "PF 100"
+    },
+    {
+      "modelo": "T98"
+    },
+    {
+      "modelo": "Light Tab 3 V9S"
+    },
+    {
+      "modelo": "Era"
+    },
+    {
+      "modelo": "PF112 HD"
+    },
+    {
+      "modelo": "Skate Acqua"
+    },
+    {
+      "modelo": "Orbit"
+    },
+    {
+      "modelo": "Kis V788"
+    },
+    {
+      "modelo": "V880E"
+    },
+    {
+      "modelo": "Nova 3.5"
+    },
+    {
+      "modelo": "Nova 4 V8000"
+    },
+    {
+      "modelo": "Nova Messenger"
+    },
+    {
+      "modelo": "Style Q"
+    },
+    {
+      "modelo": "Style Messanger"
+    },
+    {
+      "modelo": "V875"
+    },
+    {
+      "modelo": "Blade II V880+"
+    },
+    {
+      "modelo": "N910"
+    },
+    {
+      "modelo": "PF200"
+    },
+    {
+      "modelo": "Optik"
+    },
+    {
+      "modelo": "Light Tab 2 V9A"
+    },
+    {
+      "modelo": "Light Tab V9C"
+    },
+    {
+      "modelo": "FTV Phone"
+    },
+    {
+      "modelo": "Chorus"
+    },
+    {
+      "modelo": "Memo"
+    },
+    {
+      "modelo": "Tania"
+    },
+    {
+      "modelo": "Warp"
+    },
+    {
+      "modelo": "Score"
+    },
+    {
+      "modelo": "Avail"
+    },
+    {
+      "modelo": "V9+"
+    },
+    {
+      "modelo": "V9"
+    },
+    {
+      "modelo": "N721"
+    },
+    {
+      "modelo": "Skate"
+    },
+    {
+      "modelo": "V821"
+    },
+    {
+      "modelo": "Amigo"
+    },
+    {
+      "modelo": "Racer II"
+    },
+    {
+      "modelo": "U900"
+    },
+    {
+      "modelo": "Libra"
+    },
+    {
+      "modelo": "Rio"
+    },
+    {
+      "modelo": "Blade"
+    },
+    {
+      "modelo": "Sage"
+    },
+    {
+      "modelo": "X990D"
+    },
+    {
+      "modelo": "N290"
+    },
+    {
+      "modelo": "N280"
+    },
+    {
+      "modelo": "R230"
+    },
+    {
+      "modelo": "R228 Dual SIM"
+    },
+    {
+      "modelo": "R228"
+    },
+    {
+      "modelo": "R221"
+    },
+    {
+      "modelo": "R220"
+    },
+    {
+      "modelo": "S213"
+    },
+    {
+      "modelo": "Salute F350"
+    },
+    {
+      "modelo": "F107"
+    },
+    {
+      "modelo": "E N72"
+    },
+    {
+      "modelo": "Racer"
+    },
+    {
+      "modelo": "F951"
+    },
+    {
+      "modelo": "X990"
+    },
+    {
+      "modelo": "Bingo"
+    },
+    {
+      "modelo": "X760"
+    },
+    {
+      "modelo": "E811"
+    },
+    {
+      "modelo": "Raise"
+    },
+    {
+      "modelo": "Xiang"
+    },
+    {
+      "modelo": "S302"
+    },
+    {
+      "modelo": "A261"
+    },
+    {
+      "modelo": "F233"
+    },
+    {
+      "modelo": "F912"
+    },
+    {
+      "modelo": "F952"
+    },
+    {
+      "modelo": "F928"
+    },
+    {
+      "modelo": "F870"
+    },
+    {
+      "modelo": "F600"
+    },
+    {
+      "modelo": "F103"
+    },
+    {
+      "modelo": "F101"
+    },
+    {
+      "modelo": "F100"
+    },
+    {
+      "modelo": "Coral200 Sollar"
+    },
+    {
+      "modelo": "Blade V20"
+    },
+    {
+      "modelo": "nubia X 5G"
+    }
+  ]
+}

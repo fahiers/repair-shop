@@ -1,0 +1,39 @@
+{
+  "marca": "BOSCH",
+  "id_interno": "10",
+  "slug": "bosch",
+  "total_esperado": 0,
+  "total_encontrado": 10,
+  "modelos": [
+    {
+      "modelo": "909 Dual S"
+    },
+    {
+      "modelo": "909 Dual"
+    },
+    {
+      "modelo": "Com 908"
+    },
+    {
+      "modelo": "Com 509"
+    },
+    {
+      "modelo": "World 718"
+    },
+    {
+      "modelo": "Com 738"
+    },
+    {
+      "modelo": "Com 906"
+    },
+    {
+      "modelo": "Com 608"
+    },
+    {
+      "modelo": "Com 607"
+    },
+    {
+      "modelo": "Com 207"
+    }
+  ]
+}

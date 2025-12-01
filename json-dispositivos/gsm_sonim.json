@@ -1,0 +1,81 @@
+{
+  "marca": "SONIM",
+  "id_interno": "54",
+  "slug": "sonim",
+  "total_esperado": 0,
+  "total_encontrado": 24,
+  "modelos": [
+    {
+      "modelo": "XP Pro E"
+    },
+    {
+      "modelo": "XP Pro Thermal"
+    },
+    {
+      "modelo": "XP400"
+    },
+    {
+      "modelo": "XP Pro"
+    },
+    {
+      "modelo": "XP10"
+    },
+    {
+      "modelo": "XP100"
+    },
+    {
+      "modelo": "XP5plus"
+    },
+    {
+      "modelo": "XP3plus"
+    },
+    {
+      "modelo": "XP3"
+    },
+    {
+      "modelo": "XP5s"
+    },
+    {
+      "modelo": "XP8"
+    },
+    {
+      "modelo": "XP7"
+    },
+    {
+      "modelo": "XP6"
+    },
+    {
+      "modelo": "XP3400 Armor"
+    },
+    {
+      "modelo": "XP5300 Force 3G"
+    },
+    {
+      "modelo": "XP3340 Sentinel"
+    },
+    {
+      "modelo": "XP3300 Force"
+    },
+    {
+      "modelo": "XP1300 Core"
+    },
+    {
+      "modelo": "XP3 Sentinel"
+    },
+    {
+      "modelo": "XP2.10 Spirit"
+    },
+    {
+      "modelo": "XP3.20 Quest Pro"
+    },
+    {
+      "modelo": "XP3.20 Quest"
+    },
+    {
+      "modelo": "XP3 Enduro"
+    },
+    {
+      "modelo": "XP1"
+    }
+  ]
+}

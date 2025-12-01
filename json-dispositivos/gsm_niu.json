@@ -1,0 +1,99 @@
+{
+  "marca": "NIU",
+  "id_interno": "79",
+  "slug": "niu",
+  "total_esperado": 0,
+  "total_encontrado": 30,
+  "modelos": [
+    {
+      "modelo": "Andy C5.5E2I"
+    },
+    {
+      "modelo": "Andy 3.5E2I"
+    },
+    {
+      "modelo": "Andy 4E2I"
+    },
+    {
+      "modelo": "Andy 5EI"
+    },
+    {
+      "modelo": "Andy 5T"
+    },
+    {
+      "modelo": "C21A"
+    },
+    {
+      "modelo": "F10"
+    },
+    {
+      "modelo": "Z10"
+    },
+    {
+      "modelo": "Tek 5D"
+    },
+    {
+      "modelo": "Tek 4D2"
+    },
+    {
+      "modelo": "Niutek 3.5D2"
+    },
+    {
+      "modelo": "GO 21"
+    },
+    {
+      "modelo": "Niutek 4.5D"
+    },
+    {
+      "modelo": "Niutek 4.0D"
+    },
+    {
+      "modelo": "Niutek 3.5D"
+    },
+    {
+      "modelo": "GO 20"
+    },
+    {
+      "modelo": "Niutek 3.5B"
+    },
+    {
+      "modelo": "LIV 10"
+    },
+    {
+      "modelo": "GO 50"
+    },
+    {
+      "modelo": "Niutek 3G 3.5 N209"
+    },
+    {
+      "modelo": "Niutek 3G 4.0 N309"
+    },
+    {
+      "modelo": "Pana 3G TV N206"
+    },
+    {
+      "modelo": "GO 80"
+    },
+    {
+      "modelo": "Domo N102"
+    },
+    {
+      "modelo": "Bingo N103"
+    },
+    {
+      "modelo": "Lotto N104"
+    },
+    {
+      "modelo": "Pana N105"
+    },
+    {
+      "modelo": "Pana TV N106"
+    },
+    {
+      "modelo": "NiutekQ N108"
+    },
+    {
+      "modelo": "Niutek N109"
+    }
+  ]
+}

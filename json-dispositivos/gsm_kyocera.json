@@ -1,0 +1,93 @@
+{
+  "marca": "KYOCERA",
+  "id_interno": "17",
+  "slug": "kyocera",
+  "total_esperado": 0,
+  "total_encontrado": 28,
+  "modelos": [
+    {
+      "modelo": "DuraForce Pro 3"
+    },
+    {
+      "modelo": "DuraSport UW"
+    },
+    {
+      "modelo": "DuraSlate"
+    },
+    {
+      "modelo": "DuraForce Ultra"
+    },
+    {
+      "modelo": "DuraForce Pro 2"
+    },
+    {
+      "modelo": "DuraForce Pro"
+    },
+    {
+      "modelo": "DuraForce XD"
+    },
+    {
+      "modelo": "DuraForce"
+    },
+    {
+      "modelo": "Hydro Life"
+    },
+    {
+      "modelo": "Brigadier"
+    },
+    {
+      "modelo": "Hydro Elite"
+    },
+    {
+      "modelo": "Hydro Xtrm"
+    },
+    {
+      "modelo": "Torque E6710"
+    },
+    {
+      "modelo": "Hydro C5170"
+    },
+    {
+      "modelo": "Rise C5155"
+    },
+    {
+      "modelo": "Milano C5121"
+    },
+    {
+      "modelo": "Milano C5120"
+    },
+    {
+      "modelo": "Presto S1350"
+    },
+    {
+      "modelo": "Brio"
+    },
+    {
+      "modelo": "Echo"
+    },
+    {
+      "modelo": "DuraCore E4210"
+    },
+    {
+      "modelo": "DuraMax"
+    },
+    {
+      "modelo": "E4600"
+    },
+    {
+      "modelo": "Solo E4000"
+    },
+    {
+      "modelo": "E3500"
+    },
+    {
+      "modelo": "E2500"
+    },
+    {
+      "modelo": "S1600"
+    },
+    {
+      "modelo": "TG 200"
+    }
+  ]
+}

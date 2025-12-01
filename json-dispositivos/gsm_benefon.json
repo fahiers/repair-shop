@@ -1,0 +1,36 @@
+{
+  "marca": "BENEFON",
+  "id_interno": "15",
+  "slug": "benefon",
+  "total_esperado": 0,
+  "total_encontrado": 9,
+  "modelos": [
+    {
+      "modelo": "TWIG Discovery Pro"
+    },
+    {
+      "modelo": "TWIG Discovery"
+    },
+    {
+      "modelo": "Q"
+    },
+    {
+      "modelo": "Track"
+    },
+    {
+      "modelo": "Twin+"
+    },
+    {
+      "modelo": "Twin"
+    },
+    {
+      "modelo": "Esc!"
+    },
+    {
+      "modelo": "iO"
+    },
+    {
+      "modelo": "Vega"
+    }
+  ]
+}

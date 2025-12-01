@@ -1,0 +1,39 @@
+{
+  "marca": "PARLA",
+  "id_interno": "81",
+  "slug": "parla",
+  "total_esperado": 0,
+  "total_encontrado": 10,
+  "modelos": [
+    {
+      "modelo": "Minu P124"
+    },
+    {
+      "modelo": "Sonic 3.5S"
+    },
+    {
+      "modelo": "Minu P123"
+    },
+    {
+      "modelo": "Sonic 3.5"
+    },
+    {
+      "modelo": "Zum Bianco"
+    },
+    {
+      "modelo": "Minu"
+    },
+    {
+      "modelo": "Gala"
+    },
+    {
+      "modelo": "Spriz"
+    },
+    {
+      "modelo": "Mist"
+    },
+    {
+      "modelo": "Zum"
+    }
+  ]
+}

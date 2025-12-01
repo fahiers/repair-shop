@@ -1,0 +1,1570 @@
+{
+  "marca": "HUAWEI",
+  "id_interno": "58",
+  "slug": "huawei",
+  "total_esperado": 0,
+  "total_encontrado": 507,
+  "modelos": [
+    {
+      "modelo": "Mate X7"
+    },
+    {
+      "modelo": "Mate 80 RS Ultimate"
+    },
+    {
+      "modelo": "Mate 80 Pro Max"
+    },
+    {
+      "modelo": "Mate 80 Pro"
+    },
+    {
+      "modelo": "Mate 80"
+    },
+    {
+      "modelo": "MatePad Edge"
+    },
+    {
+      "modelo": "Mate 70 Air"
+    },
+    {
+      "modelo": "nova 14 Lite"
+    },
+    {
+      "modelo": "nova Flip S"
+    },
+    {
+      "modelo": "nova 14i"
+    },
+    {
+      "modelo": "Watch Ultimate 2"
+    },
+    {
+      "modelo": "Watch GT 6 Pro"
+    },
+    {
+      "modelo": "Watch GT 6"
+    },
+    {
+      "modelo": "MatePad 12 X",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Mate XTs Ultimate"
+    },
+    {
+      "modelo": "MatePad Mini"
+    },
+    {
+      "modelo": "MatePad Air",
+      "ano": "2025"
+    },
+    {
+      "modelo": "MatePad 11.5 S",
+      "ano": "2025"
+    },
+    {
+      "modelo": "MatePad 11.5",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Pura 80 Ultra"
+    },
+    {
+      "modelo": "Pura 80 Pro+"
+    },
+    {
+      "modelo": "Pura 80 Pro"
+    },
+    {
+      "modelo": "Pura 80"
+    },
+    {
+      "modelo": "Nova Y73"
+    },
+    {
+      "modelo": "nova 14 Ultra"
+    },
+    {
+      "modelo": "nova 14 Pro"
+    },
+    {
+      "modelo": "nova 14"
+    },
+    {
+      "modelo": "Watch 5"
+    },
+    {
+      "modelo": "Watch Fit 4 Pro"
+    },
+    {
+      "modelo": "Watch Fit 4"
+    },
+    {
+      "modelo": "MatePad Pro 12.2",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Nova Y72S"
+    },
+    {
+      "modelo": "Nova Y63"
+    },
+    {
+      "modelo": "Enjoy 80"
+    },
+    {
+      "modelo": "Pura X"
+    },
+    {
+      "modelo": "Mate XT Ultimate"
+    },
+    {
+      "modelo": "nova 13i"
+    },
+    {
+      "modelo": "Enjoy 70X Energy"
+    },
+    {
+      "modelo": "Enjoy 70X"
+    },
+    {
+      "modelo": "Mate 70 RS Ultimate"
+    },
+    {
+      "modelo": "Mate 70 Pro+"
+    },
+    {
+      "modelo": "Mate 70 Pro"
+    },
+    {
+      "modelo": "Mate 70"
+    },
+    {
+      "modelo": "Mate X6"
+    },
+    {
+      "modelo": "MatePad Pro 13.2",
+      "ano": "2025"
+    },
+    {
+      "modelo": "nova 13 Pro"
+    },
+    {
+      "modelo": "nova 13"
+    },
+    {
+      "modelo": "Watch GT 5 Pro"
+    },
+    {
+      "modelo": "Watch GT 5"
+    },
+    {
+      "modelo": "Watch D2"
+    },
+    {
+      "modelo": "MatePad 12 X"
+    },
+    {
+      "modelo": "MatePad Air",
+      "ano": "2024"
+    },
+    {
+      "modelo": "MatePad Pro 12.2",
+      "ano": "2024"
+    },
+    {
+      "modelo": "nova Flip"
+    },
+    {
+      "modelo": "MatePad SE 11"
+    },
+    {
+      "modelo": "MatePad 11.5 S"
+    },
+    {
+      "modelo": "Pura 70 Ultra"
+    },
+    {
+      "modelo": "Pura 70 Pro+"
+    },
+    {
+      "modelo": "Pura 70 Pro"
+    },
+    {
+      "modelo": "Pura 70"
+    },
+    {
+      "modelo": "nova 12i"
+    },
+    {
+      "modelo": "nova 12 SE"
+    },
+    {
+      "modelo": "nova 12s"
+    },
+    {
+      "modelo": "Pocket 2"
+    },
+    {
+      "modelo": "Enjoy 70z"
+    },
+    {
+      "modelo": "nova Y72"
+    },
+    {
+      "modelo": "nova 12 Ultra"
+    },
+    {
+      "modelo": "nova 12 Pro"
+    },
+    {
+      "modelo": "nova 12"
+    },
+    {
+      "modelo": "nova 12 Lite"
+    },
+    {
+      "modelo": "Enjoy 70"
+    },
+    {
+      "modelo": "MatePad Pro 11",
+      "ano": "2024"
+    },
+    {
+      "modelo": "nova 11 SE"
+    },
+    {
+      "modelo": "Watch Ultimate Design"
+    },
+    {
+      "modelo": "MatePad Pro 13.2"
+    },
+    {
+      "modelo": "Mate 60 RS Ultimate"
+    },
+    {
+      "modelo": "Watch GT 4"
+    },
+    {
+      "modelo": "Mate 60 Pro+"
+    },
+    {
+      "modelo": "Mate X5"
+    },
+    {
+      "modelo": "Mate 60 Pro"
+    },
+    {
+      "modelo": "Mate 60"
+    },
+    {
+      "modelo": "MatePad 11.5"
+    },
+    {
+      "modelo": "MatePad Air"
+    },
+    {
+      "modelo": "nova Y91"
+    },
+    {
+      "modelo": "Watch 4 Pro"
+    },
+    {
+      "modelo": "Watch 4"
+    },
+    {
+      "modelo": "nova 11i"
+    },
+    {
+      "modelo": "nova Y71"
+    },
+    {
+      "modelo": "Enjoy 60X"
+    },
+    {
+      "modelo": "nova 11 Ultra"
+    },
+    {
+      "modelo": "nova 11 Pro"
+    },
+    {
+      "modelo": "nova 11"
+    },
+    {
+      "modelo": "Mate X3"
+    },
+    {
+      "modelo": "P60 Pro"
+    },
+    {
+      "modelo": "P60"
+    },
+    {
+      "modelo": "P60 Art"
+    },
+    {
+      "modelo": "Enjoy 60 Pro"
+    },
+    {
+      "modelo": "Enjoy 60"
+    },
+    {
+      "modelo": "Watch Ultimate"
+    },
+    {
+      "modelo": "MatePad 11",
+      "ano": "2023"
+    },
+    {
+      "modelo": "nova 10 Youth"
+    },
+    {
+      "modelo": "Watch Buds"
+    },
+    {
+      "modelo": "Enjoy 50z"
+    },
+    {
+      "modelo": "Watch GT 3 SE"
+    },
+    {
+      "modelo": "Pocket S"
+    },
+    {
+      "modelo": "Watch GT Cyber"
+    },
+    {
+      "modelo": "nova Y61"
+    },
+    {
+      "modelo": "MatePad C5e"
+    },
+    {
+      "modelo": "nova 10 SE"
+    },
+    {
+      "modelo": "Mate 50 RS Porsche Design"
+    },
+    {
+      "modelo": "Mate 50 Pro"
+    },
+    {
+      "modelo": "Mate 50E"
+    },
+    {
+      "modelo": "Mate 50"
+    },
+    {
+      "modelo": "nova 10z"
+    },
+    {
+      "modelo": "MatePad Pro 11",
+      "ano": "2022"
+    },
+    {
+      "modelo": "nova 10 Pro"
+    },
+    {
+      "modelo": "nova 10"
+    },
+    {
+      "modelo": "nova Y90"
+    },
+    {
+      "modelo": "MatePad 10.4",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Mate Xs 2"
+    },
+    {
+      "modelo": "Watch GT 3 Porsche Design"
+    },
+    {
+      "modelo": "Watch GT 3 Pro"
+    },
+    {
+      "modelo": "Watch D"
+    },
+    {
+      "modelo": "MatePad SE"
+    },
+    {
+      "modelo": "nova 9 SE 5G"
+    },
+    {
+      "modelo": "nova Y70 Plus"
+    },
+    {
+      "modelo": "P50E"
+    },
+    {
+      "modelo": "nova 9 SE"
+    },
+    {
+      "modelo": "P50 Pocket"
+    },
+    {
+      "modelo": "nova 8 SE 4G"
+    },
+    {
+      "modelo": "nova Y60"
+    },
+    {
+      "modelo": "Enjoy 20e"
+    },
+    {
+      "modelo": "Watch GT Runner"
+    },
+    {
+      "modelo": "Watch Fit mini"
+    },
+    {
+      "modelo": "Watch GT 3"
+    },
+    {
+      "modelo": "nova 9 Pro"
+    },
+    {
+      "modelo": "nova 9"
+    },
+    {
+      "modelo": "nova 8"
+    },
+    {
+      "modelo": "P50 Pro"
+    },
+    {
+      "modelo": "P50"
+    },
+    {
+      "modelo": "nova 8 SE Youth"
+    },
+    {
+      "modelo": "nova 8i"
+    },
+    {
+      "modelo": "Mate 40 Pro 4G"
+    },
+    {
+      "modelo": "Mate 40E 4G"
+    },
+    {
+      "modelo": "Mate X2 4G"
+    },
+    {
+      "modelo": "MatePad Pro 12.6",
+      "ano": "2021"
+    },
+    {
+      "modelo": "MatePad Pro 10.8",
+      "ano": "2021"
+    },
+    {
+      "modelo": "MatePad 11",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Watch 3 Pro"
+    },
+    {
+      "modelo": "Watch 3"
+    },
+    {
+      "modelo": "nova 8 Pro 4G"
+    },
+    {
+      "modelo": "MatePad T 10"
+    },
+    {
+      "modelo": "Watch Fit Elegant"
+    },
+    {
+      "modelo": "Mate 40E"
+    },
+    {
+      "modelo": "P40 4G"
+    },
+    {
+      "modelo": "Mate X2"
+    },
+    {
+      "modelo": "nova 8 Pro 5G"
+    },
+    {
+      "modelo": "nova 8 5G"
+    },
+    {
+      "modelo": "Enjoy 20 SE"
+    },
+    {
+      "modelo": "nova 8 SE"
+    },
+    {
+      "modelo": "Mate 40 RS Porsche Design"
+    },
+    {
+      "modelo": "Mate 40 Pro+"
+    },
+    {
+      "modelo": "Mate 40 Pro"
+    },
+    {
+      "modelo": "Mate 40"
+    },
+    {
+      "modelo": "Watch GT 2 Porsche Design"
+    },
+    {
+      "modelo": "Mate 30E Pro 5G"
+    },
+    {
+      "modelo": "nova 7 SE 5G Youth"
+    },
+    {
+      "modelo": "Y7a"
+    },
+    {
+      "modelo": "P smart 2021"
+    },
+    {
+      "modelo": "MatePad 5G"
+    },
+    {
+      "modelo": "Watch GT 2 Pro"
+    },
+    {
+      "modelo": "Y9a"
+    },
+    {
+      "modelo": "Enjoy 20 Plus 5G"
+    },
+    {
+      "modelo": "Enjoy 20 5G"
+    },
+    {
+      "modelo": "Watch Fit"
+    },
+    {
+      "modelo": "MatePad 10.8"
+    },
+    {
+      "modelo": "MatePad T 10s"
+    },
+    {
+      "modelo": "Enjoy Tablet 2"
+    },
+    {
+      "modelo": "Children's Watch 4X"
+    },
+    {
+      "modelo": "Enjoy 20 Pro"
+    },
+    {
+      "modelo": "Enjoy Z 5G"
+    },
+    {
+      "modelo": "P Smart S"
+    },
+    {
+      "modelo": "Y8p"
+    },
+    {
+      "modelo": "P40 lite 5G"
+    },
+    {
+      "modelo": "P30 Pro New Edition"
+    },
+    {
+      "modelo": "MatePad T8"
+    },
+    {
+      "modelo": "Y8s"
+    },
+    {
+      "modelo": "Y6p"
+    },
+    {
+      "modelo": "Y5p"
+    },
+    {
+      "modelo": "P smart 2020"
+    },
+    {
+      "modelo": "nova 7 Pro 5G"
+    },
+    {
+      "modelo": "nova 7 5G"
+    },
+    {
+      "modelo": "nova 7 SE"
+    },
+    {
+      "modelo": "MatePad 10.4"
+    },
+    {
+      "modelo": "Watch GT 2e"
+    },
+    {
+      "modelo": "Enjoy 10e"
+    },
+    {
+      "modelo": "P40 Pro+"
+    },
+    {
+      "modelo": "P40 Pro"
+    },
+    {
+      "modelo": "P40"
+    },
+    {
+      "modelo": "P40 lite E"
+    },
+    {
+      "modelo": "P40 lite"
+    },
+    {
+      "modelo": "MatePad Pro 10.8 5G",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Mate Xs"
+    },
+    {
+      "modelo": "P30 lite New Edition"
+    },
+    {
+      "modelo": "Y7p"
+    },
+    {
+      "modelo": "nova 7i"
+    },
+    {
+      "modelo": "Y6s",
+      "ano": "2019"
+    },
+    {
+      "modelo": "P smart Pro 2019"
+    },
+    {
+      "modelo": "nova 6 5G"
+    },
+    {
+      "modelo": "nova 6"
+    },
+    {
+      "modelo": "nova 6 SE"
+    },
+    {
+      "modelo": "MatePad Pro 10.8",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Mate X"
+    },
+    {
+      "modelo": "Y9s"
+    },
+    {
+      "modelo": "nova 5z"
+    },
+    {
+      "modelo": "Enjoy 10s"
+    },
+    {
+      "modelo": "Enjoy 10"
+    },
+    {
+      "modelo": "Mate 30 RS Porsche Design"
+    },
+    {
+      "modelo": "Mate 30 Pro 5G"
+    },
+    {
+      "modelo": "Mate 30 Pro"
+    },
+    {
+      "modelo": "Mate 30 5G"
+    },
+    {
+      "modelo": "Mate 30"
+    },
+    {
+      "modelo": "Watch GT 2"
+    },
+    {
+      "modelo": "nova 5i Pro"
+    },
+    {
+      "modelo": "Enjoy 10 Plus"
+    },
+    {
+      "modelo": "nova 5T"
+    },
+    {
+      "modelo": "MediaPad M6 10.8"
+    },
+    {
+      "modelo": "MediaPad M6 Turbo 8.4"
+    },
+    {
+      "modelo": "MediaPad M6 8.4"
+    },
+    {
+      "modelo": "nova 5 Pro"
+    },
+    {
+      "modelo": "nova 5"
+    },
+    {
+      "modelo": "nova 5i"
+    },
+    {
+      "modelo": "Y9 Prime",
+      "ano": "2019"
+    },
+    {
+      "modelo": "P20 lite",
+      "ano": "2019"
+    },
+    {
+      "modelo": "P Smart Z"
+    },
+    {
+      "modelo": "Mate 20 X (5G)"
+    },
+    {
+      "modelo": "P30 Pro"
+    },
+    {
+      "modelo": "P30"
+    },
+    {
+      "modelo": "P30 lite"
+    },
+    {
+      "modelo": "nova 4e"
+    },
+    {
+      "modelo": "Y5",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Enjoy 9e"
+    },
+    {
+      "modelo": "Enjoy 9s"
+    },
+    {
+      "modelo": "Y Max"
+    },
+    {
+      "modelo": "MediaPad M5 Lite 8"
+    },
+    {
+      "modelo": "Y6 Pro",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Y6",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Y7",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Y7 Prime",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Y7 Pro",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Y5 lite",
+      "ano": "2018"
+    },
+    {
+      "modelo": "nova 4"
+    },
+    {
+      "modelo": "P smart 2019"
+    },
+    {
+      "modelo": "Enjoy 9"
+    },
+    {
+      "modelo": "Watch Magic"
+    },
+    {
+      "modelo": "Watch GT"
+    },
+    {
+      "modelo": "Mate 20 RS Porsche Design"
+    },
+    {
+      "modelo": "Mate 20 X"
+    },
+    {
+      "modelo": "Mate 20 Pro"
+    },
+    {
+      "modelo": "Mate 20"
+    },
+    {
+      "modelo": "MediaPad T5"
+    },
+    {
+      "modelo": "MediaPad M5 lite"
+    },
+    {
+      "modelo": "Y9",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Mate 20 lite"
+    },
+    {
+      "modelo": "P Smart+ 2019"
+    },
+    {
+      "modelo": "nova 3i"
+    },
+    {
+      "modelo": "nova 3"
+    },
+    {
+      "modelo": "Watch 2 2018"
+    },
+    {
+      "modelo": "Y5 Prime",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Y3",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Y6 Prime",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Y6",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Mate RS Porsche Design"
+    },
+    {
+      "modelo": "P20 Pro"
+    },
+    {
+      "modelo": "P20"
+    },
+    {
+      "modelo": "P20 lite"
+    },
+    {
+      "modelo": "Y7 Pro",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Y7 Prime",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Y7",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Y9",
+      "ano": "2018"
+    },
+    {
+      "modelo": "MediaPad M5 10 (Pro)"
+    },
+    {
+      "modelo": "MediaPad M5 10"
+    },
+    {
+      "modelo": "MediaPad M5 8"
+    },
+    {
+      "modelo": "P smart"
+    },
+    {
+      "modelo": "nova 2s"
+    },
+    {
+      "modelo": "Mate 10 Porsche Design"
+    },
+    {
+      "modelo": "Mate 10 Pro"
+    },
+    {
+      "modelo": "Mate 10"
+    },
+    {
+      "modelo": "Watch 2 Pro"
+    },
+    {
+      "modelo": "Mate 10 Lite"
+    },
+    {
+      "modelo": "P9 lite mini"
+    },
+    {
+      "modelo": "Y7 Prime"
+    },
+    {
+      "modelo": "MediaPad M3 Lite 8"
+    },
+    {
+      "modelo": "MediaPad T3 10"
+    },
+    {
+      "modelo": "MediaPad M3 Lite 10"
+    },
+    {
+      "modelo": "nova 2 plus"
+    },
+    {
+      "modelo": "nova 2"
+    },
+    {
+      "modelo": "Y6II Compact"
+    },
+    {
+      "modelo": "MediaPad T3 8.0"
+    },
+    {
+      "modelo": "MediaPad T3 7.0"
+    },
+    {
+      "modelo": "Y7"
+    },
+    {
+      "modelo": "Y6",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Y5",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Y3",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Watch 2 Classic"
+    },
+    {
+      "modelo": "Watch 2"
+    },
+    {
+      "modelo": "P10 Plus"
+    },
+    {
+      "modelo": "P10"
+    },
+    {
+      "modelo": "P10 Lite"
+    },
+    {
+      "modelo": "P8 Lite",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Enjoy 6s"
+    },
+    {
+      "modelo": "Mate 9 Pro"
+    },
+    {
+      "modelo": "Mate 9 Porsche Design"
+    },
+    {
+      "modelo": "Mate 9"
+    },
+    {
+      "modelo": "Fit"
+    },
+    {
+      "modelo": "Enjoy 6"
+    },
+    {
+      "modelo": "MediaPad M3 8.4"
+    },
+    {
+      "modelo": "nova plus"
+    },
+    {
+      "modelo": "nova"
+    },
+    {
+      "modelo": "MediaPad T2 10.0 Pro"
+    },
+    {
+      "modelo": "MediaPad T2 7.0 Pro"
+    },
+    {
+      "modelo": "MediaPad T2 7.0"
+    },
+    {
+      "modelo": "G9 Plus"
+    },
+    {
+      "modelo": "MediaPad T1 7.0 Plus"
+    },
+    {
+      "modelo": "MediaPad M2 7.0"
+    },
+    {
+      "modelo": "Y3II"
+    },
+    {
+      "modelo": "Y5II"
+    },
+    {
+      "modelo": "P9 lite"
+    },
+    {
+      "modelo": "P9 Plus"
+    },
+    {
+      "modelo": "P9"
+    },
+    {
+      "modelo": "MediaPad M2 10.0"
+    },
+    {
+      "modelo": "Watch"
+    },
+    {
+      "modelo": "Enjoy 5s"
+    },
+    {
+      "modelo": "Mate 8"
+    },
+    {
+      "modelo": "G7 Plus"
+    },
+    {
+      "modelo": "Y6 Pro"
+    },
+    {
+      "modelo": "Nexus 6P"
+    },
+    {
+      "modelo": "Mate S"
+    },
+    {
+      "modelo": "Y6"
+    },
+    {
+      "modelo": "G8"
+    },
+    {
+      "modelo": "MediaPad M2 8.0"
+    },
+    {
+      "modelo": "Y560"
+    },
+    {
+      "modelo": "Y625"
+    },
+    {
+      "modelo": "P8lite ALE-L04"
+    },
+    {
+      "modelo": "P8lite"
+    },
+    {
+      "modelo": "P8max"
+    },
+    {
+      "modelo": "P8"
+    },
+    {
+      "modelo": "SnapTo"
+    },
+    {
+      "modelo": "MediaPad X2"
+    },
+    {
+      "modelo": "Y635"
+    },
+    {
+      "modelo": "Y360"
+    },
+    {
+      "modelo": "Ascend Y540"
+    },
+    {
+      "modelo": "Ascend G628"
+    },
+    {
+      "modelo": "Ascend Y520"
+    },
+    {
+      "modelo": "Ascend Y221"
+    },
+    {
+      "modelo": "Ascend GX1"
+    },
+    {
+      "modelo": "Ascend Mate7 Monarch"
+    },
+    {
+      "modelo": "MediaPad T1 10"
+    },
+    {
+      "modelo": "MediaPad T1 8.0"
+    },
+    {
+      "modelo": "MediaPad T1 7.0"
+    },
+    {
+      "modelo": "Ascend G620s"
+    },
+    {
+      "modelo": "Ascend Y550"
+    },
+    {
+      "modelo": "Ascend G7"
+    },
+    {
+      "modelo": "Ascend P7 Sapphire Edition"
+    },
+    {
+      "modelo": "Ascend Mate7"
+    },
+    {
+      "modelo": "Ascend G535"
+    },
+    {
+      "modelo": "Y300II"
+    },
+    {
+      "modelo": "Ascend G630"
+    },
+    {
+      "modelo": "Ascend Y330"
+    },
+    {
+      "modelo": "Ascend Plus"
+    },
+    {
+      "modelo": "Ascend P7"
+    },
+    {
+      "modelo": "Ascend P7 mini"
+    },
+    {
+      "modelo": "Ascend G730"
+    },
+    {
+      "modelo": "Ascend Y600"
+    },
+    {
+      "modelo": "MediaPad 10 Link+"
+    },
+    {
+      "modelo": "Ascend G6 4G"
+    },
+    {
+      "modelo": "Ascend G6"
+    },
+    {
+      "modelo": "MediaPad M1"
+    },
+    {
+      "modelo": "MediaPad X1"
+    },
+    {
+      "modelo": "Ascend Y530"
+    },
+    {
+      "modelo": "MediaPad 7 Youth2"
+    },
+    {
+      "modelo": "Ascend P6 S"
+    },
+    {
+      "modelo": "Ascend Mate2 4G"
+    },
+    {
+      "modelo": "Ascend Y320"
+    },
+    {
+      "modelo": "Ascend Y220"
+    },
+    {
+      "modelo": "Ascend G740"
+    },
+    {
+      "modelo": "Ascend Y511"
+    },
+    {
+      "modelo": "Ascend W2"
+    },
+    {
+      "modelo": "G6153"
+    },
+    {
+      "modelo": "G3621L"
+    },
+    {
+      "modelo": "Ascend G700"
+    },
+    {
+      "modelo": "G610s"
+    },
+    {
+      "modelo": "U8687 Cronos"
+    },
+    {
+      "modelo": "Ascend G525"
+    },
+    {
+      "modelo": "MediaPad 7 Youth"
+    },
+    {
+      "modelo": "MediaPad 7 Vogue"
+    },
+    {
+      "modelo": "Ascend P6"
+    },
+    {
+      "modelo": "Ascend Y300"
+    },
+    {
+      "modelo": "Premia 4G M931"
+    },
+    {
+      "modelo": "Ascend Y210D"
+    },
+    {
+      "modelo": "Ascend P2"
+    },
+    {
+      "modelo": "Ascend G615"
+    },
+    {
+      "modelo": "Ascend G526"
+    },
+    {
+      "modelo": "Ascend G350"
+    },
+    {
+      "modelo": "Ascend G312"
+    },
+    {
+      "modelo": "Ascend W1"
+    },
+    {
+      "modelo": "Ascend Mate"
+    },
+    {
+      "modelo": "Ascend D2"
+    },
+    {
+      "modelo": "Ascend G510"
+    },
+    {
+      "modelo": "Ascend G500"
+    },
+    {
+      "modelo": "Ascend Y201 Pro"
+    },
+    {
+      "modelo": "MediaPad 10 Link"
+    },
+    {
+      "modelo": "Ascend Y"
+    },
+    {
+      "modelo": "Summit"
+    },
+    {
+      "modelo": "Ascend P1 LTE"
+    },
+    {
+      "modelo": "Fusion 2 U8665"
+    },
+    {
+      "modelo": "Ascend G600"
+    },
+    {
+      "modelo": "Ascend G330"
+    },
+    {
+      "modelo": "MediaPad 7 Lite"
+    },
+    {
+      "modelo": "Ascend Y100"
+    },
+    {
+      "modelo": "Ascend Y200"
+    },
+    {
+      "modelo": "Ascend G330D U8825D"
+    },
+    {
+      "modelo": "Ascend G300"
+    },
+    {
+      "modelo": "Ascend P1 XL U9200E"
+    },
+    {
+      "modelo": "Ascend P1"
+    },
+    {
+      "modelo": "Ascend Q M5660"
+    },
+    {
+      "modelo": "G6005"
+    },
+    {
+      "modelo": "G6800"
+    },
+    {
+      "modelo": "G6310"
+    },
+    {
+      "modelo": "G5000"
+    },
+    {
+      "modelo": "Activa 4G"
+    },
+    {
+      "modelo": "G5520"
+    },
+    {
+      "modelo": "G6609"
+    },
+    {
+      "modelo": "Fusion U8652"
+    },
+    {
+      "modelo": "MediaPad 10 FHD"
+    },
+    {
+      "modelo": "Ascend D1 XL U9500E"
+    },
+    {
+      "modelo": "Ascend D1"
+    },
+    {
+      "modelo": "Ascend D quad XL"
+    },
+    {
+      "modelo": "Ascend D quad"
+    },
+    {
+      "modelo": "Ascend P1s"
+    },
+    {
+      "modelo": "M886 Mercury"
+    },
+    {
+      "modelo": "G7300"
+    },
+    {
+      "modelo": "G7005"
+    },
+    {
+      "modelo": "MediaPad"
+    },
+    {
+      "modelo": "MediaPad S7-301w"
+    },
+    {
+      "modelo": "D51 Discovery"
+    },
+    {
+      "modelo": "U8520 Duplex"
+    },
+    {
+      "modelo": "T8300"
+    },
+    {
+      "modelo": "U8350 Boulder"
+    },
+    {
+      "modelo": "Impulse 4G"
+    },
+    {
+      "modelo": "Pillar"
+    },
+    {
+      "modelo": "U8850 Vision"
+    },
+    {
+      "modelo": "Ascend II"
+    },
+    {
+      "modelo": "U8800 Pro"
+    },
+    {
+      "modelo": "G7206"
+    },
+    {
+      "modelo": "U5510"
+    },
+    {
+      "modelo": "G5500"
+    },
+    {
+      "modelo": "G6620"
+    },
+    {
+      "modelo": "U8650 Sonic"
+    },
+    {
+      "modelo": "U8180 IDEOS X1"
+    },
+    {
+      "modelo": "G6608"
+    },
+    {
+      "modelo": "G7010"
+    },
+    {
+      "modelo": "U5900s"
+    },
+    {
+      "modelo": "IDEOS S7 Slim"
+    },
+    {
+      "modelo": "IDEOS S7 Slim CDMA"
+    },
+    {
+      "modelo": "U9000 IDEOS X6"
+    },
+    {
+      "modelo": "U8800 IDEOS X5"
+    },
+    {
+      "modelo": "U8510 IDEOS X3"
+    },
+    {
+      "modelo": "U8150 IDEOS"
+    },
+    {
+      "modelo": "U8500 IDEOS X2"
+    },
+    {
+      "modelo": "U7520"
+    },
+    {
+      "modelo": "G6150"
+    },
+    {
+      "modelo": "G7002"
+    },
+    {
+      "modelo": "U8300"
+    },
+    {
+      "modelo": "IDEOS S7"
+    },
+    {
+      "modelo": "C3200"
+    },
+    {
+      "modelo": "U3100"
+    },
+    {
+      "modelo": "U8110"
+    },
+    {
+      "modelo": "U8100"
+    },
+    {
+      "modelo": "U8230"
+    },
+    {
+      "modelo": "U8220"
+    },
+    {
+      "modelo": "U7510"
+    },
+    {
+      "modelo": "U1270"
+    },
+    {
+      "modelo": "U9130 Compass"
+    },
+    {
+      "modelo": "U1250"
+    },
+    {
+      "modelo": "G6600 Passport"
+    },
+    {
+      "modelo": "U9150"
+    },
+    {
+      "modelo": "U7310"
+    },
+    {
+      "modelo": "U121"
+    },
+    {
+      "modelo": "U120"
+    },
+    {
+      "modelo": "U3300"
+    },
+    {
+      "modelo": "U1310"
+    },
+    {
+      "modelo": "U1100"
+    },
+    {
+      "modelo": "U1000"
+    },
+    {
+      "modelo": "T156"
+    },
+    {
+      "modelo": "T158"
+    },
+    {
+      "modelo": "T208"
+    },
+    {
+      "modelo": "T261L"
+    },
+    {
+      "modelo": "T211"
+    },
+    {
+      "modelo": "T161L"
+    },
+    {
+      "modelo": "T330"
+    },
+    {
+      "modelo": "T201"
+    },
+    {
+      "modelo": "T552"
+    },
+    {
+      "modelo": "Mate 30 Lite"
+    },
+    {
+      "modelo": "G10"
+    },
+    {
+      "modelo": "Mulan"
+    },
+    {
+      "modelo": "Ascend W3"
+    }
+  ]
+}

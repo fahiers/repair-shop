@@ -1,0 +1,60 @@
+{
+  "marca": "PALM",
+  "id_interno": "27",
+  "slug": "palm",
+  "total_esperado": 0,
+  "total_encontrado": 17,
+  "modelos": [
+    {
+      "modelo": "Phone PVG100"
+    },
+    {
+      "modelo": "Pre 2"
+    },
+    {
+      "modelo": "Pre 2 CDMA"
+    },
+    {
+      "modelo": "Pixi Plus"
+    },
+    {
+      "modelo": "Pre Plus"
+    },
+    {
+      "modelo": "Pixi"
+    },
+    {
+      "modelo": "Pre"
+    },
+    {
+      "modelo": "Treo Pro"
+    },
+    {
+      "modelo": "Centro"
+    },
+    {
+      "modelo": "Treo 500v"
+    },
+    {
+      "modelo": "Treo 750"
+    },
+    {
+      "modelo": "Treo 680"
+    },
+    {
+      "modelo": "Treo 750v"
+    },
+    {
+      "modelo": "Treo 650"
+    },
+    {
+      "modelo": "Treo 600"
+    },
+    {
+      "modelo": "Treo 270"
+    },
+    {
+      "modelo": "Treo 180"
+    }
+  ]
+}

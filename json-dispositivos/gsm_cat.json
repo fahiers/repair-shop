@@ -1,0 +1,75 @@
+{
+  "marca": "CAT",
+  "id_interno": "89",
+  "slug": "cat",
+  "total_esperado": 0,
+  "total_encontrado": 22,
+  "modelos": [
+    {
+      "modelo": "S75"
+    },
+    {
+      "modelo": "S53"
+    },
+    {
+      "modelo": "S22 Flip"
+    },
+    {
+      "modelo": "S62"
+    },
+    {
+      "modelo": "S42 H+"
+    },
+    {
+      "modelo": "B40"
+    },
+    {
+      "modelo": "S62 Pro"
+    },
+    {
+      "modelo": "S42"
+    },
+    {
+      "modelo": "S52"
+    },
+    {
+      "modelo": "B35"
+    },
+    {
+      "modelo": "S41"
+    },
+    {
+      "modelo": "S31"
+    },
+    {
+      "modelo": "S61"
+    },
+    {
+      "modelo": "S60"
+    },
+    {
+      "modelo": "S30"
+    },
+    {
+      "modelo": "S40"
+    },
+    {
+      "modelo": "B30"
+    },
+    {
+      "modelo": "B15 Q"
+    },
+    {
+      "modelo": "S50"
+    },
+    {
+      "modelo": "B15"
+    },
+    {
+      "modelo": "B100"
+    },
+    {
+      "modelo": "B25"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "marca": "FUJITSU SIEMENS",
+  "id_interno": "50",
+  "slug": "fujitsu_siemens",
+  "total_esperado": 0,
+  "total_encontrado": 2,
+  "modelos": [
+    {
+      "modelo": "T830"
+    },
+    {
+      "modelo": "T810"
+    }
+  ]
+}

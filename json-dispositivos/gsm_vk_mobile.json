@@ -1,0 +1,102 @@
+{
+  "marca": "VK MOBILE",
+  "id_interno": "37",
+  "slug": "vk_mobile",
+  "total_esperado": 0,
+  "total_encontrado": 31,
+  "modelos": [
+    {
+      "modelo": "VK2030"
+    },
+    {
+      "modelo": "VK2200"
+    },
+    {
+      "modelo": "VK7000"
+    },
+    {
+      "modelo": "VK5000"
+    },
+    {
+      "modelo": "VK300"
+    },
+    {
+      "modelo": "VK4000"
+    },
+    {
+      "modelo": "VK4100"
+    },
+    {
+      "modelo": "VK2020"
+    },
+    {
+      "modelo": "VK200"
+    },
+    {
+      "modelo": "VK4500"
+    },
+    {
+      "modelo": "VK3100"
+    },
+    {
+      "modelo": "VK2100"
+    },
+    {
+      "modelo": "VK2010"
+    },
+    {
+      "modelo": "VK1500"
+    },
+    {
+      "modelo": "VK1100"
+    },
+    {
+      "modelo": "VK1020"
+    },
+    {
+      "modelo": "VK1010"
+    },
+    {
+      "modelo": "VK1000"
+    },
+    {
+      "modelo": "VK2000"
+    },
+    {
+      "modelo": "E100"
+    },
+    {
+      "modelo": "VK570"
+    },
+    {
+      "modelo": "VK700"
+    },
+    {
+      "modelo": "VK900"
+    },
+    {
+      "modelo": "VK800"
+    },
+    {
+      "modelo": "VK530"
+    },
+    {
+      "modelo": "VK610"
+    },
+    {
+      "modelo": "VK580"
+    },
+    {
+      "modelo": "VK560"
+    },
+    {
+      "modelo": "VK540"
+    },
+    {
+      "modelo": "VK520"
+    },
+    {
+      "modelo": "VK500"
+    }
+  ]
+}

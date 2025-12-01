@@ -1,0 +1,369 @@
+{
+  "marca": "SAGEM",
+  "id_interno": "13",
+  "slug": "sagem",
+  "total_esperado": 0,
+  "total_encontrado": 120,
+  "modelos": [
+    {
+      "modelo": "Puma Phone"
+    },
+    {
+      "modelo": "my421z"
+    },
+    {
+      "modelo": "Roland Garros"
+    },
+    {
+      "modelo": "myMobileTV 2"
+    },
+    {
+      "modelo": "my411C Oxbow"
+    },
+    {
+      "modelo": "my855c"
+    },
+    {
+      "modelo": "my810x"
+    },
+    {
+      "modelo": "my750x"
+    },
+    {
+      "modelo": "my721x"
+    },
+    {
+      "modelo": "my721z"
+    },
+    {
+      "modelo": "my521x"
+    },
+    {
+      "modelo": "my519x"
+    },
+    {
+      "modelo": "my421x"
+    },
+    {
+      "modelo": "my429x"
+    },
+    {
+      "modelo": "my419x"
+    },
+    {
+      "modelo": "P9522 Porsche"
+    },
+    {
+      "modelo": "P9521 Porsche"
+    },
+    {
+      "modelo": "my730c"
+    },
+    {
+      "modelo": "my411c"
+    },
+    {
+      "modelo": "my312x"
+    },
+    {
+      "modelo": "my234x"
+    },
+    {
+      "modelo": "my231x"
+    },
+    {
+      "modelo": "my230x"
+    },
+    {
+      "modelo": "my226x"
+    },
+    {
+      "modelo": "my220x"
+    },
+    {
+      "modelo": "my901C"
+    },
+    {
+      "modelo": "my900C"
+    },
+    {
+      "modelo": "my850C"
+    },
+    {
+      "modelo": "my800X"
+    },
+    {
+      "modelo": "my700X"
+    },
+    {
+      "modelo": "my600X"
+    },
+    {
+      "modelo": "my600V"
+    },
+    {
+      "modelo": "my511X"
+    },
+    {
+      "modelo": "my501X"
+    },
+    {
+      "modelo": "my501C"
+    },
+    {
+      "modelo": "my500X"
+    },
+    {
+      "modelo": "my411X"
+    },
+    {
+      "modelo": "my405X"
+    },
+    {
+      "modelo": "my401X"
+    },
+    {
+      "modelo": "my401Z"
+    },
+    {
+      "modelo": "my401C"
+    },
+    {
+      "modelo": "my400V"
+    },
+    {
+      "modelo": "my400X"
+    },
+    {
+      "modelo": "my302X"
+    },
+    {
+      "modelo": "my301X"
+    },
+    {
+      "modelo": "my300X"
+    },
+    {
+      "modelo": "my300C"
+    },
+    {
+      "modelo": "my215x"
+    },
+    {
+      "modelo": "my210x"
+    },
+    {
+      "modelo": "my200x"
+    },
+    {
+      "modelo": "my200C"
+    },
+    {
+      "modelo": "my150X"
+    },
+    {
+      "modelo": "my101X"
+    },
+    {
+      "modelo": "my100X"
+    },
+    {
+      "modelo": "VS4"
+    },
+    {
+      "modelo": "VS3"
+    },
+    {
+      "modelo": "VS2"
+    },
+    {
+      "modelo": "VS1"
+    },
+    {
+      "modelo": "MY V-85"
+    },
+    {
+      "modelo": "MY V-76"
+    },
+    {
+      "modelo": "MY V-56"
+    },
+    {
+      "modelo": "myW-7"
+    },
+    {
+      "modelo": "myMobileTV"
+    },
+    {
+      "modelo": "MY C2-3"
+    },
+    {
+      "modelo": "myZ-5"
+    },
+    {
+      "modelo": "MY C5-3"
+    },
+    {
+      "modelo": "MY C3-2"
+    },
+    {
+      "modelo": "MY Z-55"
+    },
+    {
+      "modelo": "MY X6-2"
+    },
+    {
+      "modelo": "MY X2-2"
+    },
+    {
+      "modelo": "MY X1-2"
+    },
+    {
+      "modelo": "MY C5-2"
+    },
+    {
+      "modelo": "MY X-8"
+    },
+    {
+      "modelo": "MY X-4"
+    },
+    {
+      "modelo": "MY C4-2"
+    },
+    {
+      "modelo": "MY C-4"
+    },
+    {
+      "modelo": "MY S-7"
+    },
+    {
+      "modelo": "MY Z-3"
+    },
+    {
+      "modelo": "MY C2-2"
+    },
+    {
+      "modelo": "SG 321i"
+    },
+    {
+      "modelo": "MY V-55"
+    },
+    {
+      "modelo": "MY X5-2"
+    },
+    {
+      "modelo": "MY V-75"
+    },
+    {
+      "modelo": "MY C-3b"
+    },
+    {
+      "modelo": "MY C-3s"
+    },
+    {
+      "modelo": "MY X3-2"
+    },
+    {
+      "modelo": "MY X-7"
+    },
+    {
+      "modelo": "MY V-65"
+    },
+    {
+      "modelo": "MY C-1"
+    },
+    {
+      "modelo": "MY X-1w"
+    },
+    {
+      "modelo": "MY C-2"
+    },
+    {
+      "modelo": "MY C-6"
+    },
+    {
+      "modelo": "MY C-5w"
+    },
+    {
+      "modelo": "MY X-2"
+    },
+    {
+      "modelo": "MY X-6"
+    },
+    {
+      "modelo": "MY G5"
+    },
+    {
+      "modelo": "MY X-3"
+    },
+    {
+      "modelo": "MY X-5"
+    },
+    {
+      "modelo": "MY 3078"
+    },
+    {
+      "modelo": "MW 3026"
+    },
+    {
+      "modelo": "MW 3052"
+    },
+    {
+      "modelo": "MW 3042"
+    },
+    {
+      "modelo": "MW 3040"
+    },
+    {
+      "modelo": "MW X1"
+    },
+    {
+      "modelo": "WA 3050"
+    },
+    {
+      "modelo": "MW 3020"
+    },
+    {
+      "modelo": "MC 3000"
+    },
+    {
+      "modelo": "MC 939 WAP"
+    },
+    {
+      "modelo": "MC 936"
+    },
+    {
+      "modelo": "MC 950"
+    },
+    {
+      "modelo": "MC 959"
+    },
+    {
+      "modelo": "MC 940"
+    },
+    {
+      "modelo": "MC 932"
+    },
+    {
+      "modelo": "RC 922"
+    },
+    {
+      "modelo": "MC 912"
+    },
+    {
+      "modelo": "MC 850"
+    },
+    {
+      "modelo": "MC 825 FM"
+    },
+    {
+      "modelo": "MC 820"
+    },
+    {
+      "modelo": "RC 750"
+    },
+    {
+      "modelo": "RC 730"
+    }
+  ]
+}

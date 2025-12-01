@@ -1,0 +1,350 @@
+{
+  "marca": "ACER",
+  "id_interno": "59",
+  "slug": "acer",
+  "total_esperado": 0,
+  "total_encontrado": 113,
+  "modelos": [
+    {
+      "modelo": "Iconia V12"
+    },
+    {
+      "modelo": "Iconia V11"
+    },
+    {
+      "modelo": "Acerone Liquid S262F5"
+    },
+    {
+      "modelo": "Iconia A14"
+    },
+    {
+      "modelo": "Iconia A16"
+    },
+    {
+      "modelo": "Iconia X14"
+    },
+    {
+      "modelo": "Iconia X12"
+    },
+    {
+      "modelo": "Iconia Tab P11",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Iconia Tab P10",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Super ZX Pro"
+    },
+    {
+      "modelo": "Super ZX"
+    },
+    {
+      "modelo": "Acerone Liquid S272E4"
+    },
+    {
+      "modelo": "Acerone Liquid S162E4"
+    },
+    {
+      "modelo": "Chromebook Tab 10"
+    },
+    {
+      "modelo": "Iconia Talk S"
+    },
+    {
+      "modelo": "Liquid Z6 Plus"
+    },
+    {
+      "modelo": "Liquid Z6"
+    },
+    {
+      "modelo": "Iconia Tab 10 A3-A40"
+    },
+    {
+      "modelo": "Liquid X2"
+    },
+    {
+      "modelo": "Liquid Jade 2"
+    },
+    {
+      "modelo": "Liquid Zest Plus"
+    },
+    {
+      "modelo": "Liquid Zest"
+    },
+    {
+      "modelo": "Predator 8"
+    },
+    {
+      "modelo": "Liquid Jade Primo"
+    },
+    {
+      "modelo": "Liquid Z330"
+    },
+    {
+      "modelo": "Liquid Z320"
+    },
+    {
+      "modelo": "Liquid Z630S"
+    },
+    {
+      "modelo": "Liquid Z630"
+    },
+    {
+      "modelo": "Liquid Z530S"
+    },
+    {
+      "modelo": "Liquid Z530"
+    },
+    {
+      "modelo": "Liquid M330"
+    },
+    {
+      "modelo": "Liquid M320"
+    },
+    {
+      "modelo": "Iconia Tab 10 A3-A30"
+    },
+    {
+      "modelo": "Iconia One 8 B1-820"
+    },
+    {
+      "modelo": "Iconia Tab A3-A20"
+    },
+    {
+      "modelo": "Iconia Tab A3-A20FHD"
+    },
+    {
+      "modelo": "Liquid Jade Z"
+    },
+    {
+      "modelo": "Liquid Z520"
+    },
+    {
+      "modelo": "Liquid Z220"
+    },
+    {
+      "modelo": "Liquid M220"
+    },
+    {
+      "modelo": "Liquid Z410"
+    },
+    {
+      "modelo": "Liquid Jade S"
+    },
+    {
+      "modelo": "Liquid Z500"
+    },
+    {
+      "modelo": "Liquid X1"
+    },
+    {
+      "modelo": "Liquid Jade"
+    },
+    {
+      "modelo": "Liquid E700"
+    },
+    {
+      "modelo": "Liquid E600"
+    },
+    {
+      "modelo": "Liquid Z200"
+    },
+    {
+      "modelo": "Iconia Tab 8 A1-840FHD"
+    },
+    {
+      "modelo": "Iconia Tab 7 A1-713"
+    },
+    {
+      "modelo": "Iconia Tab 7 A1-713HD"
+    },
+    {
+      "modelo": "Iconia One 7 B1-730"
+    },
+    {
+      "modelo": "Liquid E3 Duo Plus"
+    },
+    {
+      "modelo": "Liquid E3"
+    },
+    {
+      "modelo": "Liquid Z4"
+    },
+    {
+      "modelo": "Iconia B1-721"
+    },
+    {
+      "modelo": "Iconia B1-720"
+    },
+    {
+      "modelo": "Iconia A1-830"
+    },
+    {
+      "modelo": "Liquid Z5"
+    },
+    {
+      "modelo": "Liquid S2"
+    },
+    {
+      "modelo": "Liquid Z3"
+    },
+    {
+      "modelo": "Liquid S1"
+    },
+    {
+      "modelo": "Iconia Tab A3"
+    },
+    {
+      "modelo": "Iconia Tab A1-811"
+    },
+    {
+      "modelo": "Iconia Tab A1-810"
+    },
+    {
+      "modelo": "Liquid E2"
+    },
+    {
+      "modelo": "Liquid Z2"
+    },
+    {
+      "modelo": "Liquid C1"
+    },
+    {
+      "modelo": "Liquid E1"
+    },
+    {
+      "modelo": "Iconia Tab B1-710"
+    },
+    {
+      "modelo": "Iconia Tab B1-A71"
+    },
+    {
+      "modelo": "Iconia Tab A110"
+    },
+    {
+      "modelo": "Liquid Z110"
+    },
+    {
+      "modelo": "Liquid Gallant E350"
+    },
+    {
+      "modelo": "Liquid Gallant Duo"
+    },
+    {
+      "modelo": "Liquid Glow E330"
+    },
+    {
+      "modelo": "CloudMobile S500"
+    },
+    {
+      "modelo": "Iconia Tab A210"
+    },
+    {
+      "modelo": "Iconia Tab A200"
+    },
+    {
+      "modelo": "Iconia Tab A701"
+    },
+    {
+      "modelo": "Iconia Tab A700"
+    },
+    {
+      "modelo": "Iconia Tab A511"
+    },
+    {
+      "modelo": "Iconia Tab A510"
+    },
+    {
+      "modelo": "Allegro"
+    },
+    {
+      "modelo": "Liquid Express E320"
+    },
+    {
+      "modelo": "Iconia Tab A501"
+    },
+    {
+      "modelo": "Iconia Tab A500"
+    },
+    {
+      "modelo": "Iconia Smart"
+    },
+    {
+      "modelo": "Iconia Tab A101"
+    },
+    {
+      "modelo": "Iconia Tab A100"
+    },
+    {
+      "modelo": "Liquid mini E310"
+    },
+    {
+      "modelo": "beTouch E210"
+    },
+    {
+      "modelo": "beTouch E140"
+    },
+    {
+      "modelo": "beTouch T500"
+    },
+    {
+      "modelo": "Liquid mt"
+    },
+    {
+      "modelo": "beTouch E130"
+    },
+    {
+      "modelo": "beTouch E120"
+    },
+    {
+      "modelo": "Stream"
+    },
+    {
+      "modelo": "Liquid E"
+    },
+    {
+      "modelo": "neoTouch P400"
+    },
+    {
+      "modelo": "beTouch E400"
+    },
+    {
+      "modelo": "neoTouch P300"
+    },
+    {
+      "modelo": "beTouch E110"
+    },
+    {
+      "modelo": "Liquid"
+    },
+    {
+      "modelo": "neoTouch"
+    },
+    {
+      "modelo": "beTouch E200"
+    },
+    {
+      "modelo": "beTouch E100"
+    },
+    {
+      "modelo": "beTouch E101"
+    },
+    {
+      "modelo": "DX650"
+    },
+    {
+      "modelo": "M900"
+    },
+    {
+      "modelo": "F900"
+    },
+    {
+      "modelo": "X960"
+    },
+    {
+      "modelo": "DX900"
+    }
+  ]
+}

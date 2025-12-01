@@ -1,0 +1,18 @@
+{
+  "marca": "YOTA",
+  "id_interno": "99",
+  "slug": "yota",
+  "total_esperado": 0,
+  "total_encontrado": 3,
+  "modelos": [
+    {
+      "modelo": "YotaPhone 3"
+    },
+    {
+      "modelo": "YotaPhone 2"
+    },
+    {
+      "modelo": "YotaPhone"
+    }
+  ]
+}

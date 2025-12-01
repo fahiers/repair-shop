@@ -1,0 +1,15 @@
+{
+  "marca": "THURAYA",
+  "id_interno": "49",
+  "slug": "thuraya",
+  "total_esperado": 0,
+  "total_encontrado": 2,
+  "modelos": [
+    {
+      "modelo": "One"
+    },
+    {
+      "modelo": "SG-2520"
+    }
+  ]
+}

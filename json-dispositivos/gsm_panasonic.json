@@ -1,0 +1,380 @@
+{
+  "marca": "PANASONIC",
+  "id_interno": "6",
+  "slug": "panasonic",
+  "total_esperado": 0,
+  "total_encontrado": 123,
+  "modelos": [
+    {
+      "modelo": "Eluga I7",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Eluga Ray 800"
+    },
+    {
+      "modelo": "P85 Nxt"
+    },
+    {
+      "modelo": "Eluga Z1 Pro"
+    },
+    {
+      "modelo": "Eluga Ray 530"
+    },
+    {
+      "modelo": "Eluga Ray 600"
+    },
+    {
+      "modelo": "Eluga X1 Pro"
+    },
+    {
+      "modelo": "P90"
+    },
+    {
+      "modelo": "P95"
+    },
+    {
+      "modelo": "Eluga I7"
+    },
+    {
+      "modelo": "Eluga Ray 550"
+    },
+    {
+      "modelo": "P101"
+    },
+    {
+      "modelo": "P100"
+    },
+    {
+      "modelo": "Eluga I9"
+    },
+    {
+      "modelo": "Eluga C"
+    },
+    {
+      "modelo": "P91"
+    },
+    {
+      "modelo": "Eluga I5"
+    },
+    {
+      "modelo": "Eluga A4"
+    },
+    {
+      "modelo": "P99"
+    },
+    {
+      "modelo": "Eluga I4"
+    },
+    {
+      "modelo": "Eluga Ray 500"
+    },
+    {
+      "modelo": "Eluga Ray 700"
+    },
+    {
+      "modelo": "P9"
+    },
+    {
+      "modelo": "Eluga I2 Activ"
+    },
+    {
+      "modelo": "Eluga A3 Pro"
+    },
+    {
+      "modelo": "Eluga A3"
+    },
+    {
+      "modelo": "P55 Max"
+    },
+    {
+      "modelo": "Eluga i3 Mega"
+    },
+    {
+      "modelo": "P85"
+    },
+    {
+      "modelo": "Eluga Ray"
+    },
+    {
+      "modelo": "Eluga Mark 2"
+    },
+    {
+      "modelo": "Eluga Ray X"
+    },
+    {
+      "modelo": "Eluga Ray Max"
+    },
+    {
+      "modelo": "Eluga Pulse X"
+    },
+    {
+      "modelo": "Eluga Pulse"
+    },
+    {
+      "modelo": "P88"
+    },
+    {
+      "modelo": "P55 Novo"
+    },
+    {
+      "modelo": "P77"
+    },
+    {
+      "modelo": "Eluga Tapp"
+    },
+    {
+      "modelo": "Eluga Arc 2"
+    },
+    {
+      "modelo": "Eluga Note"
+    },
+    {
+      "modelo": "Eluga A2"
+    },
+    {
+      "modelo": "Eluga I3"
+    },
+    {
+      "modelo": "Eluga I2",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Eluga Arc"
+    },
+    {
+      "modelo": "P66"
+    },
+    {
+      "modelo": "Eluga Turbo"
+    },
+    {
+      "modelo": "T50"
+    },
+    {
+      "modelo": "Eluga Mark"
+    },
+    {
+      "modelo": "Eluga Switch"
+    },
+    {
+      "modelo": "Eluga L2"
+    },
+    {
+      "modelo": "Eluga I2"
+    },
+    {
+      "modelo": "T45"
+    },
+    {
+      "modelo": "Eluga Icon"
+    },
+    {
+      "modelo": "Eluga Z"
+    },
+    {
+      "modelo": "Eluga L 4G"
+    },
+    {
+      "modelo": "Eluga S mini"
+    },
+    {
+      "modelo": "Eluga U2"
+    },
+    {
+      "modelo": "Eluga S"
+    },
+    {
+      "modelo": "P61"
+    },
+    {
+      "modelo": "T41"
+    },
+    {
+      "modelo": "T40"
+    },
+    {
+      "modelo": "P55"
+    },
+    {
+      "modelo": "Eluga I"
+    },
+    {
+      "modelo": "Lumix Smart Camera CM1"
+    },
+    {
+      "modelo": "Eluga A"
+    },
+    {
+      "modelo": "Eluga U"
+    },
+    {
+      "modelo": "P81"
+    },
+    {
+      "modelo": "T31"
+    },
+    {
+      "modelo": "T21"
+    },
+    {
+      "modelo": "P11"
+    },
+    {
+      "modelo": "T11"
+    },
+    {
+      "modelo": "P51"
+    },
+    {
+      "modelo": "P41"
+    },
+    {
+      "modelo": "Eluga Power"
+    },
+    {
+      "modelo": "Eluga DL1"
+    },
+    {
+      "modelo": "Toughpad FZ-A1"
+    },
+    {
+      "modelo": "Toughpad JT-B1"
+    },
+    {
+      "modelo": "KX-TU311"
+    },
+    {
+      "modelo": "KX-TU301"
+    },
+    {
+      "modelo": "VS7"
+    },
+    {
+      "modelo": "VS6"
+    },
+    {
+      "modelo": "VS3"
+    },
+    {
+      "modelo": "VS2"
+    },
+    {
+      "modelo": "MX7"
+    },
+    {
+      "modelo": "MX6"
+    },
+    {
+      "modelo": "SA7"
+    },
+    {
+      "modelo": "SA6"
+    },
+    {
+      "modelo": "SC3"
+    },
+    {
+      "modelo": "A210"
+    },
+    {
+      "modelo": "X800"
+    },
+    {
+      "modelo": "Z800"
+    },
+    {
+      "modelo": "X700"
+    },
+    {
+      "modelo": "X500"
+    },
+    {
+      "modelo": "X400"
+    },
+    {
+      "modelo": "X300"
+    },
+    {
+      "modelo": "X200"
+    },
+    {
+      "modelo": "X100"
+    },
+    {
+      "modelo": "A500"
+    },
+    {
+      "modelo": "A200"
+    },
+    {
+      "modelo": "A100 Series"
+    },
+    {
+      "modelo": "P341i"
+    },
+    {
+      "modelo": "X68/X77"
+    },
+    {
+      "modelo": "X11"
+    },
+    {
+      "modelo": "G70"
+    },
+    {
+      "modelo": "G51"
+    },
+    {
+      "modelo": "X88"
+    },
+    {
+      "modelo": "X66"
+    },
+    {
+      "modelo": "X70"
+    },
+    {
+      "modelo": "G60"
+    },
+    {
+      "modelo": "G50"
+    },
+    {
+      "modelo": "GD55"
+    },
+    {
+      "modelo": "GD87"
+    },
+    {
+      "modelo": "GD67"
+    },
+    {
+      "modelo": "GD95"
+    },
+    {
+      "modelo": "GD75"
+    },
+    {
+      "modelo": "GD35"
+    },
+    {
+      "modelo": "GD93"
+    },
+    {
+      "modelo": "GD92"
+    },
+    {
+      "modelo": "GD90"
+    },
+    {
+      "modelo": "GD70"
+    },
+    {
+      "modelo": "GD30"
+    },
+    {
+      "modelo": "G600"
+    }
+  ]
+}

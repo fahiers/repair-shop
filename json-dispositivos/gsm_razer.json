@@ -1,0 +1,15 @@
+{
+  "marca": "RAZER",
+  "id_interno": "117",
+  "slug": "razer",
+  "total_esperado": 0,
+  "total_encontrado": 2,
+  "modelos": [
+    {
+      "modelo": "Phone 2"
+    },
+    {
+      "modelo": "Phone"
+    }
+  ]
+}

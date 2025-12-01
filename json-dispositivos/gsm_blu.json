@@ -1,0 +1,1124 @@
+{
+  "marca": "BLU",
+  "id_interno": "67",
+  "slug": "blu",
+  "total_esperado": 0,
+  "total_encontrado": 369,
+  "modelos": [
+    {
+      "modelo": "Bold N3"
+    },
+    {
+      "modelo": "G93"
+    },
+    {
+      "modelo": "G73"
+    },
+    {
+      "modelo": "G63"
+    },
+    {
+      "modelo": "G53"
+    },
+    {
+      "modelo": "G33"
+    },
+    {
+      "modelo": "F92e"
+    },
+    {
+      "modelo": "G72 Max"
+    },
+    {
+      "modelo": "G52L"
+    },
+    {
+      "modelo": "Studio X5 Max"
+    },
+    {
+      "modelo": "Studio X5"
+    },
+    {
+      "modelo": "G40"
+    },
+    {
+      "modelo": "Bold N2"
+    },
+    {
+      "modelo": "Studio X10L 2022"
+    },
+    {
+      "modelo": "S91 Pro"
+    },
+    {
+      "modelo": "J6S"
+    },
+    {
+      "modelo": "C7X"
+    },
+    {
+      "modelo": "S91"
+    },
+    {
+      "modelo": "G51"
+    },
+    {
+      "modelo": "G61s"
+    },
+    {
+      "modelo": "G50 Mega 2022"
+    },
+    {
+      "modelo": "F91"
+    },
+    {
+      "modelo": "G71L"
+    },
+    {
+      "modelo": "G91 Max"
+    },
+    {
+      "modelo": "G71+"
+    },
+    {
+      "modelo": "M8L 2022"
+    },
+    {
+      "modelo": "G51S"
+    },
+    {
+      "modelo": "C5 Max"
+    },
+    {
+      "modelo": "Studio X10 2022"
+    },
+    {
+      "modelo": "C5L Max"
+    },
+    {
+      "modelo": "G91s"
+    },
+    {
+      "modelo": "View 3"
+    },
+    {
+      "modelo": "M8L Plus"
+    },
+    {
+      "modelo": "M8L"
+    },
+    {
+      "modelo": "Studio X10L"
+    },
+    {
+      "modelo": "G91 Pro"
+    },
+    {
+      "modelo": "J9L"
+    },
+    {
+      "modelo": "G51 Plus"
+    },
+    {
+      "modelo": "C7"
+    },
+    {
+      "modelo": "View 2"
+    },
+    {
+      "modelo": "G91"
+    },
+    {
+      "modelo": "G71"
+    },
+    {
+      "modelo": "Studio X12"
+    },
+    {
+      "modelo": "G61"
+    },
+    {
+      "modelo": "Studio X10+"
+    },
+    {
+      "modelo": "A5L"
+    },
+    {
+      "modelo": "M7L"
+    },
+    {
+      "modelo": "View Mega"
+    },
+    {
+      "modelo": "G50 Mega"
+    },
+    {
+      "modelo": "J7L"
+    },
+    {
+      "modelo": "J5L"
+    },
+    {
+      "modelo": "J6 2020"
+    },
+    {
+      "modelo": "C6L 2020"
+    },
+    {
+      "modelo": "C5L 2020"
+    },
+    {
+      "modelo": "C6 2020"
+    },
+    {
+      "modelo": "G50 Plus"
+    },
+    {
+      "modelo": "G50"
+    },
+    {
+      "modelo": "G90 Pro"
+    },
+    {
+      "modelo": "Studio X10"
+    },
+    {
+      "modelo": "G90"
+    },
+    {
+      "modelo": "G80"
+    },
+    {
+      "modelo": "Studio X9 HD"
+    },
+    {
+      "modelo": "J6"
+    },
+    {
+      "modelo": "J4"
+    },
+    {
+      "modelo": "J2"
+    },
+    {
+      "modelo": "Tank Xtreme"
+    },
+    {
+      "modelo": "G70"
+    },
+    {
+      "modelo": "G60"
+    },
+    {
+      "modelo": "View 1"
+    },
+    {
+      "modelo": "C5 Plus"
+    },
+    {
+      "modelo": "C5 2019"
+    },
+    {
+      "modelo": "C6 2019"
+    },
+    {
+      "modelo": "Advance L5"
+    },
+    {
+      "modelo": "Bold N1"
+    },
+    {
+      "modelo": "Studio Mini"
+    },
+    {
+      "modelo": "Vivo XL5"
+    },
+    {
+      "modelo": "Vivo X5"
+    },
+    {
+      "modelo": "G9 Pro"
+    },
+    {
+      "modelo": "Studio Mega 2019"
+    },
+    {
+      "modelo": "G8"
+    },
+    {
+      "modelo": "G6"
+    },
+    {
+      "modelo": "G5 Plus"
+    },
+    {
+      "modelo": "G5"
+    },
+    {
+      "modelo": "G9"
+    },
+    {
+      "modelo": "C5L"
+    },
+    {
+      "modelo": "Studio X8 HD",
+      "ano": "2019"
+    },
+    {
+      "modelo": "C6L"
+    },
+    {
+      "modelo": "Vivo One Plus",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Vivo Go"
+    },
+    {
+      "modelo": "Vivo XL4"
+    },
+    {
+      "modelo": "Studio Mega",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Grand M2",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Advance L4"
+    },
+    {
+      "modelo": "Vivo XI"
+    },
+    {
+      "modelo": "Vivo XI+"
+    },
+    {
+      "modelo": "C5"
+    },
+    {
+      "modelo": "C4"
+    },
+    {
+      "modelo": "Studio G4"
+    },
+    {
+      "modelo": "C6"
+    },
+    {
+      "modelo": "Grand M3"
+    },
+    {
+      "modelo": "Pure View"
+    },
+    {
+      "modelo": "Studio View"
+    },
+    {
+      "modelo": "Vivo XL3"
+    },
+    {
+      "modelo": "Vivo One Plus"
+    },
+    {
+      "modelo": "Dash L4"
+    },
+    {
+      "modelo": "X Link"
+    },
+    {
+      "modelo": "Vivo XL3 Plus"
+    },
+    {
+      "modelo": "Vivo X"
+    },
+    {
+      "modelo": "Studio J8M LTE"
+    },
+    {
+      "modelo": "Vivo One"
+    },
+    {
+      "modelo": "Studio View XL"
+    },
+    {
+      "modelo": "Dash L5 LTE"
+    },
+    {
+      "modelo": "Dash L4 LTE"
+    },
+    {
+      "modelo": "Grand 5.5 HD II"
+    },
+    {
+      "modelo": "Life One X3"
+    },
+    {
+      "modelo": "R2 Plus"
+    },
+    {
+      "modelo": "Studio G3"
+    },
+    {
+      "modelo": "Grand M2 LTE"
+    },
+    {
+      "modelo": "C5 LTE"
+    },
+    {
+      "modelo": "Grand M2"
+    },
+    {
+      "modelo": "C5",
+      "ano": "2017"
+    },
+    {
+      "modelo": "S1"
+    },
+    {
+      "modelo": "Grand XL LTE"
+    },
+    {
+      "modelo": "Touchbook M7"
+    },
+    {
+      "modelo": "Studio Pro"
+    },
+    {
+      "modelo": "Studio G Mini"
+    },
+    {
+      "modelo": "Vivo 8"
+    },
+    {
+      "modelo": "Studio J8"
+    },
+    {
+      "modelo": "Studio J8 LTE"
+    },
+    {
+      "modelo": "Touchbook M7 Pro"
+    },
+    {
+      "modelo": "Grand Mini"
+    },
+    {
+      "modelo": "R2 LTE"
+    },
+    {
+      "modelo": "R2"
+    },
+    {
+      "modelo": "Tank Xtreme Pro"
+    },
+    {
+      "modelo": "Studio J1"
+    },
+    {
+      "modelo": "Grand X LTE"
+    },
+    {
+      "modelo": "Grand XL"
+    },
+    {
+      "modelo": "Studio J2"
+    },
+    {
+      "modelo": "Studio Mega"
+    },
+    {
+      "modelo": "R1 Plus"
+    },
+    {
+      "modelo": "Studio Selfie LTE"
+    },
+    {
+      "modelo": "Life One X2 Mini"
+    },
+    {
+      "modelo": "Dash L3"
+    },
+    {
+      "modelo": "Advance 4.0 L3"
+    },
+    {
+      "modelo": "Vivo XL2"
+    },
+    {
+      "modelo": "Vivo 5 Mini"
+    },
+    {
+      "modelo": "Grand Max"
+    },
+    {
+      "modelo": "Grand Energy"
+    },
+    {
+      "modelo": "Grand M"
+    },
+    {
+      "modelo": "Grand X"
+    },
+    {
+      "modelo": "Studio J5"
+    },
+    {
+      "modelo": "Tank Xtreme 5.0"
+    },
+    {
+      "modelo": "Tank Xtreme 4.0"
+    },
+    {
+      "modelo": "Tank Xtreme 2.4"
+    },
+    {
+      "modelo": "Energy X Plus 2"
+    },
+    {
+      "modelo": "Studio Max"
+    },
+    {
+      "modelo": "Studio G2 HD"
+    },
+    {
+      "modelo": "Life Max"
+    },
+    {
+      "modelo": "Advance 4.0 M"
+    },
+    {
+      "modelo": "Dash XL"
+    },
+    {
+      "modelo": "Dash G"
+    },
+    {
+      "modelo": "Vivo 6"
+    },
+    {
+      "modelo": "Studio XL2"
+    },
+    {
+      "modelo": "Studio G Max"
+    },
+    {
+      "modelo": "Studio G Plus HD"
+    },
+    {
+      "modelo": "Life One X2"
+    },
+    {
+      "modelo": "Vivo 5R"
+    },
+    {
+      "modelo": "Pure XR"
+    },
+    {
+      "modelo": "Studio G HD LTE"
+    },
+    {
+      "modelo": "Studio G2"
+    },
+    {
+      "modelo": "Studio M LTE"
+    },
+    {
+      "modelo": "Studio C 8+8"
+    },
+    {
+      "modelo": "Studio C 8+8 LTE"
+    },
+    {
+      "modelo": "Energy Diamond"
+    },
+    {
+      "modelo": "Diamond M"
+    },
+    {
+      "modelo": "Energy M"
+    },
+    {
+      "modelo": "Neo X LTE"
+    },
+    {
+      "modelo": "R1 HD"
+    },
+    {
+      "modelo": "Grand 5.5 HD"
+    },
+    {
+      "modelo": "Energy Diamond Mini"
+    },
+    {
+      "modelo": "Dash 4.5",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Neo X Mini"
+    },
+    {
+      "modelo": "Energy XL"
+    },
+    {
+      "modelo": "Touch Book M7"
+    },
+    {
+      "modelo": "Studio Touch"
+    },
+    {
+      "modelo": "Dash L2"
+    },
+    {
+      "modelo": "Studio Selfie 2"
+    },
+    {
+      "modelo": "Neo XL"
+    },
+    {
+      "modelo": "Neo X"
+    },
+    {
+      "modelo": "Studio X8 HD"
+    },
+    {
+      "modelo": "Energy JR"
+    },
+    {
+      "modelo": "Advance 4.0 L2"
+    },
+    {
+      "modelo": "Dash X2"
+    },
+    {
+      "modelo": "Dash M2"
+    },
+    {
+      "modelo": "Studio X Mini"
+    },
+    {
+      "modelo": "Life Mark"
+    },
+    {
+      "modelo": "Studio One Plus"
+    },
+    {
+      "modelo": "Studio One"
+    },
+    {
+      "modelo": "Dash X Plus LTE"
+    },
+    {
+      "modelo": "Energy X LTE"
+    },
+    {
+      "modelo": "Life XL"
+    },
+    {
+      "modelo": "Studio 5.5 HD"
+    },
+    {
+      "modelo": "Energy X 2"
+    },
+    {
+      "modelo": "Neo X Plus"
+    },
+    {
+      "modelo": "Studio G HD"
+    },
+    {
+      "modelo": "Studio M HD"
+    },
+    {
+      "modelo": "Studio C HD"
+    },
+    {
+      "modelo": "Vivo XL"
+    },
+    {
+      "modelo": "Vivo 5"
+    },
+    {
+      "modelo": "Life One X",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Studio G Plus"
+    },
+    {
+      "modelo": "Dash X LTE"
+    },
+    {
+      "modelo": "Studio 7.0 LTE"
+    },
+    {
+      "modelo": "Dash L"
+    },
+    {
+      "modelo": "Studio G LTE"
+    },
+    {
+      "modelo": "Dash M"
+    },
+    {
+      "modelo": "Dash X"
+    },
+    {
+      "modelo": "Studio Energy 2"
+    },
+    {
+      "modelo": "Dash X Plus"
+    },
+    {
+      "modelo": "Energy X"
+    },
+    {
+      "modelo": "Pure XL"
+    },
+    {
+      "modelo": "Vivo Air LTE"
+    },
+    {
+      "modelo": "Studio XL"
+    },
+    {
+      "modelo": "Life X8"
+    },
+    {
+      "modelo": "Touchbook G7"
+    },
+    {
+      "modelo": "Studio 7.0 II"
+    },
+    {
+      "modelo": "Studio C Super Camera"
+    },
+    {
+      "modelo": "Vivo Selfie"
+    },
+    {
+      "modelo": "Energy X Plus"
+    },
+    {
+      "modelo": "Studio C 5 + 5 LTE"
+    },
+    {
+      "modelo": "Studio C 5 + 5"
+    },
+    {
+      "modelo": "Life 8 XL"
+    },
+    {
+      "modelo": "Studio 5.5C"
+    },
+    {
+      "modelo": "Studio C"
+    },
+    {
+      "modelo": "Advance 4.0 L"
+    },
+    {
+      "modelo": "Selfie"
+    },
+    {
+      "modelo": "Win HD LTE"
+    },
+    {
+      "modelo": "Win JR LTE"
+    },
+    {
+      "modelo": "Life One",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Life One XL"
+    },
+    {
+      "modelo": "Studio Energy"
+    },
+    {
+      "modelo": "Studio G"
+    },
+    {
+      "modelo": "Studio X Plus"
+    },
+    {
+      "modelo": "Studio X"
+    },
+    {
+      "modelo": "Vivo Air"
+    },
+    {
+      "modelo": "Studio 6.0 LTE"
+    },
+    {
+      "modelo": "Studio 5.0 HD LTE"
+    },
+    {
+      "modelo": "Studio Mini LTE"
+    },
+    {
+      "modelo": "Studio 7.0"
+    },
+    {
+      "modelo": "Sport 4.5"
+    },
+    {
+      "modelo": "Life View 8.0"
+    },
+    {
+      "modelo": "Life Play Mini"
+    },
+    {
+      "modelo": "Dash Music JR"
+    },
+    {
+      "modelo": "Dash C Music"
+    },
+    {
+      "modelo": "Win JR"
+    },
+    {
+      "modelo": "Win HD"
+    },
+    {
+      "modelo": "Studio 5.0 C HD"
+    },
+    {
+      "modelo": "Studio C Mini"
+    },
+    {
+      "modelo": "Studio 5.0 C"
+    },
+    {
+      "modelo": "Studio 5.0 CE"
+    },
+    {
+      "modelo": "Vivo IV"
+    },
+    {
+      "modelo": "Life 8"
+    },
+    {
+      "modelo": "Life Pure XL"
+    },
+    {
+      "modelo": "Studio 5.0 LTE"
+    },
+    {
+      "modelo": "Studio 6.0 HD"
+    },
+    {
+      "modelo": "Neo 4.5"
+    },
+    {
+      "modelo": "Neo 3.5"
+    },
+    {
+      "modelo": "Studio 5.0 S II"
+    },
+    {
+      "modelo": "Studio 5.0 E"
+    },
+    {
+      "modelo": "Studio 5.5 S"
+    },
+    {
+      "modelo": "Life Pure Mini"
+    },
+    {
+      "modelo": "Vivo 4.8 HD"
+    },
+    {
+      "modelo": "Life View Tab"
+    },
+    {
+      "modelo": "Life Play S"
+    },
+    {
+      "modelo": "Life One X"
+    },
+    {
+      "modelo": "Life One M"
+    },
+    {
+      "modelo": "Life Play X"
+    },
+    {
+      "modelo": "Life Pure"
+    },
+    {
+      "modelo": "Studio 5.0 II"
+    },
+    {
+      "modelo": "Advance 4.0"
+    },
+    {
+      "modelo": "Life Pro"
+    },
+    {
+      "modelo": "Studio 5.5"
+    },
+    {
+      "modelo": "Samba W"
+    },
+    {
+      "modelo": "Samba TV"
+    },
+    {
+      "modelo": "Jenny TV 2.8"
+    },
+    {
+      "modelo": "Zoey"
+    },
+    {
+      "modelo": "Dash 5.0"
+    },
+    {
+      "modelo": "Dash Music 4.0"
+    },
+    {
+      "modelo": "Dash JR"
+    },
+    {
+      "modelo": "Dash 4.5"
+    },
+    {
+      "modelo": "Amour"
+    },
+    {
+      "modelo": "Studio 5.3 S"
+    },
+    {
+      "modelo": "Studio 5.0 S"
+    },
+    {
+      "modelo": "Studio 5.0"
+    },
+    {
+      "modelo": "Dash Music"
+    },
+    {
+      "modelo": "Diva X"
+    },
+    {
+      "modelo": "Diva"
+    },
+    {
+      "modelo": "Tattoo S"
+    },
+    {
+      "modelo": "Life View"
+    },
+    {
+      "modelo": "Life One"
+    },
+    {
+      "modelo": "Life Play"
+    },
+    {
+      "modelo": "Studio 5.3 II"
+    },
+    {
+      "modelo": "Tank 4.5"
+    },
+    {
+      "modelo": "Quattro 5.7 HD"
+    },
+    {
+      "modelo": "Quattro 4.5 HD"
+    },
+    {
+      "modelo": "Quattro 4.5"
+    },
+    {
+      "modelo": "Hero II"
+    },
+    {
+      "modelo": "Dash 4.0"
+    },
+    {
+      "modelo": "Dash 3.2"
+    },
+    {
+      "modelo": "Brooklyn"
+    },
+    {
+      "modelo": "Vivo 4.65 HD"
+    },
+    {
+      "modelo": "Touch Book 9.7"
+    },
+    {
+      "modelo": "Touch Book 7.0 Plus"
+    },
+    {
+      "modelo": "Touch Book 7.0 Lite"
+    },
+    {
+      "modelo": "Dash 3.5"
+    },
+    {
+      "modelo": "Elite 3.8"
+    },
+    {
+      "modelo": "Dash"
+    },
+    {
+      "modelo": "Hero"
+    },
+    {
+      "modelo": "Jenny TV"
+    },
+    {
+      "modelo": "Vivo 4.3"
+    },
+    {
+      "modelo": "Tank"
+    },
+    {
+      "modelo": "Jenny"
+    },
+    {
+      "modelo": "Studio 5.3"
+    },
+    {
+      "modelo": "Touch Book 7.0"
+    },
+    {
+      "modelo": "Neo Pro"
+    },
+    {
+      "modelo": "Neo XT"
+    },
+    {
+      "modelo": "Neo"
+    },
+    {
+      "modelo": "Deco Pro"
+    },
+    {
+      "modelo": "Deco XT"
+    },
+    {
+      "modelo": "Deco"
+    },
+    {
+      "modelo": "Deco Mini"
+    },
+    {
+      "modelo": "Electro"
+    },
+    {
+      "modelo": "Deejay Touch"
+    },
+    {
+      "modelo": "Spark"
+    },
+    {
+      "modelo": "Deejay Flip"
+    },
+    {
+      "modelo": "Tattoo Mini"
+    },
+    {
+      "modelo": "Samba Elite"
+    },
+    {
+      "modelo": "Samba JR"
+    },
+    {
+      "modelo": "Lindy"
+    },
+    {
+      "modelo": "Swing"
+    },
+    {
+      "modelo": "Bar Q"
+    },
+    {
+      "modelo": "Magic"
+    },
+    {
+      "modelo": "Touch"
+    },
+    {
+      "modelo": "Diesel 3G"
+    },
+    {
+      "modelo": "Deejay II"
+    },
+    {
+      "modelo": "Samba Q"
+    },
+    {
+      "modelo": "Ultra"
+    },
+    {
+      "modelo": "Tango"
+    },
+    {
+      "modelo": "Speed"
+    },
+    {
+      "modelo": "Smart"
+    },
+    {
+      "modelo": "Cubo"
+    },
+    {
+      "modelo": "Flash"
+    },
+    {
+      "modelo": "Samba Mini"
+    },
+    {
+      "modelo": "Samba"
+    },
+    {
+      "modelo": "Tattoo"
+    },
+    {
+      "modelo": "Tattoo TV"
+    },
+    {
+      "modelo": "Disco2GO II"
+    },
+    {
+      "modelo": "Deejay"
+    },
+    {
+      "modelo": "Click"
+    },
+    {
+      "modelo": "Brilliant"
+    },
+    {
+      "modelo": "Slim TV"
+    },
+    {
+      "modelo": "TV2Go Lite"
+    },
+    {
+      "modelo": "TV2Go"
+    },
+    {
+      "modelo": "Texting 2 GO"
+    },
+    {
+      "modelo": "EZ2Go"
+    },
+    {
+      "modelo": "Kick"
+    },
+    {
+      "modelo": "Vida1"
+    },
+    {
+      "modelo": "Gol"
+    },
+    {
+      "modelo": "Dual SIM Lite"
+    }
+  ]
+}

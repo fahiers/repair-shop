@@ -1,0 +1,168 @@
+{
+  "marca": "ITEL",
+  "id_interno": "131",
+  "slug": "itel",
+  "total_esperado": 0,
+  "total_encontrado": 53,
+  "modelos": [
+    {
+      "modelo": "TS Pro"
+    },
+    {
+      "modelo": "A100C"
+    },
+    {
+      "modelo": "A100"
+    },
+    {
+      "modelo": "A95"
+    },
+    {
+      "modelo": "A90 Limited"
+    },
+    {
+      "modelo": "Super 26 Ultra"
+    },
+    {
+      "modelo": "Zeno 20"
+    },
+    {
+      "modelo": "City 100"
+    },
+    {
+      "modelo": "A90"
+    },
+    {
+      "modelo": "Power 70"
+    },
+    {
+      "modelo": "Zeno 10"
+    },
+    {
+      "modelo": "S25 Ultra"
+    },
+    {
+      "modelo": "S25"
+    },
+    {
+      "modelo": "VistaTab 30"
+    },
+    {
+      "modelo": "A80"
+    },
+    {
+      "modelo": "A50C"
+    },
+    {
+      "modelo": "P65"
+    },
+    {
+      "modelo": "Color Pro"
+    },
+    {
+      "modelo": "A50"
+    },
+    {
+      "modelo": "RS4"
+    },
+    {
+      "modelo": "S24"
+    },
+    {
+      "modelo": "P55+"
+    },
+    {
+      "modelo": "P55"
+    },
+    {
+      "modelo": "A70"
+    },
+    {
+      "modelo": "P55 5G"
+    },
+    {
+      "modelo": "S23+"
+    },
+    {
+      "modelo": "S23"
+    },
+    {
+      "modelo": "S18 Pro"
+    },
+    {
+      "modelo": "P40+"
+    },
+    {
+      "modelo": "Pad One"
+    },
+    {
+      "modelo": "Smartwatch 2ES"
+    },
+    {
+      "modelo": "Smart Watch 2"
+    },
+    {
+      "modelo": "P40"
+    },
+    {
+      "modelo": "A60s"
+    },
+    {
+      "modelo": "A05s"
+    },
+    {
+      "modelo": "S18"
+    },
+    {
+      "modelo": "P38 Pro"
+    },
+    {
+      "modelo": "P38"
+    },
+    {
+      "modelo": "A60"
+    },
+    {
+      "modelo": "A04"
+    },
+    {
+      "modelo": "Vision 3 Turbo"
+    },
+    {
+      "modelo": "Vision 3"
+    },
+    {
+      "modelo": "A23S"
+    },
+    {
+      "modelo": "A27"
+    },
+    {
+      "modelo": "A49"
+    },
+    {
+      "modelo": "A48"
+    },
+    {
+      "modelo": "Vision 2S"
+    },
+    {
+      "modelo": "A23 Pro"
+    },
+    {
+      "modelo": "Vision 2"
+    },
+    {
+      "modelo": "A25"
+    },
+    {
+      "modelo": "Smartwatch 1GS"
+    },
+    {
+      "modelo": "Smartwatch 1ES"
+    },
+    {
+      "modelo": "Smart Watch 1"
+    }
+  ]
+}

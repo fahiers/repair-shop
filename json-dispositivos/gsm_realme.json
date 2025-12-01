@@ -1,0 +1,812 @@
+{
+  "marca": "REALME",
+  "id_interno": "118",
+  "slug": "realme",
+  "total_esperado": 0,
+  "total_encontrado": 267,
+  "modelos": [
+    {
+      "modelo": "C85 Pro"
+    },
+    {
+      "modelo": "C85"
+    },
+    {
+      "modelo": "GT 8 Pro"
+    },
+    {
+      "modelo": "GT8 (China)"
+    },
+    {
+      "modelo": "15x (India)"
+    },
+    {
+      "modelo": "15 Lite"
+    },
+    {
+      "modelo": "Watch 5"
+    },
+    {
+      "modelo": "15"
+    },
+    {
+      "modelo": "15T"
+    },
+    {
+      "modelo": "P4"
+    },
+    {
+      "modelo": "P4 Pro"
+    },
+    {
+      "modelo": "Narzo 80 Lite"
+    },
+    {
+      "modelo": "15 Pro"
+    },
+    {
+      "modelo": "15 (India)"
+    },
+    {
+      "modelo": "Note 70T"
+    },
+    {
+      "modelo": "Narzo 80 Lite 5G"
+    },
+    {
+      "modelo": "C73"
+    },
+    {
+      "modelo": "C71"
+    },
+    {
+      "modelo": "Neo7 Turbo"
+    },
+    {
+      "modelo": "GT 7T"
+    },
+    {
+      "modelo": "GT 7"
+    },
+    {
+      "modelo": "C75"
+    },
+    {
+      "modelo": "14T"
+    },
+    {
+      "modelo": "GT7 (China)"
+    },
+    {
+      "modelo": "Narzo 80 Pro"
+    },
+    {
+      "modelo": "Narzo 80x"
+    },
+    {
+      "modelo": "14"
+    },
+    {
+      "modelo": "C75x"
+    },
+    {
+      "modelo": "P3 Ultra"
+    },
+    {
+      "modelo": "P3"
+    },
+    {
+      "modelo": "14 Pro Lite"
+    },
+    {
+      "modelo": "Neo7 SE"
+    },
+    {
+      "modelo": "Neo7x"
+    },
+    {
+      "modelo": "P3 Pro"
+    },
+    {
+      "modelo": "P3x"
+    },
+    {
+      "modelo": "GT7 Pro Racing"
+    },
+    {
+      "modelo": "14x"
+    },
+    {
+      "modelo": "14 Pro"
+    },
+    {
+      "modelo": "14 Pro+"
+    },
+    {
+      "modelo": "14x (India)"
+    },
+    {
+      "modelo": "Neo7"
+    },
+    {
+      "modelo": "Note 60x"
+    },
+    {
+      "modelo": "V60 pro"
+    },
+    {
+      "modelo": "C75 4G"
+    },
+    {
+      "modelo": "GT 7 Pro"
+    },
+    {
+      "modelo": "P1 Speed"
+    },
+    {
+      "modelo": "P2 Pro"
+    },
+    {
+      "modelo": "Pad 2 Lite"
+    },
+    {
+      "modelo": "Narzo 70 Turbo"
+    },
+    {
+      "modelo": "Note 60"
+    },
+    {
+      "modelo": "13+"
+    },
+    {
+      "modelo": "13"
+    },
+    {
+      "modelo": "C63 5G"
+    },
+    {
+      "modelo": "13 4G"
+    },
+    {
+      "modelo": "13 Pro+"
+    },
+    {
+      "modelo": "13 Pro"
+    },
+    {
+      "modelo": "Watch S2"
+    },
+    {
+      "modelo": "Narzo N61"
+    },
+    {
+      "modelo": "C61"
+    },
+    {
+      "modelo": "GT6 (China)"
+    },
+    {
+      "modelo": "C61 (India)"
+    },
+    {
+      "modelo": "12 4G"
+    },
+    {
+      "modelo": "V60"
+    },
+    {
+      "modelo": "GT 6"
+    },
+    {
+      "modelo": "Narzo N63"
+    },
+    {
+      "modelo": "C63"
+    },
+    {
+      "modelo": "Narzo N65"
+    },
+    {
+      "modelo": "GT 6T"
+    },
+    {
+      "modelo": "GT Neo6"
+    },
+    {
+      "modelo": "C65 5G"
+    },
+    {
+      "modelo": "Narzo 70"
+    },
+    {
+      "modelo": "Narzo 70x"
+    },
+    {
+      "modelo": "12 Lite"
+    },
+    {
+      "modelo": "P1 Pro"
+    },
+    {
+      "modelo": "P1"
+    },
+    {
+      "modelo": "GT Neo6 SE"
+    },
+    {
+      "modelo": "12x (India)"
+    },
+    {
+      "modelo": "C65"
+    },
+    {
+      "modelo": "12x"
+    },
+    {
+      "modelo": "Narzo 70 Pro"
+    },
+    {
+      "modelo": "C51s"
+    },
+    {
+      "modelo": "12"
+    },
+    {
+      "modelo": "12+"
+    },
+    {
+      "modelo": "12 Pro+"
+    },
+    {
+      "modelo": "12 Pro"
+    },
+    {
+      "modelo": "Note 50"
+    },
+    {
+      "modelo": "C67 4G"
+    },
+    {
+      "modelo": "C67"
+    },
+    {
+      "modelo": "V50s"
+    },
+    {
+      "modelo": "GT5 Pro"
+    },
+    {
+      "modelo": "Narzo 60x"
+    },
+    {
+      "modelo": "GT5 240W"
+    },
+    {
+      "modelo": "GT5"
+    },
+    {
+      "modelo": "11x"
+    },
+    {
+      "modelo": "11 4G"
+    },
+    {
+      "modelo": "11"
+    },
+    {
+      "modelo": "C51"
+    },
+    {
+      "modelo": "C53 (India)"
+    },
+    {
+      "modelo": "Pad 2"
+    },
+    {
+      "modelo": "GT3"
+    },
+    {
+      "modelo": "Narzo 60 Pro"
+    },
+    {
+      "modelo": "Narzo 60"
+    },
+    {
+      "modelo": "C53"
+    },
+    {
+      "modelo": "Narzo N53"
+    },
+    {
+      "modelo": "11 Pro+"
+    },
+    {
+      "modelo": "11 Pro"
+    },
+    {
+      "modelo": "11 (China)"
+    },
+    {
+      "modelo": "Narzo N55"
+    },
+    {
+      "modelo": "GT Neo5 SE"
+    },
+    {
+      "modelo": "10T"
+    },
+    {
+      "modelo": "C33 2023"
+    },
+    {
+      "modelo": "C55"
+    },
+    {
+      "modelo": "GT Neo 5 240W"
+    },
+    {
+      "modelo": "GT Neo 5"
+    },
+    {
+      "modelo": "V30"
+    },
+    {
+      "modelo": "10s"
+    },
+    {
+      "modelo": "V20"
+    },
+    {
+      "modelo": "10 Pro+"
+    },
+    {
+      "modelo": "10 Pro"
+    },
+    {
+      "modelo": "10 5G"
+    },
+    {
+      "modelo": "10"
+    },
+    {
+      "modelo": "C30s"
+    },
+    {
+      "modelo": "C33"
+    },
+    {
+      "modelo": "Watch 3 Pro"
+    },
+    {
+      "modelo": "9i 5G"
+    },
+    {
+      "modelo": "Watch 3"
+    },
+    {
+      "modelo": "GT2 Explorer Master"
+    },
+    {
+      "modelo": "TechLife Watch R100"
+    },
+    {
+      "modelo": "Narzo 50i Prime"
+    },
+    {
+      "modelo": "C30"
+    },
+    {
+      "modelo": "GT Neo 3T"
+    },
+    {
+      "modelo": "Pad X"
+    },
+    {
+      "modelo": "Narzo 50 Pro"
+    },
+    {
+      "modelo": "Narzo 50 5G"
+    },
+    {
+      "modelo": "9 5G"
+    },
+    {
+      "modelo": "V23i"
+    },
+    {
+      "modelo": "V23"
+    },
+    {
+      "modelo": "Q5 Pro"
+    },
+    {
+      "modelo": "Q5"
+    },
+    {
+      "modelo": "Q5i"
+    },
+    {
+      "modelo": "9"
+    },
+    {
+      "modelo": "Pad Mini"
+    },
+    {
+      "modelo": "C31"
+    },
+    {
+      "modelo": "GT Neo 3 150W"
+    },
+    {
+      "modelo": "GT Neo 3"
+    },
+    {
+      "modelo": "Narzo 50A Prime"
+    },
+    {
+      "modelo": "TechLife Watch S100"
+    },
+    {
+      "modelo": "9 5G (India)"
+    },
+    {
+      "modelo": "9 5G Speed"
+    },
+    {
+      "modelo": "V25"
+    },
+    {
+      "modelo": "Narzo 50"
+    },
+    {
+      "modelo": "9 Pro+"
+    },
+    {
+      "modelo": "9 Pro"
+    },
+    {
+      "modelo": "C35"
+    },
+    {
+      "modelo": "9i"
+    },
+    {
+      "modelo": "GT2 Pro"
+    },
+    {
+      "modelo": "GT2"
+    },
+    {
+      "modelo": "Q3t"
+    },
+    {
+      "modelo": "GT Neo2T"
+    },
+    {
+      "modelo": "Q3s"
+    },
+    {
+      "modelo": "Watch T1"
+    },
+    {
+      "modelo": "Narzo 50A"
+    },
+    {
+      "modelo": "Narzo 50i"
+    },
+    {
+      "modelo": "V11s 5G"
+    },
+    {
+      "modelo": "GT Neo2"
+    },
+    {
+      "modelo": "C25Y"
+    },
+    {
+      "modelo": "8s 5G"
+    },
+    {
+      "modelo": "8i"
+    },
+    {
+      "modelo": "Pad"
+    },
+    {
+      "modelo": "GT Explorer Master"
+    },
+    {
+      "modelo": "GT Master"
+    },
+    {
+      "modelo": "C21Y"
+    },
+    {
+      "modelo": "C11",
+      "ano": "2021"
+    },
+    {
+      "modelo": "C25s"
+    },
+    {
+      "modelo": "X7 Max 5G"
+    },
+    {
+      "modelo": "Narzo 30 5G"
+    },
+    {
+      "modelo": "Q3 Pro Carnival"
+    },
+    {
+      "modelo": "GT Neo Flash"
+    },
+    {
+      "modelo": "Narzo 30"
+    },
+    {
+      "modelo": "C20A"
+    },
+    {
+      "modelo": "Watch 2 Pro"
+    },
+    {
+      "modelo": "Watch 2"
+    },
+    {
+      "modelo": "Q3 Pro 5G"
+    },
+    {
+      "modelo": "Q3 5G"
+    },
+    {
+      "modelo": "Q3i 5G"
+    },
+    {
+      "modelo": "8 5G"
+    },
+    {
+      "modelo": "X7 Pro Ultra"
+    },
+    {
+      "modelo": "GT Neo"
+    },
+    {
+      "modelo": "V13 5G"
+    },
+    {
+      "modelo": "8 Pro"
+    },
+    {
+      "modelo": "8"
+    },
+    {
+      "modelo": "C25"
+    },
+    {
+      "modelo": "C21"
+    },
+    {
+      "modelo": "GT 5G"
+    },
+    {
+      "modelo": "Narzo 30 Pro 5G"
+    },
+    {
+      "modelo": "Narzo 30A"
+    },
+    {
+      "modelo": "V11 5G"
+    },
+    {
+      "modelo": "C20"
+    },
+    {
+      "modelo": "X7 (India)"
+    },
+    {
+      "modelo": "V15 5G"
+    },
+    {
+      "modelo": "Watch S Pro"
+    },
+    {
+      "modelo": "7i (Global)"
+    },
+    {
+      "modelo": "7 5G"
+    },
+    {
+      "modelo": "Watch S"
+    },
+    {
+      "modelo": "C15 Qualcomm Edition"
+    },
+    {
+      "modelo": "Q2 Pro"
+    },
+    {
+      "modelo": "Q2"
+    },
+    {
+      "modelo": "Q2i"
+    },
+    {
+      "modelo": "7"
+    },
+    {
+      "modelo": "Narzo 20 Pro"
+    },
+    {
+      "modelo": "Narzo 20"
+    },
+    {
+      "modelo": "Narzo 20A"
+    },
+    {
+      "modelo": "C17"
+    },
+    {
+      "modelo": "7i"
+    },
+    {
+      "modelo": "7 Pro"
+    },
+    {
+      "modelo": "7 (Asia)"
+    },
+    {
+      "modelo": "X7 Pro"
+    },
+    {
+      "modelo": "X7"
+    },
+    {
+      "modelo": "V3"
+    },
+    {
+      "modelo": "C12"
+    },
+    {
+      "modelo": "V5 5G"
+    },
+    {
+      "modelo": "C15"
+    },
+    {
+      "modelo": "6i (India)"
+    },
+    {
+      "modelo": "X50 5G"
+    },
+    {
+      "modelo": "C11"
+    },
+    {
+      "modelo": "X3"
+    },
+    {
+      "modelo": "C3i"
+    },
+    {
+      "modelo": "Narzo"
+    },
+    {
+      "modelo": "X3 SuperZoom"
+    },
+    {
+      "modelo": "6S"
+    },
+    {
+      "modelo": "X50 Pro Player"
+    },
+    {
+      "modelo": "Watch"
+    },
+    {
+      "modelo": "Narzo 10"
+    },
+    {
+      "modelo": "Narzo 10A"
+    },
+    {
+      "modelo": "X50m 5G"
+    },
+    {
+      "modelo": "6i"
+    },
+    {
+      "modelo": "6 Pro"
+    },
+    {
+      "modelo": "6"
+    },
+    {
+      "modelo": "X50 Pro 5G"
+    },
+    {
+      "modelo": "C3 (3 cameras)"
+    },
+    {
+      "modelo": "C3"
+    },
+    {
+      "modelo": "X50 5G (China)"
+    },
+    {
+      "modelo": "5i"
+    },
+    {
+      "modelo": "5s"
+    },
+    {
+      "modelo": "C2s"
+    },
+    {
+      "modelo": "C2 2020"
+    },
+    {
+      "modelo": "X2 Pro"
+    },
+    {
+      "modelo": "X2"
+    },
+    {
+      "modelo": "XT"
+    },
+    {
+      "modelo": "Q"
+    },
+    {
+      "modelo": "5 Pro"
+    },
+    {
+      "modelo": "5"
+    },
+    {
+      "modelo": "3i"
+    },
+    {
+      "modelo": "X"
+    },
+    {
+      "modelo": "3 Pro"
+    },
+    {
+      "modelo": "C2"
+    },
+    {
+      "modelo": "3"
+    },
+    {
+      "modelo": "C1",
+      "ano": "2019"
+    },
+    {
+      "modelo": "U1"
+    },
+    {
+      "modelo": "2 Pro"
+    },
+    {
+      "modelo": "C1"
+    },
+    {
+      "modelo": "2"
+    },
+    {
+      "modelo": "1"
+    },
+    {
+      "modelo": "V21"
+    },
+    {
+      "modelo": "X9 Pro"
+    },
+    {
+      "modelo": "X9"
+    },
+    {
+      "modelo": "XT 730G"
+    }
+  ]
+}

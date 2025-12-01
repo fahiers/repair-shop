@@ -1,0 +1,228 @@
+{
+  "marca": "NEC",
+  "id_interno": "12",
+  "slug": "nec",
+  "total_esperado": 0,
+  "total_encontrado": 73,
+  "modelos": [
+    {
+      "modelo": "Terrain"
+    },
+    {
+      "modelo": "804N"
+    },
+    {
+      "modelo": "e1108"
+    },
+    {
+      "modelo": "N344i"
+    },
+    {
+      "modelo": "e373"
+    },
+    {
+      "modelo": "e636"
+    },
+    {
+      "modelo": "N500i"
+    },
+    {
+      "modelo": "N500iS"
+    },
+    {
+      "modelo": "N908"
+    },
+    {
+      "modelo": "N938"
+    },
+    {
+      "modelo": "e353"
+    },
+    {
+      "modelo": "e121"
+    },
+    {
+      "modelo": "e122"
+    },
+    {
+      "modelo": "e949/L1"
+    },
+    {
+      "modelo": "N600i"
+    },
+    {
+      "modelo": "e540/N411i"
+    },
+    {
+      "modelo": "N401i"
+    },
+    {
+      "modelo": "N343i"
+    },
+    {
+      "modelo": "N900iG"
+    },
+    {
+      "modelo": "N200"
+    },
+    {
+      "modelo": "N160"
+    },
+    {
+      "modelo": "N923"
+    },
+    {
+      "modelo": "N150"
+    },
+    {
+      "modelo": "e238"
+    },
+    {
+      "modelo": "N940"
+    },
+    {
+      "modelo": "N930"
+    },
+    {
+      "modelo": "N630"
+    },
+    {
+      "modelo": "N850"
+    },
+    {
+      "modelo": "N840"
+    },
+    {
+      "modelo": "N750"
+    },
+    {
+      "modelo": "802"
+    },
+    {
+      "modelo": "N500"
+    },
+    {
+      "modelo": "N342i"
+    },
+    {
+      "modelo": "e101"
+    },
+    {
+      "modelo": "N110"
+    },
+    {
+      "modelo": "N109"
+    },
+    {
+      "modelo": "N100"
+    },
+    {
+      "modelo": "N920"
+    },
+    {
+      "modelo": "e338"
+    },
+    {
+      "modelo": "N620"
+    },
+    {
+      "modelo": "N610"
+    },
+    {
+      "modelo": "e228"
+    },
+    {
+      "modelo": "N410i"
+    },
+    {
+      "modelo": "N400i"
+    },
+    {
+      "modelo": "N331i"
+    },
+    {
+      "modelo": "e313"
+    },
+    {
+      "modelo": "N910"
+    },
+    {
+      "modelo": "N900"
+    },
+    {
+      "modelo": "N830"
+    },
+    {
+      "modelo": "N820"
+    },
+    {
+      "modelo": "N710"
+    },
+    {
+      "modelo": "N700"
+    },
+    {
+      "modelo": "N600"
+    },
+    {
+      "modelo": "c616v"
+    },
+    {
+      "modelo": "e616"
+    },
+    {
+      "modelo": "e808y"
+    },
+    {
+      "modelo": "e808"
+    },
+    {
+      "modelo": "e606"
+    },
+    {
+      "modelo": "e530"
+    },
+    {
+      "modelo": "e525"
+    },
+    {
+      "modelo": "e232"
+    },
+    {
+      "modelo": "N341i"
+    },
+    {
+      "modelo": "N223i"
+    },
+    {
+      "modelo": "N22i"
+    },
+    {
+      "modelo": "N21i"
+    },
+    {
+      "modelo": "DB7000"
+    },
+    {
+      "modelo": "DB6000"
+    },
+    {
+      "modelo": "DB5000"
+    },
+    {
+      "modelo": "DB4100"
+    },
+    {
+      "modelo": "DB4000"
+    },
+    {
+      "modelo": "DB2000"
+    },
+    {
+      "modelo": "DB500"
+    },
+    {
+      "modelo": "G9D+"
+    }
+  ]
+}

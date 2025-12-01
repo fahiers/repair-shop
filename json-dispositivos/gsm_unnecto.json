@@ -1,0 +1,99 @@
+{
+  "marca": "UNNECTO",
+  "id_interno": "91",
+  "slug": "unnecto",
+  "total_esperado": 0,
+  "total_encontrado": 30,
+  "modelos": [
+    {
+      "modelo": "Bolt"
+    },
+    {
+      "modelo": "Neo V"
+    },
+    {
+      "modelo": "Quattro S"
+    },
+    {
+      "modelo": "Quattro V"
+    },
+    {
+      "modelo": "Drone XS"
+    },
+    {
+      "modelo": "Primo 2G"
+    },
+    {
+      "modelo": "Omnia"
+    },
+    {
+      "modelo": "Swift"
+    },
+    {
+      "modelo": "Quattro X"
+    },
+    {
+      "modelo": "Drone XL"
+    },
+    {
+      "modelo": "Drone X"
+    },
+    {
+      "modelo": "Air 5.5"
+    },
+    {
+      "modelo": "Air 5.0"
+    },
+    {
+      "modelo": "Air 4.5"
+    },
+    {
+      "modelo": "Rush"
+    },
+    {
+      "modelo": "Quattro Z"
+    },
+    {
+      "modelo": "Drone Z"
+    },
+    {
+      "modelo": "Quattro"
+    },
+    {
+      "modelo": "Blaze"
+    },
+    {
+      "modelo": "Drone"
+    },
+    {
+      "modelo": "Tap"
+    },
+    {
+      "modelo": "Pro Z"
+    },
+    {
+      "modelo": "Pro"
+    },
+    {
+      "modelo": "Edge"
+    },
+    {
+      "modelo": "Shell"
+    },
+    {
+      "modelo": "Pebble"
+    },
+    {
+      "modelo": "Drift"
+    },
+    {
+      "modelo": "Eco"
+    },
+    {
+      "modelo": "Primo 3G"
+    },
+    {
+      "modelo": "Primo"
+    }
+  ]
+}

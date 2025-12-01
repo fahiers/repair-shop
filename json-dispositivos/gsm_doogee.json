@@ -1,0 +1,444 @@
+{
+  "marca": "DOOGEE",
+  "id_interno": "129",
+  "slug": "doogee",
+  "total_esperado": 0,
+  "total_encontrado": 145,
+  "modelos": [
+    {
+      "modelo": "S200 Ultra"
+    },
+    {
+      "modelo": "Note 58"
+    },
+    {
+      "modelo": "Note 58 Pro"
+    },
+    {
+      "modelo": "Fire 5"
+    },
+    {
+      "modelo": "V Max Play"
+    },
+    {
+      "modelo": "V Max LR"
+    },
+    {
+      "modelo": "S200 Max"
+    },
+    {
+      "modelo": "Fire 3 Ultra"
+    },
+    {
+      "modelo": "Fire 3 Pro"
+    },
+    {
+      "modelo": "Fire 7"
+    },
+    {
+      "modelo": "Blade GT Pro"
+    },
+    {
+      "modelo": "Blade GT Play"
+    },
+    {
+      "modelo": "V Pad"
+    },
+    {
+      "modelo": "Tab E3 Max"
+    },
+    {
+      "modelo": "Tab E3 Pro"
+    },
+    {
+      "modelo": "Tab E3+"
+    },
+    {
+      "modelo": "Tab E3"
+    },
+    {
+      "modelo": "Tab G6+"
+    },
+    {
+      "modelo": "Tab G6"
+    },
+    {
+      "modelo": "Tab A9 Pro+"
+    },
+    {
+      "modelo": "Tab A9 Pro"
+    },
+    {
+      "modelo": "Tab A9+"
+    },
+    {
+      "modelo": "Tab A9"
+    },
+    {
+      "modelo": "Blade20 Play"
+    },
+    {
+      "modelo": "Blade20 Turbo"
+    },
+    {
+      "modelo": "Blade20 Ultra"
+    },
+    {
+      "modelo": "Blade20"
+    },
+    {
+      "modelo": "Note59 Pro+"
+    },
+    {
+      "modelo": "Note59 Pro"
+    },
+    {
+      "modelo": "Note 59"
+    },
+    {
+      "modelo": "V Max S"
+    },
+    {
+      "modelo": "U11 Pro"
+    },
+    {
+      "modelo": "Blade GT Ultra"
+    },
+    {
+      "modelo": "Fire 6 Max"
+    },
+    {
+      "modelo": "S200 Plus"
+    },
+    {
+      "modelo": "S119"
+    },
+    {
+      "modelo": "S118 Pro"
+    },
+    {
+      "modelo": "Blade GT"
+    },
+    {
+      "modelo": "Fire 6 Power"
+    },
+    {
+      "modelo": "Fire 6"
+    },
+    {
+      "modelo": "S200X"
+    },
+    {
+      "modelo": "V40"
+    },
+    {
+      "modelo": "V40 Pro"
+    },
+    {
+      "modelo": "T40 Pro"
+    },
+    {
+      "modelo": "T40"
+    },
+    {
+      "modelo": "V Max Pro"
+    },
+    {
+      "modelo": "N55 Plus"
+    },
+    {
+      "modelo": "N55 Pro"
+    },
+    {
+      "modelo": "N55"
+    },
+    {
+      "modelo": "S200"
+    },
+    {
+      "modelo": "Blade10 Max"
+    },
+    {
+      "modelo": "Blade10 Ultra"
+    },
+    {
+      "modelo": "Blade10 Pro"
+    },
+    {
+      "modelo": "Blade10"
+    },
+    {
+      "modelo": "S Cyber"
+    },
+    {
+      "modelo": "S Punk"
+    },
+    {
+      "modelo": "S118"
+    },
+    {
+      "modelo": "V Max Plus"
+    },
+    {
+      "modelo": "S41 Max"
+    },
+    {
+      "modelo": "S41 Plus"
+    },
+    {
+      "modelo": "S41T"
+    },
+    {
+      "modelo": "V20S"
+    },
+    {
+      "modelo": "T10W"
+    },
+    {
+      "modelo": "R08"
+    },
+    {
+      "modelo": "R20"
+    },
+    {
+      "modelo": "T30 Max"
+    },
+    {
+      "modelo": "T30E"
+    },
+    {
+      "modelo": "T30SE"
+    },
+    {
+      "modelo": "T30S"
+    },
+    {
+      "modelo": "DK10"
+    },
+    {
+      "modelo": "Smini"
+    },
+    {
+      "modelo": "V30 Pro"
+    },
+    {
+      "modelo": "V31GT"
+    },
+    {
+      "modelo": "S41 Pro"
+    },
+    {
+      "modelo": "T30 Ultra"
+    },
+    {
+      "modelo": "T20 Ultra"
+    },
+    {
+      "modelo": "T10Pro"
+    },
+    {
+      "modelo": "T10Plus"
+    },
+    {
+      "modelo": "U10 Pro"
+    },
+    {
+      "modelo": "U10"
+    },
+    {
+      "modelo": "U9"
+    },
+    {
+      "modelo": "T20mini Kid"
+    },
+    {
+      "modelo": "S110"
+    },
+    {
+      "modelo": "R10"
+    },
+    {
+      "modelo": "T10E"
+    },
+    {
+      "modelo": "T20mini Pro"
+    },
+    {
+      "modelo": "T20mini"
+    },
+    {
+      "modelo": "T20S"
+    },
+    {
+      "modelo": "T10S"
+    },
+    {
+      "modelo": "N50 Pro"
+    },
+    {
+      "modelo": "N50S"
+    },
+    {
+      "modelo": "N50"
+    },
+    {
+      "modelo": "V30T"
+    },
+    {
+      "modelo": "S100 Pro"
+    },
+    {
+      "modelo": "V20 Pro"
+    },
+    {
+      "modelo": "T30 Pro"
+    },
+    {
+      "modelo": "X98 Pro"
+    },
+    {
+      "modelo": "X98"
+    },
+    {
+      "modelo": "S99"
+    },
+    {
+      "modelo": "V Max"
+    },
+    {
+      "modelo": "S100"
+    },
+    {
+      "modelo": "V30"
+    },
+    {
+      "modelo": "T20"
+    },
+    {
+      "modelo": "T10"
+    },
+    {
+      "modelo": "S96 GT"
+    },
+    {
+      "modelo": "S89"
+    },
+    {
+      "modelo": "S89 Pro"
+    },
+    {
+      "modelo": "X97"
+    },
+    {
+      "modelo": "D11"
+    },
+    {
+      "modelo": "V11"
+    },
+    {
+      "modelo": "CS3"
+    },
+    {
+      "modelo": "S61 Pro"
+    },
+    {
+      "modelo": "S61"
+    },
+    {
+      "modelo": "S51"
+    },
+    {
+      "modelo": "X97 Pro"
+    },
+    {
+      "modelo": "S98 Pro"
+    },
+    {
+      "modelo": "S98"
+    },
+    {
+      "modelo": "S35T"
+    },
+    {
+      "modelo": "V20"
+    },
+    {
+      "modelo": "CR1 Pro"
+    },
+    {
+      "modelo": "X96"
+    },
+    {
+      "modelo": "DG Ares"
+    },
+    {
+      "modelo": "X93"
+    },
+    {
+      "modelo": "V10"
+    },
+    {
+      "modelo": "S35"
+    },
+    {
+      "modelo": "N40 Pro"
+    },
+    {
+      "modelo": "S86 Pro"
+    },
+    {
+      "modelo": "U7"
+    },
+    {
+      "modelo": "X96 Pro"
+    },
+    {
+      "modelo": "CS2"
+    },
+    {
+      "modelo": "S97 Pro"
+    },
+    {
+      "modelo": "CR1"
+    },
+    {
+      "modelo": "S59 Pro"
+    },
+    {
+      "modelo": "S86"
+    },
+    {
+      "modelo": "CS1"
+    },
+    {
+      "modelo": "S88 Plus"
+    },
+    {
+      "modelo": "X95 Pro"
+    },
+    {
+      "modelo": "S96 Pro"
+    },
+    {
+      "modelo": "N30"
+    },
+    {
+      "modelo": "S58 Pro"
+    },
+    {
+      "modelo": "N20 Pro"
+    },
+    {
+      "modelo": "S40 Pro"
+    },
+    {
+      "modelo": "S59"
+    },
+    {
+      "modelo": "S88 Pro"
+    },
+    {
+      "modelo": "X95"
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "marca": "PHILIPS",
+  "id_interno": "11",
+  "slug": "philips",
+  "total_esperado": 0,
+  "total_encontrado": 233,
+  "modelos": [
+    {
+      "modelo": "S7710 Omni 10"
+    },
+    {
+      "modelo": "S6310 Essence 20"
+    },
+    {
+      "modelo": "S6210 Essence 10"
+    },
+    {
+      "modelo": "S6206"
+    },
+    {
+      "modelo": "PH2"
+    },
+    {
+      "modelo": "PH1"
+    },
+    {
+      "modelo": "S337"
+    },
+    {
+      "modelo": "S309"
+    },
+    {
+      "modelo": "V787"
+    },
+    {
+      "modelo": "V377"
+    },
+    {
+      "modelo": "S616"
+    },
+    {
+      "modelo": "I928"
+    },
+    {
+      "modelo": "V526"
+    },
+    {
+      "modelo": "I908"
+    },
+    {
+      "modelo": "S396"
+    },
+    {
+      "modelo": "S388"
+    },
+    {
+      "modelo": "S308"
+    },
+    {
+      "modelo": "W6610"
+    },
+    {
+      "modelo": "W8578"
+    },
+    {
+      "modelo": "W3500"
+    },
+    {
+      "modelo": "W8555"
+    },
+    {
+      "modelo": "W7555"
+    },
+    {
+      "modelo": "W9588"
+    },
+    {
+      "modelo": "W8568"
+    },
+    {
+      "modelo": "W8500"
+    },
+    {
+      "modelo": "W6500"
+    },
+    {
+      "modelo": "W3568"
+    },
+    {
+      "modelo": "T3566"
+    },
+    {
+      "modelo": "W7376"
+    },
+    {
+      "modelo": "X1560"
+    },
+    {
+      "modelo": "X2560"
+    },
+    {
+      "modelo": "X2301"
+    },
+    {
+      "modelo": "X2300"
+    },
+    {
+      "modelo": "X1510"
+    },
+    {
+      "modelo": "E1500"
+    },
+    {
+      "modelo": "D833"
+    },
+    {
+      "modelo": "W8560"
+    },
+    {
+      "modelo": "W8510"
+    },
+    {
+      "modelo": "T939"
+    },
+    {
+      "modelo": "W6360"
+    },
+    {
+      "modelo": "W5510"
+    },
+    {
+      "modelo": "W8355"
+    },
+    {
+      "modelo": "W832"
+    },
+    {
+      "modelo": "W737"
+    },
+    {
+      "modelo": "W736"
+    },
+    {
+      "modelo": "W6350"
+    },
+    {
+      "modelo": "W536"
+    },
+    {
+      "modelo": "W337"
+    },
+    {
+      "modelo": "T539"
+    },
+    {
+      "modelo": "E133"
+    },
+    {
+      "modelo": "W732"
+    },
+    {
+      "modelo": "X333"
+    },
+    {
+      "modelo": "W930"
+    },
+    {
+      "modelo": "X130"
+    },
+    {
+      "modelo": "X332"
+    },
+    {
+      "modelo": "X331"
+    },
+    {
+      "modelo": "D633"
+    },
+    {
+      "modelo": "W632"
+    },
+    {
+      "modelo": "W635"
+    },
+    {
+      "modelo": "X528"
+    },
+    {
+      "modelo": "T129"
+    },
+    {
+      "modelo": "W820"
+    },
+    {
+      "modelo": "D822"
+    },
+    {
+      "modelo": "W727"
+    },
+    {
+      "modelo": "X125"
+    },
+    {
+      "modelo": "W626"
+    },
+    {
+      "modelo": "X623"
+    },
+    {
+      "modelo": "W920"
+    },
+    {
+      "modelo": "V726"
+    },
+    {
+      "modelo": "X622"
+    },
+    {
+      "modelo": "W625"
+    },
+    {
+      "modelo": "X223"
+    },
+    {
+      "modelo": "X525"
+    },
+    {
+      "modelo": "D813"
+    },
+    {
+      "modelo": "W725"
+    },
+    {
+      "modelo": "W715"
+    },
+    {
+      "modelo": "X526"
+    },
+    {
+      "modelo": "D613"
+    },
+    {
+      "modelo": "Xenium X519"
+    },
+    {
+      "modelo": "F322"
+    },
+    {
+      "modelo": "X128"
+    },
+    {
+      "modelo": "D612"
+    },
+    {
+      "modelo": "Xenium X523"
+    },
+    {
+      "modelo": "X516"
+    },
+    {
+      "modelo": "F515"
+    },
+    {
+      "modelo": "X815"
+    },
+    {
+      "modelo": "X518"
+    },
+    {
+      "modelo": "D812"
+    },
+    {
+      "modelo": "X216"
+    },
+    {
+      "modelo": "Xenium X713"
+    },
+    {
+      "modelo": "V816"
+    },
+    {
+      "modelo": "T910"
+    },
+    {
+      "modelo": "X116"
+    },
+    {
+      "modelo": "F718"
+    },
+    {
+      "modelo": "Xenium X513"
+    },
+    {
+      "modelo": "Xenium F511"
+    },
+    {
+      "modelo": "D900"
+    },
+    {
+      "modelo": "F610"
+    },
+    {
+      "modelo": "X712"
+    },
+    {
+      "modelo": "X703"
+    },
+    {
+      "modelo": "X809"
+    },
+    {
+      "modelo": "Xenium X503"
+    },
+    {
+      "modelo": "Xenium K600"
+    },
+    {
+      "modelo": "X606"
+    },
+    {
+      "modelo": "X510"
+    },
+    {
+      "modelo": "X605"
+    },
+    {
+      "modelo": "V900"
+    },
+    {
+      "modelo": "X100"
+    },
+    {
+      "modelo": "C702"
+    },
+    {
+      "modelo": "X603"
+    },
+    {
+      "modelo": "D908"
+    },
+    {
+      "modelo": "Xenium X806"
+    },
+    {
+      "modelo": "X312"
+    },
+    {
+      "modelo": "X320"
+    },
+    {
+      "modelo": "X650"
+    },
+    {
+      "modelo": "Xenium X501"
+    },
+    {
+      "modelo": "Xenium K700"
+    },
+    {
+      "modelo": "V808"
+    },
+    {
+      "modelo": "X550"
+    },
+    {
+      "modelo": "E102"
+    },
+    {
+      "modelo": "Xenium X830"
+    },
+    {
+      "modelo": "C700"
+    },
+    {
+      "modelo": "TM700"
+    },
+    {
+      "modelo": "X630"
+    },
+    {
+      "modelo": "C600"
+    },
+    {
+      "modelo": "W186"
+    },
+    {
+      "modelo": "X810"
+    },
+    {
+      "modelo": "Xenium X520"
+    },
+    {
+      "modelo": "Xenium X600"
+    },
+    {
+      "modelo": "E210"
+    },
+    {
+      "modelo": "Xenium X700"
+    },
+    {
+      "modelo": "Xenium X530"
+    },
+    {
+      "modelo": "X710"
+    },
+    {
+      "modelo": "X620"
+    },
+    {
+      "modelo": "193"
+    },
+    {
+      "modelo": "E100"
+    },
+    {
+      "modelo": "X500"
+    },
+    {
+      "modelo": "M200"
+    },
+    {
+      "modelo": "Xenium X300"
+    },
+    {
+      "modelo": "Xenium 9@9q"
+    },
+    {
+      "modelo": "298"
+    },
+    {
+      "modelo": "X800"
+    },
+    {
+      "modelo": "M600"
+    },
+    {
+      "modelo": "Xenium 9@9v"
+    },
+    {
+      "modelo": "192"
+    },
+    {
+      "modelo": "191"
+    },
+    {
+      "modelo": "Xenium 9@9j"
+    },
+    {
+      "modelo": "Xenium 9@9u"
+    },
+    {
+      "modelo": "392"
+    },
+    {
+      "modelo": "692"
+    },
+    {
+      "modelo": "699 Dual SIM"
+    },
+    {
+      "modelo": "892"
+    },
+    {
+      "modelo": "399"
+    },
+    {
+      "modelo": "390"
+    },
+    {
+      "modelo": "Xenium 9@9k"
+    },
+    {
+      "modelo": "Xenium 9@9z"
+    },
+    {
+      "modelo": "Xenium 9@9w"
+    },
+    {
+      "modelo": "Xenium 9@9m"
+    },
+    {
+      "modelo": "Xenium 9@9r"
+    },
+    {
+      "modelo": "Xenium 9@9h"
+    },
+    {
+      "modelo": "292"
+    },
+    {
+      "modelo": "290"
+    },
+    {
+      "modelo": "Xenium 9@9g"
+    },
+    {
+      "modelo": "Xenium 9@9f"
+    },
+    {
+      "modelo": "580"
+    },
+    {
+      "modelo": "S890"
+    },
+    {
+      "modelo": "S660"
+    },
+    {
+      "modelo": "180"
+    },
+    {
+      "modelo": "Xenium 9@9s"
+    },
+    {
+      "modelo": "680"
+    },
+    {
+      "modelo": "S900"
+    },
+    {
+      "modelo": "S880"
+    },
+    {
+      "modelo": "598"
+    },
+    {
+      "modelo": "588"
+    },
+    {
+      "modelo": "Xenium 9@9t"
+    },
+    {
+      "modelo": "Xenium 9@9d"
+    },
+    {
+      "modelo": "Xenium 9@9a"
+    },
+    {
+      "modelo": "S800"
+    },
+    {
+      "modelo": "S220"
+    },
+    {
+      "modelo": "S200"
+    },
+    {
+      "modelo": "768"
+    },
+    {
+      "modelo": "960"
+    },
+    {
+      "modelo": "Xenium 9@9e"
+    },
+    {
+      "modelo": "160"
+    },
+    {
+      "modelo": "968"
+    },
+    {
+      "modelo": "362"
+    },
+    {
+      "modelo": "868"
+    },
+    {
+      "modelo": "766"
+    },
+    {
+      "modelo": "760"
+    },
+    {
+      "modelo": "568"
+    },
+    {
+      "modelo": "655"
+    },
+    {
+      "modelo": "Xenium 9@9i"
+    },
+    {
+      "modelo": "Xenium 9@98"
+    },
+    {
+      "modelo": "162"
+    },
+    {
+      "modelo": "650"
+    },
+    {
+      "modelo": "859"
+    },
+    {
+      "modelo": "855"
+    },
+    {
+      "modelo": "759"
+    },
+    {
+      "modelo": "755"
+    },
+    {
+      "modelo": "659"
+    },
+    {
+      "modelo": "550"
+    },
+    {
+      "modelo": "639"
+    },
+    {
+      "modelo": "636"
+    },
+    {
+      "modelo": "535"
+    },
+    {
+      "modelo": "355"
+    },
+    {
+      "modelo": "350"
+    },
+    {
+      "modelo": "530"
+    },
+    {
+      "modelo": "Xenium 9@9 ++"
+    },
+    {
+      "modelo": "630"
+    },
+    {
+      "modelo": "330"
+    },
+    {
+      "modelo": "Fisio 825"
+    },
+    {
+      "modelo": "Fisio 625"
+    },
+    {
+      "modelo": "Fisio 820"
+    },
+    {
+      "modelo": "Fisio 620"
+    },
+    {
+      "modelo": "Fisio 121"
+    },
+    {
+      "modelo": "Fisio 120"
+    },
+    {
+      "modelo": "Fisio 610"
+    },
+    {
+      "modelo": "Xenium 9@9"
+    },
+    {
+      "modelo": "Xenium"
+    },
+    {
+      "modelo": "Azalis 268"
+    },
+    {
+      "modelo": "Azalis 238"
+    },
+    {
+      "modelo": "Ozeo 8@8"
+    },
+    {
+      "modelo": "Ozeo"
+    },
+    {
+      "modelo": "Savvy DB"
+    },
+    {
+      "modelo": "Savvy Vogue"
+    },
+    {
+      "modelo": "Genie 2000"
+    },
+    {
+      "modelo": "Genie db"
+    },
+    {
+      "modelo": "Genie Sport"
+    },
+    {
+      "modelo": "Genie"
+    },
+    {
+      "modelo": "Savvy"
+    },
+    {
+      "modelo": "Diga"
+    },
+    {
+      "modelo": "Spark"
+    },
+    {
+      "modelo": "Fizz"
+    }
+  ]
+}

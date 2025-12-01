@@ -1,0 +1,45 @@
+{
+  "marca": "CHEA",
+  "id_interno": "24",
+  "slug": "chea",
+  "total_esperado": 0,
+  "total_encontrado": 12,
+  "modelos": [
+    {
+      "modelo": "A90"
+    },
+    {
+      "modelo": "JMS-110"
+    },
+    {
+      "modelo": "328"
+    },
+    {
+      "modelo": "318"
+    },
+    {
+      "modelo": "308"
+    },
+    {
+      "modelo": "228"
+    },
+    {
+      "modelo": "218"
+    },
+    {
+      "modelo": "208"
+    },
+    {
+      "modelo": "198"
+    },
+    {
+      "modelo": "188"
+    },
+    {
+      "modelo": "178"
+    },
+    {
+      "modelo": "168"
+    }
+  ]
+}

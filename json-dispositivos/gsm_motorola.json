@@ -1,0 +1,2052 @@
+{
+  "marca": "MOTOROLA",
+  "id_interno": "4",
+  "slug": "motorola",
+  "total_esperado": 0,
+  "total_encontrado": 670,
+  "modelos": [
+    {
+      "modelo": "Moto G57 Power"
+    },
+    {
+      "modelo": "Moto G57"
+    },
+    {
+      "modelo": "Moto G",
+      "ano": "2026"
+    },
+    {
+      "modelo": "Moto G Play",
+      "ano": "2026"
+    },
+    {
+      "modelo": "Moto G67 Power"
+    },
+    {
+      "modelo": "Edge 70"
+    },
+    {
+      "modelo": "Moto G100S"
+    },
+    {
+      "modelo": "Moto G100"
+    },
+    {
+      "modelo": "Moto Pad 60 Neo"
+    },
+    {
+      "modelo": "Edge 60 Neo"
+    },
+    {
+      "modelo": "Moto G06 Power"
+    },
+    {
+      "modelo": "Moto G06"
+    },
+    {
+      "modelo": "G96"
+    },
+    {
+      "modelo": "Moto G86 Power"
+    },
+    {
+      "modelo": "Moto G86"
+    },
+    {
+      "modelo": "Moto G56"
+    },
+    {
+      "modelo": "Edge",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Edge 60 Pro"
+    },
+    {
+      "modelo": "Edge 60"
+    },
+    {
+      "modelo": "Razr 60 Ultra"
+    },
+    {
+      "modelo": "Razr Ultra 2025"
+    },
+    {
+      "modelo": "Razr 60"
+    },
+    {
+      "modelo": "Razr 2025"
+    },
+    {
+      "modelo": "Razr+ 2025"
+    },
+    {
+      "modelo": "Moto Watch Fit"
+    },
+    {
+      "modelo": "Moto Pad 60 Pro"
+    },
+    {
+      "modelo": "Edge 60 Stylus"
+    },
+    {
+      "modelo": "Moto G Stylus 5G",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Edge 60s"
+    },
+    {
+      "modelo": "Edge 60 Fusion"
+    },
+    {
+      "modelo": "Moto G Power",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Moto G",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Moto G15"
+    },
+    {
+      "modelo": "Moto G15 Power"
+    },
+    {
+      "modelo": "Moto G05"
+    },
+    {
+      "modelo": "Moto E15"
+    },
+    {
+      "modelo": "ThinkPhone 25"
+    },
+    {
+      "modelo": "Moto G75"
+    },
+    {
+      "modelo": "Moto S50"
+    },
+    {
+      "modelo": "Edge 50 Neo"
+    },
+    {
+      "modelo": "Moto G55"
+    },
+    {
+      "modelo": "Moto G35"
+    },
+    {
+      "modelo": "Moto G45"
+    },
+    {
+      "modelo": "Edge 50"
+    },
+    {
+      "modelo": "Razr+ 2024"
+    },
+    {
+      "modelo": "Razr 50 Ultra"
+    },
+    {
+      "modelo": "Razr 2024"
+    },
+    {
+      "modelo": "Razr 50"
+    },
+    {
+      "modelo": "Moto G85"
+    },
+    {
+      "modelo": "S50 Neo"
+    },
+    {
+      "modelo": "Moto E14"
+    },
+    {
+      "modelo": "Edge",
+      "ano": "2024"
+    },
+    {
+      "modelo": "Moto X50 Ultra"
+    },
+    {
+      "modelo": "Moto G Stylus 5G",
+      "ano": "2024"
+    },
+    {
+      "modelo": "Edge 50 Ultra"
+    },
+    {
+      "modelo": "Edge 50 Fusion"
+    },
+    {
+      "modelo": "Edge 50 Pro"
+    },
+    {
+      "modelo": "Moto G64"
+    },
+    {
+      "modelo": "Moto G04s"
+    },
+    {
+      "modelo": "Moto G Power",
+      "ano": "2024"
+    },
+    {
+      "modelo": "Moto G",
+      "ano": "2024"
+    },
+    {
+      "modelo": "Moto Watch 40"
+    },
+    {
+      "modelo": "Moto G24 Power"
+    },
+    {
+      "modelo": "Moto G24"
+    },
+    {
+      "modelo": "Moto G04"
+    },
+    {
+      "modelo": "Moto G Play",
+      "ano": "2024"
+    },
+    {
+      "modelo": "Moto G34"
+    },
+    {
+      "modelo": "Edge",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Edge 40 Neo"
+    },
+    {
+      "modelo": "Moto G54"
+    },
+    {
+      "modelo": "Moto G54 Power"
+    },
+    {
+      "modelo": "Moto G84"
+    },
+    {
+      "modelo": "Moto G14"
+    },
+    {
+      "modelo": "Razr 40 Ultra"
+    },
+    {
+      "modelo": "Razr 40"
+    },
+    {
+      "modelo": "Moto G Stylus 5G",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Edge 40"
+    },
+    {
+      "modelo": "Edge+",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Moto G Stylus",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Moto G",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Moto Watch 200"
+    },
+    {
+      "modelo": "Moto Watch 70"
+    },
+    {
+      "modelo": "Moto G Power 5G"
+    },
+    {
+      "modelo": "Edge 40 Pro"
+    },
+    {
+      "modelo": "Defy 2"
+    },
+    {
+      "modelo": "Moto G73"
+    },
+    {
+      "modelo": "Moto G53"
+    },
+    {
+      "modelo": "Moto G23"
+    },
+    {
+      "modelo": "Moto G13"
+    },
+    {
+      "modelo": "Moto E13"
+    },
+    {
+      "modelo": "ThinkPhone"
+    },
+    {
+      "modelo": "Moto X40"
+    },
+    {
+      "modelo": "Moto G Play",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Moto E32 (India)"
+    },
+    {
+      "modelo": "Moto G72"
+    },
+    {
+      "modelo": "Moto E22i"
+    },
+    {
+      "modelo": "Moto E22"
+    },
+    {
+      "modelo": "Edge 30 Ultra"
+    },
+    {
+      "modelo": "Edge 30 Fusion"
+    },
+    {
+      "modelo": "Edge 30 Neo"
+    },
+    {
+      "modelo": "Moto E22s"
+    },
+    {
+      "modelo": "Edge",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Moto Tab G62"
+    },
+    {
+      "modelo": "Moto X30 Pro"
+    },
+    {
+      "modelo": "Moto S30 Pro"
+    },
+    {
+      "modelo": "Razr 2022"
+    },
+    {
+      "modelo": "Moto G62 (India)"
+    },
+    {
+      "modelo": "Moto G32"
+    },
+    {
+      "modelo": "Moto G62 5G"
+    },
+    {
+      "modelo": "Moto G42"
+    },
+    {
+      "modelo": "Moto E32s"
+    },
+    {
+      "modelo": "Moto G71s"
+    },
+    {
+      "modelo": "Moto G82"
+    },
+    {
+      "modelo": "Moto E32"
+    },
+    {
+      "modelo": "Edge 30"
+    },
+    {
+      "modelo": "Moto G Stylus 5G",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Moto G",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Moto G52"
+    },
+    {
+      "modelo": "Moto G22"
+    },
+    {
+      "modelo": "Edge+ 5G UW",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Edge 30 Pro"
+    },
+    {
+      "modelo": "Moto G Stylus",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Moto Tab G70"
+    },
+    {
+      "modelo": "Edge X30"
+    },
+    {
+      "modelo": "Edge S30"
+    },
+    {
+      "modelo": "Moto G200 5G"
+    },
+    {
+      "modelo": "Moto G71 5G"
+    },
+    {
+      "modelo": "Moto G51 5G"
+    },
+    {
+      "modelo": "Moto G41"
+    },
+    {
+      "modelo": "Moto G31"
+    },
+    {
+      "modelo": "Moto G Power",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Moto Watch 100"
+    },
+    {
+      "modelo": "Moto E30"
+    },
+    {
+      "modelo": "Edge 5G UW",
+      "ano": "2021"
+    },
+    {
+      "modelo": "G Pure"
+    },
+    {
+      "modelo": "Moto E40"
+    },
+    {
+      "modelo": "Tab G20"
+    },
+    {
+      "modelo": "Moto G60"
+    },
+    {
+      "modelo": "Moto E20"
+    },
+    {
+      "modelo": "Moto G50 5G"
+    },
+    {
+      "modelo": "Edge",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Edge 20 Fusion"
+    },
+    {
+      "modelo": "Moto G60S"
+    },
+    {
+      "modelo": "Edge 20 Pro"
+    },
+    {
+      "modelo": "Edge 20"
+    },
+    {
+      "modelo": "Edge 20 Lite"
+    },
+    {
+      "modelo": "one 5G UW ace"
+    },
+    {
+      "modelo": "Defy",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Moto G Stylus 5G"
+    },
+    {
+      "modelo": "Moto G20"
+    },
+    {
+      "modelo": "Moto G40 Fusion"
+    },
+    {
+      "modelo": "Moto G100",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Moto G50"
+    },
+    {
+      "modelo": "Moto G10 Power"
+    },
+    {
+      "modelo": "Moto E7i Power"
+    },
+    {
+      "modelo": "Moto E7 Power"
+    },
+    {
+      "modelo": "Moto G30"
+    },
+    {
+      "modelo": "Moto G10"
+    },
+    {
+      "modelo": "Moto E6i"
+    },
+    {
+      "modelo": "Edge S"
+    },
+    {
+      "modelo": "One 5G Ace"
+    },
+    {
+      "modelo": "Moto G Stylus",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Moto G Power",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Moto G Play",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Moto E7"
+    },
+    {
+      "modelo": "Moto G 5G"
+    },
+    {
+      "modelo": "Moto G9 Power"
+    },
+    {
+      "modelo": "Razr 5G"
+    },
+    {
+      "modelo": "Moto G9 Plus"
+    },
+    {
+      "modelo": "Moto E7 Plus"
+    },
+    {
+      "modelo": "One 5G UW"
+    },
+    {
+      "modelo": "One 5G"
+    },
+    {
+      "modelo": "Moto G9 Play"
+    },
+    {
+      "modelo": "Moto G9 (India)"
+    },
+    {
+      "modelo": "Moto G 5G Plus"
+    },
+    {
+      "modelo": "One Fusion"
+    },
+    {
+      "modelo": "One Fusion+"
+    },
+    {
+      "modelo": "One Vision Plus"
+    },
+    {
+      "modelo": "Moto G Fast"
+    },
+    {
+      "modelo": "Moto E",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Moto G Pro"
+    },
+    {
+      "modelo": "Edge+",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Edge"
+    },
+    {
+      "modelo": "Moto G8 Power Lite"
+    },
+    {
+      "modelo": "Moto E6s",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Moto G8"
+    },
+    {
+      "modelo": "Moto G Stylus"
+    },
+    {
+      "modelo": "Moto G Power"
+    },
+    {
+      "modelo": "Moto G8 Power"
+    },
+    {
+      "modelo": "One Hyper"
+    },
+    {
+      "modelo": "Razr 2019"
+    },
+    {
+      "modelo": "Moto G8 Play"
+    },
+    {
+      "modelo": "Moto E6 Play"
+    },
+    {
+      "modelo": "Moto G8 Plus"
+    },
+    {
+      "modelo": "One Macro"
+    },
+    {
+      "modelo": "Moto E6 Plus"
+    },
+    {
+      "modelo": "One Zoom"
+    },
+    {
+      "modelo": "One Action"
+    },
+    {
+      "modelo": "Moto E6"
+    },
+    {
+      "modelo": "Moto Z4"
+    },
+    {
+      "modelo": "One Vision"
+    },
+    {
+      "modelo": "Moto G7 Plus"
+    },
+    {
+      "modelo": "Moto G7"
+    },
+    {
+      "modelo": "Moto G7 Power"
+    },
+    {
+      "modelo": "Moto G7 Play"
+    },
+    {
+      "modelo": "One (P30 Play)"
+    },
+    {
+      "modelo": "One Power (P30 Note)"
+    },
+    {
+      "modelo": "Moto Z3"
+    },
+    {
+      "modelo": "Moto Z3 Play"
+    },
+    {
+      "modelo": "Moto E5 Cruise"
+    },
+    {
+      "modelo": "Moto E5 Play Go"
+    },
+    {
+      "modelo": "Moto E5 Play"
+    },
+    {
+      "modelo": "Moto E5 Plus"
+    },
+    {
+      "modelo": "Moto E5"
+    },
+    {
+      "modelo": "P30"
+    },
+    {
+      "modelo": "Moto G6 Play"
+    },
+    {
+      "modelo": "Moto G6 Plus"
+    },
+    {
+      "modelo": "Moto G6"
+    },
+    {
+      "modelo": "Moto X5"
+    },
+    {
+      "modelo": "Moto X4"
+    },
+    {
+      "modelo": "Moto G5S Plus"
+    },
+    {
+      "modelo": "Moto G5S"
+    },
+    {
+      "modelo": "Moto Z2 Force"
+    },
+    {
+      "modelo": "Moto E4 Plus"
+    },
+    {
+      "modelo": "Moto E4 Plus (USA)"
+    },
+    {
+      "modelo": "Moto E4"
+    },
+    {
+      "modelo": "Moto E4 (USA)"
+    },
+    {
+      "modelo": "Moto Z2 Play"
+    },
+    {
+      "modelo": "Moto C Plus"
+    },
+    {
+      "modelo": "Moto C"
+    },
+    {
+      "modelo": "Moto G5 Plus"
+    },
+    {
+      "modelo": "Moto G5"
+    },
+    {
+      "modelo": "Moto M"
+    },
+    {
+      "modelo": "Moto E3 Power"
+    },
+    {
+      "modelo": "Moto Z Play"
+    },
+    {
+      "modelo": "Moto E3"
+    },
+    {
+      "modelo": "Moto Z Force"
+    },
+    {
+      "modelo": "Moto Z"
+    },
+    {
+      "modelo": "Moto G4 Plus"
+    },
+    {
+      "modelo": "Moto G4"
+    },
+    {
+      "modelo": "Moto G4 Play"
+    },
+    {
+      "modelo": "Moto G Turbo"
+    },
+    {
+      "modelo": "Moto X Force"
+    },
+    {
+      "modelo": "Droid Turbo 2"
+    },
+    {
+      "modelo": "Droid Maxx 2"
+    },
+    {
+      "modelo": "Moto X Style"
+    },
+    {
+      "modelo": "Moto X Play Dual SIM"
+    },
+    {
+      "modelo": "Moto X Play"
+    },
+    {
+      "modelo": "Moto G Dual SIM (3rd gen)"
+    },
+    {
+      "modelo": "Moto 360 Sport (1st gen)"
+    },
+    {
+      "modelo": "Moto 360 42mm (2nd gen)"
+    },
+    {
+      "modelo": "Moto 360 46mm (2nd gen)"
+    },
+    {
+      "modelo": "Moto 360 (1st gen)"
+    },
+    {
+      "modelo": "Moto G (3rd gen)"
+    },
+    {
+      "modelo": "Moto E Dual SIM (2nd gen)"
+    },
+    {
+      "modelo": "Moto E (2nd gen)"
+    },
+    {
+      "modelo": "Moto G 4G (2nd gen)"
+    },
+    {
+      "modelo": "Moto G 4G Dual SIM (2nd gen)"
+    },
+    {
+      "modelo": "Moto Maxx"
+    },
+    {
+      "modelo": "DROID Turbo"
+    },
+    {
+      "modelo": "Nexus 6"
+    },
+    {
+      "modelo": "Moto X (2nd Gen)"
+    },
+    {
+      "modelo": "Moto G Dual SIM (2nd gen)"
+    },
+    {
+      "modelo": "Moto G (2nd gen)"
+    },
+    {
+      "modelo": "Moto G 4G"
+    },
+    {
+      "modelo": "Luge"
+    },
+    {
+      "modelo": "Moto E"
+    },
+    {
+      "modelo": "Moto E Dual SIM"
+    },
+    {
+      "modelo": "Moto G Dual SIM"
+    },
+    {
+      "modelo": "Moto G"
+    },
+    {
+      "modelo": "Moto X"
+    },
+    {
+      "modelo": "DROID Ultra"
+    },
+    {
+      "modelo": "DROID Maxx"
+    },
+    {
+      "modelo": "DROID Mini"
+    },
+    {
+      "modelo": "RAZR D3 XT919"
+    },
+    {
+      "modelo": "RAZR D1"
+    },
+    {
+      "modelo": "Electrify M XT905"
+    },
+    {
+      "modelo": "RAZR i XT890"
+    },
+    {
+      "modelo": "DROID RAZR MAXX HD"
+    },
+    {
+      "modelo": "DROID RAZR HD"
+    },
+    {
+      "modelo": "RAZR HD XT925"
+    },
+    {
+      "modelo": "DROID RAZR M"
+    },
+    {
+      "modelo": "RAZR M XT905"
+    },
+    {
+      "modelo": "DEFY XT XT556"
+    },
+    {
+      "modelo": "Electrify 2 XT881"
+    },
+    {
+      "modelo": "Photon Q 4G LTE XT897"
+    },
+    {
+      "modelo": "Defy Pro XT560"
+    },
+    {
+      "modelo": "ATRIX HD MB886"
+    },
+    {
+      "modelo": "XT760"
+    },
+    {
+      "modelo": "ATRIX TV XT687"
+    },
+    {
+      "modelo": "ATRIX TV XT682"
+    },
+    {
+      "modelo": "MotoGO TV EX440"
+    },
+    {
+      "modelo": "Motosmart Me XT303"
+    },
+    {
+      "modelo": "MOTOKEY 3-CHIP EX117"
+    },
+    {
+      "modelo": "RAZR V XT885"
+    },
+    {
+      "modelo": "RAZR V XT889"
+    },
+    {
+      "modelo": "RAZR V MT887"
+    },
+    {
+      "modelo": "MOTOSMART MIX XT550"
+    },
+    {
+      "modelo": "MotoGO EX430"
+    },
+    {
+      "modelo": "Motosmart Flip XT611"
+    },
+    {
+      "modelo": "XT390"
+    },
+    {
+      "modelo": "RAZR MAXX"
+    },
+    {
+      "modelo": "DEFY XT535"
+    },
+    {
+      "modelo": "GLEAM+ WX308"
+    },
+    {
+      "modelo": "DROID 4 XT894"
+    },
+    {
+      "modelo": "DROID RAZR MAXX"
+    },
+    {
+      "modelo": "Motoluxe MT680"
+    },
+    {
+      "modelo": "Motoluxe XT389"
+    },
+    {
+      "modelo": "Motoluxe"
+    },
+    {
+      "modelo": "Defy Mini XT321"
+    },
+    {
+      "modelo": "Defy Mini XT320"
+    },
+    {
+      "modelo": "XT319"
+    },
+    {
+      "modelo": "WX306"
+    },
+    {
+      "modelo": "Fire"
+    },
+    {
+      "modelo": "MT917"
+    },
+    {
+      "modelo": "XT928"
+    },
+    {
+      "modelo": "DROID XYBOARD 8.2 MZ609"
+    },
+    {
+      "modelo": "DROID XYBOARD 10.1 MZ617"
+    },
+    {
+      "modelo": "XT532"
+    },
+    {
+      "modelo": "MOTO XT615"
+    },
+    {
+      "modelo": "EX226"
+    },
+    {
+      "modelo": "Motokey Social"
+    },
+    {
+      "modelo": "XOOM 2 Media Edition 3G MZ608"
+    },
+    {
+      "modelo": "XOOM 2 Media Edition MZ607"
+    },
+    {
+      "modelo": "XOOM 2 3G MZ616"
+    },
+    {
+      "modelo": "XOOM 2 MZ615"
+    },
+    {
+      "modelo": "XOOM Media Edition MZ505"
+    },
+    {
+      "modelo": "RAZR XT910"
+    },
+    {
+      "modelo": "DROID RAZR XT912"
+    },
+    {
+      "modelo": "ATRIX 2 MB865"
+    },
+    {
+      "modelo": "Admiral XT603"
+    },
+    {
+      "modelo": "ME632"
+    },
+    {
+      "modelo": "PRO+"
+    },
+    {
+      "modelo": "DEFY+"
+    },
+    {
+      "modelo": "EX212"
+    },
+    {
+      "modelo": "EX119"
+    },
+    {
+      "modelo": "MOTOKEY XT EX118"
+    },
+    {
+      "modelo": "MOTOKEY Mini EX109"
+    },
+    {
+      "modelo": "MOTOKEY Mini EX108"
+    },
+    {
+      "modelo": "WX294"
+    },
+    {
+      "modelo": "FIRE XT"
+    },
+    {
+      "modelo": "FIRE XT311"
+    },
+    {
+      "modelo": "SPICE Key XT317"
+    },
+    {
+      "modelo": "SPICE Key"
+    },
+    {
+      "modelo": "MILESTONE 3 XT860"
+    },
+    {
+      "modelo": "DROID 3"
+    },
+    {
+      "modelo": "Triumph"
+    },
+    {
+      "modelo": "Photon 4G MB855"
+    },
+    {
+      "modelo": "EX232"
+    },
+    {
+      "modelo": "WILDER"
+    },
+    {
+      "modelo": "MOTO MT870"
+    },
+    {
+      "modelo": "MOTO MT620"
+    },
+    {
+      "modelo": "Milestone XT883"
+    },
+    {
+      "modelo": "MOTO XT882"
+    },
+    {
+      "modelo": "MOTO XT316"
+    },
+    {
+      "modelo": "XPRT MB612"
+    },
+    {
+      "modelo": "GLEAM"
+    },
+    {
+      "modelo": "PRO"
+    },
+    {
+      "modelo": "XOOM MZ604"
+    },
+    {
+      "modelo": "XOOM MZ601"
+    },
+    {
+      "modelo": "XOOM MZ600"
+    },
+    {
+      "modelo": "ATRIX"
+    },
+    {
+      "modelo": "ATRIX 4G"
+    },
+    {
+      "modelo": "Cliq 2"
+    },
+    {
+      "modelo": "DROID BIONIC XT875"
+    },
+    {
+      "modelo": "DROID BIONIC XT865"
+    },
+    {
+      "modelo": "DROID X ME811"
+    },
+    {
+      "modelo": "MOTO ME525"
+    },
+    {
+      "modelo": "MILESTONE 2 ME722"
+    },
+    {
+      "modelo": "DROID 2 Global"
+    },
+    {
+      "modelo": "EX122"
+    },
+    {
+      "modelo": "EX128"
+    },
+    {
+      "modelo": "MOTOTV EX245"
+    },
+    {
+      "modelo": "DROID PRO XT610"
+    },
+    {
+      "modelo": "XT301"
+    },
+    {
+      "modelo": "SPICE XT300"
+    },
+    {
+      "modelo": "FLIPSIDE MB508"
+    },
+    {
+      "modelo": "MOTO MT716"
+    },
+    {
+      "modelo": "BRAVO MB520"
+    },
+    {
+      "modelo": "CITRUS WX445"
+    },
+    {
+      "modelo": "EX300"
+    },
+    {
+      "modelo": "EX210"
+    },
+    {
+      "modelo": "EX201"
+    },
+    {
+      "modelo": "EX115"
+    },
+    {
+      "modelo": "EX112"
+    },
+    {
+      "modelo": "CUPE"
+    },
+    {
+      "modelo": "DEFY"
+    },
+    {
+      "modelo": "MILESTONE 2"
+    },
+    {
+      "modelo": "DROID 2"
+    },
+    {
+      "modelo": "MT810lx"
+    },
+    {
+      "modelo": "XT810"
+    },
+    {
+      "modelo": "XT806"
+    },
+    {
+      "modelo": "A1260"
+    },
+    {
+      "modelo": "A1680"
+    },
+    {
+      "modelo": "Grasp WX404"
+    },
+    {
+      "modelo": "Rambler"
+    },
+    {
+      "modelo": "CHARM"
+    },
+    {
+      "modelo": "ES400"
+    },
+    {
+      "modelo": "DROID X2"
+    },
+    {
+      "modelo": "DROID X"
+    },
+    {
+      "modelo": "MILESTONE XT720"
+    },
+    {
+      "modelo": "XT720 MOTOROI"
+    },
+    {
+      "modelo": "Quench XT5 XT502"
+    },
+    {
+      "modelo": "Quench XT3 XT502"
+    },
+    {
+      "modelo": "WX295"
+    },
+    {
+      "modelo": "FlipOut"
+    },
+    {
+      "modelo": "WX290"
+    },
+    {
+      "modelo": "WX265"
+    },
+    {
+      "modelo": "WX260"
+    },
+    {
+      "modelo": "WX181"
+    },
+    {
+      "modelo": "WX161"
+    },
+    {
+      "modelo": "QUENCH"
+    },
+    {
+      "modelo": "BACKFLIP"
+    },
+    {
+      "modelo": "XT800 ZHISHANG"
+    },
+    {
+      "modelo": "XT701"
+    },
+    {
+      "modelo": "MT710 ZHILING"
+    },
+    {
+      "modelo": "MOTO XT702"
+    },
+    {
+      "modelo": "MILESTONE"
+    },
+    {
+      "modelo": "WX395"
+    },
+    {
+      "modelo": "WX390"
+    },
+    {
+      "modelo": "WX288"
+    },
+    {
+      "modelo": "WX280"
+    },
+    {
+      "modelo": "WX180"
+    },
+    {
+      "modelo": "WX160"
+    },
+    {
+      "modelo": "Motocubo A45"
+    },
+    {
+      "modelo": "DEXT MB220"
+    },
+    {
+      "modelo": "ROKR ZN50"
+    },
+    {
+      "modelo": "Karma QA1"
+    },
+    {
+      "modelo": "L800t"
+    },
+    {
+      "modelo": "W7 Active Edition"
+    },
+    {
+      "modelo": "ROKR W6"
+    },
+    {
+      "modelo": "MC55"
+    },
+    {
+      "modelo": "ZN300"
+    },
+    {
+      "modelo": "E11"
+    },
+    {
+      "modelo": "A3100"
+    },
+    {
+      "modelo": "A3000"
+    },
+    {
+      "modelo": "Tundra VA76r"
+    },
+    {
+      "modelo": "W233 Renew"
+    },
+    {
+      "modelo": "COCKTAIL VE70"
+    },
+    {
+      "modelo": "VE66"
+    },
+    {
+      "modelo": "EM35"
+    },
+    {
+      "modelo": "Aura"
+    },
+    {
+      "modelo": "Q 11"
+    },
+    {
+      "modelo": "VE538"
+    },
+    {
+      "modelo": "RAZR2 V9x"
+    },
+    {
+      "modelo": "ZN200"
+    },
+    {
+      "modelo": "W396"
+    },
+    {
+      "modelo": "W231"
+    },
+    {
+      "modelo": "EM30"
+    },
+    {
+      "modelo": "EM28"
+    },
+    {
+      "modelo": "EM25"
+    },
+    {
+      "modelo": "PEBL VU20"
+    },
+    {
+      "modelo": "MOTOACTV W450"
+    },
+    {
+      "modelo": "VE75"
+    },
+    {
+      "modelo": "ZN5"
+    },
+    {
+      "modelo": "A1210"
+    },
+    {
+      "modelo": "A1600"
+    },
+    {
+      "modelo": "A1890"
+    },
+    {
+      "modelo": "A1800"
+    },
+    {
+      "modelo": "A810"
+    },
+    {
+      "modelo": "W388"
+    },
+    {
+      "modelo": "Z9"
+    },
+    {
+      "modelo": "Z6w"
+    },
+    {
+      "modelo": "Z6c"
+    },
+    {
+      "modelo": "W181"
+    },
+    {
+      "modelo": "W177"
+    },
+    {
+      "modelo": "W161"
+    },
+    {
+      "modelo": "W270"
+    },
+    {
+      "modelo": "W230"
+    },
+    {
+      "modelo": "RIZR Z10"
+    },
+    {
+      "modelo": "ROKR E8"
+    },
+    {
+      "modelo": "W377"
+    },
+    {
+      "modelo": "W213"
+    },
+    {
+      "modelo": "W180"
+    },
+    {
+      "modelo": "W160"
+    },
+    {
+      "modelo": "U9"
+    },
+    {
+      "modelo": "V1100"
+    },
+    {
+      "modelo": "PEBL U3"
+    },
+    {
+      "modelo": "RAZR2 V9"
+    },
+    {
+      "modelo": "RAZR2 V8"
+    },
+    {
+      "modelo": "ROKR W5"
+    },
+    {
+      "modelo": "W490"
+    },
+    {
+      "modelo": "W395"
+    },
+    {
+      "modelo": "W380"
+    },
+    {
+      "modelo": "W360"
+    },
+    {
+      "modelo": "W218"
+    },
+    {
+      "modelo": "RIZR Z8"
+    },
+    {
+      "modelo": "KRZR K3"
+    },
+    {
+      "modelo": "SLVR L9"
+    },
+    {
+      "modelo": "Q 9h"
+    },
+    {
+      "modelo": "Q8"
+    },
+    {
+      "modelo": "W510"
+    },
+    {
+      "modelo": "W215"
+    },
+    {
+      "modelo": "W205"
+    },
+    {
+      "modelo": "ROKR Z6"
+    },
+    {
+      "modelo": "ROKR E6"
+    },
+    {
+      "modelo": "SLVR L7e"
+    },
+    {
+      "modelo": "RAZR maxx V6"
+    },
+    {
+      "modelo": "RAZR V3xx"
+    },
+    {
+      "modelo": "RIZR Z3"
+    },
+    {
+      "modelo": "KRZR K1"
+    },
+    {
+      "modelo": "W209"
+    },
+    {
+      "modelo": "W375"
+    },
+    {
+      "modelo": "W208"
+    },
+    {
+      "modelo": "MOTOFONE F3"
+    },
+    {
+      "modelo": "W220"
+    },
+    {
+      "modelo": "V195"
+    },
+    {
+      "modelo": "V191"
+    },
+    {
+      "modelo": "ROKR E2"
+    },
+    {
+      "modelo": "RAZR V3i"
+    },
+    {
+      "modelo": "ROKR E1"
+    },
+    {
+      "modelo": "A910"
+    },
+    {
+      "modelo": "A1200"
+    },
+    {
+      "modelo": "A728"
+    },
+    {
+      "modelo": "A732"
+    },
+    {
+      "modelo": "E895"
+    },
+    {
+      "modelo": "V3x"
+    },
+    {
+      "modelo": "E1070"
+    },
+    {
+      "modelo": "E770"
+    },
+    {
+      "modelo": "SLVR L7"
+    },
+    {
+      "modelo": "PEBL U6"
+    },
+    {
+      "modelo": "A1010"
+    },
+    {
+      "modelo": "E1060"
+    },
+    {
+      "modelo": "E1120"
+    },
+    {
+      "modelo": "V1050"
+    },
+    {
+      "modelo": "C261"
+    },
+    {
+      "modelo": "C257"
+    },
+    {
+      "modelo": "C168"
+    },
+    {
+      "modelo": "C139"
+    },
+    {
+      "modelo": "C123"
+    },
+    {
+      "modelo": "C118"
+    },
+    {
+      "modelo": "C117"
+    },
+    {
+      "modelo": "C113a"
+    },
+    {
+      "modelo": "C113"
+    },
+    {
+      "modelo": "C390"
+    },
+    {
+      "modelo": "E680i"
+    },
+    {
+      "modelo": "V560"
+    },
+    {
+      "modelo": "V557"
+    },
+    {
+      "modelo": "V361"
+    },
+    {
+      "modelo": "V360"
+    },
+    {
+      "modelo": "L6"
+    },
+    {
+      "modelo": "L2"
+    },
+    {
+      "modelo": "V235"
+    },
+    {
+      "modelo": "V230"
+    },
+    {
+      "modelo": "V186"
+    },
+    {
+      "modelo": "V176"
+    },
+    {
+      "modelo": "E378i"
+    },
+    {
+      "modelo": "V635"
+    },
+    {
+      "modelo": "A668"
+    },
+    {
+      "modelo": "V980"
+    },
+    {
+      "modelo": "C980"
+    },
+    {
+      "modelo": "V535"
+    },
+    {
+      "modelo": "V547"
+    },
+    {
+      "modelo": "E375"
+    },
+    {
+      "modelo": "RAZR V3"
+    },
+    {
+      "modelo": "Droid Bionic Targa"
+    },
+    {
+      "modelo": "Droid XTreme"
+    },
+    {
+      "modelo": "A780"
+    },
+    {
+      "modelo": "V975"
+    },
+    {
+      "modelo": "C975"
+    },
+    {
+      "modelo": "V620"
+    },
+    {
+      "modelo": "V555"
+    },
+    {
+      "modelo": "A840"
+    },
+    {
+      "modelo": "E680"
+    },
+    {
+      "modelo": "E398"
+    },
+    {
+      "modelo": "C650"
+    },
+    {
+      "modelo": "V226"
+    },
+    {
+      "modelo": "V188"
+    },
+    {
+      "modelo": "V171"
+    },
+    {
+      "modelo": "C155"
+    },
+    {
+      "modelo": "C116"
+    },
+    {
+      "modelo": "C115"
+    },
+    {
+      "modelo": "MPx"
+    },
+    {
+      "modelo": "MPx220"
+    },
+    {
+      "modelo": "MPx100"
+    },
+    {
+      "modelo": "V872"
+    },
+    {
+      "modelo": "V1000"
+    },
+    {
+      "modelo": "E1000"
+    },
+    {
+      "modelo": "A1000"
+    },
+    {
+      "modelo": "A768i"
+    },
+    {
+      "modelo": "A630"
+    },
+    {
+      "modelo": "C380/C385"
+    },
+    {
+      "modelo": "V80"
+    },
+    {
+      "modelo": "C289"
+    },
+    {
+      "modelo": "C205"
+    },
+    {
+      "modelo": "V400p"
+    },
+    {
+      "modelo": "V220"
+    },
+    {
+      "modelo": "V180"
+    },
+    {
+      "modelo": "V878"
+    },
+    {
+      "modelo": "A925"
+    },
+    {
+      "modelo": "A920"
+    },
+    {
+      "modelo": "V750"
+    },
+    {
+      "modelo": "MPx200"
+    },
+    {
+      "modelo": "V690"
+    },
+    {
+      "modelo": "V525"
+    },
+    {
+      "modelo": "V501"
+    },
+    {
+      "modelo": "V500"
+    },
+    {
+      "modelo": "V303"
+    },
+    {
+      "modelo": "V300"
+    },
+    {
+      "modelo": "V600"
+    },
+    {
+      "modelo": "V150"
+    },
+    {
+      "modelo": "E390"
+    },
+    {
+      "modelo": "C550"
+    },
+    {
+      "modelo": "C450"
+    },
+    {
+      "modelo": "C250"
+    },
+    {
+      "modelo": "C230"
+    },
+    {
+      "modelo": "C200"
+    },
+    {
+      "modelo": "A835"
+    },
+    {
+      "modelo": "A830"
+    },
+    {
+      "modelo": "A760"
+    },
+    {
+      "modelo": "V295"
+    },
+    {
+      "modelo": "V291"
+    },
+    {
+      "modelo": "V290"
+    },
+    {
+      "modelo": "A388c"
+    },
+    {
+      "modelo": "C350"
+    },
+    {
+      "modelo": "T725"
+    },
+    {
+      "modelo": "T720i"
+    },
+    {
+      "modelo": "T720"
+    },
+    {
+      "modelo": "T190"
+    },
+    {
+      "modelo": "E380"
+    },
+    {
+      "modelo": "E365"
+    },
+    {
+      "modelo": "E360"
+    },
+    {
+      "modelo": "V70"
+    },
+    {
+      "modelo": "C336"
+    },
+    {
+      "modelo": "C333"
+    },
+    {
+      "modelo": "C332"
+    },
+    {
+      "modelo": "C331"
+    },
+    {
+      "modelo": "C300"
+    },
+    {
+      "modelo": "V60i"
+    },
+    {
+      "modelo": "V66i"
+    },
+    {
+      "modelo": "Accompli 388"
+    },
+    {
+      "modelo": "V60"
+    },
+    {
+      "modelo": "Accompli 008"
+    },
+    {
+      "modelo": "Timeport 280"
+    },
+    {
+      "modelo": "Timeport 260"
+    },
+    {
+      "modelo": "Timeport 250"
+    },
+    {
+      "modelo": "Talkabout T192"
+    },
+    {
+      "modelo": "Talkabout T191"
+    },
+    {
+      "modelo": "Accompli 009"
+    },
+    {
+      "modelo": "V.box(V100)"
+    },
+    {
+      "modelo": "V66"
+    },
+    {
+      "modelo": "V50"
+    },
+    {
+      "modelo": "T180"
+    },
+    {
+      "modelo": "A6188"
+    },
+    {
+      "modelo": "v8088"
+    },
+    {
+      "modelo": "Talkabout T2288"
+    },
+    {
+      "modelo": "V2288"
+    },
+    {
+      "modelo": "Timeport P7389"
+    },
+    {
+      "modelo": "Timeport L7089"
+    },
+    {
+      "modelo": "V3690"
+    },
+    {
+      "modelo": "V3688"
+    },
+    {
+      "modelo": "StarTAC 130"
+    },
+    {
+      "modelo": "StarTAC 85"
+    },
+    {
+      "modelo": "StarTAC Rainbow"
+    },
+    {
+      "modelo": "StarTAC 75+"
+    },
+    {
+      "modelo": "StarTAC 75"
+    },
+    {
+      "modelo": "SlimLite"
+    },
+    {
+      "modelo": "cd930"
+    },
+    {
+      "modelo": "cd920"
+    },
+    {
+      "modelo": "M3188"
+    },
+    {
+      "modelo": "M3288"
+    },
+    {
+      "modelo": "M3588"
+    },
+    {
+      "modelo": "M3688"
+    },
+    {
+      "modelo": "M3788"
+    },
+    {
+      "modelo": "M3888"
+    },
+    {
+      "modelo": "d520"
+    },
+    {
+      "modelo": "Moto Z4 Force"
+    },
+    {
+      "modelo": "Moto Z4 Play"
+    },
+    {
+      "modelo": "P40"
+    },
+    {
+      "modelo": "Moto Watch 150"
+    }
+  ]
+}

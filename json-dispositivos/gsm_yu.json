@@ -1,0 +1,48 @@
+{
+  "marca": "YU",
+  "id_interno": "100",
+  "slug": "yu",
+  "total_esperado": 0,
+  "total_encontrado": 13,
+  "modelos": [
+    {
+      "modelo": "Ace"
+    },
+    {
+      "modelo": "Yureka 2"
+    },
+    {
+      "modelo": "Yunique 2"
+    },
+    {
+      "modelo": "Yureka Black"
+    },
+    {
+      "modelo": "Yunique Plus"
+    },
+    {
+      "modelo": "Yureka S"
+    },
+    {
+      "modelo": "Yunicorn"
+    },
+    {
+      "modelo": "Yureka Note"
+    },
+    {
+      "modelo": "Yutopia"
+    },
+    {
+      "modelo": "Yunique"
+    },
+    {
+      "modelo": "Yureka Plus"
+    },
+    {
+      "modelo": "Yuphoria"
+    },
+    {
+      "modelo": "Yureka"
+    }
+  ]
+}

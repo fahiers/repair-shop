@@ -1,0 +1,499 @@
+{
+  "marca": "INFINIX",
+  "id_interno": "119",
+  "slug": "infinix",
+  "total_esperado": 0,
+  "total_encontrado": 163,
+  "modelos": [
+    {
+      "modelo": "Xpad 20 Pro"
+    },
+    {
+      "modelo": "Hot 60i"
+    },
+    {
+      "modelo": "GT 30"
+    },
+    {
+      "modelo": "Hot 60"
+    },
+    {
+      "modelo": "Hot 60 Pro+"
+    },
+    {
+      "modelo": "Hot 60 Pro"
+    },
+    {
+      "modelo": "Hot 60i 4G"
+    },
+    {
+      "modelo": "Smart 10 HD"
+    },
+    {
+      "modelo": "Smart 10 Plus"
+    },
+    {
+      "modelo": "Smart 10"
+    },
+    {
+      "modelo": "Xpad 20"
+    },
+    {
+      "modelo": "GT 30 Pro"
+    },
+    {
+      "modelo": "Xpad GT"
+    },
+    {
+      "modelo": "Note 50s"
+    },
+    {
+      "modelo": "Note 50x"
+    },
+    {
+      "modelo": "Note 50 Pro+"
+    },
+    {
+      "modelo": "Note 50 Pro 4G"
+    },
+    {
+      "modelo": "Note 50 4G"
+    },
+    {
+      "modelo": "Smart 9 HD"
+    },
+    {
+      "modelo": "Hot 50 Pro 4G"
+    },
+    {
+      "modelo": "Hot 50 Pro+ 4G"
+    },
+    {
+      "modelo": "Note 40S"
+    },
+    {
+      "modelo": "Hot 50i"
+    },
+    {
+      "modelo": "Smart 9"
+    },
+    {
+      "modelo": "Hot 50 4G"
+    },
+    {
+      "modelo": "Zero Flip"
+    },
+    {
+      "modelo": "Hot 50"
+    },
+    {
+      "modelo": "Zero 40"
+    },
+    {
+      "modelo": "Zero 40 4G"
+    },
+    {
+      "modelo": "Xpad"
+    },
+    {
+      "modelo": "Note 40X 5G"
+    },
+    {
+      "modelo": "Note 40 5G"
+    },
+    {
+      "modelo": "GT 20 Pro"
+    },
+    {
+      "modelo": "Note 40 Pro+"
+    },
+    {
+      "modelo": "Note 40 Pro"
+    },
+    {
+      "modelo": "Note 40 Pro 4G"
+    },
+    {
+      "modelo": "Note 40"
+    },
+    {
+      "modelo": "Smart 8 Plus"
+    },
+    {
+      "modelo": "Smart 8 Pro"
+    },
+    {
+      "modelo": "Smart 8 (India)"
+    },
+    {
+      "modelo": "Smart 8 HD"
+    },
+    {
+      "modelo": "Hot 40 Pro"
+    },
+    {
+      "modelo": "Hot 40"
+    },
+    {
+      "modelo": "Hot 40i"
+    },
+    {
+      "modelo": "Smart 8"
+    },
+    {
+      "modelo": "Zero 30 4G"
+    },
+    {
+      "modelo": "Zero 30"
+    },
+    {
+      "modelo": "GT 10 Pro"
+    },
+    {
+      "modelo": "Hot 30 5G"
+    },
+    {
+      "modelo": "Note 30 VIP"
+    },
+    {
+      "modelo": "Hot 30 Play NFC"
+    },
+    {
+      "modelo": "Note 30 Pro"
+    },
+    {
+      "modelo": "Note 30"
+    },
+    {
+      "modelo": "Note 30 5G"
+    },
+    {
+      "modelo": "Note 30i"
+    },
+    {
+      "modelo": "Smart 7 HD"
+    },
+    {
+      "modelo": "Hot 30i (50 MP)"
+    },
+    {
+      "modelo": "Hot 30i"
+    },
+    {
+      "modelo": "Hot 30"
+    },
+    {
+      "modelo": "Smart 7 (India)"
+    },
+    {
+      "modelo": "Smart 7"
+    },
+    {
+      "modelo": "Zero 5G 2023"
+    },
+    {
+      "modelo": "Hot 20 Play"
+    },
+    {
+      "modelo": "Hot 20S"
+    },
+    {
+      "modelo": "Hot 20"
+    },
+    {
+      "modelo": "Note 12",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Zero Ultra"
+    },
+    {
+      "modelo": "Hot 20 5G"
+    },
+    {
+      "modelo": "Hot 20i"
+    },
+    {
+      "modelo": "Zero 20"
+    },
+    {
+      "modelo": "Note 12i 2022"
+    },
+    {
+      "modelo": "Hot 12 Pro"
+    },
+    {
+      "modelo": "Smart 6 Plus (India)"
+    },
+    {
+      "modelo": "Note 12 Pro"
+    },
+    {
+      "modelo": "Note 12 Pro 5G"
+    },
+    {
+      "modelo": "Note 12 5G"
+    },
+    {
+      "modelo": "Hot 11s NFC"
+    },
+    {
+      "modelo": "Hot 12 Play"
+    },
+    {
+      "modelo": "Hot 12 Play NFC"
+    },
+    {
+      "modelo": "Note 12 VIP"
+    },
+    {
+      "modelo": "Note 12 G96"
+    },
+    {
+      "modelo": "Note 12i"
+    },
+    {
+      "modelo": "Note 12"
+    },
+    {
+      "modelo": "Hot 12"
+    },
+    {
+      "modelo": "Smart 6 HD"
+    },
+    {
+      "modelo": "Hot 11 2022"
+    },
+    {
+      "modelo": "Hot 12i"
+    },
+    {
+      "modelo": "Zero 5G"
+    },
+    {
+      "modelo": "Smart 5 Pro"
+    },
+    {
+      "modelo": "Hot 11 Play"
+    },
+    {
+      "modelo": "Note 11i"
+    },
+    {
+      "modelo": "Note 11s"
+    },
+    {
+      "modelo": "Note 11"
+    },
+    {
+      "modelo": "Smart 6"
+    },
+    {
+      "modelo": "Note 11 Pro"
+    },
+    {
+      "modelo": "Hot 11s"
+    },
+    {
+      "modelo": "Hot 11"
+    },
+    {
+      "modelo": "Zero X Pro"
+    },
+    {
+      "modelo": "Zero X"
+    },
+    {
+      "modelo": "Zero X Neo"
+    },
+    {
+      "modelo": "Hot 10i"
+    },
+    {
+      "modelo": "Note 10 Pro NFC"
+    },
+    {
+      "modelo": "Note 10 Pro"
+    },
+    {
+      "modelo": "Note 10"
+    },
+    {
+      "modelo": "Hot 10T"
+    },
+    {
+      "modelo": "Hot 10s NFC"
+    },
+    {
+      "modelo": "Hot 10s"
+    },
+    {
+      "modelo": "Smart 5 (India)"
+    },
+    {
+      "modelo": "Hot 10 Play"
+    },
+    {
+      "modelo": "Smart HD 2021"
+    },
+    {
+      "modelo": "Zero 8i"
+    },
+    {
+      "modelo": "Note 8"
+    },
+    {
+      "modelo": "Note 8i"
+    },
+    {
+      "modelo": "Hot 10 Lite"
+    },
+    {
+      "modelo": "Hot 10"
+    },
+    {
+      "modelo": "Zero 8"
+    },
+    {
+      "modelo": "Smart 5"
+    },
+    {
+      "modelo": "Hot 9 Play"
+    },
+    {
+      "modelo": "Note 7"
+    },
+    {
+      "modelo": "Note 7 Lite"
+    },
+    {
+      "modelo": "Hot 9 Pro"
+    },
+    {
+      "modelo": "Hot 9"
+    },
+    {
+      "modelo": "S5 Pro (16+32)"
+    },
+    {
+      "modelo": "S5 Pro (48+40)"
+    },
+    {
+      "modelo": "S5 Pro"
+    },
+    {
+      "modelo": "S5 lite"
+    },
+    {
+      "modelo": "Smart 4"
+    },
+    {
+      "modelo": "Smart 4c"
+    },
+    {
+      "modelo": "Hot 8 Lite"
+    },
+    {
+      "modelo": "S5"
+    },
+    {
+      "modelo": "Hot 8"
+    },
+    {
+      "modelo": "Note 6"
+    },
+    {
+      "modelo": "Smart3 Plus"
+    },
+    {
+      "modelo": "S4"
+    },
+    {
+      "modelo": "Hot 7 Pro"
+    },
+    {
+      "modelo": "Hot 7"
+    },
+    {
+      "modelo": "Zero 6 Pro"
+    },
+    {
+      "modelo": "Zero 6"
+    },
+    {
+      "modelo": "Smart 2 HD"
+    },
+    {
+      "modelo": "Hot 6X"
+    },
+    {
+      "modelo": "Note 5 Stylus"
+    },
+    {
+      "modelo": "S3X"
+    },
+    {
+      "modelo": "Hot 6"
+    },
+    {
+      "modelo": "Note 5"
+    },
+    {
+      "modelo": "Smart 2 Pro"
+    },
+    {
+      "modelo": "Smart 2"
+    },
+    {
+      "modelo": "Hot 6 Pro"
+    },
+    {
+      "modelo": "Hot S3"
+    },
+    {
+      "modelo": "Zero 5 Pro"
+    },
+    {
+      "modelo": "Zero 5"
+    },
+    {
+      "modelo": "Hot 5 Lite"
+    },
+    {
+      "modelo": "Hot 5"
+    },
+    {
+      "modelo": "Note 4 Pro"
+    },
+    {
+      "modelo": "Note 4"
+    },
+    {
+      "modelo": "Smart"
+    },
+    {
+      "modelo": "Zero 4 Plus"
+    },
+    {
+      "modelo": "Zero 4"
+    },
+    {
+      "modelo": "S2 Pro"
+    },
+    {
+      "modelo": "Hot 4 Pro"
+    },
+    {
+      "modelo": "Hot 4"
+    },
+    {
+      "modelo": "Note 3 Pro"
+    },
+    {
+      "modelo": "Note 3"
+    },
+    {
+      "modelo": "Hot S"
+    }
+  ]
+}

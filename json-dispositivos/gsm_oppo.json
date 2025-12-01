@@ -1,0 +1,1128 @@
+{
+  "marca": "OPPO",
+  "id_interno": "82",
+  "slug": "oppo",
+  "total_esperado": 0,
+  "total_encontrado": 368,
+  "modelos": [
+    {
+      "modelo": "Reno15 Pro"
+    },
+    {
+      "modelo": "Reno15"
+    },
+    {
+      "modelo": "Find X9 Pro"
+    },
+    {
+      "modelo": "Find X9"
+    },
+    {
+      "modelo": "Pad 5"
+    },
+    {
+      "modelo": "Watch S"
+    },
+    {
+      "modelo": "A6 Pro"
+    },
+    {
+      "modelo": "A6 Pro 4G"
+    },
+    {
+      "modelo": "F31 Pro+"
+    },
+    {
+      "modelo": "F31 Pro"
+    },
+    {
+      "modelo": "F31"
+    },
+    {
+      "modelo": "A6 GT"
+    },
+    {
+      "modelo": "A6 Pro (China)"
+    },
+    {
+      "modelo": "A6 Max"
+    },
+    {
+      "modelo": "K13 Turbo"
+    },
+    {
+      "modelo": "K13 Turbo Pro"
+    },
+    {
+      "modelo": "Reno14 F"
+    },
+    {
+      "modelo": "K13x"
+    },
+    {
+      "modelo": "A5x"
+    },
+    {
+      "modelo": "A5"
+    },
+    {
+      "modelo": "A5 4G"
+    },
+    {
+      "modelo": "A5x 4G"
+    },
+    {
+      "modelo": "Reno14 Pro"
+    },
+    {
+      "modelo": "Reno14"
+    },
+    {
+      "modelo": "Pad SE"
+    },
+    {
+      "modelo": "K13"
+    },
+    {
+      "modelo": "Find X8 Ultra"
+    },
+    {
+      "modelo": "Find X8s+"
+    },
+    {
+      "modelo": "Find X8s"
+    },
+    {
+      "modelo": "Pad 4 Pro"
+    },
+    {
+      "modelo": "Watch X2 Mini"
+    },
+    {
+      "modelo": "F29 Pro"
+    },
+    {
+      "modelo": "F29"
+    },
+    {
+      "modelo": "A5 Energy"
+    },
+    {
+      "modelo": "A5 (China)"
+    },
+    {
+      "modelo": "A5 Pro 4G"
+    },
+    {
+      "modelo": "A5 Pro"
+    },
+    {
+      "modelo": "Find N5"
+    },
+    {
+      "modelo": "Watch X2"
+    },
+    {
+      "modelo": "Reno13 F"
+    },
+    {
+      "modelo": "Reno13 F 4G"
+    },
+    {
+      "modelo": "A5 Pro (China)"
+    },
+    {
+      "modelo": "Reno13 Pro"
+    },
+    {
+      "modelo": "Reno13"
+    },
+    {
+      "modelo": "Pad 3"
+    },
+    {
+      "modelo": "Find X8 Pro"
+    },
+    {
+      "modelo": "Find X8"
+    },
+    {
+      "modelo": "Pad 3 Pro"
+    },
+    {
+      "modelo": "K12 Plus"
+    },
+    {
+      "modelo": "A80"
+    },
+    {
+      "modelo": "F27"
+    },
+    {
+      "modelo": "A3 4G"
+    },
+    {
+      "modelo": "A3x 4G"
+    },
+    {
+      "modelo": "A3"
+    },
+    {
+      "modelo": "A3x"
+    },
+    {
+      "modelo": "A3x (China)"
+    },
+    {
+      "modelo": "K12x"
+    },
+    {
+      "modelo": "Reno12 F 4G"
+    },
+    {
+      "modelo": "A3 (China)"
+    },
+    {
+      "modelo": "Reno12 F"
+    },
+    {
+      "modelo": "A3 Pro"
+    },
+    {
+      "modelo": "Reno12 Pro"
+    },
+    {
+      "modelo": "Reno12"
+    },
+    {
+      "modelo": "F27 Pro+"
+    },
+    {
+      "modelo": "Reno12 Pro (China)"
+    },
+    {
+      "modelo": "Reno12 (China)"
+    },
+    {
+      "modelo": "K12x (China)"
+    },
+    {
+      "modelo": "A60"
+    },
+    {
+      "modelo": "K12"
+    },
+    {
+      "modelo": "A3 Pro (China)"
+    },
+    {
+      "modelo": "Watch X"
+    },
+    {
+      "modelo": "F25 Pro"
+    },
+    {
+      "modelo": "Reno11 F"
+    },
+    {
+      "modelo": "Pad Neo"
+    },
+    {
+      "modelo": "Reno11 Pro"
+    },
+    {
+      "modelo": "Reno11"
+    },
+    {
+      "modelo": "Find X7 Ultra"
+    },
+    {
+      "modelo": "Find X7"
+    },
+    {
+      "modelo": "A59"
+    },
+    {
+      "modelo": "Reno11 Pro (China)"
+    },
+    {
+      "modelo": "Reno11 (China)"
+    },
+    {
+      "modelo": "Pad Air2"
+    },
+    {
+      "modelo": "A2"
+    },
+    {
+      "modelo": "A79"
+    },
+    {
+      "modelo": "Find N3"
+    },
+    {
+      "modelo": "A2x"
+    },
+    {
+      "modelo": "A18"
+    },
+    {
+      "modelo": "A2 Pro"
+    },
+    {
+      "modelo": "A38"
+    },
+    {
+      "modelo": "Watch SE"
+    },
+    {
+      "modelo": "Watch 4 Pro"
+    },
+    {
+      "modelo": "Find N3 Flip"
+    },
+    {
+      "modelo": "A58 4G"
+    },
+    {
+      "modelo": "K11"
+    },
+    {
+      "modelo": "Reno10 Pro"
+    },
+    {
+      "modelo": "Reno10"
+    },
+    {
+      "modelo": "A78 4G"
+    },
+    {
+      "modelo": "K11x"
+    },
+    {
+      "modelo": "Reno10 Pro+"
+    },
+    {
+      "modelo": "Reno10 Pro (China)"
+    },
+    {
+      "modelo": "Reno10 (China)"
+    },
+    {
+      "modelo": "F23"
+    },
+    {
+      "modelo": "A98"
+    },
+    {
+      "modelo": "A1"
+    },
+    {
+      "modelo": "A1x"
+    },
+    {
+      "modelo": "Find X6 Pro"
+    },
+    {
+      "modelo": "Find X6"
+    },
+    {
+      "modelo": "Pad 2"
+    },
+    {
+      "modelo": "Reno8 T"
+    },
+    {
+      "modelo": "Reno8 T 5G"
+    },
+    {
+      "modelo": "A78"
+    },
+    {
+      "modelo": "A56s"
+    },
+    {
+      "modelo": "Find N2 Flip"
+    },
+    {
+      "modelo": "Find N2"
+    },
+    {
+      "modelo": "A58x"
+    },
+    {
+      "modelo": "Reno9 Pro+"
+    },
+    {
+      "modelo": "Reno9 Pro"
+    },
+    {
+      "modelo": "Reno9"
+    },
+    {
+      "modelo": "A1 Pro"
+    },
+    {
+      "modelo": "A58 (China)"
+    },
+    {
+      "modelo": "A17k"
+    },
+    {
+      "modelo": "A77s"
+    },
+    {
+      "modelo": "A17"
+    },
+    {
+      "modelo": "K10x"
+    },
+    {
+      "modelo": "A57e"
+    },
+    {
+      "modelo": "A57s"
+    },
+    {
+      "modelo": "Reno8 4G"
+    },
+    {
+      "modelo": "Watch 3 Pro"
+    },
+    {
+      "modelo": "Watch 3"
+    },
+    {
+      "modelo": "Reno8 Z"
+    },
+    {
+      "modelo": "A77 4G"
+    },
+    {
+      "modelo": "Reno8 Pro"
+    },
+    {
+      "modelo": "Reno8"
+    },
+    {
+      "modelo": "A97"
+    },
+    {
+      "modelo": "Reno8 Lite"
+    },
+    {
+      "modelo": "K10 5G"
+    },
+    {
+      "modelo": "A77"
+    },
+    {
+      "modelo": "A57 4G"
+    },
+    {
+      "modelo": "Reno8 Pro+"
+    },
+    {
+      "modelo": "Reno8 Pro (China)"
+    },
+    {
+      "modelo": "Reno8 (China)"
+    },
+    {
+      "modelo": "Pad Air"
+    },
+    {
+      "modelo": "K10 Pro"
+    },
+    {
+      "modelo": "K10 5G (China)"
+    },
+    {
+      "modelo": "A55s"
+    },
+    {
+      "modelo": "A57"
+    },
+    {
+      "modelo": "Reno7 Lite"
+    },
+    {
+      "modelo": "F21 Pro 5G"
+    },
+    {
+      "modelo": "F21 Pro"
+    },
+    {
+      "modelo": "Reno7"
+    },
+    {
+      "modelo": "K10"
+    },
+    {
+      "modelo": "A96"
+    },
+    {
+      "modelo": "A16e"
+    },
+    {
+      "modelo": "Reno7 Z 5G"
+    },
+    {
+      "modelo": "Find X5 Pro"
+    },
+    {
+      "modelo": "Find X5"
+    },
+    {
+      "modelo": "Find X5 Lite"
+    },
+    {
+      "modelo": "Pad"
+    },
+    {
+      "modelo": "A76"
+    },
+    {
+      "modelo": "Reno7 5G"
+    },
+    {
+      "modelo": "Reno6 Lite"
+    },
+    {
+      "modelo": "A96 (China)"
+    },
+    {
+      "modelo": "A36"
+    },
+    {
+      "modelo": "A11s"
+    },
+    {
+      "modelo": "K9x"
+    },
+    {
+      "modelo": "Find N"
+    },
+    {
+      "modelo": "Reno7 Pro 5G"
+    },
+    {
+      "modelo": "Reno7 5G (China)"
+    },
+    {
+      "modelo": "Reno7 SE 5G"
+    },
+    {
+      "modelo": "A95"
+    },
+    {
+      "modelo": "A16K"
+    },
+    {
+      "modelo": "A54s"
+    },
+    {
+      "modelo": "A56 5G"
+    },
+    {
+      "modelo": "K9s"
+    },
+    {
+      "modelo": "A55"
+    },
+    {
+      "modelo": "F19s"
+    },
+    {
+      "modelo": "K9 Pro"
+    },
+    {
+      "modelo": "Reno6 Pro 5G (Snapdragon)"
+    },
+    {
+      "modelo": "Reno6"
+    },
+    {
+      "modelo": "Watch 2"
+    },
+    {
+      "modelo": "Reno6 Z"
+    },
+    {
+      "modelo": "A16s"
+    },
+    {
+      "modelo": "A16"
+    },
+    {
+      "modelo": "Reno6 Pro+ 5G"
+    },
+    {
+      "modelo": "Reno6 Pro 5G"
+    },
+    {
+      "modelo": "Reno6 5G"
+    },
+    {
+      "modelo": "K9"
+    },
+    {
+      "modelo": "A53s 5G"
+    },
+    {
+      "modelo": "A95 5G"
+    },
+    {
+      "modelo": "A94 5G"
+    },
+    {
+      "modelo": "A35"
+    },
+    {
+      "modelo": "Reno5 Z"
+    },
+    {
+      "modelo": "A54 5G"
+    },
+    {
+      "modelo": "A74 5G"
+    },
+    {
+      "modelo": "A74"
+    },
+    {
+      "modelo": "F19"
+    },
+    {
+      "modelo": "A54"
+    },
+    {
+      "modelo": "Find X3 Pro"
+    },
+    {
+      "modelo": "Find X3"
+    },
+    {
+      "modelo": "Find X3 Neo"
+    },
+    {
+      "modelo": "Find X3 Lite"
+    },
+    {
+      "modelo": "F19 Pro+ 5G"
+    },
+    {
+      "modelo": "F19 Pro"
+    },
+    {
+      "modelo": "Reno5 Lite"
+    },
+    {
+      "modelo": "A94"
+    },
+    {
+      "modelo": "Reno5 F"
+    },
+    {
+      "modelo": "Reno5 K"
+    },
+    {
+      "modelo": "A55 5G"
+    },
+    {
+      "modelo": "A93s 5G"
+    },
+    {
+      "modelo": "A93 5G"
+    },
+    {
+      "modelo": "A15s"
+    },
+    {
+      "modelo": "Reno5 4G"
+    },
+    {
+      "modelo": "Reno5 Pro+ 5G"
+    },
+    {
+      "modelo": "A53 5G"
+    },
+    {
+      "modelo": "Reno5 Pro 5G"
+    },
+    {
+      "modelo": "Reno5 5G"
+    },
+    {
+      "modelo": "A73 5G"
+    },
+    {
+      "modelo": "Reno4 F"
+    },
+    {
+      "modelo": "A15"
+    },
+    {
+      "modelo": "A53s"
+    },
+    {
+      "modelo": "A73"
+    },
+    {
+      "modelo": "A93"
+    },
+    {
+      "modelo": "Reno4 Z 5G"
+    },
+    {
+      "modelo": "Reno4 Lite"
+    },
+    {
+      "modelo": "A33",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Reno4 SE"
+    },
+    {
+      "modelo": "F17 Pro"
+    },
+    {
+      "modelo": "F17"
+    },
+    {
+      "modelo": "A32"
+    },
+    {
+      "modelo": "A53"
+    },
+    {
+      "modelo": "Watch"
+    },
+    {
+      "modelo": "K7x"
+    },
+    {
+      "modelo": "Reno4 Pro"
+    },
+    {
+      "modelo": "Reno4"
+    },
+    {
+      "modelo": "A72 5G"
+    },
+    {
+      "modelo": "A12s"
+    },
+    {
+      "modelo": "Reno4 Pro 5G"
+    },
+    {
+      "modelo": "Reno4 5G"
+    },
+    {
+      "modelo": "A92"
+    },
+    {
+      "modelo": "Find X2 Neo"
+    },
+    {
+      "modelo": "A92s"
+    },
+    {
+      "modelo": "A72"
+    },
+    {
+      "modelo": "A52"
+    },
+    {
+      "modelo": "A11k"
+    },
+    {
+      "modelo": "A12"
+    },
+    {
+      "modelo": "K7 5G"
+    },
+    {
+      "modelo": "Find X2 Lite"
+    },
+    {
+      "modelo": "Ace2"
+    },
+    {
+      "modelo": "A12e"
+    },
+    {
+      "modelo": "Reno3"
+    },
+    {
+      "modelo": "Find X2 Pro"
+    },
+    {
+      "modelo": "Find X2"
+    },
+    {
+      "modelo": "Reno3 Pro"
+    },
+    {
+      "modelo": "A31"
+    },
+    {
+      "modelo": "F15"
+    },
+    {
+      "modelo": "Reno3 Pro 5G"
+    },
+    {
+      "modelo": "Reno3 Youth"
+    },
+    {
+      "modelo": "Reno3 5G"
+    },
+    {
+      "modelo": "A91"
+    },
+    {
+      "modelo": "A8"
+    },
+    {
+      "modelo": "A11"
+    },
+    {
+      "modelo": "K5"
+    },
+    {
+      "modelo": "Reno Ace"
+    },
+    {
+      "modelo": "Reno A"
+    },
+    {
+      "modelo": "A5",
+      "ano": "2020"
+    },
+    {
+      "modelo": "A9",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Reno2"
+    },
+    {
+      "modelo": "Reno2 F"
+    },
+    {
+      "modelo": "Reno2 Z"
+    },
+    {
+      "modelo": "Reno Z"
+    },
+    {
+      "modelo": "K3"
+    },
+    {
+      "modelo": "A9x"
+    },
+    {
+      "modelo": "A9"
+    },
+    {
+      "modelo": "Reno 5G"
+    },
+    {
+      "modelo": "Reno 10x zoom"
+    },
+    {
+      "modelo": "Reno"
+    },
+    {
+      "modelo": "A1k"
+    },
+    {
+      "modelo": "A7n"
+    },
+    {
+      "modelo": "A5s (AX5s)"
+    },
+    {
+      "modelo": "F11"
+    },
+    {
+      "modelo": "F11 Pro"
+    },
+    {
+      "modelo": "A7"
+    },
+    {
+      "modelo": "R15x"
+    },
+    {
+      "modelo": "RX17 Neo"
+    },
+    {
+      "modelo": "K1"
+    },
+    {
+      "modelo": "A7x"
+    },
+    {
+      "modelo": "RX17 Pro"
+    },
+    {
+      "modelo": "R17"
+    },
+    {
+      "modelo": "F9 (F9 Pro)"
+    },
+    {
+      "modelo": "A3s"
+    },
+    {
+      "modelo": "A5 (AX5)"
+    },
+    {
+      "modelo": "Find X Lamborghini"
+    },
+    {
+      "modelo": "Find X"
+    },
+    {
+      "modelo": "F7 Youth"
+    },
+    {
+      "modelo": "A3",
+      "ano": "2018"
+    },
+    {
+      "modelo": "F7"
+    },
+    {
+      "modelo": "R15 Pro"
+    },
+    {
+      "modelo": "R15"
+    },
+    {
+      "modelo": "A1",
+      "ano": "2018"
+    },
+    {
+      "modelo": "A71",
+      "ano": "2018"
+    },
+    {
+      "modelo": "A83"
+    },
+    {
+      "modelo": "F5 Youth"
+    },
+    {
+      "modelo": "R11s Plus"
+    },
+    {
+      "modelo": "F5"
+    },
+    {
+      "modelo": "R11s"
+    },
+    {
+      "modelo": "A71"
+    },
+    {
+      "modelo": "A77",
+      "ano": "2017"
+    },
+    {
+      "modelo": "R11 Plus"
+    },
+    {
+      "modelo": "R11"
+    },
+    {
+      "modelo": "A77 (Mediatek)"
+    },
+    {
+      "modelo": "A39"
+    },
+    {
+      "modelo": "F3"
+    },
+    {
+      "modelo": "F3 Plus"
+    },
+    {
+      "modelo": "A57",
+      "ano": "2016"
+    },
+    {
+      "modelo": "F1s"
+    },
+    {
+      "modelo": "R9s Plus"
+    },
+    {
+      "modelo": "R9s"
+    },
+    {
+      "modelo": "A37"
+    },
+    {
+      "modelo": "A59",
+      "ano": "2016"
+    },
+    {
+      "modelo": "R9 Plus"
+    },
+    {
+      "modelo": "F1 Plus"
+    },
+    {
+      "modelo": "F1"
+    },
+    {
+      "modelo": "A53",
+      "ano": "2015"
+    },
+    {
+      "modelo": "A33",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Neo 7"
+    },
+    {
+      "modelo": "R7s"
+    },
+    {
+      "modelo": "R7 lite"
+    },
+    {
+      "modelo": "R5s"
+    },
+    {
+      "modelo": "Mirror 5s"
+    },
+    {
+      "modelo": "Mirror 5"
+    },
+    {
+      "modelo": "Joy 3"
+    },
+    {
+      "modelo": "R7 Plus"
+    },
+    {
+      "modelo": "R7"
+    },
+    {
+      "modelo": "Neo 5",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Neo 5s"
+    },
+    {
+      "modelo": "Joy Plus"
+    },
+    {
+      "modelo": "Mirror 3"
+    },
+    {
+      "modelo": "A31",
+      "ano": "2015"
+    },
+    {
+      "modelo": "R1x"
+    },
+    {
+      "modelo": "U3"
+    },
+    {
+      "modelo": "R5"
+    },
+    {
+      "modelo": "N3"
+    },
+    {
+      "modelo": "R1S"
+    },
+    {
+      "modelo": "Neo 3"
+    },
+    {
+      "modelo": "Find 5 Mini"
+    },
+    {
+      "modelo": "R2001 Yoyo"
+    },
+    {
+      "modelo": "R1001 Joy"
+    },
+    {
+      "modelo": "Neo 5"
+    },
+    {
+      "modelo": "R3"
+    },
+    {
+      "modelo": "N1 mini"
+    },
+    {
+      "modelo": "Find 7",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Find 7a",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Neo"
+    },
+    {
+      "modelo": "R1 R829T"
+    },
+    {
+      "modelo": "N1"
+    },
+    {
+      "modelo": "R819"
+    },
+    {
+      "modelo": "Find 5"
+    },
+    {
+      "modelo": "U705T Ulike 2"
+    },
+    {
+      "modelo": "R601"
+    },
+    {
+      "modelo": "R821T FInd Muse"
+    },
+    {
+      "modelo": "R811 Real"
+    },
+    {
+      "modelo": "T29"
+    },
+    {
+      "modelo": "R817 Real"
+    },
+    {
+      "modelo": "R815T Clover"
+    },
+    {
+      "modelo": "Find"
+    },
+    {
+      "modelo": "U701 Ulike"
+    },
+    {
+      "modelo": "F27 Pro"
+    },
+    {
+      "modelo": "K10 Energy"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "marca": "WIKO",
+  "id_interno": "96",
+  "slug": "wiko",
+  "total_esperado": 0,
+  "total_encontrado": 102,
+  "modelos": [
+    {
+      "modelo": "T30"
+    },
+    {
+      "modelo": "T40"
+    },
+    {
+      "modelo": "T20"
+    },
+    {
+      "modelo": "Hi Enjoy 60s"
+    },
+    {
+      "modelo": "T60"
+    },
+    {
+      "modelo": "5G"
+    },
+    {
+      "modelo": "10"
+    },
+    {
+      "modelo": "T50"
+    },
+    {
+      "modelo": "T10"
+    },
+    {
+      "modelo": "T3"
+    },
+    {
+      "modelo": "Y62 Plus"
+    },
+    {
+      "modelo": "Y82"
+    },
+    {
+      "modelo": "Power U30"
+    },
+    {
+      "modelo": "Y52"
+    },
+    {
+      "modelo": "Power U20"
+    },
+    {
+      "modelo": "Power U10"
+    },
+    {
+      "modelo": "Y62"
+    },
+    {
+      "modelo": "Sunny5 Lite"
+    },
+    {
+      "modelo": "Y51"
+    },
+    {
+      "modelo": "View5 Plus"
+    },
+    {
+      "modelo": "View5"
+    },
+    {
+      "modelo": "Y81"
+    },
+    {
+      "modelo": "Sunny5"
+    },
+    {
+      "modelo": "Y61"
+    },
+    {
+      "modelo": "View4 Lite"
+    },
+    {
+      "modelo": "View4"
+    },
+    {
+      "modelo": "Sunny4"
+    },
+    {
+      "modelo": "View3 Lite"
+    },
+    {
+      "modelo": "Y60"
+    },
+    {
+      "modelo": "Sunny3 Plus"
+    },
+    {
+      "modelo": "Y50"
+    },
+    {
+      "modelo": "Y70"
+    },
+    {
+      "modelo": "Jerry4"
+    },
+    {
+      "modelo": "Tommy3 Plus"
+    },
+    {
+      "modelo": "Jerry3"
+    },
+    {
+      "modelo": "Y80"
+    },
+    {
+      "modelo": "Sunny3"
+    },
+    {
+      "modelo": "View3 Pro"
+    },
+    {
+      "modelo": "View3"
+    },
+    {
+      "modelo": "View2 Go"
+    },
+    {
+      "modelo": "View2 Plus"
+    },
+    {
+      "modelo": "View Max"
+    },
+    {
+      "modelo": "View2 Pro"
+    },
+    {
+      "modelo": "View2"
+    },
+    {
+      "modelo": "View Prime"
+    },
+    {
+      "modelo": "View XL"
+    },
+    {
+      "modelo": "View"
+    },
+    {
+      "modelo": "WIM"
+    },
+    {
+      "modelo": "WIM Lite"
+    },
+    {
+      "modelo": "Upulse"
+    },
+    {
+      "modelo": "Upulse lite"
+    },
+    {
+      "modelo": "Tommy2 Plus"
+    },
+    {
+      "modelo": "Tommy2"
+    },
+    {
+      "modelo": "Harry"
+    },
+    {
+      "modelo": "Jerry2"
+    },
+    {
+      "modelo": "Jerry"
+    },
+    {
+      "modelo": "Kenny"
+    },
+    {
+      "modelo": "Lenny3 Max"
+    },
+    {
+      "modelo": "Lenny4 Plus"
+    },
+    {
+      "modelo": "Lenny4"
+    },
+    {
+      "modelo": "Ufeel fab"
+    },
+    {
+      "modelo": "Ufeel go"
+    },
+    {
+      "modelo": "Ufeel"
+    },
+    {
+      "modelo": "U Feel Prime"
+    },
+    {
+      "modelo": "U Feel Lite"
+    },
+    {
+      "modelo": "Tommy"
+    },
+    {
+      "modelo": "Sunny2 Plus"
+    },
+    {
+      "modelo": "Sunny2"
+    },
+    {
+      "modelo": "Sunny"
+    },
+    {
+      "modelo": "Sunny Max"
+    },
+    {
+      "modelo": "Robby2"
+    },
+    {
+      "modelo": "Robby"
+    },
+    {
+      "modelo": "Lenny3"
+    },
+    {
+      "modelo": "Fever SE"
+    },
+    {
+      "modelo": "Pulp Fab 4G"
+    },
+    {
+      "modelo": "Pulp Fab"
+    },
+    {
+      "modelo": "Pulp"
+    },
+    {
+      "modelo": "Pulp 4G"
+    },
+    {
+      "modelo": "Fever 4G"
+    },
+    {
+      "modelo": "Lenny2"
+    },
+    {
+      "modelo": "Rainbow Jam"
+    },
+    {
+      "modelo": "Rainbow Jam 4G"
+    },
+    {
+      "modelo": "Rainbow Lite 4G"
+    },
+    {
+      "modelo": "Selfy 4G"
+    },
+    {
+      "modelo": "Rainbow UP 4G"
+    },
+    {
+      "modelo": "Sunset2"
+    },
+    {
+      "modelo": "Bloom2"
+    },
+    {
+      "modelo": "Ridge 4G"
+    },
+    {
+      "modelo": "Ridge Fab 4G"
+    },
+    {
+      "modelo": "Highway Star 4G"
+    },
+    {
+      "modelo": "Highway Pure 4G"
+    },
+    {
+      "modelo": "Lenny"
+    },
+    {
+      "modelo": "Birdy"
+    },
+    {
+      "modelo": "Goa"
+    },
+    {
+      "modelo": "Jimmy"
+    },
+    {
+      "modelo": "Getaway"
+    },
+    {
+      "modelo": "Rainbow 4G"
+    },
+    {
+      "modelo": "Rainbow"
+    },
+    {
+      "modelo": "Highway 4G"
+    },
+    {
+      "modelo": "Highway Signs"
+    },
+    {
+      "modelo": "Wax"
+    },
+    {
+      "modelo": "Highway"
+    }
+  ]
+}

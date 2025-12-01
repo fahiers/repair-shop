@@ -1,0 +1,696 @@
+{
+  "marca": "CELKON",
+  "id_interno": "75",
+  "slug": "celkon",
+  "total_esperado": 0,
+  "total_encontrado": 229,
+  "modelos": [
+    {
+      "modelo": "A403"
+    },
+    {
+      "modelo": "Campus Prime"
+    },
+    {
+      "modelo": "Millennia Everest"
+    },
+    {
+      "modelo": "Millennia Hero"
+    },
+    {
+      "modelo": "Millennia Xplore"
+    },
+    {
+      "modelo": "Q455L"
+    },
+    {
+      "modelo": "2GB Xpress"
+    },
+    {
+      "modelo": "A35k Remote"
+    },
+    {
+      "modelo": "Q3K Power"
+    },
+    {
+      "modelo": "Q5K Power"
+    },
+    {
+      "modelo": "Q452"
+    },
+    {
+      "modelo": "A402"
+    },
+    {
+      "modelo": "Q54+"
+    },
+    {
+      "modelo": "Q519"
+    },
+    {
+      "modelo": "Q450"
+    },
+    {
+      "modelo": "Q405"
+    },
+    {
+      "modelo": "A518"
+    },
+    {
+      "modelo": "A407"
+    },
+    {
+      "modelo": "A359"
+    },
+    {
+      "modelo": "A355"
+    },
+    {
+      "modelo": "Campus Buddy A404"
+    },
+    {
+      "modelo": "Millennia OCTA510"
+    },
+    {
+      "modelo": "Win 400"
+    },
+    {
+      "modelo": "Campus Whizz Q42"
+    },
+    {
+      "modelo": "Millennia Epic Q550"
+    },
+    {
+      "modelo": "Xion s CT695"
+    },
+    {
+      "modelo": "Campus Colt A401"
+    },
+    {
+      "modelo": "Campus Crown Q40"
+    },
+    {
+      "modelo": "Glory Q5"
+    },
+    {
+      "modelo": "Campus One A354C"
+    },
+    {
+      "modelo": "Campus Nova A352E"
+    },
+    {
+      "modelo": "A43"
+    },
+    {
+      "modelo": "A42"
+    },
+    {
+      "modelo": "Q500 Millennium Ultra"
+    },
+    {
+      "modelo": "Q44"
+    },
+    {
+      "modelo": "A500"
+    },
+    {
+      "modelo": "A21"
+    },
+    {
+      "modelo": "A115"
+    },
+    {
+      "modelo": "Q455"
+    },
+    {
+      "modelo": "Q470"
+    },
+    {
+      "modelo": "Q3000"
+    },
+    {
+      "modelo": "A35k"
+    },
+    {
+      "modelo": "A125"
+    },
+    {
+      "modelo": "C7010"
+    },
+    {
+      "modelo": "C5055"
+    },
+    {
+      "modelo": "C9 Jumbo"
+    },
+    {
+      "modelo": "C7 Jumbo"
+    },
+    {
+      "modelo": "C6 Star"
+    },
+    {
+      "modelo": "C44 Duos"
+    },
+    {
+      "modelo": "C366"
+    },
+    {
+      "modelo": "C619"
+    },
+    {
+      "modelo": "C51"
+    },
+    {
+      "modelo": "C340"
+    },
+    {
+      "modelo": "C348+"
+    },
+    {
+      "modelo": "C349+"
+    },
+    {
+      "modelo": "C779"
+    },
+    {
+      "modelo": "C66+"
+    },
+    {
+      "modelo": "C44+"
+    },
+    {
+      "modelo": "A64"
+    },
+    {
+      "modelo": "A66"
+    },
+    {
+      "modelo": "A9 Dual"
+    },
+    {
+      "modelo": "C4040"
+    },
+    {
+      "modelo": "A 107+"
+    },
+    {
+      "modelo": "ARR35"
+    },
+    {
+      "modelo": "CT 7"
+    },
+    {
+      "modelo": "CT-888"
+    },
+    {
+      "modelo": "C820"
+    },
+    {
+      "modelo": "C720"
+    },
+    {
+      "modelo": "S1"
+    },
+    {
+      "modelo": "A40"
+    },
+    {
+      "modelo": "AR50"
+    },
+    {
+      "modelo": "AR40"
+    },
+    {
+      "modelo": "AR45"
+    },
+    {
+      "modelo": "A15"
+    },
+    {
+      "modelo": "C7045"
+    },
+    {
+      "modelo": "C605"
+    },
+    {
+      "modelo": "C399"
+    },
+    {
+      "modelo": "C76"
+    },
+    {
+      "modelo": "C64"
+    },
+    {
+      "modelo": "C63"
+    },
+    {
+      "modelo": "Monalisa 5"
+    },
+    {
+      "modelo": "A112"
+    },
+    {
+      "modelo": "A63"
+    },
+    {
+      "modelo": "A60"
+    },
+    {
+      "modelo": "A20"
+    },
+    {
+      "modelo": "A10"
+    },
+    {
+      "modelo": "C5050 Star"
+    },
+    {
+      "modelo": "C7030"
+    },
+    {
+      "modelo": "A105"
+    },
+    {
+      "modelo": "C349i"
+    },
+    {
+      "modelo": "C297"
+    },
+    {
+      "modelo": "C69"
+    },
+    {
+      "modelo": "C67+"
+    },
+    {
+      "modelo": "C74"
+    },
+    {
+      "modelo": "CT-910+"
+    },
+    {
+      "modelo": "A118"
+    },
+    {
+      "modelo": "A107"
+    },
+    {
+      "modelo": "A9+"
+    },
+    {
+      "modelo": "A119Q Signature HD"
+    },
+    {
+      "modelo": "A119 Signature HD"
+    },
+    {
+      "modelo": "CT-910"
+    },
+    {
+      "modelo": "A87"
+    },
+    {
+      "modelo": "A86"
+    },
+    {
+      "modelo": "A69"
+    },
+    {
+      "modelo": "A67"
+    },
+    {
+      "modelo": "A98"
+    },
+    {
+      "modelo": "A225"
+    },
+    {
+      "modelo": "C7050"
+    },
+    {
+      "modelo": "C7070"
+    },
+    {
+      "modelo": "C44 Star"
+    },
+    {
+      "modelo": "C54"
+    },
+    {
+      "modelo": "GC10"
+    },
+    {
+      "modelo": "C3333"
+    },
+    {
+      "modelo": "C356"
+    },
+    {
+      "modelo": "C355"
+    },
+    {
+      "modelo": "A75"
+    },
+    {
+      "modelo": "A59"
+    },
+    {
+      "modelo": "A220"
+    },
+    {
+      "modelo": "A27"
+    },
+    {
+      "modelo": "A79"
+    },
+    {
+      "modelo": "A83"
+    },
+    {
+      "modelo": "A77"
+    },
+    {
+      "modelo": "CT 9"
+    },
+    {
+      "modelo": "A200"
+    },
+    {
+      "modelo": "C19"
+    },
+    {
+      "modelo": "A900"
+    },
+    {
+      "modelo": "A85"
+    },
+    {
+      "modelo": "A22"
+    },
+    {
+      "modelo": "CT 2"
+    },
+    {
+      "modelo": "C52"
+    },
+    {
+      "modelo": "C9 Star"
+    },
+    {
+      "modelo": "A89"
+    },
+    {
+      "modelo": "CT 1"
+    },
+    {
+      "modelo": "C24"
+    },
+    {
+      "modelo": "C3000"
+    },
+    {
+      "modelo": "A97i"
+    },
+    {
+      "modelo": "A19"
+    },
+    {
+      "modelo": "C607"
+    },
+    {
+      "modelo": "C262"
+    },
+    {
+      "modelo": "C360"
+    },
+    {
+      "modelo": "C359"
+    },
+    {
+      "modelo": "C350"
+    },
+    {
+      "modelo": "A97"
+    },
+    {
+      "modelo": "A95"
+    },
+    {
+      "modelo": "A90"
+    },
+    {
+      "modelo": "A99+"
+    },
+    {
+      "modelo": "C770N"
+    },
+    {
+      "modelo": "C705"
+    },
+    {
+      "modelo": "C606"
+    },
+    {
+      "modelo": "C570"
+    },
+    {
+      "modelo": "C504"
+    },
+    {
+      "modelo": "C206"
+    },
+    {
+      "modelo": "C203"
+    },
+    {
+      "modelo": "C17"
+    },
+    {
+      "modelo": "C75"
+    },
+    {
+      "modelo": "i4"
+    },
+    {
+      "modelo": "A7"
+    },
+    {
+      "modelo": "A88"
+    },
+    {
+      "modelo": "C770 Dj"
+    },
+    {
+      "modelo": "C769"
+    },
+    {
+      "modelo": "C349"
+    },
+    {
+      "modelo": "C337"
+    },
+    {
+      "modelo": "C260"
+    },
+    {
+      "modelo": "C70"
+    },
+    {
+      "modelo": "C55"
+    },
+    {
+      "modelo": "A9"
+    },
+    {
+      "modelo": "A99"
+    },
+    {
+      "modelo": "C3030"
+    },
+    {
+      "modelo": "C90"
+    },
+    {
+      "modelo": "C909"
+    },
+    {
+      "modelo": "C60"
+    },
+    {
+      "modelo": "C305"
+    },
+    {
+      "modelo": "C220"
+    },
+    {
+      "modelo": "C303"
+    },
+    {
+      "modelo": "C201"
+    },
+    {
+      "modelo": "C202"
+    },
+    {
+      "modelo": "C404"
+    },
+    {
+      "modelo": "C5050"
+    },
+    {
+      "modelo": "C227"
+    },
+    {
+      "modelo": "i9"
+    },
+    {
+      "modelo": "C2010"
+    },
+    {
+      "modelo": "C207"
+    },
+    {
+      "modelo": "A1"
+    },
+    {
+      "modelo": "C609"
+    },
+    {
+      "modelo": "C102"
+    },
+    {
+      "modelo": "C77"
+    },
+    {
+      "modelo": "C100"
+    },
+    {
+      "modelo": "C555"
+    },
+    {
+      "modelo": "C205"
+    },
+    {
+      "modelo": "C44"
+    },
+    {
+      "modelo": "C101"
+    },
+    {
+      "modelo": "C33"
+    },
+    {
+      "modelo": "C550"
+    },
+    {
+      "modelo": "C66"
+    },
+    {
+      "modelo": "C339"
+    },
+    {
+      "modelo": "C10"
+    },
+    {
+      "modelo": "C770"
+    },
+    {
+      "modelo": "C20"
+    },
+    {
+      "modelo": "C369"
+    },
+    {
+      "modelo": "C88"
+    },
+    {
+      "modelo": "C2000"
+    },
+    {
+      "modelo": "C007"
+    },
+    {
+      "modelo": "C999"
+    },
+    {
+      "modelo": "C777"
+    },
+    {
+      "modelo": "C1"
+    },
+    {
+      "modelo": "C444"
+    },
+    {
+      "modelo": "C2"
+    },
+    {
+      "modelo": "C225"
+    },
+    {
+      "modelo": "C111"
+    },
+    {
+      "modelo": "C99"
+    },
+    {
+      "modelo": "C3"
+    },
+    {
+      "modelo": "C669"
+    },
+    {
+      "modelo": "C9"
+    },
+    {
+      "modelo": "C11"
+    },
+    {
+      "modelo": "C333"
+    },
+    {
+      "modelo": "C6"
+    },
+    {
+      "modelo": "C509"
+    },
+    {
+      "modelo": "C5"
+    },
+    {
+      "modelo": "C7"
+    },
+    {
+      "modelo": "C22"
+    },
+    {
+      "modelo": "C347"
+    },
+    {
+      "modelo": "C357"
+    },
+    {
+      "modelo": "C367"
+    },
+    {
+      "modelo": "C409"
+    },
+    {
+      "modelo": "C449"
+    },
+    {
+      "modelo": "C517"
+    },
+    {
+      "modelo": "C567"
+    },
+    {
+      "modelo": "C747"
+    },
+    {
+      "modelo": "C867"
+    }
+  ]
+}

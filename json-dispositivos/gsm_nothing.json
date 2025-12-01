@@ -1,0 +1,48 @@
+{
+  "marca": "NOTHING",
+  "id_interno": "128",
+  "slug": "nothing",
+  "total_esperado": 0,
+  "total_encontrado": 13,
+  "modelos": [
+    {
+      "modelo": "Phone (3a) Lite"
+    },
+    {
+      "modelo": "CMF Watch 3 Pro"
+    },
+    {
+      "modelo": "CMF Watch Pro 2"
+    },
+    {
+      "modelo": "CMF Watch Pro"
+    },
+    {
+      "modelo": "Phone (3)"
+    },
+    {
+      "modelo": "CMF Phone 2 Pro"
+    },
+    {
+      "modelo": "Phone (3a) Pro"
+    },
+    {
+      "modelo": "Phone (3a)"
+    },
+    {
+      "modelo": "Phone (2a) Plus"
+    },
+    {
+      "modelo": "CMF Phone 1"
+    },
+    {
+      "modelo": "Phone (2a)"
+    },
+    {
+      "modelo": "Phone (2)"
+    },
+    {
+      "modelo": "Phone (1)"
+    }
+  ]
+}

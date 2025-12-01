@@ -1,0 +1,114 @@
+{
+  "marca": "BENQ",
+  "id_interno": "31",
+  "slug": "benq",
+  "total_esperado": 0,
+  "total_encontrado": 35,
+  "modelos": [
+    {
+      "modelo": "F52"
+    },
+    {
+      "modelo": "B502"
+    },
+    {
+      "modelo": "T3"
+    },
+    {
+      "modelo": "F5"
+    },
+    {
+      "modelo": "F3"
+    },
+    {
+      "modelo": "A3"
+    },
+    {
+      "modelo": "E55"
+    },
+    {
+      "modelo": "C36"
+    },
+    {
+      "modelo": "E53"
+    },
+    {
+      "modelo": "T60"
+    },
+    {
+      "modelo": "M7"
+    },
+    {
+      "modelo": "E72"
+    },
+    {
+      "modelo": "C30"
+    },
+    {
+      "modelo": "T51"
+    },
+    {
+      "modelo": "T33"
+    },
+    {
+      "modelo": "EL71"
+    },
+    {
+      "modelo": "M580"
+    },
+    {
+      "modelo": "U700"
+    },
+    {
+      "modelo": "Z2"
+    },
+    {
+      "modelo": "M315"
+    },
+    {
+      "modelo": "M220"
+    },
+    {
+      "modelo": "S80"
+    },
+    {
+      "modelo": "A520"
+    },
+    {
+      "modelo": "M350"
+    },
+    {
+      "modelo": "A500"
+    },
+    {
+      "modelo": "S680C"
+    },
+    {
+      "modelo": "P50"
+    },
+    {
+      "modelo": "P31"
+    },
+    {
+      "modelo": "P30"
+    },
+    {
+      "modelo": "S700"
+    },
+    {
+      "modelo": "M300"
+    },
+    {
+      "modelo": "M100"
+    },
+    {
+      "modelo": "S670C"
+    },
+    {
+      "modelo": "S660C"
+    },
+    {
+      "modelo": "M775C"
+    }
+  ]
+}

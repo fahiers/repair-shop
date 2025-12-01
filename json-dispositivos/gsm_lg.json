@@ -1,0 +1,2021 @@
+{
+  "marca": "LG",
+  "id_interno": "20",
+  "slug": "lg",
+  "total_esperado": 0,
+  "total_encontrado": 667,
+  "modelos": [
+    {
+      "modelo": "Ultra Tab"
+    },
+    {
+      "modelo": "W41 Pro"
+    },
+    {
+      "modelo": "W41+"
+    },
+    {
+      "modelo": "W41"
+    },
+    {
+      "modelo": "W31+"
+    },
+    {
+      "modelo": "W31"
+    },
+    {
+      "modelo": "W11"
+    },
+    {
+      "modelo": "K92 5G"
+    },
+    {
+      "modelo": "K62"
+    },
+    {
+      "modelo": "Q52"
+    },
+    {
+      "modelo": "K52"
+    },
+    {
+      "modelo": "K42"
+    },
+    {
+      "modelo": "K71"
+    },
+    {
+      "modelo": "Wing 5G"
+    },
+    {
+      "modelo": "K22"
+    },
+    {
+      "modelo": "Q92 5G"
+    },
+    {
+      "modelo": "Q31"
+    },
+    {
+      "modelo": "K31"
+    },
+    {
+      "modelo": "Velvet 5G UW"
+    },
+    {
+      "modelo": "Q61"
+    },
+    {
+      "modelo": "Stylo 6"
+    },
+    {
+      "modelo": "Velvet"
+    },
+    {
+      "modelo": "Velvet 5G"
+    },
+    {
+      "modelo": "Folder 2"
+    },
+    {
+      "modelo": "V60 ThinQ 5G UW"
+    },
+    {
+      "modelo": "V60 ThinQ 5G"
+    },
+    {
+      "modelo": "Q51"
+    },
+    {
+      "modelo": "W10 Alpha"
+    },
+    {
+      "modelo": "K61"
+    },
+    {
+      "modelo": "K51S"
+    },
+    {
+      "modelo": "K41S"
+    },
+    {
+      "modelo": "G Pad 5 10.1"
+    },
+    {
+      "modelo": "V50S ThinQ 5G"
+    },
+    {
+      "modelo": "G8X ThinQ"
+    },
+    {
+      "modelo": "Q70"
+    },
+    {
+      "modelo": "K30",
+      "ano": "2019"
+    },
+    {
+      "modelo": "K20",
+      "ano": "2019"
+    },
+    {
+      "modelo": "K40S"
+    },
+    {
+      "modelo": "K50S"
+    },
+    {
+      "modelo": "W30 Pro"
+    },
+    {
+      "modelo": "W30"
+    },
+    {
+      "modelo": "W10"
+    },
+    {
+      "modelo": "Stylo 5"
+    },
+    {
+      "modelo": "V50 ThinQ 5G"
+    },
+    {
+      "modelo": "G8S ThinQ"
+    },
+    {
+      "modelo": "G8 ThinQ"
+    },
+    {
+      "modelo": "Q60"
+    },
+    {
+      "modelo": "K50"
+    },
+    {
+      "modelo": "K40"
+    },
+    {
+      "modelo": "Q9"
+    },
+    {
+      "modelo": "V40 ThinQ"
+    },
+    {
+      "modelo": "Watch W7"
+    },
+    {
+      "modelo": "Tribute Empire"
+    },
+    {
+      "modelo": "Candy"
+    },
+    {
+      "modelo": "G7 Fit"
+    },
+    {
+      "modelo": "G7 One"
+    },
+    {
+      "modelo": "Q8",
+      "ano": "2018"
+    },
+    {
+      "modelo": "K11 Plus"
+    },
+    {
+      "modelo": "Q Stylo 4"
+    },
+    {
+      "modelo": "Q Stylus"
+    },
+    {
+      "modelo": "V35 ThinQ"
+    },
+    {
+      "modelo": "Q7"
+    },
+    {
+      "modelo": "G7 ThinQ"
+    },
+    {
+      "modelo": "V30S ThinQ"
+    },
+    {
+      "modelo": "Zone 4"
+    },
+    {
+      "modelo": "X power 3"
+    },
+    {
+      "modelo": "K30"
+    },
+    {
+      "modelo": "K10",
+      "ano": "2018"
+    },
+    {
+      "modelo": "K8",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Aristo 2"
+    },
+    {
+      "modelo": "X4+"
+    },
+    {
+      "modelo": "V30"
+    },
+    {
+      "modelo": "Q8",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Q6"
+    },
+    {
+      "modelo": "G Pad IV 8.0 FHD"
+    },
+    {
+      "modelo": "X venture"
+    },
+    {
+      "modelo": "G6"
+    },
+    {
+      "modelo": "X power2"
+    },
+    {
+      "modelo": "Watch Sport"
+    },
+    {
+      "modelo": "Watch Style"
+    },
+    {
+      "modelo": "Stylo 3 Plus"
+    },
+    {
+      "modelo": "Stylus 3"
+    },
+    {
+      "modelo": "Harmony"
+    },
+    {
+      "modelo": "K20 plus"
+    },
+    {
+      "modelo": "K10",
+      "ano": "2017"
+    },
+    {
+      "modelo": "K8",
+      "ano": "2017"
+    },
+    {
+      "modelo": "K7",
+      "ano": "2017"
+    },
+    {
+      "modelo": "K4",
+      "ano": "2017"
+    },
+    {
+      "modelo": "K3",
+      "ano": "2017"
+    },
+    {
+      "modelo": "G Pad III 10.1 FHD"
+    },
+    {
+      "modelo": "U"
+    },
+    {
+      "modelo": "V20"
+    },
+    {
+      "modelo": "X Skin"
+    },
+    {
+      "modelo": "X5"
+    },
+    {
+      "modelo": "X max"
+    },
+    {
+      "modelo": "X mach"
+    },
+    {
+      "modelo": "G Pad III 8.0 FHD"
+    },
+    {
+      "modelo": "G Pad X 8.0"
+    },
+    {
+      "modelo": "X power"
+    },
+    {
+      "modelo": "X style"
+    },
+    {
+      "modelo": "Stylus 2 Plus"
+    },
+    {
+      "modelo": "Stylo 2"
+    },
+    {
+      "modelo": "K5"
+    },
+    {
+      "modelo": "K3"
+    },
+    {
+      "modelo": "G5 SE"
+    },
+    {
+      "modelo": "G5"
+    },
+    {
+      "modelo": "X cam"
+    },
+    {
+      "modelo": "X screen"
+    },
+    {
+      "modelo": "K8"
+    },
+    {
+      "modelo": "Stylus 2"
+    },
+    {
+      "modelo": "K10"
+    },
+    {
+      "modelo": "K7"
+    },
+    {
+      "modelo": "K4"
+    },
+    {
+      "modelo": "G Pad II 8.3 LTE"
+    },
+    {
+      "modelo": "Ray"
+    },
+    {
+      "modelo": "G Vista 2"
+    },
+    {
+      "modelo": "G Watch R W110"
+    },
+    {
+      "modelo": "Watch Urbane W150"
+    },
+    {
+      "modelo": "Watch Urbane 2nd Edition LTE"
+    },
+    {
+      "modelo": "V10"
+    },
+    {
+      "modelo": "Nexus 5X"
+    },
+    {
+      "modelo": "Zero"
+    },
+    {
+      "modelo": "G Pad II 10.1"
+    },
+    {
+      "modelo": "G Pad II 8.0 LTE"
+    },
+    {
+      "modelo": "Wine Smart"
+    },
+    {
+      "modelo": "Tribute 2"
+    },
+    {
+      "modelo": "Bello II"
+    },
+    {
+      "modelo": "G4 Beat"
+    },
+    {
+      "modelo": "G360"
+    },
+    {
+      "modelo": "G350"
+    },
+    {
+      "modelo": "G4c"
+    },
+    {
+      "modelo": "G4 Dual"
+    },
+    {
+      "modelo": "G4"
+    },
+    {
+      "modelo": "G Stylo"
+    },
+    {
+      "modelo": "G4 Stylus"
+    },
+    {
+      "modelo": "AKA"
+    },
+    {
+      "modelo": "Watch Urbane LTE"
+    },
+    {
+      "modelo": "G Watch W100"
+    },
+    {
+      "modelo": "Magna"
+    },
+    {
+      "modelo": "Spirit"
+    },
+    {
+      "modelo": "Leon"
+    },
+    {
+      "modelo": "Joy"
+    },
+    {
+      "modelo": "G Flex2"
+    },
+    {
+      "modelo": "Tribute"
+    },
+    {
+      "modelo": "L Prime"
+    },
+    {
+      "modelo": "G2 Lite"
+    },
+    {
+      "modelo": "G3 Dual-LTE"
+    },
+    {
+      "modelo": "G3 Screen"
+    },
+    {
+      "modelo": "F60"
+    },
+    {
+      "modelo": "L60"
+    },
+    {
+      "modelo": "L60 Dual"
+    },
+    {
+      "modelo": "G3 Stylus"
+    },
+    {
+      "modelo": "L Bello"
+    },
+    {
+      "modelo": "L Fino"
+    },
+    {
+      "modelo": "G Pad 8.0 LTE"
+    },
+    {
+      "modelo": "G Vista"
+    },
+    {
+      "modelo": "G3 A"
+    },
+    {
+      "modelo": "G Pad 7.0 LTE"
+    },
+    {
+      "modelo": "L50"
+    },
+    {
+      "modelo": "L30"
+    },
+    {
+      "modelo": "L20"
+    },
+    {
+      "modelo": "G Vista (CDMA)"
+    },
+    {
+      "modelo": "G3 LTE-A"
+    },
+    {
+      "modelo": "G3 S Dual"
+    },
+    {
+      "modelo": "G3 S"
+    },
+    {
+      "modelo": "L65 D280"
+    },
+    {
+      "modelo": "G3 (CDMA)"
+    },
+    {
+      "modelo": "G3"
+    },
+    {
+      "modelo": "450"
+    },
+    {
+      "modelo": "L35"
+    },
+    {
+      "modelo": "Volt"
+    },
+    {
+      "modelo": "G Pad 10.1 LTE"
+    },
+    {
+      "modelo": "G Pad 10.1"
+    },
+    {
+      "modelo": "G Pad 8.0"
+    },
+    {
+      "modelo": "G Pad 7.0"
+    },
+    {
+      "modelo": "L80"
+    },
+    {
+      "modelo": "L80 Dual"
+    },
+    {
+      "modelo": "Lucid 3 VS876"
+    },
+    {
+      "modelo": "L65 Dual D285"
+    },
+    {
+      "modelo": "G Pad 8.3 LTE"
+    },
+    {
+      "modelo": "F70 D315"
+    },
+    {
+      "modelo": "G2 mini LTE (Tegra)"
+    },
+    {
+      "modelo": "G2 mini LTE"
+    },
+    {
+      "modelo": "G2 mini"
+    },
+    {
+      "modelo": "L90 Dual D410"
+    },
+    {
+      "modelo": "L90 D405"
+    },
+    {
+      "modelo": "L70 D320N"
+    },
+    {
+      "modelo": "L70 Dual D325"
+    },
+    {
+      "modelo": "L45 Dual X132"
+    },
+    {
+      "modelo": "L40 D160"
+    },
+    {
+      "modelo": "L40 Dual D170"
+    },
+    {
+      "modelo": "G Pro 2"
+    },
+    {
+      "modelo": "Optimus L4 II Tri E470"
+    },
+    {
+      "modelo": "Optimus L1 II Tri E475"
+    },
+    {
+      "modelo": "Optimus F3Q"
+    },
+    {
+      "modelo": "GX F310L"
+    },
+    {
+      "modelo": "Nexus 5"
+    },
+    {
+      "modelo": "G Flex"
+    },
+    {
+      "modelo": "Fireweb"
+    },
+    {
+      "modelo": "G Pro Lite"
+    },
+    {
+      "modelo": "G Pro Lite Dual"
+    },
+    {
+      "modelo": "Optimus L2 II E435"
+    },
+    {
+      "modelo": "Vu 3 F300L"
+    },
+    {
+      "modelo": "G Pad 8.3"
+    },
+    {
+      "modelo": "G2"
+    },
+    {
+      "modelo": "Optimus L9 II"
+    },
+    {
+      "modelo": "Enact VS890"
+    },
+    {
+      "modelo": "Optimus GJ E975W"
+    },
+    {
+      "modelo": "Optimus L4 II Dual E445"
+    },
+    {
+      "modelo": "Optimus L4 II E440"
+    },
+    {
+      "modelo": "Optimus Zone VS410"
+    },
+    {
+      "modelo": "Optimus F3"
+    },
+    {
+      "modelo": "Lucid2 VS870"
+    },
+    {
+      "modelo": "Optimus F7"
+    },
+    {
+      "modelo": "Optimus F6"
+    },
+    {
+      "modelo": "Optimus F5"
+    },
+    {
+      "modelo": "Optimus G Pro E985"
+    },
+    {
+      "modelo": "Optimus L7 II Dual P715"
+    },
+    {
+      "modelo": "Optimus L7 II P710"
+    },
+    {
+      "modelo": "Optimus L5 II Dual E455"
+    },
+    {
+      "modelo": "Optimus L5 II E460"
+    },
+    {
+      "modelo": "Optimus L3 II Dual E435"
+    },
+    {
+      "modelo": "Optimus L3 II E430"
+    },
+    {
+      "modelo": "Optimus L1 II E410"
+    },
+    {
+      "modelo": "Nexus 4 E960"
+    },
+    {
+      "modelo": "A390"
+    },
+    {
+      "modelo": "A395"
+    },
+    {
+      "modelo": "C299"
+    },
+    {
+      "modelo": "Tri Chip C333"
+    },
+    {
+      "modelo": "Spectrum II 4G VS930"
+    },
+    {
+      "modelo": "Mach LS860"
+    },
+    {
+      "modelo": "Optimus L9 P769"
+    },
+    {
+      "modelo": "Optimus Vu II"
+    },
+    {
+      "modelo": "Optimus Vu II F200"
+    },
+    {
+      "modelo": "Optimus G E970"
+    },
+    {
+      "modelo": "Optimus G LS970"
+    },
+    {
+      "modelo": "Optimus G E975"
+    },
+    {
+      "modelo": "Intuition VS950"
+    },
+    {
+      "modelo": "Splendor US730"
+    },
+    {
+      "modelo": "Escape P870"
+    },
+    {
+      "modelo": "Optimus L5 Dual E615"
+    },
+    {
+      "modelo": "Optimus L9 P760"
+    },
+    {
+      "modelo": "Motion 4G MS770"
+    },
+    {
+      "modelo": "Optimus Vu P895"
+    },
+    {
+      "modelo": "Optimus L3 E405"
+    },
+    {
+      "modelo": "C199"
+    },
+    {
+      "modelo": "T385"
+    },
+    {
+      "modelo": "T375 Cookie Smart"
+    },
+    {
+      "modelo": "Optimus Elite LS696"
+    },
+    {
+      "modelo": "T370 Cookie Smart"
+    },
+    {
+      "modelo": "Optimus LTE2"
+    },
+    {
+      "modelo": "Optimus True HD LTE P936"
+    },
+    {
+      "modelo": "Xpression C395"
+    },
+    {
+      "modelo": "Lucid 4G VS840"
+    },
+    {
+      "modelo": "Optimus M+ MS695"
+    },
+    {
+      "modelo": "Optimus 4X HD P880"
+    },
+    {
+      "modelo": "Optimus 3D Max P720"
+    },
+    {
+      "modelo": "Optimus 3D Cube SU870"
+    },
+    {
+      "modelo": "Optimus L7 P700"
+    },
+    {
+      "modelo": "Optimus L5 E610"
+    },
+    {
+      "modelo": "Optimus Vu F100S"
+    },
+    {
+      "modelo": "Optimus LTE Tag"
+    },
+    {
+      "modelo": "Optimus L3 E400"
+    },
+    {
+      "modelo": "Optimus Pad LTE"
+    },
+    {
+      "modelo": "Rumor Reflex LN272"
+    },
+    {
+      "modelo": "Connect 4G MS840"
+    },
+    {
+      "modelo": "Viper 4G LTE LS840"
+    },
+    {
+      "modelo": "Spectrum VS920"
+    },
+    {
+      "modelo": "X350"
+    },
+    {
+      "modelo": "Prada 3.0"
+    },
+    {
+      "modelo": "Nitro HD"
+    },
+    {
+      "modelo": "Optimus 4G LTE P935"
+    },
+    {
+      "modelo": "Optimus 2 AS680"
+    },
+    {
+      "modelo": "Extravert VN271"
+    },
+    {
+      "modelo": "DoublePlay"
+    },
+    {
+      "modelo": "Enlighten VS700"
+    },
+    {
+      "modelo": "S367"
+    },
+    {
+      "modelo": "Jil Sander Mobile"
+    },
+    {
+      "modelo": "Optimus Slider"
+    },
+    {
+      "modelo": "Optimus LTE SU640"
+    },
+    {
+      "modelo": "Optimus LTE LU6200"
+    },
+    {
+      "modelo": "Optimus EX SU880"
+    },
+    {
+      "modelo": "Optimus Q2 LU6500"
+    },
+    {
+      "modelo": "Optimus Hub E510"
+    },
+    {
+      "modelo": "Optimus Sol E730"
+    },
+    {
+      "modelo": "Optimus Net Dual"
+    },
+    {
+      "modelo": "Optimus Net"
+    },
+    {
+      "modelo": "Esteem MS910"
+    },
+    {
+      "modelo": "Marquee LS855"
+    },
+    {
+      "modelo": "Optimus Black (White version)"
+    },
+    {
+      "modelo": "Optimus Pro C660"
+    },
+    {
+      "modelo": "S365"
+    },
+    {
+      "modelo": "A350"
+    },
+    {
+      "modelo": "A258"
+    },
+    {
+      "modelo": "A250"
+    },
+    {
+      "modelo": "A270"
+    },
+    {
+      "modelo": "A290"
+    },
+    {
+      "modelo": "A230"
+    },
+    {
+      "modelo": "A190"
+    },
+    {
+      "modelo": "A200"
+    },
+    {
+      "modelo": "T515 Cookie Duo"
+    },
+    {
+      "modelo": "T510"
+    },
+    {
+      "modelo": "T505"
+    },
+    {
+      "modelo": "EGO T500"
+    },
+    {
+      "modelo": "EGO Wi-Fi"
+    },
+    {
+      "modelo": "C375 Cookie Tweet"
+    },
+    {
+      "modelo": "C365"
+    },
+    {
+      "modelo": "C360"
+    },
+    {
+      "modelo": "A100"
+    },
+    {
+      "modelo": "Optimus Big LU6800"
+    },
+    {
+      "modelo": "Cosmos 2"
+    },
+    {
+      "modelo": "US760 Genesis"
+    },
+    {
+      "modelo": "Phoenix P505"
+    },
+    {
+      "modelo": "Thrive P506"
+    },
+    {
+      "modelo": "Thrill 4G P925"
+    },
+    {
+      "modelo": "T315"
+    },
+    {
+      "modelo": "Optimus 3D P920"
+    },
+    {
+      "modelo": "Optimus Pad V900"
+    },
+    {
+      "modelo": "A180"
+    },
+    {
+      "modelo": "A165"
+    },
+    {
+      "modelo": "A160"
+    },
+    {
+      "modelo": "Optimus Chat C550"
+    },
+    {
+      "modelo": "A140"
+    },
+    {
+      "modelo": "Optimus Me P350"
+    },
+    {
+      "modelo": "Optimus Black P970"
+    },
+    {
+      "modelo": "Optimus 2X SU660"
+    },
+    {
+      "modelo": "Optimus 2X"
+    },
+    {
+      "modelo": "Optimus Mach LU3000"
+    },
+    {
+      "modelo": "Revolution"
+    },
+    {
+      "modelo": "X335"
+    },
+    {
+      "modelo": "C310"
+    },
+    {
+      "modelo": "Cookie WiFi T310i"
+    },
+    {
+      "modelo": "GU200"
+    },
+    {
+      "modelo": "A120"
+    },
+    {
+      "modelo": "A155"
+    },
+    {
+      "modelo": "S310"
+    },
+    {
+      "modelo": "P525"
+    },
+    {
+      "modelo": "P520"
+    },
+    {
+      "modelo": "Axis"
+    },
+    {
+      "modelo": "Apex"
+    },
+    {
+      "modelo": "Cosmos Touch VN270"
+    },
+    {
+      "modelo": "Vortex VS660"
+    },
+    {
+      "modelo": "C320 InTouch Lady"
+    },
+    {
+      "modelo": "GT550 Encore"
+    },
+    {
+      "modelo": "GS390 Prime"
+    },
+    {
+      "modelo": "Quantum"
+    },
+    {
+      "modelo": "C900 Optimus 7Q"
+    },
+    {
+      "modelo": "E900 Optimus 7"
+    },
+    {
+      "modelo": "Town C300"
+    },
+    {
+      "modelo": "Optimus Chic E720"
+    },
+    {
+      "modelo": "Optimus M"
+    },
+    {
+      "modelo": "Octane"
+    },
+    {
+      "modelo": "Optimus S"
+    },
+    {
+      "modelo": "Optimus T"
+    },
+    {
+      "modelo": "Optimus One P500"
+    },
+    {
+      "modelo": "GW910"
+    },
+    {
+      "modelo": "A130"
+    },
+    {
+      "modelo": "GW370 Rumour Plus"
+    },
+    {
+      "modelo": "GD550 Pure"
+    },
+    {
+      "modelo": "KS365"
+    },
+    {
+      "modelo": "GM650s"
+    },
+    {
+      "modelo": "Scarlet II TV"
+    },
+    {
+      "modelo": "Flick T320"
+    },
+    {
+      "modelo": "Cookie 3G T320"
+    },
+    {
+      "modelo": "Wink 3G T320"
+    },
+    {
+      "modelo": "C710 Aloha"
+    },
+    {
+      "modelo": "Cookie Style T310"
+    },
+    {
+      "modelo": "Wink Style T310"
+    },
+    {
+      "modelo": "Cookie Lite T300"
+    },
+    {
+      "modelo": "C105"
+    },
+    {
+      "modelo": "GX300"
+    },
+    {
+      "modelo": "GU292"
+    },
+    {
+      "modelo": "GM360 Viewty Snap"
+    },
+    {
+      "modelo": "Fathom VS750"
+    },
+    {
+      "modelo": "Vu Plus"
+    },
+    {
+      "modelo": "GT400 Viewty Smile"
+    },
+    {
+      "modelo": "SU420 Cafe"
+    },
+    {
+      "modelo": "Optimus Z"
+    },
+    {
+      "modelo": "SU920"
+    },
+    {
+      "modelo": "KM570 Cookie Gig"
+    },
+    {
+      "modelo": "Optimus Q LU2300"
+    },
+    {
+      "modelo": "GX500"
+    },
+    {
+      "modelo": "KH3900 Joypop"
+    },
+    {
+      "modelo": "GT950 Arena"
+    },
+    {
+      "modelo": "GB280"
+    },
+    {
+      "modelo": "GS155"
+    },
+    {
+      "modelo": "GS107"
+    },
+    {
+      "modelo": "GS106"
+    },
+    {
+      "modelo": "KP108"
+    },
+    {
+      "modelo": "GD350"
+    },
+    {
+      "modelo": "KH5200 Andro-1"
+    },
+    {
+      "modelo": "GT540 Optimus"
+    },
+    {
+      "modelo": "GT405"
+    },
+    {
+      "modelo": "GS290 Cookie Fresh"
+    },
+    {
+      "modelo": "GW990"
+    },
+    {
+      "modelo": "GS500 Cookie Plus"
+    },
+    {
+      "modelo": "GX200"
+    },
+    {
+      "modelo": "KF305"
+    },
+    {
+      "modelo": "GW880"
+    },
+    {
+      "modelo": "GD880 Mini"
+    },
+    {
+      "modelo": "Etna C330"
+    },
+    {
+      "modelo": "Wink Plus GT350i"
+    },
+    {
+      "modelo": "Town GT350"
+    },
+    {
+      "modelo": "KU2100"
+    },
+    {
+      "modelo": "GD580 Lollipop"
+    },
+    {
+      "modelo": "GS200"
+    },
+    {
+      "modelo": "GS190"
+    },
+    {
+      "modelo": "GW820 eXpo"
+    },
+    {
+      "modelo": "GU230 Dimsun"
+    },
+    {
+      "modelo": "GD710 Shine II"
+    },
+    {
+      "modelo": "GB160"
+    },
+    {
+      "modelo": "GU285"
+    },
+    {
+      "modelo": "8575 Samba"
+    },
+    {
+      "modelo": "KM555E"
+    },
+    {
+      "modelo": "GD310"
+    },
+    {
+      "modelo": "GD510 Pop"
+    },
+    {
+      "modelo": "BL20 New Chocolate"
+    },
+    {
+      "modelo": "CF360"
+    },
+    {
+      "modelo": "GW620"
+    },
+    {
+      "modelo": "GM750"
+    },
+    {
+      "modelo": "BL40 New Chocolate"
+    },
+    {
+      "modelo": "GW300"
+    },
+    {
+      "modelo": "GB270"
+    },
+    {
+      "modelo": "GB190"
+    },
+    {
+      "modelo": "GB109"
+    },
+    {
+      "modelo": "GB170"
+    },
+    {
+      "modelo": "GW550"
+    },
+    {
+      "modelo": "KB775 Scarlet"
+    },
+    {
+      "modelo": "GT500 Puccini"
+    },
+    {
+      "modelo": "GT505"
+    },
+    {
+      "modelo": "GW520"
+    },
+    {
+      "modelo": "GD900 Crystal"
+    },
+    {
+      "modelo": "GC900 Viewty Smart"
+    },
+    {
+      "modelo": "GB230 Julia"
+    },
+    {
+      "modelo": "GD330"
+    },
+    {
+      "modelo": "KS660"
+    },
+    {
+      "modelo": "GB125"
+    },
+    {
+      "modelo": "Xenon GR500"
+    },
+    {
+      "modelo": "GB210"
+    },
+    {
+      "modelo": "GM200 Brio"
+    },
+    {
+      "modelo": "KC560"
+    },
+    {
+      "modelo": "KM900 Arena"
+    },
+    {
+      "modelo": "GM730 Eigen"
+    },
+    {
+      "modelo": "KC910i Renoir"
+    },
+    {
+      "modelo": "GB250"
+    },
+    {
+      "modelo": "GB220"
+    },
+    {
+      "modelo": "GB102"
+    },
+    {
+      "modelo": "KT770"
+    },
+    {
+      "modelo": "GB130"
+    },
+    {
+      "modelo": "GM310"
+    },
+    {
+      "modelo": "GM210"
+    },
+    {
+      "modelo": "KM330"
+    },
+    {
+      "modelo": "GB110"
+    },
+    {
+      "modelo": "GB106"
+    },
+    {
+      "modelo": "GD910"
+    },
+    {
+      "modelo": "CT810 Incite"
+    },
+    {
+      "modelo": "KP152"
+    },
+    {
+      "modelo": "KS500"
+    },
+    {
+      "modelo": "KF900 Prada"
+    },
+    {
+      "modelo": "KC780"
+    },
+    {
+      "modelo": "KP500 Cookie"
+    },
+    {
+      "modelo": "KP501 Cookie"
+    },
+    {
+      "modelo": "KP502 Cookie"
+    },
+    {
+      "modelo": "KB770"
+    },
+    {
+      "modelo": "KC910 Renoir"
+    },
+    {
+      "modelo": "KP270"
+    },
+    {
+      "modelo": "CB630 Invision"
+    },
+    {
+      "modelo": "KF311"
+    },
+    {
+      "modelo": "CP150"
+    },
+    {
+      "modelo": "KP265"
+    },
+    {
+      "modelo": "KP260"
+    },
+    {
+      "modelo": "KP199"
+    },
+    {
+      "modelo": "KP170"
+    },
+    {
+      "modelo": "GT365 Neon"
+    },
+    {
+      "modelo": "Univa E510"
+    },
+    {
+      "modelo": "KS360"
+    },
+    {
+      "modelo": "KF390"
+    },
+    {
+      "modelo": "KF350"
+    },
+    {
+      "modelo": "KF245"
+    },
+    {
+      "modelo": "KF240"
+    },
+    {
+      "modelo": "U370"
+    },
+    {
+      "modelo": "HB620T"
+    },
+    {
+      "modelo": "KC550"
+    },
+    {
+      "modelo": "KF757 Secret"
+    },
+    {
+      "modelo": "KF750 Secret"
+    },
+    {
+      "modelo": "KF755 Secret"
+    },
+    {
+      "modelo": "CU915 Vu"
+    },
+    {
+      "modelo": "KF700"
+    },
+    {
+      "modelo": "KF600"
+    },
+    {
+      "modelo": "KF510"
+    },
+    {
+      "modelo": "KP320"
+    },
+    {
+      "modelo": "KT610"
+    },
+    {
+      "modelo": "KT520"
+    },
+    {
+      "modelo": "KM710"
+    },
+    {
+      "modelo": "MG295"
+    },
+    {
+      "modelo": "KF310"
+    },
+    {
+      "modelo": "KF300"
+    },
+    {
+      "modelo": "KM500"
+    },
+    {
+      "modelo": "KM386"
+    },
+    {
+      "modelo": "KM380"
+    },
+    {
+      "modelo": "KM338"
+    },
+    {
+      "modelo": "KG375"
+    },
+    {
+      "modelo": "KP235"
+    },
+    {
+      "modelo": "KP220"
+    },
+    {
+      "modelo": "KP215"
+    },
+    {
+      "modelo": "KP210"
+    },
+    {
+      "modelo": "KP130"
+    },
+    {
+      "modelo": "KP110"
+    },
+    {
+      "modelo": "KP105"
+    },
+    {
+      "modelo": "KP100"
+    },
+    {
+      "modelo": "KU385"
+    },
+    {
+      "modelo": "KU380"
+    },
+    {
+      "modelo": "U960"
+    },
+    {
+      "modelo": "KG290"
+    },
+    {
+      "modelo": "KG288"
+    },
+    {
+      "modelo": "KS20"
+    },
+    {
+      "modelo": "KU990 Viewty"
+    },
+    {
+      "modelo": "KE990 Viewty"
+    },
+    {
+      "modelo": "KE590"
+    },
+    {
+      "modelo": "KE500"
+    },
+    {
+      "modelo": "KG280"
+    },
+    {
+      "modelo": "KG275"
+    },
+    {
+      "modelo": "MG160"
+    },
+    {
+      "modelo": "KU580"
+    },
+    {
+      "modelo": "KE850 Prada"
+    },
+    {
+      "modelo": "KE970 Shine"
+    },
+    {
+      "modelo": "KU970 Shine"
+    },
+    {
+      "modelo": "KE770 Shine"
+    },
+    {
+      "modelo": "CU720 Shine"
+    },
+    {
+      "modelo": "KU950"
+    },
+    {
+      "modelo": "KS10"
+    },
+    {
+      "modelo": "KU311"
+    },
+    {
+      "modelo": "Trax CU575"
+    },
+    {
+      "modelo": "CU500V"
+    },
+    {
+      "modelo": "CU515"
+    },
+    {
+      "modelo": "CE110"
+    },
+    {
+      "modelo": "KU250"
+    },
+    {
+      "modelo": "KE260"
+    },
+    {
+      "modelo": "KE800"
+    },
+    {
+      "modelo": "KE820"
+    },
+    {
+      "modelo": "KU800"
+    },
+    {
+      "modelo": "L343i"
+    },
+    {
+      "modelo": "U830"
+    },
+    {
+      "modelo": "KP200"
+    },
+    {
+      "modelo": "L600v"
+    },
+    {
+      "modelo": "KP202"
+    },
+    {
+      "modelo": "CU500"
+    },
+    {
+      "modelo": "U400"
+    },
+    {
+      "modelo": "U310"
+    },
+    {
+      "modelo": "U300"
+    },
+    {
+      "modelo": "KG800"
+    },
+    {
+      "modelo": "KG810"
+    },
+    {
+      "modelo": "KE600"
+    },
+    {
+      "modelo": "KG330"
+    },
+    {
+      "modelo": "KG320"
+    },
+    {
+      "modelo": "CG180"
+    },
+    {
+      "modelo": "KG300"
+    },
+    {
+      "modelo": "KG270"
+    },
+    {
+      "modelo": "KG200"
+    },
+    {
+      "modelo": "KG195"
+    },
+    {
+      "modelo": "KG920"
+    },
+    {
+      "modelo": "KU730"
+    },
+    {
+      "modelo": "U900"
+    },
+    {
+      "modelo": "V9000"
+    },
+    {
+      "modelo": "KG245"
+    },
+    {
+      "modelo": "KG240"
+    },
+    {
+      "modelo": "KG225"
+    },
+    {
+      "modelo": "KG220"
+    },
+    {
+      "modelo": "KG210"
+    },
+    {
+      "modelo": "KG190"
+    },
+    {
+      "modelo": "KG130"
+    },
+    {
+      "modelo": "KG120"
+    },
+    {
+      "modelo": "KG110"
+    },
+    {
+      "modelo": "C2600"
+    },
+    {
+      "modelo": "U890"
+    },
+    {
+      "modelo": "U8550"
+    },
+    {
+      "modelo": "M6100"
+    },
+    {
+      "modelo": "C2500"
+    },
+    {
+      "modelo": "C1150"
+    },
+    {
+      "modelo": "S5300"
+    },
+    {
+      "modelo": "S5200"
+    },
+    {
+      "modelo": "S5100"
+    },
+    {
+      "modelo": "S5000"
+    },
+    {
+      "modelo": "U880"
+    },
+    {
+      "modelo": "P7200"
+    },
+    {
+      "modelo": "B2250"
+    },
+    {
+      "modelo": "B2070"
+    },
+    {
+      "modelo": "B2050"
+    },
+    {
+      "modelo": "M4410"
+    },
+    {
+      "modelo": "M4330"
+    },
+    {
+      "modelo": "M4300"
+    },
+    {
+      "modelo": "F3000"
+    },
+    {
+      "modelo": "F2410"
+    },
+    {
+      "modelo": "F2250"
+    },
+    {
+      "modelo": "L342i"
+    },
+    {
+      "modelo": "L341i"
+    },
+    {
+      "modelo": "C3400"
+    },
+    {
+      "modelo": "C3380"
+    },
+    {
+      "modelo": "C3320"
+    },
+    {
+      "modelo": "C3310"
+    },
+    {
+      "modelo": "C3300"
+    },
+    {
+      "modelo": "U8380"
+    },
+    {
+      "modelo": "U8360"
+    },
+    {
+      "modelo": "U8330"
+    },
+    {
+      "modelo": "U8290"
+    },
+    {
+      "modelo": "U8210"
+    },
+    {
+      "modelo": "U8200"
+    },
+    {
+      "modelo": "U8180"
+    },
+    {
+      "modelo": "B2150"
+    },
+    {
+      "modelo": "B2100"
+    },
+    {
+      "modelo": "B2000"
+    },
+    {
+      "modelo": "F2400"
+    },
+    {
+      "modelo": "F1200"
+    },
+    {
+      "modelo": "F7250"
+    },
+    {
+      "modelo": "A7150"
+    },
+    {
+      "modelo": "L5100"
+    },
+    {
+      "modelo": "C2200"
+    },
+    {
+      "modelo": "C2100"
+    },
+    {
+      "modelo": "G1800"
+    },
+    {
+      "modelo": "G1610"
+    },
+    {
+      "modelo": "G1700"
+    },
+    {
+      "modelo": "F2300"
+    },
+    {
+      "modelo": "F2100"
+    },
+    {
+      "modelo": "L3100"
+    },
+    {
+      "modelo": "C3100"
+    },
+    {
+      "modelo": "G3100"
+    },
+    {
+      "modelo": "L1100"
+    },
+    {
+      "modelo": "C1400"
+    },
+    {
+      "modelo": "C1200"
+    },
+    {
+      "modelo": "C1100"
+    },
+    {
+      "modelo": "G1600"
+    },
+    {
+      "modelo": "T5100"
+    },
+    {
+      "modelo": "G7200"
+    },
+    {
+      "modelo": "G7120"
+    },
+    {
+      "modelo": "U8150"
+    },
+    {
+      "modelo": "U8138"
+    },
+    {
+      "modelo": "U8120"
+    },
+    {
+      "modelo": "U8110"
+    },
+    {
+      "modelo": "U8100"
+    },
+    {
+      "modelo": "G7100"
+    },
+    {
+      "modelo": "G7070"
+    },
+    {
+      "modelo": "G7050"
+    },
+    {
+      "modelo": "G7030"
+    },
+    {
+      "modelo": "G1500"
+    },
+    {
+      "modelo": "G5500"
+    },
+    {
+      "modelo": "G5400"
+    },
+    {
+      "modelo": "G5310"
+    },
+    {
+      "modelo": "G5300"
+    },
+    {
+      "modelo": "G8000"
+    },
+    {
+      "modelo": "G7020"
+    },
+    {
+      "modelo": "W7020"
+    },
+    {
+      "modelo": "G7000"
+    },
+    {
+      "modelo": "W7000"
+    },
+    {
+      "modelo": "G5200"
+    },
+    {
+      "modelo": "W5200"
+    },
+    {
+      "modelo": "G3000"
+    },
+    {
+      "modelo": "W3000"
+    },
+    {
+      "modelo": "B1200"
+    },
+    {
+      "modelo": "LG 510w"
+    },
+    {
+      "modelo": "LG-600"
+    },
+    {
+      "modelo": "LG-500"
+    },
+    {
+      "modelo": "LG-200"
+    },
+    {
+      "modelo": "G4 Pro"
+    },
+    {
+      "modelo": "Optimus LTE"
+    },
+    {
+      "modelo": "X3"
+    },
+    {
+      "modelo": "E2"
+    },
+    {
+      "modelo": "Fantasy E740"
+    }
+  ]
+}

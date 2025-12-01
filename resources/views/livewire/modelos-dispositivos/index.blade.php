@@ -17,7 +17,7 @@
                 </span>
                 <input
                     type="text"
-                    placeholder="Buscar modelo..."
+                    placeholder="Buscar por marca o modelo..."
                     wire:model.live.debounce.500ms="search"
                     class="w-full rounded-md border border-zinc-300 bg-white pl-10 pr-3 py-2 text-zinc-900 placeholder-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-0 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
                 />

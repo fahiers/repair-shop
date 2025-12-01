@@ -1,0 +1,24 @@
+{
+  "marca": "FAIRPHONE",
+  "id_interno": "127",
+  "slug": "fairphone",
+  "total_esperado": 0,
+  "total_encontrado": 5,
+  "modelos": [
+    {
+      "modelo": "6"
+    },
+    {
+      "modelo": "5"
+    },
+    {
+      "modelo": "4"
+    },
+    {
+      "modelo": "3+"
+    },
+    {
+      "modelo": "3"
+    }
+  ]
+}

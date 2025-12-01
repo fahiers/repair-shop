@@ -1,0 +1,72 @@
+{
+  "marca": "QTEK",
+  "id_interno": "38",
+  "slug": "qtek",
+  "total_esperado": 0,
+  "total_encontrado": 21,
+  "modelos": [
+    {
+      "modelo": "9600"
+    },
+    {
+      "modelo": "8600"
+    },
+    {
+      "modelo": "A9100"
+    },
+    {
+      "modelo": "8500"
+    },
+    {
+      "modelo": "S200"
+    },
+    {
+      "modelo": "9000"
+    },
+    {
+      "modelo": "8310"
+    },
+    {
+      "modelo": "8300"
+    },
+    {
+      "modelo": "9100"
+    },
+    {
+      "modelo": "8100"
+    },
+    {
+      "modelo": "S110"
+    },
+    {
+      "modelo": "S100"
+    },
+    {
+      "modelo": "9090"
+    },
+    {
+      "modelo": "8020"
+    },
+    {
+      "modelo": "8010"
+    },
+    {
+      "modelo": "2020i"
+    },
+    {
+      "modelo": "2020"
+    },
+    {
+      "modelo": "8080"
+    },
+    {
+      "modelo": "8060"
+    },
+    {
+      "modelo": "1010"
+    },
+    {
+      "modelo": "7070"
+    }
+  ]
+}

@@ -1,0 +1,1706 @@
+{
+  "marca": "VIVO",
+  "id_interno": "98",
+  "slug": "vivo",
+  "total_esperado": 0,
+  "total_encontrado": 559,
+  "modelos": [
+    {
+      "modelo": "Y500 Pro"
+    },
+    {
+      "modelo": "Y19s"
+    },
+    {
+      "modelo": "iQOO Neo11 (China)"
+    },
+    {
+      "modelo": "iQOO 15"
+    },
+    {
+      "modelo": "X300 Pro"
+    },
+    {
+      "modelo": "X300"
+    },
+    {
+      "modelo": "Pad5e"
+    },
+    {
+      "modelo": "Watch GT 2"
+    },
+    {
+      "modelo": "V60e"
+    },
+    {
+      "modelo": "V60 Lite"
+    },
+    {
+      "modelo": "V60 Lite 4G"
+    },
+    {
+      "modelo": "Y31 Pro"
+    },
+    {
+      "modelo": "Y31"
+    },
+    {
+      "modelo": "Y500 (China)"
+    },
+    {
+      "modelo": "T4 Pro"
+    },
+    {
+      "modelo": "V60"
+    },
+    {
+      "modelo": "iQOO Z10 Turbo+"
+    },
+    {
+      "modelo": "Y19s GT"
+    },
+    {
+      "modelo": "Y400"
+    },
+    {
+      "modelo": "Y400 4G"
+    },
+    {
+      "modelo": "T4R"
+    },
+    {
+      "modelo": "Y50 (China)"
+    },
+    {
+      "modelo": "iQOO Z10R (India)"
+    },
+    {
+      "modelo": "X Fold5"
+    },
+    {
+      "modelo": "T4 Lite"
+    },
+    {
+      "modelo": "X200 FE"
+    },
+    {
+      "modelo": "Y400 Pro"
+    },
+    {
+      "modelo": "iQOO Z10 Lite"
+    },
+    {
+      "modelo": "T4 Ultra"
+    },
+    {
+      "modelo": "Y19s Pro"
+    },
+    {
+      "modelo": "Pad5"
+    },
+    {
+      "modelo": "S30 Pro mini"
+    },
+    {
+      "modelo": "S30"
+    },
+    {
+      "modelo": "iQOO Neo 10"
+    },
+    {
+      "modelo": "IQOO Pad5 Pro"
+    },
+    {
+      "modelo": "IQOO Pad5"
+    },
+    {
+      "modelo": "iQOO Neo10 Pro+ (China)"
+    },
+    {
+      "modelo": "Y300 GT"
+    },
+    {
+      "modelo": "Y19"
+    },
+    {
+      "modelo": "iQOO Z10 Turbo Pro"
+    },
+    {
+      "modelo": "iQOO Z10 Turbo"
+    },
+    {
+      "modelo": "T4"
+    },
+    {
+      "modelo": "X200 Ultra"
+    },
+    {
+      "modelo": "X200s"
+    },
+    {
+      "modelo": "Pad5 Pro"
+    },
+    {
+      "modelo": "Pad SE"
+    },
+    {
+      "modelo": "Watch 5"
+    },
+    {
+      "modelo": "iQOO Z10"
+    },
+    {
+      "modelo": "iQOO Z10x"
+    },
+    {
+      "modelo": "V50e"
+    },
+    {
+      "modelo": "Y300t"
+    },
+    {
+      "modelo": "Y300 Pro+"
+    },
+    {
+      "modelo": "Y39"
+    },
+    {
+      "modelo": "V50 Lite"
+    },
+    {
+      "modelo": "V50 Lite 4G"
+    },
+    {
+      "modelo": "Y29s"
+    },
+    {
+      "modelo": "iQOO Neo 10R"
+    },
+    {
+      "modelo": "Y300i"
+    },
+    {
+      "modelo": "T4x"
+    },
+    {
+      "modelo": "Y04"
+    },
+    {
+      "modelo": "Y29 4G"
+    },
+    {
+      "modelo": "V50"
+    },
+    {
+      "modelo": "Y200 4G"
+    },
+    {
+      "modelo": "Y200 (Asia)"
+    },
+    {
+      "modelo": "Y200"
+    },
+    {
+      "modelo": "iQOO Z9 Turbo Endurance"
+    },
+    {
+      "modelo": "Y200+"
+    },
+    {
+      "modelo": "Y29"
+    },
+    {
+      "modelo": "Y300 (China)"
+    },
+    {
+      "modelo": "iQOO Neo10 Pro (China)"
+    },
+    {
+      "modelo": "iQOO Neo10 (China)"
+    },
+    {
+      "modelo": "S20 Pro"
+    },
+    {
+      "modelo": "S20"
+    },
+    {
+      "modelo": "Y300"
+    },
+    {
+      "modelo": "Y18t"
+    },
+    {
+      "modelo": "iQOO 13"
+    },
+    {
+      "modelo": "Y300 Plus"
+    },
+    {
+      "modelo": "X200 Pro mini"
+    },
+    {
+      "modelo": "X200 Pro"
+    },
+    {
+      "modelo": "X200"
+    },
+    {
+      "modelo": "Y19s 4G"
+    },
+    {
+      "modelo": "V40 Lite 4G (IDN)"
+    },
+    {
+      "modelo": "V40 Lite (IDN)"
+    },
+    {
+      "modelo": "V40e"
+    },
+    {
+      "modelo": "iQOO Z9 Turbo+"
+    },
+    {
+      "modelo": "T3 Ultra"
+    },
+    {
+      "modelo": "Y300 Pro"
+    },
+    {
+      "modelo": "Y37 Pro"
+    },
+    {
+      "modelo": "Y37"
+    },
+    {
+      "modelo": "T3 Pro"
+    },
+    {
+      "modelo": "Y18i"
+    },
+    {
+      "modelo": "Y03t"
+    },
+    {
+      "modelo": "iQOO Z9s Pro"
+    },
+    {
+      "modelo": "iQOO Z9s"
+    },
+    {
+      "modelo": "V40 Pro"
+    },
+    {
+      "modelo": "V40 Lite"
+    },
+    {
+      "modelo": "iQOO Z9 Lite"
+    },
+    {
+      "modelo": "iQOO Watch GT"
+    },
+    {
+      "modelo": "iQOO Neo9S Pro+"
+    },
+    {
+      "modelo": "V40"
+    },
+    {
+      "modelo": "Pad3"
+    },
+    {
+      "modelo": "T3 Lite"
+    },
+    {
+      "modelo": "Y28s"
+    },
+    {
+      "modelo": "Y28 4G"
+    },
+    {
+      "modelo": "Y58"
+    },
+    {
+      "modelo": "iQOO Pad2 Pro"
+    },
+    {
+      "modelo": "iQOO Pad2"
+    },
+    {
+      "modelo": "S19 Pro"
+    },
+    {
+      "modelo": "S19"
+    },
+    {
+      "modelo": "Watch GT"
+    },
+    {
+      "modelo": "Y200 Pro"
+    },
+    {
+      "modelo": "iQOO Neo9S Pro"
+    },
+    {
+      "modelo": "Y200 GT"
+    },
+    {
+      "modelo": "Y200 (China)"
+    },
+    {
+      "modelo": "Y200t"
+    },
+    {
+      "modelo": "X100 Ultra"
+    },
+    {
+      "modelo": "X100s Pro"
+    },
+    {
+      "modelo": "X100s"
+    },
+    {
+      "modelo": "Y18"
+    },
+    {
+      "modelo": "Y18 (India)"
+    },
+    {
+      "modelo": "Y18e"
+    },
+    {
+      "modelo": "Y100 4G"
+    },
+    {
+      "modelo": "V30e"
+    },
+    {
+      "modelo": "Y38"
+    },
+    {
+      "modelo": "V30 SE"
+    },
+    {
+      "modelo": "iQOO Z9 Turbo"
+    },
+    {
+      "modelo": "iQOO Z9x"
+    },
+    {
+      "modelo": "iQOO Z9 (China)"
+    },
+    {
+      "modelo": "iQOO Watch"
+    },
+    {
+      "modelo": "Y200i"
+    },
+    {
+      "modelo": "T3x"
+    },
+    {
+      "modelo": "V30 Lite 4G"
+    },
+    {
+      "modelo": "V30 Lite (ME)"
+    },
+    {
+      "modelo": "V40 SE"
+    },
+    {
+      "modelo": "X Fold3 Pro"
+    },
+    {
+      "modelo": "X Fold3"
+    },
+    {
+      "modelo": "Pad3 Pro"
+    },
+    {
+      "modelo": "T3"
+    },
+    {
+      "modelo": "Y03"
+    },
+    {
+      "modelo": "iQOO Z9"
+    },
+    {
+      "modelo": "V30 Pro"
+    },
+    {
+      "modelo": "Y100t"
+    },
+    {
+      "modelo": "iQOO Neo9 Pro"
+    },
+    {
+      "modelo": "Y200e"
+    },
+    {
+      "modelo": "V30"
+    },
+    {
+      "modelo": "Y100 (IDN)"
+    },
+    {
+      "modelo": "Y28"
+    },
+    {
+      "modelo": "G2"
+    },
+    {
+      "modelo": "V30 Lite"
+    },
+    {
+      "modelo": "iQOO Neo9 Pro (China)"
+    },
+    {
+      "modelo": "iQOO Neo9"
+    },
+    {
+      "modelo": "S18 Pro"
+    },
+    {
+      "modelo": "S18"
+    },
+    {
+      "modelo": "S18e"
+    },
+    {
+      "modelo": "Y36i"
+    },
+    {
+      "modelo": "Y100i"
+    },
+    {
+      "modelo": "X100 Pro"
+    },
+    {
+      "modelo": "X100"
+    },
+    {
+      "modelo": "Watch 3"
+    },
+    {
+      "modelo": "iQOO 12 Pro"
+    },
+    {
+      "modelo": "iQOO 12"
+    },
+    {
+      "modelo": "Y27s"
+    },
+    {
+      "modelo": "Y100 (China)"
+    },
+    {
+      "modelo": "T2"
+    },
+    {
+      "modelo": "V29e"
+    },
+    {
+      "modelo": "Y200 (India)"
+    },
+    {
+      "modelo": "Y78t"
+    },
+    {
+      "modelo": "V29 Pro"
+    },
+    {
+      "modelo": "iQOO Z8x"
+    },
+    {
+      "modelo": "iQOO Z8 (China)"
+    },
+    {
+      "modelo": "T2 Pro"
+    },
+    {
+      "modelo": "Y17s"
+    },
+    {
+      "modelo": "iQOO Z7 Pro"
+    },
+    {
+      "modelo": "V29e (India)"
+    },
+    {
+      "modelo": "Pad Air"
+    },
+    {
+      "modelo": "Y77t"
+    },
+    {
+      "modelo": "V29"
+    },
+    {
+      "modelo": "Y27 5G"
+    },
+    {
+      "modelo": "Y27"
+    },
+    {
+      "modelo": "Y02t"
+    },
+    {
+      "modelo": "iQOO 11S"
+    },
+    {
+      "modelo": "iQOO Neo 7 Pro"
+    },
+    {
+      "modelo": "X90s"
+    },
+    {
+      "modelo": "Y36 (India)"
+    },
+    {
+      "modelo": "Y36 5G"
+    },
+    {
+      "modelo": "Y36"
+    },
+    {
+      "modelo": "V29 Lite"
+    },
+    {
+      "modelo": "S17 Pro"
+    },
+    {
+      "modelo": "S17"
+    },
+    {
+      "modelo": "S17t"
+    },
+    {
+      "modelo": "Y35+"
+    },
+    {
+      "modelo": "Y78"
+    },
+    {
+      "modelo": "S17e"
+    },
+    {
+      "modelo": "iQOO Neo8 Pro"
+    },
+    {
+      "modelo": "iQOO Neo8"
+    },
+    {
+      "modelo": "iQOO Pad"
+    },
+    {
+      "modelo": "iQOO Z7s"
+    },
+    {
+      "modelo": "Y78 (China)"
+    },
+    {
+      "modelo": "Y78+"
+    },
+    {
+      "modelo": "X Fold2"
+    },
+    {
+      "modelo": "X Flip"
+    },
+    {
+      "modelo": "Pad2"
+    },
+    {
+      "modelo": "T2 (India)"
+    },
+    {
+      "modelo": "T2x (India)"
+    },
+    {
+      "modelo": "Y11",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Y02A"
+    },
+    {
+      "modelo": "iQOO Z7"
+    },
+    {
+      "modelo": "iQOO Z7 (China)"
+    },
+    {
+      "modelo": "iQOO Z7x"
+    },
+    {
+      "modelo": "iQOO Z7i"
+    },
+    {
+      "modelo": "V27 Pro"
+    },
+    {
+      "modelo": "V27"
+    },
+    {
+      "modelo": "V27e"
+    },
+    {
+      "modelo": "Y56"
+    },
+    {
+      "modelo": "Y100"
+    },
+    {
+      "modelo": "iQOO Neo 7"
+    },
+    {
+      "modelo": "Y55s",
+      "ano": "2023"
+    },
+    {
+      "modelo": "iQOO Neo7 Racing"
+    },
+    {
+      "modelo": "S16 Pro"
+    },
+    {
+      "modelo": "S16"
+    },
+    {
+      "modelo": "S16e"
+    },
+    {
+      "modelo": "Y35 5G"
+    },
+    {
+      "modelo": "iQOO 11 Pro"
+    },
+    {
+      "modelo": "iQOO 11"
+    },
+    {
+      "modelo": "iQOO Neo7 SE"
+    },
+    {
+      "modelo": "Y02"
+    },
+    {
+      "modelo": "X90 Pro+"
+    },
+    {
+      "modelo": "X90 Pro"
+    },
+    {
+      "modelo": "X90"
+    },
+    {
+      "modelo": "V21s"
+    },
+    {
+      "modelo": "iQOO Neo7 (China)"
+    },
+    {
+      "modelo": "Y73t"
+    },
+    {
+      "modelo": "X Fold+"
+    },
+    {
+      "modelo": "X80 Lite"
+    },
+    {
+      "modelo": "Y52t"
+    },
+    {
+      "modelo": "iQOO Z6 Lite"
+    },
+    {
+      "modelo": "Y16"
+    },
+    {
+      "modelo": "Y75s"
+    },
+    {
+      "modelo": "Y22"
+    },
+    {
+      "modelo": "V25e"
+    },
+    {
+      "modelo": "iQOO Z6 (China)"
+    },
+    {
+      "modelo": "iQOO Z6x"
+    },
+    {
+      "modelo": "Y22s (Europe)"
+    },
+    {
+      "modelo": "Y22s"
+    },
+    {
+      "modelo": "Y77e (t1)"
+    },
+    {
+      "modelo": "V25 Pro"
+    },
+    {
+      "modelo": "V25"
+    },
+    {
+      "modelo": "Y35"
+    },
+    {
+      "modelo": "Y77e"
+    },
+    {
+      "modelo": "Y02s"
+    },
+    {
+      "modelo": "iQOO 9T"
+    },
+    {
+      "modelo": "Y30 5G"
+    },
+    {
+      "modelo": "T1x (India)"
+    },
+    {
+      "modelo": "iQOO 10 Pro"
+    },
+    {
+      "modelo": "iQOO 10"
+    },
+    {
+      "modelo": "Y77 (China)"
+    },
+    {
+      "modelo": "Y77"
+    },
+    {
+      "modelo": "iQOO U5e"
+    },
+    {
+      "modelo": "iQOO Neo 6"
+    },
+    {
+      "modelo": "Y33e"
+    },
+    {
+      "modelo": "T2x"
+    },
+    {
+      "modelo": "Y72t"
+    },
+    {
+      "modelo": "T2 (China)"
+    },
+    {
+      "modelo": "Y75"
+    },
+    {
+      "modelo": "S15 Pro"
+    },
+    {
+      "modelo": "S15"
+    },
+    {
+      "modelo": "iQOO Neo6 SE"
+    },
+    {
+      "modelo": "T1 Pro"
+    },
+    {
+      "modelo": "T1 (Snapdragon 680)"
+    },
+    {
+      "modelo": "iQOO Z6 Pro"
+    },
+    {
+      "modelo": "Y55"
+    },
+    {
+      "modelo": "iQOO Z6 44W"
+    },
+    {
+      "modelo": "X80 Pro"
+    },
+    {
+      "modelo": "X80"
+    },
+    {
+      "modelo": "T1 (Snapdragon 778G)"
+    },
+    {
+      "modelo": "T1x 4G"
+    },
+    {
+      "modelo": "S15e"
+    },
+    {
+      "modelo": "iQOO Neo6 (China)"
+    },
+    {
+      "modelo": "X Note"
+    },
+    {
+      "modelo": "X Fold"
+    },
+    {
+      "modelo": "Pad"
+    },
+    {
+      "modelo": "Y21G"
+    },
+    {
+      "modelo": "iQOO U5x"
+    },
+    {
+      "modelo": "iQOO Z6"
+    },
+    {
+      "modelo": "Y01"
+    },
+    {
+      "modelo": "Y33s 5G"
+    },
+    {
+      "modelo": "iQOO 9"
+    },
+    {
+      "modelo": "iQOO 9 SE"
+    },
+    {
+      "modelo": "iQOO 9 Pro"
+    },
+    {
+      "modelo": "T1 5G"
+    },
+    {
+      "modelo": "Y33"
+    },
+    {
+      "modelo": "Y75 5G"
+    },
+    {
+      "modelo": "Y55 5G"
+    },
+    {
+      "modelo": "iQOO 9 (China)"
+    },
+    {
+      "modelo": "V23 Pro"
+    },
+    {
+      "modelo": "V23 5G"
+    },
+    {
+      "modelo": "Y33t"
+    },
+    {
+      "modelo": "Y21t (India)"
+    },
+    {
+      "modelo": "Y21a"
+    },
+    {
+      "modelo": "Y21e"
+    },
+    {
+      "modelo": "Y21t"
+    },
+    {
+      "modelo": "iQOO U5"
+    },
+    {
+      "modelo": "S12 Pro"
+    },
+    {
+      "modelo": "S12"
+    },
+    {
+      "modelo": "Watch 2"
+    },
+    {
+      "modelo": "iQOO Neo5 S"
+    },
+    {
+      "modelo": "iQOO Neo5 SE"
+    },
+    {
+      "modelo": "Y32"
+    },
+    {
+      "modelo": "Y55s",
+      "ano": "2021"
+    },
+    {
+      "modelo": "V23e 5G"
+    },
+    {
+      "modelo": "Y76 5G"
+    },
+    {
+      "modelo": "Y54s"
+    },
+    {
+      "modelo": "V23e"
+    },
+    {
+      "modelo": "Y50t"
+    },
+    {
+      "modelo": "Y15a"
+    },
+    {
+      "modelo": "Y74s"
+    },
+    {
+      "modelo": "Y76s"
+    },
+    {
+      "modelo": "Y15s"
+    },
+    {
+      "modelo": "Y71t"
+    },
+    {
+      "modelo": "iQOO Z5x"
+    },
+    {
+      "modelo": "T1x"
+    },
+    {
+      "modelo": "T1"
+    },
+    {
+      "modelo": "Y3s",
+      "ano": "2021"
+    },
+    {
+      "modelo": "S10e"
+    },
+    {
+      "modelo": "Y20t"
+    },
+    {
+      "modelo": "iQOO Z5"
+    },
+    {
+      "modelo": "Y21s"
+    },
+    {
+      "modelo": "X70 Pro+"
+    },
+    {
+      "modelo": "X70 Pro"
+    },
+    {
+      "modelo": "X70"
+    },
+    {
+      "modelo": "Y33s"
+    },
+    {
+      "modelo": "Y21"
+    },
+    {
+      "modelo": "iQOO 8 Pro"
+    },
+    {
+      "modelo": "iQOO U3x Standard"
+    },
+    {
+      "modelo": "iQOO 8"
+    },
+    {
+      "modelo": "Y12a"
+    },
+    {
+      "modelo": "S10 Pro"
+    },
+    {
+      "modelo": "S10"
+    },
+    {
+      "modelo": "Y73"
+    },
+    {
+      "modelo": "Y72 5G (India)"
+    },
+    {
+      "modelo": "Y53s 4G"
+    },
+    {
+      "modelo": "X60t Pro+"
+    },
+    {
+      "modelo": "V21e 5G"
+    },
+    {
+      "modelo": "Y53s"
+    },
+    {
+      "modelo": "Y70t"
+    },
+    {
+      "modelo": "X60s"
+    },
+    {
+      "modelo": "iQOO Neo5 Lite"
+    },
+    {
+      "modelo": "Y52 5G"
+    },
+    {
+      "modelo": "Y12s 2021"
+    },
+    {
+      "modelo": "Y52s t1"
+    },
+    {
+      "modelo": "V21 5G"
+    },
+    {
+      "modelo": "V21"
+    },
+    {
+      "modelo": "V21e"
+    },
+    {
+      "modelo": "iQOO 7 (India)"
+    },
+    {
+      "modelo": "Y20s [G]"
+    },
+    {
+      "modelo": "X60t"
+    },
+    {
+      "modelo": "Y30g"
+    },
+    {
+      "modelo": "X60 Pro"
+    },
+    {
+      "modelo": "X60"
+    },
+    {
+      "modelo": "iQOO Z3"
+    },
+    {
+      "modelo": "Y72 5G"
+    },
+    {
+      "modelo": "iQOO U3x"
+    },
+    {
+      "modelo": "iQOO Neo5"
+    },
+    {
+      "modelo": "S9"
+    },
+    {
+      "modelo": "S9e"
+    },
+    {
+      "modelo": "S7t"
+    },
+    {
+      "modelo": "X60 Pro+"
+    },
+    {
+      "modelo": "Y31",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Y20g"
+    },
+    {
+      "modelo": "Y31s"
+    },
+    {
+      "modelo": "iQOO 7"
+    },
+    {
+      "modelo": "Y20a"
+    },
+    {
+      "modelo": "Y20 2021"
+    },
+    {
+      "modelo": "X60 Pro (China)"
+    },
+    {
+      "modelo": "X60 (China)"
+    },
+    {
+      "modelo": "V20 2021"
+    },
+    {
+      "modelo": "Y30 Standard"
+    },
+    {
+      "modelo": "iQOO U3"
+    },
+    {
+      "modelo": "Y52s"
+    },
+    {
+      "modelo": "Y51a"
+    },
+    {
+      "modelo": "Y51 (2020, December)"
+    },
+    {
+      "modelo": "Y12s"
+    },
+    {
+      "modelo": "Y12i"
+    },
+    {
+      "modelo": "Y1s"
+    },
+    {
+      "modelo": "S7e"
+    },
+    {
+      "modelo": "X51 5G"
+    },
+    {
+      "modelo": "iQOO U1x"
+    },
+    {
+      "modelo": "Y3s"
+    },
+    {
+      "modelo": "Y30 (China)"
+    },
+    {
+      "modelo": "Y11s"
+    },
+    {
+      "modelo": "Y70"
+    },
+    {
+      "modelo": "Y20s"
+    },
+    {
+      "modelo": "Y73s"
+    },
+    {
+      "modelo": "X50e"
+    },
+    {
+      "modelo": "V20"
+    },
+    {
+      "modelo": "Watch"
+    },
+    {
+      "modelo": "V20 SE"
+    },
+    {
+      "modelo": "V20 Pro"
+    },
+    {
+      "modelo": "Y51 (2020, September)"
+    },
+    {
+      "modelo": "Y20i"
+    },
+    {
+      "modelo": "Y20"
+    },
+    {
+      "modelo": "iQOO 5 Pro 5G"
+    },
+    {
+      "modelo": "iQOO 5 5G"
+    },
+    {
+      "modelo": "S1 Prime"
+    },
+    {
+      "modelo": "S7"
+    },
+    {
+      "modelo": "iQOO U1"
+    },
+    {
+      "modelo": "Y51s"
+    },
+    {
+      "modelo": "iQOO Z1x"
+    },
+    {
+      "modelo": "V19 Neo"
+    },
+    {
+      "modelo": "Z5x",
+      "ano": "2020"
+    },
+    {
+      "modelo": "X50 Pro+"
+    },
+    {
+      "modelo": "X50 Pro"
+    },
+    {
+      "modelo": "X50 5G"
+    },
+    {
+      "modelo": "X50"
+    },
+    {
+      "modelo": "Y70s"
+    },
+    {
+      "modelo": "iQOO Z1"
+    },
+    {
+      "modelo": "X50 Lite"
+    },
+    {
+      "modelo": "Y30"
+    },
+    {
+      "modelo": "iQOO Neo3 5G"
+    },
+    {
+      "modelo": "Y50",
+      "ano": "2020"
+    },
+    {
+      "modelo": "V19"
+    },
+    {
+      "modelo": "S6 5G"
+    },
+    {
+      "modelo": "NEX 3S 5G"
+    },
+    {
+      "modelo": "V19 (Indonesia)"
+    },
+    {
+      "modelo": "Z6 5G"
+    },
+    {
+      "modelo": "iQOO 3 5G"
+    },
+    {
+      "modelo": "X30 Pro"
+    },
+    {
+      "modelo": "X30"
+    },
+    {
+      "modelo": "V17"
+    },
+    {
+      "modelo": "iQOO Neo 855 Racing"
+    },
+    {
+      "modelo": "Y9s"
+    },
+    {
+      "modelo": "Z5i"
+    },
+    {
+      "modelo": "V17 (Russia)"
+    },
+    {
+      "modelo": "S1 Pro"
+    },
+    {
+      "modelo": "S5"
+    },
+    {
+      "modelo": "U20"
+    },
+    {
+      "modelo": "Y3 Standard"
+    },
+    {
+      "modelo": "Y5s"
+    },
+    {
+      "modelo": "Y19",
+      "ano": "2019"
+    },
+    {
+      "modelo": "iQOO Neo 855"
+    },
+    {
+      "modelo": "Y11",
+      "ano": "2019"
+    },
+    {
+      "modelo": "U3"
+    },
+    {
+      "modelo": "U10"
+    },
+    {
+      "modelo": "Y3 (4GB+64GB)"
+    },
+    {
+      "modelo": "Y3"
+    },
+    {
+      "modelo": "V17 Pro"
+    },
+    {
+      "modelo": "NEX 3 5G"
+    },
+    {
+      "modelo": "NEX 3"
+    },
+    {
+      "modelo": "Z1x"
+    },
+    {
+      "modelo": "iQOO Pro 5G"
+    },
+    {
+      "modelo": "iQOO Pro"
+    },
+    {
+      "modelo": "Y90"
+    },
+    {
+      "modelo": "V17 Neo"
+    },
+    {
+      "modelo": "Z5"
+    },
+    {
+      "modelo": "S1"
+    },
+    {
+      "modelo": "Z1Pro"
+    },
+    {
+      "modelo": "iQOO Neo"
+    },
+    {
+      "modelo": "Z5x"
+    },
+    {
+      "modelo": "S1 Pro (China)"
+    },
+    {
+      "modelo": "Z3x"
+    },
+    {
+      "modelo": "Y17"
+    },
+    {
+      "modelo": "Y15"
+    },
+    {
+      "modelo": "Y12"
+    },
+    {
+      "modelo": "X27 Pro"
+    },
+    {
+      "modelo": "S1 (China)"
+    },
+    {
+      "modelo": "X27"
+    },
+    {
+      "modelo": "V15"
+    },
+    {
+      "modelo": "iQOO"
+    },
+    {
+      "modelo": "V15 Pro"
+    },
+    {
+      "modelo": "Y89"
+    },
+    {
+      "modelo": "NEX Dual Display"
+    },
+    {
+      "modelo": "Y93 (Mediatek)"
+    },
+    {
+      "modelo": "Y93s"
+    },
+    {
+      "modelo": "Z1 Lite"
+    },
+    {
+      "modelo": "Y95"
+    },
+    {
+      "modelo": "Y91i"
+    },
+    {
+      "modelo": "Y93"
+    },
+    {
+      "modelo": "Y91i (India)"
+    },
+    {
+      "modelo": "Y91 (Mediatek)"
+    },
+    {
+      "modelo": "Y91"
+    },
+    {
+      "modelo": "Y81i"
+    },
+    {
+      "modelo": "Z3"
+    },
+    {
+      "modelo": "Z3i"
+    },
+    {
+      "modelo": "Y71i"
+    },
+    {
+      "modelo": "V11i"
+    },
+    {
+      "modelo": "Y97"
+    },
+    {
+      "modelo": "X23"
+    },
+    {
+      "modelo": "V11 (V11 Pro)"
+    },
+    {
+      "modelo": "Y83 Pro"
+    },
+    {
+      "modelo": "Z1i"
+    },
+    {
+      "modelo": "V9 6GB"
+    },
+    {
+      "modelo": "NEX S"
+    },
+    {
+      "modelo": "NEX A"
+    },
+    {
+      "modelo": "Z1"
+    },
+    {
+      "modelo": "Y83"
+    },
+    {
+      "modelo": "Y81"
+    },
+    {
+      "modelo": "X21i"
+    },
+    {
+      "modelo": "Y53i"
+    },
+    {
+      "modelo": "Y71"
+    },
+    {
+      "modelo": "V9 Youth"
+    },
+    {
+      "modelo": "V9"
+    },
+    {
+      "modelo": "X21 UD"
+    },
+    {
+      "modelo": "X21"
+    },
+    {
+      "modelo": "V7"
+    },
+    {
+      "modelo": "X20 Plus UD"
+    },
+    {
+      "modelo": "X20 Plus"
+    },
+    {
+      "modelo": "X20"
+    },
+    {
+      "modelo": "V7+"
+    },
+    {
+      "modelo": "Y65"
+    },
+    {
+      "modelo": "Y69"
+    },
+    {
+      "modelo": "Y53"
+    },
+    {
+      "modelo": "X9s Plus"
+    },
+    {
+      "modelo": "X9s"
+    },
+    {
+      "modelo": "V5s"
+    },
+    {
+      "modelo": "Y25"
+    },
+    {
+      "modelo": "Y55L (vivo 1603)"
+    },
+    {
+      "modelo": "Y55s",
+      "ano": "2017"
+    },
+    {
+      "modelo": "V5 Lite (vivo 1609)"
+    },
+    {
+      "modelo": "V5 Plus"
+    },
+    {
+      "modelo": "Y67"
+    },
+    {
+      "modelo": "Xplay6"
+    },
+    {
+      "modelo": "X9 Plus"
+    },
+    {
+      "modelo": "X9"
+    },
+    {
+      "modelo": "V5"
+    },
+    {
+      "modelo": "X7 Plus"
+    },
+    {
+      "modelo": "X7"
+    },
+    {
+      "modelo": "V3Max"
+    },
+    {
+      "modelo": "V3"
+    },
+    {
+      "modelo": "X6S Plus"
+    },
+    {
+      "modelo": "X6S"
+    },
+    {
+      "modelo": "Xplay5 Elite"
+    },
+    {
+      "modelo": "Xplay5"
+    },
+    {
+      "modelo": "Y51",
+      "ano": "2015"
+    },
+    {
+      "modelo": "X6"
+    },
+    {
+      "modelo": "X6Plus"
+    },
+    {
+      "modelo": "V1"
+    },
+    {
+      "modelo": "Y15S",
+      "ano": "2015"
+    },
+    {
+      "modelo": "V1 Max"
+    },
+    {
+      "modelo": "Y31",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Y37",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Y35",
+      "ano": "2015"
+    },
+    {
+      "modelo": "X5Max Platinum Edition"
+    },
+    {
+      "modelo": "X5Pro"
+    },
+    {
+      "modelo": "X5Max+"
+    },
+    {
+      "modelo": "X5Max"
+    },
+    {
+      "modelo": "Y11"
+    },
+    {
+      "modelo": "X5"
+    },
+    {
+      "modelo": "Xplay3S"
+    },
+    {
+      "modelo": "Xshot"
+    },
+    {
+      "modelo": "X3S"
+    },
+    {
+      "modelo": "Y28",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Y27",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Y22",
+      "ano": "2013"
+    },
+    {
+      "modelo": "Y15",
+      "ano": "2013"
+    },
+    {
+      "modelo": "S21 Pro"
+    },
+    {
+      "modelo": "iQOO U6"
+    },
+    {
+      "modelo": "iQOO Z5",
+      "ano": "2022"
+    },
+    {
+      "modelo": "X80 Pro+"
+    },
+    {
+      "modelo": "Xplay7"
+    }
+  ]
+}

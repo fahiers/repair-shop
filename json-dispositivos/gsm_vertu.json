@@ -1,0 +1,61 @@
+{
+  "marca": "VERTU",
+  "id_interno": "39",
+  "slug": "vertu",
+  "total_esperado": 0,
+  "total_encontrado": 17,
+  "modelos": [
+    {
+      "modelo": "Signature Touch",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Aster"
+    },
+    {
+      "modelo": "Signature Touch"
+    },
+    {
+      "modelo": "Constellation 2013"
+    },
+    {
+      "modelo": "Ti"
+    },
+    {
+      "modelo": "Constellation"
+    },
+    {
+      "modelo": "Ascent Ferrari GT"
+    },
+    {
+      "modelo": "Constellation Quest"
+    },
+    {
+      "modelo": "Ascent 2010"
+    },
+    {
+      "modelo": "Constellation Ayxta"
+    },
+    {
+      "modelo": "Ascent Ti Damascus Steel"
+    },
+    {
+      "modelo": "Signature S"
+    },
+    {
+      "modelo": "Ascent Ti"
+    },
+    {
+      "modelo": "Constellation 2006"
+    },
+    {
+      "modelo": "Diamond"
+    },
+    {
+      "modelo": "Ascent"
+    },
+    {
+      "modelo": "Signature"
+    }
+  ]
+}

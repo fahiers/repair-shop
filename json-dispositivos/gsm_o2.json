@@ -1,0 +1,144 @@
+{
+  "marca": "O2",
+  "id_interno": "30",
+  "slug": "o2",
+  "total_esperado": 0,
+  "total_encontrado": 45,
+  "modelos": [
+    {
+      "modelo": "XDA Serra"
+    },
+    {
+      "modelo": "XDA Guide"
+    },
+    {
+      "modelo": "XDA Zest"
+    },
+    {
+      "modelo": "XDA Ignito"
+    },
+    {
+      "modelo": "XDA Stellar"
+    },
+    {
+      "modelo": "XDA Orbit II"
+    },
+    {
+      "modelo": "XDA Comet"
+    },
+    {
+      "modelo": "XDA Nova"
+    },
+    {
+      "modelo": "XDA Terra"
+    },
+    {
+      "modelo": "XDA Argon"
+    },
+    {
+      "modelo": "XDA Star"
+    },
+    {
+      "modelo": "Cocoon"
+    },
+    {
+      "modelo": "XDA Flame"
+    },
+    {
+      "modelo": "XDA Atom Life"
+    },
+    {
+      "modelo": "XDA Zinc"
+    },
+    {
+      "modelo": "XDA Graphite"
+    },
+    {
+      "modelo": "XDA Orbit"
+    },
+    {
+      "modelo": "Cosmo"
+    },
+    {
+      "modelo": "XDA Stealth"
+    },
+    {
+      "modelo": "Jet"
+    },
+    {
+      "modelo": "Ice"
+    },
+    {
+      "modelo": "XDA Atom Exec"
+    },
+    {
+      "modelo": "XDA Trion"
+    },
+    {
+      "modelo": "XDA Neo"
+    },
+    {
+      "modelo": "XDA Atom"
+    },
+    {
+      "modelo": "XDA Orion"
+    },
+    {
+      "modelo": "XDA Exec"
+    },
+    {
+      "modelo": "XDA mini S"
+    },
+    {
+      "modelo": "X2i"
+    },
+    {
+      "modelo": "X7"
+    },
+    {
+      "modelo": "XDA phone"
+    },
+    {
+      "modelo": "Xphone IIm"
+    },
+    {
+      "modelo": "X1b"
+    },
+    {
+      "modelo": "XM"
+    },
+    {
+      "modelo": "X4"
+    },
+    {
+      "modelo": "XDA II mini"
+    },
+    {
+      "modelo": "XDA IIs"
+    },
+    {
+      "modelo": "XDA IIi"
+    },
+    {
+      "modelo": "Xphone II"
+    },
+    {
+      "modelo": "X3"
+    },
+    {
+      "modelo": "X2"
+    },
+    {
+      "modelo": "X1i"
+    },
+    {
+      "modelo": "XDA II"
+    },
+    {
+      "modelo": "Xphone"
+    },
+    {
+      "modelo": "XDA"
+    }
+  ]
+}

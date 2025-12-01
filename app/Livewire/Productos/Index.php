@@ -19,14 +19,17 @@ class Index extends Component
 
     public function render()
     {
+        $searchTerm = trim($this->search);
+        $searchTerm = preg_replace('/\s+/', ' ', $searchTerm);
+
         $productos = Producto::query()
-            ->when($this->search !== '', function ($query) {
-                $term = '%'.$this->search.'%';
+            ->when($searchTerm !== '', function ($query) use ($searchTerm) {
+                $term = '%'.$searchTerm.'%';
                 $query->where(function ($q) use ($term) {
                     $q->where('nombre', 'like', $term)
-                      ->orWhere('categoria', 'like', $term)
-                      ->orWhere('marca', 'like', $term)
-                      ->orWhere('descripcion', 'like', $term);
+                        ->orWhere('categoria', 'like', $term)
+                        ->orWhere('marca', 'like', $term)
+                        ->orWhere('descripcion', 'like', $term);
                 });
             })
             ->orderBy('nombre')

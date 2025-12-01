@@ -1,0 +1,84 @@
+{
+  "marca": "SEWON",
+  "id_interno": "26",
+  "slug": "sewon",
+  "total_esperado": 0,
+  "total_encontrado": 25,
+  "modelos": [
+    {
+      "modelo": "SRS-3300"
+    },
+    {
+      "modelo": "SRD-3000"
+    },
+    {
+      "modelo": "SRD-200"
+    },
+    {
+      "modelo": "SGD-1050"
+    },
+    {
+      "modelo": "SGD-1030"
+    },
+    {
+      "modelo": "SGD-1020"
+    },
+    {
+      "modelo": "SGD-1010"
+    },
+    {
+      "modelo": "SGD-1000"
+    },
+    {
+      "modelo": "SGD-106"
+    },
+    {
+      "modelo": "SGD-105"
+    },
+    {
+      "modelo": "SGD-102"
+    },
+    {
+      "modelo": "SGD-101"
+    },
+    {
+      "modelo": "SG-2890CD"
+    },
+    {
+      "modelo": "SG-2320CD"
+    },
+    {
+      "modelo": "SG-2300CD"
+    },
+    {
+      "modelo": "SG-2200CD"
+    },
+    {
+      "modelo": "SG-2880CS"
+    },
+    {
+      "modelo": "SG-2100CS"
+    },
+    {
+      "modelo": "SG-2000CS"
+    },
+    {
+      "modelo": "SG-P100"
+    },
+    {
+      "modelo": "SG-5000"
+    },
+    {
+      "modelo": "SG-4500"
+    },
+    {
+      "modelo": "SG-2200"
+    },
+    {
+      "modelo": "SG-2000"
+    },
+    {
+      "modelo": "SG-1000"
+    }
+  ]
+}

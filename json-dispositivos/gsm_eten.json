@@ -1,0 +1,75 @@
+{
+  "marca": "ETEN",
+  "id_interno": "40",
+  "slug": "eten",
+  "total_esperado": 0,
+  "total_encontrado": 22,
+  "modelos": [
+    {
+      "modelo": "glofiish X610"
+    },
+    {
+      "modelo": "glofiish V900"
+    },
+    {
+      "modelo": "glofiish X900"
+    },
+    {
+      "modelo": "glofiish DX900"
+    },
+    {
+      "modelo": "glofiish M750"
+    },
+    {
+      "modelo": "glofiish M810"
+    },
+    {
+      "modelo": "glofiish X650"
+    },
+    {
+      "modelo": "glofiish M800"
+    },
+    {
+      "modelo": "glofiish X600"
+    },
+    {
+      "modelo": "glofiish X500+"
+    },
+    {
+      "modelo": "glofiish X800"
+    },
+    {
+      "modelo": "glofiish M700"
+    },
+    {
+      "modelo": "glofiish X500"
+    },
+    {
+      "modelo": "M550"
+    },
+    {
+      "modelo": "G500+"
+    },
+    {
+      "modelo": "M600+"
+    },
+    {
+      "modelo": "G500"
+    },
+    {
+      "modelo": "M600"
+    },
+    {
+      "modelo": "M500"
+    },
+    {
+      "modelo": "P300B"
+    },
+    {
+      "modelo": "P700"
+    },
+    {
+      "modelo": "P300"
+    }
+  ]
+}

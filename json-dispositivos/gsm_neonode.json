@@ -1,0 +1,18 @@
+{
+  "marca": "NEONODE",
+  "id_interno": "22",
+  "slug": "neonode",
+  "total_esperado": 0,
+  "total_encontrado": 3,
+  "modelos": [
+    {
+      "modelo": "N2"
+    },
+    {
+      "modelo": "N1m"
+    },
+    {
+      "modelo": "N1"
+    }
+  ]
+}

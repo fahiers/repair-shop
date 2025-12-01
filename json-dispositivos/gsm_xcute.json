@@ -1,0 +1,21 @@
+{
+  "marca": "XCUTE",
+  "id_interno": "43",
+  "slug": "xcute",
+  "total_esperado": 0,
+  "total_encontrado": 4,
+  "modelos": [
+    {
+      "modelo": "DV80"
+    },
+    {
+      "modelo": "DV50"
+    },
+    {
+      "modelo": "DV2"
+    },
+    {
+      "modelo": "DV1"
+    }
+  ]
+}

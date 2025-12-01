@@ -1,0 +1,102 @@
+{
+  "marca": "MAXON",
+  "id_interno": "14",
+  "slug": "maxon",
+  "total_esperado": 0,
+  "total_encontrado": 31,
+  "modelos": [
+    {
+      "modelo": "MX-C90"
+    },
+    {
+      "modelo": "MX-C80"
+    },
+    {
+      "modelo": "MX-C180"
+    },
+    {
+      "modelo": "MX-A30"
+    },
+    {
+      "modelo": "MX-C60"
+    },
+    {
+      "modelo": "MX-C20"
+    },
+    {
+      "modelo": "MX-C110"
+    },
+    {
+      "modelo": "MX-E10"
+    },
+    {
+      "modelo": "MX-V10"
+    },
+    {
+      "modelo": "MX-V30"
+    },
+    {
+      "modelo": "MX-E80"
+    },
+    {
+      "modelo": "MX-7990"
+    },
+    {
+      "modelo": "MX-7750"
+    },
+    {
+      "modelo": "MX-C11"
+    },
+    {
+      "modelo": "MX-C160"
+    },
+    {
+      "modelo": "MX-7940"
+    },
+    {
+      "modelo": "MX-7920"
+    },
+    {
+      "modelo": "MX-7830"
+    },
+    {
+      "modelo": "MX-7600"
+    },
+    {
+      "modelo": "MX-6899"
+    },
+    {
+      "modelo": "MX-6877"
+    },
+    {
+      "modelo": "MX-6879"
+    },
+    {
+      "modelo": "MX-6869"
+    },
+    {
+      "modelo": "MX-6815"
+    },
+    {
+      "modelo": "MX-6814"
+    },
+    {
+      "modelo": "MX-6811"
+    },
+    {
+      "modelo": "MX-6810"
+    },
+    {
+      "modelo": "MX-6805"
+    },
+    {
+      "modelo": "MX-6804"
+    },
+    {
+      "modelo": "MX-3205F"
+    },
+    {
+      "modelo": "MX-3204"
+    }
+  ]
+}

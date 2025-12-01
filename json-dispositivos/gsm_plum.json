@@ -1,0 +1,349 @@
+{
+  "marca": "PLUM",
+  "id_interno": "72",
+  "slug": "plum",
+  "total_esperado": 0,
+  "total_encontrado": 113,
+  "modelos": [
+    {
+      "modelo": "Ram 10 LTE"
+    },
+    {
+      "modelo": "Ram Plus LTE"
+    },
+    {
+      "modelo": "Flipper LTE"
+    },
+    {
+      "modelo": "Gator 6"
+    },
+    {
+      "modelo": "Ram 9"
+    },
+    {
+      "modelo": "Gator 7"
+    },
+    {
+      "modelo": "Tag 2 3G"
+    },
+    {
+      "modelo": "Phantom 2"
+    },
+    {
+      "modelo": "Optimax 13"
+    },
+    {
+      "modelo": "Flipper 2"
+    },
+    {
+      "modelo": "Ram 8"
+    },
+    {
+      "modelo": "Gator 5"
+    },
+    {
+      "modelo": "Tag 3G"
+    },
+    {
+      "modelo": "Optimax 11"
+    },
+    {
+      "modelo": "Optimax 12"
+    },
+    {
+      "modelo": "Optimax 2"
+    },
+    {
+      "modelo": "Compass 2"
+    },
+    {
+      "modelo": "Flipper",
+      "ano": "2018"
+    },
+    {
+      "modelo": "Axe 4"
+    },
+    {
+      "modelo": "Compass LTE"
+    },
+    {
+      "modelo": "Gator 4"
+    },
+    {
+      "modelo": "Phantom"
+    },
+    {
+      "modelo": "Ram 6"
+    },
+    {
+      "modelo": "Play"
+    },
+    {
+      "modelo": "Ram 7 - 3G"
+    },
+    {
+      "modelo": "Compass"
+    },
+    {
+      "modelo": "Hero"
+    },
+    {
+      "modelo": "Gator 3"
+    },
+    {
+      "modelo": "Axe Plus 2"
+    },
+    {
+      "modelo": "Optimax 10"
+    },
+    {
+      "modelo": "Optimax 8.0"
+    },
+    {
+      "modelo": "Optimax 7.0"
+    },
+    {
+      "modelo": "Ram 4"
+    },
+    {
+      "modelo": "Star"
+    },
+    {
+      "modelo": "Might Plus II"
+    },
+    {
+      "modelo": "Axe LTE"
+    },
+    {
+      "modelo": "Check LTE"
+    },
+    {
+      "modelo": "Boot 2"
+    },
+    {
+      "modelo": "Ram 3G"
+    },
+    {
+      "modelo": "Sync 4.0b"
+    },
+    {
+      "modelo": "Gator Plus II"
+    },
+    {
+      "modelo": "Ram Plus"
+    },
+    {
+      "modelo": "Coach Pro"
+    },
+    {
+      "modelo": "Trigger Plus III"
+    },
+    {
+      "modelo": "Might LTE"
+    },
+    {
+      "modelo": "Sync 5.0"
+    },
+    {
+      "modelo": "Sync 4.0"
+    },
+    {
+      "modelo": "Sync 3.5"
+    },
+    {
+      "modelo": "Might Pro"
+    },
+    {
+      "modelo": "Coach Plus II"
+    },
+    {
+      "modelo": "Link Plus"
+    },
+    {
+      "modelo": "Trigger Plus"
+    },
+    {
+      "modelo": "Trigger Pro"
+    },
+    {
+      "modelo": "Gator"
+    },
+    {
+      "modelo": "Z708"
+    },
+    {
+      "modelo": "Coach Plus"
+    },
+    {
+      "modelo": "Pilot Plus"
+    },
+    {
+      "modelo": "Might Plus"
+    },
+    {
+      "modelo": "Check Plus"
+    },
+    {
+      "modelo": "Axe Plus"
+    },
+    {
+      "modelo": "Boot"
+    },
+    {
+      "modelo": "Slick"
+    },
+    {
+      "modelo": "Trigger Z104"
+    },
+    {
+      "modelo": "Bar 3G"
+    },
+    {
+      "modelo": "Velocity II"
+    },
+    {
+      "modelo": "Sync"
+    },
+    {
+      "modelo": "Axe II"
+    },
+    {
+      "modelo": "Ten 3G"
+    },
+    {
+      "modelo": "Link II"
+    },
+    {
+      "modelo": "Volt 3G"
+    },
+    {
+      "modelo": "Mouse"
+    },
+    {
+      "modelo": "Dazzle"
+    },
+    {
+      "modelo": "Ram"
+    },
+    {
+      "modelo": "Z710"
+    },
+    {
+      "modelo": "Trigger"
+    },
+    {
+      "modelo": "Glow"
+    },
+    {
+      "modelo": "Panther"
+    },
+    {
+      "modelo": "Caliber II"
+    },
+    {
+      "modelo": "Signal"
+    },
+    {
+      "modelo": "Hammer"
+    },
+    {
+      "modelo": "Flipper"
+    },
+    {
+      "modelo": "Debut"
+    },
+    {
+      "modelo": "Link"
+    },
+    {
+      "modelo": "Might"
+    },
+    {
+      "modelo": "Axe"
+    },
+    {
+      "modelo": "Capacity"
+    },
+    {
+      "modelo": "Wicked"
+    },
+    {
+      "modelo": "Flix"
+    },
+    {
+      "modelo": "Orbit"
+    },
+    {
+      "modelo": "Velocity"
+    },
+    {
+      "modelo": "Caliber"
+    },
+    {
+      "modelo": "Switch"
+    },
+    {
+      "modelo": "Galactic"
+    },
+    {
+      "modelo": "Tracer II"
+    },
+    {
+      "modelo": "Geo"
+    },
+    {
+      "modelo": "Tingle"
+    },
+    {
+      "modelo": "Genius"
+    },
+    {
+      "modelo": "Blast"
+    },
+    {
+      "modelo": "Whiz"
+    },
+    {
+      "modelo": "Stubby"
+    },
+    {
+      "modelo": "Stubby II"
+    },
+    {
+      "modelo": "Strike"
+    },
+    {
+      "modelo": "Profile"
+    },
+    {
+      "modelo": "Inspire"
+    },
+    {
+      "modelo": "Spare"
+    },
+    {
+      "modelo": "Boom"
+    },
+    {
+      "modelo": "Snap"
+    },
+    {
+      "modelo": "Buzz"
+    },
+    {
+      "modelo": "Tweek"
+    },
+    {
+      "modelo": "Kazzom"
+    },
+    {
+      "modelo": "Trip"
+    },
+    {
+      "modelo": "Trion"
+    },
+    {
+      "modelo": "Bubby"
+    }
+  ]
+}

@@ -1,0 +1,897 @@
+{
+  "marca": "HTC",
+  "id_interno": "45",
+  "slug": "htc",
+  "total_esperado": 0,
+  "total_encontrado": 296,
+  "modelos": [
+    {
+      "modelo": "Wildfire E5 Life"
+    },
+    {
+      "modelo": "Wildfire E6"
+    },
+    {
+      "modelo": "Wildfire E6 Star"
+    },
+    {
+      "modelo": "Wildfire E4 Plus"
+    },
+    {
+      "modelo": "Wildfire E5"
+    },
+    {
+      "modelo": "Wildfire E5 Plus"
+    },
+    {
+      "modelo": "U24 Pro"
+    },
+    {
+      "modelo": "A101 Plus"
+    },
+    {
+      "modelo": "A104"
+    },
+    {
+      "modelo": "Wildfire E star"
+    },
+    {
+      "modelo": "U23"
+    },
+    {
+      "modelo": "U23 Pro"
+    },
+    {
+      "modelo": "A103 Plus"
+    },
+    {
+      "modelo": "A103"
+    },
+    {
+      "modelo": "A102"
+    },
+    {
+      "modelo": "A101"
+    },
+    {
+      "modelo": "Wildfire E2 Play"
+    },
+    {
+      "modelo": "Wildfire E3 lite"
+    },
+    {
+      "modelo": "Wildfire E plus"
+    },
+    {
+      "modelo": "Desire 22 Pro"
+    },
+    {
+      "modelo": "Wildfire E2 Plus"
+    },
+    {
+      "modelo": "Wildfire E3"
+    },
+    {
+      "modelo": "Desire 21 Pro 5G"
+    },
+    {
+      "modelo": "Desire 20+"
+    },
+    {
+      "modelo": "Wildfire E1 lite"
+    },
+    {
+      "modelo": "Wildfire E2"
+    },
+    {
+      "modelo": "Wildfire E1 plus"
+    },
+    {
+      "modelo": "Wildfire E1"
+    },
+    {
+      "modelo": "Wildfire E"
+    },
+    {
+      "modelo": "U20 5G"
+    },
+    {
+      "modelo": "Desire 20 Pro"
+    },
+    {
+      "modelo": "Desire 19s"
+    },
+    {
+      "modelo": "Exodus 1s"
+    },
+    {
+      "modelo": "Wildfire X"
+    },
+    {
+      "modelo": "U19e"
+    },
+    {
+      "modelo": "Desire 19+"
+    },
+    {
+      "modelo": "Desire 12s"
+    },
+    {
+      "modelo": "Exodus 1"
+    },
+    {
+      "modelo": "U12 life"
+    },
+    {
+      "modelo": "U12+"
+    },
+    {
+      "modelo": "Desire 12+"
+    },
+    {
+      "modelo": "Desire 12"
+    },
+    {
+      "modelo": "U11 Eyes"
+    },
+    {
+      "modelo": "U11+"
+    },
+    {
+      "modelo": "U11 Life"
+    },
+    {
+      "modelo": "U11"
+    },
+    {
+      "modelo": "One X10"
+    },
+    {
+      "modelo": "U Ultra"
+    },
+    {
+      "modelo": "U Play"
+    },
+    {
+      "modelo": "10 evo"
+    },
+    {
+      "modelo": "Desire 650"
+    },
+    {
+      "modelo": "Desire 10 Pro"
+    },
+    {
+      "modelo": "Desire 10 Compact"
+    },
+    {
+      "modelo": "One A9s"
+    },
+    {
+      "modelo": "Desire 10 Lifestyle"
+    },
+    {
+      "modelo": "Desire 728 Ultra"
+    },
+    {
+      "modelo": "Desire 628"
+    },
+    {
+      "modelo": "One M9 Prime Camera"
+    },
+    {
+      "modelo": "Desire 830"
+    },
+    {
+      "modelo": "One S9"
+    },
+    {
+      "modelo": "10 Lifestyle"
+    },
+    {
+      "modelo": "10"
+    },
+    {
+      "modelo": "Desire 825"
+    },
+    {
+      "modelo": "Desire 630"
+    },
+    {
+      "modelo": "Desire 530"
+    },
+    {
+      "modelo": "Desire 625"
+    },
+    {
+      "modelo": "One X9"
+    },
+    {
+      "modelo": "One M9s"
+    },
+    {
+      "modelo": "Desire 828 dual sim"
+    },
+    {
+      "modelo": "Desire 728 dual sim"
+    },
+    {
+      "modelo": "One E9s dual sim"
+    },
+    {
+      "modelo": "Butterfly 3"
+    },
+    {
+      "modelo": "One M9+ Supreme Camera"
+    },
+    {
+      "modelo": "One A9"
+    },
+    {
+      "modelo": "Desire 626 (USA)"
+    },
+    {
+      "modelo": "Desire 626s"
+    },
+    {
+      "modelo": "Desire 526"
+    },
+    {
+      "modelo": "Desire 520"
+    },
+    {
+      "modelo": "One ME"
+    },
+    {
+      "modelo": "Desire 820G+ dual sim"
+    },
+    {
+      "modelo": "Desire 326G dual sim"
+    },
+    {
+      "modelo": "One M9+"
+    },
+    {
+      "modelo": "One M8s"
+    },
+    {
+      "modelo": "One E9+"
+    },
+    {
+      "modelo": "One E9"
+    },
+    {
+      "modelo": "One M9"
+    },
+    {
+      "modelo": "Desire 820s dual sim"
+    },
+    {
+      "modelo": "Desire 626G+"
+    },
+    {
+      "modelo": "Desire 626"
+    },
+    {
+      "modelo": "Desire 526G+ dual sim"
+    },
+    {
+      "modelo": "Desire 826 dual sim"
+    },
+    {
+      "modelo": "Desire 320"
+    },
+    {
+      "modelo": "Desire 620G dual sim"
+    },
+    {
+      "modelo": "Desire 620"
+    },
+    {
+      "modelo": "Nexus 9"
+    },
+    {
+      "modelo": "Desire 816G dual sim"
+    },
+    {
+      "modelo": "One (M8 Eye)"
+    },
+    {
+      "modelo": "Desire Eye"
+    },
+    {
+      "modelo": "Desire 612"
+    },
+    {
+      "modelo": "Desire 820q dual sim"
+    },
+    {
+      "modelo": "Desire 820 dual sim"
+    },
+    {
+      "modelo": "Desire 820"
+    },
+    {
+      "modelo": "One (E8) CDMA"
+    },
+    {
+      "modelo": "Desire 510"
+    },
+    {
+      "modelo": "One (M8) for Windows"
+    },
+    {
+      "modelo": "One (M8) for Windows (CDMA)"
+    },
+    {
+      "modelo": "Butterfly 2"
+    },
+    {
+      "modelo": "One Remix"
+    },
+    {
+      "modelo": "One (M8) dual sim"
+    },
+    {
+      "modelo": "Desire 516 dual sim"
+    },
+    {
+      "modelo": "One (E8)"
+    },
+    {
+      "modelo": "One mini 2"
+    },
+    {
+      "modelo": "Desire 616 dual sim"
+    },
+    {
+      "modelo": "Desire 210 dual sim"
+    },
+    {
+      "modelo": "One (M8) CDMA"
+    },
+    {
+      "modelo": "One (M8)"
+    },
+    {
+      "modelo": "Desire 310 dual sim"
+    },
+    {
+      "modelo": "Desire 310"
+    },
+    {
+      "modelo": "Desire 816 dual sim"
+    },
+    {
+      "modelo": "Desire 816"
+    },
+    {
+      "modelo": "Desire 610"
+    },
+    {
+      "modelo": "Desire 501 dual sim"
+    },
+    {
+      "modelo": "Desire 700"
+    },
+    {
+      "modelo": "Desire 700 dual sim"
+    },
+    {
+      "modelo": "Desire 601 dual sim"
+    },
+    {
+      "modelo": "Desire 501"
+    },
+    {
+      "modelo": "One Max"
+    },
+    {
+      "modelo": "Desire 300"
+    },
+    {
+      "modelo": "Desire 601"
+    },
+    {
+      "modelo": "Desire 500"
+    },
+    {
+      "modelo": "One mini"
+    },
+    {
+      "modelo": "Desire L"
+    },
+    {
+      "modelo": "Desire P"
+    },
+    {
+      "modelo": "Desire Q"
+    },
+    {
+      "modelo": "8XT"
+    },
+    {
+      "modelo": "Butterfly S"
+    },
+    {
+      "modelo": "Desire 200"
+    },
+    {
+      "modelo": "Desire 600 dual sim"
+    },
+    {
+      "modelo": "First"
+    },
+    {
+      "modelo": "One Dual Sim"
+    },
+    {
+      "modelo": "One"
+    },
+    {
+      "modelo": "Desire U"
+    },
+    {
+      "modelo": "Desire 400 dual sim"
+    },
+    {
+      "modelo": "Butterfly"
+    },
+    {
+      "modelo": "DROID DNA"
+    },
+    {
+      "modelo": "One SV CDMA"
+    },
+    {
+      "modelo": "One SV"
+    },
+    {
+      "modelo": "Desire SV"
+    },
+    {
+      "modelo": "One VX"
+    },
+    {
+      "modelo": "One X+"
+    },
+    {
+      "modelo": "Windows Phone 8X CDMA"
+    },
+    {
+      "modelo": "Windows Phone 8X"
+    },
+    {
+      "modelo": "Windows Phone 8S"
+    },
+    {
+      "modelo": "One ST"
+    },
+    {
+      "modelo": "One SC"
+    },
+    {
+      "modelo": "Desire X"
+    },
+    {
+      "modelo": "Desire VT"
+    },
+    {
+      "modelo": "Desire XC"
+    },
+    {
+      "modelo": "Desire VC"
+    },
+    {
+      "modelo": "Desire V"
+    },
+    {
+      "modelo": "Desire C"
+    },
+    {
+      "modelo": "J"
+    },
+    {
+      "modelo": "DROID Incredible 4G LTE"
+    },
+    {
+      "modelo": "Evo 4G LTE"
+    },
+    {
+      "modelo": "One XC"
+    },
+    {
+      "modelo": "One X"
+    },
+    {
+      "modelo": "One X AT&T"
+    },
+    {
+      "modelo": "One XL"
+    },
+    {
+      "modelo": "One S C2"
+    },
+    {
+      "modelo": "One S"
+    },
+    {
+      "modelo": "One V"
+    },
+    {
+      "modelo": "Velocity 4G Vodafone"
+    },
+    {
+      "modelo": "Velocity 4G"
+    },
+    {
+      "modelo": "Titan II"
+    },
+    {
+      "modelo": "Rezound"
+    },
+    {
+      "modelo": "Vivid"
+    },
+    {
+      "modelo": "EVO Design 4G"
+    },
+    {
+      "modelo": "Sensation XL"
+    },
+    {
+      "modelo": "Explorer"
+    },
+    {
+      "modelo": "Amaze 4G"
+    },
+    {
+      "modelo": "Raider 4G"
+    },
+    {
+      "modelo": "Rhyme"
+    },
+    {
+      "modelo": "Hero S"
+    },
+    {
+      "modelo": "Rhyme CDMA"
+    },
+    {
+      "modelo": "Sensation XE"
+    },
+    {
+      "modelo": "Jetstream"
+    },
+    {
+      "modelo": "Lead"
+    },
+    {
+      "modelo": "Titan"
+    },
+    {
+      "modelo": "Radar"
+    },
+    {
+      "modelo": "Panache"
+    },
+    {
+      "modelo": "Status"
+    },
+    {
+      "modelo": "Glacier"
+    },
+    {
+      "modelo": "Trophy"
+    },
+    {
+      "modelo": "DROID Incredible 2"
+    },
+    {
+      "modelo": "Sensation 4G"
+    },
+    {
+      "modelo": "EVO 3D"
+    },
+    {
+      "modelo": "Sensation"
+    },
+    {
+      "modelo": "EVO 3D CDMA"
+    },
+    {
+      "modelo": "HD7S"
+    },
+    {
+      "modelo": "Prime"
+    },
+    {
+      "modelo": "Merge"
+    },
+    {
+      "modelo": "Incredible S"
+    },
+    {
+      "modelo": "Desire S"
+    },
+    {
+      "modelo": "Wildfire S"
+    },
+    {
+      "modelo": "Salsa"
+    },
+    {
+      "modelo": "ChaCha"
+    },
+    {
+      "modelo": "Flyer"
+    },
+    {
+      "modelo": "Flyer Wi-Fi"
+    },
+    {
+      "modelo": "EVO View 4G"
+    },
+    {
+      "modelo": "Inspire 4G"
+    },
+    {
+      "modelo": "Freestyle"
+    },
+    {
+      "modelo": "ThunderBolt 4G"
+    },
+    {
+      "modelo": "EVO Shift 4G"
+    },
+    {
+      "modelo": "Gratia"
+    },
+    {
+      "modelo": "HD7"
+    },
+    {
+      "modelo": "7 Pro"
+    },
+    {
+      "modelo": "7 Surround"
+    },
+    {
+      "modelo": "7 Mozart"
+    },
+    {
+      "modelo": "7 Trophy"
+    },
+    {
+      "modelo": "Arrive"
+    },
+    {
+      "modelo": "Desire HD"
+    },
+    {
+      "modelo": "Desire Z"
+    },
+    {
+      "modelo": "Paradise"
+    },
+    {
+      "modelo": "Evo 4G+"
+    },
+    {
+      "modelo": "Aria"
+    },
+    {
+      "modelo": "Wildfire CDMA"
+    },
+    {
+      "modelo": "Wildfire"
+    },
+    {
+      "modelo": "HD mini"
+    },
+    {
+      "modelo": "Desire"
+    },
+    {
+      "modelo": "Legend"
+    },
+    {
+      "modelo": "Rider"
+    },
+    {
+      "modelo": "Google Nexus One"
+    },
+    {
+      "modelo": "Smart"
+    },
+    {
+      "modelo": "HD2"
+    },
+    {
+      "modelo": "Evo 4G"
+    },
+    {
+      "modelo": "Droid Incredible"
+    },
+    {
+      "modelo": "DROID ERIS"
+    },
+    {
+      "modelo": "Pure"
+    },
+    {
+      "modelo": "Tattoo"
+    },
+    {
+      "modelo": "Touch2"
+    },
+    {
+      "modelo": "Hero CDMA"
+    },
+    {
+      "modelo": "Hero"
+    },
+    {
+      "modelo": "Ozone"
+    },
+    {
+      "modelo": "Schubert"
+    },
+    {
+      "modelo": "Snap"
+    },
+    {
+      "modelo": "Magic"
+    },
+    {
+      "modelo": "Touch Pro2 CDMA"
+    },
+    {
+      "modelo": "Tilt2"
+    },
+    {
+      "modelo": "Touch Pro2"
+    },
+    {
+      "modelo": "Touch Diamond2 CDMA"
+    },
+    {
+      "modelo": "Touch Diamond2"
+    },
+    {
+      "modelo": "Dream"
+    },
+    {
+      "modelo": "Touch Cruise 09"
+    },
+    {
+      "modelo": "MAX 4G"
+    },
+    {
+      "modelo": "Touch HD T8285"
+    },
+    {
+      "modelo": "Touch HD"
+    },
+    {
+      "modelo": "Touch 3G"
+    },
+    {
+      "modelo": "Touch Viva"
+    },
+    {
+      "modelo": "S740"
+    },
+    {
+      "modelo": "Touch Pro CDMA"
+    },
+    {
+      "modelo": "Touch Pro"
+    },
+    {
+      "modelo": "Touch Diamond CDMA"
+    },
+    {
+      "modelo": "Touch Diamond"
+    },
+    {
+      "modelo": "Advantage X7510"
+    },
+    {
+      "modelo": "P3470"
+    },
+    {
+      "modelo": "Touch Cruise"
+    },
+    {
+      "modelo": "Touch Dual"
+    },
+    {
+      "modelo": "P6500"
+    },
+    {
+      "modelo": "S730"
+    },
+    {
+      "modelo": "TyTN II"
+    },
+    {
+      "modelo": "S630"
+    },
+    {
+      "modelo": "Touch"
+    },
+    {
+      "modelo": "P6300"
+    },
+    {
+      "modelo": "Shift"
+    },
+    {
+      "modelo": "Advantage X7500"
+    },
+    {
+      "modelo": "S710"
+    },
+    {
+      "modelo": "P3350"
+    },
+    {
+      "modelo": "P3400"
+    },
+    {
+      "modelo": "P4350"
+    },
+    {
+      "modelo": "P3600i"
+    },
+    {
+      "modelo": "P3600"
+    },
+    {
+      "modelo": "P3300"
+    },
+    {
+      "modelo": "S620"
+    },
+    {
+      "modelo": "S310"
+    },
+    {
+      "modelo": "TyTN"
+    },
+    {
+      "modelo": "MTeoR"
+    },
+    {
+      "modelo": "Wildfire R70"
+    },
+    {
+      "modelo": "One (M8i)"
+    },
+    {
+      "modelo": "One M8 Prime"
+    },
+    {
+      "modelo": "Tiara"
+    },
+    {
+      "modelo": "Primo"
+    },
+    {
+      "modelo": "Zeta"
+    },
+    {
+      "modelo": "Ville"
+    },
+    {
+      "modelo": "Ignite"
+    },
+    {
+      "modelo": "Desire HD2"
+    },
+    {
+      "modelo": "A12"
+    }
+  ]
+}

@@ -33,7 +33,7 @@ class CrearCliente extends Component
 
     public function updated($propertyName)
     {
-        if ($propertyName === 'rut' && !empty($this->rut)) {
+        if ($propertyName === 'rut' && ! empty($this->rut)) {
             $this->validateOnly($propertyName);
         }
     }
@@ -57,9 +57,23 @@ class CrearCliente extends Component
     public function messages(): array
     {
         return [
+            'nombre.required' => 'El campo nombre es obligatorio.',
+            'nombre.string' => 'El campo nombre debe ser texto.',
+            'nombre.max' => 'El campo nombre no puede tener más de 255 caracteres.',
+            'telefono.string' => 'El campo teléfono debe ser texto.',
+            'telefono.max' => 'El campo teléfono no puede tener más de 255 caracteres.',
+            'email.email' => 'El campo email debe ser una dirección de correo válida.',
+            'email.max' => 'El campo email no puede tener más de 255 caracteres.',
+            'email.unique' => 'Este email ya está registrado.',
+            'direccion.string' => 'El campo dirección debe ser texto.',
+            'direccion.max' => 'El campo dirección no puede tener más de 255 caracteres.',
             'rut.required' => 'El RUT es obligatorio',
+            'rut.string' => 'El campo RUT debe ser texto.',
+            'rut.max' => 'El campo RUT no puede tener más de 255 caracteres.',
             'rut.unique' => 'Este RUT ya está registrado',
             'rut.cl_rut' => 'El campo RUT no es un RUT chileno válido.',
+            'notas.string' => 'El campo notas debe ser texto.',
+            'notas.max' => 'El campo notas no puede tener más de 255 caracteres.',
         ];
     }
 
@@ -84,7 +98,7 @@ class CrearCliente extends Component
         $dv = substr($rut, -1);
 
         // Retornar formato estándar: 12345678-9
-        return $cuerpo . '-' . $dv;
+        return $cuerpo.'-'.$dv;
     }
 
     public function render()

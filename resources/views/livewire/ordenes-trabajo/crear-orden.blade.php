@@ -62,17 +62,6 @@
                         </select>
                     </div>
 
-                    <flux:dropdown position="bottom-end">
-                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700" title="Opciones">
-                            <flux:icon.ellipsis-vertical class="size-4" />
-                            <span class="sr-only">Opciones</span>
-                        </button>
-
-                        <flux:menu>
-                            <div class="px-3 py-2 text-sm text-zinc-500">Sin opciones disponibles por ahora</div>
-                        </flux:menu>
-                    </flux:dropdown>
-
                     <button disabled class="px-3 py-1.5 text-sm rounded-md bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-50">Ingresar pago</button>
                 </div>
             </div>
@@ -380,22 +369,7 @@
                         </div>
                     @endif
 
-                    <div class="flex items-center justify-start gap-2">
-                        <button disabled title="Guardar orden para imprimir" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
-                            <flux:icon.printer class="size-4" />
-                            Orden
-                        </button>
-                        <button disabled title="Guardar orden para imprimir" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
-                            <flux:icon.tag class="size-4" />
-                            Etiqueta
-                        </button>
-                        <button disabled title="Guardar orden para imprimir" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
-                            <flux:icon.document-text class="size-4" />
-                            Informe
-                        </button>
-                        <button disabled class="inline-flex items-center justify-center px-3 py-1.5 text-sm rounded-md border-2 border-zinc-400 dark:border-zinc-500 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 disabled:opacity-50 bg-white dark:bg-zinc-800">
-                            <flux:icon.shield-check class="size-4" />
-                        </button>
+                    <div class="flex items-center justify-end gap-2">
                         <button type="button"
                                 wire:click="guardarOrden"
                                 @disabled(!$dispositivoSeleccionado || strlen($asunto) < 3)

@@ -1,0 +1,126 @@
+{
+  "marca": "GOOGLE",
+  "id_interno": "107",
+  "slug": "google",
+  "total_esperado": 0,
+  "total_encontrado": 39,
+  "modelos": [
+    {
+      "modelo": "Pixel 10 Pro Fold"
+    },
+    {
+      "modelo": "Pixel 10 Pro XL"
+    },
+    {
+      "modelo": "Pixel 10 Pro"
+    },
+    {
+      "modelo": "Pixel 10"
+    },
+    {
+      "modelo": "Pixel Watch 4"
+    },
+    {
+      "modelo": "Pixel 9a"
+    },
+    {
+      "modelo": "Pixel 9 Pro XL"
+    },
+    {
+      "modelo": "Pixel 9 Pro"
+    },
+    {
+      "modelo": "Pixel 9"
+    },
+    {
+      "modelo": "Pixel 9 Pro Fold"
+    },
+    {
+      "modelo": "Pixel Watch 3"
+    },
+    {
+      "modelo": "Pixel 8a"
+    },
+    {
+      "modelo": "Pixel 8 Pro"
+    },
+    {
+      "modelo": "Pixel 8"
+    },
+    {
+      "modelo": "Pixel Watch 2"
+    },
+    {
+      "modelo": "Pixel Fold"
+    },
+    {
+      "modelo": "Pixel Tablet"
+    },
+    {
+      "modelo": "Pixel 7a"
+    },
+    {
+      "modelo": "Pixel 7 Pro"
+    },
+    {
+      "modelo": "Pixel 7"
+    },
+    {
+      "modelo": "Pixel Watch"
+    },
+    {
+      "modelo": "Pixel 6a"
+    },
+    {
+      "modelo": "Pixel 6 Pro"
+    },
+    {
+      "modelo": "Pixel 6"
+    },
+    {
+      "modelo": "Pixel 5a 5G"
+    },
+    {
+      "modelo": "Pixel 5"
+    },
+    {
+      "modelo": "Pixel 4a 5G"
+    },
+    {
+      "modelo": "Pixel 4a"
+    },
+    {
+      "modelo": "Pixel 4 XL"
+    },
+    {
+      "modelo": "Pixel 4"
+    },
+    {
+      "modelo": "Pixel 3a XL"
+    },
+    {
+      "modelo": "Pixel 3a"
+    },
+    {
+      "modelo": "Pixel 3 XL"
+    },
+    {
+      "modelo": "Pixel 3"
+    },
+    {
+      "modelo": "Pixel 2"
+    },
+    {
+      "modelo": "Pixel 2 XL"
+    },
+    {
+      "modelo": "Pixel XL"
+    },
+    {
+      "modelo": "Pixel"
+    },
+    {
+      "modelo": "Pixel C"
+    }
+  ]
+}

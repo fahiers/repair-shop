@@ -1,0 +1,66 @@
+{
+  "marca": "SENDO",
+  "id_interno": "18",
+  "slug": "sendo",
+  "total_esperado": 0,
+  "total_encontrado": 19,
+  "modelos": [
+    {
+      "modelo": "X2"
+    },
+    {
+      "modelo": "S1"
+    },
+    {
+      "modelo": "K1"
+    },
+    {
+      "modelo": "P600"
+    },
+    {
+      "modelo": "SV663"
+    },
+    {
+      "modelo": "M570"
+    },
+    {
+      "modelo": "S600"
+    },
+    {
+      "modelo": "X"
+    },
+    {
+      "modelo": "S360"
+    },
+    {
+      "modelo": "S330"
+    },
+    {
+      "modelo": "S300"
+    },
+    {
+      "modelo": "M550"
+    },
+    {
+      "modelo": "Z100"
+    },
+    {
+      "modelo": "J530"
+    },
+    {
+      "modelo": "J520"
+    },
+    {
+      "modelo": "S230"
+    },
+    {
+      "modelo": "P200"
+    },
+    {
+      "modelo": "S200"
+    },
+    {
+      "modelo": "D800"
+    }
+  ]
+}

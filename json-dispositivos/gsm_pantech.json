@@ -1,0 +1,225 @@
+{
+  "marca": "PANTECH",
+  "id_interno": "32",
+  "slug": "pantech",
+  "total_esperado": 0,
+  "total_encontrado": 72,
+  "modelos": [
+    {
+      "modelo": "Breeze IV"
+    },
+    {
+      "modelo": "Vega No 6"
+    },
+    {
+      "modelo": "Discover"
+    },
+    {
+      "modelo": "Vega R3 IM-A850L"
+    },
+    {
+      "modelo": "Flex P8010"
+    },
+    {
+      "modelo": "Renue"
+    },
+    {
+      "modelo": "Marauder"
+    },
+    {
+      "modelo": "Vega Racer 2 IM-A830L"
+    },
+    {
+      "modelo": "Vega LTE EX IM-A820L"
+    },
+    {
+      "modelo": "Burst"
+    },
+    {
+      "modelo": "Element"
+    },
+    {
+      "modelo": "Hotshot"
+    },
+    {
+      "modelo": "Link II"
+    },
+    {
+      "modelo": "Pocket P9060"
+    },
+    {
+      "modelo": "Jest II"
+    },
+    {
+      "modelo": "Pursuit II"
+    },
+    {
+      "modelo": "Breakout"
+    },
+    {
+      "modelo": "Breeze III"
+    },
+    {
+      "modelo": "Vega Xpress IM-A720L"
+    },
+    {
+      "modelo": "S902"
+    },
+    {
+      "modelo": "Crux"
+    },
+    {
+      "modelo": "Laser P9050"
+    },
+    {
+      "modelo": "P4000"
+    },
+    {
+      "modelo": "P1000"
+    },
+    {
+      "modelo": "SKY Izar IM-A630K"
+    },
+    {
+      "modelo": "Jest"
+    },
+    {
+      "modelo": "Link"
+    },
+    {
+      "modelo": "Ease"
+    },
+    {
+      "modelo": "Pursuit"
+    },
+    {
+      "modelo": "Impact"
+    },
+    {
+      "modelo": "C790 Reveal"
+    },
+    {
+      "modelo": "Matrix Pro"
+    },
+    {
+      "modelo": "Slate"
+    },
+    {
+      "modelo": "Matrix"
+    },
+    {
+      "modelo": "Duo"
+    },
+    {
+      "modelo": "U-4000"
+    },
+    {
+      "modelo": "PG-3300"
+    },
+    {
+      "modelo": "PU-5000"
+    },
+    {
+      "modelo": "PG-1600"
+    },
+    {
+      "modelo": "PG-1800"
+    },
+    {
+      "modelo": "PG-1300"
+    },
+    {
+      "modelo": "PG-3900"
+    },
+    {
+      "modelo": "PG-1900"
+    },
+    {
+      "modelo": "PG-2800"
+    },
+    {
+      "modelo": "PG-3600V"
+    },
+    {
+      "modelo": "PG-3600"
+    },
+    {
+      "modelo": "PG-3500"
+    },
+    {
+      "modelo": "PG-1500"
+    },
+    {
+      "modelo": "PG-8000"
+    },
+    {
+      "modelo": "PG-6200"
+    },
+    {
+      "modelo": "PG-6100"
+    },
+    {
+      "modelo": "PG-1400"
+    },
+    {
+      "modelo": "PG-1200"
+    },
+    {
+      "modelo": "PG-3200"
+    },
+    {
+      "modelo": "PG-1000s"
+    },
+    {
+      "modelo": "GF500"
+    },
+    {
+      "modelo": "PG3000"
+    },
+    {
+      "modelo": "GF100"
+    },
+    {
+      "modelo": "G670"
+    },
+    {
+      "modelo": "GI100"
+    },
+    {
+      "modelo": "GF200"
+    },
+    {
+      "modelo": "GB300"
+    },
+    {
+      "modelo": "GB200"
+    },
+    {
+      "modelo": "GB100"
+    },
+    {
+      "modelo": "G900"
+    },
+    {
+      "modelo": "G600"
+    },
+    {
+      "modelo": "G800"
+    },
+    {
+      "modelo": "G700"
+    },
+    {
+      "modelo": "G500"
+    },
+    {
+      "modelo": "G300"
+    },
+    {
+      "modelo": "G200"
+    },
+    {
+      "modelo": "Q80"
+    }
+  ]
+}

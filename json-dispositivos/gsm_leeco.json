@@ -1,0 +1,36 @@
+{
+  "marca": "LEECO",
+  "id_interno": "109",
+  "slug": "leeco",
+  "total_esperado": 0,
+  "total_encontrado": 9,
+  "modelos": [
+    {
+      "modelo": "Le Pro 3 AI Edition"
+    },
+    {
+      "modelo": "Le Pro3 Elite"
+    },
+    {
+      "modelo": "Le S3"
+    },
+    {
+      "modelo": "Le Pro3"
+    },
+    {
+      "modelo": "Le Max 2"
+    },
+    {
+      "modelo": "Le 2 Pro"
+    },
+    {
+      "modelo": "Le 2"
+    },
+    {
+      "modelo": "Le Max"
+    },
+    {
+      "modelo": "Le 1s"
+    }
+  ]
+}

@@ -19,14 +19,34 @@ class Index extends Component
 
     public function render()
     {
+        // Normalizar el término de búsqueda
+        $searchTerm = trim($this->search);
+        $searchTerm = preg_replace('/\s+/', ' ', $searchTerm);
+
         $modelos = ModeloDispositivo::query()
-            ->when($this->search !== '', function ($query) {
-                $term = '%'.$this->search.'%';
-                $query->where(function ($q) use ($term) {
-                    $q->where('marca', 'like', $term)
-                      ->orWhere('modelo', 'like', $term)
-                      ->orWhere('descripcion', 'like', $term);
-                });
+            ->when($searchTerm !== '', function ($query) use ($searchTerm) {
+                // Dividir el término de búsqueda en palabras individuales
+                $words = preg_split('/\s+/', $searchTerm, -1, PREG_SPLIT_NO_EMPTY);
+
+                // Búsqueda por palabras individuales (AND entre palabras)
+                // Cada palabra debe aparecer en marca o modelo
+                foreach ($words as $word) {
+                    $term = '%'.$word.'%';
+                    $query->where(function ($q) use ($term) {
+                        $q->where('marca', 'like', $term)
+                            ->orWhere('modelo', 'like', $term);
+                    });
+                }
+
+                // Ordenar por relevancia: priorizar coincidencias en modelo, luego marca
+                $searchLower = mb_strtolower($searchTerm);
+                $query->orderByRaw('
+                    CASE 
+                        WHEN LOWER(modelo) LIKE ? THEN 1
+                        WHEN LOWER(marca) LIKE ? THEN 2
+                        ELSE 3
+                    END
+                ', [$searchLower.'%', $searchLower.'%']);
             })
             ->orderBy('marca')
             ->orderBy('modelo')

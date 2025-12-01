@@ -1,0 +1,24 @@
+{
+  "marca": "GARMIN-ASUS",
+  "id_interno": "65",
+  "slug": "garmin_asus",
+  "total_esperado": 0,
+  "total_encontrado": 5,
+  "modelos": [
+    {
+      "modelo": "A10"
+    },
+    {
+      "modelo": "nuvifone A50"
+    },
+    {
+      "modelo": "nuvifone M10"
+    },
+    {
+      "modelo": "nuvifone G60"
+    },
+    {
+      "modelo": "nuvifone M20"
+    }
+  ]
+}

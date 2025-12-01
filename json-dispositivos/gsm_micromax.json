@@ -1,0 +1,876 @@
+{
+  "marca": "MICROMAX",
+  "id_interno": "66",
+  "slug": "micromax",
+  "total_esperado": 0,
+  "total_encontrado": 289,
+  "modelos": [
+    {
+      "modelo": "In 2c"
+    },
+    {
+      "modelo": "In note 2"
+    },
+    {
+      "modelo": "In 2b"
+    },
+    {
+      "modelo": "In 1"
+    },
+    {
+      "modelo": "In note 1"
+    },
+    {
+      "modelo": "In 1b"
+    },
+    {
+      "modelo": "Infinity N12"
+    },
+    {
+      "modelo": "Infinity N11"
+    },
+    {
+      "modelo": "Bharat 5 Infinity"
+    },
+    {
+      "modelo": "Bharat Go"
+    },
+    {
+      "modelo": "Canvas 1 2018"
+    },
+    {
+      "modelo": "Canvas Infinity Life"
+    },
+    {
+      "modelo": "Bharat 5 Pro"
+    },
+    {
+      "modelo": "Bharat 5 Plus"
+    },
+    {
+      "modelo": "Bharat 5"
+    },
+    {
+      "modelo": "Canvas Infinity Pro"
+    },
+    {
+      "modelo": "Bharat 2 Ultra"
+    },
+    {
+      "modelo": "Dual 4 E4816"
+    },
+    {
+      "modelo": "Canvas Selfie 3 Q460"
+    },
+    {
+      "modelo": "Bharat 4 Q440"
+    },
+    {
+      "modelo": "Bharat 3 Q437"
+    },
+    {
+      "modelo": "Bharat 2+"
+    },
+    {
+      "modelo": "Selfie 2 Note Q4601"
+    },
+    {
+      "modelo": "Canvas Infinity"
+    },
+    {
+      "modelo": "Evok Dual Note E4815"
+    },
+    {
+      "modelo": "Selfie 2 Q4311"
+    },
+    {
+      "modelo": "Canvas 1"
+    },
+    {
+      "modelo": "Canvas 2 Q4310"
+    },
+    {
+      "modelo": "Canvas Evok Power Q4260"
+    },
+    {
+      "modelo": "Canvas Evok Note E453"
+    },
+    {
+      "modelo": "Bharat 2 Q402"
+    },
+    {
+      "modelo": "Dual 5"
+    },
+    {
+      "modelo": "Spark Vdeo Q415"
+    },
+    {
+      "modelo": "Vdeo 5"
+    },
+    {
+      "modelo": "Vdeo 4"
+    },
+    {
+      "modelo": "Vdeo 3"
+    },
+    {
+      "modelo": "Vdeo 2"
+    },
+    {
+      "modelo": "Vdeo 1"
+    },
+    {
+      "modelo": "Canvas Spark 4G Q4201"
+    },
+    {
+      "modelo": "Canvas Fire 6 Q428"
+    },
+    {
+      "modelo": "Canvas 5 Lite Q462"
+    },
+    {
+      "modelo": "Bolt Q381"
+    },
+    {
+      "modelo": "Canvas Mega 2 Q426"
+    },
+    {
+      "modelo": "Canvas Spark 2 Plus Q350"
+    },
+    {
+      "modelo": "Canvas Spark 3 Q385"
+    },
+    {
+      "modelo": "Canvas Amaze 2 E457"
+    },
+    {
+      "modelo": "Canvas xp 4G Q413"
+    },
+    {
+      "modelo": "Bolt Supreme 2 Q301"
+    },
+    {
+      "modelo": "Bolt Supreme Q300"
+    },
+    {
+      "modelo": "Canvas Evok E483"
+    },
+    {
+      "modelo": "Bolt Selfie Q424"
+    },
+    {
+      "modelo": "Bolt supreme 4 Q352"
+    },
+    {
+      "modelo": "Canvas Selfie 4"
+    },
+    {
+      "modelo": "Unite 4 plus"
+    },
+    {
+      "modelo": "Canvas Unite 4"
+    },
+    {
+      "modelo": "Canvas Unite 4 Pro"
+    },
+    {
+      "modelo": "Canvas Fire 5 Q386"
+    },
+    {
+      "modelo": "Canvas 6 Pro E484"
+    },
+    {
+      "modelo": "Canvas 6"
+    },
+    {
+      "modelo": "Canvas Juice 4G Q461"
+    },
+    {
+      "modelo": "Canvas Amaze 4G Q491"
+    },
+    {
+      "modelo": "Canvas Juice 4 Q382"
+    },
+    {
+      "modelo": "Canvas Pulse 4G E451"
+    },
+    {
+      "modelo": "Canvas Mega 4G Q417"
+    },
+    {
+      "modelo": "Canvas Fire 4G Plus Q412"
+    },
+    {
+      "modelo": "Canvas Nitro 3 E352"
+    },
+    {
+      "modelo": "Canvas Xpress 4G Q413"
+    },
+    {
+      "modelo": "Canvas Blaze 4G+ Q414"
+    },
+    {
+      "modelo": "Canvas Pace 4G Q416"
+    },
+    {
+      "modelo": "Canvas 5 E481"
+    },
+    {
+      "modelo": "Canvas Mega E353"
+    },
+    {
+      "modelo": "Canvas Amaze Q395"
+    },
+    {
+      "modelo": "Canvas Play 4G Q469"
+    },
+    {
+      "modelo": "Bolt Q332"
+    },
+    {
+      "modelo": "Canvas Juice 3+ Q394"
+    },
+    {
+      "modelo": "Bolt Q339"
+    },
+    {
+      "modelo": "Bolt Q338"
+    },
+    {
+      "modelo": "Bolt Q331"
+    },
+    {
+      "modelo": "Bolt S302"
+    },
+    {
+      "modelo": "Canvas Fire 4G Q411"
+    },
+    {
+      "modelo": "Canvas Blaze 4G Q400"
+    },
+    {
+      "modelo": "Canvas Juice 3 Q392"
+    },
+    {
+      "modelo": "Canvas Spark 2 Q334"
+    },
+    {
+      "modelo": "Canvas Nitro 4G E455"
+    },
+    {
+      "modelo": "Canvas Selfie 3 Q348"
+    },
+    {
+      "modelo": "Canvas Selfie 2 Q340"
+    },
+    {
+      "modelo": "Canvas Xpress 2 E313"
+    },
+    {
+      "modelo": "Bolt D303"
+    },
+    {
+      "modelo": "Bolt S301"
+    },
+    {
+      "modelo": "Canvas Selfie Lens Q345"
+    },
+    {
+      "modelo": "Canvas Sliver 5 Q450"
+    },
+    {
+      "modelo": "Canvas Tab P690"
+    },
+    {
+      "modelo": "Canvas Knight 2 E471"
+    },
+    {
+      "modelo": "Canvas A1 AQ4502"
+    },
+    {
+      "modelo": "Q391 Canvas Doodle 4"
+    },
+    {
+      "modelo": "Canvas Nitro 2 E311"
+    },
+    {
+      "modelo": "Q372 Unite 3"
+    },
+    {
+      "modelo": "Canvas Play Q355"
+    },
+    {
+      "modelo": "Canvas Spark Q380"
+    },
+    {
+      "modelo": "Bolt S300"
+    },
+    {
+      "modelo": "Bolt D320"
+    },
+    {
+      "modelo": "Bolt D321"
+    },
+    {
+      "modelo": "Canvas Juice 2 AQ5001"
+    },
+    {
+      "modelo": "Bolt Q324"
+    },
+    {
+      "modelo": "Bolt A82"
+    },
+    {
+      "modelo": "Canvas Pep Q371"
+    },
+    {
+      "modelo": "Bolt A067"
+    },
+    {
+      "modelo": "Canvas 4 Plus A315"
+    },
+    {
+      "modelo": "A109 Canvas XL2"
+    },
+    {
+      "modelo": "Canvas Fire 4 A107"
+    },
+    {
+      "modelo": "Canvas Tab P666"
+    },
+    {
+      "modelo": "Canvas Tab P470"
+    },
+    {
+      "modelo": "Canvas Selfie A255"
+    },
+    {
+      "modelo": "Bolt A066"
+    },
+    {
+      "modelo": "Canvas Hue"
+    },
+    {
+      "modelo": "A104 Canvas Fire 2"
+    },
+    {
+      "modelo": "A99 Canvas Xpress"
+    },
+    {
+      "modelo": "A290 Canvas Knight Cameo"
+    },
+    {
+      "modelo": "Canvas A1"
+    },
+    {
+      "modelo": "A310 Canvas Nitro"
+    },
+    {
+      "modelo": "A092 Unite"
+    },
+    {
+      "modelo": "A65 Bolt"
+    },
+    {
+      "modelo": "A108 Canvas L"
+    },
+    {
+      "modelo": "A190 Canvas HD Plus"
+    },
+    {
+      "modelo": "A093 Canvas Fire"
+    },
+    {
+      "modelo": "A300 Canvas Gold"
+    },
+    {
+      "modelo": "Canvas Win W121"
+    },
+    {
+      "modelo": "Canvas Win W092"
+    },
+    {
+      "modelo": "A089 Bolt"
+    },
+    {
+      "modelo": "A106 Unite 2"
+    },
+    {
+      "modelo": "A105 Canvas Entice"
+    },
+    {
+      "modelo": "X352"
+    },
+    {
+      "modelo": "A121 Canvas Elanza 2"
+    },
+    {
+      "modelo": "A120 Canvas 2 Colors"
+    },
+    {
+      "modelo": "A102 Canvas Doodle 3"
+    },
+    {
+      "modelo": "A47 Bolt"
+    },
+    {
+      "modelo": "X281"
+    },
+    {
+      "modelo": "X267"
+    },
+    {
+      "modelo": "X098"
+    },
+    {
+      "modelo": "A114R Canvas Beat"
+    },
+    {
+      "modelo": "A59 Bolt"
+    },
+    {
+      "modelo": "A36 Bolt"
+    },
+    {
+      "modelo": "A28 Bolt"
+    },
+    {
+      "modelo": "A350 Canvas Knight"
+    },
+    {
+      "modelo": "Canvas Turbo Mini"
+    },
+    {
+      "modelo": "A94 Canvas MAd"
+    },
+    {
+      "modelo": "A119 Canvas XL"
+    },
+    {
+      "modelo": "A114 Canvas 2.2"
+    },
+    {
+      "modelo": "A61 Bolt"
+    },
+    {
+      "modelo": "A77 Canvas Juice"
+    },
+    {
+      "modelo": "A117 Canvas Magnus"
+    },
+    {
+      "modelo": "Canvas Turbo"
+    },
+    {
+      "modelo": "Canvas Tab P650"
+    },
+    {
+      "modelo": "A113 Canvas Ego"
+    },
+    {
+      "modelo": "A76"
+    },
+    {
+      "modelo": "A74 Canvas Fun"
+    },
+    {
+      "modelo": "A67 Bolt"
+    },
+    {
+      "modelo": "A63 Canvas Fun"
+    },
+    {
+      "modelo": "A240 Canvas Doodle 2"
+    },
+    {
+      "modelo": "A92"
+    },
+    {
+      "modelo": "Canvas 4 A210"
+    },
+    {
+      "modelo": "A88"
+    },
+    {
+      "modelo": "A110Q Canvas 2 Plus"
+    },
+    {
+      "modelo": "X322"
+    },
+    {
+      "modelo": "X321"
+    },
+    {
+      "modelo": "X295"
+    },
+    {
+      "modelo": "X286"
+    },
+    {
+      "modelo": "X278"
+    },
+    {
+      "modelo": "X099"
+    },
+    {
+      "modelo": "GC333"
+    },
+    {
+      "modelo": "X396"
+    },
+    {
+      "modelo": "X335C"
+    },
+    {
+      "modelo": "A111 Canvas Doodle"
+    },
+    {
+      "modelo": "Funbook 3G P600"
+    },
+    {
+      "modelo": "Funbook 3G P560"
+    },
+    {
+      "modelo": "Funbook Talk P362"
+    },
+    {
+      "modelo": "Funbook Talk P360"
+    },
+    {
+      "modelo": "Viva A72"
+    },
+    {
+      "modelo": "Ninja A91"
+    },
+    {
+      "modelo": "Ninja A54"
+    },
+    {
+      "modelo": "Bolt A62"
+    },
+    {
+      "modelo": "Bolt A51"
+    },
+    {
+      "modelo": "Bolt A35"
+    },
+    {
+      "modelo": "Bolt A27"
+    },
+    {
+      "modelo": "A115 Canvas 3D"
+    },
+    {
+      "modelo": "A116 Canvas HD"
+    },
+    {
+      "modelo": "A101"
+    },
+    {
+      "modelo": "A110 Canvas 2"
+    },
+    {
+      "modelo": "A89 Ninja"
+    },
+    {
+      "modelo": "A87 Ninja 4.0"
+    },
+    {
+      "modelo": "A57 Ninja 3.0"
+    },
+    {
+      "modelo": "Funbook Infinity P275"
+    },
+    {
+      "modelo": "Funbook Alfa P250"
+    },
+    {
+      "modelo": "Funbook Pro"
+    },
+    {
+      "modelo": "A100"
+    },
+    {
+      "modelo": "A90s"
+    },
+    {
+      "modelo": "A90"
+    },
+    {
+      "modelo": "A84"
+    },
+    {
+      "modelo": "A80"
+    },
+    {
+      "modelo": "Superfone Punk A44"
+    },
+    {
+      "modelo": "X101"
+    },
+    {
+      "modelo": "A25"
+    },
+    {
+      "modelo": "X291"
+    },
+    {
+      "modelo": "X277"
+    },
+    {
+      "modelo": "X276"
+    },
+    {
+      "modelo": "X246"
+    },
+    {
+      "modelo": "X234+"
+    },
+    {
+      "modelo": "A56"
+    },
+    {
+      "modelo": "A52"
+    },
+    {
+      "modelo": "A45"
+    },
+    {
+      "modelo": "X660"
+    },
+    {
+      "modelo": "X640"
+    },
+    {
+      "modelo": "X368"
+    },
+    {
+      "modelo": "X335"
+    },
+    {
+      "modelo": "X288"
+    },
+    {
+      "modelo": "X274"
+    },
+    {
+      "modelo": "X233"
+    },
+    {
+      "modelo": "X231"
+    },
+    {
+      "modelo": "X102"
+    },
+    {
+      "modelo": "A50 Ninja"
+    },
+    {
+      "modelo": "A78"
+    },
+    {
+      "modelo": "Funbook P300"
+    },
+    {
+      "modelo": "A73"
+    },
+    {
+      "modelo": "X650"
+    },
+    {
+      "modelo": "X490"
+    },
+    {
+      "modelo": "X333"
+    },
+    {
+      "modelo": "X275"
+    },
+    {
+      "modelo": "X271"
+    },
+    {
+      "modelo": "X11i"
+    },
+    {
+      "modelo": "A75"
+    },
+    {
+      "modelo": "X270"
+    },
+    {
+      "modelo": "X256"
+    },
+    {
+      "modelo": "X78"
+    },
+    {
+      "modelo": "X55 Blade"
+    },
+    {
+      "modelo": "X285"
+    },
+    {
+      "modelo": "A55"
+    },
+    {
+      "modelo": "X40"
+    },
+    {
+      "modelo": "X450"
+    },
+    {
+      "modelo": "X222"
+    },
+    {
+      "modelo": "A85"
+    },
+    {
+      "modelo": "Q80"
+    },
+    {
+      "modelo": "A70"
+    },
+    {
+      "modelo": "X410"
+    },
+    {
+      "modelo": "X395"
+    },
+    {
+      "modelo": "X266"
+    },
+    {
+      "modelo": "X265"
+    },
+    {
+      "modelo": "M2"
+    },
+    {
+      "modelo": "Q66"
+    },
+    {
+      "modelo": "X370"
+    },
+    {
+      "modelo": "X226+"
+    },
+    {
+      "modelo": "Q50"
+    },
+    {
+      "modelo": "X560"
+    },
+    {
+      "modelo": "A60"
+    },
+    {
+      "modelo": "X600"
+    },
+    {
+      "modelo": "X550 Qube"
+    },
+    {
+      "modelo": "X510 Pike"
+    },
+    {
+      "modelo": "X500"
+    },
+    {
+      "modelo": "X310"
+    },
+    {
+      "modelo": "X2i"
+    },
+    {
+      "modelo": "X118"
+    },
+    {
+      "modelo": "X100"
+    },
+    {
+      "modelo": "X1i"
+    },
+    {
+      "modelo": "GC700"
+    },
+    {
+      "modelo": "GC400"
+    },
+    {
+      "modelo": "GC360"
+    },
+    {
+      "modelo": "GC275"
+    },
+    {
+      "modelo": "Q75"
+    },
+    {
+      "modelo": "Q6"
+    },
+    {
+      "modelo": "Q7"
+    },
+    {
+      "modelo": "G4"
+    },
+    {
+      "modelo": "W900"
+    },
+    {
+      "modelo": "X330"
+    },
+    {
+      "modelo": "H360"
+    },
+    {
+      "modelo": "Q1"
+    },
+    {
+      "modelo": "Q3"
+    },
+    {
+      "modelo": "Q2"
+    },
+    {
+      "modelo": "Q5 fb"
+    },
+    {
+      "modelo": "Q55 Bling"
+    },
+    {
+      "modelo": "X1i plus"
+    },
+    {
+      "modelo": "X2i plus"
+    },
+    {
+      "modelo": "X114"
+    },
+    {
+      "modelo": "X111"
+    },
+    {
+      "modelo": "X215"
+    },
+    {
+      "modelo": "X220"
+    },
+    {
+      "modelo": "X225"
+    },
+    {
+      "modelo": "X235"
+    },
+    {
+      "modelo": "X250"
+    },
+    {
+      "modelo": "X260"
+    },
+    {
+      "modelo": "X360"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "marca": "NVIDIA",
+  "id_interno": "97",
+  "slug": "nvidia",
+  "total_esperado": 0,
+  "total_encontrado": 3,
+  "modelos": [
+    {
+      "modelo": "Shield K1"
+    },
+    {
+      "modelo": "Shield LTE"
+    },
+    {
+      "modelo": "Shield"
+    }
+  ]
+}

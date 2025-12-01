@@ -1,0 +1,495 @@
+{
+  "marca": "SONY",
+  "id_interno": "7",
+  "slug": "sony",
+  "total_esperado": 0,
+  "total_encontrado": 162,
+  "modelos": [
+    {
+      "modelo": "Xperia 10 VII"
+    },
+    {
+      "modelo": "Xperia 1 VII"
+    },
+    {
+      "modelo": "Xperia 1 VI"
+    },
+    {
+      "modelo": "Xperia 10 VI"
+    },
+    {
+      "modelo": "Xperia 5 V"
+    },
+    {
+      "modelo": "Xperia 1 V"
+    },
+    {
+      "modelo": "Xperia 10 V"
+    },
+    {
+      "modelo": "Xperia 5 IV"
+    },
+    {
+      "modelo": "Xperia 1 IV"
+    },
+    {
+      "modelo": "Xperia 10 IV"
+    },
+    {
+      "modelo": "Xperia Pro-I"
+    },
+    {
+      "modelo": "Xperia 10 III Lite"
+    },
+    {
+      "modelo": "Xperia 1 III"
+    },
+    {
+      "modelo": "Xperia 5 III"
+    },
+    {
+      "modelo": "Xperia 10 III"
+    },
+    {
+      "modelo": "Xperia Pro"
+    },
+    {
+      "modelo": "Xperia 5 II"
+    },
+    {
+      "modelo": "Xperia 1 II"
+    },
+    {
+      "modelo": "Xperia 10 II"
+    },
+    {
+      "modelo": "Xperia L4"
+    },
+    {
+      "modelo": "Xperia 5"
+    },
+    {
+      "modelo": "Xperia 1"
+    },
+    {
+      "modelo": "Xperia 10 Plus"
+    },
+    {
+      "modelo": "Xperia 10"
+    },
+    {
+      "modelo": "Xperia L3"
+    },
+    {
+      "modelo": "Xperia XA2 Plus"
+    },
+    {
+      "modelo": "Xperia XZ3"
+    },
+    {
+      "modelo": "Xperia XZ2 Premium"
+    },
+    {
+      "modelo": "Xperia XZ2"
+    },
+    {
+      "modelo": "Xperia XZ2 Compact"
+    },
+    {
+      "modelo": "Xperia XA2 Ultra"
+    },
+    {
+      "modelo": "Xperia XA2"
+    },
+    {
+      "modelo": "Xperia L2"
+    },
+    {
+      "modelo": "Xperia R1 (Plus)"
+    },
+    {
+      "modelo": "Xperia XZ1"
+    },
+    {
+      "modelo": "Xperia XA1 Plus"
+    },
+    {
+      "modelo": "Xperia XZ1 Compact"
+    },
+    {
+      "modelo": "Xperia L1"
+    },
+    {
+      "modelo": "Xperia XZs"
+    },
+    {
+      "modelo": "Xperia XZ Premium"
+    },
+    {
+      "modelo": "Xperia XA1 Ultra"
+    },
+    {
+      "modelo": "Xperia XA1"
+    },
+    {
+      "modelo": "Xperia X Compact"
+    },
+    {
+      "modelo": "Xperia XZ"
+    },
+    {
+      "modelo": "Xperia E5"
+    },
+    {
+      "modelo": "Xperia XA Ultra"
+    },
+    {
+      "modelo": "Xperia X Performance"
+    },
+    {
+      "modelo": "Xperia X"
+    },
+    {
+      "modelo": "Xperia XA Dual"
+    },
+    {
+      "modelo": "Xperia XA"
+    },
+    {
+      "modelo": "Xperia Z5 Premium Dual"
+    },
+    {
+      "modelo": "Xperia Z5 Premium"
+    },
+    {
+      "modelo": "Xperia Z5 Dual"
+    },
+    {
+      "modelo": "Xperia Z5"
+    },
+    {
+      "modelo": "Xperia Z5 Compact"
+    },
+    {
+      "modelo": "Xperia M5 Dual"
+    },
+    {
+      "modelo": "Xperia M5"
+    },
+    {
+      "modelo": "Xperia C5 Ultra Dual"
+    },
+    {
+      "modelo": "Xperia C5 Ultra"
+    },
+    {
+      "modelo": "Xperia Z4v"
+    },
+    {
+      "modelo": "Xperia Z3+ dual"
+    },
+    {
+      "modelo": "Xperia Z3+"
+    },
+    {
+      "modelo": "Xperia C4 Dual"
+    },
+    {
+      "modelo": "Xperia C4"
+    },
+    {
+      "modelo": "Xperia M4 Aqua Dual"
+    },
+    {
+      "modelo": "Xperia M4 Aqua"
+    },
+    {
+      "modelo": "Xperia Z4 Tablet WiFi"
+    },
+    {
+      "modelo": "Xperia Z4 Tablet LTE"
+    },
+    {
+      "modelo": "Xperia E4g"
+    },
+    {
+      "modelo": "Xperia E4g Dual"
+    },
+    {
+      "modelo": "Xperia E4 Dual"
+    },
+    {
+      "modelo": "Xperia E4"
+    },
+    {
+      "modelo": "Xperia E3 Dual"
+    },
+    {
+      "modelo": "Xperia E3"
+    },
+    {
+      "modelo": "Xperia Z3 Tablet Compact"
+    },
+    {
+      "modelo": "Xperia Z3 Dual"
+    },
+    {
+      "modelo": "Xperia Z3v"
+    },
+    {
+      "modelo": "Xperia Z3"
+    },
+    {
+      "modelo": "Xperia M2 Aqua"
+    },
+    {
+      "modelo": "Xperia Z3 Compact"
+    },
+    {
+      "modelo": "Xperia C3 Dual"
+    },
+    {
+      "modelo": "Xperia C3"
+    },
+    {
+      "modelo": "Xperia Z2a"
+    },
+    {
+      "modelo": "Xperia T3"
+    },
+    {
+      "modelo": "SmartWatch 3 SWR50"
+    },
+    {
+      "modelo": "SmartWatch 2 SW2"
+    },
+    {
+      "modelo": "Xperia M2"
+    },
+    {
+      "modelo": "Xperia M2 dual"
+    },
+    {
+      "modelo": "Xperia Z2 Tablet LTE"
+    },
+    {
+      "modelo": "Xperia Z2 Tablet Wi-Fi"
+    },
+    {
+      "modelo": "Xperia Z2"
+    },
+    {
+      "modelo": "Xperia E1 dual"
+    },
+    {
+      "modelo": "Xperia E1"
+    },
+    {
+      "modelo": "Xperia T2 Ultra dual"
+    },
+    {
+      "modelo": "Xperia T2 Ultra"
+    },
+    {
+      "modelo": "Xperia Z1s"
+    },
+    {
+      "modelo": "Xperia Z1 Compact"
+    },
+    {
+      "modelo": "Xperia Z1"
+    },
+    {
+      "modelo": "Xperia Z Ultra"
+    },
+    {
+      "modelo": "Xperia C"
+    },
+    {
+      "modelo": "Xperia M"
+    },
+    {
+      "modelo": "Xperia ZR"
+    },
+    {
+      "modelo": "Xperia L"
+    },
+    {
+      "modelo": "Xperia SP"
+    },
+    {
+      "modelo": "Xperia Tablet Z Wi-Fi"
+    },
+    {
+      "modelo": "Xperia Tablet Z LTE"
+    },
+    {
+      "modelo": "Xperia Z"
+    },
+    {
+      "modelo": "Xperia ZL"
+    },
+    {
+      "modelo": "Xperia E dual"
+    },
+    {
+      "modelo": "Xperia E"
+    },
+    {
+      "modelo": "Xperia T LTE"
+    },
+    {
+      "modelo": "Xperia Tablet S 3G"
+    },
+    {
+      "modelo": "Xperia Tablet S"
+    },
+    {
+      "modelo": "Xperia V"
+    },
+    {
+      "modelo": "Xperia J"
+    },
+    {
+      "modelo": "Xperia TX"
+    },
+    {
+      "modelo": "Xperia T"
+    },
+    {
+      "modelo": "Xperia SL"
+    },
+    {
+      "modelo": "Xperia tipo dual"
+    },
+    {
+      "modelo": "Xperia tipo"
+    },
+    {
+      "modelo": "Xperia miro"
+    },
+    {
+      "modelo": "Xperia go"
+    },
+    {
+      "modelo": "Xperia acro S"
+    },
+    {
+      "modelo": "Xperia SX SO-05D"
+    },
+    {
+      "modelo": "Xperia GX SO-04D"
+    },
+    {
+      "modelo": "Xperia acro HD SO-03D"
+    },
+    {
+      "modelo": "Xperia acro HD SOI12"
+    },
+    {
+      "modelo": "Xperia neo L"
+    },
+    {
+      "modelo": "Xperia sola"
+    },
+    {
+      "modelo": "Xperia U"
+    },
+    {
+      "modelo": "Xperia P"
+    },
+    {
+      "modelo": "Xperia S"
+    },
+    {
+      "modelo": "Xperia ion HSPA"
+    },
+    {
+      "modelo": "Xperia ion LTE"
+    },
+    {
+      "modelo": "Tablet P"
+    },
+    {
+      "modelo": "Tablet P 3G"
+    },
+    {
+      "modelo": "Tablet S 3G"
+    },
+    {
+      "modelo": "Tablet S"
+    },
+    {
+      "modelo": "CMD Z7"
+    },
+    {
+      "modelo": "Xperia LT29i Hayabusa"
+    },
+    {
+      "modelo": "CMD J70"
+    },
+    {
+      "modelo": "CMD J7"
+    },
+    {
+      "modelo": "CMD MZ5"
+    },
+    {
+      "modelo": "CMD J6"
+    },
+    {
+      "modelo": "CMD J5"
+    },
+    {
+      "modelo": "CMD Z5"
+    },
+    {
+      "modelo": "CMD CD5"
+    },
+    {
+      "modelo": "CMD C1"
+    },
+    {
+      "modelo": "CMD Z1 plus"
+    },
+    {
+      "modelo": "CMD Z1"
+    },
+    {
+      "modelo": "CM-DX 2000"
+    },
+    {
+      "modelo": "CM-DX 1000"
+    },
+    {
+      "modelo": "Xperia 5 Plus"
+    },
+    {
+      "modelo": "Xperia X Ultra"
+    },
+    {
+      "modelo": "Xperia H8541"
+    },
+    {
+      "modelo": "Xperia M Ultra"
+    },
+    {
+      "modelo": "Xperia X Premium"
+    },
+    {
+      "modelo": "Xperia E1 II"
+    },
+    {
+      "modelo": "Xperia Z4 Ultra"
+    },
+    {
+      "modelo": "Xperia Z4 Compact"
+    },
+    {
+      "modelo": "D 2403"
+    },
+    {
+      "modelo": "Xperia C670X"
+    }
+  ]
+}

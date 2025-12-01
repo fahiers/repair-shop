@@ -1,0 +1,45 @@
+{
+  "marca": "MITAC",
+  "id_interno": "25",
+  "slug": "mitac",
+  "total_esperado": 0,
+  "total_encontrado": 12,
+  "modelos": [
+    {
+      "modelo": "MIO Explora K75"
+    },
+    {
+      "modelo": "MIO Explora K70"
+    },
+    {
+      "modelo": "MIO Leap G50"
+    },
+    {
+      "modelo": "MIO Leap K1"
+    },
+    {
+      "modelo": "MIO A502"
+    },
+    {
+      "modelo": "MIO A501"
+    },
+    {
+      "modelo": "MIO A702"
+    },
+    {
+      "modelo": "MIO A701"
+    },
+    {
+      "modelo": "MIO 8870"
+    },
+    {
+      "modelo": "MIO 8860"
+    },
+    {
+      "modelo": "MIO 8390"
+    },
+    {
+      "modelo": "MIO 8380"
+    }
+  ]
+}

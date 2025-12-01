@@ -1,0 +1,369 @@
+{
+  "marca": "SPICE",
+  "id_interno": "68",
+  "slug": "spice",
+  "total_esperado": 0,
+  "total_encontrado": 120,
+  "modelos": [
+    {
+      "modelo": "Smart Pulse (M-9010)"
+    },
+    {
+      "modelo": "Fire One (Mi-FX-1)"
+    },
+    {
+      "modelo": "N-300"
+    },
+    {
+      "modelo": "Smart Flo 508 (Mi-508)"
+    },
+    {
+      "modelo": "Smart Flo 503 (Mi-503)"
+    },
+    {
+      "modelo": "Smart Flo 359 (Mi-359)"
+    },
+    {
+      "modelo": "Smart Flo 358 (Mi-358)"
+    },
+    {
+      "modelo": "Stellar 439 (Mi-439)"
+    },
+    {
+      "modelo": "Stellar 361 (Mi-361)"
+    },
+    {
+      "modelo": "Stellar 507 (Mi-507)"
+    },
+    {
+      "modelo": "Stellar 509 (Mi-509)"
+    },
+    {
+      "modelo": "Stellar 600 (Mi-600)"
+    },
+    {
+      "modelo": "Stellar 526 (Mi-526)"
+    },
+    {
+      "modelo": "Stellar 520 (Mi-520)"
+    },
+    {
+      "modelo": "Stellar 520n (Mi-520n)"
+    },
+    {
+      "modelo": "Stellar 440 (Mi-440)"
+    },
+    {
+      "modelo": "Stellar 470 (Mi-470)"
+    },
+    {
+      "modelo": "Mi-449 3G"
+    },
+    {
+      "modelo": "Mi-451 3G"
+    },
+    {
+      "modelo": "Mi-498 Dream Uno"
+    },
+    {
+      "modelo": "Mi-506 Stellar Mettle Icon"
+    },
+    {
+      "modelo": "Mi-356 Smart Flo Mettle 3.5X"
+    },
+    {
+      "modelo": "Mi-426 Smart Flo Mettle 4.0X"
+    },
+    {
+      "modelo": "Mi-438 Stellar Glide"
+    },
+    {
+      "modelo": "Mi-504 Smart Flo Mettle 5X"
+    },
+    {
+      "modelo": "Mi-451 Smartflo Poise"
+    },
+    {
+      "modelo": "Mi-496 Spice Coolpad 2"
+    },
+    {
+      "modelo": "Mi-423 Smart Flo Ivory 2"
+    },
+    {
+      "modelo": "Mi-349 Smart Flo Edge"
+    },
+    {
+      "modelo": "Mi-550 Pinnacle Stylus"
+    },
+    {
+      "modelo": "Mi-502n Smart FLO Pace3"
+    },
+    {
+      "modelo": "Mi-492 Stellar Virtuoso Pro+"
+    },
+    {
+      "modelo": "Mi-437 Stellar Nhance 2"
+    },
+    {
+      "modelo": "Mi-436 Stellar Glamour"
+    },
+    {
+      "modelo": "Mi-354 Smartflo Space"
+    },
+    {
+      "modelo": "Mi-525 Pinnacle FHD"
+    },
+    {
+      "modelo": "Mi-515 Coolpad"
+    },
+    {
+      "modelo": "Mi-510 Stellar Prime"
+    },
+    {
+      "modelo": "Mi-505 Stellar Horizon Pro"
+    },
+    {
+      "modelo": "Mi-491 Stellar Virtuoso Pro"
+    },
+    {
+      "modelo": "Mi-450 Smartflo Ivory"
+    },
+    {
+      "modelo": "Mi-422 Smartflo Pace"
+    },
+    {
+      "modelo": "Mi-353 Stellar Jazz"
+    },
+    {
+      "modelo": "Mi-725 Stellar Slatepad"
+    },
+    {
+      "modelo": "Mi-502 Smartflo Pace2"
+    },
+    {
+      "modelo": "Mi-535 Stellar Pinnacle Pro"
+    },
+    {
+      "modelo": "Mi-530 Stellar Pinnacle"
+    },
+    {
+      "modelo": "Mi-1010 Stellar Pad"
+    },
+    {
+      "modelo": "Mi-495 Stellar Virtuoso"
+    },
+    {
+      "modelo": "Mi-500 Stellar Horizon"
+    },
+    {
+      "modelo": "Mi-285 Stellar"
+    },
+    {
+      "modelo": "M-5665 T2"
+    },
+    {
+      "modelo": "M-5566 Flo Entertainer"
+    },
+    {
+      "modelo": "M-5900 Flo TV Pro"
+    },
+    {
+      "modelo": "M-6688 Flo Magic"
+    },
+    {
+      "modelo": "M-5460 Flo"
+    },
+    {
+      "modelo": "M-5455 Flo"
+    },
+    {
+      "modelo": "M-5365 Boss Killer"
+    },
+    {
+      "modelo": "M-5400 Boss TV"
+    },
+    {
+      "modelo": "M-5200 Boss Don"
+    },
+    {
+      "modelo": "M-5390 Boss Double XL"
+    },
+    {
+      "modelo": "M-5250 Boss Item"
+    },
+    {
+      "modelo": "M-5363 Boss"
+    },
+    {
+      "modelo": "Mi-355 Stellar Craze"
+    },
+    {
+      "modelo": "Mi-425 Stellar"
+    },
+    {
+      "modelo": "M-6868N FLO ME"
+    },
+    {
+      "modelo": "M-5600 FLO TV"
+    },
+    {
+      "modelo": "Mi-280"
+    },
+    {
+      "modelo": "Mi-350"
+    },
+    {
+      "modelo": "M-6900 Knight"
+    },
+    {
+      "modelo": "M-6868"
+    },
+    {
+      "modelo": "M-6700"
+    },
+    {
+      "modelo": "M-9000 Popkorn"
+    },
+    {
+      "modelo": "M-6450"
+    },
+    {
+      "modelo": "M-5750"
+    },
+    {
+      "modelo": "M-5350"
+    },
+    {
+      "modelo": "M-5180"
+    },
+    {
+      "modelo": "M-5115"
+    },
+    {
+      "modelo": "M-4262"
+    },
+    {
+      "modelo": "Mi-720"
+    },
+    {
+      "modelo": "M-6800 FLO"
+    },
+    {
+      "modelo": "Mi-410"
+    },
+    {
+      "modelo": "Mi-270"
+    },
+    {
+      "modelo": "Mi-310"
+    },
+    {
+      "modelo": "M-4250"
+    },
+    {
+      "modelo": "M-5170"
+    },
+    {
+      "modelo": "QT-65"
+    },
+    {
+      "modelo": "M-5262"
+    },
+    {
+      "modelo": "QT-58"
+    },
+    {
+      "modelo": "QT-61"
+    },
+    {
+      "modelo": "M-5454"
+    },
+    {
+      "modelo": "M-5161n"
+    },
+    {
+      "modelo": "QT-95"
+    },
+    {
+      "modelo": "M-67 3D"
+    },
+    {
+      "modelo": "QT-68"
+    },
+    {
+      "modelo": "M-4580n"
+    },
+    {
+      "modelo": "Mi-300"
+    },
+    {
+      "modelo": "M-6 Sports"
+    },
+    {
+      "modelo": "M-6363"
+    },
+    {
+      "modelo": "QT-56"
+    },
+    {
+      "modelo": "G-6565"
+    },
+    {
+      "modelo": "QT-52"
+    },
+    {
+      "modelo": "QT-60"
+    },
+    {
+      "modelo": "M-5161"
+    },
+    {
+      "modelo": "M-5055"
+    },
+    {
+      "modelo": "S-7000"
+    },
+    {
+      "modelo": "QT-50"
+    },
+    {
+      "modelo": "S-1200"
+    },
+    {
+      "modelo": "M-6262"
+    },
+    {
+      "modelo": "M-4242"
+    },
+    {
+      "modelo": "M-940n"
+    },
+    {
+      "modelo": "S-5010"
+    },
+    {
+      "modelo": "D-6666"
+    },
+    {
+      "modelo": "M 4580"
+    },
+    {
+      "modelo": "S-5110"
+    },
+    {
+      "modelo": "S-5420"
+    },
+    {
+      "modelo": "S-6005"
+    },
+    {
+      "modelo": "D-1111"
+    },
+    {
+      "modelo": "M-5252"
+    },
+    {
+      "modelo": "KT-5353"
+    }
+  ]
+}

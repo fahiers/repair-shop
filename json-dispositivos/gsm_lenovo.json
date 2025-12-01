@@ -1,0 +1,786 @@
+{
+  "marca": "LENOVO",
+  "id_interno": "73",
+  "slug": "lenovo",
+  "total_esperado": 0,
+  "total_encontrado": 258,
+  "modelos": [
+    {
+      "modelo": "Idea Tab Plus"
+    },
+    {
+      "modelo": "Idea Tab"
+    },
+    {
+      "modelo": "Yoga Tab"
+    },
+    {
+      "modelo": "Tab"
+    },
+    {
+      "modelo": "Tab One"
+    },
+    {
+      "modelo": "Legion Y700 (Gen 4)"
+    },
+    {
+      "modelo": "Idea Tab Pro"
+    },
+    {
+      "modelo": "Yoga Tab Plus"
+    },
+    {
+      "modelo": "Legion Y700",
+      "ano": "2025"
+    },
+    {
+      "modelo": "Legion Tab"
+    },
+    {
+      "modelo": "Tab K11 Plus"
+    },
+    {
+      "modelo": "Tab Plus"
+    },
+    {
+      "modelo": "Tab M11"
+    },
+    {
+      "modelo": "Legion Y700",
+      "ano": "2023"
+    },
+    {
+      "modelo": "Tab P12"
+    },
+    {
+      "modelo": "Tab M10"
+    },
+    {
+      "modelo": "Tab Extreme"
+    },
+    {
+      "modelo": "Tab M9"
+    },
+    {
+      "modelo": "Tab M8 (4th Gen)"
+    },
+    {
+      "modelo": "Tab P11 Gen 2"
+    },
+    {
+      "modelo": "Tab P11 Pro Gen 2"
+    },
+    {
+      "modelo": "Tab M10 Gen 3"
+    },
+    {
+      "modelo": "Pad Pro 2022"
+    },
+    {
+      "modelo": "Legion Y70"
+    },
+    {
+      "modelo": "Tab M10 Plus (3rd Gen)"
+    },
+    {
+      "modelo": "Legion Y700"
+    },
+    {
+      "modelo": "Legion Y90"
+    },
+    {
+      "modelo": "K14 Plus"
+    },
+    {
+      "modelo": "Tab K10"
+    },
+    {
+      "modelo": "Tab P12 Pro"
+    },
+    {
+      "modelo": "Tab P11 5G"
+    },
+    {
+      "modelo": "K13 Pro"
+    },
+    {
+      "modelo": "K13"
+    },
+    {
+      "modelo": "Yoga Tab 11"
+    },
+    {
+      "modelo": "Tab P11 Plus"
+    },
+    {
+      "modelo": "Tab M8 (3rd Gen)"
+    },
+    {
+      "modelo": "Tab M7 (3rd Gen)"
+    },
+    {
+      "modelo": "K13 Note"
+    },
+    {
+      "modelo": "Yoga Tab 13"
+    },
+    {
+      "modelo": "Pad Pro"
+    },
+    {
+      "modelo": "Pad Plus"
+    },
+    {
+      "modelo": "Pad"
+    },
+    {
+      "modelo": "Legion 2 Pro"
+    },
+    {
+      "modelo": "Legion Duel 2"
+    },
+    {
+      "modelo": "K12 Pro"
+    },
+    {
+      "modelo": "K12 (China)"
+    },
+    {
+      "modelo": "A8 2020"
+    },
+    {
+      "modelo": "Tab P11 Pro"
+    },
+    {
+      "modelo": "Tab P11"
+    },
+    {
+      "modelo": "Tab M10 HD Gen 2"
+    },
+    {
+      "modelo": "Legion Duel"
+    },
+    {
+      "modelo": "Legion Pro"
+    },
+    {
+      "modelo": "A7"
+    },
+    {
+      "modelo": "M10 Plus"
+    },
+    {
+      "modelo": "M10 FHD REL"
+    },
+    {
+      "modelo": "Yoga Smart Tab"
+    },
+    {
+      "modelo": "K10 Plus"
+    },
+    {
+      "modelo": "K10 Note"
+    },
+    {
+      "modelo": "A6 Note"
+    },
+    {
+      "modelo": "Tab M8 (FHD)"
+    },
+    {
+      "modelo": "Tab M8 (HD)"
+    },
+    {
+      "modelo": "Tab M7"
+    },
+    {
+      "modelo": "Z6"
+    },
+    {
+      "modelo": "Z6 Pro 5G"
+    },
+    {
+      "modelo": "Z6 Youth"
+    },
+    {
+      "modelo": "Z6 Pro"
+    },
+    {
+      "modelo": "K6 Enjoy"
+    },
+    {
+      "modelo": "Tab V7"
+    },
+    {
+      "modelo": "S5 Pro GT"
+    },
+    {
+      "modelo": "Z5s"
+    },
+    {
+      "modelo": "Z5 Pro GT"
+    },
+    {
+      "modelo": "Z5 Pro"
+    },
+    {
+      "modelo": "S5 Pro"
+    },
+    {
+      "modelo": "K5 Pro"
+    },
+    {
+      "modelo": "K9"
+    },
+    {
+      "modelo": "Z5"
+    },
+    {
+      "modelo": "K5 Note",
+      "ano": "2018"
+    },
+    {
+      "modelo": "A5"
+    },
+    {
+      "modelo": "K5 play"
+    },
+    {
+      "modelo": "K5"
+    },
+    {
+      "modelo": "S5"
+    },
+    {
+      "modelo": "K320t"
+    },
+    {
+      "modelo": "moto tab"
+    },
+    {
+      "modelo": "Tab 7 Essential"
+    },
+    {
+      "modelo": "Tab 7"
+    },
+    {
+      "modelo": "K8 Plus"
+    },
+    {
+      "modelo": "K8"
+    },
+    {
+      "modelo": "K8 Note"
+    },
+    {
+      "modelo": "Tab 4 10 Plus"
+    },
+    {
+      "modelo": "Tab 4 10"
+    },
+    {
+      "modelo": "Tab 4 8 Plus"
+    },
+    {
+      "modelo": "Tab 4 8"
+    },
+    {
+      "modelo": "Tab3 8 Plus"
+    },
+    {
+      "modelo": "ZUK Edge"
+    },
+    {
+      "modelo": "A6600 Plus"
+    },
+    {
+      "modelo": "A6600"
+    },
+    {
+      "modelo": "B"
+    },
+    {
+      "modelo": "A Plus"
+    },
+    {
+      "modelo": "P2"
+    },
+    {
+      "modelo": "K6 Note"
+    },
+    {
+      "modelo": "K6 Power"
+    },
+    {
+      "modelo": "K6"
+    },
+    {
+      "modelo": "Yoga Tab 3 10"
+    },
+    {
+      "modelo": "Yoga Tab 3 Plus"
+    },
+    {
+      "modelo": "Vibe A"
+    },
+    {
+      "modelo": "C2 Power"
+    },
+    {
+      "modelo": "C2"
+    },
+    {
+      "modelo": "Phab2 Plus"
+    },
+    {
+      "modelo": "Phab2"
+    },
+    {
+      "modelo": "Phab2 Pro"
+    },
+    {
+      "modelo": "ZUK Z2"
+    },
+    {
+      "modelo": "Vibe C"
+    },
+    {
+      "modelo": "ZUK Z2 Pro"
+    },
+    {
+      "modelo": "Tab3 10"
+    },
+    {
+      "modelo": "Tab3 8"
+    },
+    {
+      "modelo": "Tab3 7"
+    },
+    {
+      "modelo": "Vibe K5 Plus"
+    },
+    {
+      "modelo": "Vibe K5"
+    },
+    {
+      "modelo": "A7000 Turbo"
+    },
+    {
+      "modelo": "Vibe P1 Turbo"
+    },
+    {
+      "modelo": "K5 Note"
+    },
+    {
+      "modelo": "Lemon 3"
+    },
+    {
+      "modelo": "Vibe S1 Lite"
+    },
+    {
+      "modelo": "Vibe K4 Note"
+    },
+    {
+      "modelo": "Vibe X3 c78"
+    },
+    {
+      "modelo": "Vibe X3"
+    },
+    {
+      "modelo": "A3690"
+    },
+    {
+      "modelo": "Yoga Tab 3 Pro"
+    },
+    {
+      "modelo": "Yoga Tab 3 8.0"
+    },
+    {
+      "modelo": "A1000"
+    },
+    {
+      "modelo": "Phab"
+    },
+    {
+      "modelo": "Phab Plus"
+    },
+    {
+      "modelo": "Vibe P1"
+    },
+    {
+      "modelo": "A6010 Plus"
+    },
+    {
+      "modelo": "A6010"
+    },
+    {
+      "modelo": "Vibe P1m"
+    },
+    {
+      "modelo": "Vibe S1"
+    },
+    {
+      "modelo": "ZUK Z1"
+    },
+    {
+      "modelo": "A2010"
+    },
+    {
+      "modelo": "A616"
+    },
+    {
+      "modelo": "A3900"
+    },
+    {
+      "modelo": "K80"
+    },
+    {
+      "modelo": "S60"
+    },
+    {
+      "modelo": "A6000 Plus"
+    },
+    {
+      "modelo": "A1900"
+    },
+    {
+      "modelo": "K3 Note"
+    },
+    {
+      "modelo": "Vibe Shot"
+    },
+    {
+      "modelo": "A7000 Plus"
+    },
+    {
+      "modelo": "A7000"
+    },
+    {
+      "modelo": "A5000"
+    },
+    {
+      "modelo": "Tab 2 A10-70"
+    },
+    {
+      "modelo": "Tab 2 A8-50"
+    },
+    {
+      "modelo": "P70"
+    },
+    {
+      "modelo": "Tab 2 A7-30"
+    },
+    {
+      "modelo": "Tab 2 A7-20"
+    },
+    {
+      "modelo": "Tab 2 A7-10"
+    },
+    {
+      "modelo": "A6000"
+    },
+    {
+      "modelo": "P90"
+    },
+    {
+      "modelo": "Vibe X2 Pro"
+    },
+    {
+      "modelo": "K3"
+    },
+    {
+      "modelo": "Golden Warrior Note 8"
+    },
+    {
+      "modelo": "A916"
+    },
+    {
+      "modelo": "A319"
+    },
+    {
+      "modelo": "S856"
+    },
+    {
+      "modelo": "S580"
+    },
+    {
+      "modelo": "S90 Sisley"
+    },
+    {
+      "modelo": "A606"
+    },
+    {
+      "modelo": "Yoga Tablet 2 Pro"
+    },
+    {
+      "modelo": "Yoga Tablet 2 10.1"
+    },
+    {
+      "modelo": "Yoga Tablet 2 8.0"
+    },
+    {
+      "modelo": "Tab S8"
+    },
+    {
+      "modelo": "Vibe X2"
+    },
+    {
+      "modelo": "Vibe Z2"
+    },
+    {
+      "modelo": "A850+"
+    },
+    {
+      "modelo": "Vibe Z2 Pro"
+    },
+    {
+      "modelo": "Golden Warrior A8"
+    },
+    {
+      "modelo": "Golden Warrior S8"
+    },
+    {
+      "modelo": "S939"
+    },
+    {
+      "modelo": "S750"
+    },
+    {
+      "modelo": "A889"
+    },
+    {
+      "modelo": "A680"
+    },
+    {
+      "modelo": "A316i"
+    },
+    {
+      "modelo": "A328"
+    },
+    {
+      "modelo": "A536"
+    },
+    {
+      "modelo": "A526"
+    },
+    {
+      "modelo": "A10-70 A7600"
+    },
+    {
+      "modelo": "A8-50 A5500"
+    },
+    {
+      "modelo": "A7-50 A3500"
+    },
+    {
+      "modelo": "A7-30 A3300"
+    },
+    {
+      "modelo": "Yoga Tablet 10 HD+"
+    },
+    {
+      "modelo": "S860"
+    },
+    {
+      "modelo": "S850"
+    },
+    {
+      "modelo": "S660"
+    },
+    {
+      "modelo": "A880"
+    },
+    {
+      "modelo": "A859"
+    },
+    {
+      "modelo": "S930"
+    },
+    {
+      "modelo": "S650"
+    },
+    {
+      "modelo": "Vibe Z K910"
+    },
+    {
+      "modelo": "Yoga Tablet 10"
+    },
+    {
+      "modelo": "Yoga Tablet 8"
+    },
+    {
+      "modelo": "A630"
+    },
+    {
+      "modelo": "A516"
+    },
+    {
+      "modelo": "Vibe X S960"
+    },
+    {
+      "modelo": "S5000"
+    },
+    {
+      "modelo": "A850"
+    },
+    {
+      "modelo": "A706"
+    },
+    {
+      "modelo": "P780"
+    },
+    {
+      "modelo": "S820"
+    },
+    {
+      "modelo": "A390"
+    },
+    {
+      "modelo": "A369i"
+    },
+    {
+      "modelo": "A269i"
+    },
+    {
+      "modelo": "S920"
+    },
+    {
+      "modelo": "IdeaTab S6000H"
+    },
+    {
+      "modelo": "IdeaTab S6000F"
+    },
+    {
+      "modelo": "IdeaTab S6000L"
+    },
+    {
+      "modelo": "IdeaTab S6000"
+    },
+    {
+      "modelo": "IdeaTab A3000"
+    },
+    {
+      "modelo": "IdeaTab A1000"
+    },
+    {
+      "modelo": "K900"
+    },
+    {
+      "modelo": "S890"
+    },
+    {
+      "modelo": "IdeaTab A2107"
+    },
+    {
+      "modelo": "A830"
+    },
+    {
+      "modelo": "A820"
+    },
+    {
+      "modelo": "A800"
+    },
+    {
+      "modelo": "A789"
+    },
+    {
+      "modelo": "A690"
+    },
+    {
+      "modelo": "S720"
+    },
+    {
+      "modelo": "P770"
+    },
+    {
+      "modelo": "A60+"
+    },
+    {
+      "modelo": "S560"
+    },
+    {
+      "modelo": "S880"
+    },
+    {
+      "modelo": "A660"
+    },
+    {
+      "modelo": "K860"
+    },
+    {
+      "modelo": "P700i"
+    },
+    {
+      "modelo": "A65"
+    },
+    {
+      "modelo": "A335"
+    },
+    {
+      "modelo": "A185"
+    },
+    {
+      "modelo": "S800"
+    },
+    {
+      "modelo": "Q350"
+    },
+    {
+      "modelo": "Q330"
+    },
+    {
+      "modelo": "A336"
+    },
+    {
+      "modelo": "E156"
+    },
+    {
+      "modelo": "LePhone S2"
+    },
+    {
+      "modelo": "A60"
+    },
+    {
+      "modelo": "K800"
+    },
+    {
+      "modelo": "IdeaPad S2"
+    },
+    {
+      "modelo": "LePad S2010"
+    },
+    {
+      "modelo": "LePad S2007"
+    },
+    {
+      "modelo": "LePad S2005"
+    },
+    {
+      "modelo": "IdeaPad A1"
+    },
+    {
+      "modelo": "IdeaPad K1"
+    },
+    {
+      "modelo": "ThinkPad"
+    },
+    {
+      "modelo": "K12"
+    },
+    {
+      "modelo": "K7"
+    },
+    {
+      "modelo": "ZUK Z1 mini"
+    },
+    {
+      "modelo": "A5860"
+    },
+    {
+      "modelo": "ideapad"
+    },
+    {
+      "modelo": "Vibe Z3 Pro"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "marca": "OSCAL",
+  "id_interno": "134",
+  "slug": "oscal",
+  "total_esperado": 0,
+  "total_encontrado": 31,
+  "modelos": [
+    {
+      "modelo": "Tank 1"
+    },
+    {
+      "modelo": "Tiger 8"
+    },
+    {
+      "modelo": "Pilot 3"
+    },
+    {
+      "modelo": "Pad 100"
+    },
+    {
+      "modelo": "Marine 2"
+    },
+    {
+      "modelo": "Marine 1"
+    },
+    {
+      "modelo": "Pad 90"
+    },
+    {
+      "modelo": "Pad 80 WiFi"
+    },
+    {
+      "modelo": "Pad 70 WiFi"
+    },
+    {
+      "modelo": "Pilot 1"
+    },
+    {
+      "modelo": "Flat 2C"
+    },
+    {
+      "modelo": "Flat 2"
+    },
+    {
+      "modelo": "Tiger 13"
+    },
+    {
+      "modelo": "Elite 1"
+    },
+    {
+      "modelo": "Pilot 2"
+    },
+    {
+      "modelo": "Modern 8"
+    },
+    {
+      "modelo": "Pad 16"
+    },
+    {
+      "modelo": "Pad 18"
+    },
+    {
+      "modelo": "Tiger 12"
+    },
+    {
+      "modelo": "Tiger 10"
+    },
+    {
+      "modelo": "S70 Pro"
+    },
+    {
+      "modelo": "Spider 8"
+    },
+    {
+      "modelo": "Pad 15"
+    },
+    {
+      "modelo": "C30 Pro"
+    },
+    {
+      "modelo": "Pad 70"
+    },
+    {
+      "modelo": "Pad 60"
+    },
+    {
+      "modelo": "C70"
+    },
+    {
+      "modelo": "Pad 13"
+    },
+    {
+      "modelo": "S80"
+    },
+    {
+      "modelo": "Pad 10"
+    },
+    {
+      "modelo": "C80"
+    }
+  ]
+}

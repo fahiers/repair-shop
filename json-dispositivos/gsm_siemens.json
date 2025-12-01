@@ -1,0 +1,291 @@
+{
+  "marca": "SIEMENS",
+  "id_interno": "3",
+  "slug": "siemens",
+  "total_esperado": 0,
+  "total_encontrado": 94,
+  "modelos": [
+    {
+      "modelo": "AL21"
+    },
+    {
+      "modelo": "A31"
+    },
+    {
+      "modelo": "AF51"
+    },
+    {
+      "modelo": "ME75"
+    },
+    {
+      "modelo": "AP75"
+    },
+    {
+      "modelo": "AX72"
+    },
+    {
+      "modelo": "SG75"
+    },
+    {
+      "modelo": "SFG75"
+    },
+    {
+      "modelo": "CC75"
+    },
+    {
+      "modelo": "CF110"
+    },
+    {
+      "modelo": "C72"
+    },
+    {
+      "modelo": "S75"
+    },
+    {
+      "modelo": "SL75"
+    },
+    {
+      "modelo": "C75"
+    },
+    {
+      "modelo": "SP65"
+    },
+    {
+      "modelo": "SXG75"
+    },
+    {
+      "modelo": "M75"
+    },
+    {
+      "modelo": "CX75"
+    },
+    {
+      "modelo": "CF75"
+    },
+    {
+      "modelo": "CL75"
+    },
+    {
+      "modelo": "AX75"
+    },
+    {
+      "modelo": "A75"
+    },
+    {
+      "modelo": "A70"
+    },
+    {
+      "modelo": "SF65"
+    },
+    {
+      "modelo": "CX70 Emoty"
+    },
+    {
+      "modelo": "CX70"
+    },
+    {
+      "modelo": "SX66"
+    },
+    {
+      "modelo": "SK65"
+    },
+    {
+      "modelo": "A65"
+    },
+    {
+      "modelo": "A62"
+    },
+    {
+      "modelo": "A51"
+    },
+    {
+      "modelo": "SL65"
+    },
+    {
+      "modelo": "CFX65"
+    },
+    {
+      "modelo": "S65"
+    },
+    {
+      "modelo": "M65"
+    },
+    {
+      "modelo": "C65"
+    },
+    {
+      "modelo": "CXT65"
+    },
+    {
+      "modelo": "CX65"
+    },
+    {
+      "modelo": "CF62"
+    },
+    {
+      "modelo": "A57"
+    },
+    {
+      "modelo": "PenPhone"
+    },
+    {
+      "modelo": "ST60"
+    },
+    {
+      "modelo": "CL55"
+    },
+    {
+      "modelo": "Xelibri 8"
+    },
+    {
+      "modelo": "Xelibri 7"
+    },
+    {
+      "modelo": "Xelibri 6"
+    },
+    {
+      "modelo": "Xelibri 5"
+    },
+    {
+      "modelo": "U15"
+    },
+    {
+      "modelo": "C62"
+    },
+    {
+      "modelo": "A60"
+    },
+    {
+      "modelo": "SX1"
+    },
+    {
+      "modelo": "ST55"
+    },
+    {
+      "modelo": "MC60"
+    },
+    {
+      "modelo": "C60"
+    },
+    {
+      "modelo": "Xelibri 1"
+    },
+    {
+      "modelo": "Xelibri 2"
+    },
+    {
+      "modelo": "Xelibri 3"
+    },
+    {
+      "modelo": "Xelibri 4"
+    },
+    {
+      "modelo": "U10"
+    },
+    {
+      "modelo": "A52"
+    },
+    {
+      "modelo": "M55"
+    },
+    {
+      "modelo": "A55"
+    },
+    {
+      "modelo": "SL55"
+    },
+    {
+      "modelo": "S55"
+    },
+    {
+      "modelo": "CL50"
+    },
+    {
+      "modelo": "C55"
+    },
+    {
+      "modelo": "A50"
+    },
+    {
+      "modelo": "M50"
+    },
+    {
+      "modelo": "S45i"
+    },
+    {
+      "modelo": "SX45"
+    },
+    {
+      "modelo": "SL45i"
+    },
+    {
+      "modelo": "SL42"
+    },
+    {
+      "modelo": "ME45"
+    },
+    {
+      "modelo": "S45"
+    },
+    {
+      "modelo": "C45"
+    },
+    {
+      "modelo": "SL45"
+    },
+    {
+      "modelo": "S40"
+    },
+    {
+      "modelo": "S35i"
+    },
+    {
+      "modelo": "M35i"
+    },
+    {
+      "modelo": "C35i"
+    },
+    {
+      "modelo": "C35"
+    },
+    {
+      "modelo": "A40"
+    },
+    {
+      "modelo": "A36"
+    },
+    {
+      "modelo": "A35"
+    },
+    {
+      "modelo": "S25"
+    },
+    {
+      "modelo": "M30"
+    },
+    {
+      "modelo": "C28"
+    },
+    {
+      "modelo": "C25"
+    },
+    {
+      "modelo": "SL10"
+    },
+    {
+      "modelo": "S10 active"
+    },
+    {
+      "modelo": "S10"
+    },
+    {
+      "modelo": "S11"
+    },
+    {
+      "modelo": "C10"
+    },
+    {
+      "modelo": "C11"
+    }
+  ]
+}

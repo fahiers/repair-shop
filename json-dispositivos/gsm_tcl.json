@@ -1,0 +1,282 @@
+{
+  "marca": "TCL",
+  "id_interno": "123",
+  "slug": "tcl",
+  "total_esperado": 0,
+  "total_encontrado": 91,
+  "modelos": [
+    {
+      "modelo": "NxtPaper 11 Gen 2"
+    },
+    {
+      "modelo": "NxtPaper 60 Ultra"
+    },
+    {
+      "modelo": "60 SE"
+    },
+    {
+      "modelo": "605"
+    },
+    {
+      "modelo": "NxtPaper 11 Plus"
+    },
+    {
+      "modelo": "60 XE NxtPaper"
+    },
+    {
+      "modelo": "60"
+    },
+    {
+      "modelo": "60 SE NxtPaper"
+    },
+    {
+      "modelo": "60 NxtPaper 4G"
+    },
+    {
+      "modelo": "60R"
+    },
+    {
+      "modelo": "503"
+    },
+    {
+      "modelo": "50 Pro NxtPaper"
+    },
+    {
+      "modelo": "50 NxtPaper"
+    },
+    {
+      "modelo": "50 XE NxtPaper"
+    },
+    {
+      "modelo": "NxtPaper 14"
+    },
+    {
+      "modelo": "Tab 10 NxtPaper"
+    },
+    {
+      "modelo": "Tab 10L Gen 3"
+    },
+    {
+      "modelo": "50 XL NxtPaper"
+    },
+    {
+      "modelo": "50 XL"
+    },
+    {
+      "modelo": "50 XE"
+    },
+    {
+      "modelo": "50 LE"
+    },
+    {
+      "modelo": "Flip"
+    },
+    {
+      "modelo": "Classic"
+    },
+    {
+      "modelo": "Flip 3"
+    },
+    {
+      "modelo": "Flip 2"
+    },
+    {
+      "modelo": "50 5G"
+    },
+    {
+      "modelo": "50 SE"
+    },
+    {
+      "modelo": "501"
+    },
+    {
+      "modelo": "502"
+    },
+    {
+      "modelo": "505"
+    },
+    {
+      "modelo": "Tab 10L Gen2"
+    },
+    {
+      "modelo": "Tab 10 Gen2"
+    },
+    {
+      "modelo": "40 NxtPaper 5G"
+    },
+    {
+      "modelo": "40 NxtPaper"
+    },
+    {
+      "modelo": "40 XL"
+    },
+    {
+      "modelo": "40 X"
+    },
+    {
+      "modelo": "40 XE"
+    },
+    {
+      "modelo": "Tab 11"
+    },
+    {
+      "modelo": "NxtPaper 11"
+    },
+    {
+      "modelo": "406"
+    },
+    {
+      "modelo": "Ion X"
+    },
+    {
+      "modelo": "40 SE"
+    },
+    {
+      "modelo": "408"
+    },
+    {
+      "modelo": "403"
+    },
+    {
+      "modelo": "NxtPaper 12 Pro"
+    },
+    {
+      "modelo": "405"
+    },
+    {
+      "modelo": "30 XL"
+    },
+    {
+      "modelo": "40R"
+    },
+    {
+      "modelo": "Stylus"
+    },
+    {
+      "modelo": "Tab 10s 5G"
+    },
+    {
+      "modelo": "Tab 10 HD 4G"
+    },
+    {
+      "modelo": "30 LE"
+    },
+    {
+      "modelo": "30 5G"
+    },
+    {
+      "modelo": "30+"
+    },
+    {
+      "modelo": "30"
+    },
+    {
+      "modelo": "30 SE"
+    },
+    {
+      "modelo": "30E"
+    },
+    {
+      "modelo": "306"
+    },
+    {
+      "modelo": "305"
+    },
+    {
+      "modelo": "205"
+    },
+    {
+      "modelo": "30 V 5G"
+    },
+    {
+      "modelo": "30 XE 5G"
+    },
+    {
+      "modelo": "NxtPaper 10s"
+    },
+    {
+      "modelo": "Tab 10L"
+    },
+    {
+      "modelo": "Tab 8 4G"
+    },
+    {
+      "modelo": "20 XE"
+    },
+    {
+      "modelo": "20E"
+    },
+    {
+      "modelo": "20Y"
+    },
+    {
+      "modelo": "A30"
+    },
+    {
+      "modelo": "A3"
+    },
+    {
+      "modelo": "20B"
+    },
+    {
+      "modelo": "20 R 5G"
+    },
+    {
+      "modelo": "L10 Pro"
+    },
+    {
+      "modelo": "20 Pro 5G"
+    },
+    {
+      "modelo": "20S"
+    },
+    {
+      "modelo": "20L+"
+    },
+    {
+      "modelo": "20L"
+    },
+    {
+      "modelo": "Tab 10s"
+    },
+    {
+      "modelo": "NxtPaper"
+    },
+    {
+      "modelo": "20 5G"
+    },
+    {
+      "modelo": "20 SE"
+    },
+    {
+      "modelo": "10 5G UW"
+    },
+    {
+      "modelo": "MoveTime"
+    },
+    {
+      "modelo": "10 TabMid"
+    },
+    {
+      "modelo": "10 TabMax"
+    },
+    {
+      "modelo": "10 SE"
+    },
+    {
+      "modelo": "10 Plus"
+    },
+    {
+      "modelo": "10 5G"
+    },
+    {
+      "modelo": "10 Pro"
+    },
+    {
+      "modelo": "10L"
+    },
+    {
+      "modelo": "Plex"
+    }
+  ]
+}

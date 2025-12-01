@@ -1,0 +1,411 @@
+{
+  "marca": "ULEFONE",
+  "id_interno": "124",
+  "slug": "ulefone",
+  "total_esperado": 0,
+  "total_encontrado": 134,
+  "modelos": [
+    {
+      "modelo": "Armor Pad 5 Ultra"
+    },
+    {
+      "modelo": "Armor Pad 5 Pro"
+    },
+    {
+      "modelo": "Tab A9 Pro"
+    },
+    {
+      "modelo": "Armor 29 Pro Thermal"
+    },
+    {
+      "modelo": "Armor 29 Pro"
+    },
+    {
+      "modelo": "RugKing"
+    },
+    {
+      "modelo": "Armor 29 Ultra"
+    },
+    {
+      "modelo": "Armor 34"
+    },
+    {
+      "modelo": "Armor 33 Pro"
+    },
+    {
+      "modelo": "Armor 33"
+    },
+    {
+      "modelo": "Armor 30"
+    },
+    {
+      "modelo": "Armor X16 Pro"
+    },
+    {
+      "modelo": "Armor X16"
+    },
+    {
+      "modelo": "Armor 34 Pro"
+    },
+    {
+      "modelo": "Armor 28 Pro"
+    },
+    {
+      "modelo": "Armor X32 Pro"
+    },
+    {
+      "modelo": "Armor X32"
+    },
+    {
+      "modelo": "Tab A10"
+    },
+    {
+      "modelo": "Armor 30 Pro"
+    },
+    {
+      "modelo": "Armor 28 Ultra Thermal"
+    },
+    {
+      "modelo": "Armor Mini 4"
+    },
+    {
+      "modelo": "Armor 28 Ultra"
+    },
+    {
+      "modelo": "Armor X31"
+    },
+    {
+      "modelo": "Armor X31 Pro"
+    },
+    {
+      "modelo": "Armor 27T"
+    },
+    {
+      "modelo": "Armor 27"
+    },
+    {
+      "modelo": "Note 18 Pro"
+    },
+    {
+      "modelo": "Tab A10 Pro"
+    },
+    {
+      "modelo": "Note 20 Pro"
+    },
+    {
+      "modelo": "Note 19"
+    },
+    {
+      "modelo": "Armor Pad 4 Ultra Thermal"
+    },
+    {
+      "modelo": "Armor Pad 4 Ultra"
+    },
+    {
+      "modelo": "Armor Mini 20"
+    },
+    {
+      "modelo": "Armor Mini 20 Pro"
+    },
+    {
+      "modelo": "Armor Mini 20T Pro"
+    },
+    {
+      "modelo": "Armor 27 Pro"
+    },
+    {
+      "modelo": "Armor 27T Pro"
+    },
+    {
+      "modelo": "Armor 25T"
+    },
+    {
+      "modelo": "Tab W10"
+    },
+    {
+      "modelo": "Tab A11 Pro"
+    },
+    {
+      "modelo": "Tab A11"
+    },
+    {
+      "modelo": "Armor 25T Pro"
+    },
+    {
+      "modelo": "Note 18 Ultra"
+    },
+    {
+      "modelo": "Armor 26 Ultra"
+    },
+    {
+      "modelo": "Armor 26 Ultra Walkie-talkie"
+    },
+    {
+      "modelo": "Armor Pad 3 Pro"
+    },
+    {
+      "modelo": "Armor Pad Pro"
+    },
+    {
+      "modelo": "Power Armor 16S"
+    },
+    {
+      "modelo": "Note 17 Pro"
+    },
+    {
+      "modelo": "Armor 23 Ultra"
+    },
+    {
+      "modelo": "Power Armor 18T Ultra"
+    },
+    {
+      "modelo": "Power Armor 18 Ultra"
+    },
+    {
+      "modelo": "Armor Pad 2"
+    },
+    {
+      "modelo": "Armor 24"
+    },
+    {
+      "modelo": "Armor X12"
+    },
+    {
+      "modelo": "Armor Pad Lite"
+    },
+    {
+      "modelo": "Armor 22"
+    },
+    {
+      "modelo": "Armor X13"
+    },
+    {
+      "modelo": "Armor X12 Pro"
+    },
+    {
+      "modelo": "Power Armor X11"
+    },
+    {
+      "modelo": "Note 15"
+    },
+    {
+      "modelo": "Note 16 Pro"
+    },
+    {
+      "modelo": "Armor 21"
+    },
+    {
+      "modelo": "Armor Pad"
+    },
+    {
+      "modelo": "Power Armor 20WT"
+    },
+    {
+      "modelo": "Power Armor 19T"
+    },
+    {
+      "modelo": "Power Armor 18"
+    },
+    {
+      "modelo": "Note 14"
+    },
+    {
+      "modelo": "Power Armor 19"
+    },
+    {
+      "modelo": "Tab A8"
+    },
+    {
+      "modelo": "Power Armor 18T"
+    },
+    {
+      "modelo": "Armor 17 Pro"
+    },
+    {
+      "modelo": "Power Armor 16 Pro"
+    },
+    {
+      "modelo": "Power Armor X11 Pro"
+    },
+    {
+      "modelo": "Armor 15"
+    },
+    {
+      "modelo": "Armor X6 Pro"
+    },
+    {
+      "modelo": "Note 12"
+    },
+    {
+      "modelo": "Note 6T"
+    },
+    {
+      "modelo": "Power Armor 14 Pro"
+    },
+    {
+      "modelo": "Armor X10 Pro"
+    },
+    {
+      "modelo": "Note 10P"
+    },
+    {
+      "modelo": "Armor X10"
+    },
+    {
+      "modelo": "Note 13P"
+    },
+    {
+      "modelo": "Note 12P"
+    },
+    {
+      "modelo": "Note 6P"
+    },
+    {
+      "modelo": "Power Armor 14"
+    },
+    {
+      "modelo": "Armor X9 Pro"
+    },
+    {
+      "modelo": "Armor X9"
+    },
+    {
+      "modelo": "Armor X8i"
+    },
+    {
+      "modelo": "Armor 12 5G"
+    },
+    {
+      "modelo": "Power Armor 13"
+    },
+    {
+      "modelo": "Note 6"
+    },
+    {
+      "modelo": "Tab A7"
+    },
+    {
+      "modelo": "Armor 11T 5G"
+    },
+    {
+      "modelo": "Armor 8 Pro"
+    },
+    {
+      "modelo": "Armor 11 5G"
+    },
+    {
+      "modelo": "Note 11P"
+    },
+    {
+      "modelo": "Note 10"
+    },
+    {
+      "modelo": "Armor Mini 2"
+    },
+    {
+      "modelo": "Note 7T"
+    },
+    {
+      "modelo": "Armor 10 5G"
+    },
+    {
+      "modelo": "Watch Pro"
+    },
+    {
+      "modelo": "Watch GPS"
+    },
+    {
+      "modelo": "Watch"
+    },
+    {
+      "modelo": "Armor X8"
+    },
+    {
+      "modelo": "Armor 9E"
+    },
+    {
+      "modelo": "Armor X5 Pro"
+    },
+    {
+      "modelo": "Note 8"
+    },
+    {
+      "modelo": "Armor 8"
+    },
+    {
+      "modelo": "Note 9P"
+    },
+    {
+      "modelo": "Armor 9"
+    },
+    {
+      "modelo": "Note 8P"
+    },
+    {
+      "modelo": "Armor X7 Pro"
+    },
+    {
+      "modelo": "Armor 7E"
+    },
+    {
+      "modelo": "Armor X7"
+    },
+    {
+      "modelo": "Armor 7"
+    },
+    {
+      "modelo": "Armor X6"
+    },
+    {
+      "modelo": "Armor 6S"
+    },
+    {
+      "modelo": "Armor 3W"
+    },
+    {
+      "modelo": "Armor 3WT"
+    },
+    {
+      "modelo": "Armor X5"
+    },
+    {
+      "modelo": "T2"
+    },
+    {
+      "modelo": "Armor X3"
+    },
+    {
+      "modelo": "Armor 5S"
+    },
+    {
+      "modelo": "Armor 6E"
+    },
+    {
+      "modelo": "Note 7P"
+    },
+    {
+      "modelo": "S11"
+    },
+    {
+      "modelo": "Note 7"
+    },
+    {
+      "modelo": "Armor X2"
+    },
+    {
+      "modelo": "S1"
+    },
+    {
+      "modelo": "Armor X"
+    },
+    {
+      "modelo": "Armor 2"
+    },
+    {
+      "modelo": "Armor 8 5G"
+    },
+    {
+      "modelo": "T2 Pro"
+    }
+  ]
+}

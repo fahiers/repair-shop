@@ -1,0 +1,96 @@
+{
+  "marca": "AMAZON",
+  "id_interno": "76",
+  "slug": "amazon",
+  "total_esperado": 0,
+  "total_encontrado": 25,
+  "modelos": [
+    {
+      "modelo": "Fire Max 11"
+    },
+    {
+      "modelo": "Fire HD 8 Plus",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Fire HD 8",
+      "ano": "2022"
+    },
+    {
+      "modelo": "Fire HD 10 Plus",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Fire HD 10",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Fire HD 8 Plus",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Fire HD 8",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Fire HD 10",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Fire HD 10",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Fire HD 8",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Fire 7",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Fire HD 10"
+    },
+    {
+      "modelo": "Fire HD 8"
+    },
+    {
+      "modelo": "Fire 7"
+    },
+    {
+      "modelo": "Fire HDX 8.9",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Fire HD 7"
+    },
+    {
+      "modelo": "Fire HD 6"
+    },
+    {
+      "modelo": "Fire Phone"
+    },
+    {
+      "modelo": "Kindle Fire HDX 8.9"
+    },
+    {
+      "modelo": "Kindle Fire HDX"
+    },
+    {
+      "modelo": "Kindle Fire HD",
+      "ano": "2013"
+    },
+    {
+      "modelo": "Kindle Fire HD 8.9 LTE"
+    },
+    {
+      "modelo": "Kindle Fire HD 8.9"
+    },
+    {
+      "modelo": "Kindle Fire HD"
+    },
+    {
+      "modelo": "Kindle Fire"
+    }
+  ]
+}

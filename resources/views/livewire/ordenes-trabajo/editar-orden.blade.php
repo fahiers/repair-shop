@@ -65,17 +65,6 @@
                         </select>
                     </div>
 
-                    <flux:dropdown position="bottom-end">
-                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700" title="Opciones">
-                            <flux:icon.ellipsis-vertical class="size-4" />
-                            <span class="sr-only">Opciones</span>
-                        </button>
-
-                        <flux:menu>
-                            <flux:menu.item href="{{ route('ordenes-trabajo.recibo', ['orden' => $orden->id]) }}" target="_blank" icon="document-text">Recibo de ingreso</flux:menu.item>
-                        </flux:menu>
-                    </flux:dropdown>
-
                     @php
                         $puedePagar = in_array($orden->estado, [\App\Enums\EstadoOrden::Listo, \App\Enums\EstadoOrden::Entregado], true);
                     @endphp
@@ -404,19 +393,15 @@
                     <div class="flex items-center justify-start gap-2">
                         <a href="{{ route('ordenes-trabajo.pdf', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
                             <flux:icon.printer class="size-4" />
-                            Orden
-                        </a>
-                        <a href="{{ route('ordenes-trabajo.sticker', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
-                            <flux:icon.tag class="size-4" />
-                            Etiqueta
+                            Presupuesto
                         </a>
                         <a href="{{ route('ordenes-trabajo.sticker-termico', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
                             <flux:icon.printer class="size-4" />
-                            Térmico
+                            Sticker
                         </a>
-                        <a href="{{ route('ordenes-trabajo.informe-tecnico', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
+                        <a href="{{ route('ordenes-trabajo.recibo', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
                             <flux:icon.document-text class="size-4" />
-                            Informe
+                            Recibo de ingreso
                         </a>
                         <a href="{{ route('ordenes-trabajo.condiciones-garantia', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-sm rounded-md border-2 border-zinc-400 dark:border-zinc-500 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
                             <flux:icon.shield-check class="size-4" />
@@ -720,7 +705,11 @@
                                 </p>
                             </div>
                             
-                            <div class="flex justify-end">
+                            <div class="flex items-center justify-between">
+                                <a href="{{ route('ordenes-trabajo.informe-tecnico', ['orden' => $orden->id]) }}" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 bg-white dark:bg-zinc-800">
+                                    <flux:icon.printer class="size-4" />
+                                    Imprimir Informe
+                                </a>
                                 <button
                                     type="button"
                                     wire:click="guardarInformeTecnico"

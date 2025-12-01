@@ -1,0 +1,641 @@
+{
+  "marca": "ASUS",
+  "id_interno": "46",
+  "slug": "asus",
+  "total_esperado": 0,
+  "total_encontrado": 207,
+  "modelos": [
+    {
+      "modelo": "Zenfone 12 Ultra"
+    },
+    {
+      "modelo": "ROG Phone 9 Pro"
+    },
+    {
+      "modelo": "ROG Phone 9 FE"
+    },
+    {
+      "modelo": "ROG Phone 9"
+    },
+    {
+      "modelo": "Zenfone 11 Ultra"
+    },
+    {
+      "modelo": "ROG Phone 8 Pro"
+    },
+    {
+      "modelo": "ROG Phone 8"
+    },
+    {
+      "modelo": "Zenfone 10"
+    },
+    {
+      "modelo": "ROG Phone 7 Ultimate"
+    },
+    {
+      "modelo": "ROG Phone 7"
+    },
+    {
+      "modelo": "ROG Phone 6D Ultimate"
+    },
+    {
+      "modelo": "ROG Phone 6D"
+    },
+    {
+      "modelo": "ROG Phone 6 Diablo Immortal Edition"
+    },
+    {
+      "modelo": "ROG Phone 6 Batman Edition"
+    },
+    {
+      "modelo": "Zenfone 9"
+    },
+    {
+      "modelo": "ROG Phone 6 Pro"
+    },
+    {
+      "modelo": "ROG Phone 6"
+    },
+    {
+      "modelo": "ROG Phone 5s Pro"
+    },
+    {
+      "modelo": "ROG Phone 5s"
+    },
+    {
+      "modelo": "Smartphone for Snapdragon Insiders"
+    },
+    {
+      "modelo": "Zenfone 8 Flip"
+    },
+    {
+      "modelo": "Zenfone 8"
+    },
+    {
+      "modelo": "ROG Phone 5 Ultimate"
+    },
+    {
+      "modelo": "ROG Phone 5 Pro"
+    },
+    {
+      "modelo": "ROG Phone 5"
+    },
+    {
+      "modelo": "Zenfone 7 Pro"
+    },
+    {
+      "modelo": "Zenfone 7"
+    },
+    {
+      "modelo": "ROG Phone 3"
+    },
+    {
+      "modelo": "ROG Phone 3 Strix"
+    },
+    {
+      "modelo": "ROG Phone II ZS660KL"
+    },
+    {
+      "modelo": "Zenfone 6 ZS630KL"
+    },
+    {
+      "modelo": "ZenFone Live (L2)"
+    },
+    {
+      "modelo": "Zenfone Max Plus (M2) ZB634KL"
+    },
+    {
+      "modelo": "Zenfone Max Shot ZB634KL"
+    },
+    {
+      "modelo": "Zenfone Max Pro (M2) ZB631KL"
+    },
+    {
+      "modelo": "Zenfone Max (M2) ZB633KL"
+    },
+    {
+      "modelo": "Zenfone Max (M1) ZB556KL"
+    },
+    {
+      "modelo": "ZenFone Lite (L1) ZA551KL"
+    },
+    {
+      "modelo": "ROG Phone ZS600KL"
+    },
+    {
+      "modelo": "ZenFone Live (L1) ZA550KL"
+    },
+    {
+      "modelo": "Zenfone Max Pro (M1) ZB601KL/ZB602K"
+    },
+    {
+      "modelo": "Zenfone 5z ZS620KL"
+    },
+    {
+      "modelo": "Zenfone 5 ZE620KL"
+    },
+    {
+      "modelo": "Zenfone 5 Lite ZC600KL"
+    },
+    {
+      "modelo": "Zenfone Max (M1) ZB555KL"
+    },
+    {
+      "modelo": "Zenfone Max Plus (M1) ZB570TL"
+    },
+    {
+      "modelo": "Zenfone V V520KL"
+    },
+    {
+      "modelo": "Zenfone 4 Pro ZS551KL"
+    },
+    {
+      "modelo": "Zenfone 4 ZE554KL"
+    },
+    {
+      "modelo": "Zenfone 4 Selfie Lite ZB553KL"
+    },
+    {
+      "modelo": "Zenfone 4 Selfie ZB553KL"
+    },
+    {
+      "modelo": "Zenfone 4 Selfie Pro ZD552KL"
+    },
+    {
+      "modelo": "Zenfone 4 Selfie ZD553KL"
+    },
+    {
+      "modelo": "Zenfone 4 Max ZC520KL"
+    },
+    {
+      "modelo": "Zenfone 4 Max Pro ZC554KL"
+    },
+    {
+      "modelo": "Zenfone 4 Max Plus ZC554KL"
+    },
+    {
+      "modelo": "Zenfone 4 Max ZC554KL"
+    },
+    {
+      "modelo": "Zenpad Z8s ZT582KL"
+    },
+    {
+      "modelo": "Zenpad 3s 8.0 Z582KL"
+    },
+    {
+      "modelo": "Zenfone Go ZB552KL"
+    },
+    {
+      "modelo": "Zenfone Live ZB501KL"
+    },
+    {
+      "modelo": "Zenfone 3s Max ZC521TL"
+    },
+    {
+      "modelo": "Zenpad 3S 10 Z500KL"
+    },
+    {
+      "modelo": "Zenfone AR ZS571KL"
+    },
+    {
+      "modelo": "Zenfone 3 Zoom ZE553KL"
+    },
+    {
+      "modelo": "Zenfone Go ZB690KG"
+    },
+    {
+      "modelo": "Zenpad 3 8.0 Z581KL"
+    },
+    {
+      "modelo": "Zenfone Go ZB500KL"
+    },
+    {
+      "modelo": "Zenfone 3 Max ZC553KL"
+    },
+    {
+      "modelo": "Zenfone 3 Deluxe 5.5 ZS550KL"
+    },
+    {
+      "modelo": "Zenpad Z10 ZT500KL"
+    },
+    {
+      "modelo": "Zenwatch 3 WI503Q"
+    },
+    {
+      "modelo": "Zenpad 3S 10 Z500M"
+    },
+    {
+      "modelo": "Zenfone 3 Max ZC520TL"
+    },
+    {
+      "modelo": "Zenfone 3 Laser ZC551KL"
+    },
+    {
+      "modelo": "Zenfone 3 ZE520KL"
+    },
+    {
+      "modelo": "Zenfone Pegasus 3"
+    },
+    {
+      "modelo": "Zenpad Z8"
+    },
+    {
+      "modelo": "Zenfone 3 Ultra ZU680KL"
+    },
+    {
+      "modelo": "Zenfone 3 Deluxe ZS570KL"
+    },
+    {
+      "modelo": "Zenfone 3 ZE552KL"
+    },
+    {
+      "modelo": "Zenfone Max ZC550KL",
+      "ano": "2016"
+    },
+    {
+      "modelo": "Zenfone Go ZB450KL"
+    },
+    {
+      "modelo": "Zenfone Go ZB452KG"
+    },
+    {
+      "modelo": "Zenfone Go ZB551KL"
+    },
+    {
+      "modelo": "Zenfone Go T500"
+    },
+    {
+      "modelo": "Zenfone Go ZC451TG"
+    },
+    {
+      "modelo": "Live G500TG"
+    },
+    {
+      "modelo": "Zenwatch 2 WI501Q"
+    },
+    {
+      "modelo": "Zenwatch 2 WI502Q"
+    },
+    {
+      "modelo": "Zenwatch WI500Q"
+    },
+    {
+      "modelo": "Zenfone 2 Laser ZE551KL"
+    },
+    {
+      "modelo": "Zenfone Zoom ZX551ML"
+    },
+    {
+      "modelo": "Zenpad 8.0 Z380M"
+    },
+    {
+      "modelo": "Zenpad 10 Z300M"
+    },
+    {
+      "modelo": "Zenpad 10 Z300C"
+    },
+    {
+      "modelo": "Zenfone Go ZC500TG"
+    },
+    {
+      "modelo": "Zenfone Max ZC550KL"
+    },
+    {
+      "modelo": "Zenfone 2 Deluxe ZE551ML"
+    },
+    {
+      "modelo": "Zenfone 2 Laser ZE601KL"
+    },
+    {
+      "modelo": "Zenfone 2 Laser ZE600KL"
+    },
+    {
+      "modelo": "Zenfone 2 Laser ZE550KL"
+    },
+    {
+      "modelo": "Zenfone 2 Laser ZE500KG"
+    },
+    {
+      "modelo": "Zenfone 2 Laser ZE500KL"
+    },
+    {
+      "modelo": "Zenpad 7.0 Z370CG"
+    },
+    {
+      "modelo": "Zenfone 2E"
+    },
+    {
+      "modelo": "Pegasus 2 Plus"
+    },
+    {
+      "modelo": "Zenpad S 8.0 Z580CA"
+    },
+    {
+      "modelo": "Zenpad S 8.0 Z580C"
+    },
+    {
+      "modelo": "Zenpad 8.0 Z380KL"
+    },
+    {
+      "modelo": "Zenpad 8.0 Z380C"
+    },
+    {
+      "modelo": "Zenpad C 7.0 Z170MG"
+    },
+    {
+      "modelo": "Zenpad C 7.0"
+    },
+    {
+      "modelo": "Zenfone Selfie ZD551KL"
+    },
+    {
+      "modelo": "Zenfone 2 ZE500CL"
+    },
+    {
+      "modelo": "Zenfone 2 ZE550ML"
+    },
+    {
+      "modelo": "Zenfone 2 ZE551ML"
+    },
+    {
+      "modelo": "Fonepad 7 FE375CL"
+    },
+    {
+      "modelo": "Zenfone C ZC451CG"
+    },
+    {
+      "modelo": "Fonepad 7 FE171CG"
+    },
+    {
+      "modelo": "Zenfone Zoom ZX550"
+    },
+    {
+      "modelo": "Pegasus"
+    },
+    {
+      "modelo": "Zenfone 5 Lite A502CG",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Memo Pad 10 ME103K"
+    },
+    {
+      "modelo": "PadFone X mini"
+    },
+    {
+      "modelo": "Memo Pad 7 ME572CL"
+    },
+    {
+      "modelo": "Memo Pad 7 ME572C"
+    },
+    {
+      "modelo": "Zenfone 5 A500KL",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Zenfone 4 A450CG",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Memo Pad 8 ME581CL"
+    },
+    {
+      "modelo": "Memo Pad 8 ME181C"
+    },
+    {
+      "modelo": "Memo Pad 7 ME176C"
+    },
+    {
+      "modelo": "Fonepad 8 FE380CG"
+    },
+    {
+      "modelo": "Fonepad 7 FE375CXG"
+    },
+    {
+      "modelo": "Fonepad 7 FE375CG"
+    },
+    {
+      "modelo": "Transformer Pad TF303CL"
+    },
+    {
+      "modelo": "Transformer Pad TF103C"
+    },
+    {
+      "modelo": "Fonepad 7",
+      "ano": "2014"
+    },
+    {
+      "modelo": "PadFone X"
+    },
+    {
+      "modelo": "PadFone S"
+    },
+    {
+      "modelo": "PadFone Infinity Lite"
+    },
+    {
+      "modelo": "PadFone E"
+    },
+    {
+      "modelo": "Zenfone 6 A601CG",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Zenfone 6 A600CG",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Zenfone 5 A501CG",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Zenfone 5 A500CG",
+      "ano": "2014"
+    },
+    {
+      "modelo": "Zenfone 4",
+      "ano": "2014"
+    },
+    {
+      "modelo": "PadFone mini 4G (Intel)"
+    },
+    {
+      "modelo": "PadFone mini (Intel)"
+    },
+    {
+      "modelo": "PadFone mini"
+    },
+    {
+      "modelo": "Transformer Book Trio"
+    },
+    {
+      "modelo": "PadFone Infinity 2"
+    },
+    {
+      "modelo": "Memo Pad 10"
+    },
+    {
+      "modelo": "Memo Pad 8 ME180A"
+    },
+    {
+      "modelo": "Fonepad 7"
+    },
+    {
+      "modelo": "Google Nexus 7",
+      "ano": "2013"
+    },
+    {
+      "modelo": "Fonepad Note FHD6"
+    },
+    {
+      "modelo": "Transformer Pad TF701T"
+    },
+    {
+      "modelo": "Memo Pad FHD10"
+    },
+    {
+      "modelo": "Memo Pad HD7 8 GB"
+    },
+    {
+      "modelo": "Memo Pad HD7 16 GB"
+    },
+    {
+      "modelo": "Fonepad"
+    },
+    {
+      "modelo": "PadFone Infinity"
+    },
+    {
+      "modelo": "Memo Pad Smart 10"
+    },
+    {
+      "modelo": "Memo Pad ME172V"
+    },
+    {
+      "modelo": "Google Nexus 7 Cellular"
+    },
+    {
+      "modelo": "VivoTab RT TF600T"
+    },
+    {
+      "modelo": "PadFone 2"
+    },
+    {
+      "modelo": "Google Nexus 7"
+    },
+    {
+      "modelo": "Transformer Pad Infinity 700 LTE"
+    },
+    {
+      "modelo": "Transformer Pad Infinity 700 3G"
+    },
+    {
+      "modelo": "Transformer Pad TF300TG"
+    },
+    {
+      "modelo": "Transformer Pad TF300T"
+    },
+    {
+      "modelo": "Transformer Pad Infinity 700"
+    },
+    {
+      "modelo": "Memo"
+    },
+    {
+      "modelo": "Transformer Prime TF700T"
+    },
+    {
+      "modelo": "Transformer Prime TF201"
+    },
+    {
+      "modelo": "PadFone"
+    },
+    {
+      "modelo": "Transformer TF101"
+    },
+    {
+      "modelo": "P835"
+    },
+    {
+      "modelo": "E600"
+    },
+    {
+      "modelo": "P565"
+    },
+    {
+      "modelo": "P552w"
+    },
+    {
+      "modelo": "P320"
+    },
+    {
+      "modelo": "M930"
+    },
+    {
+      "modelo": "P550"
+    },
+    {
+      "modelo": "P750"
+    },
+    {
+      "modelo": "P527"
+    },
+    {
+      "modelo": "Z801"
+    },
+    {
+      "modelo": "J502"
+    },
+    {
+      "modelo": "V88i"
+    },
+    {
+      "modelo": "M530w"
+    },
+    {
+      "modelo": "P526"
+    },
+    {
+      "modelo": "J501"
+    },
+    {
+      "modelo": "P735"
+    },
+    {
+      "modelo": "Z810"
+    },
+    {
+      "modelo": "P535"
+    },
+    {
+      "modelo": "P525"
+    },
+    {
+      "modelo": "P505"
+    },
+    {
+      "modelo": "M303"
+    },
+    {
+      "modelo": "M307"
+    },
+    {
+      "modelo": "M310"
+    },
+    {
+      "modelo": "V80"
+    },
+    {
+      "modelo": "V75"
+    },
+    {
+      "modelo": "V66"
+    },
+    {
+      "modelo": "V55"
+    },
+    {
+      "modelo": "Zenfone Pegasus 3s"
+    }
+  ]
+}

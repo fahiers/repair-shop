@@ -1,0 +1,474 @@
+{
+  "marca": "APPLE",
+  "id_interno": "48",
+  "slug": "apple",
+  "total_esperado": 0,
+  "total_encontrado": 143,
+  "modelos": [
+    {
+      "modelo": "iPad Pro 13",
+      "ano": "2025"
+    },
+    {
+      "modelo": "iPad Pro 11",
+      "ano": "2025"
+    },
+    {
+      "modelo": "iPhone 17 Pro Max"
+    },
+    {
+      "modelo": "iPhone 17 Pro"
+    },
+    {
+      "modelo": "iPhone Air"
+    },
+    {
+      "modelo": "iPhone 17"
+    },
+    {
+      "modelo": "Watch Ultra 3"
+    },
+    {
+      "modelo": "Watch Series 11"
+    },
+    {
+      "modelo": "Watch Series 11 Aluminum"
+    },
+    {
+      "modelo": "Watch SE 3"
+    },
+    {
+      "modelo": "iPad Air 13",
+      "ano": "2025"
+    },
+    {
+      "modelo": "iPad Air 11",
+      "ano": "2025"
+    },
+    {
+      "modelo": "iPad",
+      "ano": "2025"
+    },
+    {
+      "modelo": "iPhone 16e"
+    },
+    {
+      "modelo": "iPad mini",
+      "ano": "2024"
+    },
+    {
+      "modelo": "iPhone 16 Pro Max"
+    },
+    {
+      "modelo": "iPhone 16 Pro"
+    },
+    {
+      "modelo": "iPhone 16 Plus"
+    },
+    {
+      "modelo": "iPhone 16"
+    },
+    {
+      "modelo": "Watch Series 10"
+    },
+    {
+      "modelo": "Watch Series 10 Aluminum"
+    },
+    {
+      "modelo": "iPad Pro 13",
+      "ano": "2024"
+    },
+    {
+      "modelo": "iPad Pro 11",
+      "ano": "2024"
+    },
+    {
+      "modelo": "iPad Air 13",
+      "ano": "2024"
+    },
+    {
+      "modelo": "iPad Air 11",
+      "ano": "2024"
+    },
+    {
+      "modelo": "iPhone 15 Pro Max"
+    },
+    {
+      "modelo": "iPhone 15 Pro"
+    },
+    {
+      "modelo": "iPhone 15 Plus"
+    },
+    {
+      "modelo": "iPhone 15"
+    },
+    {
+      "modelo": "Watch Ultra 2"
+    },
+    {
+      "modelo": "Watch Series 9"
+    },
+    {
+      "modelo": "Watch Series 9 Aluminum"
+    },
+    {
+      "modelo": "iPad Pro 12.9",
+      "ano": "2022"
+    },
+    {
+      "modelo": "iPad Pro 11",
+      "ano": "2022"
+    },
+    {
+      "modelo": "iPad",
+      "ano": "2022"
+    },
+    {
+      "modelo": "iPhone 14 Pro Max"
+    },
+    {
+      "modelo": "iPhone 14 Pro"
+    },
+    {
+      "modelo": "iPhone 14 Plus"
+    },
+    {
+      "modelo": "iPhone 14"
+    },
+    {
+      "modelo": "Watch Ultra"
+    },
+    {
+      "modelo": "Watch Series 8"
+    },
+    {
+      "modelo": "Watch Series 8 Aluminum"
+    },
+    {
+      "modelo": "Watch SE 2"
+    },
+    {
+      "modelo": "iPhone SE",
+      "ano": "2022"
+    },
+    {
+      "modelo": "iPad Air",
+      "ano": "2022"
+    },
+    {
+      "modelo": "iPhone 13 Pro Max"
+    },
+    {
+      "modelo": "iPhone 13 Pro"
+    },
+    {
+      "modelo": "iPhone 13"
+    },
+    {
+      "modelo": "iPhone 13 mini"
+    },
+    {
+      "modelo": "iPad mini",
+      "ano": "2021"
+    },
+    {
+      "modelo": "iPad 10.2",
+      "ano": "2021"
+    },
+    {
+      "modelo": "Watch Edition Series 7"
+    },
+    {
+      "modelo": "Watch Series 7"
+    },
+    {
+      "modelo": "Watch Series 7 Aluminum"
+    },
+    {
+      "modelo": "iPad Pro 12.9",
+      "ano": "2021"
+    },
+    {
+      "modelo": "iPad Pro 11",
+      "ano": "2021"
+    },
+    {
+      "modelo": "iPhone 12 Pro Max"
+    },
+    {
+      "modelo": "iPhone 12 Pro"
+    },
+    {
+      "modelo": "iPhone 12"
+    },
+    {
+      "modelo": "iPhone 12 mini"
+    },
+    {
+      "modelo": "iPad Air",
+      "ano": "2020"
+    },
+    {
+      "modelo": "iPad 10.2",
+      "ano": "2020"
+    },
+    {
+      "modelo": "Watch SE"
+    },
+    {
+      "modelo": "Watch Series 6 Aluminum"
+    },
+    {
+      "modelo": "Watch Series 6"
+    },
+    {
+      "modelo": "Watch Edition Series 6"
+    },
+    {
+      "modelo": "iPhone SE",
+      "ano": "2020"
+    },
+    {
+      "modelo": "iPad Pro 12.9",
+      "ano": "2020"
+    },
+    {
+      "modelo": "iPad Pro 11",
+      "ano": "2020"
+    },
+    {
+      "modelo": "iPhone 11 Pro Max"
+    },
+    {
+      "modelo": "iPhone 11 Pro"
+    },
+    {
+      "modelo": "iPhone 11"
+    },
+    {
+      "modelo": "iPad 10.2",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Watch Edition Series 5"
+    },
+    {
+      "modelo": "Watch Series 5"
+    },
+    {
+      "modelo": "Watch Series 5 Aluminum"
+    },
+    {
+      "modelo": "iPad Air",
+      "ano": "2019"
+    },
+    {
+      "modelo": "iPad mini",
+      "ano": "2019"
+    },
+    {
+      "modelo": "iPad Pro 12.9",
+      "ano": "2018"
+    },
+    {
+      "modelo": "iPad Pro 11",
+      "ano": "2018"
+    },
+    {
+      "modelo": "iPhone XS Max"
+    },
+    {
+      "modelo": "iPhone XS"
+    },
+    {
+      "modelo": "iPhone XR"
+    },
+    {
+      "modelo": "Watch Series 4"
+    },
+    {
+      "modelo": "Watch Series 4 Aluminum"
+    },
+    {
+      "modelo": "iPad 9.7",
+      "ano": "2018"
+    },
+    {
+      "modelo": "iPhone X"
+    },
+    {
+      "modelo": "iPhone 8 Plus"
+    },
+    {
+      "modelo": "iPhone 8"
+    },
+    {
+      "modelo": "Watch Edition Series 3"
+    },
+    {
+      "modelo": "Watch Series 3"
+    },
+    {
+      "modelo": "Watch Series 3 Aluminum"
+    },
+    {
+      "modelo": "iPad Pro 12.9",
+      "ano": "2017"
+    },
+    {
+      "modelo": "iPad Pro 10.5",
+      "ano": "2017"
+    },
+    {
+      "modelo": "iPad 9.7",
+      "ano": "2017"
+    },
+    {
+      "modelo": "Watch Edition Series 2 42mm"
+    },
+    {
+      "modelo": "Watch Edition Series 2 38mm"
+    },
+    {
+      "modelo": "Watch Series 2 42mm"
+    },
+    {
+      "modelo": "Watch Series 2 38mm"
+    },
+    {
+      "modelo": "Watch Series 2 Aluminum 42mm"
+    },
+    {
+      "modelo": "Watch Series 1 Aluminum 42mm"
+    },
+    {
+      "modelo": "Watch Series 2 Aluminum 38mm"
+    },
+    {
+      "modelo": "Watch Series 1 Aluminum 38mm"
+    },
+    {
+      "modelo": "iPhone 7 Plus"
+    },
+    {
+      "modelo": "iPhone 7"
+    },
+    {
+      "modelo": "iPad Pro 9.7",
+      "ano": "2016"
+    },
+    {
+      "modelo": "iPhone SE"
+    },
+    {
+      "modelo": "iPhone 6s Plus"
+    },
+    {
+      "modelo": "iPhone 6s"
+    },
+    {
+      "modelo": "iPad Pro 12.9",
+      "ano": "2015"
+    },
+    {
+      "modelo": "iPad mini 4",
+      "ano": "2015"
+    },
+    {
+      "modelo": "Watch Edition 42mm (1st gen)"
+    },
+    {
+      "modelo": "Watch Edition 38mm (1st gen)"
+    },
+    {
+      "modelo": "Watch 42mm (1st gen)"
+    },
+    {
+      "modelo": "Watch 38mm (1st gen)"
+    },
+    {
+      "modelo": "Watch Sport 42mm (1st gen)"
+    },
+    {
+      "modelo": "Watch Sport 38mm (1st gen)"
+    },
+    {
+      "modelo": "iPad Air 2"
+    },
+    {
+      "modelo": "iPad mini 3"
+    },
+    {
+      "modelo": "iPhone 6 Plus"
+    },
+    {
+      "modelo": "iPhone 6"
+    },
+    {
+      "modelo": "iPad Air"
+    },
+    {
+      "modelo": "iPad mini 2"
+    },
+    {
+      "modelo": "iPhone 5s"
+    },
+    {
+      "modelo": "iPhone 5c"
+    },
+    {
+      "modelo": "iPad mini Wi-Fi"
+    },
+    {
+      "modelo": "iPad mini Wi-Fi + Cellular"
+    },
+    {
+      "modelo": "iPad 4 Wi-Fi"
+    },
+    {
+      "modelo": "iPad 4 Wi-Fi + Cellular"
+    },
+    {
+      "modelo": "iPhone 5"
+    },
+    {
+      "modelo": "iPad 3 Wi-Fi + Cellular"
+    },
+    {
+      "modelo": "iPad 3 Wi-Fi"
+    },
+    {
+      "modelo": "iPhone 4s"
+    },
+    {
+      "modelo": "iPad 2 Wi-Fi + 3G"
+    },
+    {
+      "modelo": "iPad 2 Wi-Fi"
+    },
+    {
+      "modelo": "iPad 2 CDMA"
+    },
+    {
+      "modelo": "iPhone 4"
+    },
+    {
+      "modelo": "iPhone 4 CDMA"
+    },
+    {
+      "modelo": "iPad Wi-Fi + 3G"
+    },
+    {
+      "modelo": "iPad Wi-Fi"
+    },
+    {
+      "modelo": "iPhone 3GS"
+    },
+    {
+      "modelo": "iPhone 3G"
+    },
+    {
+      "modelo": "iPhone"
+    }
+  ]
+}

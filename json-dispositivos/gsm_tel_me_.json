@@ -1,0 +1,30 @@
+{
+  "marca": "TEL.ME.",
+  "id_interno": "21",
+  "slug": "tel_me_",
+  "total_esperado": 0,
+  "total_encontrado": 7,
+  "modelos": [
+    {
+      "modelo": "T939"
+    },
+    {
+      "modelo": "T918"
+    },
+    {
+      "modelo": "T919i"
+    },
+    {
+      "modelo": "T919"
+    },
+    {
+      "modelo": "T910"
+    },
+    {
+      "modelo": "T909c"
+    },
+    {
+      "modelo": "T909"
+    }
+  ]
+}

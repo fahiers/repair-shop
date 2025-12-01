@@ -1,0 +1,24 @@
+{
+  "marca": "INQ",
+  "id_interno": "60",
+  "slug": "inq",
+  "total_esperado": 0,
+  "total_encontrado": 5,
+  "modelos": [
+    {
+      "modelo": "Cloud Touch"
+    },
+    {
+      "modelo": "Cloud Q"
+    },
+    {
+      "modelo": "Chat 3G"
+    },
+    {
+      "modelo": "Mini 3G"
+    },
+    {
+      "modelo": "iNQ1"
+    }
+  ]
+}

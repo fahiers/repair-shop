@@ -1,0 +1,538 @@
+{
+  "marca": "TECNO",
+  "id_interno": "120",
+  "slug": "tecno",
+  "total_esperado": 0,
+  "total_encontrado": 176,
+  "modelos": [
+    {
+      "modelo": "Megapad Pro"
+    },
+    {
+      "modelo": "Pova Slim"
+    },
+    {
+      "modelo": "Spark Slim"
+    },
+    {
+      "modelo": "Spark Go"
+    },
+    {
+      "modelo": "Spark 40C"
+    },
+    {
+      "modelo": "Pova 7 Pro"
+    },
+    {
+      "modelo": "Pova 7"
+    },
+    {
+      "modelo": "Spark 40 Pro+"
+    },
+    {
+      "modelo": "Spark 40 Pro"
+    },
+    {
+      "modelo": "Spark 40"
+    },
+    {
+      "modelo": "Pova 7 Ultra"
+    },
+    {
+      "modelo": "Pova 7 4G"
+    },
+    {
+      "modelo": "Spark Go 2"
+    },
+    {
+      "modelo": "Pova Curve"
+    },
+    {
+      "modelo": "Camon 40 Premier"
+    },
+    {
+      "modelo": "Camon 40 Pro"
+    },
+    {
+      "modelo": "Camon 40 Pro 4G"
+    },
+    {
+      "modelo": "Camon 40"
+    },
+    {
+      "modelo": "Spark Go 1S"
+    },
+    {
+      "modelo": "Megapad 11"
+    },
+    {
+      "modelo": "Pop 9 4G"
+    },
+    {
+      "modelo": "Megapad"
+    },
+    {
+      "modelo": "Camon 30S"
+    },
+    {
+      "modelo": "Spark 30C 5G"
+    },
+    {
+      "modelo": "Spark 30 5G"
+    },
+    {
+      "modelo": "Pop 9"
+    },
+    {
+      "modelo": "Spark 30 Pro"
+    },
+    {
+      "modelo": "Spark 30"
+    },
+    {
+      "modelo": "Phantom V Fold2"
+    },
+    {
+      "modelo": "Phantom V Flip2"
+    },
+    {
+      "modelo": "Pova 6 Neo 5G"
+    },
+    {
+      "modelo": "Spark 30C"
+    },
+    {
+      "modelo": "Spark Go 1"
+    },
+    {
+      "modelo": "Camon 30S Pro"
+    },
+    {
+      "modelo": "Spark 20P"
+    },
+    {
+      "modelo": "Spark 20 Pro 5G"
+    },
+    {
+      "modelo": "Pova 6 Neo"
+    },
+    {
+      "modelo": "Pova 6"
+    },
+    {
+      "modelo": "Camon 30 Premier"
+    },
+    {
+      "modelo": "Camon 30 Pro"
+    },
+    {
+      "modelo": "Camon 30 5G"
+    },
+    {
+      "modelo": "Camon 30"
+    },
+    {
+      "modelo": "Pova 6 Pro"
+    },
+    {
+      "modelo": "Spark 20 Pro+"
+    },
+    {
+      "modelo": "Spark 20 Pro"
+    },
+    {
+      "modelo": "Spark 20"
+    },
+    {
+      "modelo": "Spark 20C"
+    },
+    {
+      "modelo": "Spark Go 2024"
+    },
+    {
+      "modelo": "Pop 8"
+    },
+    {
+      "modelo": "Camon 20s Pro 5G"
+    },
+    {
+      "modelo": "Phantom V Flip"
+    },
+    {
+      "modelo": "Pova 5 Pro"
+    },
+    {
+      "modelo": "Pova Neo 3"
+    },
+    {
+      "modelo": "Pova 5"
+    },
+    {
+      "modelo": "Camon 20 Premier"
+    },
+    {
+      "modelo": "Camon 20 Pro 5G"
+    },
+    {
+      "modelo": "Camon 20 Pro"
+    },
+    {
+      "modelo": "Camon 20"
+    },
+    {
+      "modelo": "Pop 7"
+    },
+    {
+      "modelo": "Spark 10 5G"
+    },
+    {
+      "modelo": "Spark 10C"
+    },
+    {
+      "modelo": "Spark 10"
+    },
+    {
+      "modelo": "Spark 10 Pro"
+    },
+    {
+      "modelo": "Phantom V Fold"
+    },
+    {
+      "modelo": "Pop 7 Pro"
+    },
+    {
+      "modelo": "Spark Go 2023"
+    },
+    {
+      "modelo": "Phantom X2 Pro"
+    },
+    {
+      "modelo": "Phantom X2"
+    },
+    {
+      "modelo": "Pova 4"
+    },
+    {
+      "modelo": "Pova 4 Pro"
+    },
+    {
+      "modelo": "Pova Neo 2"
+    },
+    {
+      "modelo": "Pova Neo 5G"
+    },
+    {
+      "modelo": "Pop 6 Pro"
+    },
+    {
+      "modelo": "Spark 9T (India)"
+    },
+    {
+      "modelo": "Spark 9"
+    },
+    {
+      "modelo": "Spark 9T"
+    },
+    {
+      "modelo": "Camon 19 Pro 5G"
+    },
+    {
+      "modelo": "Camon 19 Pro"
+    },
+    {
+      "modelo": "Camon 19"
+    },
+    {
+      "modelo": "Camon 19 Neo"
+    },
+    {
+      "modelo": "Pop 6"
+    },
+    {
+      "modelo": "Spark 9 Pro"
+    },
+    {
+      "modelo": "Pova 3"
+    },
+    {
+      "modelo": "Pop 6 Go"
+    },
+    {
+      "modelo": "Pop 5S"
+    },
+    {
+      "modelo": "Spark 8C"
+    },
+    {
+      "modelo": "Pop 5X"
+    },
+    {
+      "modelo": "Pop 5 Pro"
+    },
+    {
+      "modelo": "Spark 8 Pro"
+    },
+    {
+      "modelo": "Spark 8T"
+    },
+    {
+      "modelo": "Spark Go 2022"
+    },
+    {
+      "modelo": "Pova 5G"
+    },
+    {
+      "modelo": "Pova Neo"
+    },
+    {
+      "modelo": "Camon 18T"
+    },
+    {
+      "modelo": "Pop 5 LTE"
+    },
+    {
+      "modelo": "Pop 5c"
+    },
+    {
+      "modelo": "Camon 18i"
+    },
+    {
+      "modelo": "Spark 8P"
+    },
+    {
+      "modelo": "Camon 18 Premier"
+    },
+    {
+      "modelo": "Camon 18 P"
+    },
+    {
+      "modelo": "Camon 18"
+    },
+    {
+      "modelo": "Spark 8"
+    },
+    {
+      "modelo": "Pop 5"
+    },
+    {
+      "modelo": "Spark Go 2021"
+    },
+    {
+      "modelo": "Spark 7T"
+    },
+    {
+      "modelo": "Phantom X"
+    },
+    {
+      "modelo": "Pova 2"
+    },
+    {
+      "modelo": "Camon 17 Pro"
+    },
+    {
+      "modelo": "Camon 17P"
+    },
+    {
+      "modelo": "Camon 17"
+    },
+    {
+      "modelo": "Spark 7 Pro"
+    },
+    {
+      "modelo": "Spark 7P"
+    },
+    {
+      "modelo": "Spark 7"
+    },
+    {
+      "modelo": "Camon 16 Pro"
+    },
+    {
+      "modelo": "Camon 16 S"
+    },
+    {
+      "modelo": "Spark 6 Go"
+    },
+    {
+      "modelo": "Spark Go 2020"
+    },
+    {
+      "modelo": "Pova"
+    },
+    {
+      "modelo": "Camon 16"
+    },
+    {
+      "modelo": "Spark 6 Air"
+    },
+    {
+      "modelo": "Spark 6"
+    },
+    {
+      "modelo": "Camon 16 Premier"
+    },
+    {
+      "modelo": "Pouvoir 4 Pro"
+    },
+    {
+      "modelo": "Pop 4"
+    },
+    {
+      "modelo": "Pouvoir 4"
+    },
+    {
+      "modelo": "Spark Power 2"
+    },
+    {
+      "modelo": "Spark 5 Air"
+    },
+    {
+      "modelo": "Spark 5 pro"
+    },
+    {
+      "modelo": "Spark 5"
+    },
+    {
+      "modelo": "Camon 15 Premier"
+    },
+    {
+      "modelo": "Camon 15 Air"
+    },
+    {
+      "modelo": "Camon 15 Pro"
+    },
+    {
+      "modelo": "Camon 15"
+    },
+    {
+      "modelo": "Camon 12 Air"
+    },
+    {
+      "modelo": "Pop 3 Plus"
+    },
+    {
+      "modelo": "Spark 4 Lite"
+    },
+    {
+      "modelo": "Spark 4"
+    },
+    {
+      "modelo": "Camon 12 Pro"
+    },
+    {
+      "modelo": "Camon 12"
+    },
+    {
+      "modelo": "Pouvoir 3 Air"
+    },
+    {
+      "modelo": "Pouvoir 3 Plus"
+    },
+    {
+      "modelo": "Pouvoir 3"
+    },
+    {
+      "modelo": "Spark 3"
+    },
+    {
+      "modelo": "Spark 3 Pro"
+    },
+    {
+      "modelo": "Spark Go",
+      "ano": "2019"
+    },
+    {
+      "modelo": "Pop 2 F"
+    },
+    {
+      "modelo": "Pop 2 Plus"
+    },
+    {
+      "modelo": "Phantom 9"
+    },
+    {
+      "modelo": "Camon iACE2X"
+    },
+    {
+      "modelo": "Camon i4"
+    },
+    {
+      "modelo": "Camon iACE2"
+    },
+    {
+      "modelo": "Camon 11 Pro"
+    },
+    {
+      "modelo": "Camon 11"
+    },
+    {
+      "modelo": "Pop 1s"
+    },
+    {
+      "modelo": "Pop 1 Pro"
+    },
+    {
+      "modelo": "Pop 1"
+    },
+    {
+      "modelo": "F2 LTE"
+    },
+    {
+      "modelo": "F2"
+    },
+    {
+      "modelo": "Pop 1 Lite"
+    },
+    {
+      "modelo": "Pouvoir 2 Pro"
+    },
+    {
+      "modelo": "Pouvoir 2"
+    },
+    {
+      "modelo": "Pouvoir 1"
+    },
+    {
+      "modelo": "Spark Pro"
+    },
+    {
+      "modelo": "Spark Plus"
+    },
+    {
+      "modelo": "Spark CM"
+    },
+    {
+      "modelo": "Spark 2"
+    },
+    {
+      "modelo": "Spark"
+    },
+    {
+      "modelo": "Camon X Pro"
+    },
+    {
+      "modelo": "Camon X"
+    },
+    {
+      "modelo": "Camon CX Manchester City LE"
+    },
+    {
+      "modelo": "Camon CX Air"
+    },
+    {
+      "modelo": "Camon CX"
+    },
+    {
+      "modelo": "Camon CM"
+    },
+    {
+      "modelo": "Phantom 8"
+    },
+    {
+      "modelo": "Phantom 6 Plus"
+    },
+    {
+      "modelo": "Phantom 6"
+    }
+  ]
+}

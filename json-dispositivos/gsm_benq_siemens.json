@@ -1,0 +1,93 @@
+{
+  "marca": "BENQ-SIEMENS",
+  "id_interno": "42",
+  "slug": "benq_siemens",
+  "total_esperado": 0,
+  "total_encontrado": 28,
+  "modelos": [
+    {
+      "modelo": "SF71"
+    },
+    {
+      "modelo": "E52"
+    },
+    {
+      "modelo": "C32"
+    },
+    {
+      "modelo": "C31"
+    },
+    {
+      "modelo": "SL80"
+    },
+    {
+      "modelo": "AL26"
+    },
+    {
+      "modelo": "A53"
+    },
+    {
+      "modelo": "SL91"
+    },
+    {
+      "modelo": "E81"
+    },
+    {
+      "modelo": "E71"
+    },
+    {
+      "modelo": "EF61"
+    },
+    {
+      "modelo": "M81"
+    },
+    {
+      "modelo": "A58"
+    },
+    {
+      "modelo": "A38"
+    },
+    {
+      "modelo": "EF71"
+    },
+    {
+      "modelo": "P51"
+    },
+    {
+      "modelo": "EL71"
+    },
+    {
+      "modelo": "CL71"
+    },
+    {
+      "modelo": "CF61"
+    },
+    {
+      "modelo": "C81"
+    },
+    {
+      "modelo": "E61"
+    },
+    {
+      "modelo": "EF91"
+    },
+    {
+      "modelo": "S81"
+    },
+    {
+      "modelo": "EF51"
+    },
+    {
+      "modelo": "EF81"
+    },
+    {
+      "modelo": "S88"
+    },
+    {
+      "modelo": "Z150"
+    },
+    {
+      "modelo": "S68"
+    }
+  ]
+}

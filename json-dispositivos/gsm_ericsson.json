@@ -1,0 +1,129 @@
+{
+  "marca": "ERICSSON",
+  "id_interno": "2",
+  "slug": "ericsson",
+  "total_esperado": 0,
+  "total_encontrado": 40,
+  "modelos": [
+    {
+      "modelo": "R600"
+    },
+    {
+      "modelo": "T68"
+    },
+    {
+      "modelo": "T66"
+    },
+    {
+      "modelo": "T65"
+    },
+    {
+      "modelo": "T39"
+    },
+    {
+      "modelo": "A3618"
+    },
+    {
+      "modelo": "T29s"
+    },
+    {
+      "modelo": "R520m"
+    },
+    {
+      "modelo": "T20e"
+    },
+    {
+      "modelo": "A2628"
+    },
+    {
+      "modelo": "T20s"
+    },
+    {
+      "modelo": "T36"
+    },
+    {
+      "modelo": "R380"
+    },
+    {
+      "modelo": "R320"
+    },
+    {
+      "modelo": "R310s"
+    },
+    {
+      "modelo": "A2618"
+    },
+    {
+      "modelo": "R250s PRO"
+    },
+    {
+      "modelo": "T28 World"
+    },
+    {
+      "modelo": "T28s"
+    },
+    {
+      "modelo": "T18s"
+    },
+    {
+      "modelo": "T10s"
+    },
+    {
+      "modelo": "A1018s"
+    },
+    {
+      "modelo": "I 888"
+    },
+    {
+      "modelo": "SH 888"
+    },
+    {
+      "modelo": "S 868"
+    },
+    {
+      "modelo": "GF 788e"
+    },
+    {
+      "modelo": "GF 788"
+    },
+    {
+      "modelo": "PF 768"
+    },
+    {
+      "modelo": "GF 768"
+    },
+    {
+      "modelo": "GH 688"
+    },
+    {
+      "modelo": "GA 628"
+    },
+    {
+      "modelo": "GF 388"
+    },
+    {
+      "modelo": "GH 388"
+    },
+    {
+      "modelo": "GS 337"
+    },
+    {
+      "modelo": "GF 337"
+    },
+    {
+      "modelo": "GH 337"
+    },
+    {
+      "modelo": "GA 318"
+    },
+    {
+      "modelo": "GS 18"
+    },
+    {
+      "modelo": "GO 118"
+    },
+    {
+      "modelo": "GH 218"
+    }
+  ]
+}

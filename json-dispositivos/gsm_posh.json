@@ -1,0 +1,99 @@
+{
+  "marca": "POSH",
+  "id_interno": "101",
+  "slug": "posh",
+  "total_esperado": 0,
+  "total_encontrado": 30,
+  "modelos": [
+    {
+      "modelo": "Memo Pro LTE L600"
+    },
+    {
+      "modelo": "Equal Plus X700"
+    },
+    {
+      "modelo": "Ultra Max LTE L550"
+    },
+    {
+      "modelo": "Kick Pro LTE L520"
+    },
+    {
+      "modelo": "Optima LTE L530"
+    },
+    {
+      "modelo": "Icon HD X551"
+    },
+    {
+      "modelo": "Volt LTE L540"
+    },
+    {
+      "modelo": "Volt Max LTE L640"
+    },
+    {
+      "modelo": "Equal Pro LTE L700"
+    },
+    {
+      "modelo": "Primo Plus C353"
+    },
+    {
+      "modelo": "Kick X511"
+    },
+    {
+      "modelo": "Kick Lite S410"
+    },
+    {
+      "modelo": "Icon S510"
+    },
+    {
+      "modelo": "Titan Max HD E550"
+    },
+    {
+      "modelo": "Ultra 5.0 LTE L500"
+    },
+    {
+      "modelo": "Micro X S240"
+    },
+    {
+      "modelo": "Titan Max HD E600"
+    },
+    {
+      "modelo": "Titan HD E500"
+    },
+    {
+      "modelo": "Equal S700"
+    },
+    {
+      "modelo": "Equal Lite W700"
+    },
+    {
+      "modelo": "Memo S580"
+    },
+    {
+      "modelo": "Orion Max X550"
+    },
+    {
+      "modelo": "Orion Pro X500"
+    },
+    {
+      "modelo": "Revel Pro X510"
+    },
+    {
+      "modelo": "Revel S500"
+    },
+    {
+      "modelo": "Orion S450"
+    },
+    {
+      "modelo": "Pegasus 4G S400"
+    },
+    {
+      "modelo": "Orion Mini S350"
+    },
+    {
+      "modelo": "Pegasus Plus C351"
+    },
+    {
+      "modelo": "Lynx A100"
+    }
+  ]
+}

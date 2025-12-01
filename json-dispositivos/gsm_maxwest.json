@@ -1,0 +1,132 @@
+{
+  "marca": "MAXWEST",
+  "id_interno": "87",
+  "slug": "maxwest",
+  "total_esperado": 0,
+  "total_encontrado": 41,
+  "modelos": [
+    {
+      "modelo": "Nitro 55M"
+    },
+    {
+      "modelo": "Nitro 55 LTE"
+    },
+    {
+      "modelo": "Nitro 5M"
+    },
+    {
+      "modelo": "Astro 5s"
+    },
+    {
+      "modelo": "Gravity 5 LTE"
+    },
+    {
+      "modelo": "Astro X4"
+    },
+    {
+      "modelo": "Astro X55"
+    },
+    {
+      "modelo": "Vice"
+    },
+    {
+      "modelo": "Gravity 5.5 LTE"
+    },
+    {
+      "modelo": "Gravity 5"
+    },
+    {
+      "modelo": "Astro 6"
+    },
+    {
+      "modelo": "Astro X5"
+    },
+    {
+      "modelo": "Astro 3.5"
+    },
+    {
+      "modelo": "Blade"
+    },
+    {
+      "modelo": "Nitro 5"
+    },
+    {
+      "modelo": "Astro 4.5"
+    },
+    {
+      "modelo": "Nitro Phablet 71"
+    },
+    {
+      "modelo": "Nitro 5.5"
+    },
+    {
+      "modelo": "Astro 5"
+    },
+    {
+      "modelo": "MX-110"
+    },
+    {
+      "modelo": "Astro 4"
+    },
+    {
+      "modelo": "Astro JR"
+    },
+    {
+      "modelo": "Virtue Z5"
+    },
+    {
+      "modelo": "Gravity 5.5"
+    },
+    {
+      "modelo": "Gravity 6"
+    },
+    {
+      "modelo": "Orbit 330G"
+    },
+    {
+      "modelo": "Orbit 6200T"
+    },
+    {
+      "modelo": "Android 330"
+    },
+    {
+      "modelo": "Tab Phone 72DC"
+    },
+    {
+      "modelo": "MX-210TV"
+    },
+    {
+      "modelo": "Android 320"
+    },
+    {
+      "modelo": "Orbit 6200"
+    },
+    {
+      "modelo": "Orbit 5400T"
+    },
+    {
+      "modelo": "Orbit 4400"
+    },
+    {
+      "modelo": "Orbit 3000"
+    },
+    {
+      "modelo": "Orbit X50"
+    },
+    {
+      "modelo": "Orbit Z50"
+    },
+    {
+      "modelo": "Orbit 5400"
+    },
+    {
+      "modelo": "Orbit 4600"
+    },
+    {
+      "modelo": "MX-200TV"
+    },
+    {
+      "modelo": "MX-100"
+    }
+  ]
+}

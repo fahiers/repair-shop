@@ -1,0 +1,21 @@
+{
+  "marca": "AT&T",
+  "id_interno": "57",
+  "slug": "at&t",
+  "total_esperado": 0,
+  "total_encontrado": 4,
+  "modelos": [
+    {
+      "modelo": "Quickfire"
+    },
+    {
+      "modelo": "SMT5700"
+    },
+    {
+      "modelo": "Mustang"
+    },
+    {
+      "modelo": "8525"
+    }
+  ]
+}

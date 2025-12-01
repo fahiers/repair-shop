@@ -1,0 +1,111 @@
+{
+  "marca": "I-MATE",
+  "id_interno": "35",
+  "slug": "i_mate",
+  "total_esperado": 0,
+  "total_encontrado": 34,
+  "modelos": [
+    {
+      "modelo": "810-F"
+    },
+    {
+      "modelo": "Ultimate 9502"
+    },
+    {
+      "modelo": "Ultimate 8502"
+    },
+    {
+      "modelo": "JAMA 201"
+    },
+    {
+      "modelo": "JAMA 101"
+    },
+    {
+      "modelo": "JAMA"
+    },
+    {
+      "modelo": "Ultimate 9150"
+    },
+    {
+      "modelo": "Ultimate 8150"
+    },
+    {
+      "modelo": "Ultimate 7150"
+    },
+    {
+      "modelo": "Ultimate 6150"
+    },
+    {
+      "modelo": "Ultimate 5150"
+    },
+    {
+      "modelo": "JAQ4"
+    },
+    {
+      "modelo": "PDAL"
+    },
+    {
+      "modelo": "JAQ3"
+    },
+    {
+      "modelo": "SPL"
+    },
+    {
+      "modelo": "JAQ"
+    },
+    {
+      "modelo": "JASJAM"
+    },
+    {
+      "modelo": "SPJAS"
+    },
+    {
+      "modelo": "Smartflip"
+    },
+    {
+      "modelo": "JAMin"
+    },
+    {
+      "modelo": "JASJAR"
+    },
+    {
+      "modelo": "K-JAM"
+    },
+    {
+      "modelo": "SP5"
+    },
+    {
+      "modelo": "SP5m"
+    },
+    {
+      "modelo": "SP4m"
+    },
+    {
+      "modelo": "JAM Black"
+    },
+    {
+      "modelo": "JAM"
+    },
+    {
+      "modelo": "PDA2"
+    },
+    {
+      "modelo": "PDA2k"
+    },
+    {
+      "modelo": "SP3i"
+    },
+    {
+      "modelo": "SP3"
+    },
+    {
+      "modelo": "Pocket PC"
+    },
+    {
+      "modelo": "Smartphone2"
+    },
+    {
+      "modelo": "Smartphone"
+    }
+  ]
+}

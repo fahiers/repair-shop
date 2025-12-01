@@ -1,0 +1,24 @@
+{
+  "marca": "CASIO",
+  "id_interno": "77",
+  "slug": "casio",
+  "total_esperado": 0,
+  "total_encontrado": 5,
+  "modelos": [
+    {
+      "modelo": "G'zOne CA-201L"
+    },
+    {
+      "modelo": "G'zOne Commando"
+    },
+    {
+      "modelo": "G'zOne Ravine 2"
+    },
+    {
+      "modelo": "G'zOne Ravine"
+    },
+    {
+      "modelo": "G'zOne Brigade"
+    }
+  ]
+}

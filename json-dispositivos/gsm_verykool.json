@@ -1,0 +1,426 @@
+{
+  "marca": "VERYKOOL",
+  "id_interno": "70",
+  "slug": "verykool",
+  "total_esperado": 0,
+  "total_encontrado": 139,
+  "modelos": [
+    {
+      "modelo": "s5702 Royale Quattro"
+    },
+    {
+      "modelo": "s5037 Apollo Quattro"
+    },
+    {
+      "modelo": "s5036 Apollo"
+    },
+    {
+      "modelo": "s5200 Orion"
+    },
+    {
+      "modelo": "s5031 Bolt Turbo"
+    },
+    {
+      "modelo": "sl5029 Bolt Pro LTE"
+    },
+    {
+      "modelo": "s5029 Bolt Pro"
+    },
+    {
+      "modelo": "s5205 Orion Pro"
+    },
+    {
+      "modelo": "s6005X Cyprus Pro"
+    },
+    {
+      "modelo": "s5527 Alpha Pro"
+    },
+    {
+      "modelo": "s5528 Cosmo"
+    },
+    {
+      "modelo": "SL5565 Rocket"
+    },
+    {
+      "modelo": "T7445"
+    },
+    {
+      "modelo": "s4009 Crystal"
+    },
+    {
+      "modelo": "s5526 Alpha"
+    },
+    {
+      "modelo": "s5034 Spear Jr."
+    },
+    {
+      "modelo": "s5035 Spear"
+    },
+    {
+      "modelo": "s5028 Bolt"
+    },
+    {
+      "modelo": "s5027 Bolt Pro"
+    },
+    {
+      "modelo": "s5007 Lotus Plus"
+    },
+    {
+      "modelo": "s4513 Luna II"
+    },
+    {
+      "modelo": "SL5560 Maverick Pro"
+    },
+    {
+      "modelo": "s5021 Wave Pro"
+    },
+    {
+      "modelo": "s5019 Wave"
+    },
+    {
+      "modelo": "s4008 Leo V"
+    },
+    {
+      "modelo": "Sl5200 Eclipse"
+    },
+    {
+      "modelo": "sl5050 Phantom"
+    },
+    {
+      "modelo": "s6004 Cyprus Jr."
+    },
+    {
+      "modelo": "s5524 Maverick III Jr."
+    },
+    {
+      "modelo": "s5525 Maverick III"
+    },
+    {
+      "modelo": "Kolorpad LTE TL8010"
+    },
+    {
+      "modelo": "s4007 Leo IV"
+    },
+    {
+      "modelo": "s6005 Cyprus II"
+    },
+    {
+      "modelo": "s5530 Maverick II"
+    },
+    {
+      "modelo": "s5030 Helix II"
+    },
+    {
+      "modelo": "SL5011 Spark LTE"
+    },
+    {
+      "modelo": "SL6010 Cyprus LTE"
+    },
+    {
+      "modelo": "s5025 Helix"
+    },
+    {
+      "modelo": "s5020 Giant"
+    },
+    {
+      "modelo": "s5001 Lotus"
+    },
+    {
+      "modelo": "SL4502 Fusion II"
+    },
+    {
+      "modelo": "SL5550 Maverick LTE"
+    },
+    {
+      "modelo": "s5518Q Maverick"
+    },
+    {
+      "modelo": "s5017Q Dorado"
+    },
+    {
+      "modelo": "sl5009 Jet"
+    },
+    {
+      "modelo": "R28 Denali"
+    },
+    {
+      "modelo": "T7440 Kolorpad II"
+    },
+    {
+      "modelo": "s5017 Dorado"
+    },
+    {
+      "modelo": "s3504 Mystic II"
+    },
+    {
+      "modelo": "s5518 Maverick"
+    },
+    {
+      "modelo": "s5012 Orbit"
+    },
+    {
+      "modelo": "SL4500 Fusion"
+    },
+    {
+      "modelo": "i330 Sunray"
+    },
+    {
+      "modelo": "s4510 Luna"
+    },
+    {
+      "modelo": "s5014 Atlas"
+    },
+    {
+      "modelo": "s6001 Cyprus"
+    },
+    {
+      "modelo": "s5015 Spark II"
+    },
+    {
+      "modelo": "s4010 Gazelle"
+    },
+    {
+      "modelo": "s4002 Leo"
+    },
+    {
+      "modelo": "s3501 Lynx"
+    },
+    {
+      "modelo": "R27"
+    },
+    {
+      "modelo": "s5511 Juno Quatro"
+    },
+    {
+      "modelo": "s5510 Juno"
+    },
+    {
+      "modelo": "s354"
+    },
+    {
+      "modelo": "SL5000 Quantum"
+    },
+    {
+      "modelo": "s401"
+    },
+    {
+      "modelo": "s352"
+    },
+    {
+      "modelo": "s351"
+    },
+    {
+      "modelo": "i129"
+    },
+    {
+      "modelo": "s505"
+    },
+    {
+      "modelo": "s450"
+    },
+    {
+      "modelo": "T742"
+    },
+    {
+      "modelo": "s353"
+    },
+    {
+      "modelo": "R80L Granite II"
+    },
+    {
+      "modelo": "i240"
+    },
+    {
+      "modelo": "i603"
+    },
+    {
+      "modelo": "i128"
+    },
+    {
+      "modelo": "i133"
+    },
+    {
+      "modelo": "s400"
+    },
+    {
+      "modelo": "i127"
+    },
+    {
+      "modelo": "s470"
+    },
+    {
+      "modelo": "i316"
+    },
+    {
+      "modelo": "RS90"
+    },
+    {
+      "modelo": "i126"
+    },
+    {
+      "modelo": "RS75"
+    },
+    {
+      "modelo": "i607"
+    },
+    {
+      "modelo": "s732"
+    },
+    {
+      "modelo": "s758"
+    },
+    {
+      "modelo": "s350"
+    },
+    {
+      "modelo": "R623"
+    },
+    {
+      "modelo": "i601"
+    },
+    {
+      "modelo": "i121C"
+    },
+    {
+      "modelo": "i121"
+    },
+    {
+      "modelo": "R25"
+    },
+    {
+      "modelo": "s735"
+    },
+    {
+      "modelo": "s135"
+    },
+    {
+      "modelo": "i320"
+    },
+    {
+      "modelo": "i315N"
+    },
+    {
+      "modelo": "s635"
+    },
+    {
+      "modelo": "s728"
+    },
+    {
+      "modelo": "i625"
+    },
+    {
+      "modelo": "i130"
+    },
+    {
+      "modelo": "R800"
+    },
+    {
+      "modelo": "i123"
+    },
+    {
+      "modelo": "s757"
+    },
+    {
+      "modelo": "i675"
+    },
+    {
+      "modelo": "i674"
+    },
+    {
+      "modelo": "i672"
+    },
+    {
+      "modelo": "R16"
+    },
+    {
+      "modelo": "s700"
+    },
+    {
+      "modelo": "i605"
+    },
+    {
+      "modelo": "i604"
+    },
+    {
+      "modelo": "i125"
+    },
+    {
+      "modelo": "S815"
+    },
+    {
+      "modelo": "R23"
+    },
+    {
+      "modelo": "R620"
+    },
+    {
+      "modelo": "i285"
+    },
+    {
+      "modelo": "i725"
+    },
+    {
+      "modelo": "CD611"
+    },
+    {
+      "modelo": "i800"
+    },
+    {
+      "modelo": "i720"
+    },
+    {
+      "modelo": "i705"
+    },
+    {
+      "modelo": "R80"
+    },
+    {
+      "modelo": "R13"
+    },
+    {
+      "modelo": "s810"
+    },
+    {
+      "modelo": "i650"
+    },
+    {
+      "modelo": "i610"
+    },
+    {
+      "modelo": "i600"
+    },
+    {
+      "modelo": "i410"
+    },
+    {
+      "modelo": "i310"
+    },
+    {
+      "modelo": "i315"
+    },
+    {
+      "modelo": "i305"
+    },
+    {
+      "modelo": "i277"
+    },
+    {
+      "modelo": "i280"
+    },
+    {
+      "modelo": "i270"
+    },
+    {
+      "modelo": "i122"
+    },
+    {
+      "modelo": "i119"
+    },
+    {
+      "modelo": "i117"
+    },
+    {
+      "modelo": "i115"
+    }
+  ]
+}

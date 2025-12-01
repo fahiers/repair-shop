@@ -24,15 +24,17 @@ class Index extends Component
 
     public function render()
     {
+        $searchTerm = trim($this->search);
+        $searchTerm = preg_replace('/\s+/', ' ', $searchTerm);
+
         $clientes = Cliente::query()
-            ->when($this->search !== '', function ($query) {
-                $term = '%'.$this->search.'%';
+            ->when($searchTerm !== '', function ($query) use ($searchTerm) {
+                $term = '%'.$searchTerm.'%';
                 $query->where(function ($q) use ($term) {
                     $q->where('nombre', 'like', $term)
                         ->orWhere('telefono', 'like', $term)
                         ->orWhere('email', 'like', $term)
-                        ->orWhere('rut', 'like', $term)
-                        ->orWhere('direccion', 'like', $term);
+                        ->orWhere('rut', 'like', $term);
                 });
             })
             ->orderBy('nombre')

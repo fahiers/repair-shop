@@ -1,0 +1,105 @@
+{
+  "marca": "MICROSOFT",
+  "id_interno": "64",
+  "slug": "microsoft",
+  "total_esperado": 0,
+  "total_encontrado": 32,
+  "modelos": [
+    {
+      "modelo": "Surface Duo 2"
+    },
+    {
+      "modelo": "Surface Duo"
+    },
+    {
+      "modelo": "Lumia 650"
+    },
+    {
+      "modelo": "Lumia 950 XL Dual SIM"
+    },
+    {
+      "modelo": "Lumia 950 XL"
+    },
+    {
+      "modelo": "Lumia 950 Dual SIM"
+    },
+    {
+      "modelo": "Lumia 950"
+    },
+    {
+      "modelo": "Lumia 550"
+    },
+    {
+      "modelo": "Lumia 540 Dual SIM"
+    },
+    {
+      "modelo": "Lumia 430 Dual SIM"
+    },
+    {
+      "modelo": "Lumia 640 XL LTE Dual SIM"
+    },
+    {
+      "modelo": "Lumia 640 XL LTE"
+    },
+    {
+      "modelo": "Lumia 640 XL Dual SIM"
+    },
+    {
+      "modelo": "Lumia 640 XL"
+    },
+    {
+      "modelo": "Lumia 640 LTE Dual SIM"
+    },
+    {
+      "modelo": "Lumia 640 LTE"
+    },
+    {
+      "modelo": "Lumia 640 Dual SIM"
+    },
+    {
+      "modelo": "Lumia 532 Dual SIM"
+    },
+    {
+      "modelo": "Lumia 532"
+    },
+    {
+      "modelo": "Lumia 435 Dual SIM"
+    },
+    {
+      "modelo": "Lumia 435"
+    },
+    {
+      "modelo": "Lumia 535 Dual SIM"
+    },
+    {
+      "modelo": "Lumia 535"
+    },
+    {
+      "modelo": "Surface 2"
+    },
+    {
+      "modelo": "Surface"
+    },
+    {
+      "modelo": "Kin TWOm"
+    },
+    {
+      "modelo": "Kin ONEm"
+    },
+    {
+      "modelo": "Kin Two"
+    },
+    {
+      "modelo": "Kin One"
+    },
+    {
+      "modelo": "Lumia 850"
+    },
+    {
+      "modelo": "Lumia 1030"
+    },
+    {
+      "modelo": "Lumia 1330"
+    }
+  ]
+}

@@ -40,6 +40,9 @@ class Index extends Component
 
     public function render()
     {
+        $searchTerm = trim($this->search);
+        $searchTerm = preg_replace('/\s+/', ' ', $searchTerm);
+
         $dispositivos = Dispositivo::query()
             ->with(['cliente', 'modelo'])
             ->when($this->activeTab === 'en_taller', function ($query) {
@@ -53,15 +56,29 @@ class Index extends Component
                     ]);
                 });
             })
-            ->when($this->search, function ($query) {
-                $query->where(function ($q) {
-                    $q->where('imei', 'like', '%'.$this->search.'%')
-                        ->orWhereHas('modelo', function ($modeloQuery) {
-                            $modeloQuery->where('modelo', 'like', '%'.$this->search.'%')
-                                ->orWhere('marca', 'like', '%'.$this->search.'%');
+            ->when($this->activeTab === 'en_taller', function ($query) {
+                // Cargar la orden activa más reciente
+                $query->with(['ordenes' => function ($q) {
+                    $q->whereIn('estado', [
+                        EstadoOrden::Pendiente->value,
+                        EstadoOrden::Diagnostico->value,
+                        EstadoOrden::EnReparacion->value,
+                        EstadoOrden::Listo->value,
+                    ])
+                        ->latest()
+                        ->limit(1);
+                }]);
+            })
+            ->when($searchTerm !== '', function ($query) use ($searchTerm) {
+                $term = '%'.$searchTerm.'%';
+                $query->where(function ($q) use ($term) {
+                    $q->where('imei', 'like', $term)
+                        ->orWhereHas('modelo', function ($modeloQuery) use ($term) {
+                            $modeloQuery->where('modelo', 'like', $term)
+                                ->orWhere('marca', 'like', $term);
                         })
-                        ->orWhereHas('cliente', function ($clienteQuery) {
-                            $clienteQuery->where('nombre', 'like', '%'.$this->search.'%');
+                        ->orWhereHas('cliente', function ($clienteQuery) use ($term) {
+                            $clienteQuery->where('nombre', 'like', $term);
                         });
                 });
             })

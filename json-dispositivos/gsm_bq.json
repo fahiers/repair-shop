@@ -1,0 +1,69 @@
+{
+  "marca": "BQ",
+  "id_interno": "108",
+  "slug": "bq",
+  "total_esperado": 0,
+  "total_encontrado": 20,
+  "modelos": [
+    {
+      "modelo": "Aquaris X2 Pro"
+    },
+    {
+      "modelo": "Aquaris X2"
+    },
+    {
+      "modelo": "Aquaris VS Plus"
+    },
+    {
+      "modelo": "Aquaris VS"
+    },
+    {
+      "modelo": "Aquaris U2 Lite"
+    },
+    {
+      "modelo": "Aquaris U2"
+    },
+    {
+      "modelo": "Aquaris V Plus"
+    },
+    {
+      "modelo": "Aquaris V"
+    },
+    {
+      "modelo": "Aquaris X Pro"
+    },
+    {
+      "modelo": "Aquaris X"
+    },
+    {
+      "modelo": "Aquaris U Lite"
+    },
+    {
+      "modelo": "Aquaris U"
+    },
+    {
+      "modelo": "Aquaris U Plus"
+    },
+    {
+      "modelo": "Aquaris X5 Plus"
+    },
+    {
+      "modelo": "Aquaris E5s"
+    },
+    {
+      "modelo": "Aquaris X5"
+    },
+    {
+      "modelo": "Aquaris M5"
+    },
+    {
+      "modelo": "Aquaris M5.5"
+    },
+    {
+      "modelo": "Aquaris M4.5"
+    },
+    {
+      "modelo": "Aquaris M10"
+    }
+  ]
+}

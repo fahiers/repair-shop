@@ -1,0 +1,24 @@
+{
+  "marca": "MWG",
+  "id_interno": "56",
+  "slug": "mwg",
+  "total_esperado": 0,
+  "total_encontrado": 5,
+  "modelos": [
+    {
+      "modelo": "Zinc II"
+    },
+    {
+      "modelo": "Atom Life"
+    },
+    {
+      "modelo": "UBiQUiO 503g"
+    },
+    {
+      "modelo": "Atom V"
+    },
+    {
+      "modelo": "UBiQUiO 501"
+    }
+  ]
+}

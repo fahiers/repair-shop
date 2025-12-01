@@ -1,0 +1,54 @@
+{
+  "marca": "INTEX",
+  "id_interno": "102",
+  "slug": "intex",
+  "total_esperado": 0,
+  "total_encontrado": 15,
+  "modelos": [
+    {
+      "modelo": "Aqua Craze"
+    },
+    {
+      "modelo": "Aqua GenX"
+    },
+    {
+      "modelo": "Aqua Ace"
+    },
+    {
+      "modelo": "Aqua Trend"
+    },
+    {
+      "modelo": "IRist Smartwatch"
+    },
+    {
+      "modelo": "Aqua 4G+"
+    },
+    {
+      "modelo": "Aqua Xtreme II"
+    },
+    {
+      "modelo": "Aqua Y2 Remote"
+    },
+    {
+      "modelo": "Aqua Xtreme"
+    },
+    {
+      "modelo": "Aqua Star L"
+    },
+    {
+      "modelo": "Aqua Star 2"
+    },
+    {
+      "modelo": "Aqua Speed"
+    },
+    {
+      "modelo": "Aqua Power"
+    },
+    {
+      "modelo": "Aqua Power +"
+    },
+    {
+      "modelo": "Aqua 4.5E"
+    }
+  ]
+}

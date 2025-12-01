@@ -1,0 +1,54 @@
+{
+  "marca": "EMPORIA",
+  "id_interno": "93",
+  "slug": "emporia",
+  "total_esperado": 0,
+  "total_encontrado": 15,
+  "modelos": [
+    {
+      "modelo": "Glam"
+    },
+    {
+      "modelo": "Flip Basic"
+    },
+    {
+      "modelo": "Eco"
+    },
+    {
+      "modelo": "Click Plus"
+    },
+    {
+      "modelo": "Essence Plus"
+    },
+    {
+      "modelo": "Solid Plus"
+    },
+    {
+      "modelo": "Care Plus"
+    },
+    {
+      "modelo": "Elegance Plus"
+    },
+    {
+      "modelo": "Elegance"
+    },
+    {
+      "modelo": "Connect"
+    },
+    {
+      "modelo": "Click"
+    },
+    {
+      "modelo": "Talk Comfort Plus"
+    },
+    {
+      "modelo": "Talk Comfort"
+    },
+    {
+      "modelo": "RL1"
+    },
+    {
+      "modelo": "Talk Premium"
+    }
+  ]
+}

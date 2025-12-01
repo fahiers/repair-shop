@@ -1,0 +1,33 @@
+{
+  "marca": "MODU",
+  "id_interno": "63",
+  "slug": "modu",
+  "total_esperado": 0,
+  "total_encontrado": 8,
+  "modelos": [
+    {
+      "modelo": "T"
+    },
+    {
+      "modelo": "Night jacket"
+    },
+    {
+      "modelo": "Sport jacket"
+    },
+    {
+      "modelo": "Speedy jacket"
+    },
+    {
+      "modelo": "Shiny jacket"
+    },
+    {
+      "modelo": "Mini jacket"
+    },
+    {
+      "modelo": "Express jacket"
+    },
+    {
+      "modelo": "Phone"
+    }
+  ]
+}

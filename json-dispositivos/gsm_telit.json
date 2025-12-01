@@ -1,0 +1,99 @@
+{
+  "marca": "TELIT",
+  "id_interno": "16",
+  "slug": "telit",
+  "total_esperado": 0,
+  "total_encontrado": 30,
+  "modelos": [
+    {
+      "modelo": "t800"
+    },
+    {
+      "modelo": "t250"
+    },
+    {
+      "modelo": "t650"
+    },
+    {
+      "modelo": "t200"
+    },
+    {
+      "modelo": "GU1100"
+    },
+    {
+      "modelo": "SP600"
+    },
+    {
+      "modelo": "t550"
+    },
+    {
+      "modelo": "t420"
+    },
+    {
+      "modelo": "t180"
+    },
+    {
+      "modelo": "t410"
+    },
+    {
+      "modelo": "t130"
+    },
+    {
+      "modelo": "t110"
+    },
+    {
+      "modelo": "t210"
+    },
+    {
+      "modelo": "T510"
+    },
+    {
+      "modelo": "C1000"
+    },
+    {
+      "modelo": "T91"
+    },
+    {
+      "modelo": "T90"
+    },
+    {
+      "modelo": "NEO"
+    },
+    {
+      "modelo": "X60i"
+    },
+    {
+      "modelo": "G90"
+    },
+    {
+      "modelo": "G83"
+    },
+    {
+      "modelo": "G80"
+    },
+    {
+      "modelo": "G82"
+    },
+    {
+      "modelo": "G40"
+    },
+    {
+      "modelo": "GM 882"
+    },
+    {
+      "modelo": "GM 830"
+    },
+    {
+      "modelo": "GM 810"
+    },
+    {
+      "modelo": "Estremo"
+    },
+    {
+      "modelo": "GM 710"
+    },
+    {
+      "modelo": "GM 410"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "marca": "HP",
+  "id_interno": "41",
+  "slug": "hp",
+  "total_esperado": 0,
+  "total_encontrado": 41,
+  "modelos": [
+    {
+      "modelo": "Elite x3"
+    },
+    {
+      "modelo": "Slate 17"
+    },
+    {
+      "modelo": "Pro Slate 12"
+    },
+    {
+      "modelo": "Pro Slate 10 EE G1"
+    },
+    {
+      "modelo": "Pro Slate 8"
+    },
+    {
+      "modelo": "Slate6 VoiceTab II"
+    },
+    {
+      "modelo": "10 Plus"
+    },
+    {
+      "modelo": "7 VoiceTab"
+    },
+    {
+      "modelo": "7 Plus"
+    },
+    {
+      "modelo": "8"
+    },
+    {
+      "modelo": "Slate7 VoiceTab Ultra"
+    },
+    {
+      "modelo": "Slate7 VoiceTab"
+    },
+    {
+      "modelo": "Slate6 VoiceTab"
+    },
+    {
+      "modelo": "Slate8 Pro"
+    },
+    {
+      "modelo": "Slate10 HD"
+    },
+    {
+      "modelo": "Slate7 Extreme"
+    },
+    {
+      "modelo": "Slate7 Plus"
+    },
+    {
+      "modelo": "Slate 7"
+    },
+    {
+      "modelo": "TouchPad 4G"
+    },
+    {
+      "modelo": "Veer 4G"
+    },
+    {
+      "modelo": "Veer"
+    },
+    {
+      "modelo": "Pre 3 CDMA"
+    },
+    {
+      "modelo": "Pre 3"
+    },
+    {
+      "modelo": "TouchPad"
+    },
+    {
+      "modelo": "iPAQ Glisten"
+    },
+    {
+      "modelo": "iPAQ Voice Messenger"
+    },
+    {
+      "modelo": "iPAQ Data Messenger"
+    },
+    {
+      "modelo": "iPAQ 910c"
+    },
+    {
+      "modelo": "iPAQ 610c"
+    },
+    {
+      "modelo": "iPAQ 514"
+    },
+    {
+      "modelo": "iPAQ rw6815"
+    },
+    {
+      "modelo": "iPAQ rw6828"
+    },
+    {
+      "modelo": "iPAQ rw6818"
+    },
+    {
+      "modelo": "iPAQ hw6915"
+    },
+    {
+      "modelo": "iPAQ hw6910"
+    },
+    {
+      "modelo": "iPAQ hw6515"
+    },
+    {
+      "modelo": "iPAQ hw6510"
+    },
+    {
+      "modelo": "iPAQ h6325"
+    },
+    {
+      "modelo": "iPAQ h6320"
+    },
+    {
+      "modelo": "iPAQ h6315"
+    },
+    {
+      "modelo": "iPAQ h6310"
+    }
+  ]
+}

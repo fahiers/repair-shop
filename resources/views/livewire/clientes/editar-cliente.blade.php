@@ -43,12 +43,10 @@
                                 <flux:input wire:model.blur="rut" placeholder="12345678-9" />
                                 <flux:error name="rut" />
                             </flux:field>
-                        </div>
 
-                        <div class="mt-6">
                             <flux:field>
                                 <flux:label>{{ __('Notas') }}</flux:label>
-                                <flux:textarea wire:model.defer="notas" rows="4" />
+                                <flux:input wire:model.defer="notas" />
                                 <flux:error name="notas" />
                             </flux:field>
                         </div>

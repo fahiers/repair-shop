@@ -1,0 +1,24 @@
+{
+  "marca": "WND",
+  "id_interno": "51",
+  "slug": "wnd",
+  "total_esperado": 0,
+  "total_encontrado": 5,
+  "modelos": [
+    {
+      "modelo": "Wind Van Gogh 2100"
+    },
+    {
+      "modelo": "Wind DUO 2300"
+    },
+    {
+      "modelo": "Wind DUO 2200"
+    },
+    {
+      "modelo": "Wind DUO 2100"
+    },
+    {
+      "modelo": "Wind DUO 2000"
+    }
+  ]
+}

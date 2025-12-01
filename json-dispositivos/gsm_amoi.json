@@ -1,0 +1,150 @@
+{
+  "marca": "AMOI",
+  "id_interno": "28",
+  "slug": "amoi",
+  "total_esperado": 0,
+  "total_encontrado": 47,
+  "modelos": [
+    {
+      "modelo": "E860"
+    },
+    {
+      "modelo": "E78"
+    },
+    {
+      "modelo": "E76"
+    },
+    {
+      "modelo": "E72"
+    },
+    {
+      "modelo": "WMA8701A"
+    },
+    {
+      "modelo": "WMA8703"
+    },
+    {
+      "modelo": "WMA8508"
+    },
+    {
+      "modelo": "CMA8170"
+    },
+    {
+      "modelo": "M33"
+    },
+    {
+      "modelo": "A203"
+    },
+    {
+      "modelo": "A200"
+    },
+    {
+      "modelo": "A102"
+    },
+    {
+      "modelo": "A100"
+    },
+    {
+      "modelo": "A10"
+    },
+    {
+      "modelo": "E850"
+    },
+    {
+      "modelo": "V810"
+    },
+    {
+      "modelo": "H815"
+    },
+    {
+      "modelo": "H812"
+    },
+    {
+      "modelo": "H810"
+    },
+    {
+      "modelo": "H802"
+    },
+    {
+      "modelo": "H801"
+    },
+    {
+      "modelo": "H8"
+    },
+    {
+      "modelo": "H80"
+    },
+    {
+      "modelo": "A675"
+    },
+    {
+      "modelo": "M636"
+    },
+    {
+      "modelo": "A865"
+    },
+    {
+      "modelo": "A869"
+    },
+    {
+      "modelo": "6201"
+    },
+    {
+      "modelo": "M360"
+    },
+    {
+      "modelo": "M650"
+    },
+    {
+      "modelo": "M630"
+    },
+    {
+      "modelo": "F620"
+    },
+    {
+      "modelo": "A320"
+    },
+    {
+      "modelo": "F320"
+    },
+    {
+      "modelo": "A310"
+    },
+    {
+      "modelo": "A211"
+    },
+    {
+      "modelo": "A210"
+    },
+    {
+      "modelo": "2561"
+    },
+    {
+      "modelo": "CS6"
+    },
+    {
+      "modelo": "2560"
+    },
+    {
+      "modelo": "A90"
+    },
+    {
+      "modelo": "F99b"
+    },
+    {
+      "modelo": "A9B"
+    },
+    {
+      "modelo": "CA8"
+    },
+    {
+      "modelo": "CA6"
+    },
+    {
+      "modelo": "A90B"
+    },
+    {
+      "modelo": "S6"
+    }
+  ]
+}
