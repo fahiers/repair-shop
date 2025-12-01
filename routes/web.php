@@ -29,6 +29,8 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/condiciones-garantia', 'settings.condiciones-garantia')->name('condiciones-garantia.edit');
     Volt::route('settings/terminos-recibo-ingreso', 'settings.terminos-recibo-ingreso')->name('terminos-recibo-ingreso.edit');
     Volt::route('settings/accesorios', 'settings.accesorios')->name('accesorios.index');
+    Volt::route('settings/descargar-mis-datos', 'settings.descargar-mis-datos')->name('settings.descargar-mis-datos');
+    Route::get('settings/backup-database', \App\Livewire\Settings\BackupDatabase::class)->name('settings.backup-database');
 
     Volt::route('settings/two-factor', 'settings.two-factor')
         ->middleware(

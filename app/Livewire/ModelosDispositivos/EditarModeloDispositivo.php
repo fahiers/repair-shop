@@ -39,36 +39,55 @@ class EditarModeloDispositivo extends Component
 
     public function mount(int $id): void
     {
-        $this->modeloId = $id;
+        try {
+            $this->modeloId = $id;
 
-        $modelo = ModeloDispositivo::find($id);
-        if (! $modelo) {
-            return;
+            $modelo = ModeloDispositivo::find($id);
+            if (! $modelo) {
+                return;
+            }
+
+            $this->marca = $modelo->marca;
+            $this->modelo = $modelo->modelo;
+            $this->descripcion = $modelo->descripcion;
+            $this->anio = $modelo->anio;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al montar EditarModeloDispositivo: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el modelo.');
         }
-
-        $this->marca = $modelo->marca;
-        $this->modelo = $modelo->modelo;
-        $this->descripcion = $modelo->descripcion;
-        $this->anio = $modelo->anio;
     }
 
     public function update()
     {
-        $this->validate();
+        try {
+            $this->validate();
 
-        $modelo = ModeloDispositivo::findOrFail($this->modeloId);
-        $modelo->update([
-            'marca' => $this->marca,
-            'modelo' => $this->modelo,
-            'descripcion' => $this->descripcion,
-            'anio' => $this->anio,
-        ]);
+            $modelo = ModeloDispositivo::findOrFail($this->modeloId);
+            $modelo->update([
+                'marca' => $this->marca,
+                'modelo' => $this->modelo,
+                'descripcion' => $this->descripcion,
+                'anio' => $this->anio,
+            ]);
 
-        return redirect()->route('modelos.index')->with('success', 'Modelo de dispositivo actualizado correctamente.');
+            return redirect()->route('modelos.index')->with('success', 'Modelo de dispositivo actualizado correctamente.');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al actualizar modelo de dispositivo: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al actualizar el modelo.');
+        }
     }
 
     public function render()
     {
-        return view('livewire.modelos-dispositivos.editar-modelo-dispositivo');
+        try {
+            return view('livewire.modelos-dispositivos.editar-modelo-dispositivo');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar EditarModeloDispositivo: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el formulario.');
+
+            return view('livewire.modelos-dispositivos.editar-modelo-dispositivo');
+        }
     }
 }

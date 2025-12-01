@@ -33,25 +33,36 @@ class CrearCliente extends Component
 
     public function updated($propertyName)
     {
-        if ($propertyName === 'rut' && ! empty($this->rut)) {
-            $this->validateOnly($propertyName);
+        try {
+            if ($propertyName === 'rut' && ! empty($this->rut)) {
+                $this->validateOnly($propertyName);
+            }
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error en updated de CrearCliente: '.$e->getMessage());
         }
     }
 
     public function save()
     {
-        $this->validate();
+        try {
+            $this->validate();
 
-        Cliente::create([
-            'nombre' => $this->nombre,
-            'telefono' => $this->telefono,
-            'email' => $this->email,
-            'direccion' => $this->direccion,
-            'rut' => $this->rut ? $this->normalizarRut($this->rut) : null,
-            'notas' => $this->notas,
-        ]);
+            Cliente::create([
+                'nombre' => $this->nombre,
+                'telefono' => $this->telefono,
+                'email' => $this->email,
+                'direccion' => $this->direccion,
+                'rut' => $this->rut ? $this->normalizarRut($this->rut) : null,
+                'notas' => $this->notas,
+            ]);
 
-        return $this->redirectRoute('clientes.index');
+            return $this->redirectRoute('clientes.index');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al guardar cliente: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al guardar el cliente.');
+        }
     }
 
     public function messages(): array
@@ -103,6 +114,13 @@ class CrearCliente extends Component
 
     public function render()
     {
-        return view('livewire.clientes.crear-cliente');
+        try {
+            return view('livewire.clientes.crear-cliente');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar CrearCliente: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el formulario.');
+            
+            return view('livewire.clientes.crear-cliente');
+        }
     }
 }

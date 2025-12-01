@@ -23,21 +23,35 @@ class CrearServicio extends Component
 
     public function save()
     {
-        $this->validate();
+        try {
+            $this->validate();
 
-        Servicio::create([
-            'nombre' => $this->nombre,
-            'descripcion' => $this->descripcion,
-            'precio_base' => $this->precio_base,
-            'categoria' => $this->categoria,
-            'estado' => $this->estado,
-        ]);
+            Servicio::create([
+                'nombre' => $this->nombre,
+                'descripcion' => $this->descripcion,
+                'precio_base' => $this->precio_base,
+                'categoria' => $this->categoria,
+                'estado' => $this->estado,
+            ]);
 
-        return redirect()->route('servicios.index')->with('success', 'Servicio creado correctamente.');
+            return redirect()->route('servicios.index')->with('success', 'Servicio creado correctamente.');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al crear servicio: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al crear el servicio.');
+        }
     }
 
     public function render()
     {
-        return view('livewire.servicios.crear-servicio');
+        try {
+            return view('livewire.servicios.crear-servicio');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar CrearServicio: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el formulario.');
+            
+            return view('livewire.servicios.crear-servicio');
+        }
     }
 }

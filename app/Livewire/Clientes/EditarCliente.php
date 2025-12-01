@@ -24,13 +24,18 @@ class EditarCliente extends Component
 
     public function mount(Cliente $cliente)
     {
-        $this->cliente = $cliente;
-        $this->nombre = $cliente->nombre ?? '';
-        $this->telefono = $cliente->telefono ?? '';
-        $this->email = $cliente->email ?? '';
-        $this->direccion = $cliente->direccion ?? '';
-        $this->rut = $cliente->rut ?? '';
-        $this->notas = $cliente->notas ?? '';
+        try {
+            $this->cliente = $cliente;
+            $this->nombre = $cliente->nombre ?? '';
+            $this->telefono = $cliente->telefono ?? '';
+            $this->email = $cliente->email ?? '';
+            $this->direccion = $cliente->direccion ?? '';
+            $this->rut = $cliente->rut ?? '';
+            $this->notas = $cliente->notas ?? '';
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al montar EditarCliente: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar los datos del cliente.');
+        }
     }
 
     public function rules(): array
@@ -47,61 +52,74 @@ class EditarCliente extends Component
 
     public function updated($propertyName)
     {
-        if ($propertyName === 'rut' && ! empty($this->rut)) {
-            // Normalizar el RUT antes de validar para que la comparación sea correcta
-            $rutNormalizado = $this->normalizarRut($this->rut);
-            $rutOriginal = $this->rut;
+        try {
+            if ($propertyName === 'rut' && ! empty($this->rut)) {
+                // Normalizar el RUT antes de validar para que la comparación sea correcta
+                $rutNormalizado = $this->normalizarRut($this->rut);
+                $rutOriginal = $this->rut;
 
-            // Si el RUT normalizado es igual al RUT del cliente actual, no validar unicidad
-            $rutClienteActual = $this->cliente->rut ? $this->normalizarRut($this->cliente->rut) : null;
+                // Si el RUT normalizado es igual al RUT del cliente actual, no validar unicidad
+                $rutClienteActual = $this->cliente->rut ? $this->normalizarRut($this->cliente->rut) : null;
 
-            if ($rutNormalizado === $rutClienteActual) {
-                // Limpiar errores de validación si el RUT es el mismo
-                $this->resetErrorBag('rut');
-            } else {
-                $this->rut = $rutNormalizado;
+                if ($rutNormalizado === $rutClienteActual) {
+                    // Limpiar errores de validación si el RUT es el mismo
+                    $this->resetErrorBag('rut');
+                } else {
+                    $this->rut = $rutNormalizado;
 
-                try {
-                    $this->validateOnly($propertyName);
-                } finally {
-                    // Restaurar el formato original para mostrar en el formulario
-                    $this->rut = $rutOriginal;
+                    try {
+                        $this->validateOnly($propertyName);
+                    } finally {
+                        // Restaurar el formato original para mostrar en el formulario
+                        $this->rut = $rutOriginal;
+                    }
                 }
             }
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e; // Deja que Livewire maneje la validación
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error en updated de EditarCliente: '.$e->getMessage());
         }
     }
 
     public function update()
     {
-        // Normalizar el RUT antes de validar para que la comparación sea correcta
-        $rutNormalizado = null;
-        if (! empty($this->rut)) {
-            $rutNormalizado = $this->normalizarRut($this->rut);
-            $this->rut = $rutNormalizado;
+        try {
+            // Normalizar el RUT antes de validar para que la comparación sea correcta
+            $rutNormalizado = null;
+            if (! empty($this->rut)) {
+                $rutNormalizado = $this->normalizarRut($this->rut);
+                $this->rut = $rutNormalizado;
+            }
+
+            // Si el RUT normalizado es igual al RUT del cliente actual,
+            // crear reglas de validación sin la regla unique para el RUT
+            $rutClienteActual = $this->cliente->rut ? $this->normalizarRut($this->cliente->rut) : null;
+            $rules = $this->rules();
+
+            if ($rutNormalizado === $rutClienteActual) {
+                // Remover la regla unique del RUT si es el mismo
+                $rules['rut'] = ['nullable', 'string', 'max:255', 'cl_rut'];
+            }
+
+            $this->validate($rules);
+
+            $this->cliente->update([
+                'nombre' => $this->nombre,
+                'telefono' => $this->telefono,
+                'email' => $this->email,
+                'direccion' => $this->direccion,
+                'rut' => $rutNormalizado,
+                'notas' => $this->notas,
+            ]);
+
+            return $this->redirectRoute('clientes.index');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al actualizar cliente: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al actualizar el cliente.');
         }
-
-        // Si el RUT normalizado es igual al RUT del cliente actual,
-        // crear reglas de validación sin la regla unique para el RUT
-        $rutClienteActual = $this->cliente->rut ? $this->normalizarRut($this->cliente->rut) : null;
-        $rules = $this->rules();
-
-        if ($rutNormalizado === $rutClienteActual) {
-            // Remover la regla unique del RUT si es el mismo
-            $rules['rut'] = ['nullable', 'string', 'max:255', 'cl_rut'];
-        }
-
-        $this->validate($rules);
-
-        $this->cliente->update([
-            'nombre' => $this->nombre,
-            'telefono' => $this->telefono,
-            'email' => $this->email,
-            'direccion' => $this->direccion,
-            'rut' => $rutNormalizado,
-            'notas' => $this->notas,
-        ]);
-
-        return $this->redirectRoute('clientes.index');
     }
 
     public function messages(): array
@@ -153,6 +171,13 @@ class EditarCliente extends Component
 
     public function render()
     {
-        return view('livewire.clientes.editar-cliente');
+        try {
+            return view('livewire.clientes.editar-cliente');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar EditarCliente: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el formulario.');
+
+            return view('livewire.clientes.editar-cliente');
+        }
     }
 }

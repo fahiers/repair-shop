@@ -25,38 +25,57 @@ class EditarServicio extends Component
 
     public function mount(int $id): void
     {
-        $this->servicioId = $id;
+        try {
+            $this->servicioId = $id;
 
-        $servicio = Servicio::find($id);
-        if (! $servicio) {
-            return;
+            $servicio = Servicio::find($id);
+            if (! $servicio) {
+                return;
+            }
+
+            $this->nombre = $servicio->nombre;
+            $this->descripcion = $servicio->descripcion;
+            $this->precio_base = $servicio->precio_base;
+            $this->categoria = $servicio->categoria;
+            $this->estado = $servicio->estado ?? 'activo';
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al montar EditarServicio: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el servicio.');
         }
-
-        $this->nombre = $servicio->nombre;
-        $this->descripcion = $servicio->descripcion;
-        $this->precio_base = $servicio->precio_base;
-        $this->categoria = $servicio->categoria;
-        $this->estado = $servicio->estado ?? 'activo';
     }
 
     public function update()
     {
-        $this->validate();
+        try {
+            $this->validate();
 
-        $servicio = Servicio::findOrFail($this->servicioId);
-        $servicio->update([
-            'nombre' => $this->nombre,
-            'descripcion' => $this->descripcion,
-            'precio_base' => $this->precio_base,
-            'categoria' => $this->categoria,
-            'estado' => $this->estado,
-        ]);
+            $servicio = Servicio::findOrFail($this->servicioId);
+            $servicio->update([
+                'nombre' => $this->nombre,
+                'descripcion' => $this->descripcion,
+                'precio_base' => $this->precio_base,
+                'categoria' => $this->categoria,
+                'estado' => $this->estado,
+            ]);
 
-        return redirect()->route('servicios.index')->with('success', 'Servicio actualizado correctamente.');
+            return redirect()->route('servicios.index')->with('success', 'Servicio actualizado correctamente.');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al actualizar servicio: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al actualizar el servicio.');
+        }
     }
 
     public function render()
     {
-        return view('livewire.servicios.editar-servicio');
+        try {
+            return view('livewire.servicios.editar-servicio');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar EditarServicio: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el formulario.');
+
+            return view('livewire.servicios.editar-servicio');
+        }
     }
 }

@@ -14,25 +14,41 @@ class Index extends Component
 
     public function updatingSearch(): void
     {
-        $this->resetPage();
+        try {
+            $this->resetPage();
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al actualizar búsqueda en Servicios Index: '.$e->getMessage());
+        }
     }
 
     public function render()
     {
-        $servicios = Servicio::query()
-            ->when($this->search !== '', function ($query) {
-                $term = '%'.$this->search.'%';
-                $query->where(function ($q) use ($term) {
-                    $q->where('nombre', 'like', $term)
-                      ->orWhere('categoria', 'like', $term)
-                      ->orWhere('descripcion', 'like', $term);
-                });
-            })
-            ->orderBy('nombre')
-            ->paginate(10);
+        try {
+            $searchTerm = trim($this->search);
+            $searchTerm = preg_replace('/\s+/', ' ', $searchTerm);
 
-        return view('livewire.servicios.index', [
-            'servicios' => $servicios,
-        ]);
+            $servicios = Servicio::query()
+                ->when($searchTerm !== '', function ($query) use ($searchTerm) {
+                    $term = '%'.$searchTerm.'%';
+                    $query->where(function ($q) use ($term) {
+                        $q->where('nombre', 'like', $term)
+                          ->orWhere('categoria', 'like', $term)
+                          ->orWhere('descripcion', 'like', $term);
+                    });
+                })
+                ->orderBy('nombre')
+                ->paginate(10);
+
+            return view('livewire.servicios.index', [
+                'servicios' => $servicios,
+            ]);
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar lista de servicios: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar la lista de servicios.');
+            
+            return view('livewire.servicios.index', [
+                'servicios' => [],
+            ]);
+        }
     }
 }

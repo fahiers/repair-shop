@@ -37,20 +37,34 @@ class CrearModeloDispositivo extends Component
 
     public function save()
     {
-        $this->validate();
+        try {
+            $this->validate();
 
-        ModeloDispositivo::create([
-            'marca' => $this->marca,
-            'modelo' => $this->modelo,
-            'descripcion' => $this->descripcion,
-            'anio' => $this->anio,
-        ]);
+            ModeloDispositivo::create([
+                'marca' => $this->marca,
+                'modelo' => $this->modelo,
+                'descripcion' => $this->descripcion,
+                'anio' => $this->anio,
+            ]);
 
-        return redirect()->route('modelos.index')->with('success', 'Modelo de dispositivo creado correctamente.');
+            return redirect()->route('modelos.index')->with('success', 'Modelo de dispositivo creado correctamente.');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al crear modelo de dispositivo: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al crear el modelo.');
+        }
     }
 
     public function render()
     {
-        return view('livewire.modelos-dispositivos.crear-modelo-dispositivo');
+        try {
+            return view('livewire.modelos-dispositivos.crear-modelo-dispositivo');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar CrearModeloDispositivo: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el formulario.');
+            
+            return view('livewire.modelos-dispositivos.crear-modelo-dispositivo');
+        }
     }
 }

@@ -73,27 +73,41 @@ class CrearProducto extends Component
 
     public function save()
     {
-        $this->validate();
+        try {
+            $this->validate();
 
-        Producto::create([
-            'nombre' => $this->nombre,
-            'descripcion' => $this->descripcion,
-            'categoria' => $this->categoria,
-            'marca' => $this->marca,
-            'precio_compra' => $this->precio_compra,
-            'precio_venta' => $this->precio_venta,
-            'stock' => $this->stock,
-            'stock_minimo' => $this->stock_minimo,
-            'proveedor_id' => $this->proveedor_id,
-            'estado' => $this->estado,
-            'fecha_ingreso' => $this->fecha_ingreso,
-        ]);
+            Producto::create([
+                'nombre' => $this->nombre,
+                'descripcion' => $this->descripcion,
+                'categoria' => $this->categoria,
+                'marca' => $this->marca,
+                'precio_compra' => $this->precio_compra,
+                'precio_venta' => $this->precio_venta,
+                'stock' => $this->stock,
+                'stock_minimo' => $this->stock_minimo,
+                'proveedor_id' => $this->proveedor_id,
+                'estado' => $this->estado,
+                'fecha_ingreso' => $this->fecha_ingreso,
+            ]);
 
-        return redirect()->route('productos.index')->with('success', 'Producto creado correctamente.');
+            return redirect()->route('productos.index')->with('success', 'Producto creado correctamente.');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            throw $e;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al crear producto: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al crear el producto.');
+        }
     }
 
     public function render()
     {
-        return view('livewire.productos.crear-producto');
+        try {
+            return view('livewire.productos.crear-producto');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Error al renderizar CrearProducto: '.$e->getMessage());
+            session()->flash('error', 'Ocurrió un error al cargar el formulario.');
+            
+            return view('livewire.productos.crear-producto');
+        }
     }
 }
