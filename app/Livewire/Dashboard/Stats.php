@@ -3,6 +3,7 @@
 namespace App\Livewire\Dashboard;
 
 use App\Enums\EstadoOrden;
+use App\Models\OrdenPago;
 use App\Models\OrdenTrabajo;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -33,9 +34,8 @@ class Stats extends Component
             ->whereBetween('fecha_entrega_real', [$startOfMonth, $endOfMonth])
             ->count();
 
-        $ventasTotales = OrdenTrabajo::where('estado', EstadoOrden::Entregado)
-            ->whereBetween('fecha_entrega_real', [$startOfMonth, $endOfMonth])
-            ->sum('costo_total');
+        $ventasTotales = OrdenPago::whereBetween('fecha_pago', [$startOfMonth, $endOfMonth])
+            ->sum('monto');
 
         // Próximos Vencimientos (Esta semana)
         $proximosVencimientos = OrdenTrabajo::query()

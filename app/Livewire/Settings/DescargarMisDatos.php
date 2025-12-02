@@ -2,7 +2,9 @@
 
 namespace App\Livewire\Settings;
 
+use App\Exports\ReporteClientesExport;
 use App\Exports\ReporteFinancieroExport;
+use App\Exports\ReporteOrdenesTrabajoExport;
 use App\Exports\ReporteRotacionExport;
 use Livewire\Component;
 use Maatwebsite\Excel\Facades\Excel;
@@ -16,6 +18,10 @@ class DescargarMisDatos extends Component
     public ?string $fechaDesdeRotacion = null;
 
     public ?string $fechaHastaRotacion = null;
+
+    public ?string $fechaDesdeOrdenes = null;
+
+    public ?string $fechaHastaOrdenes = null;
 
     public function descargarReporteFinanciero()
     {
@@ -93,6 +99,63 @@ class DescargarMisDatos extends Component
         }
 
         return 'reporte-rotacion-completo.xlsx';
+    }
+
+    public function descargarReporteOrdenes()
+    {
+        try {
+            $this->validate([
+                'fechaDesdeOrdenes' => ['nullable', 'date'],
+                'fechaHastaOrdenes' => ['nullable', 'date', 'after_or_equal:fechaDesdeOrdenes'],
+            ], [
+                'fechaHastaOrdenes.after_or_equal' => 'La fecha hasta debe ser igual o posterior a la fecha desde.',
+            ]);
+
+            $export = new ReporteOrdenesTrabajoExport($this->fechaDesdeOrdenes, $this->fechaHastaOrdenes);
+
+            $nombreArchivo = $this->generarNombreArchivoOrdenes();
+
+            return Excel::download($export, $nombreArchivo);
+        } catch (\Throwable $e) {
+            \Illuminate\Support\Facades\Log::error('Error al descargar reporte de órdenes: ' . $e->getMessage(), [
+                'exception' => $e,
+                'user_id' => auth()->id(),
+                'fecha_desde' => $this->fechaDesdeOrdenes,
+                'fecha_hasta' => $this->fechaHastaOrdenes,
+            ]);
+
+            $this->addError('fechaDesdeOrdenes', 'Hubo un error al generar el reporte. Por favor intente nuevamente o contacte a soporte.');
+        }
+    }
+
+    private function generarNombreArchivoOrdenes(): string
+    {
+        if ($this->fechaDesdeOrdenes && $this->fechaHastaOrdenes) {
+            $fechaInicio = str_replace('-', '', $this->fechaDesdeOrdenes);
+            $fechaFin = str_replace('-', '', $this->fechaHastaOrdenes);
+
+            return "reporte-ordenes-{$fechaInicio}-{$fechaFin}.xlsx";
+        }
+
+        return 'reporte-ordenes-completo.xlsx';
+    }
+
+    public function descargarReporteClientes()
+    {
+        try {
+            $export = new ReporteClientesExport();
+
+            $nombreArchivo = 'reporte-clientes-completo.xlsx';
+
+            return Excel::download($export, $nombreArchivo);
+        } catch (\Throwable $e) {
+            \Illuminate\Support\Facades\Log::error('Error al descargar reporte de clientes: ' . $e->getMessage(), [
+                'exception' => $e,
+                'user_id' => auth()->id(),
+            ]);
+
+            $this->addError('clientes', 'Hubo un error al generar el reporte. Por favor intente nuevamente o contacte a soporte.');
+        }
     }
 
     public function render()

@@ -1,6 +1,36 @@
 <?php
 
-use Maatwebsite\Excel\Excel;
+if (! function_exists('get_excel_constant')) {
+    /**
+     * Obtiene una constante de Excel de forma segura durante composer update
+     */
+    function get_excel_constant(string $constant, string $fallback): string
+    {
+        if (! class_exists(\Maatwebsite\Excel\Excel::class)) {
+            return $fallback;
+        }
+
+        try {
+            $constantName = \Maatwebsite\Excel\Excel::class.'::'.$constant;
+            $value = constant($constantName);
+            return $value !== false ? $value : $fallback;
+        } catch (\Throwable $e) {
+            return $fallback;
+        }
+    }
+}
+
+if (! function_exists('get_excel_class')) {
+    /**
+     * Obtiene el nombre de una clase de Excel de forma segura durante composer update
+     */
+    function get_excel_class(string $className): ?string
+    {
+        $fullClassName = "Maatwebsite\\Excel\\{$className}";
+        
+        return class_exists($fullClassName) ? $fullClassName : null;
+    }
+}
 
 return [
     'exports' => [
@@ -54,26 +84,26 @@ return [
     ],
 
     'extension_detector' => [
-        'xlsx' => Excel::XLSX,
-        'xlsm' => Excel::XLSX,
-        'xltx' => Excel::XLSX,
-        'xltm' => Excel::XLSX,
-        'xls' => Excel::XLS,
-        'xlt' => Excel::XLS,
-        'ods' => Excel::ODS,
-        'ots' => Excel::ODS,
-        'slk' => Excel::SLK,
-        'xml' => Excel::XML,
-        'gnumeric' => Excel::GNUMERIC,
-        'htm' => Excel::HTML,
-        'html' => Excel::HTML,
-        'csv' => Excel::CSV,
-        'tsv' => Excel::TSV,
-        'pdf' => Excel::DOMPDF,
+        'xlsx' => get_excel_constant('XLSX', 'Xlsx'),
+        'xlsm' => get_excel_constant('XLSX', 'Xlsx'),
+        'xltx' => get_excel_constant('XLSX', 'Xlsx'),
+        'xltm' => get_excel_constant('XLSX', 'Xlsx'),
+        'xls' => get_excel_constant('XLS', 'Xls'),
+        'xlt' => get_excel_constant('XLS', 'Xls'),
+        'ods' => get_excel_constant('ODS', 'Ods'),
+        'ots' => get_excel_constant('ODS', 'Ods'),
+        'slk' => get_excel_constant('SLK', 'Slk'),
+        'xml' => get_excel_constant('XML', 'Xml'),
+        'gnumeric' => get_excel_constant('GNUMERIC', 'Gnumeric'),
+        'htm' => get_excel_constant('HTML', 'Html'),
+        'html' => get_excel_constant('HTML', 'Html'),
+        'csv' => get_excel_constant('CSV', 'Csv'),
+        'tsv' => get_excel_constant('TSV', 'Tsv'),
+        'pdf' => get_excel_constant('DOMPDF', 'Dompdf'),
     ],
 
     'value_binder' => [
-        'default' => Maatwebsite\Excel\DefaultValueBinder::class,
+        'default' => get_excel_class('DefaultValueBinder') ?: 'Maatwebsite\\Excel\\DefaultValueBinder',
     ],
 
     'cache' => [

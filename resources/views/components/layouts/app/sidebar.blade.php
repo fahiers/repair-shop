@@ -20,6 +20,7 @@
             <flux:sidebar.item icon="cpu-chip" :href="route('modelos.index')" :current="request()->routeIs('modelos.*')" wire:navigate>{{ __('Modelos de Dispositivos') }}</flux:sidebar.item>
             <flux:sidebar.item icon="wrench-screwdriver" :href="route('servicios.index')" :current="request()->routeIs('servicios.*')" wire:navigate>{{ __('Servicios') }}</flux:sidebar.item>
             <flux:sidebar.item icon="shopping-bag" :href="route('productos.index')" :current="request()->routeIs('productos.*')" wire:navigate>{{ __('Productos') }}</flux:sidebar.item>
+            <flux:sidebar.item icon="banknotes" :href="route('finanzas.index')" :current="request()->routeIs('finanzas.*')" wire:navigate>{{ __('Finanzas') }}</flux:sidebar.item>
             <flux:sidebar.item icon="cog-6-tooth" :href="route('company.edit')" :current="request()->routeIs('company.*')" wire:navigate>{{ __('Configurar mi empresa') }}</flux:sidebar.item>
         </flux:sidebar.nav>
 

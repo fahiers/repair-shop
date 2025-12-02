@@ -19,9 +19,10 @@ Route::view('dashboard', 'dashboard')
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
+    Volt::route('finanzas', 'finanzas.index')->name('finanzas.index');
+
     Volt::route('settings/profile', 'settings.profile')->name('profile.edit');
     Volt::route('settings/password', 'settings.password')->name('user-password.edit');
-    Volt::route('settings/appearance', 'settings.appearance')->name('appearance.edit');
     Volt::route('settings/company', 'settings.company')->name('company.edit');
     Route::get('settings/condiciones-garantia/preview', [App\Http\Controllers\CondicionesGarantiaPdfController::class, 'preview'])
         ->name('condiciones-garantia.preview');

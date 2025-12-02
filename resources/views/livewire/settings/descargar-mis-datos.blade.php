@@ -71,6 +71,56 @@
                     </div>
                 </form>
             </div>
+
+            <!-- Reporte de Órdenes de Trabajo -->
+            <div class="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900">
+                <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+                    {{ __('Reporte de Órdenes de Trabajo') }}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-6">
+                    {{ __('Descarga un reporte completo de todas las órdenes de trabajo registradas en el sistema, incluyendo información del cliente, dispositivo, técnico y montos.') }}
+                </p>
+                <form wire:submit="descargarReporteOrdenes" class="space-y-6">
+                    <div class="space-y-4">
+                        <flux:input
+                            wire:model="fechaDesdeOrdenes"
+                            :label="__('Fecha desde')"
+                            type="date"
+                            hint="Opcional: Selecciona la fecha inicial del reporte"
+                        />
+
+                        <flux:input
+                            wire:model="fechaHastaOrdenes"
+                            :label="__('Fecha hasta')"
+                            type="date"
+                            hint="Opcional: Selecciona la fecha final del reporte"
+                        />
+                    </div>
+
+                    <div class="flex items-center gap-4 pt-4 border-t border-zinc-200 dark:border-zinc-700">
+                        <flux:button variant="primary" type="submit" class="w-full">
+                            {{ __('Descargar Reporte Excel') }}
+                        </flux:button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Reporte de Clientes -->
+            <div class="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900">
+                <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+                    {{ __('Reporte de Clientes') }}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-6">
+                    {{ __('Descarga un reporte completo de todos los clientes registrados en el sistema, incluyendo información de contacto y datos personales.') }}
+                </p>
+                <form wire:submit="descargarReporteClientes" class="space-y-6">
+                    <div class="flex items-center gap-4 pt-4 border-t border-zinc-200 dark:border-zinc-700">
+                        <flux:button variant="primary" type="submit" class="w-full">
+                            {{ __('Descargar Reporte Excel') }}
+                        </flux:button>
+                    </div>
+                </form>
+            </div>
         </div>
     </x-settings.layout>
 </section>
