@@ -210,7 +210,11 @@
                     <div class="grid-col" style="width: 20%;">
                         <span class="section-title">ABONO</span>
                         <br>
-                        <!-- Espacio para anotar abono -->
+                        @if($orden->anticipo > 0)
+                            {{ Number::currency($orden->anticipo, precision: 0) }}
+                        @else
+                            <span style="color: #999;">Sin abono</span>
+                        @endif
                     </div>
                 </div>
             </div>
